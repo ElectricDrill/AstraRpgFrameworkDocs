@@ -34,16 +34,16 @@ In RPGs most common classes are: `warrior`, `rogue`, `mage`, `paladin`, and so o
 
 ## How is Soap RPG Framework organized and how does it work?
 
-### <img src="../images/SimpleRPG/entity-core.png" alt="EntityCore2" width="30" class="icon-background"/> Entity
+### <img src="../images/SoapRPG/entity-core.png" alt="EntityCore2" width="30" class="icon-background"/> Entity
 A `GameObject` becomes an entity once the `EntityCore` and `EntityStats` `MonoBehaviour`s (Mono) are added to it. `EntityCore` comes with a built-in `EntityLevel` (plain C# `class`) that manages the experience and the level of the entity.
 
-### <img src="../images/SimpleRPG/stat.png" alt="stat" width="30" class="icon-background"/> Stat
+### <img src="../images/SoapRPG/stat.png" alt="stat" width="30" class="icon-background"/> Stat
 A `Stat` is a class that derives from `ScriptableObject` (SO) and represents a statistic in the game. Each statistic has a name (the name given to the SO instance of the created `Stat`), and we can choose whether to provide it with a maximum and/or minimum value. Additionally, we can define how that statistic grows or is reduced, depending on certain `Attributes`.
 
-### <img src="../images/SimpleRPG/stat-set.png" alt="stat set" width="30" class="icon-background"/> StatSet
+### <img src="../images/SoapRPG/stat-set.png" alt="stat set" width="30" class="icon-background"/> StatSet
 A `StatSet` is a class that derives from SO and defines a set of `Stat`s.
 
-### <img src="../images/SimpleRPG/entity-stats.png" alt="entity stats" width="30" class="icon-background"/> EntityStats
+### <img src="../images/SoapRPG/entity-stats.png" alt="entity stats" width="30" class="icon-background"/> EntityStats
 `EntityStats` allows us to configure:
 - the base statistics
 - the flat modifiers
@@ -53,26 +53,26 @@ We will see what these modifiers are in the section (TODO).
 
 The base statistics can be _fixed_, or instead derive from a class if the entity has one assigned. If we use the fixed ones, we must also provide a `StatSet`, while if we use those of a class, the class's `StatSet` will be used. If the entity levels up and we want its statistics to grow with levels, we are forced to use a class, as the _fixed_ statistics are immutable.
 
-### <img src="../images/SimpleRPG/class.png" alt="class" width="30" class="icon-background"/> Class
+### <img src="../images/SoapRPG/class.png" alt="class" width="30" class="icon-background"/> Class
 `Class` derives from SO and represents a game class. Each class has a name, a `GrowthFormula` that defines how the base Max HP grows with levels, a `StatSet`, optionally an `AttributeSet`, and associates each `Stat` of the provided StatSet with a `GrowthFormula` that describes how the statistic varies with levels. Similarly, if an `AttributeSet` is provided, it will be possible to associate a `GrowthFormula` for each `Attribute` present in the set, to describe how the attributes vary with levels.
 
-### <img src="../images/SimpleRPG/entity-class.png" alt="entity class" width="30" class="icon-background"/> EntityClass
+### <img src="../images/SoapRPG/entity-class.png" alt="entity class" width="30" class="icon-background"/> EntityClass
 `EntityClass` derives from Mono and allows us to assign a `Class` to our entity.
 
-### <img src="../images/SimpleRPG/attribute.png" alt="attribute" width="30" class="icon-background"/> Attribute
+### <img src="../images/SoapRPG/attribute.png" alt="attribute" width="30" class="icon-background"/> Attribute
 An `Attribute` is a class that derives from SO and represents an attribute in the game. Each attribute has a name and, like statistics, can have a maximum and minimum value.
 
-### <img src="../images/SimpleRPG/attribute-set.png" alt="stat set" width="30" class="icon-background"/> AttributeSet
+### <img src="../images/SoapRPG/attribute-set.png" alt="stat set" width="30" class="icon-background"/> AttributeSet
 An `AttributeSet` is a class that derives from SO and defines a set of `Attribute`s.
 
-### <img src="../images/SimpleRPG/entity-attributes.png" alt="entity attributes" width="30" class="icon-background"/> EntityAttributes
+### <img src="../images/SoapRPG/entity-attributes.png" alt="entity attributes" width="30" class="icon-background"/> EntityAttributes
 Optionally, we can add the Mono `EntityAttributes` to our entity if we want to give it attributes. `EntityAttributes` allows us to specify how many attribute points to provide at each new level. These points can be spent on various attributes to increase their value. For `EntityAttributes` we can configure:
 - the base attributes
 - the flat modifiers
 - the percentage modifiers
 Similarly to `EntityStats`, we can decide whether the base attributes are _fixed_ or if they instead derive from the class associated with `EntityClass`.
 
-### <img src="../images/SimpleRPG/growth-fo.png" alt="growth formula" width="30" class="icon-background"/> Growth Formula
+### <img src="../images/SoapRPG/growth-fo.png" alt="growth formula" width="30" class="icon-background"/> Growth Formula
 To express how `Stats`, `Attributes`, Max HP, and the experience required to level up vary at each level, we can use instances of `GrowthFormula`. This is a class that derives from SO and allows us to define a mathematical function, or a system of functions, that describe how a value changes as levels increase. We will see in more detail how to define a `GrowthFormula` in (TODO).
 
 ## How is Soap RPG Framework implemented?
