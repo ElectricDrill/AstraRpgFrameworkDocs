@@ -54,12 +54,37 @@ For more details, see the [Game Events section](#game-events).
 ### Int and Long Vars
 Another common use of `ScriptableObject` in the SOAP architecture is to define variables. The main advantage of these variables in the form of SO is that they can be easily shared between various objects that may decide to share the same value. A common example is the player's game score. There could be a game manager that adds or removes points from this variable, while the UI HUD uses it to display its value on the screen. This way, we can keep the game manager and UI completely decoupled, passing shared values (like variables) through the inspector.
 
+From the code, we can access the values held by these variables using the `Value` getter and setter:
+```csharp
+// intVar is an instance of IntVar
+int value = intVar.Value; // Get the value
+
+// Thanks to implicit conversion, we can also use it as an int directly
+int intValue = intVar; // Implicit conversion to int
+
+intVar.Value = 10; // Set the value
+```
+
 ### Int and Long Refs
 `IntRef` and `LongRef` allow choosing whether to use a native value (`int` or `long`) or an `IntVar`/`LongVar`. As mentioned in the previous paragraph, `IntVar` and `LongVar` have the advantage of being shareable between different components/game objects, while native values are more immediate to use and require less setup (no need to instantiate an `IntVar`/`LongVar` and assign it in the inspector).
 
 Thanks to a custom property drawer, it will be possible, from the inspector, to check a checkbox named `Use constant` to use a native value instead of a `Ref`, and vice versa.
 
 `IntRef` and `LongRef` are widely used in the package's `MonoBehaviour`.
+
+From the code, we can access the values held by these references using the `Value` getter and setter.
+It is worth mentioning that when we use the setter, we need to provide a native `int` or `long` value. If `Use constant` is unchecked, this value will be assigned to the `Value` property of the referenced `IntVar` or `LongVar` instance; if `Use constant` is checked, the assignment only updates the local constant value and does not affect any referenced variable.
+```csharp
+// intRef is an instance of IntRef
+int value = intRef.Value; // Get the value
+// Thanks to implicit conversion, we can also use it as an int directly
+int intValue = intRef; // Implicit conversion to int
+intRef.Value = 10; // Set the value
+
+// Assigns the value of intVar to intRef.Value using implicit conversion.
+// Note: This does not change the IntVar reference held by intRef, only its value.
+intRef.Value = intVar;
+```
 
 ### Game events
 The package also supports game events with up to 4 context parameters. They are generics, but in Unity, it is not possible to instantiate classes that derive from `ScriptableObject` if they are generics with unspecified type parameters. To use them, we must explicitly declare classes that derive from the generic GameEvent and fix the type parameters with concrete types. To simplify the definition of new event types, with specific types as context parameters, the package provides `GameEventGenerator`. These generators, which derive from SO, allow generating the concrete classes of `GameEvent`.
@@ -251,6 +276,38 @@ The final calculation would be:
 
 When adding modifiers through code, the attribute cache will automatically be invalidated to ensure the correct value is returned on the next access.
 
+### Retrieving Attribute Values from code
+Due to the relevance of retrieving attribute values from code, the methods to do so are worth mentioning here.
+
+To retrieve the final value of an attribute, you can use the `Get` method:
+
+```csharp
+// strengthAttribute is a reference to the Strength Attribute
+int strength = entityAttributes.Get(strengthAttribute);
+```
+
+To retrieve the base value of an attribute, you can use the `GetBase` method:
+
+```csharp
+// strengthAttribute is a reference to the Strength Attribute
+int baseStrength = entityAttributes.GetBase(strengthAttribute);
+```
+
+### Spending attribute points
+
+If the entity's `Attr Points Per Level` is greater than zero and the level is greater than 1, we can spend attribute points on the attributes. To do this, we can use the `SpendOn` method:
+
+```csharp
+// strengthAttribute is a reference to the Strength Attribute
+entityAttributes.SpendOn(strengthAttribute, 2);
+```
+This will spend 2 points on the `Strength` attribute, increasing its value by 2. If there are not enough available points, a Debug.LogError will be raised.
+
+> [!WARNING]
+> Debug.LogError messages are shown only in development builds. If you run a production build, you won't see them.
+> This is useful to avoid cluttering the console with error messages that are not relevant in production.
+
+
 ## Create stats
 *Keyboard shortcut:* `Ctrl + Alt + S`  
 *Relative path:* `Stat`
@@ -342,6 +399,23 @@ The final calculation would be:
 3. 140 + (140 * 0.25) = 175
 
 When adding modifiers through code, the `OnStatChanged` event will automatically be raised if the final value changes.
+
+### Retrieving Stat Values from code
+Due to the relevance of retrieving stat values from code, the methods to do so are worth mentioning here.
+
+To retrieve the final value of a stat, you can use the `Get` method:
+
+```csharp
+// phyAtkStat is a reference to the Physical Attack Stat
+int physicalAttack = entityStats.Get(phyAtkStat);
+```
+
+To retrieve the base value of a stat, you can use the `GetBase` method:
+
+```csharp
+// phyAtkStat is a reference to the Physical Attack Stat
+int basePhysicalAttack = entityStats.GetBase(phyAtkStat);
+```
 
 ## Create a class
 *Relative path:* `Class`
