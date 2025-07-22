@@ -51,9 +51,9 @@
         "modern"
       ],
       "globalMetadata": {
-          "_appName": "Simple RPG Core",
-          "_appTitle": "Simple RPG Core",
-          "_appLogoPath": "images/simple-rpg-core-logo.png",
+          "_appName": "Soap RPG Framework",
+          "_appTitle": "Soap RPG Framework",
+          "_appLogoPath": "images/soap-rpg-framework-logo.png",
           "_appFaviconPath": "images/favico.ico",
           "_enableSearch": true,
           "pdf": true

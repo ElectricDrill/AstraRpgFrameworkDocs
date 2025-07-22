@@ -93,7 +93,7 @@ Some game events are already defined and made available by the package (see the 
 
 ### Growth Formulas
 *Relative path:* `Growth Formula`
-As already mentioned in [Introduction](introduction.md), `GrowthFormula` allows defining how a certain value varies as levels increase. A `GrowthFormula` can be instantiated through the hierarchy context menu by going to `Simple RPG Core -> Growth Formula`.
+As already mentioned in [Introduction](introduction.md), `GrowthFormula` allows defining how a certain value varies as levels increase. A `GrowthFormula` can be instantiated through the hierarchy context menu by going to `Soap RPG Framework -> Growth Formula`.
 The package provides a custom property drawer for `GrowthFormula`.
 
 #### Max level for the values
@@ -184,10 +184,10 @@ You'll notice the `Use Constant` checkbox. If checked, you can pass an `IntVar` 
 
 You may notice that a game event is already assigned to `Spawned Entity Event`. This is because an instance of that game event has been explicitly assigned directly in the inspector of the `EntityCore` script. This choice was made since in most cases the same event instance will always be used for entity spawning. This means you don't have to reassign this event every time you create a new entity in Unity. As we'll see later, this default assignment mechanism has been used for other components as well.
 
-## Creating Simple RPG Core assets
+## Creating Soap RPG Framework assets
 All the instances of the various assets that derive from `ScriptableObject`s can be created in the following ways:
-- Context menu: `Right click on the hierarchy > Create > Simple RPG Core`
-- Top bar: `Assets > Create > Simple RPG Core`
+- Context menu: `Right click on the hierarchy > Create > Soap RPG Framework`
+- Top bar: `Assets > Create > Soap RPG Framework`
 - Hotkeys: By pressing the respective keyboard shortcut while a folder or an element of the hierarchy is currently selected
 
 > [!NOTE]  

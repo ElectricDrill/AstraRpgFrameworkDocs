@@ -1,2 +1,2 @@
-# SimpleRPGCoreDocs
-Documentation for the SimpleRPGCore Unity Package
+# SoapRPGFrameworkDocs
+Documentation for the SoapRPGFramework Unity Package
