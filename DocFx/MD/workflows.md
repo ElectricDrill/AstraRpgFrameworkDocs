@@ -184,6 +184,16 @@ You'll notice the `Use Constant` checkbox. If checked, you can pass an `IntVar` 
 
 You may notice that a game event is already assigned to `Spawned Entity Event`. This is because an instance of that game event has been explicitly assigned directly in the inspector of the `EntityCore` script. This choice was made since in most cases the same event instance will always be used for entity spawning. This means you don't have to reassign this event every time you create a new entity in Unity. As we'll see later, this default assignment mechanism has been used for other components as well.
 
+### EntityLevel code APIs
+It is honorable to mention some code APIs that can be used to interact with the `EntityLevel` component.
+
+EntityLevel exposes a `Action<int> OnLevelUp` property that can be used to subscribe to level-up events from code.
+
+If we want to grant experience to the entity, we can use the `AddExp(long amount)` method. This method will automatically raise the `OnLevelUp` event if the entity levels up.
+Alternatively, it is available also the `SetTotalCurrentExp(long totalCurrentExperience)` method, which allows setting the total current experience of the entity. This method will also raise the `OnLevelUp` event if the entity levels up.
+
+Finally, there are the `CurrentLevelTotalExperience()` and the `NextLevelTotalExperience()` methods. These methods return the total experience required to reach the current level and the next level, respectively. They are useful, for example, for checking how much experience is needed to level up.
+
 ## Creating Soap RPG Framework assets
 All the instances of the various assets that derive from `ScriptableObject`s can be created in the following ways:
 - Context menu: `Right click on the hierarchy > Create > Soap RPG Framework`
