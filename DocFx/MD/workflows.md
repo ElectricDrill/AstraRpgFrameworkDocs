@@ -534,3 +534,19 @@ Next, we will create a similar `Attribute Scaling Component` for the `Constituti
 Finally, let's press on the `+` of `Self Scaling Components` and assign the two scaling components we just created. The `Mighty Blow SF` should look like this:
 
 ![Mighty Blow SF with scaling components](../images/workflows/mighty-blow-sf-with-scaling-components.png)
+
+### Using scaling formulas in code
+
+First of all, `ScalingFormula`s expose two code-only properties: `List<ScalingComponent> TmpSelfScalingComponents` and `List<ScalingComponent> TmpTargetScalingComponents`. These properties can be used to add scaling components to the scaling formula at runtime. This is useful when you want to dynamically change the scaling components based on certain conditions or game states, without changing the original serialized scaling formula asset.
+For example, the character could get a temporary buff that makes the, let's say, `Mighty Blow` skill scale also with the `Intelligence` attribute. In this case, we can add a `Attribute Scaling Component` for the `Intelligence` attribute to the `TmpSelfScalingComponents` list of the `Mighty Blow SF` scaling formula.
+
+If the buff wears off, we can remove the scaling component from the `TmpSelfScalingComponents` list.
+
+There is also a method for resetting all the temporary scaling components: `ResetTmpScalings()`.
+This method can be useful, for example, when the player completes a room and advances to the next stage or area of the game, and you want to clear all temporary buffs the character received during that stage.
+
+Moreover, there are four more methods that are worth mentioning:
+- `long CalculateValue(EntityCore self)`: Calculates the value of the scaling formula by summing the value returned by each self scaling component (calculated on the entity itself values), there must not be any target scaling components.
+- `long CalculateValue(EntityCore self, int level)`: If the scaling formula has a base value that varies with levels, this method calculates the value of the scaling formula for the entity itself, and adds the base value at a specific level. Again, there must not be any target scaling components.
+- `long CalculateValue(EntityCore self, EntityCore target)`: Calculates the value of the scaling formula by summing the value returned by each self scaling component (calculated on the entity itself values) and each target scaling component (calculated on the target entity values).
+- `long CalculateValue(EntityCore self, EntityCore target, int level)`: Calculates the value of the scaling formula by summing the value returned by each self scaling component (calculated on the entity itself values) and each target scaling component (calculated on the target entity values), and adds the base value at a specific level.
