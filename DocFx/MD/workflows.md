@@ -159,6 +159,14 @@ If you hold your mouse for a moment onto the chart, a label will show up, showin
 
 ![Interactive Chart](../images/workflows/interactive-chart.gif)
 
+#### Retrieving growth values from code
+To retrieve the values of a `GrowthFormula` from code, you can use the `GetGrowthValue(int level)` method. For example, to get the Physical Attack value at level 5, you can do:
+
+```csharp
+// warriorPhysicalAttackGF is a reference to the Warrior Physical Attack Growth Formula
+int physicalAttackLevel5 = warriorPhysicalAttackGF.GetGrowthValue(5);
+```
+
 ## Make a `GameObject` an entity
 To make a `GameObject` an entity, we need to add the `MonoBehaviour` `EntityCore` to it. Select your object from the hierarchy and click, in the inspector, on "Add component". Then search for and select `EntityCore`.
 
