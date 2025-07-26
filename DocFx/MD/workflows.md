@@ -476,6 +476,24 @@ All we have to do now is just assign the `Warrior` class we created earlier to t
 ### Switching to class-based attributes and stats
 We can now check the `Use Class Base Attributes` and `Use Class Base Stats` checkboxes. By doing this, the entity will use the base attributes and stats defined by the class. The `Fixed Base Attributes` and `Fixed Base Stats` fields will be disabled, and the values will be automatically retrieved from the class growth formulas.
 
+### Retrieving class-based values from code
+
+With a class we can access:
+- attributes values: `GetAttributeAt(Attribute attribute, int level)`
+- stats values: `GetStatAt(Stat stat, int level)`
+- Max HP values: `GetMaxHpAt(int level)`
+For example:
+
+```csharp
+// hero is a reference to the EntityCore component of the hero
+EntityClass warriorClass = hero.GetComponent<EntityClass>();
+// hero.Level is of EntityLevel type, but it is implicitly be converted to an int
+int level = hero.Level;
+int strengthAtLevel5 = warriorClass.GetAttributeAt(strengthAttribute, level);
+int physicalAttackAtLevel5 = warriorClass.GetStatAt(phyAtkStat, level);
+int maxHpAtLevel5 = warriorClass.GetMaxHpAt(level);
+```
+
 ## Create Scaling Formulas
 *Keyboard shortcut:* `Alt + Shift + S`
 *Relative path:* `Scaling -> Scaling Formula`
