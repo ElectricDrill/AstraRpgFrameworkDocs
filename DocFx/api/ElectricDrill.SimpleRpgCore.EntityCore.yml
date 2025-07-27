@@ -26,10 +26,17 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: EntityCore
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/EntityCore.cs
-    startLine: 9
+    startLine: 14
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: >-
+    The core component for any entity in the game.
+
+    It is the mandatory base class for all entities, providing essential functionality.
+
+    Provides easy access to the entity's level, stats, and attributes.
+  example: []
   syntax:
     content: 'public class EntityCore : MonoBehaviour, ILevel, IAttributes'
     content.vb: Public Class EntityCore Inherits MonoBehaviour Implements ILevel, IAttributes
@@ -60,10 +67,11 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Level
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/EntityCore.cs
-    startLine: 20
+    startLine: 28
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Gets the <xref href="ElectricDrill.SimpleRpgCore.EntityLevel" data-throw-if-not-resolved="false"></xref> class which manages the entity's level and experience.
   example: []
   syntax:
     content: public virtual EntityLevel Level { get; }
@@ -92,10 +100,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Stats
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/EntityCore.cs
-    startLine: 21
+    startLine: 33
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Gets the <xref href="ElectricDrill.SimpleRpgCore.Stats.EntityStats" data-throw-if-not-resolved="false"></xref> component which manages the entity's stats.
+  example: []
   syntax:
     content: public virtual EntityStats Stats { get; }
     parameters: []
@@ -121,10 +131,11 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Attributes
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/EntityCore.cs
-    startLine: 22
+    startLine: 38
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Gets the <xref href="ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes" data-throw-if-not-resolved="false"></xref> component which manages the entity's attributes.
   example: []
   syntax:
     content: public virtual EntityAttributes Attributes { get; }
@@ -153,10 +164,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Name
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/EntityCore.cs
-    startLine: 24
+    startLine: 43
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Gets the name of the entity's GameObject.
+  example: []
   syntax:
     content: public string Name { get; }
     parameters: []
@@ -182,7 +195,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Awake
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/EntityCore.cs
-    startLine: 31
+    startLine: 50
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
@@ -208,7 +221,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Start
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/EntityCore.cs
-    startLine: 34
+    startLine: 53
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
@@ -234,7 +247,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Update
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/EntityCore.cs
-    startLine: 49
+    startLine: 68
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
@@ -330,6 +343,13 @@ references:
   name: UnityEngine
   nameWithType: UnityEngine
   fullName: UnityEngine
+- uid: ElectricDrill.SimpleRpgCore.EntityLevel
+  commentId: T:ElectricDrill.SimpleRpgCore.EntityLevel
+  parent: ElectricDrill.SimpleRpgCore
+  href: ElectricDrill.SimpleRpgCore.EntityLevel.html
+  name: EntityLevel
+  nameWithType: EntityLevel
+  fullName: ElectricDrill.SimpleRpgCore.EntityLevel
 - uid: ElectricDrill.SimpleRpgCore.EntityCore.Level*
   commentId: Overload:ElectricDrill.SimpleRpgCore.EntityCore.Level
   href: ElectricDrill.SimpleRpgCore.EntityCore.html#ElectricDrill_SimpleRpgCore_EntityCore_Level
@@ -343,19 +363,6 @@ references:
   name: Level
   nameWithType: ILevel.Level
   fullName: ElectricDrill.SimpleRpgCore.ILevel.Level
-- uid: ElectricDrill.SimpleRpgCore.EntityLevel
-  commentId: T:ElectricDrill.SimpleRpgCore.EntityLevel
-  parent: ElectricDrill.SimpleRpgCore
-  href: ElectricDrill.SimpleRpgCore.EntityLevel.html
-  name: EntityLevel
-  nameWithType: EntityLevel
-  fullName: ElectricDrill.SimpleRpgCore.EntityLevel
-- uid: ElectricDrill.SimpleRpgCore.EntityCore.Stats*
-  commentId: Overload:ElectricDrill.SimpleRpgCore.EntityCore.Stats
-  href: ElectricDrill.SimpleRpgCore.EntityCore.html#ElectricDrill_SimpleRpgCore_EntityCore_Stats
-  name: Stats
-  nameWithType: EntityCore.Stats
-  fullName: ElectricDrill.SimpleRpgCore.EntityCore.Stats
 - uid: ElectricDrill.SimpleRpgCore.Stats.EntityStats
   commentId: T:ElectricDrill.SimpleRpgCore.Stats.EntityStats
   parent: ElectricDrill.SimpleRpgCore.Stats
@@ -363,6 +370,12 @@ references:
   name: EntityStats
   nameWithType: EntityStats
   fullName: ElectricDrill.SimpleRpgCore.Stats.EntityStats
+- uid: ElectricDrill.SimpleRpgCore.EntityCore.Stats*
+  commentId: Overload:ElectricDrill.SimpleRpgCore.EntityCore.Stats
+  href: ElectricDrill.SimpleRpgCore.EntityCore.html#ElectricDrill_SimpleRpgCore_EntityCore_Stats
+  name: Stats
+  nameWithType: EntityCore.Stats
+  fullName: ElectricDrill.SimpleRpgCore.EntityCore.Stats
 - uid: ElectricDrill.SimpleRpgCore.Stats
   commentId: N:ElectricDrill.SimpleRpgCore.Stats
   href: ElectricDrill.html
@@ -393,6 +406,13 @@ references:
   - uid: ElectricDrill.SimpleRpgCore.Stats
     name: Stats
     href: ElectricDrill.SimpleRpgCore.Stats.html
+- uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes
+  commentId: T:ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes
+  parent: ElectricDrill.SimpleRpgCore.Attributes
+  href: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.html
+  name: EntityAttributes
+  nameWithType: EntityAttributes
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes
 - uid: ElectricDrill.SimpleRpgCore.EntityCore.Attributes*
   commentId: Overload:ElectricDrill.SimpleRpgCore.EntityCore.Attributes
   href: ElectricDrill.SimpleRpgCore.EntityCore.html#ElectricDrill_SimpleRpgCore_EntityCore_Attributes
@@ -406,13 +426,6 @@ references:
   name: Attributes
   nameWithType: IAttributes.Attributes
   fullName: ElectricDrill.SimpleRpgCore.IAttributes.Attributes
-- uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes
-  commentId: T:ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes
-  parent: ElectricDrill.SimpleRpgCore.Attributes
-  href: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.html
-  name: EntityAttributes
-  nameWithType: EntityAttributes
-  fullName: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes
 - uid: ElectricDrill.SimpleRpgCore.Attributes
   commentId: N:ElectricDrill.SimpleRpgCore.Attributes
   href: ElectricDrill.html

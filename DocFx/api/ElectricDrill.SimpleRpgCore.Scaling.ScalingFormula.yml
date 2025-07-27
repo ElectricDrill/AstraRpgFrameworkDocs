@@ -26,10 +26,25 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ScalingFormula
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs
-    startLine: 11
+    startLine: 20
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: >-
+    Represents a formula to calculate a value based on values returned by several scaling components.
+
+    The calculation of each scaling component can either be based on the "self" entity (the entity that owns the formula)
+
+    or the "target" entity (the entity that will be targeted by the action).
+
+    For example, a scaling formula for an attack that deals the more damage the higher the enemy's armor is,
+
+    can use the "self" entity to calculate the damage based on the attacker's stats
+
+    and the "target" entity to calculate additional damage based on the target's armor.
+
+    The final damage will be the sum of the value returned by the two scaling components.
+  example: []
   syntax:
     content: 'public class ScalingFormula : ScriptableObject'
     content.vb: Public Class ScalingFormula Inherits ScriptableObject
@@ -55,10 +70,15 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: TmpSelfScalingComponents
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs
-    startLine: 24
+    startLine: 37
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: >-
+    Gets the list of temporary scaling components for the "self" entity.
+
+    These are not serialized and are used for runtime modifications.
+  example: []
   syntax:
     content: public List<ScalingComponent> TmpSelfScalingComponents { get; }
     parameters: []
@@ -84,10 +104,15 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: TmpTargetScalingComponents
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs
-    startLine: 25
+    startLine: 42
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: >-
+    Gets the list of temporary scaling components for the "target" entity.
+
+    These are not serialized and are used for runtime modifications.
+  example: []
   syntax:
     content: public List<ScalingComponent> TmpTargetScalingComponents { get; }
     parameters: []
@@ -113,17 +138,24 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CalculateValue
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs
-    startLine: 28
+    startLine: 50
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: >-
+    Calculates the final value using only the "self" entity.
+
+    This method assumes there are no target scaling components.
+  example: []
   syntax:
     content: public long CalculateValue(EntityCore self)
     parameters:
     - id: self
       type: ElectricDrill.SimpleRpgCore.EntityCore
+      description: The entity providing values for self-scaling components.
     return:
       type: System.Int64
+      description: The calculated value.
     content.vb: Public Function CalculateValue(self As EntityCore) As Long
   overload: ElectricDrill.SimpleRpgCore.Scaling.ScalingFormula.CalculateValue*
 - uid: ElectricDrill.SimpleRpgCore.Scaling.ScalingFormula.CalculateValue(ElectricDrill.SimpleRpgCore.EntityCore,System.Int32)
@@ -144,19 +176,27 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CalculateValue
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs
-    startLine: 34
+    startLine: 63
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: >-
+    Calculates the final value using the "self" entity and a specific level for the base scaling value.
+
+    This method assumes there are no target scaling components and the formula uses a scaling base value.
+  example: []
   syntax:
     content: public long CalculateValue(EntityCore self, int level)
     parameters:
     - id: self
       type: ElectricDrill.SimpleRpgCore.EntityCore
+      description: The entity providing values for self-scaling components.
     - id: level
       type: System.Int32
+      description: The level to use for calculating the base value.
     return:
       type: System.Int64
+      description: The calculated value.
     content.vb: Public Function CalculateValue(self As EntityCore, level As Integer) As Long
   overload: ElectricDrill.SimpleRpgCore.Scaling.ScalingFormula.CalculateValue*
   nameWithType.vb: ScalingFormula.CalculateValue(EntityCore, Integer)
@@ -180,19 +220,24 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CalculateValue
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs
-    startLine: 41
+    startLine: 76
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: Calculates the final value using both "self" and "target" entities.
+  example: []
   syntax:
     content: public long CalculateValue(EntityCore self, EntityCore target)
     parameters:
     - id: self
       type: ElectricDrill.SimpleRpgCore.EntityCore
+      description: The entity providing values for self-scaling components.
     - id: target
       type: ElectricDrill.SimpleRpgCore.EntityCore
+      description: The entity providing values for target-scaling components.
     return:
       type: System.Int64
+      description: The calculated value.
     content.vb: Public Function CalculateValue(self As EntityCore, target As EntityCore) As Long
   overload: ElectricDrill.SimpleRpgCore.Scaling.ScalingFormula.CalculateValue*
 - uid: ElectricDrill.SimpleRpgCore.Scaling.ScalingFormula.CalculateValue(ElectricDrill.SimpleRpgCore.EntityCore,ElectricDrill.SimpleRpgCore.EntityCore,System.Int32)
@@ -213,21 +258,30 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CalculateValue
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs
-    startLine: 47
+    startLine: 90
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: >-
+    Calculates the final value using both "self" and "target" entities, and a specific level for the base value.
+
+    This method assumes the formula uses a scaling base value.
+  example: []
   syntax:
     content: public long CalculateValue(EntityCore self, EntityCore target, int level)
     parameters:
     - id: self
       type: ElectricDrill.SimpleRpgCore.EntityCore
+      description: The entity providing values for self-scaling components.
     - id: target
       type: ElectricDrill.SimpleRpgCore.EntityCore
+      description: The entity providing values for target-scaling components.
     - id: level
       type: System.Int32
+      description: The level to use for calculating the base value.
     return:
       type: System.Int64
+      description: The calculated value.
     content.vb: Public Function CalculateValue(self As EntityCore, target As EntityCore, level As Integer) As Long
   overload: ElectricDrill.SimpleRpgCore.Scaling.ScalingFormula.CalculateValue*
   nameWithType.vb: ScalingFormula.CalculateValue(EntityCore, EntityCore, Integer)
@@ -251,10 +305,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ResetTmpScalings
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs
-    startLine: 54
+    startLine: 100
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: Clears all temporary scaling components for both "self" and "target".
+  example: []
   syntax:
     content: public void ResetTmpScalings()
     content.vb: Public Sub ResetTmpScalings()

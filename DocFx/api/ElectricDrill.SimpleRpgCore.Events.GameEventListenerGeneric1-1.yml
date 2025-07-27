@@ -38,6 +38,7 @@ items:
   - UnityEngine.Behaviour
   - UnityEngine.MonoBehaviour
   derivedClasses:
+  - ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEventListener
   - ElectricDrill.SimpleRpgCore.Events.EntityCoreGameEventListener
   - ElectricDrill.SimpleRpgCore.Events.IntGameEventListener
   - ElectricDrill.SimpleRpgCore.Events.StatChangedGameEventListener

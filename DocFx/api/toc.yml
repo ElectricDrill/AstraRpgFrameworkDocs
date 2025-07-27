@@ -73,6 +73,9 @@ items:
   - uid: ElectricDrill.SimpleRpgCore.Attributes.Attribute
     name: Attribute
     type: Class
+  - uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+    name: AttributeChangeInfo
+    type: Struct
   - uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeMenuItems
     name: AttributeMenuItems
     type: Class
@@ -101,6 +104,12 @@ items:
   name: ElectricDrill.SimpleRpgCore.Events
   type: Namespace
   items:
+  - uid: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent
+    name: AttributeChangedGameEvent
+    type: Class
+  - uid: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEventListener
+    name: AttributeChangedGameEventListener
+    type: Class
   - uid: ElectricDrill.SimpleRpgCore.Events.EntityCoreGameEvent
     name: EntityCoreGameEvent
     type: Class

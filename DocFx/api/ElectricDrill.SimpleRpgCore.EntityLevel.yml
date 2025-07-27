@@ -28,10 +28,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: EntityLevel
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Experience/EntityLevel.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Represents the level and experience of an entity.
+  example: []
   syntax:
     content: >-
       [Serializable]
@@ -67,10 +69,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: OnLevelUp
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Experience/EntityLevel.cs
-    startLine: 37
+    startLine: 43
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Event raised when the entity levels up. The parameter is the new level.
+  example: []
   syntax:
     content: public virtual Action<int> OnLevelUp { get; set; }
     parameters: []
@@ -96,10 +100,11 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Level
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Experience/EntityLevel.cs
-    startLine: 38
+    startLine: 47
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: The current level of the entity.
   example: []
   syntax:
     content: public virtual int Level { get; set; }
@@ -128,16 +133,21 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AddExp
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Experience/EntityLevel.cs
-    startLine: 77
+    startLine: 91
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: >-
+    Adds experience to the entity. This will be affected by experience gain modifiers.
+
+    If the entity levels up, the OnLevelUp event will be raised.
   example: []
   syntax:
     content: public void AddExp(long amount)
     parameters:
     - id: amount
       type: System.Int64
+      description: The base amount of experience to add.
     content.vb: Public Sub AddExp(amount As Long)
   overload: ElectricDrill.SimpleRpgCore.EntityLevel.AddExp*
   implements:
@@ -163,16 +173,18 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: SetTotalCurrentExp
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Experience/EntityLevel.cs
-    startLine: 101
+    startLine: 119
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Sets the total current experience and updates the level accordingly.
   example: []
   syntax:
     content: public void SetTotalCurrentExp(long totalCurrentExperience)
     parameters:
     - id: totalCurrentExperience
       type: System.Int64
+      description: The total experience to set.
     content.vb: Public Sub SetTotalCurrentExp(totalCurrentExperience As Long)
   overload: ElectricDrill.SimpleRpgCore.EntityLevel.SetTotalCurrentExp*
   implements:
@@ -198,10 +210,11 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CurrentTotalExperience
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Experience/EntityLevel.cs
-    startLine: 116
+    startLine: 137
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: The current total experience of the entity.
   example: []
   syntax:
     content: public long CurrentTotalExperience { get; }
@@ -230,15 +243,17 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CurrentLevelTotalExperience
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Experience/EntityLevel.cs
-    startLine: 117
+    startLine: 142
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Gets the total experience required to reach the current level.
   example: []
   syntax:
     content: public long CurrentLevelTotalExperience()
     return:
       type: System.Int64
+      description: The total experience for the current level.
     content.vb: Public Function CurrentLevelTotalExperience() As Long
   overload: ElectricDrill.SimpleRpgCore.EntityLevel.CurrentLevelTotalExperience*
   implements:
@@ -261,15 +276,17 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: NextLevelTotalExperience
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Experience/EntityLevel.cs
-    startLine: 121
+    startLine: 150
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Gets the total experience required to reach the next level. If the entity is already at the maximum level, it returns the total experience for the current level.
   example: []
   syntax:
     content: public long NextLevelTotalExperience()
     return:
       type: System.Int64
+      description: The total experience for the next level. If at max level, returns the total experience for the current level.
     content.vb: Public Function NextLevelTotalExperience() As Long
   overload: ElectricDrill.SimpleRpgCore.EntityLevel.NextLevelTotalExperience*
   implements:
@@ -292,15 +309,18 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Experience/EntityLevel.cs
-    startLine: 129
+    startLine: 161
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Implicitly converts an EntityLevel to its integer level value.
+  example: []
   syntax:
     content: public static implicit operator int(EntityLevel entityLevel)
     parameters:
     - id: entityLevel
       type: ElectricDrill.SimpleRpgCore.EntityLevel
+      description: The EntityLevel instance.
     return:
       type: System.Int32
     content.vb: Public Shared Widening Operator CType(entityLevel As EntityLevel) As Integer
@@ -326,10 +346,14 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ValidateExperience
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Experience/EntityLevel.cs
-    startLine: 132
+    startLine: 167
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: >-
+    Validates that the current total experience corresponds to the current level.
+
+    If not, it resets the experience to the base value for the current level.
   example: []
   syntax:
     content: public void ValidateExperience()

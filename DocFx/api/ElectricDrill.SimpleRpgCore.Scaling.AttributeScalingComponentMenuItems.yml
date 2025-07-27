@@ -20,10 +20,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AttributeScalingComponentMenuItems
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingComponents/AttributesScalingComponent.cs
-    startLine: 35
+    startLine: 56
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: Provides a menu item in the Unity Editor to create an AttributesScalingComponent asset.
+  example: []
   syntax:
     content: public static class AttributeScalingComponentMenuItems
     content.vb: Public Module AttributeScalingComponentMenuItems
@@ -47,10 +49,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CreateAttributeScalingComponent
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingComponents/AttributesScalingComponent.cs
-    startLine: 37
+    startLine: 61
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: Creates a new AttributesScalingComponent asset.
+  example: []
   syntax:
     content: >-
       [MenuItem("Assets/Create/Simple RPG Core/Scaling/Attribute Scaling Component", false, 1)]

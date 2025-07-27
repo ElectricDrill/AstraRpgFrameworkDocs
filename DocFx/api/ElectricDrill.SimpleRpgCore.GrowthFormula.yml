@@ -7,7 +7,6 @@ items:
   children:
   - ElectricDrill.SimpleRpgCore.GrowthFormula.GetGrowthValue(System.Int32)
   - ElectricDrill.SimpleRpgCore.GrowthFormula.GrowthFoValues
-  - ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel(System.Int32,System.String@)
   langs:
   - csharp
   - vb
@@ -22,10 +21,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GrowthFormula
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/GrowthFormula.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Represents a formula to calculate growth values for different levels, up to a maximum level.
+  example: []
   syntax:
     content: 'public class GrowthFormula : ScriptableObject'
     content.vb: Public Class GrowthFormula Inherits ScriptableObject
@@ -51,10 +52,17 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GrowthFoValues
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/GrowthFormula.cs
-    startLine: 16
+    startLine: 25
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: >-
+    Gets the pre-calculated growth formula values for each level.
+
+    Values are refreshed on validation.
+
+    The array is indexed from 0 to maxLevel - 1, where index 0 corresponds to level 1.
+  example: []
   syntax:
     content: public double[] GrowthFoValues { get; }
     parameters: []
@@ -80,58 +88,26 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetGrowthValue
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/GrowthFormula.cs
-    startLine: 18
+    startLine: 32
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Gets the growth value for a specific level.
+  example: []
   syntax:
     content: public long GetGrowthValue(int level)
     parameters:
     - id: level
       type: System.Int32
+      description: The level for which to get the growth value.
     return:
       type: System.Int64
+      description: The growth value for the specified level.
     content.vb: Public Function GetGrowthValue(level As Integer) As Long
   overload: ElectricDrill.SimpleRpgCore.GrowthFormula.GetGrowthValue*
   nameWithType.vb: GrowthFormula.GetGrowthValue(Integer)
   fullName.vb: ElectricDrill.SimpleRpgCore.GrowthFormula.GetGrowthValue(Integer)
   name.vb: GetGrowthValue(Integer)
-- uid: ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel(System.Int32,System.String@)
-  commentId: M:ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel(System.Int32,System.String@)
-  id: ValidateLevel(System.Int32,System.String@)
-  parent: ElectricDrill.SimpleRpgCore.GrowthFormula
-  langs:
-  - csharp
-  - vb
-  name: ValidateLevel(int, out string)
-  nameWithType: GrowthFormula.ValidateLevel(int, out string)
-  fullName: ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel(int, out string)
-  type: Method
-  source:
-    remote:
-      path: Runtime/SimpleRpgCore/GrowthFormula.cs
-      branch: main
-      repo: https://github.com/Cis8/SoapRpgFramework
-    id: ValidateLevel
-    path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/GrowthFormula.cs
-    startLine: 28
-  assemblies:
-  - ElectricDrill.SimpleRPGCore.Runtime
-  namespace: ElectricDrill.SimpleRpgCore
-  syntax:
-    content: public bool ValidateLevel(int level, out string errorMessage)
-    parameters:
-    - id: level
-      type: System.Int32
-    - id: errorMessage
-      type: System.String
-    return:
-      type: System.Boolean
-    content.vb: Public Function ValidateLevel(level As Integer, errorMessage As String) As Boolean
-  overload: ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel*
-  nameWithType.vb: GrowthFormula.ValidateLevel(Integer, String)
-  fullName.vb: ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel(Integer, String)
-  name.vb: ValidateLevel(Integer, String)
 references:
 - uid: ElectricDrill.SimpleRpgCore
   commentId: N:ElectricDrill.SimpleRpgCore
@@ -244,29 +220,3 @@ references:
   nameWithType.vb: Long
   fullName.vb: Long
   name.vb: Long
-- uid: ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel*
-  commentId: Overload:ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel
-  href: ElectricDrill.SimpleRpgCore.GrowthFormula.html#ElectricDrill_SimpleRpgCore_GrowthFormula_ValidateLevel_System_Int32_System_String__
-  name: ValidateLevel
-  nameWithType: GrowthFormula.ValidateLevel
-  fullName: ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean

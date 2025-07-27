@@ -1,0 +1,282 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+  commentId: T:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+  id: AttributeChangeInfo
+  parent: ElectricDrill.SimpleRpgCore.Attributes
+  children:
+  - ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.#ctor(ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes,ElectricDrill.SimpleRpgCore.Attributes.Attribute,System.Int64,System.Int64)
+  - ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Attribute
+  - ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.NewValue
+  - ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.OldValue
+  - ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Source
+  langs:
+  - csharp
+  - vb
+  name: AttributeChangeInfo
+  nameWithType: AttributeChangeInfo
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+  type: Struct
+  source:
+    remote:
+      path: Runtime/SimpleRpgCore/Attributes/AttributeChangeInfo.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: AttributeChangeInfo
+    path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/AttributeChangeInfo.cs
+    startLine: 2
+  assemblies:
+  - ElectricDrill.SimpleRPGCore.Runtime
+  namespace: ElectricDrill.SimpleRpgCore.Attributes
+  syntax:
+    content: public readonly struct AttributeChangeInfo
+    content.vb: Public Structure AttributeChangeInfo
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Source
+  commentId: P:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Source
+  id: Source
+  parent: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+  langs:
+  - csharp
+  - vb
+  name: Source
+  nameWithType: AttributeChangeInfo.Source
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Source
+  type: Property
+  source:
+    remote:
+      path: Runtime/SimpleRpgCore/Attributes/AttributeChangeInfo.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Source
+    path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/AttributeChangeInfo.cs
+    startLine: 4
+  assemblies:
+  - ElectricDrill.SimpleRPGCore.Runtime
+  namespace: ElectricDrill.SimpleRpgCore.Attributes
+  syntax:
+    content: public EntityAttributes Source { get; }
+    parameters: []
+    return:
+      type: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes
+    content.vb: Public ReadOnly Property Source As EntityAttributes
+  overload: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Source*
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Attribute
+  commentId: P:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Attribute
+  id: Attribute
+  parent: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+  langs:
+  - csharp
+  - vb
+  name: Attribute
+  nameWithType: AttributeChangeInfo.Attribute
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Attribute
+  type: Property
+  source:
+    remote:
+      path: Runtime/SimpleRpgCore/Attributes/AttributeChangeInfo.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Attribute
+    path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/AttributeChangeInfo.cs
+    startLine: 5
+  assemblies:
+  - ElectricDrill.SimpleRPGCore.Runtime
+  namespace: ElectricDrill.SimpleRpgCore.Attributes
+  syntax:
+    content: public Attribute Attribute { get; }
+    parameters: []
+    return:
+      type: ElectricDrill.SimpleRpgCore.Attributes.Attribute
+    content.vb: Public ReadOnly Property Attribute As Attribute
+  overload: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Attribute*
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.OldValue
+  commentId: P:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.OldValue
+  id: OldValue
+  parent: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+  langs:
+  - csharp
+  - vb
+  name: OldValue
+  nameWithType: AttributeChangeInfo.OldValue
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.OldValue
+  type: Property
+  source:
+    remote:
+      path: Runtime/SimpleRpgCore/Attributes/AttributeChangeInfo.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: OldValue
+    path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/AttributeChangeInfo.cs
+    startLine: 6
+  assemblies:
+  - ElectricDrill.SimpleRPGCore.Runtime
+  namespace: ElectricDrill.SimpleRpgCore.Attributes
+  syntax:
+    content: public long OldValue { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property OldValue As Long
+  overload: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.OldValue*
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.NewValue
+  commentId: P:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.NewValue
+  id: NewValue
+  parent: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: AttributeChangeInfo.NewValue
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.NewValue
+  type: Property
+  source:
+    remote:
+      path: Runtime/SimpleRpgCore/Attributes/AttributeChangeInfo.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: NewValue
+    path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/AttributeChangeInfo.cs
+    startLine: 7
+  assemblies:
+  - ElectricDrill.SimpleRPGCore.Runtime
+  namespace: ElectricDrill.SimpleRpgCore.Attributes
+  syntax:
+    content: public long NewValue { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property NewValue As Long
+  overload: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.NewValue*
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.#ctor(ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes,ElectricDrill.SimpleRpgCore.Attributes.Attribute,System.Int64,System.Int64)
+  commentId: M:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.#ctor(ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes,ElectricDrill.SimpleRpgCore.Attributes.Attribute,System.Int64,System.Int64)
+  id: '#ctor(ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes,ElectricDrill.SimpleRpgCore.Attributes.Attribute,System.Int64,System.Int64)'
+  parent: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+  langs:
+  - csharp
+  - vb
+  name: AttributeChangeInfo(EntityAttributes, Attribute, long, long)
+  nameWithType: AttributeChangeInfo.AttributeChangeInfo(EntityAttributes, Attribute, long, long)
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.AttributeChangeInfo(ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes, ElectricDrill.SimpleRpgCore.Attributes.Attribute, long, long)
+  type: Constructor
+  source:
+    remote:
+      path: Runtime/SimpleRpgCore/Attributes/AttributeChangeInfo.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: .ctor
+    path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/AttributeChangeInfo.cs
+    startLine: 9
+  assemblies:
+  - ElectricDrill.SimpleRPGCore.Runtime
+  namespace: ElectricDrill.SimpleRpgCore.Attributes
+  syntax:
+    content: public AttributeChangeInfo(EntityAttributes source, Attribute attribute, long oldValue, long newValue)
+    parameters:
+    - id: source
+      type: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes
+    - id: attribute
+      type: ElectricDrill.SimpleRpgCore.Attributes.Attribute
+    - id: oldValue
+      type: System.Int64
+    - id: newValue
+      type: System.Int64
+    content.vb: Public Sub New(source As EntityAttributes, attribute As Attribute, oldValue As Long, newValue As Long)
+  overload: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.#ctor*
+  nameWithType.vb: AttributeChangeInfo.New(EntityAttributes, Attribute, Long, Long)
+  fullName.vb: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.New(ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes, ElectricDrill.SimpleRpgCore.Attributes.Attribute, Long, Long)
+  name.vb: New(EntityAttributes, Attribute, Long, Long)
+references:
+- uid: ElectricDrill.SimpleRpgCore.Attributes
+  commentId: N:ElectricDrill.SimpleRpgCore.Attributes
+  href: ElectricDrill.html
+  name: ElectricDrill.SimpleRpgCore.Attributes
+  nameWithType: ElectricDrill.SimpleRpgCore.Attributes
+  fullName: ElectricDrill.SimpleRpgCore.Attributes
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SimpleRpgCore
+    name: SimpleRpgCore
+    href: ElectricDrill.SimpleRpgCore.html
+  - name: .
+  - uid: ElectricDrill.SimpleRpgCore.Attributes
+    name: Attributes
+    href: ElectricDrill.SimpleRpgCore.Attributes.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SimpleRpgCore
+    name: SimpleRpgCore
+    href: ElectricDrill.SimpleRpgCore.html
+  - name: .
+  - uid: ElectricDrill.SimpleRpgCore.Attributes
+    name: Attributes
+    href: ElectricDrill.SimpleRpgCore.Attributes.html
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Source*
+  commentId: Overload:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Source
+  href: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html#ElectricDrill_SimpleRpgCore_Attributes_AttributeChangeInfo_Source
+  name: Source
+  nameWithType: AttributeChangeInfo.Source
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Source
+- uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes
+  commentId: T:ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes
+  parent: ElectricDrill.SimpleRpgCore.Attributes
+  href: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.html
+  name: EntityAttributes
+  nameWithType: EntityAttributes
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Attribute*
+  commentId: Overload:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Attribute
+  href: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html#ElectricDrill_SimpleRpgCore_Attributes_AttributeChangeInfo_Attribute
+  name: Attribute
+  nameWithType: AttributeChangeInfo.Attribute
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Attribute
+- uid: ElectricDrill.SimpleRpgCore.Attributes.Attribute
+  commentId: T:ElectricDrill.SimpleRpgCore.Attributes.Attribute
+  parent: ElectricDrill.SimpleRpgCore.Attributes
+  href: ElectricDrill.SimpleRpgCore.Attributes.Attribute.html
+  name: Attribute
+  nameWithType: Attribute
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.Attribute
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.OldValue*
+  commentId: Overload:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.OldValue
+  href: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html#ElectricDrill_SimpleRpgCore_Attributes_AttributeChangeInfo_OldValue
+  name: OldValue
+  nameWithType: AttributeChangeInfo.OldValue
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.OldValue
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.NewValue*
+  commentId: Overload:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.NewValue
+  href: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html#ElectricDrill_SimpleRpgCore_Attributes_AttributeChangeInfo_NewValue
+  name: NewValue
+  nameWithType: AttributeChangeInfo.NewValue
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.NewValue
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.#ctor*
+  commentId: Overload:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.#ctor
+  href: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html#ElectricDrill_SimpleRpgCore_Attributes_AttributeChangeInfo__ctor_ElectricDrill_SimpleRpgCore_Attributes_EntityAttributes_ElectricDrill_SimpleRpgCore_Attributes_Attribute_System_Int64_System_Int64_
+  name: AttributeChangeInfo
+  nameWithType: AttributeChangeInfo.AttributeChangeInfo
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.AttributeChangeInfo
+  nameWithType.vb: AttributeChangeInfo.New
+  fullName.vb: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.New
+  name.vb: New

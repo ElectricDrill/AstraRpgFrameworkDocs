@@ -107,14 +107,17 @@ items:
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: Calculates the value of this component based on the provided entity.
   example: []
   syntax:
     content: public override long CalculateValue(EntityCore entity)
     parameters:
     - id: entity
       type: ElectricDrill.SimpleRpgCore.EntityCore
+      description: The entity whose properties are used for calculation.
     return:
       type: System.Int64
+      description: The calculated value from this component.
     content.vb: Public Overrides Function CalculateValue(entity As EntityCore) As Long
   overridden: ElectricDrill.SimpleRpgCore.Scaling.ScalingComponent.CalculateValue(ElectricDrill.SimpleRpgCore.EntityCore)
   overload: ElectricDrill.SimpleRpgCore.Scaling.SoSetScalingComponentBase`2.CalculateValue*

@@ -20,10 +20,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GrowthFormulaMenuItems
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/GrowthFormula.cs
-    startLine: 150
+    startLine: 167
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Provides a menu item in the Unity Editor to create a GrowthFormula asset.
+  example: []
   syntax:
     content: public static class GrowthFormulaMenuItems
     content.vb: Public Module GrowthFormulaMenuItems
@@ -47,10 +49,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CreateGrowthFormula
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/GrowthFormula.cs
-    startLine: 152
+    startLine: 172
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Creates a new GrowthFormula asset.
+  example: []
   syntax:
     content: >-
       [MenuItem("Assets/Create/Simple RPG Core/Growth Formula", false, 6)]

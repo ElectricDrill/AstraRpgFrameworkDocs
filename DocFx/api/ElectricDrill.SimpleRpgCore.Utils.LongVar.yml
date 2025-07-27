@@ -21,10 +21,15 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: LongVar
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/LongVar.cs
-    startLine: 6
+    startLine: 10
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: >-
+    ScriptableObject that holds a long value.
+
+    Can be used to share a long value between different GameObjects and scenes.
+  example: []
   syntax:
     content: >-
       [CreateAssetMenu]
@@ -60,10 +65,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Value
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/LongVar.cs
-    startLine: 10
+    startLine: 17
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: The long value.
+  example: []
   syntax:
     content: public long Value { get; set; }
     parameters: []
@@ -89,15 +96,18 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/LongVar.cs
-    startLine: 16
+    startLine: 26
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: Allows implicit conversion from a LongVar to a long.
+  example: []
   syntax:
     content: public static implicit operator long(LongVar var)
     parameters:
     - id: var
       type: ElectricDrill.SimpleRpgCore.Utils.LongVar
+      description: The LongVar to convert.
     return:
       type: System.Int64
     content.vb: Public Shared Widening Operator CType(var As LongVar) As Long

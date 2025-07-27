@@ -13,6 +13,7 @@ items:
   - ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.FlatModifiers
   - ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.Get(ElectricDrill.SimpleRpgCore.Attributes.Attribute)
   - ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.GetBase(ElectricDrill.SimpleRpgCore.Attributes.Attribute)
+  - ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.OnAttributeChanged
   - ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.PercentageModifiers
   - ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.SpendOn(ElectricDrill.SimpleRpgCore.Attributes.Attribute,System.Int32)
   langs:
@@ -29,10 +30,17 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: EntityAttributes
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/EntityAttributes.cs
-    startLine: 10
+    startLine: 16
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Attributes
+  summary: >-
+    Manages the attributes of an entity.
+
+    This component calculates attribute values by combining base values, flat modifiers, percentage modifiers, and spent attribute points.
+
+    It requires an <xref href="ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.EntityCore" data-throw-if-not-resolved="false"></xref> component on the same GameObject.
+  example: []
   syntax:
     content: >-
       [RequireComponent(typeof(EntityCore))]
@@ -54,6 +62,35 @@ items:
     arguments:
     - type: System.Type
       value: ElectricDrill.SimpleRpgCore.EntityCore
+- uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.OnAttributeChanged
+  commentId: P:ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.OnAttributeChanged
+  id: OnAttributeChanged
+  parent: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes
+  langs:
+  - csharp
+  - vb
+  name: OnAttributeChanged
+  nameWithType: EntityAttributes.OnAttributeChanged
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.OnAttributeChanged
+  type: Property
+  source:
+    remote:
+      path: Runtime/SimpleRpgCore/Attributes/EntityAttributes.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: OnAttributeChanged
+    path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/EntityAttributes.cs
+    startLine: 44
+  assemblies:
+  - ElectricDrill.SimpleRPGCore.Runtime
+  namespace: ElectricDrill.SimpleRpgCore.Attributes
+  syntax:
+    content: public AttributeChangedGameEvent OnAttributeChanged { get; }
+    parameters: []
+    return:
+      type: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent
+    content.vb: Public Property OnAttributeChanged As AttributeChangedGameEvent
+  overload: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.OnAttributeChanged*
 - uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.AttributesCache
   commentId: P:ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.AttributesCache
   id: AttributesCache
@@ -72,10 +109,15 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AttributesCache
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/EntityAttributes.cs
-    startLine: 36
+    startLine: 53
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Attributes
+  summary: >-
+    Provides access to the cache for calculated attribute values.
+
+    Caching can be enabled or disabled with the <xref href="ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.useCache" data-throw-if-not-resolved="false"></xref> flag.
+  example: []
   syntax:
     content: public Cache<Attribute, long> AttributesCache { get; }
     parameters: []
@@ -101,10 +143,15 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: EntityClass
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/EntityAttributes.cs
-    startLine: 38
+    startLine: 59
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Attributes
+  summary: >-
+    Gets the class for this entity.
+
+    The class is used to determine base attributes when <xref href="ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.useClassBaseAttributes" data-throw-if-not-resolved="false"></xref> is true.
+  example: []
   syntax:
     content: public IClassSource EntityClass { get; }
     parameters: []
@@ -130,17 +177,21 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: SpendOn
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/EntityAttributes.cs
-    startLine: 54
+    startLine: 80
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Attributes
+  summary: Spends a certain amount of attribute points on a specific attribute.
+  example: []
   syntax:
     content: public void SpendOn(Attribute attribute, int amount)
     parameters:
     - id: attribute
       type: ElectricDrill.SimpleRpgCore.Attributes.Attribute
+      description: The attribute to increase.
     - id: amount
       type: System.Int32
+      description: The number of points to spend.
     content.vb: Public Sub SpendOn(attribute As Attribute, amount As Integer)
   overload: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.SpendOn*
   nameWithType.vb: EntityAttributes.SpendOn(Attribute, Integer)
@@ -164,10 +215,19 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AttributeSet
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/EntityAttributes.cs
-    startLine: 59
+    startLine: 94
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Attributes
+  summary: >-
+    Gets the <xref href="ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.AttributeSet" data-throw-if-not-resolved="false"></xref> used by this entity.
+
+    The source of the attribute set depends on whether <xref href="ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.useClassBaseAttributes" data-throw-if-not-resolved="false"></xref> is true.
+
+    If true, it returns the attribute set from the <xref href="ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.EntityClass" data-throw-if-not-resolved="false"></xref>.
+
+    Otherwise, it returns the <xref href="ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.fixedBaseAttributeSet" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: public virtual AttributeSet AttributeSet { get; }
     parameters: []
@@ -193,10 +253,15 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: FlatModifiers
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/EntityAttributes.cs
-    startLine: 87
+    startLine: 121
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Attributes
+  summary: >-
+    Gets the instance of flat modifiers for the attributes.
+
+    Flat modifiers are added directly to the base attribute values.
+  example: []
   syntax:
     content: protected virtual AttributeSetInstance FlatModifiers { get; }
     parameters: []
@@ -222,10 +287,15 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: PercentageModifiers
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/EntityAttributes.cs
-    startLine: 89
+    startLine: 127
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Attributes
+  summary: >-
+    Gets the instance of percentage modifiers for the attributes.
+
+    Percentage modifiers are applied after flat modifiers.
+  example: []
   syntax:
     content: protected virtual AttributeSetInstance PercentageModifiers { get; }
     parameters: []
@@ -251,17 +321,26 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Get
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/EntityAttributes.cs
-    startLine: 95
+    startLine: 149
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Attributes
+  summary: >-
+    Gets the final calculated value of a specific attribute.
+
+    The final value includes base value, flat and percentage modifiers, and spent attribute points.
+
+    The result is clamped to the attribute's min/max values.
+  example: []
   syntax:
     content: public long Get(Attribute attribute)
     parameters:
     - id: attribute
       type: ElectricDrill.SimpleRpgCore.Attributes.Attribute
+      description: The attribute to retrieve.
     return:
       type: System.Int64
+      description: The final value of the attribute.
     content.vb: Public Function [Get](attribute As Attribute) As Long
   overload: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.Get*
 - uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.AddFlatModifier(ElectricDrill.SimpleRpgCore.Attributes.Attribute,System.Int64)
@@ -282,17 +361,21 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AddFlatModifier
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/EntityAttributes.cs
-    startLine: 121
+    startLine: 180
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Attributes
+  summary: Adds a flat modifier to an attribute.
+  example: []
   syntax:
     content: public void AddFlatModifier(Attribute attribute, long value)
     parameters:
     - id: attribute
       type: ElectricDrill.SimpleRpgCore.Attributes.Attribute
+      description: The attribute to modify.
     - id: value
       type: System.Int64
+      description: The flat value to add.
     content.vb: Public Sub AddFlatModifier(attribute As Attribute, value As Long)
   overload: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.AddFlatModifier*
   nameWithType.vb: EntityAttributes.AddFlatModifier(Attribute, Long)
@@ -316,17 +399,21 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AddPercentageModifier
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/EntityAttributes.cs
-    startLine: 126
+    startLine: 193
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Attributes
+  summary: Adds a percentage modifier to an attribute.
+  example: []
   syntax:
     content: public void AddPercentageModifier(Attribute attribute, Percentage value)
     parameters:
     - id: attribute
       type: ElectricDrill.SimpleRpgCore.Attributes.Attribute
+      description: The attribute to modify.
     - id: value
       type: ElectricDrill.SimpleRpgCore.Utils.Percentage
+      description: The percentage value to add.
     content.vb: Public Sub AddPercentageModifier(attribute As Attribute, value As Percentage)
   overload: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.AddPercentageModifier*
 - uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.GetBase(ElectricDrill.SimpleRpgCore.Attributes.Attribute)
@@ -347,20 +434,32 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetBase
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Attributes/EntityAttributes.cs
-    startLine: 131
+    startLine: 207
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Attributes
+  summary: >-
+    Gets the base value of an attribute at the entity's current level.
+
+    Base attributes don't consider flat or percentage modifiers, nor spent attribute points.
+  example: []
   syntax:
     content: public long GetBase(Attribute attribute)
     parameters:
     - id: attribute
       type: ElectricDrill.SimpleRpgCore.Attributes.Attribute
+      description: The attribute to retrieve the base value for.
     return:
       type: System.Int64
+      description: The base value of the attribute, clamped to its min/max values if necessary.
     content.vb: Public Function GetBase(attribute As Attribute) As Long
   overload: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.GetBase*
 references:
+- uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.EntityCore
+  commentId: P:ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.EntityCore
+  name: EntityCore
+  nameWithType: EntityAttributes.EntityCore
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.EntityCore
 - uid: ElectricDrill.SimpleRpgCore.Attributes
   commentId: N:ElectricDrill.SimpleRpgCore.Attributes
   href: ElectricDrill.html
@@ -442,6 +541,54 @@ references:
   name: UnityEngine
   nameWithType: UnityEngine
   fullName: UnityEngine
+- uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.OnAttributeChanged*
+  commentId: Overload:ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.OnAttributeChanged
+  href: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.html#ElectricDrill_SimpleRpgCore_Attributes_EntityAttributes_OnAttributeChanged
+  name: OnAttributeChanged
+  nameWithType: EntityAttributes.OnAttributeChanged
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.OnAttributeChanged
+- uid: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent
+  commentId: T:ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent
+  parent: ElectricDrill.SimpleRpgCore.Events
+  href: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent.html
+  name: AttributeChangedGameEvent
+  nameWithType: AttributeChangedGameEvent
+  fullName: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent
+- uid: ElectricDrill.SimpleRpgCore.Events
+  commentId: N:ElectricDrill.SimpleRpgCore.Events
+  href: ElectricDrill.html
+  name: ElectricDrill.SimpleRpgCore.Events
+  nameWithType: ElectricDrill.SimpleRpgCore.Events
+  fullName: ElectricDrill.SimpleRpgCore.Events
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SimpleRpgCore
+    name: SimpleRpgCore
+    href: ElectricDrill.SimpleRpgCore.html
+  - name: .
+  - uid: ElectricDrill.SimpleRpgCore.Events
+    name: Events
+    href: ElectricDrill.SimpleRpgCore.Events.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SimpleRpgCore
+    name: SimpleRpgCore
+    href: ElectricDrill.SimpleRpgCore.html
+  - name: .
+  - uid: ElectricDrill.SimpleRpgCore.Events
+    name: Events
+    href: ElectricDrill.SimpleRpgCore.Events.html
+- uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.useCache
+  commentId: F:ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.useCache
+  name: useCache
+  nameWithType: EntityAttributes.useCache
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.useCache
 - uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.AttributesCache*
   commentId: Overload:ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.AttributesCache
   href: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.html#ElectricDrill_SimpleRpgCore_Attributes_EntityAttributes_AttributesCache
@@ -558,6 +705,11 @@ references:
   - uid: ElectricDrill.SimpleRPGCore.SimpleRpgCore.Utils
     name: Utils
     href: ElectricDrill.SimpleRPGCore.SimpleRpgCore.Utils.html
+- uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.useClassBaseAttributes
+  commentId: F:ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.useClassBaseAttributes
+  name: useClassBaseAttributes
+  nameWithType: EntityAttributes.useClassBaseAttributes
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.useClassBaseAttributes
 - uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.EntityClass*
   commentId: Overload:ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.EntityClass
   href: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.html#ElectricDrill_SimpleRpgCore_Attributes_EntityAttributes_EntityClass
@@ -616,6 +768,23 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.AttributeSet
+  commentId: P:ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.AttributeSet
+  href: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.html#ElectricDrill_SimpleRpgCore_Attributes_EntityAttributes_AttributeSet
+  name: AttributeSet
+  nameWithType: EntityAttributes.AttributeSet
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.AttributeSet
+- uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.EntityClass
+  commentId: P:ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.EntityClass
+  href: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.html#ElectricDrill_SimpleRpgCore_Attributes_EntityAttributes_EntityClass
+  name: EntityClass
+  nameWithType: EntityAttributes.EntityClass
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.EntityClass
+- uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.fixedBaseAttributeSet
+  commentId: F:ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.fixedBaseAttributeSet
+  name: fixedBaseAttributeSet
+  nameWithType: EntityAttributes.fixedBaseAttributeSet
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.fixedBaseAttributeSet
 - uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.AttributeSet*
   commentId: Overload:ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.AttributeSet
   href: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.html#ElectricDrill_SimpleRpgCore_Attributes_EntityAttributes_AttributeSet

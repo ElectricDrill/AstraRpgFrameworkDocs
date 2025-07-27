@@ -22,16 +22,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "MD/getting-started.md",
-      "output": {
-        ".html": {
-          "relative_path": "MD/getting-started.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "MD/installation-instructions.md",
       "output": {
         ".html": {
@@ -129,6 +119,16 @@
       "output": {
         ".html": {
           "relative_path": "api/ElectricDrill.SimpleRpgCore.Attributes.Attribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html"
         }
       },
       "version": ""
@@ -279,6 +279,26 @@
       "output": {
         ".html": {
           "relative_path": "api/ElectricDrill.SimpleRpgCore.EntityLevel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEventListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEventListener.html"
         }
       },
       "version": ""
@@ -988,160 +1008,160 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SimpleRPG/attribute-scaling-component.png",
+      "source_relative_path": "images/SoapRPG/attribute-scaling-component.png",
       "output": {
         "resource": {
-          "relative_path": "images/SimpleRPG/attribute-scaling-component.png"
+          "relative_path": "images/SoapRPG/attribute-scaling-component.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SimpleRPG/attribute-set.png",
+      "source_relative_path": "images/SoapRPG/attribute-set.png",
       "output": {
         "resource": {
-          "relative_path": "images/SimpleRPG/attribute-set.png"
+          "relative_path": "images/SoapRPG/attribute-set.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SimpleRPG/attribute.png",
+      "source_relative_path": "images/SoapRPG/attribute.png",
       "output": {
         "resource": {
-          "relative_path": "images/SimpleRPG/attribute.png"
+          "relative_path": "images/SoapRPG/attribute.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SimpleRPG/class.png",
+      "source_relative_path": "images/SoapRPG/class.png",
       "output": {
         "resource": {
-          "relative_path": "images/SimpleRPG/class.png"
+          "relative_path": "images/SoapRPG/class.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SimpleRPG/entity-attributes.png",
+      "source_relative_path": "images/SoapRPG/entity-attributes.png",
       "output": {
         "resource": {
-          "relative_path": "images/SimpleRPG/entity-attributes.png"
+          "relative_path": "images/SoapRPG/entity-attributes.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SimpleRPG/entity-class.png",
+      "source_relative_path": "images/SoapRPG/entity-class.png",
       "output": {
         "resource": {
-          "relative_path": "images/SimpleRPG/entity-class.png"
+          "relative_path": "images/SoapRPG/entity-class.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SimpleRPG/entity-core.png",
+      "source_relative_path": "images/SoapRPG/entity-core.png",
       "output": {
         "resource": {
-          "relative_path": "images/SimpleRPG/entity-core.png"
+          "relative_path": "images/SoapRPG/entity-core.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SimpleRPG/entity-stats.png",
+      "source_relative_path": "images/SoapRPG/entity-stats.png",
       "output": {
         "resource": {
-          "relative_path": "images/SimpleRPG/entity-stats.png"
+          "relative_path": "images/SoapRPG/entity-stats.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SimpleRPG/event-gen.png",
+      "source_relative_path": "images/SoapRPG/event-gen.png",
       "output": {
         "resource": {
-          "relative_path": "images/SimpleRPG/event-gen.png"
+          "relative_path": "images/SoapRPG/event-gen.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SimpleRPG/growth-fo.png",
+      "source_relative_path": "images/SoapRPG/growth-fo.png",
       "output": {
         "resource": {
-          "relative_path": "images/SimpleRPG/growth-fo.png"
+          "relative_path": "images/SoapRPG/growth-fo.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SimpleRPG/int-var.png",
+      "source_relative_path": "images/SoapRPG/int-var.png",
       "output": {
         "resource": {
-          "relative_path": "images/SimpleRPG/int-var.png"
+          "relative_path": "images/SoapRPG/int-var.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SimpleRPG/long-var.png",
+      "source_relative_path": "images/SoapRPG/long-var.png",
       "output": {
         "resource": {
-          "relative_path": "images/SimpleRPG/long-var.png"
+          "relative_path": "images/SoapRPG/long-var.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SimpleRPG/scaling-fo.png",
+      "source_relative_path": "images/SoapRPG/scaling-fo.png",
       "output": {
         "resource": {
-          "relative_path": "images/SimpleRPG/scaling-fo.png"
+          "relative_path": "images/SoapRPG/scaling-fo.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SimpleRPG/stat-scaling-component.png",
+      "source_relative_path": "images/SoapRPG/stat-scaling-component.png",
       "output": {
         "resource": {
-          "relative_path": "images/SimpleRPG/stat-scaling-component.png"
+          "relative_path": "images/SoapRPG/stat-scaling-component.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SimpleRPG/stat-set.png",
+      "source_relative_path": "images/SoapRPG/stat-set.png",
       "output": {
         "resource": {
-          "relative_path": "images/SimpleRPG/stat-set.png"
+          "relative_path": "images/SoapRPG/stat-set.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SimpleRPG/stat.png",
+      "source_relative_path": "images/SoapRPG/stat.png",
       "output": {
         "resource": {
-          "relative_path": "images/SimpleRPG/stat.png"
+          "relative_path": "images/SoapRPG/stat.png"
         }
       },
       "version": ""
@@ -1158,10 +1178,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/simple-rpg-core-logo.png",
+      "source_relative_path": "images/soap-rpg-framework-logo.png",
       "output": {
         "resource": {
-          "relative_path": "images/simple-rpg-core-logo.png"
+          "relative_path": "images/soap-rpg-framework-logo.png"
         }
       },
       "version": ""
@@ -1238,6 +1258,36 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/workflows/entity-leveling-events.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/workflows/entity-leveling-events.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/workflows/entity-reached-level-10.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/workflows/entity-reached-level-10.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/workflows/entity-reached-lvl-10-listener.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/workflows/entity-reached-lvl-10-listener.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/workflows/entity-stats-fixed-base-stats.png",
       "output": {
         "resource": {
@@ -1272,6 +1322,16 @@
       "output": {
         "resource": {
           "relative_path": "images/workflows/hierarchy.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/workflows/image.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/workflows/image.png"
         }
       },
       "version": ""

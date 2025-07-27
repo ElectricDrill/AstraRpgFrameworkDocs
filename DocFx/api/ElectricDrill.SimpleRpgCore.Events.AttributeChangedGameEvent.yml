@@ -1,0 +1,459 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent
+  commentId: T:ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent
+  id: AttributeChangedGameEvent
+  parent: ElectricDrill.SimpleRpgCore.Events
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: AttributeChangedGameEvent
+  nameWithType: AttributeChangedGameEvent
+  fullName: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent
+  type: Class
+  source:
+    remote:
+      path: Runtime/SimpleRpgCore/Events/GeneratedEvents/AttributesEventsGenerator/GameEvents/1/AttributeChangedGameEvent.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: AttributeChangedGameEvent
+    path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Events/GeneratedEvents/AttributesEventsGenerator/GameEvents/1/AttributeChangedGameEvent.cs
+    startLine: 8
+  assemblies:
+  - ElectricDrill.SimpleRPGCore.Runtime
+  namespace: ElectricDrill.SimpleRpgCore.Events
+  summary: The attribute that changed, the attribute's previous value, and the attribute's new value
+  example: []
+  syntax:
+    content: >-
+      [CreateAssetMenu(fileName = "AttributeChanged Game Event", menuName = "Simple RPG Core/Events/Generated/AttributeChanged")]
+
+      public class AttributeChangedGameEvent : GameEventGeneric1<AttributeChangeInfo>, IRaisable<AttributeChangeInfo>
+    content.vb: >-
+      <CreateAssetMenu(fileName:="AttributeChanged Game Event", menuName:="Simple RPG Core/Events/Generated/AttributeChanged")>
+
+      Public Class AttributeChangedGameEvent Inherits GameEventGeneric1(Of AttributeChangeInfo) Implements IRaisable(Of AttributeChangeInfo)
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}
+  implements:
+  - ElectricDrill.SimpleRpgCore.Events.IRaisable{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}
+  inheritedMembers:
+  - ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.OnEventRaised
+  - ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.Raise(ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo)
+  - ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.RegisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo})
+  - ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.UnregisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo})
+  attributes:
+  - type: UnityEngine.CreateAssetMenuAttribute
+    ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: fileName
+      type: System.String
+      value: AttributeChanged Game Event
+    - name: menuName
+      type: System.String
+      value: Simple RPG Core/Events/Generated/AttributeChanged
+references:
+- uid: ElectricDrill.SimpleRpgCore.Events
+  commentId: N:ElectricDrill.SimpleRpgCore.Events
+  href: ElectricDrill.html
+  name: ElectricDrill.SimpleRpgCore.Events
+  nameWithType: ElectricDrill.SimpleRpgCore.Events
+  fullName: ElectricDrill.SimpleRpgCore.Events
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SimpleRpgCore
+    name: SimpleRpgCore
+    href: ElectricDrill.SimpleRpgCore.html
+  - name: .
+  - uid: ElectricDrill.SimpleRpgCore.Events
+    name: Events
+    href: ElectricDrill.SimpleRpgCore.Events.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SimpleRpgCore
+    name: SimpleRpgCore
+    href: ElectricDrill.SimpleRpgCore.html
+  - name: .
+  - uid: ElectricDrill.SimpleRpgCore.Events
+    name: Events
+    href: ElectricDrill.SimpleRpgCore.Events.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}
+  commentId: T:ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}
+  parent: ElectricDrill.SimpleRpgCore.Events
+  definition: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1
+  href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html
+  name: GameEventGeneric1<AttributeChangeInfo>
+  nameWithType: GameEventGeneric1<AttributeChangeInfo>
+  fullName: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1<ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo>
+  nameWithType.vb: GameEventGeneric1(Of AttributeChangeInfo)
+  fullName.vb: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1(Of ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo)
+  name.vb: GameEventGeneric1(Of AttributeChangeInfo)
+  spec.csharp:
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1
+    name: GameEventGeneric1
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html
+  - name: <
+  - uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+    name: AttributeChangeInfo
+    href: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html
+  - name: '>'
+  spec.vb:
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1
+    name: GameEventGeneric1
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+    name: AttributeChangeInfo
+    href: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html
+  - name: )
+- uid: ElectricDrill.SimpleRpgCore.Events.IRaisable{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}
+  commentId: T:ElectricDrill.SimpleRpgCore.Events.IRaisable{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}
+  parent: ElectricDrill.SimpleRpgCore.Events
+  definition: ElectricDrill.SimpleRpgCore.Events.IRaisable`1
+  href: ElectricDrill.SimpleRpgCore.Events.IRaisable-1.html
+  name: IRaisable<AttributeChangeInfo>
+  nameWithType: IRaisable<AttributeChangeInfo>
+  fullName: ElectricDrill.SimpleRpgCore.Events.IRaisable<ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo>
+  nameWithType.vb: IRaisable(Of AttributeChangeInfo)
+  fullName.vb: ElectricDrill.SimpleRpgCore.Events.IRaisable(Of ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo)
+  name.vb: IRaisable(Of AttributeChangeInfo)
+  spec.csharp:
+  - uid: ElectricDrill.SimpleRpgCore.Events.IRaisable`1
+    name: IRaisable
+    href: ElectricDrill.SimpleRpgCore.Events.IRaisable-1.html
+  - name: <
+  - uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+    name: AttributeChangeInfo
+    href: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html
+  - name: '>'
+  spec.vb:
+  - uid: ElectricDrill.SimpleRpgCore.Events.IRaisable`1
+    name: IRaisable
+    href: ElectricDrill.SimpleRpgCore.Events.IRaisable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+    name: AttributeChangeInfo
+    href: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html
+  - name: )
+- uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.OnEventRaised
+  commentId: E:ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.OnEventRaised
+  parent: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}
+  definition: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.OnEventRaised
+  href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_OnEventRaised
+  name: OnEventRaised
+  nameWithType: GameEventGeneric1<AttributeChangeInfo>.OnEventRaised
+  fullName: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1<ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo>.OnEventRaised
+  nameWithType.vb: GameEventGeneric1(Of AttributeChangeInfo).OnEventRaised
+  fullName.vb: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1(Of ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo).OnEventRaised
+- uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.Raise(ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo)
+  commentId: M:ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.Raise(ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo)
+  parent: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}
+  definition: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.Raise(`0)
+  href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_Raise__0_
+  name: Raise(AttributeChangeInfo)
+  nameWithType: GameEventGeneric1<AttributeChangeInfo>.Raise(AttributeChangeInfo)
+  fullName: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1<ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo>.Raise(ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo)
+  nameWithType.vb: GameEventGeneric1(Of AttributeChangeInfo).Raise(AttributeChangeInfo)
+  fullName.vb: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1(Of ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo).Raise(ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo)
+  spec.csharp:
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.Raise(ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo)
+    name: Raise
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_Raise__0_
+  - name: (
+  - uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+    name: AttributeChangeInfo
+    href: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html
+  - name: )
+  spec.vb:
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.Raise(ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo)
+    name: Raise
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_Raise__0_
+  - name: (
+  - uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+    name: AttributeChangeInfo
+    href: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html
+  - name: )
+- uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.RegisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo})
+  commentId: M:ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.RegisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo})
+  parent: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}
+  definition: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.RegisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{`0})
+  href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_RegisterListener_ElectricDrill_SimpleRpgCore_Events_GameEventListenerGeneric1__0__
+  name: RegisterListener(GameEventListenerGeneric1<AttributeChangeInfo>)
+  nameWithType: GameEventGeneric1<AttributeChangeInfo>.RegisterListener(GameEventListenerGeneric1<AttributeChangeInfo>)
+  fullName: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1<ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo>.RegisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1<ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo>)
+  nameWithType.vb: GameEventGeneric1(Of AttributeChangeInfo).RegisterListener(GameEventListenerGeneric1(Of AttributeChangeInfo))
+  fullName.vb: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1(Of ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo).RegisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1(Of ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo))
+  name.vb: RegisterListener(GameEventListenerGeneric1(Of AttributeChangeInfo))
+  spec.csharp:
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.RegisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo})
+    name: RegisterListener
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_RegisterListener_ElectricDrill_SimpleRpgCore_Events_GameEventListenerGeneric1__0__
+  - name: (
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1`1
+    name: GameEventListenerGeneric1
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1-1.html
+  - name: <
+  - uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+    name: AttributeChangeInfo
+    href: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.RegisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo})
+    name: RegisterListener
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_RegisterListener_ElectricDrill_SimpleRpgCore_Events_GameEventListenerGeneric1__0__
+  - name: (
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1`1
+    name: GameEventListenerGeneric1
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+    name: AttributeChangeInfo
+    href: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html
+  - name: )
+  - name: )
+- uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.UnregisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo})
+  commentId: M:ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.UnregisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo})
+  parent: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}
+  definition: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.UnregisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{`0})
+  href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_UnregisterListener_ElectricDrill_SimpleRpgCore_Events_GameEventListenerGeneric1__0__
+  name: UnregisterListener(GameEventListenerGeneric1<AttributeChangeInfo>)
+  nameWithType: GameEventGeneric1<AttributeChangeInfo>.UnregisterListener(GameEventListenerGeneric1<AttributeChangeInfo>)
+  fullName: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1<ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo>.UnregisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1<ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo>)
+  nameWithType.vb: GameEventGeneric1(Of AttributeChangeInfo).UnregisterListener(GameEventListenerGeneric1(Of AttributeChangeInfo))
+  fullName.vb: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1(Of ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo).UnregisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1(Of ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo))
+  name.vb: UnregisterListener(GameEventListenerGeneric1(Of AttributeChangeInfo))
+  spec.csharp:
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.UnregisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo})
+    name: UnregisterListener
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_UnregisterListener_ElectricDrill_SimpleRpgCore_Events_GameEventListenerGeneric1__0__
+  - name: (
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1`1
+    name: GameEventListenerGeneric1
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1-1.html
+  - name: <
+  - uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+    name: AttributeChangeInfo
+    href: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo}.UnregisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo})
+    name: UnregisterListener
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_UnregisterListener_ElectricDrill_SimpleRpgCore_Events_GameEventListenerGeneric1__0__
+  - name: (
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1`1
+    name: GameEventListenerGeneric1
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+    name: AttributeChangeInfo
+    href: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1
+  commentId: T:ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1
+  href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html
+  name: GameEventGeneric1<T>
+  nameWithType: GameEventGeneric1<T>
+  fullName: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1<T>
+  nameWithType.vb: GameEventGeneric1(Of T)
+  fullName.vb: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1(Of T)
+  name.vb: GameEventGeneric1(Of T)
+  spec.csharp:
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1
+    name: GameEventGeneric1
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1
+    name: GameEventGeneric1
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ElectricDrill.SimpleRpgCore.Events.IRaisable`1
+  commentId: T:ElectricDrill.SimpleRpgCore.Events.IRaisable`1
+  href: ElectricDrill.SimpleRpgCore.Events.IRaisable-1.html
+  name: IRaisable<T>
+  nameWithType: IRaisable<T>
+  fullName: ElectricDrill.SimpleRpgCore.Events.IRaisable<T>
+  nameWithType.vb: IRaisable(Of T)
+  fullName.vb: ElectricDrill.SimpleRpgCore.Events.IRaisable(Of T)
+  name.vb: IRaisable(Of T)
+  spec.csharp:
+  - uid: ElectricDrill.SimpleRpgCore.Events.IRaisable`1
+    name: IRaisable
+    href: ElectricDrill.SimpleRpgCore.Events.IRaisable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ElectricDrill.SimpleRpgCore.Events.IRaisable`1
+    name: IRaisable
+    href: ElectricDrill.SimpleRpgCore.Events.IRaisable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.OnEventRaised
+  commentId: E:ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.OnEventRaised
+  href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_OnEventRaised
+  name: OnEventRaised
+  nameWithType: GameEventGeneric1<T>.OnEventRaised
+  fullName: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1<T>.OnEventRaised
+  nameWithType.vb: GameEventGeneric1(Of T).OnEventRaised
+  fullName.vb: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1(Of T).OnEventRaised
+- uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.Raise(`0)
+  commentId: M:ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.Raise(`0)
+  href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_Raise__0_
+  name: Raise(T)
+  nameWithType: GameEventGeneric1<T>.Raise(T)
+  fullName: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1<T>.Raise(T)
+  nameWithType.vb: GameEventGeneric1(Of T).Raise(T)
+  fullName.vb: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1(Of T).Raise(T)
+  spec.csharp:
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.Raise(`0)
+    name: Raise
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_Raise__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.Raise(`0)
+    name: Raise
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_Raise__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.RegisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{`0})
+  commentId: M:ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.RegisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{`0})
+  href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_RegisterListener_ElectricDrill_SimpleRpgCore_Events_GameEventListenerGeneric1__0__
+  name: RegisterListener(GameEventListenerGeneric1<T>)
+  nameWithType: GameEventGeneric1<T>.RegisterListener(GameEventListenerGeneric1<T>)
+  fullName: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1<T>.RegisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1<T>)
+  nameWithType.vb: GameEventGeneric1(Of T).RegisterListener(GameEventListenerGeneric1(Of T))
+  fullName.vb: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1(Of T).RegisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1(Of T))
+  name.vb: RegisterListener(GameEventListenerGeneric1(Of T))
+  spec.csharp:
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.RegisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{`0})
+    name: RegisterListener
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_RegisterListener_ElectricDrill_SimpleRpgCore_Events_GameEventListenerGeneric1__0__
+  - name: (
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1`1
+    name: GameEventListenerGeneric1
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.RegisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{`0})
+    name: RegisterListener
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_RegisterListener_ElectricDrill_SimpleRpgCore_Events_GameEventListenerGeneric1__0__
+  - name: (
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1`1
+    name: GameEventListenerGeneric1
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.UnregisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{`0})
+  commentId: M:ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.UnregisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{`0})
+  href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_UnregisterListener_ElectricDrill_SimpleRpgCore_Events_GameEventListenerGeneric1__0__
+  name: UnregisterListener(GameEventListenerGeneric1<T>)
+  nameWithType: GameEventGeneric1<T>.UnregisterListener(GameEventListenerGeneric1<T>)
+  fullName: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1<T>.UnregisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1<T>)
+  nameWithType.vb: GameEventGeneric1(Of T).UnregisterListener(GameEventListenerGeneric1(Of T))
+  fullName.vb: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1(Of T).UnregisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1(Of T))
+  name.vb: UnregisterListener(GameEventListenerGeneric1(Of T))
+  spec.csharp:
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.UnregisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{`0})
+    name: UnregisterListener
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_UnregisterListener_ElectricDrill_SimpleRpgCore_Events_GameEventListenerGeneric1__0__
+  - name: (
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1`1
+    name: GameEventListenerGeneric1
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1`1.UnregisterListener(ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1{`0})
+    name: UnregisterListener
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric1-1.html#ElectricDrill_SimpleRpgCore_Events_GameEventGeneric1_1_UnregisterListener_ElectricDrill_SimpleRpgCore_Events_GameEventListenerGeneric1__0__
+  - name: (
+  - uid: ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1`1
+    name: GameEventListenerGeneric1
+    href: ElectricDrill.SimpleRpgCore.Events.GameEventListenerGeneric1-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )

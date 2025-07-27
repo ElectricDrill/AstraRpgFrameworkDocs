@@ -4,6 +4,8 @@ items:
   commentId: N:ElectricDrill.SimpleRpgCore.Events
   id: ElectricDrill.SimpleRpgCore.Events
   children:
+  - ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent
+  - ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEventListener
   - ElectricDrill.SimpleRpgCore.Events.EntityCoreGameEvent
   - ElectricDrill.SimpleRpgCore.Events.EntityCoreGameEventListener
   - ElectricDrill.SimpleRpgCore.Events.GameEvent
@@ -39,6 +41,12 @@ items:
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
 references:
+- uid: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEventListener
+  commentId: T:ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEventListener
+  href: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEventListener.html
+  name: AttributeChangedGameEventListener
+  nameWithType: AttributeChangedGameEventListener
+  fullName: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEventListener
 - uid: ElectricDrill.SimpleRpgCore.Events.EntityCoreGameEvent
   commentId: T:ElectricDrill.SimpleRpgCore.Events.EntityCoreGameEvent
   href: ElectricDrill.SimpleRpgCore.Events.EntityCoreGameEvent.html
@@ -300,6 +308,13 @@ references:
   - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGenerator.GameEventDefinition
     name: GameEventDefinition
     href: ElectricDrill.SimpleRpgCore.Events.GameEventGenerator.GameEventDefinition.html
+- uid: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent
+  commentId: T:ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent
+  parent: ElectricDrill.SimpleRpgCore.Events
+  href: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent.html
+  name: AttributeChangedGameEvent
+  nameWithType: AttributeChangedGameEvent
+  fullName: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent
 - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric2`2
   commentId: T:ElectricDrill.SimpleRpgCore.Events.GameEventGeneric2`2
   href: ElectricDrill.SimpleRpgCore.Events.GameEventGeneric2-2.html

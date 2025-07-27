@@ -20,10 +20,15 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ScalingComponent
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingComponent.cs
-    startLine: 4
+    startLine: 8
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: >-
+    Abstract base class for all scaling components.
+
+    A scaling component calculates a value based on an entity's properties.
+  example: []
   syntax:
     content: 'public abstract class ScalingComponent : ScriptableObject'
     content.vb: Public MustInherit Class ScalingComponent Inherits ScriptableObject
@@ -51,17 +56,21 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CalculateValue
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingComponent.cs
-    startLine: 6
+    startLine: 15
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: Calculates the value of this component based on the provided entity.
+  example: []
   syntax:
     content: public abstract long CalculateValue(EntityCore entity)
     parameters:
     - id: entity
       type: ElectricDrill.SimpleRpgCore.EntityCore
+      description: The entity whose properties are used for calculation.
     return:
       type: System.Int64
+      description: The calculated value from this component.
     content.vb: Public MustOverride Function CalculateValue(entity As EntityCore) As Long
   overload: ElectricDrill.SimpleRpgCore.Scaling.ScalingComponent.CalculateValue*
 references:

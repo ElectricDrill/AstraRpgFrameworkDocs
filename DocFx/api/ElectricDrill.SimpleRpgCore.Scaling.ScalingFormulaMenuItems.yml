@@ -20,10 +20,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ScalingFormulaMenuItems
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs
-    startLine: 78
+    startLine: 127
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: Provides a menu item in the Unity Editor to create a ScalingFormula asset.
+  example: []
   syntax:
     content: public static class ScalingFormulaMenuItems
     content.vb: Public Module ScalingFormulaMenuItems
@@ -47,10 +49,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CreateScalingFormula
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs
-    startLine: 80
+    startLine: 132
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: Creates a new ScalingFormula asset.
+  example: []
   syntax:
     content: >-
       [MenuItem("Assets/Create/Simple RPG Core/Scaling/Scaling Formula &#S", false, 0)]

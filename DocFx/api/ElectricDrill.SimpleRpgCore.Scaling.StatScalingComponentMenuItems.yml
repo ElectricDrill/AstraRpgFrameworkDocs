@@ -20,10 +20,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: StatScalingComponentMenuItems
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingComponents/StatsScalingComponent.cs
-    startLine: 34
+    startLine: 55
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: Provides a menu item in the Unity Editor to create a StatsScalingComponent asset.
+  example: []
   syntax:
     content: public static class StatScalingComponentMenuItems
     content.vb: Public Module StatScalingComponentMenuItems
@@ -47,10 +49,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CreateStatScalingComponent
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingComponents/StatsScalingComponent.cs
-    startLine: 36
+    startLine: 60
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: Creates a new StatsScalingComponent asset.
+  example: []
   syntax:
     content: >-
       [MenuItem("Assets/Create/Simple RPG Core/Scaling/Stat Scaling Component", false, 2)]

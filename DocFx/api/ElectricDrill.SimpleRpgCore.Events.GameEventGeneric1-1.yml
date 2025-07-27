@@ -37,6 +37,7 @@ items:
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
   derivedClasses:
+  - ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent
   - ElectricDrill.SimpleRpgCore.Events.EntityCoreGameEvent
   - ElectricDrill.SimpleRpgCore.Events.IntGameEvent
   - ElectricDrill.SimpleRpgCore.Events.StatChangedGameEvent

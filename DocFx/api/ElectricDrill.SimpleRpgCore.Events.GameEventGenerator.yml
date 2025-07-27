@@ -31,11 +31,11 @@ items:
   namespace: ElectricDrill.SimpleRpgCore.Events
   syntax:
     content: >-
-      [CreateAssetMenu(fileName = "GameEventGenerator", menuName = "Simple RPG Core/Tools/GameEventGenerator")]
+      [CreateAssetMenu(fileName = "GameEventGenerator", menuName = "Simple RPG Core/Events/GameEventGenerator")]
 
       public sealed class GameEventGenerator : ScriptableObject
     content.vb: >-
-      <CreateAssetMenu(fileName:="GameEventGenerator", menuName:="Simple RPG Core/Tools/GameEventGenerator")>
+      <CreateAssetMenu(fileName:="GameEventGenerator", menuName:="Simple RPG Core/Events/GameEventGenerator")>
 
       Public NotInheritable Class GameEventGenerator Inherits ScriptableObject
   inheritance:
@@ -52,7 +52,7 @@ items:
       value: GameEventGenerator
     - name: menuName
       type: System.String
-      value: Simple RPG Core/Tools/GameEventGenerator
+      value: Simple RPG Core/Events/GameEventGenerator
 - uid: ElectricDrill.SimpleRpgCore.Events.GameEventGenerator.rootNamespace
   commentId: F:ElectricDrill.SimpleRpgCore.Events.GameEventGenerator.rootNamespace
   id: rootNamespace

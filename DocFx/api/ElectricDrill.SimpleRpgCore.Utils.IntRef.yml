@@ -25,10 +25,15 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: IntRef
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/IntRef.cs
-    startLine: 6
+    startLine: 10
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: >-
+    A reference to an integer value.
+
+    Can either be a constant value or a reference to an <xref href="ElectricDrill.SimpleRpgCore.Utils.IntVar" data-throw-if-not-resolved="false"></xref> ScriptableObject.
+  example: []
   syntax:
     content: >-
       [Serializable]
@@ -62,10 +67,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: UseConstant
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/IntRef.cs
-    startLine: 9
+    startLine: 16
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: If true, uses the constant value. Otherwise, uses the <xref href="ElectricDrill.SimpleRpgCore.Utils.IntVar" data-throw-if-not-resolved="false"></xref> variable.
+  example: []
   syntax:
     content: public bool UseConstant
     return:
@@ -89,10 +96,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ConstantValue
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/IntRef.cs
-    startLine: 10
+    startLine: 20
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: The constant integer value.
+  example: []
   syntax:
     content: public int ConstantValue
     return:
@@ -116,10 +125,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Variable
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/IntRef.cs
-    startLine: 11
+    startLine: 24
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: The <xref href="ElectricDrill.SimpleRpgCore.Utils.IntVar" data-throw-if-not-resolved="false"></xref> variable.
+  example: []
   syntax:
     content: public IntVar Variable
     return:
@@ -143,10 +154,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Value
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/IntRef.cs
-    startLine: 13
+    startLine: 29
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: Gets or sets the value of the reference.
+  example: []
   syntax:
     content: public int Value { get; set; }
     parameters: []
@@ -172,15 +185,18 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/IntRef.cs
-    startLine: 24
+    startLine: 44
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: Allows implicit conversion from an IntRef to an int.
+  example: []
   syntax:
     content: public static implicit operator int(IntRef reference)
     parameters:
     - id: reference
       type: ElectricDrill.SimpleRpgCore.Utils.IntRef
+      description: The IntRef to convert.
     return:
       type: System.Int32
     content.vb: Public Shared Widening Operator CType(reference As IntRef) As Integer
@@ -206,15 +222,18 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/IntRef.cs
-    startLine: 26
+    startLine: 50
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: Allows implicit conversion from an int to an IntRef, creating a constant reference.
+  example: []
   syntax:
     content: public static implicit operator IntRef(int value)
     parameters:
     - id: value
       type: System.Int32
+      description: The integer value.
     return:
       type: ElectricDrill.SimpleRpgCore.Utils.IntRef
     content.vb: Public Shared Widening Operator CType(value As Integer) As IntRef
@@ -223,6 +242,13 @@ items:
   fullName.vb: ElectricDrill.SimpleRpgCore.Utils.IntRef.CType(Integer)
   name.vb: CType(Integer)
 references:
+- uid: ElectricDrill.SimpleRpgCore.Utils.IntVar
+  commentId: T:ElectricDrill.SimpleRpgCore.Utils.IntVar
+  parent: ElectricDrill.SimpleRpgCore.Utils
+  href: ElectricDrill.SimpleRpgCore.Utils.IntVar.html
+  name: IntVar
+  nameWithType: IntVar
+  fullName: ElectricDrill.SimpleRpgCore.Utils.IntVar
 - uid: ElectricDrill.SimpleRpgCore.Utils
   commentId: N:ElectricDrill.SimpleRpgCore.Utils
   href: ElectricDrill.html
@@ -290,13 +316,6 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: ElectricDrill.SimpleRpgCore.Utils.IntVar
-  commentId: T:ElectricDrill.SimpleRpgCore.Utils.IntVar
-  parent: ElectricDrill.SimpleRpgCore.Utils
-  href: ElectricDrill.SimpleRpgCore.Utils.IntVar.html
-  name: IntVar
-  nameWithType: IntVar
-  fullName: ElectricDrill.SimpleRpgCore.Utils.IntVar
 - uid: ElectricDrill.SimpleRpgCore.Utils.IntRef.Value*
   commentId: Overload:ElectricDrill.SimpleRpgCore.Utils.IntRef.Value
   href: ElectricDrill.SimpleRpgCore.Utils.IntRef.html#ElectricDrill_SimpleRpgCore_Utils_IntRef_Value

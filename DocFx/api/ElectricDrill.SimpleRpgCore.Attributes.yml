@@ -5,6 +5,7 @@ items:
   id: ElectricDrill.SimpleRpgCore.Attributes
   children:
   - ElectricDrill.SimpleRpgCore.Attributes.Attribute
+  - ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
   - ElectricDrill.SimpleRpgCore.Attributes.AttributeMenuItems
   - ElectricDrill.SimpleRpgCore.Attributes.AttributePointsTracker
   - ElectricDrill.SimpleRpgCore.Attributes.AttributeSet
@@ -23,6 +24,12 @@ items:
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
 references:
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+  commentId: T:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+  href: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html
+  name: AttributeChangeInfo
+  nameWithType: AttributeChangeInfo
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
 - uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeSetInstance
   commentId: T:ElectricDrill.SimpleRpgCore.Attributes.AttributeSetInstance
   parent: ElectricDrill.SimpleRpgCore.Attributes

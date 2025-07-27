@@ -162,6 +162,83 @@ references:
   commentId: T:ElectricDrill.SimpleRpgCore.Attributes.Attribute
   fullName: ElectricDrill.SimpleRpgCore.Attributes.Attribute
   nameWithType: Attribute
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+  name: AttributeChangeInfo
+  href: api/ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html
+  commentId: T:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo
+  nameWithType: AttributeChangeInfo
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.#ctor(ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes,ElectricDrill.SimpleRpgCore.Attributes.Attribute,System.Int64,System.Int64)
+  name: AttributeChangeInfo(EntityAttributes, Attribute, long, long)
+  href: api/ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html#ElectricDrill_SimpleRpgCore_Attributes_AttributeChangeInfo__ctor_ElectricDrill_SimpleRpgCore_Attributes_EntityAttributes_ElectricDrill_SimpleRpgCore_Attributes_Attribute_System_Int64_System_Int64_
+  commentId: M:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.#ctor(ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes,ElectricDrill.SimpleRpgCore.Attributes.Attribute,System.Int64,System.Int64)
+  name.vb: New(EntityAttributes, Attribute, Long, Long)
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.AttributeChangeInfo(ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes, ElectricDrill.SimpleRpgCore.Attributes.Attribute, long, long)
+  fullName.vb: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.New(ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes, ElectricDrill.SimpleRpgCore.Attributes.Attribute, Long, Long)
+  nameWithType: AttributeChangeInfo.AttributeChangeInfo(EntityAttributes, Attribute, long, long)
+  nameWithType.vb: AttributeChangeInfo.New(EntityAttributes, Attribute, Long, Long)
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.#ctor*
+  name: AttributeChangeInfo
+  href: api/ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html#ElectricDrill_SimpleRpgCore_Attributes_AttributeChangeInfo__ctor_
+  commentId: Overload:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.AttributeChangeInfo
+  fullName.vb: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.New
+  nameWithType: AttributeChangeInfo.AttributeChangeInfo
+  nameWithType.vb: AttributeChangeInfo.New
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Attribute
+  name: Attribute
+  href: api/ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html#ElectricDrill_SimpleRpgCore_Attributes_AttributeChangeInfo_Attribute
+  commentId: P:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Attribute
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Attribute
+  nameWithType: AttributeChangeInfo.Attribute
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Attribute*
+  name: Attribute
+  href: api/ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html#ElectricDrill_SimpleRpgCore_Attributes_AttributeChangeInfo_Attribute_
+  commentId: Overload:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Attribute
+  isSpec: "True"
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Attribute
+  nameWithType: AttributeChangeInfo.Attribute
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.NewValue
+  name: NewValue
+  href: api/ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html#ElectricDrill_SimpleRpgCore_Attributes_AttributeChangeInfo_NewValue
+  commentId: P:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.NewValue
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.NewValue
+  nameWithType: AttributeChangeInfo.NewValue
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.NewValue*
+  name: NewValue
+  href: api/ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html#ElectricDrill_SimpleRpgCore_Attributes_AttributeChangeInfo_NewValue_
+  commentId: Overload:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.NewValue
+  isSpec: "True"
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.NewValue
+  nameWithType: AttributeChangeInfo.NewValue
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.OldValue
+  name: OldValue
+  href: api/ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html#ElectricDrill_SimpleRpgCore_Attributes_AttributeChangeInfo_OldValue
+  commentId: P:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.OldValue
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.OldValue
+  nameWithType: AttributeChangeInfo.OldValue
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.OldValue*
+  name: OldValue
+  href: api/ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html#ElectricDrill_SimpleRpgCore_Attributes_AttributeChangeInfo_OldValue_
+  commentId: Overload:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.OldValue
+  isSpec: "True"
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.OldValue
+  nameWithType: AttributeChangeInfo.OldValue
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Source
+  name: Source
+  href: api/ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html#ElectricDrill_SimpleRpgCore_Attributes_AttributeChangeInfo_Source
+  commentId: P:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Source
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Source
+  nameWithType: AttributeChangeInfo.Source
+- uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Source*
+  name: Source
+  href: api/ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.html#ElectricDrill_SimpleRpgCore_Attributes_AttributeChangeInfo_Source_
+  commentId: Overload:ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Source
+  isSpec: "True"
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.AttributeChangeInfo.Source
+  nameWithType: AttributeChangeInfo.Source
 - uid: ElectricDrill.SimpleRpgCore.Attributes.AttributeMenuItems
   name: AttributeMenuItems
   href: api/ElectricDrill.SimpleRpgCore.Attributes.AttributeMenuItems.html
@@ -668,6 +745,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.GetBase
   nameWithType: EntityAttributes.GetBase
+- uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.OnAttributeChanged
+  name: OnAttributeChanged
+  href: api/ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.html#ElectricDrill_SimpleRpgCore_Attributes_EntityAttributes_OnAttributeChanged
+  commentId: P:ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.OnAttributeChanged
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.OnAttributeChanged
+  nameWithType: EntityAttributes.OnAttributeChanged
+- uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.OnAttributeChanged*
+  name: OnAttributeChanged
+  href: api/ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.html#ElectricDrill_SimpleRpgCore_Attributes_EntityAttributes_OnAttributeChanged_
+  commentId: Overload:ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.OnAttributeChanged
+  isSpec: "True"
+  fullName: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.OnAttributeChanged
+  nameWithType: EntityAttributes.OnAttributeChanged
 - uid: ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.PercentageModifiers
   name: PercentageModifiers
   href: api/ElectricDrill.SimpleRpgCore.Attributes.EntityAttributes.html#ElectricDrill_SimpleRpgCore_Attributes_EntityAttributes_PercentageModifiers
@@ -1167,6 +1257,18 @@ references:
   commentId: N:ElectricDrill.SimpleRpgCore.Events
   fullName: ElectricDrill.SimpleRpgCore.Events
   nameWithType: ElectricDrill.SimpleRpgCore.Events
+- uid: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent
+  name: AttributeChangedGameEvent
+  href: api/ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent.html
+  commentId: T:ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent
+  fullName: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEvent
+  nameWithType: AttributeChangedGameEvent
+- uid: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEventListener
+  name: AttributeChangedGameEventListener
+  href: api/ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEventListener.html
+  commentId: T:ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEventListener
+  fullName: ElectricDrill.SimpleRpgCore.Events.AttributeChangedGameEventListener
+  nameWithType: AttributeChangedGameEventListener
 - uid: ElectricDrill.SimpleRpgCore.Events.EntityCoreGameEvent
   name: EntityCoreGameEvent
   href: api/ElectricDrill.SimpleRpgCore.Events.EntityCoreGameEvent.html
@@ -2047,22 +2149,6 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.SimpleRpgCore.GrowthFormula.GrowthFoValues
   nameWithType: GrowthFormula.GrowthFoValues
-- uid: ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel(System.Int32,System.String@)
-  name: ValidateLevel(int, out string)
-  href: api/ElectricDrill.SimpleRpgCore.GrowthFormula.html#ElectricDrill_SimpleRpgCore_GrowthFormula_ValidateLevel_System_Int32_System_String__
-  commentId: M:ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel(System.Int32,System.String@)
-  name.vb: ValidateLevel(Integer, String)
-  fullName: ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel(int, out string)
-  fullName.vb: ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel(Integer, String)
-  nameWithType: GrowthFormula.ValidateLevel(int, out string)
-  nameWithType.vb: GrowthFormula.ValidateLevel(Integer, String)
-- uid: ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel*
-  name: ValidateLevel
-  href: api/ElectricDrill.SimpleRpgCore.GrowthFormula.html#ElectricDrill_SimpleRpgCore_GrowthFormula_ValidateLevel_
-  commentId: Overload:ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel
-  isSpec: "True"
-  fullName: ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel
-  nameWithType: GrowthFormula.ValidateLevel
 - uid: ElectricDrill.SimpleRpgCore.GrowthFormulaMenuItems
   name: GrowthFormulaMenuItems
   href: api/ElectricDrill.SimpleRpgCore.GrowthFormulaMenuItems.html

@@ -27,10 +27,15 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Class
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Class.cs
-    startLine: 15
+    startLine: 19
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: >-
+    Represents a character class in the RPG system.
+
+    It can be used to define how attributes and stats grow over levels.
+  example: []
   syntax:
     content: 'public class Class : ScriptableObject, IStatSetSource'
     content.vb: Public Class [Class] Inherits ScriptableObject Implements IStatSetSource
@@ -58,10 +63,15 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: _maxHpGrowthFormula
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Class.cs
-    startLine: 17
+    startLine: 25
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: >-
+    The growth formula for the maximum HP.
+
+    This is a baseline value that can be used to calculate the maximum HP of characters of this class at different levels.
+  example: []
   syntax:
     content: >-
       [SerializeField]
@@ -95,10 +105,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: _attributeSet
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Class.cs
-    startLine: 18
+    startLine: 29
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: The set of attributes associated with this class.
+  example: []
   syntax:
     content: >-
       [SerializeField]
@@ -132,10 +144,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: _statSet
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Class.cs
-    startLine: 19
+    startLine: 33
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: The set of stats associated with this class.
+  example: []
   syntax:
     content: >-
       [SerializeField]
@@ -169,10 +183,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AttributeSet
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Class.cs
-    startLine: 27
+    startLine: 44
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Gets the AttributeSet for this class.
+  example: []
   syntax:
     content: public virtual AttributeSet AttributeSet { get; }
     parameters: []
@@ -198,10 +214,11 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: StatSet
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Class.cs
-    startLine: 28
+    startLine: 48
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Gets the StatSet for this class.
   example: []
   syntax:
     content: public virtual StatSet StatSet { get; }
@@ -230,17 +247,21 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetMaxHpAt
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Class.cs
-    startLine: 30
+    startLine: 55
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Calculates the maximum HP for a given level.
+  example: []
   syntax:
     content: public long GetMaxHpAt(int level)
     parameters:
     - id: level
       type: System.Int32
+      description: The level to calculate the max HP for.
     return:
       type: System.Int64
+      description: The maximum HP at the specified level.
     content.vb: Public Function GetMaxHpAt(level As Integer) As Long
   overload: ElectricDrill.SimpleRpgCore.Class.GetMaxHpAt*
   nameWithType.vb: Class.GetMaxHpAt(Integer)
@@ -264,19 +285,24 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetAttributeAt
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Class.cs
-    startLine: 35
+    startLine: 66
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Calculates the value of a specific attribute at a given level.
+  example: []
   syntax:
     content: public virtual long GetAttributeAt(Attribute attribute, int level)
     parameters:
     - id: attribute
       type: ElectricDrill.SimpleRpgCore.Attributes.Attribute
+      description: The attribute to calculate.
     - id: level
       type: System.Int32
+      description: The level to calculate the attribute value for.
     return:
       type: System.Int64
+      description: The value of the attribute at the specified level.
     content.vb: Public Overridable Function GetAttributeAt(attribute As Attribute, level As Integer) As Long
   overload: ElectricDrill.SimpleRpgCore.Class.GetAttributeAt*
   nameWithType.vb: Class.GetAttributeAt(Attribute, Integer)
@@ -300,21 +326,30 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetStatAt
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Class.cs
-    startLine: 40
+    startLine: 78
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Calculates the value of a specific stat at a given level.
+  example: []
   syntax:
     content: public virtual long GetStatAt(Stat stat, int level)
     parameters:
     - id: stat
       type: ElectricDrill.SimpleRpgCore.Stats.Stat
+      description: The stat to calculate.
     - id: level
       type: System.Int32
+      description: The level to calculate the stat value for.
     return:
       type: System.Int64
+      description: The value of the stat at the specified level.
     content.vb: Public Overridable Function GetStatAt(stat As Stat, level As Integer) As Long
   overload: ElectricDrill.SimpleRpgCore.Class.GetStatAt*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when the growth formula for the stat is not set.
   nameWithType.vb: Class.GetStatAt(Stat, Integer)
   fullName.vb: ElectricDrill.SimpleRpgCore.Class.GetStatAt(ElectricDrill.SimpleRpgCore.Stats.Stat, Integer)
   name.vb: GetStatAt(Stat, Integer)
@@ -524,6 +559,12 @@ references:
   name: Attribute
   nameWithType: Attribute
   fullName: ElectricDrill.SimpleRpgCore.Attributes.Attribute
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
 - uid: ElectricDrill.SimpleRpgCore.Class.GetStatAt*
   commentId: Overload:ElectricDrill.SimpleRpgCore.Class.GetStatAt
   href: ElectricDrill.SimpleRpgCore.Class.html#ElectricDrill_SimpleRpgCore_Class_GetStatAt_ElectricDrill_SimpleRpgCore_Stats_Stat_System_Int32_

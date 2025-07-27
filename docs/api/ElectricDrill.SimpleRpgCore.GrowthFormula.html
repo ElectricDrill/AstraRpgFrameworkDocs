@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class GrowthFormula | Simple RPG Core </title>
+      <title>Class GrowthFormula | Soap RPG Framework </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class GrowthFormula | Simple RPG Core ">
+      <meta name="title" content="Class GrowthFormula | Soap RPG Framework ">
       
-      
+      <meta name="description" content="Represents a formula to calculate growth values for different levels, up to a maximum level.">
       <link rel="icon" href="../images/favico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../images/simple-rpg-core-logo.png" alt="Simple RPG Core">
-            Simple RPG Core
+            <img id="logo" class="svg" src="../images/soap-rpg-framework-logo.png" alt="Soap RPG Framework">
+            Soap RPG Framework
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_SimpleRpgCore_GrowthFormula" data-uid="ElectricDrill.SimpleRpgCore.GrowthFormula" class="text-break">
-Class GrowthFormula  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/GrowthFormula.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class GrowthFormula  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/GrowthFormula.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,8 @@ Class GrowthFormula  <a class="header-action link-secondary" title="View source"
   <dl><dt>Assembly</dt><dd>ElectricDrill.SimpleRPGCore.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Represents a formula to calculate growth values for different levels, up to a maximum level.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -133,10 +134,13 @@ Class GrowthFormula  <a class="header-action link-secondary" title="View source"
 
   <h3 id="ElectricDrill_SimpleRpgCore_GrowthFormula_GrowthFoValues" data-uid="ElectricDrill.SimpleRpgCore.GrowthFormula.GrowthFoValues">
   GrowthFoValues
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/GrowthFormula.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/GrowthFormula.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the pre-calculated growth formula values for each level.
+Values are refreshed on validation.
+The array is indexed from 0 to maxLevel - 1, where index 0 corresponds to level 1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -168,10 +172,11 @@ Class GrowthFormula  <a class="header-action link-secondary" title="View source"
 
   <h3 id="ElectricDrill_SimpleRpgCore_GrowthFormula_GetGrowthValue_System_Int32_" data-uid="ElectricDrill.SimpleRpgCore.GrowthFormula.GetGrowthValue(System.Int32)">
   GetGrowthValue(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/GrowthFormula.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/GrowthFormula.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the growth value for a specific level.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -181,51 +186,15 @@ Class GrowthFormula  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>level</code> <span class="xref">int</span></dt>
-    <dd></dd>
+    <dd><p>The level for which to get the growth value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">long</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ElectricDrill_SimpleRpgCore_GrowthFormula_ValidateLevel_" data-uid="ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel*"></a>
-
-  <h3 id="ElectricDrill_SimpleRpgCore_GrowthFormula_ValidateLevel_System_Int32_System_String__" data-uid="ElectricDrill.SimpleRpgCore.GrowthFormula.ValidateLevel(System.Int32,System.String@)">
-  ValidateLevel(int, out string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/GrowthFormula.cs/#L29"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool ValidateLevel(int level, out string errorMessage)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>level</code> <span class="xref">int</span></dt>
-    <dd></dd>
-    <dt><code>errorMessage</code> <span class="xref">string</span></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">bool</span></dt>
-    <dd></dd>
+    <dd><p>The growth value for the specified level.</p>
+</dd>
   </dl>
 
 
@@ -242,7 +211,7 @@ Class GrowthFormula  <a class="header-action link-secondary" title="View source"
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/GrowthFormula.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/GrowthFormula.cs/#L13" class="edit-link">Edit this page</a>
         </div>
 
 

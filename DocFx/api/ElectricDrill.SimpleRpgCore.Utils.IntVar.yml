@@ -21,10 +21,15 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: IntVar
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/IntVar.cs
-    startLine: 6
+    startLine: 10
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: >-
+    ScriptableObject that holds an integer value.
+
+    Can be used to share an integer value between different GameObjects and scenes.
+  example: []
   syntax:
     content: >-
       [CreateAssetMenu]
@@ -60,10 +65,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Value
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/IntVar.cs
-    startLine: 10
+    startLine: 17
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: The integer value.
+  example: []
   syntax:
     content: public int Value { get; set; }
     parameters: []
@@ -89,15 +96,18 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/IntVar.cs
-    startLine: 16
+    startLine: 26
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: Allows implicit conversion from an IntVar to an int.
+  example: []
   syntax:
     content: public static implicit operator int(IntVar var)
     parameters:
     - id: var
       type: ElectricDrill.SimpleRpgCore.Utils.IntVar
+      description: The IntVar to convert.
     return:
       type: System.Int32
     content.vb: Public Shared Widening Operator CType(var As IntVar) As Integer

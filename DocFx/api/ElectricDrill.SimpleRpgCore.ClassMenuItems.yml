@@ -20,10 +20,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ClassMenuItems
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Class.cs
-    startLine: 99
+    startLine: 140
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Provides a menu item in the Unity Editor to create a Class asset.
+  example: []
   syntax:
     content: public static class ClassMenuItems
     content.vb: Public Module ClassMenuItems
@@ -47,10 +49,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CreateClass
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Class.cs
-    startLine: 101
+    startLine: 145
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore
+  summary: Creates a new Class asset.
+  example: []
   syntax:
     content: >-
       [MenuItem("Assets/Create/Simple RPG Core/Class", false, 5)]

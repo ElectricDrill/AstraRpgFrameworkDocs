@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class ScalingFormula | Simple RPG Core </title>
+      <title>Class ScalingFormula | Soap RPG Framework </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class ScalingFormula | Simple RPG Core ">
+      <meta name="title" content="Class ScalingFormula | Soap RPG Framework ">
       
-      
+      <meta name="description" content="Represents a formula to calculate a value based on values returned by several scaling components. The calculation of each scaling component can either be based on the &amp;quot;self&amp;quot; entity (the entity that owns the formula) or the &amp;quot;target&amp;quot; entity (the entity that will be targeted by the action). For example, a scaling formula for an attack that deals the more damage the higher the enemy&#39;s armor is, can use the &amp;quot;self&amp;quot; entity to calculate the damage based on the attacker&#39;s stats and the &amp;quot;target&amp;quot; entity to calculate additional damage based on the target&#39;s armor. The final damage will be the sum of the value returned by the two scaling components.">
       <link rel="icon" href="../images/favico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../images/simple-rpg-core-logo.png" alt="Simple RPG Core">
-            Simple RPG Core
+            <img id="logo" class="svg" src="../images/soap-rpg-framework-logo.png" alt="Soap RPG Framework">
+            Soap RPG Framework
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_SimpleRpgCore_Scaling_ScalingFormula" data-uid="ElectricDrill.SimpleRpgCore.Scaling.ScalingFormula" class="text-break">
-Class ScalingFormula  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class ScalingFormula  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,14 @@ Class ScalingFormula  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>ElectricDrill.SimpleRPGCore.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Represents a formula to calculate a value based on values returned by several scaling components.
+The calculation of each scaling component can either be based on the &quot;self&quot; entity (the entity that owns the formula)
+or the &quot;target&quot; entity (the entity that will be targeted by the action).
+For example, a scaling formula for an attack that deals the more damage the higher the enemy's armor is,
+can use the &quot;self&quot; entity to calculate the damage based on the attacker's stats
+and the &quot;target&quot; entity to calculate additional damage based on the target's armor.
+The final damage will be the sum of the value returned by the two scaling components.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -133,10 +140,12 @@ Class ScalingFormula  <a class="header-action link-secondary" title="View source
 
   <h3 id="ElectricDrill_SimpleRpgCore_Scaling_ScalingFormula_TmpSelfScalingComponents" data-uid="ElectricDrill.SimpleRpgCore.Scaling.ScalingFormula.TmpSelfScalingComponents">
   TmpSelfScalingComponents
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the list of temporary scaling components for the &quot;self&quot; entity.
+These are not serialized and are used for runtime modifications.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -164,10 +173,12 @@ Class ScalingFormula  <a class="header-action link-secondary" title="View source
 
   <h3 id="ElectricDrill_SimpleRpgCore_Scaling_ScalingFormula_TmpTargetScalingComponents" data-uid="ElectricDrill.SimpleRpgCore.Scaling.ScalingFormula.TmpTargetScalingComponents">
   TmpTargetScalingComponents
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the list of temporary scaling components for the &quot;target&quot; entity.
+These are not serialized and are used for runtime modifications.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -199,10 +210,12 @@ Class ScalingFormula  <a class="header-action link-secondary" title="View source
 
   <h3 id="ElectricDrill_SimpleRpgCore_Scaling_ScalingFormula_CalculateValue_ElectricDrill_SimpleRpgCore_EntityCore_" data-uid="ElectricDrill.SimpleRpgCore.Scaling.ScalingFormula.CalculateValue(ElectricDrill.SimpleRpgCore.EntityCore)">
   CalculateValue(EntityCore)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calculates the final value using only the &quot;self&quot; entity.
+This method assumes there are no target scaling components.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -212,13 +225,15 @@ Class ScalingFormula  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>self</code> <a class="xref" href="ElectricDrill.SimpleRpgCore.EntityCore.html">EntityCore</a></dt>
-    <dd></dd>
+    <dd><p>The entity providing values for self-scaling components.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">long</span></dt>
-    <dd></dd>
+    <dd><p>The calculated value.</p>
+</dd>
   </dl>
 
 
@@ -235,10 +250,11 @@ Class ScalingFormula  <a class="header-action link-secondary" title="View source
 
   <h3 id="ElectricDrill_SimpleRpgCore_Scaling_ScalingFormula_CalculateValue_ElectricDrill_SimpleRpgCore_EntityCore_ElectricDrill_SimpleRpgCore_EntityCore_" data-uid="ElectricDrill.SimpleRpgCore.Scaling.ScalingFormula.CalculateValue(ElectricDrill.SimpleRpgCore.EntityCore,ElectricDrill.SimpleRpgCore.EntityCore)">
   CalculateValue(EntityCore, EntityCore)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calculates the final value using both &quot;self&quot; and &quot;target&quot; entities.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -248,15 +264,18 @@ Class ScalingFormula  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>self</code> <a class="xref" href="ElectricDrill.SimpleRpgCore.EntityCore.html">EntityCore</a></dt>
-    <dd></dd>
+    <dd><p>The entity providing values for self-scaling components.</p>
+</dd>
     <dt><code>target</code> <a class="xref" href="ElectricDrill.SimpleRpgCore.EntityCore.html">EntityCore</a></dt>
-    <dd></dd>
+    <dd><p>The entity providing values for target-scaling components.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">long</span></dt>
-    <dd></dd>
+    <dd><p>The calculated value.</p>
+</dd>
   </dl>
 
 
@@ -273,10 +292,12 @@ Class ScalingFormula  <a class="header-action link-secondary" title="View source
 
   <h3 id="ElectricDrill_SimpleRpgCore_Scaling_ScalingFormula_CalculateValue_ElectricDrill_SimpleRpgCore_EntityCore_ElectricDrill_SimpleRpgCore_EntityCore_System_Int32_" data-uid="ElectricDrill.SimpleRpgCore.Scaling.ScalingFormula.CalculateValue(ElectricDrill.SimpleRpgCore.EntityCore,ElectricDrill.SimpleRpgCore.EntityCore,System.Int32)">
   CalculateValue(EntityCore, EntityCore, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calculates the final value using both &quot;self&quot; and &quot;target&quot; entities, and a specific level for the base value.
+This method assumes the formula uses a scaling base value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -286,17 +307,21 @@ Class ScalingFormula  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>self</code> <a class="xref" href="ElectricDrill.SimpleRpgCore.EntityCore.html">EntityCore</a></dt>
-    <dd></dd>
+    <dd><p>The entity providing values for self-scaling components.</p>
+</dd>
     <dt><code>target</code> <a class="xref" href="ElectricDrill.SimpleRpgCore.EntityCore.html">EntityCore</a></dt>
-    <dd></dd>
+    <dd><p>The entity providing values for target-scaling components.</p>
+</dd>
     <dt><code>level</code> <span class="xref">int</span></dt>
-    <dd></dd>
+    <dd><p>The level to use for calculating the base value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">long</span></dt>
-    <dd></dd>
+    <dd><p>The calculated value.</p>
+</dd>
   </dl>
 
 
@@ -313,10 +338,12 @@ Class ScalingFormula  <a class="header-action link-secondary" title="View source
 
   <h3 id="ElectricDrill_SimpleRpgCore_Scaling_ScalingFormula_CalculateValue_ElectricDrill_SimpleRpgCore_EntityCore_System_Int32_" data-uid="ElectricDrill.SimpleRpgCore.Scaling.ScalingFormula.CalculateValue(ElectricDrill.SimpleRpgCore.EntityCore,System.Int32)">
   CalculateValue(EntityCore, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calculates the final value using the &quot;self&quot; entity and a specific level for the base scaling value.
+This method assumes there are no target scaling components and the formula uses a scaling base value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -326,15 +353,18 @@ Class ScalingFormula  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>self</code> <a class="xref" href="ElectricDrill.SimpleRpgCore.EntityCore.html">EntityCore</a></dt>
-    <dd></dd>
+    <dd><p>The entity providing values for self-scaling components.</p>
+</dd>
     <dt><code>level</code> <span class="xref">int</span></dt>
-    <dd></dd>
+    <dd><p>The level to use for calculating the base value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">long</span></dt>
-    <dd></dd>
+    <dd><p>The calculated value.</p>
+</dd>
   </dl>
 
 
@@ -351,10 +381,11 @@ Class ScalingFormula  <a class="header-action link-secondary" title="View source
 
   <h3 id="ElectricDrill_SimpleRpgCore_Scaling_ScalingFormula_ResetTmpScalings" data-uid="ElectricDrill.SimpleRpgCore.Scaling.ScalingFormula.ResetTmpScalings">
   ResetTmpScalings()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears all temporary scaling components for both &quot;self&quot; and &quot;target&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -377,7 +408,7 @@ Class ScalingFormula  <a class="header-action link-secondary" title="View source
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingFormula.cs/#L21" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -22,10 +22,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AttributesScalingComponent
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingComponents/AttributesScalingComponent.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: A scaling component that calculates a value based on an entity's attributes.
+  example: []
   syntax:
     content: 'public class AttributesScalingComponent : SoSetScalingComponentBase<AttributeSet, Attribute>'
     content.vb: Public Class AttributesScalingComponent Inherits SoSetScalingComponentBase(Of AttributeSet, Attribute)
@@ -61,18 +63,21 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetEntitySet
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingComponents/AttributesScalingComponent.cs
-    startLine: 10
+    startLine: 18
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: Gets the AttributeSet from the specified entity.
   example: []
   syntax:
     content: protected override AttributeSet GetEntitySet(EntityCore entity)
     parameters:
     - id: entity
       type: ElectricDrill.SimpleRpgCore.EntityCore
+      description: The entity.
     return:
       type: ElectricDrill.SimpleRpgCore.Attributes.AttributeSet
+      description: The entity's AttributeSet.
     content.vb: Protected Overrides Function GetEntitySet(entity As EntityCore) As AttributeSet
   overridden: ElectricDrill.SimpleRpgCore.Scaling.SoSetScalingComponentBase{ElectricDrill.SimpleRpgCore.Attributes.AttributeSet,ElectricDrill.SimpleRpgCore.Attributes.Attribute}.GetEntitySet(ElectricDrill.SimpleRpgCore.EntityCore)
   overload: ElectricDrill.SimpleRpgCore.Scaling.AttributesScalingComponent.GetEntitySet*
@@ -94,20 +99,24 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetEntityValue
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingComponents/AttributesScalingComponent.cs
-    startLine: 12
+    startLine: 26
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: Gets the value of a specific attribute from the entity.
   example: []
   syntax:
     content: protected override long GetEntityValue(EntityCore entity, Attribute key)
     parameters:
     - id: entity
       type: ElectricDrill.SimpleRpgCore.EntityCore
+      description: The entity.
     - id: key
       type: ElectricDrill.SimpleRpgCore.Attributes.Attribute
+      description: The attribute to get the value of.
     return:
       type: System.Int64
+      description: The value of the attribute.
     content.vb: Protected Overrides Function GetEntityValue(entity As EntityCore, key As Attribute) As Long
   overridden: ElectricDrill.SimpleRpgCore.Scaling.SoSetScalingComponentBase{ElectricDrill.SimpleRpgCore.Attributes.AttributeSet,ElectricDrill.SimpleRpgCore.Attributes.Attribute}.GetEntityValue(ElectricDrill.SimpleRpgCore.EntityCore,ElectricDrill.SimpleRpgCore.Attributes.Attribute)
   overload: ElectricDrill.SimpleRpgCore.Scaling.AttributesScalingComponent.GetEntityValue*
@@ -129,15 +138,17 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetSetItems
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingComponents/AttributesScalingComponent.cs
-    startLine: 14
+    startLine: 32
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: Gets the collection of attributes from the associated AttributeSet.
   example: []
   syntax:
     content: protected override IEnumerable<Attribute> GetSetItems()
     return:
       type: System.Collections.Generic.IEnumerable{ElectricDrill.SimpleRpgCore.Attributes.Attribute}
+      description: An enumerable of attributes.
     content.vb: Protected Overrides Function GetSetItems() As IEnumerable(Of Attribute)
   overridden: ElectricDrill.SimpleRpgCore.Scaling.SoSetScalingComponentBase{ElectricDrill.SimpleRpgCore.Attributes.AttributeSet,ElectricDrill.SimpleRpgCore.Attributes.Attribute}.GetSetItems
   overload: ElectricDrill.SimpleRpgCore.Scaling.AttributesScalingComponent.GetSetItems*

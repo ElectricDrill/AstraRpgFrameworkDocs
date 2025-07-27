@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class StatsScalingComponent | Simple RPG Core </title>
+      <title>Class StatsScalingComponent | Soap RPG Framework </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class StatsScalingComponent | Simple RPG Core ">
+      <meta name="title" content="Class StatsScalingComponent | Soap RPG Framework ">
       
-      
+      <meta name="description" content="A scaling component that calculates a value based on an entity&#39;s stats.">
       <link rel="icon" href="../images/favico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../images/simple-rpg-core-logo.png" alt="Simple RPG Core">
-            Simple RPG Core
+            <img id="logo" class="svg" src="../images/soap-rpg-framework-logo.png" alt="Soap RPG Framework">
+            Soap RPG Framework
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_SimpleRpgCore_Scaling_StatsScalingComponent" data-uid="ElectricDrill.SimpleRpgCore.Scaling.StatsScalingComponent" class="text-break">
-Class StatsScalingComponent  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingComponents/StatsScalingComponent.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class StatsScalingComponent  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingComponents/StatsScalingComponent.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,8 @@ Class StatsScalingComponent  <a class="header-action link-secondary" title="View
   <dl><dt>Assembly</dt><dd>ElectricDrill.SimpleRPGCore.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>A scaling component that calculates a value based on an entity's stats.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -160,10 +161,11 @@ Class StatsScalingComponent  <a class="header-action link-secondary" title="View
 
   <h3 id="ElectricDrill_SimpleRpgCore_Scaling_StatsScalingComponent_GetEntitySet_ElectricDrill_SimpleRpgCore_EntityCore_" data-uid="ElectricDrill.SimpleRpgCore.Scaling.StatsScalingComponent.GetEntitySet(ElectricDrill.SimpleRpgCore.EntityCore)">
   GetEntitySet(EntityCore)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingComponents/StatsScalingComponent.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingComponents/StatsScalingComponent.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the StatSet from the specified entity.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -173,13 +175,15 @@ Class StatsScalingComponent  <a class="header-action link-secondary" title="View
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>entity</code> <a class="xref" href="ElectricDrill.SimpleRpgCore.EntityCore.html">EntityCore</a></dt>
-    <dd></dd>
+    <dd><p>The entity.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="ElectricDrill.SimpleRpgCore.Stats.StatSet.html">StatSet</a></dt>
-    <dd></dd>
+    <dd><p>The entity's StatSet.</p>
+</dd>
   </dl>
 
 
@@ -196,10 +200,11 @@ Class StatsScalingComponent  <a class="header-action link-secondary" title="View
 
   <h3 id="ElectricDrill_SimpleRpgCore_Scaling_StatsScalingComponent_GetEntityValue_ElectricDrill_SimpleRpgCore_EntityCore_ElectricDrill_SimpleRpgCore_Stats_Stat_" data-uid="ElectricDrill.SimpleRpgCore.Scaling.StatsScalingComponent.GetEntityValue(ElectricDrill.SimpleRpgCore.EntityCore,ElectricDrill.SimpleRpgCore.Stats.Stat)">
   GetEntityValue(EntityCore, Stat)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingComponents/StatsScalingComponent.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingComponents/StatsScalingComponent.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the value of a specific stat from the entity.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -209,15 +214,18 @@ Class StatsScalingComponent  <a class="header-action link-secondary" title="View
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>entity</code> <a class="xref" href="ElectricDrill.SimpleRpgCore.EntityCore.html">EntityCore</a></dt>
-    <dd></dd>
+    <dd><p>The entity.</p>
+</dd>
     <dt><code>key</code> <a class="xref" href="ElectricDrill.SimpleRpgCore.Stats.Stat.html">Stat</a></dt>
-    <dd></dd>
+    <dd><p>The stat to get the value of.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">long</span></dt>
-    <dd></dd>
+    <dd><p>The value of the stat.</p>
+</dd>
   </dl>
 
 
@@ -234,10 +242,11 @@ Class StatsScalingComponent  <a class="header-action link-secondary" title="View
 
   <h3 id="ElectricDrill_SimpleRpgCore_Scaling_StatsScalingComponent_GetSetItems" data-uid="ElectricDrill.SimpleRpgCore.Scaling.StatsScalingComponent.GetSetItems">
   GetSetItems()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingComponents/StatsScalingComponent.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingComponents/StatsScalingComponent.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the collection of stats from the associated StatSet.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -248,7 +257,8 @@ Class StatsScalingComponent  <a class="header-action link-secondary" title="View
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">IEnumerable</span>&lt;<a class="xref" href="ElectricDrill.SimpleRpgCore.Stats.Stat.html">Stat</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>An enumerable of stats.</p>
+</dd>
   </dl>
 
 
@@ -265,7 +275,7 @@ Class StatsScalingComponent  <a class="header-action link-secondary" title="View
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingComponents/StatsScalingComponent.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Scaling/ScalingComponents/StatsScalingComponent.cs/#L12" class="edit-link">Edit this page</a>
         </div>
 
 

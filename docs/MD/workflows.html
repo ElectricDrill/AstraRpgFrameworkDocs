@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Workflows | Simple RPG Core </title>
+      <title>Workflows | Soap RPG Framework </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Workflows | Simple RPG Core ">
+      <meta name="title" content="Workflows | Soap RPG Framework ">
       
       
       <link rel="icon" href="../images/favico.ico">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../images/simple-rpg-core-logo.png" alt="Simple RPG Core">
-            Simple RPG Core
+            <img id="logo" class="svg" src="../images/soap-rpg-framework-logo.png" alt="Soap RPG Framework">
+            Soap RPG Framework
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -134,17 +134,38 @@ Systems subscribe to this event using the <code>MonoBehaviour</code> <code>GameE
 <p>For more details, see the <a href="#game-events">Game Events section</a>.</p>
 <h3 id="int-and-long-vars">Int and Long Vars</h3>
 <p>Another common use of <code>ScriptableObject</code> in the SOAP architecture is to define variables. The main advantage of these variables in the form of SO is that they can be easily shared between various objects that may decide to share the same value. A common example is the player's game score. There could be a game manager that adds or removes points from this variable, while the UI HUD uses it to display its value on the screen. This way, we can keep the game manager and UI completely decoupled, passing shared values (like variables) through the inspector.</p>
+<p>From the code, we can access the values held by these variables using the <code>Value</code> getter and setter:</p>
+<pre><code class="lang-csharp">// intVar is an instance of IntVar
+int value = intVar.Value; // Get the value
+
+// Thanks to implicit conversion, we can also use it as an int directly
+int intValue = intVar; // Implicit conversion to int
+
+intVar.Value = 10; // Set the value
+</code></pre>
 <h3 id="int-and-long-refs">Int and Long Refs</h3>
 <p><code>IntRef</code> and <code>LongRef</code> allow choosing whether to use a native value (<code>int</code> or <code>long</code>) or an <code>IntVar</code>/<code>LongVar</code>. As mentioned in the previous paragraph, <code>IntVar</code> and <code>LongVar</code> have the advantage of being shareable between different components/game objects, while native values are more immediate to use and require less setup (no need to instantiate an <code>IntVar</code>/<code>LongVar</code> and assign it in the inspector).</p>
 <p>Thanks to a custom property drawer, it will be possible, from the inspector, to check a checkbox named <code>Use constant</code> to use a native value instead of a <code>Ref</code>, and vice versa.</p>
 <p><code>IntRef</code> and <code>LongRef</code> are widely used in the package's <code>MonoBehaviour</code>.</p>
+<p>From the code, we can access the values held by these references using the <code>Value</code> getter and setter.
+It is worth mentioning that when we use the setter, we need to provide a native <code>int</code> or <code>long</code> value. If <code>Use constant</code> is unchecked, this value will be assigned to the <code>Value</code> property of the referenced <code>IntVar</code> or <code>LongVar</code> instance; if <code>Use constant</code> is checked, the assignment only updates the local constant value and does not affect any referenced variable.</p>
+<pre><code class="lang-csharp">// intRef is an instance of IntRef
+int value = intRef.Value; // Get the value
+// Thanks to implicit conversion, we can also use it as an int directly
+int intValue = intRef; // Implicit conversion to int
+intRef.Value = 10; // Set the value
+
+// Assigns the value of intVar to intRef.Value using implicit conversion.
+// Note: This does not change the IntVar reference held by intRef, only its value.
+intRef.Value = intVar;
+</code></pre>
 <h3 id="game-events">Game events</h3>
 <p>The package also supports game events with up to 4 context parameters. They are generics, but in Unity, it is not possible to instantiate classes that derive from <code>ScriptableObject</code> if they are generics with unspecified type parameters. To use them, we must explicitly declare classes that derive from the generic GameEvent and fix the type parameters with concrete types. To simplify the definition of new event types, with specific types as context parameters, the package provides <code>GameEventGenerator</code>. These generators, which derive from SO, allow generating the concrete classes of <code>GameEvent</code>.
 We will see these generators in more detail in the section (TODO).
 Some game events are already defined and made available by the package (see the <a href="samples.html">Samples</a> page).</p>
 <h3 id="growth-formulas">Growth Formulas</h3>
 <p><em>Relative path:</em> <code>Growth Formula</code>
-As already mentioned in <a href="introduction.html">Introduction</a>, <code>GrowthFormula</code> allows defining how a certain value varies as levels increase. A <code>GrowthFormula</code> can be instantiated through the hierarchy context menu by going to <code>Simple RPG Core -&gt; Growth Formula</code>.
+As already mentioned in <a href="introduction.html">Introduction</a>, <code>GrowthFormula</code> allows defining how a certain value varies as levels increase. A <code>GrowthFormula</code> can be instantiated through the hierarchy context menu by going to <code>Soap RPG Framework -&gt; Growth Formula</code>.
 The package provides a custom property drawer for <code>GrowthFormula</code>.</p>
 <h4 id="max-level-for-the-values">Max level for the values</h4>
 <p>In the inspector of a <code>GrowthFormula</code>, we can pass an <code>IntVar</code> to define up to which level to grow the values.</p>
@@ -195,6 +216,11 @@ For the second growth expression, set <code>From Level</code> to <code>11</code>
 <h4 id="interactive-chart">Interactive Chart</h4>
 <p>If you hold your mouse for a moment onto the chart, a label will show up, showing the exact value of the growth formula at the pointed level:</p>
 <p><img src="../images/workflows/interactive-chart.gif" alt="Interactive Chart"></p>
+<h4 id="retrieving-growth-values-from-code">Retrieving growth values from code</h4>
+<p>To retrieve the values of a <code>GrowthFormula</code> from code, you can use the <code>GetGrowthValue(int level)</code> method. For example, to get the Physical Attack value at level 5, you can do:</p>
+<pre><code class="lang-csharp">// warriorPhysicalAttackGF is a reference to the Warrior Physical Attack Growth Formula
+int physicalAttackLevel5 = warriorPhysicalAttackGF.GetGrowthValue(5);
+</code></pre>
 <h2 id="make-a-gameobject-an-entity">Make a <code>GameObject</code> an entity</h2>
 <p>To make a <code>GameObject</code> an entity, we need to add the <code>MonoBehaviour</code> <code>EntityCore</code> to it. Select your object from the hierarchy and click, in the inspector, on &quot;Add component&quot;. Then search for and select <code>EntityCore</code>.</p>
 <p><img src="../images/workflows/entity-core-editor.png" alt="Entity Core Custom Editor"></p>
@@ -212,11 +238,17 @@ If <code>Use constant</code> is checked instead, the value is readonly.</p>
 <p><code>On Level Up</code>: <code>IntGameEvent</code> that should be raised when the entity levels up.</p>
 <p><code>Spawned Entity Event</code>: <code>EntityCoreGameEvent</code> that should be raised when this entity's <code>Start()</code> method is executed.</p>
 <p>You may notice that a game event is already assigned to <code>Spawned Entity Event</code>. This is because an instance of that game event has been explicitly assigned directly in the inspector of the <code>EntityCore</code> script. This choice was made since in most cases the same event instance will always be used for entity spawning. This means you don't have to reassign this event every time you create a new entity in Unity. As we'll see later, this default assignment mechanism has been used for other components as well.</p>
-<h2 id="creating-simple-rpg-core-assets">Creating Simple RPG Core assets</h2>
+<h3 id="entitylevel-code-apis">EntityLevel code APIs</h3>
+<p>It is honorable to mention some code APIs that can be used to interact with the <code>EntityLevel</code> component.</p>
+<p>EntityLevel exposes a <code>Action&lt;int&gt; OnLevelUp</code> property that can be used to subscribe to level-up events from code.</p>
+<p>If we want to grant experience to the entity, we can use the <code>AddExp(long amount)</code> method. This method will automatically raise the <code>OnLevelUp</code> event if the entity levels up.
+Alternatively, it is available also the <code>SetTotalCurrentExp(long totalCurrentExperience)</code> method, which allows setting the total current experience of the entity. This method will also raise the <code>OnLevelUp</code> event if the entity levels up.</p>
+<p>Finally, there are the <code>CurrentLevelTotalExperience()</code> and the <code>NextLevelTotalExperience()</code> methods. These methods return the total experience required to reach the current level and the next level, respectively. They are useful, for example, for checking how much experience is needed to level up.</p>
+<h2 id="creating-soap-rpg-framework-assets">Creating Soap RPG Framework assets</h2>
 <p>All the instances of the various assets that derive from <code>ScriptableObject</code>s can be created in the following ways:</p>
 <ul>
-<li>Context menu: <code>Right click on the hierarchy &gt; Create &gt; Simple RPG Core</code></li>
-<li>Top bar: <code>Assets &gt; Create &gt; Simple RPG Core</code></li>
+<li>Context menu: <code>Right click on the hierarchy &gt; Create &gt; Soap RPG Framework</code></li>
+<li>Top bar: <code>Assets &gt; Create &gt; Soap RPG Framework</code></li>
 <li>Hotkeys: By pressing the respective keyboard shortcut while a folder or an element of the hierarchy is currently selected</li>
 </ul>
 <div class="NOTE">
@@ -283,6 +315,27 @@ entityAttributes.AddPercentageModifier(attribute, percentage);
 <li>15 + (15 * 0.4) = 21</li>
 </ol>
 <p>When adding modifiers through code, the attribute cache will automatically be invalidated to ensure the correct value is returned on the next access.</p>
+<h3 id="retrieving-attribute-values-from-code">Retrieving Attribute Values from code</h3>
+<p>Due to the relevance of retrieving attribute values from code, the methods to do so are worth mentioning here.</p>
+<p>To retrieve the final value of an attribute, you can use the <code>Get</code> method:</p>
+<pre><code class="lang-csharp">// strengthAttribute is a reference to the Strength Attribute
+int strength = entityAttributes.Get(strengthAttribute);
+</code></pre>
+<p>To retrieve the base value of an attribute, you can use the <code>GetBase</code> method:</p>
+<pre><code class="lang-csharp">// strengthAttribute is a reference to the Strength Attribute
+int baseStrength = entityAttributes.GetBase(strengthAttribute);
+</code></pre>
+<h3 id="spending-attribute-points">Spending attribute points</h3>
+<p>If the entity's <code>Attr Points Per Level</code> is greater than zero and the level is greater than 1, we can spend attribute points on the attributes. To do this, we can use the <code>SpendOn</code> method:</p>
+<pre><code class="lang-csharp">// strengthAttribute is a reference to the Strength Attribute
+entityAttributes.SpendOn(strengthAttribute, 2);
+</code></pre>
+<p>This will spend 2 points on the <code>Strength</code> attribute, increasing its value by 2. If there are not enough available points, a Debug.LogError will be raised.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Debug.LogError messages are shown only in development builds. If you run a production build, you won't see them.
+This is useful to avoid cluttering the console with error messages that are not relevant in production.</p>
+</div>
 <h2 id="create-stats">Create stats</h2>
 <p><em>Keyboard shortcut:</em> <code>Ctrl + Alt + S</code><br>
 <em>Relative path:</em> <code>Stat</code></p>
@@ -349,6 +402,16 @@ entityStats.AddPercentageModifier(stat, percentage);
 <li>140 + (140 * 0.25) = 175</li>
 </ol>
 <p>When adding modifiers through code, the <code>OnStatChanged</code> event will automatically be raised if the final value changes.</p>
+<h3 id="retrieving-stat-values-from-code">Retrieving Stat Values from code</h3>
+<p>Due to the relevance of retrieving stat values from code, the methods to do so are worth mentioning here.</p>
+<p>To retrieve the final value of a stat, you can use the <code>Get</code> method:</p>
+<pre><code class="lang-csharp">// phyAtkStat is a reference to the Physical Attack Stat
+int physicalAttack = entityStats.Get(phyAtkStat);
+</code></pre>
+<p>To retrieve the base value of a stat, you can use the <code>GetBase</code> method:</p>
+<pre><code class="lang-csharp">// phyAtkStat is a reference to the Physical Attack Stat
+int basePhysicalAttack = entityStats.GetBase(phyAtkStat);
+</code></pre>
 <h2 id="create-a-class">Create a class</h2>
 <p><em>Relative path:</em> <code>Class</code></p>
 <p>Let's create an instance of <code>Class</code> called <code>Warrior</code>. It should appear like this:</p>
@@ -375,6 +438,22 @@ Similarly, the <code>Hero Stat Set</code> and <code>Hero Attribute Set</code> co
 <p>All we have to do now is just assign the <code>Warrior</code> class we created earlier to the <code>Class</code> field.</p>
 <h3 id="switching-to-class-based-attributes-and-stats">Switching to class-based attributes and stats</h3>
 <p>We can now check the <code>Use Class Base Attributes</code> and <code>Use Class Base Stats</code> checkboxes. By doing this, the entity will use the base attributes and stats defined by the class. The <code>Fixed Base Attributes</code> and <code>Fixed Base Stats</code> fields will be disabled, and the values will be automatically retrieved from the class growth formulas.</p>
+<h3 id="retrieving-class-based-values-from-code">Retrieving class-based values from code</h3>
+<p>With a class we can access:</p>
+<ul>
+<li>attributes values: <code>GetAttributeAt(Attribute attribute, int level)</code></li>
+<li>stats values: <code>GetStatAt(Stat stat, int level)</code></li>
+<li>Max HP values: <code>GetMaxHpAt(int level)</code>
+For example:</li>
+</ul>
+<pre><code class="lang-csharp">// hero is a reference to the EntityCore component of the hero
+EntityClass warriorClass = hero.GetComponent&lt;EntityClass&gt;();
+// hero.Level is of EntityLevel type, but it is implicitly be converted to an int
+int level = hero.Level;
+int strengthAtLevel5 = warriorClass.GetAttributeAt(strengthAttribute, level);
+int physicalAttackAtLevel5 = warriorClass.GetStatAt(phyAtkStat, level);
+int maxHpAtLevel5 = warriorClass.GetMaxHpAt(level);
+</code></pre>
 <h2 id="create-scaling-formulas">Create Scaling Formulas</h2>
 <p><em>Keyboard shortcut:</em> <code>Alt + Shift + S</code>
 <em>Relative path:</em> <code>Scaling -&gt; Scaling Formula</code></p>
@@ -400,6 +479,110 @@ The scaling formula will be defined as follows:</p>
 <p><img src="../images/workflows/mighty-blow-constitution-scaling.png" alt="Mighty Blow Constitution Scaling"></p>
 <p>Finally, let's press on the <code>+</code> of <code>Self Scaling Components</code> and assign the two scaling components we just created. The <code>Mighty Blow SF</code> should look like this:</p>
 <p><img src="../images/workflows/mighty-blow-sf-with-scaling-components.png" alt="Mighty Blow SF with scaling components"></p>
+<h3 id="using-scaling-formulas-in-code">Using scaling formulas in code</h3>
+<p>First of all, <code>ScalingFormula</code>s expose two code-only properties: <code>List&lt;ScalingComponent&gt; TmpSelfScalingComponents</code> and <code>List&lt;ScalingComponent&gt; TmpTargetScalingComponents</code>. These properties can be used to add scaling components to the scaling formula at runtime. This is useful when you want to dynamically change the scaling components based on certain conditions or game states, without changing the original serialized scaling formula asset.
+For example, the character could get a temporary buff that makes the, let's say, <code>Mighty Blow</code> skill scale also with the <code>Intelligence</code> attribute. In this case, we can add a <code>Attribute Scaling Component</code> for the <code>Intelligence</code> attribute to the <code>TmpSelfScalingComponents</code> list of the <code>Mighty Blow SF</code> scaling formula.</p>
+<p>If the buff wears off, we can remove the scaling component from the <code>TmpSelfScalingComponents</code> list.</p>
+<p>There is also a method for resetting all the temporary scaling components: <code>ResetTmpScalings()</code>.
+This method can be useful, for example, when the player completes a room and advances to the next stage or area of the game, and you want to clear all temporary buffs the character received during that stage.</p>
+<p>Moreover, there are four more methods that are worth mentioning:</p>
+<ul>
+<li><code>long CalculateValue(EntityCore self)</code>: Calculates the value of the scaling formula by summing the value returned by each self scaling component (calculated on the entity itself values), there must not be any target scaling components.</li>
+<li><code>long CalculateValue(EntityCore self, int level)</code>: If the scaling formula has a base value that varies with levels, this method calculates the value of the scaling formula for the entity itself, and adds the base value at a specific level. Again, there must not be any target scaling components.</li>
+<li><code>long CalculateValue(EntityCore self, EntityCore target)</code>: Calculates the value of the scaling formula by summing the value returned by each self scaling component (calculated on the entity itself values) and each target scaling component (calculated on the target entity values).</li>
+<li><code>long CalculateValue(EntityCore self, EntityCore target, int level)</code>: Calculates the value of the scaling formula by summing the value returned by each self scaling component (calculated on the entity itself values) and each target scaling component (calculated on the target entity values), and adds the base value at a specific level.</li>
+</ul>
+<h2 id="game-events-1">Game Events</h2>
+<p><em>Relative path:</em> <code>Events -&gt; Game Event</code>
+<em>Relative path for custom game events:</em> <code>Events -&gt; Generated -&gt; *CustomEventName*</code></p>
+<p>At the beginning of this page we briefly mentioned the concept of game events as scriptable objects, and we have introduced the generic <code>GameEvent</code>. Such event is great for notifying actions that happen in the game, but it has limited flexibility as it is not carrying along any context information. For example, if we want to notify that a character has leveled up, we might want to pass along the new level reached. In other cases it could be useful to pass along with the event a reference to the entity that triggered the event, so we would like to be able to pass a reference of type <code>EntityCore</code> as context parameter. And so on.<br>
+The framework comes along with some pre-defined game events:</p>
+<ul>
+<li><code>IntGameEvent</code>: an event that carries along an <code>int</code> as context parameter</li>
+<li><code>EntityCoreGameEvent</code>: an event that carries along an <code>EntityCore</code> as context parameter</li>
+<li><code>StatChangedGameEvent</code>: an event that carries along a <code>StatChangeInfo</code> context parameter, which contains:
+<ul>
+<li>A reference to the <code>EntityStats</code> component of the entity that has changed</li>
+<li>The <code>Stat</code> that has changed</li>
+<li>The previous value of the stat</li>
+<li>The new value of the stat</li>
+</ul>
+</li>
+<li><code>AttributeChangedGameEvent</code>: an event that carries along an <code>AttributeChangeInfo</code> context parameter, which contains:
+<ul>
+<li>A reference to the <code>EntityAttributes</code> component of the entity that has changed</li>
+<li>The <code>Attribute</code> that has changed</li>
+<li>The previous value of the attribute</li>
+<li>The new value of the attribute</li>
+</ul>
+</li>
+</ul>
+<p>Along with the game events, the frameworks provides the <code>*GameEventListener</code> counterparts, which are components that can be attached to a game object to listen for the events and execute a method when the event is raised. For example, <code>IntGameEventListener</code> listens for a specific <code>IntGameEvent</code> and executes a method that takes an <code>int</code> as parameter when the event is raised.</p>
+<p>Let's suppose we need a game event for notifying when an entity reaches level 10. In the inspector, create a new <code>EntityCoreGameEvent</code> called <code>EntityReachedLevel10</code>. It should look like this:<br>
+<img src="../images/workflows/entity-reached-level-10.png" alt="Entity Reached Level 10"><br>
+There are no fields to fill in the inspector. The entity to be passed as context parameter will be passed in the code that is responsible for raising the event.<br>
+The method to raise the event is <code>Raise(EntityCore entity)</code>, which will raise the event and pass along the entity as context parameter. Therefore in a dedicated script you can call it like this:</p>
+<pre><code class="lang-csharp">public void OnHeroLevelUp(EntityCore entity) {
+    if (entity.Level == 10) {
+        // Assuming entityReachedLevel10Event is a reference to the EntityReachedLevel10 event
+        entityReachedLevel10Event.Raise(entity);
+    }
+}
+</code></pre>
+<p>Now let's create a listener for this event. Let's say that we want to show a message in the console when the event is raised. To do this, create a new game object in the hierarchy and add a script that defines a public method for loggin an event, that takes an <code>EntityCore</code> as input parameter. It should be like:</p>
+<pre><code class="lang-csharp">public void LogEntityReachedLevel10(EntityCore entity) {
+    Debug.Log($&quot;Entity {entity.name} reached level 10!&quot;);
+}
+</code></pre>
+<p>Now add the <code>EntityCoreGameEventListener</code> component to the listener game object and, in the inspector, assign the <code>EntityReachedLevel10</code> event to the <code>Event</code> field. Now drag the <code>Logger</code> script created before into the <code>Response</code>'s object selector. You should be able now to select the <code>LogEntityReachedLevel10</code> method from the dropdown menu. The result should look like this:
+<img src="../images/workflows/entity-reached-lvl-10-listener.png" alt="Entity Reached Level 10 Listener"></p>
+<p>This is a powerful mechanism that decouples the event producers from the event consumers, allowing for a more modular and maintainable codebase. And most of the setup is inspector-based. You just need to define the raising and the listening methods from code.</p>
+<h3 id="game-event-generators">Game Event Generators</h3>
+<p><em>Relative path:</em> <code>Events -&gt; Game Event Generator</code></p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Game event generators are an experimental feature and may change in future releases.<br>
+To avoid potential issues, it is recommended to back up or version control your project before renaming or moving the generated events to different folders.</p>
+</div>
+<p>Sometimes the pre-defined game events are not enough to cover all the use cases. In this case, you can create a custom game event generator. A game event generator is a scriptable object that lets you define a custom game events with up to four context parameters. You can choose the type of each parameter. Parameters can either be primitive types (like <code>int</code>, <code>float</code>, <code>string</code>, etc.) or more complex types (like <code>EntityCore</code>, <code>Stat</code>, <code>StatChangeInfo</code>, ..., or your own data types).</p>
+<h4 id="game-event-generator-setup">Game Event Generator setup</h4>
+<p>Let's create a custom game event generator to manage all the events related to the experience and leveling up of entities. Rename the newly created events generator <code>EntityLevelingEvents</code>. In the inspector, it should look like this:
+<img src="../images/workflows/entity-leveling-events.png" alt="Entity Leveling Events"></p>
+<p>With <code>Menu Base Path</code> we can change the path of the context menu where the generated events will be available for creation. By default, it is set to <code>Soap RPG Core -&gt; Events -&gt; Generated</code>, but we can change it to <code>Soap RPG Core -&gt; Events/Generated/Experience</code> for the sake of organization.</p>
+<p>With <code>Base Save Location</code> we can change the path where the source code files for the generated events will be saved. By default it is set to <code>Assets</code>, but for this example let's set it to <code>Assets/Events</code>.</p>
+<h4 id="adding-new-events">Adding new events</h4>
+<p>Now let's create an event that will be raised when an entity grants experience to another entity. To do this, click on the <code>Add new event</code> button and fill in the fields as follows:</p>
+<ul>
+<li><code>Event Name</code>: <code>EntityGrantedExp</code></li>
+<li><code>Documentation</code>: an entity granted experience to another entity</li>
+<li><code>Parameters</code>: press the <code>+</code> button and add the following three parameters:
+<ul>
+<li><code>Parameter Type</code> to <code>Mono Script</code>, <code>Mono Script</code> type to <code>EntityCore</code> (drag it from the Soap RPG Core folder)</li>
+<li><code>Parameter Type</code> to <code>Mono Script</code>, <code>Mono Script</code> type to <code>EntityCore</code> (drag it from the Soap RPG Core folder)</li>
+<li><code>Parameter Type</code> to <code>Native</code>, <code>Native type</code> to <code>long</code></li>
+</ul>
+</li>
+</ul>
+<p>The first parameter represents the entity that granted the experience, the second parameter represents the entity that received the experience, and the third parameter represents the amount of experience granted.</p>
+<p>Now let's press the <code>Generate Game Events</code> button to create the new event.
+We can now navigate to <code>Assets/Events/GeneratedEvents/EntityLevelingEvents</code> to find the following two folders:</p>
+<ul>
+<li><code>GameEventListeners</code>: contains the source code for all the game event listeners generated by our <code>EntityLevelingEvents</code> game event generator.</li>
+<li><code>GameEvents</code>: contains the source code for all the game events generated by our <code>EntityLevelingEvents</code> game event generator.</li>
+</ul>
+<p>Inside both folders, you'll find a subfolder named <code>3</code>. The Game Event Generators organize the generated events in subfolders based on the number of parameters they have. In this case, we have a game event with three parameters, so it is placed in the <code>3</code> subfolder.</p>
+<p>However, more interesting is the fact that if we now use the context menu and navigate to <code>Soap RPG Core -&gt; Events -&gt; Generated -&gt; Experience</code>, we can find the <code>EntityGrantedExp</code> event.<br>
+From here, you can follow the same steps as for the pre-defined game events to create a listener for this event, and to wire it up to the appropriate game logic.</p>
+<p>If you need to create more experience related events, you can repeat the process of adding new events to the <code>EntityLevelingEvents</code> game event generator.</p>
+<p>After having generated the source code for the game events, you can also click on the <code>Remove Event</code> button under each Game Event to remove it from the generator and delete the generated source code files.
+It might be necessary to refresh (right click on an asset folder and select <code>Refresh</code>) the asset folder containing the generated events to see the changes reflected in the Unity editor.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Pay attention that renaming or moving the generated events to different folders will cause the game event generator to lose track of them.
+If you change the <code>Base Save Location</code> and then re-generate the events, the game event generator will first delete the old files and then create new source code files in the new location. This means that any references to the old files will be lost, so you will need to reassign them in the inspector or in the code. This can be highly disruptive if you have many references to the old files, so it is recommended to back up or version control your project before renaming or moving the generated events to different folders.<br>
+To safely move files you should move them from the Unity editor and then update the <code>Base Save Location</code> field in the game event generator to match the new location of the generated events. This way, the game event generator will be able to find the generated events in the new location and will not attempt to delete/recreate them.<br>
+Same applies if you rename the game event generator itself. If you want to rename it, you should do it from the Unity editor and then update the <code>Event Name</code> field in the game event generator to match the new name of the game event generator.</p>
+</div>
 
 </article>
 

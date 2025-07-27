@@ -24,10 +24,15 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: LongRef
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/LongRef.cs
-    startLine: 6
+    startLine: 10
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: >-
+    A reference to a long value.
+
+    Can either be a constant value or a reference to a <xref href="ElectricDrill.SimpleRpgCore.Utils.LongVar" data-throw-if-not-resolved="false"></xref> ScriptableObject.
+  example: []
   syntax:
     content: >-
       [Serializable]
@@ -61,10 +66,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: UseConstant
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/LongRef.cs
-    startLine: 13
+    startLine: 23
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: If true, uses the constant value. Otherwise, uses the <xref href="ElectricDrill.SimpleRpgCore.Utils.LongVar" data-throw-if-not-resolved="false"></xref> variable.
+  example: []
   syntax:
     content: public bool UseConstant
     return:
@@ -88,10 +95,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ConstantValue
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/LongRef.cs
-    startLine: 14
+    startLine: 27
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: The constant long value.
+  example: []
   syntax:
     content: public long ConstantValue
     return:
@@ -115,10 +124,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Variable
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/LongRef.cs
-    startLine: 15
+    startLine: 31
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: The <xref href="ElectricDrill.SimpleRpgCore.Utils.LongVar" data-throw-if-not-resolved="false"></xref> variable.
+  example: []
   syntax:
     content: public LongVar Variable
     return:
@@ -142,10 +153,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Value
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/LongRef.cs
-    startLine: 17
+    startLine: 36
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: Gets or sets the value of the reference.
+  example: []
   syntax:
     content: public long Value { get; set; }
     parameters: []
@@ -171,15 +184,18 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Utils/LongRef.cs
-    startLine: 29
+    startLine: 51
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Utils
+  summary: Allows implicit conversion from a LongRef to a long.
+  example: []
   syntax:
     content: public static implicit operator long(LongRef reference)
     parameters:
     - id: reference
       type: ElectricDrill.SimpleRpgCore.Utils.LongRef
+      description: The LongRef to convert.
     return:
       type: System.Int64
     content.vb: Public Shared Widening Operator CType(reference As LongRef) As Long
@@ -188,6 +204,13 @@ items:
   fullName.vb: ElectricDrill.SimpleRpgCore.Utils.LongRef.CType(ElectricDrill.SimpleRpgCore.Utils.LongRef)
   name.vb: CType(LongRef)
 references:
+- uid: ElectricDrill.SimpleRpgCore.Utils.LongVar
+  commentId: T:ElectricDrill.SimpleRpgCore.Utils.LongVar
+  parent: ElectricDrill.SimpleRpgCore.Utils
+  href: ElectricDrill.SimpleRpgCore.Utils.LongVar.html
+  name: LongVar
+  nameWithType: LongVar
+  fullName: ElectricDrill.SimpleRpgCore.Utils.LongVar
 - uid: ElectricDrill.SimpleRpgCore.Utils
   commentId: N:ElectricDrill.SimpleRpgCore.Utils
   href: ElectricDrill.html
@@ -255,13 +278,6 @@ references:
   nameWithType.vb: Long
   fullName.vb: Long
   name.vb: Long
-- uid: ElectricDrill.SimpleRpgCore.Utils.LongVar
-  commentId: T:ElectricDrill.SimpleRpgCore.Utils.LongVar
-  parent: ElectricDrill.SimpleRpgCore.Utils
-  href: ElectricDrill.SimpleRpgCore.Utils.LongVar.html
-  name: LongVar
-  nameWithType: LongVar
-  fullName: ElectricDrill.SimpleRpgCore.Utils.LongVar
 - uid: ElectricDrill.SimpleRpgCore.Utils.LongRef.Value*
   commentId: Overload:ElectricDrill.SimpleRpgCore.Utils.LongRef.Value
   href: ElectricDrill.SimpleRpgCore.Utils.LongRef.html#ElectricDrill_SimpleRpgCore_Utils_LongRef_Value

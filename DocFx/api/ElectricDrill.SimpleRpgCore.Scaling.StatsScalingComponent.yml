@@ -22,10 +22,12 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: StatsScalingComponent
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingComponents/StatsScalingComponent.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: A scaling component that calculates a value based on an entity's stats.
+  example: []
   syntax:
     content: 'public class StatsScalingComponent : SoSetScalingComponentBase<StatSet, Stat>'
     content.vb: Public Class StatsScalingComponent Inherits SoSetScalingComponentBase(Of StatSet, Stat)
@@ -61,18 +63,21 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetEntitySet
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingComponents/StatsScalingComponent.cs
-    startLine: 10
+    startLine: 18
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: Gets the StatSet from the specified entity.
   example: []
   syntax:
     content: protected override StatSet GetEntitySet(EntityCore entity)
     parameters:
     - id: entity
       type: ElectricDrill.SimpleRpgCore.EntityCore
+      description: The entity.
     return:
       type: ElectricDrill.SimpleRpgCore.Stats.StatSet
+      description: The entity's StatSet.
     content.vb: Protected Overrides Function GetEntitySet(entity As EntityCore) As StatSet
   overridden: ElectricDrill.SimpleRpgCore.Scaling.SoSetScalingComponentBase{ElectricDrill.SimpleRpgCore.Stats.StatSet,ElectricDrill.SimpleRpgCore.Stats.Stat}.GetEntitySet(ElectricDrill.SimpleRpgCore.EntityCore)
   overload: ElectricDrill.SimpleRpgCore.Scaling.StatsScalingComponent.GetEntitySet*
@@ -94,20 +99,24 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetEntityValue
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingComponents/StatsScalingComponent.cs
-    startLine: 12
+    startLine: 26
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: Gets the value of a specific stat from the entity.
   example: []
   syntax:
     content: protected override long GetEntityValue(EntityCore entity, Stat key)
     parameters:
     - id: entity
       type: ElectricDrill.SimpleRpgCore.EntityCore
+      description: The entity.
     - id: key
       type: ElectricDrill.SimpleRpgCore.Stats.Stat
+      description: The stat to get the value of.
     return:
       type: System.Int64
+      description: The value of the stat.
     content.vb: Protected Overrides Function GetEntityValue(entity As EntityCore, key As Stat) As Long
   overridden: ElectricDrill.SimpleRpgCore.Scaling.SoSetScalingComponentBase{ElectricDrill.SimpleRpgCore.Stats.StatSet,ElectricDrill.SimpleRpgCore.Stats.Stat}.GetEntityValue(ElectricDrill.SimpleRpgCore.EntityCore,ElectricDrill.SimpleRpgCore.Stats.Stat)
   overload: ElectricDrill.SimpleRpgCore.Scaling.StatsScalingComponent.GetEntityValue*
@@ -129,15 +138,17 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetSetItems
     path: ../../GeometricalInvaders/Packages/SimpleRPGCore/Runtime/SimpleRpgCore/Scaling/ScalingComponents/StatsScalingComponent.cs
-    startLine: 13
+    startLine: 31
   assemblies:
   - ElectricDrill.SimpleRPGCore.Runtime
   namespace: ElectricDrill.SimpleRpgCore.Scaling
+  summary: Gets the collection of stats from the associated StatSet.
   example: []
   syntax:
     content: protected override IEnumerable<Stat> GetSetItems()
     return:
       type: System.Collections.Generic.IEnumerable{ElectricDrill.SimpleRpgCore.Stats.Stat}
+      description: An enumerable of stats.
     content.vb: Protected Overrides Function GetSetItems() As IEnumerable(Of Stat)
   overridden: ElectricDrill.SimpleRpgCore.Scaling.SoSetScalingComponentBase{ElectricDrill.SimpleRpgCore.Stats.StatSet,ElectricDrill.SimpleRpgCore.Stats.Stat}.GetSetItems
   overload: ElectricDrill.SimpleRpgCore.Scaling.StatsScalingComponent.GetSetItems*

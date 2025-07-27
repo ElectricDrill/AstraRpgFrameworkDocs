@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title> | Simple RPG Core </title>
+      <title>Limitations | Soap RPG Framework </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content=" | Simple RPG Core ">
+      <meta name="title" content="Limitations | Soap RPG Framework ">
       
       
       <link rel="icon" href="../images/favico.ico">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../images/simple-rpg-core-logo.png" alt="Simple RPG Core">
-            Simple RPG Core
+            <img id="logo" class="svg" src="../images/soap-rpg-framework-logo.png" alt="Soap RPG Framework">
+            Soap RPG Framework
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -85,7 +85,20 @@
         </div>
 
         <article data-uid="">
+<h1 id="limitations">Limitations</h1>
 
+<!--
+- OnStatChangedEvent is risen only when modifiers are applied, not on level-ups/base stat changes
+- OnAttributeChangedEvent is risen only when modifiers are applied and spendable points are assigned, not on level-ups/base attribute changes
+- no support for multi-class per entity
+- only one event for stats changed, attributes changed, entity spawned can be assigned to entities
+-->
+<ul>
+<li><code>OnStatChangedEvent</code> is risen only when modifiers are applied, not on level-ups/base stat changes</li>
+<li><code>OnAttributeChangedEvent</code> is risen only when modifiers are applied and spendable points are assigned, not on level-ups/base attribute changes</li>
+<li>Currently, multi-classing is not supported. Each entity can only have one class at a time</li>
+<li>Only one event for stats changed, attributes changed, and entity spawned can be assigned to entities. However, multiple event listeners can be assigned for the same event type, allowing for multiple responses</li>
+</ul>
 
 </article>
 
