@@ -62,6 +62,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "MD/requirements.md",
+      "output": {
+        ".html": {
+          "relative_path": "MD/requirements.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "MD/samples.md",
       "output": {
         ".html": {
