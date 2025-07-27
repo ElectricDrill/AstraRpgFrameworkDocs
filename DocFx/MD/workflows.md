@@ -550,3 +550,100 @@ Moreover, there are four more methods that are worth mentioning:
 - `long CalculateValue(EntityCore self, int level)`: If the scaling formula has a base value that varies with levels, this method calculates the value of the scaling formula for the entity itself, and adds the base value at a specific level. Again, there must not be any target scaling components.
 - `long CalculateValue(EntityCore self, EntityCore target)`: Calculates the value of the scaling formula by summing the value returned by each self scaling component (calculated on the entity itself values) and each target scaling component (calculated on the target entity values).
 - `long CalculateValue(EntityCore self, EntityCore target, int level)`: Calculates the value of the scaling formula by summing the value returned by each self scaling component (calculated on the entity itself values) and each target scaling component (calculated on the target entity values), and adds the base value at a specific level.
+
+## Game Events
+*Relative path:* `Events -> Game Event`
+*Relative path for custom game events:* `Events -> Generated -> *CustomEventName*`
+
+At the beginning of this page we briefly mentioned the concept of game events as scriptable objects, and we have introduced the generic `GameEvent`. Such event is great for notifying actions that happen in the game, but it has limited flexibility as it is not carrying along any context information. For example, if we want to notify that a character has leveled up, we might want to pass along the new level reached. In other cases it could be useful to pass along with the event a reference to the entity that triggered the event, so we would like to be able to pass a reference of type `EntityCore` as context parameter. And so on.  
+The framework comes along with some pre-defined game events:
+- `IntGameEvent`: an event that carries along an `int` as context parameter
+- `EntityCoreGameEvent`: an event that carries along an `EntityCore` as context parameter
+- `StatChangedGameEvent`: an event that carries along a `StatChangeInfo` context parameter, which contains:
+    - A reference to the `EntityStats` component of the entity that has changed
+    - The `Stat` that has changed
+    - The previous value of the stat
+    - The new value of the stat
+- `AttributeChangedGameEvent`: an event that carries along an `AttributeChangeInfo` context parameter, which contains:
+    - A reference to the `EntityAttributes` component of the entity that has changed
+    - The `Attribute` that has changed
+    - The previous value of the attribute
+    - The new value of the attribute
+
+Along with the game events, the frameworks provides the `*GameEventListener` counterparts, which are components that can be attached to a game object to listen for the events and execute a method when the event is raised. For example, `IntGameEventListener` listens for a specific `IntGameEvent` and executes a method that takes an `int` as parameter when the event is raised.
+
+Let's suppose we need a game event for notifying when an entity reaches level 10. In the inspector, create a new `EntityCoreGameEvent` called `EntityReachedLevel10`. It should look like this:  
+![Entity Reached Level 10](../images/workflows/entity-reached-level-10.png)  
+There are no fields to fill in the inspector. The entity to be passed as context parameter will be passed in the code that is responsible for raising the event.  
+The method to raise the event is `Raise(EntityCore entity)`, which will raise the event and pass along the entity as context parameter. Therefore in a dedicated script you can call it like this:
+
+```csharp
+public void OnHeroLevelUp(EntityCore entity) {
+    if (entity.Level == 10) {
+        // Assuming entityReachedLevel10Event is a reference to the EntityReachedLevel10 event
+        entityReachedLevel10Event.Raise(entity);
+    }
+}
+```
+Now let's create a listener for this event. Let's say that we want to show a message in the console when the event is raised. To do this, create a new game object in the hierarchy and add a script that defines a public method for loggin an event, that takes an `EntityCore` as input parameter. It should be like:  
+```csharp
+public void LogEntityReachedLevel10(EntityCore entity) {
+    Debug.Log($"Entity {entity.name} reached level 10!");
+}
+```
+
+Now add the `EntityCoreGameEventListener` component to the listener game object and, in the inspector, assign the `EntityReachedLevel10` event to the `Event` field. Now drag the `Logger` script created before into the `Response`'s object selector. You should be able now to select the `LogEntityReachedLevel10` method from the dropdown menu. The result should look like this:
+![Entity Reached Level 10 Listener](../images/workflows/entity-reached-lvl-10-listener.png)  
+
+This is a powerful mechanism that decouples the event producers from the event consumers, allowing for a more modular and maintainable codebase. And most of the setup is inspector-based. You just need to define the raising and the listening methods from code.
+
+### Game Event Generators
+*Relative path:* `Events -> Game Event Generator`
+
+> [!WARNING]
+> Game event generators are an experimental feature and may change in future releases.  
+> To avoid potential issues, it is recommended to back up or version control your project before renaming or moving the generated events to different folders.
+
+Sometimes the pre-defined game events are not enough to cover all the use cases. In this case, you can create a custom game event generator. A game event generator is a scriptable object that lets you define a custom game events with up to four context parameters. You can choose the type of each parameter. Parameters can either be primitive types (like `int`, `float`, `string`, etc.) or more complex types (like `EntityCore`, `Stat`, `StatChangeInfo`, ..., or your own data types).
+
+#### Game Event Generator setup
+
+Let's create a custom game event generator to manage all the events related to the experience and leveling up of entities. Rename the newly created events generator `EntityLevelingEvents`. In the inspector, it should look like this:
+![Entity Leveling Events](../images/workflows/entity-leveling-events.png)
+
+With `Menu Base Path` we can change the path of the context menu where the generated events will be available for creation. By default, it is set to `Soap RPG Core -> Events -> Generated`, but we can change it to `Soap RPG Core -> Events/Generated/Experience` for the sake of organization.
+
+With `Base Save Location` we can change the path where the source code files for the generated events will be saved. By default it is set to `Assets`, but for this example let's set it to `Assets/Events`.
+
+#### Adding new events
+
+Now let's create an event that will be raised when an entity grants experience to another entity. To do this, click on the `Add new event` button and fill in the fields as follows:
+- `Event Name`: `EntityGrantedExp`
+- `Documentation`: an entity granted experience to another entity
+- `Parameters`: press the `+` button and add the following three parameters:
+  - `Parameter Type` to `Mono Script`, `Mono Script` type to `EntityCore` (drag it from the Soap RPG Core folder)
+  - `Parameter Type` to `Mono Script`, `Mono Script` type to `EntityCore` (drag it from the Soap RPG Core folder)
+  - `Parameter Type` to `Native`, `Native type` to `long`
+
+The first parameter represents the entity that granted the experience, the second parameter represents the entity that received the experience, and the third parameter represents the amount of experience granted.
+
+Now let's press the `Generate Game Events` button to create the new event.
+We can now navigate to `Assets/Events/GeneratedEvents/EntityLevelingEvents` to find the following two folders:
+- `GameEventListeners`: contains the source code for all the game event listeners generated by our `EntityLevelingEvents` game event generator.
+- `GameEvents`: contains the source code for all the game events generated by our `EntityLevelingEvents` game event generator.
+
+Inside both folders, you'll find a subfolder named `3`. The Game Event Generators organize the generated events in subfolders based on the number of parameters they have. In this case, we have a game event with three parameters, so it is placed in the `3` subfolder.
+
+However, more interesting is the fact that if we now use the context menu and navigate to `Soap RPG Core -> Events -> Generated -> Experience`, we can find the `EntityGrantedExp` event.  
+From here, you can follow the same steps as for the pre-defined game events to create a listener for this event, and to wire it up to the appropriate game logic.
+
+If you need to create more experience related events, you can repeat the process of adding new events to the `EntityLevelingEvents` game event generator.
+
+After having generated the source code for the game events, you can also click on the `Remove Event` button under each Game Event to remove it from the generator and delete the generated source code files.
+It might be necessary to refresh (right click on an asset folder and select `Refresh`) the asset folder containing the generated events to see the changes reflected in the Unity editor.
+
+> [!WARNING]
+> Pay attention that renaming or moving the generated events to different folders will cause the game event generator to lose track of them.
+> If you change the `Base Save Location` and then re-generate the events, the game event generator will first delete the old files and then create new source code files in the new location. This means that any references to the old files will be lost, so you will need to reassign them in the inspector or in the code. This can be highly disruptive if you have many references to the old files, so it is recommended to back up or version control your project before renaming or moving the generated events to different folders.  
+> To safely move files you should move them from the Unity editor and then update the `Base Save Location` field in the game event generator to match the new location of the generated events. This way, the game event generator will be able to find the generated events in the new location and will not attempt to delete/recreate them.  
+> Same applies if you rename the game event generator itself. If you want to rename it, you should do it from the Unity editor and then update the `Event Name` field in the game event generator to match the new name of the game event generator.
