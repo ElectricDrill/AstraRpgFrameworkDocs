@@ -87,6 +87,60 @@
         <article data-uid="">
 <h1 id="samples">Samples</h1>
 
+<p>The samples folder contains 2 sub-folders:</p>
+<ul>
+<li><strong>utils</strong>: contains some utility objects that can be used in your game.</li>
+<li><strong>examples</strong>: contains resources that are used in the sample scene to showcase the package's features</li>
+</ul>
+<h2 id="utils">Utils</h2>
+<p>The <code>Utils</code> folder contains 2 sub-folders:</p>
+<ul>
+<li><code>EventInstances</code>: containing <code>Entity Attribute Changed</code>, <code>Entity Spawned</code>, <code>Entity Stat Changed</code>, and <code>On Player Level Up</code> Game Events. These are instances of the Game Events defined in the package's source code.</li>
+<li><code>Player</code>: containing <code>Max Level</code>, <code>Player Hp</code>, <code>Player Max Hp</code>, and <code>Player Level</code> Int and Long variables. These are useful to use Scriptable Object variables in your game, as showcased in the <a href="workflows.html">Workflows</a> documentation.</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<p>There are several objects in this folder. Let's start by the Sample Scene.
+Here we have two relevant game objects: <code>Heroes</code> and <code>HeroesHUD</code>. These wrappers contain the entity game objects and the GUI elements that are used to display the heroes' stats and attributes respectively.
+There are three heroes in the <code>Heroes</code> GO: <code>Warrior</code>, <code>Mage</code>, and <code>Rogue</code>. Each hero has its own game object, with the following components:</p>
+<ul>
+<li><code>EntityCore</code></li>
+<li><code>EntityClass</code></li>
+<li><code>EntityStats</code></li>
+<li><code>EntityAttributes</code></li>
+</ul>
+<p>The objects in the <code>HeroesHUD</code> are not as relevant. Feel free to explore them, but they are not the focus of this documentation as they are just used to display the heroes' stats and attributes in the UI.</p>
+<p>Along with the Sample Scene, there are a few sprites and UI scripts (in the <code>Sprites</code> and <code>Scripts</code> folders respectively), some prefabs in the <code>Prefabs</code> folder, a few events in the <code>Events</code> folder, and some more relevant content in the <code>Instances -&gt; Classes</code> folder. Here, we have all the instances of the frameworks's scriptable objects for the Sample Scene.<br>
+For each class we have the following:</p>
+<ul>
+<li>Attributes growth formulas</li>
+<li>Stats growth formulas</li>
+<li>An Int var for the hero's level</li>
+<li>A Max HP growth formula</li>
+<li>The class itself
+All these objects are used in the Sample Scene to showcase the package's features.</li>
+</ul>
+<h2 id="using-the-sample-scene">Using the Sample Scene</h2>
+<p>The scene uses <code>Strength</code>, <code>Intelligence</code>, <code>Dexterity</code>, and <code>Constitution</code> as attributes, and <code>Physical Attack</code>, <code>Magical Attack</code>, <code>Critical Chance</code>, and <code>Defense</code> as stats. Each stat scales with the respective attribute:</p>
+<ul>
+<li><code>Physical Attack</code> scales with <code>Strength</code></li>
+<li><code>Magical Attack</code> scales with <code>Intelligence</code></li>
+<li><code>Defense</code> scales with <code>Constitution</code></li>
+<li><code>Critical Chance</code> scales with <code>Dexterity</code></li>
+</ul>
+<p>If you now enter play mode in the Sample Scene, you'll see three heroes: the Warrior (left), Mage (center), and Rogue (right), each with their respective HUD displayed above them. You can use the arrow buttons (<code>&lt;</code> and <code>&gt;</code>) to toggle between viewing the heroes' stats and attributes.</p>
+<p>The Sample Scene is designed to demonstrate how stats and attributes respond to changes made in the inspector.</p>
+<p>For example, select the <code>Warrior</code> in the hierarchy and change its Level from 1 to 2 using the Entity Core component. You'll observe that the Warrior's <code>Physical Attack</code> increases from 28 to 29, and <code>Defense</code> rises from 24 to 25.</p>
+<p>Increasing the level also grants the Warrior a spendable attribute point (visible in the <code>EntityAttributes</code> component). If you allocate this point to <code>Strength</code>, the <code>Physical Attack</code> will increase from 29 to 30.<br>
+If you revert the level back to 1, <code>Physical Attack</code> returns to 28 and the spent attribute point is removed.</p>
+<p>Next, let's adjust how <code>Physical Attack</code> scales with the <code>Strength</code> attribute. By default, each point of <code>Strength</code> adds 1 point to <code>Physical Attack</code>. Suppose you want each point of <code>Strength</code> to contribute 3 points instead.<br>
+To do this, locate the <code>Physical Attack</code> stat instance in <code>Examples -&gt; Instances -&gt; Hero -&gt; Stats</code>. Select the <code>Physical Attack</code> stat, then double-click the <code>Physical Attack ASC</code> object in the inspector. This Attribute Scaling Component controls how <code>Physical Attack</code> scales with <code>Strength</code>.<br>
+You'll notice the scaling value for <code>Strength</code> is set to <code>1</code>. Change this to <code>3</code>. Instantly, the Warrior's <code>Physical Attack</code> at level 1 jumps from 28 to 60, since the base value is 12 and the Warrior has 16 points of <code>Strength</code>: 12 + (16 × 3) = 60.<br>
+If you increase the Warrior's level to 2, <code>Physical Attack</code> becomes 61. Assigning the new attribute point to <code>Strength</code> further increases <code>Physical Attack</code> from 61 to 64.</p>
+<p>After exiting play mode, inspect the modified objects. You'll see that the Warrior's level is reset to 1, <code>Physical Attack</code> returns to 28, and the <code>Physical Attack ASC</code> (ASC stands for Attribute Scaling Component) scaling for <code>Strength</code> is back to 1.<br>
+This happens because changes made to <code>ScriptableObjects</code> during play mode are not saved to disk when you exit play mode. This is intentional Unity behavior, not a package bug.<br>
+Persisting such changes would be risky. For example, if a debuff reduces the scaling of <code>Physical Attack</code> from <code>Strength</code> to zero during play mode and this is saved, you would permanently lose the original scaling—even after restarting without the debuff.<br>
+<code>ScriptableObjects</code> in this package are intended to define your game's baseline mechanics. Any modifications during play mode are temporary and not meant to be saved. Fine-tuning these values is crucial in RPGs, and once you achieve the desired balance, you want to ensure those values remain intact.</p>
+<p>You can also explore the other heroes and all their components in the scene. Play around with their levels, stats scalings, attributes and their spendable points, and see how they affect the heroes' stats and attributes in real-time.</p>
 
 </article>
 

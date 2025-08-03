@@ -5,7 +5,7 @@
               {
                   "src": "../../GeometricalInvaders",
                   "files": [
-                      "ElectricDrill.SimpleRPGCore.Runtime.csproj"
+                      "ElectricDrill.soap-rpg-framework.Runtime.csproj"
                   ],
                   "exclude": [
                       "Editor/**",
