@@ -1,0 +1,129 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.Scaling
+  commentId: N:ElectricDrill.SoapRpgFramework.Scaling
+  id: ElectricDrill.SoapRpgFramework.Scaling
+  children:
+  - ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems
+  - ElectricDrill.SoapRpgFramework.Scaling.AttributesScalingComponent
+  - ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent
+  - ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula
+  - ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems
+  - ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2
+  - ElectricDrill.SoapRpgFramework.Scaling.StatScalingComponentMenuItems
+  - ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent
+  langs:
+  - csharp
+  - vb
+  name: ElectricDrill.SoapRpgFramework.Scaling
+  nameWithType: ElectricDrill.SoapRpgFramework.Scaling
+  fullName: ElectricDrill.SoapRpgFramework.Scaling
+  type: Namespace
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+references:
+- uid: ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent
+  commentId: T:ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent
+  href: ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.html
+  name: StatsScalingComponent
+  nameWithType: StatsScalingComponent
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent
+- uid: ElectricDrill.SoapRpgFramework.Scaling.StatScalingComponentMenuItems
+  commentId: T:ElectricDrill.SoapRpgFramework.Scaling.StatScalingComponentMenuItems
+  href: ElectricDrill.SoapRpgFramework.Scaling.StatScalingComponentMenuItems.html
+  name: StatScalingComponentMenuItems
+  nameWithType: StatScalingComponentMenuItems
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.StatScalingComponentMenuItems
+- uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent
+  commentId: T:ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent
+  parent: ElectricDrill.SoapRpgFramework.Scaling
+  href: ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent.html
+  name: ScalingComponent
+  nameWithType: ScalingComponent
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent
+- uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula
+  commentId: T:ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula
+  href: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.html
+  name: ScalingFormula
+  nameWithType: ScalingFormula
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula
+- uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems
+  commentId: T:ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems
+  href: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems.html
+  name: ScalingFormulaMenuItems
+  nameWithType: ScalingFormulaMenuItems
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems
+- uid: ElectricDrill.SoapRpgFramework.Scaling.AttributesScalingComponent
+  commentId: T:ElectricDrill.SoapRpgFramework.Scaling.AttributesScalingComponent
+  parent: ElectricDrill.SoapRpgFramework.Scaling
+  href: ElectricDrill.SoapRpgFramework.Scaling.AttributesScalingComponent.html
+  name: AttributesScalingComponent
+  nameWithType: AttributesScalingComponent
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.AttributesScalingComponent
+- uid: ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems
+  commentId: T:ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems
+  href: ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.html
+  name: AttributeScalingComponentMenuItems
+  nameWithType: AttributeScalingComponentMenuItems
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems
+- uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2
+  commentId: T:ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2
+  href: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html
+  name: SoSetScalingComponentBase<SetType, KeyType>
+  nameWithType: SoSetScalingComponentBase<SetType, KeyType>
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase<SetType, KeyType>
+  nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType)
+  name.vb: SoSetScalingComponentBase(Of SetType, KeyType)
+  spec.csharp:
+  - uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2
+    name: SoSetScalingComponentBase
+    href: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html
+  - name: <
+  - name: SetType
+  - name: ','
+  - name: " "
+  - name: KeyType
+  - name: '>'
+  spec.vb:
+  - uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2
+    name: SoSetScalingComponentBase
+    href: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: SetType
+  - name: ','
+  - name: " "
+  - name: KeyType
+  - name: )
+- uid: ElectricDrill.SoapRpgFramework.Scaling
+  commentId: N:ElectricDrill.SoapRpgFramework.Scaling
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Scaling
+  nameWithType: ElectricDrill.SoapRpgFramework.Scaling
+  fullName: ElectricDrill.SoapRpgFramework.Scaling
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Scaling
+    name: Scaling
+    href: ElectricDrill.SoapRpgFramework.Scaling.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Scaling
+    name: Scaling
+    href: ElectricDrill.SoapRpgFramework.Scaling.html

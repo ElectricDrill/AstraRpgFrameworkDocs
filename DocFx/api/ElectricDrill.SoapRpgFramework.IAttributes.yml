@@ -1,0 +1,131 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.IAttributes
+  commentId: T:ElectricDrill.SoapRpgFramework.IAttributes
+  id: IAttributes
+  parent: ElectricDrill.SoapRpgFramework
+  children:
+  - ElectricDrill.SoapRpgFramework.IAttributes.Attributes
+  langs:
+  - csharp
+  - vb
+  name: IAttributes
+  nameWithType: IAttributes
+  fullName: ElectricDrill.SoapRpgFramework.IAttributes
+  type: Interface
+  source:
+    remote:
+      path: Runtime/IAttributes.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: IAttributes
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/IAttributes.cs
+    startLine: 8
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework
+  summary: >-
+    Interface for entities that have an attributes system.
+
+    Provides access to the entity's attributes component.
+  example: []
+  syntax:
+    content: public interface IAttributes
+    content.vb: Public Interface IAttributes
+- uid: ElectricDrill.SoapRpgFramework.IAttributes.Attributes
+  commentId: P:ElectricDrill.SoapRpgFramework.IAttributes.Attributes
+  id: Attributes
+  parent: ElectricDrill.SoapRpgFramework.IAttributes
+  langs:
+  - csharp
+  - vb
+  name: Attributes
+  nameWithType: IAttributes.Attributes
+  fullName: ElectricDrill.SoapRpgFramework.IAttributes.Attributes
+  type: Property
+  source:
+    remote:
+      path: Runtime/IAttributes.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Attributes
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/IAttributes.cs
+    startLine: 13
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework
+  summary: Gets the entity's attributes component.
+  example: []
+  syntax:
+    content: EntityAttributes Attributes { get; }
+    parameters: []
+    return:
+      type: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes
+    content.vb: ReadOnly Property Attributes As EntityAttributes
+  overload: ElectricDrill.SoapRpgFramework.IAttributes.Attributes*
+references:
+- uid: ElectricDrill.SoapRpgFramework
+  commentId: N:ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework
+  nameWithType: ElectricDrill.SoapRpgFramework
+  fullName: ElectricDrill.SoapRpgFramework
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+- uid: ElectricDrill.SoapRpgFramework.IAttributes.Attributes*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.IAttributes.Attributes
+  href: ElectricDrill.SoapRpgFramework.IAttributes.html#ElectricDrill_SoapRpgFramework_IAttributes_Attributes
+  name: Attributes
+  nameWithType: IAttributes.Attributes
+  fullName: ElectricDrill.SoapRpgFramework.IAttributes.Attributes
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes
+  commentId: T:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes
+  parent: ElectricDrill.SoapRpgFramework.Attributes
+  href: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html
+  name: EntityAttributes
+  nameWithType: EntityAttributes
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes
+- uid: ElectricDrill.SoapRpgFramework.Attributes
+  commentId: N:ElectricDrill.SoapRpgFramework.Attributes
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Attributes
+  nameWithType: ElectricDrill.SoapRpgFramework.Attributes
+  fullName: ElectricDrill.SoapRpgFramework.Attributes
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Attributes
+    name: Attributes
+    href: ElectricDrill.SoapRpgFramework.Attributes.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Attributes
+    name: Attributes
+    href: ElectricDrill.SoapRpgFramework.Attributes.html

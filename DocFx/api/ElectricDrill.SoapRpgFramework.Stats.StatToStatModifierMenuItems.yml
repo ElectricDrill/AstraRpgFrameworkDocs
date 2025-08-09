@@ -1,0 +1,131 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatToStatModifierMenuItems
+  commentId: T:ElectricDrill.SoapRpgFramework.Stats.StatToStatModifierMenuItems
+  id: StatToStatModifierMenuItems
+  parent: ElectricDrill.SoapRpgFramework.Stats
+  children:
+  - ElectricDrill.SoapRpgFramework.Stats.StatToStatModifierMenuItems.CreateStatToStatModifier
+  langs:
+  - csharp
+  - vb
+  name: StatToStatModifierMenuItems
+  nameWithType: StatToStatModifierMenuItems
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatToStatModifierMenuItems
+  type: Class
+  source:
+    remote:
+      path: Runtime/Stats/StatToStatModifier.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: StatToStatModifierMenuItems
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatToStatModifier.cs
+    startLine: 34
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  summary: Provides Unity Editor menu items for creating StatToStatModifier assets.
+  example: []
+  syntax:
+    content: public static class StatToStatModifierMenuItems
+    content.vb: Public Module StatToStatModifierMenuItems
+  inheritance:
+  - System.Object
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatToStatModifierMenuItems.CreateStatToStatModifier
+  commentId: M:ElectricDrill.SoapRpgFramework.Stats.StatToStatModifierMenuItems.CreateStatToStatModifier
+  id: CreateStatToStatModifier
+  parent: ElectricDrill.SoapRpgFramework.Stats.StatToStatModifierMenuItems
+  langs:
+  - csharp
+  - vb
+  name: CreateStatToStatModifier()
+  nameWithType: StatToStatModifierMenuItems.CreateStatToStatModifier()
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatToStatModifierMenuItems.CreateStatToStatModifier()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Stats/StatToStatModifier.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: CreateStatToStatModifier
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatToStatModifier.cs
+    startLine: 39
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  summary: Creates a new StatToStatModifier asset in the project window.
+  example: []
+  syntax:
+    content: >-
+      [MenuItem("Assets/Create/Soap RPG Framework/Stat to Stat Modifier ^&M", false, 4)]
+
+      public static void CreateStatToStatModifier()
+    content.vb: >-
+      <MenuItem("Assets/Create/Soap RPG Framework/Stat to Stat Modifier ^&M", False, 4)>
+
+      Public Shared Sub CreateStatToStatModifier()
+  overload: ElectricDrill.SoapRpgFramework.Stats.StatToStatModifierMenuItems.CreateStatToStatModifier*
+  attributes:
+  - type: UnityEditor.MenuItem
+    ctor: UnityEditor.MenuItem.#ctor(System.String,System.Boolean,System.Int32)
+    arguments:
+    - type: System.String
+      value: Assets/Create/Soap RPG Framework/Stat to Stat Modifier ^&M
+    - type: System.Boolean
+      value: false
+    - type: System.Int32
+      value: 4
+references:
+- uid: ElectricDrill.SoapRpgFramework.Stats
+  commentId: N:ElectricDrill.SoapRpgFramework.Stats
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Stats
+  nameWithType: ElectricDrill.SoapRpgFramework.Stats
+  fullName: ElectricDrill.SoapRpgFramework.Stats
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Stats
+    name: Stats
+    href: ElectricDrill.SoapRpgFramework.Stats.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Stats
+    name: Stats
+    href: ElectricDrill.SoapRpgFramework.Stats.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatToStatModifierMenuItems.CreateStatToStatModifier*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Stats.StatToStatModifierMenuItems.CreateStatToStatModifier
+  href: ElectricDrill.SoapRpgFramework.Stats.StatToStatModifierMenuItems.html#ElectricDrill_SoapRpgFramework_Stats_StatToStatModifierMenuItems_CreateStatToStatModifier
+  name: CreateStatToStatModifier
+  nameWithType: StatToStatModifierMenuItems.CreateStatToStatModifier
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatToStatModifierMenuItems.CreateStatToStatModifier

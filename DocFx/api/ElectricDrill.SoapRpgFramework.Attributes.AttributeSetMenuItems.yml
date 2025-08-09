@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.Attributes.AttributeSetMenuItems
+  commentId: T:ElectricDrill.SoapRpgFramework.Attributes.AttributeSetMenuItems
+  id: AttributeSetMenuItems
+  parent: ElectricDrill.SoapRpgFramework.Attributes
+  children:
+  - ElectricDrill.SoapRpgFramework.Attributes.AttributeSetMenuItems.CreateAttributeSet
+  langs:
+  - csharp
+  - vb
+  name: AttributeSetMenuItems
+  nameWithType: AttributeSetMenuItems
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.AttributeSetMenuItems
+  type: Class
+  source:
+    remote:
+      path: Runtime/Attributes/AttributeSet.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: AttributeSetMenuItems
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeSet.cs
+    startLine: 57
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Attributes
+  summary: Provides Unity Editor menu items for creating attribute sets.
+  example: []
+  syntax:
+    content: public static class AttributeSetMenuItems
+    content.vb: Public Module AttributeSetMenuItems
+  inheritance:
+  - System.Object
+- uid: ElectricDrill.SoapRpgFramework.Attributes.AttributeSetMenuItems.CreateAttributeSet
+  commentId: M:ElectricDrill.SoapRpgFramework.Attributes.AttributeSetMenuItems.CreateAttributeSet
+  id: CreateAttributeSet
+  parent: ElectricDrill.SoapRpgFramework.Attributes.AttributeSetMenuItems
+  langs:
+  - csharp
+  - vb
+  name: CreateAttributeSet()
+  nameWithType: AttributeSetMenuItems.CreateAttributeSet()
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.AttributeSetMenuItems.CreateAttributeSet()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Attributes/AttributeSet.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: CreateAttributeSet
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeSet.cs
+    startLine: 63
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Attributes
+  summary: >-
+    Creates a new AttributeSet asset in the project window.
+
+    Can be accessed via Assets/Create/Soap RPG Framework/Attribute Set menu.
+  example: []
+  syntax:
+    content: >-
+      [MenuItem("Assets/Create/Soap RPG Framework/Attribute Set", false, 1)]
+
+      public static void CreateAttributeSet()
+    content.vb: >-
+      <MenuItem("Assets/Create/Soap RPG Framework/Attribute Set", False, 1)>
+
+      Public Shared Sub CreateAttributeSet()
+  overload: ElectricDrill.SoapRpgFramework.Attributes.AttributeSetMenuItems.CreateAttributeSet*
+  attributes:
+  - type: UnityEditor.MenuItem
+    ctor: UnityEditor.MenuItem.#ctor(System.String,System.Boolean,System.Int32)
+    arguments:
+    - type: System.String
+      value: Assets/Create/Soap RPG Framework/Attribute Set
+    - type: System.Boolean
+      value: false
+    - type: System.Int32
+      value: 1
+references:
+- uid: ElectricDrill.SoapRpgFramework.Attributes
+  commentId: N:ElectricDrill.SoapRpgFramework.Attributes
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Attributes
+  nameWithType: ElectricDrill.SoapRpgFramework.Attributes
+  fullName: ElectricDrill.SoapRpgFramework.Attributes
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Attributes
+    name: Attributes
+    href: ElectricDrill.SoapRpgFramework.Attributes.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Attributes
+    name: Attributes
+    href: ElectricDrill.SoapRpgFramework.Attributes.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ElectricDrill.SoapRpgFramework.Attributes.AttributeSetMenuItems.CreateAttributeSet*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.AttributeSetMenuItems.CreateAttributeSet
+  href: ElectricDrill.SoapRpgFramework.Attributes.AttributeSetMenuItems.html#ElectricDrill_SoapRpgFramework_Attributes_AttributeSetMenuItems_CreateAttributeSet
+  name: CreateAttributeSet
+  nameWithType: AttributeSetMenuItems.CreateAttributeSet
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.AttributeSetMenuItems.CreateAttributeSet

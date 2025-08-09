@@ -1,0 +1,130 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.Stats.IStatContainer
+  commentId: T:ElectricDrill.SoapRpgFramework.Stats.IStatContainer
+  id: IStatContainer
+  parent: ElectricDrill.SoapRpgFramework.Stats
+  children:
+  - ElectricDrill.SoapRpgFramework.Stats.IStatContainer.Contains(ElectricDrill.SoapRpgFramework.Stats.Stat)
+  langs:
+  - csharp
+  - vb
+  name: IStatContainer
+  nameWithType: IStatContainer
+  fullName: ElectricDrill.SoapRpgFramework.Stats.IStatContainer
+  type: Interface
+  source:
+    remote:
+      path: Runtime/Stats/IStatContainer.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: IStatContainer
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/IStatContainer.cs
+    startLine: 6
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  summary: >-
+    Interface for objects that can contain and check for the presence of stats.
+
+    Provides basic functionality for stat container validation.
+  example: []
+  syntax:
+    content: public interface IStatContainer
+    content.vb: Public Interface IStatContainer
+- uid: ElectricDrill.SoapRpgFramework.Stats.IStatContainer.Contains(ElectricDrill.SoapRpgFramework.Stats.Stat)
+  commentId: M:ElectricDrill.SoapRpgFramework.Stats.IStatContainer.Contains(ElectricDrill.SoapRpgFramework.Stats.Stat)
+  id: Contains(ElectricDrill.SoapRpgFramework.Stats.Stat)
+  parent: ElectricDrill.SoapRpgFramework.Stats.IStatContainer
+  langs:
+  - csharp
+  - vb
+  name: Contains(Stat)
+  nameWithType: IStatContainer.Contains(Stat)
+  fullName: ElectricDrill.SoapRpgFramework.Stats.IStatContainer.Contains(ElectricDrill.SoapRpgFramework.Stats.Stat)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Stats/IStatContainer.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Contains
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/IStatContainer.cs
+    startLine: 13
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  summary: Determines whether the container contains the specified stat.
+  example: []
+  syntax:
+    content: bool Contains(Stat stat)
+    parameters:
+    - id: stat
+      type: ElectricDrill.SoapRpgFramework.Stats.Stat
+      description: The stat to check for.
+    return:
+      type: System.Boolean
+      description: true if the container contains the stat; otherwise, false.
+    content.vb: Function Contains(stat As Stat) As Boolean
+  overload: ElectricDrill.SoapRpgFramework.Stats.IStatContainer.Contains*
+references:
+- uid: ElectricDrill.SoapRpgFramework.Stats
+  commentId: N:ElectricDrill.SoapRpgFramework.Stats
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Stats
+  nameWithType: ElectricDrill.SoapRpgFramework.Stats
+  fullName: ElectricDrill.SoapRpgFramework.Stats
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Stats
+    name: Stats
+    href: ElectricDrill.SoapRpgFramework.Stats.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Stats
+    name: Stats
+    href: ElectricDrill.SoapRpgFramework.Stats.html
+- uid: ElectricDrill.SoapRpgFramework.Stats.IStatContainer.Contains*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Stats.IStatContainer.Contains
+  href: ElectricDrill.SoapRpgFramework.Stats.IStatContainer.html#ElectricDrill_SoapRpgFramework_Stats_IStatContainer_Contains_ElectricDrill_SoapRpgFramework_Stats_Stat_
+  name: Contains
+  nameWithType: IStatContainer.Contains
+  fullName: ElectricDrill.SoapRpgFramework.Stats.IStatContainer.Contains
+- uid: ElectricDrill.SoapRpgFramework.Stats.Stat
+  commentId: T:ElectricDrill.SoapRpgFramework.Stats.Stat
+  parent: ElectricDrill.SoapRpgFramework.Stats
+  href: ElectricDrill.SoapRpgFramework.Stats.Stat.html
+  name: Stat
+  nameWithType: Stat
+  fullName: ElectricDrill.SoapRpgFramework.Stats.Stat
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

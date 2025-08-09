@@ -985,6 +985,176 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.Attribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.Attribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.AttributeMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.AttributeMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.AttributePointsTracker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.AttributePointsTracker.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.AttributeSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.AttributeSet.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.AttributeSetInstance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.AttributeSetInstance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.AttributeSetInstanceExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.AttributeSetInstanceExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.AttributeSetMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.AttributeSetMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.IAttributeContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.IAttributeContainer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Attributes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.BoundedValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.BoundedValue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Class.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Class.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.ClassMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.ClassMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.EntityClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.EntityClass.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.EntityCore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.EntityCore.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.EntityLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.EntityLevel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.AttributeChangedGameEvent.yml",
       "output": {
         ".html": {
@@ -1265,6 +1435,286 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.ExpSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.ExpSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.GrowthFormula.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.GrowthFormula.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.GrowthFormulaMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.GrowthFormulaMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.IAttributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.IAttributes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.IClassSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.IClassSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.IExpSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.IExpSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.ILevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.ILevel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.ILevelable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.ILevelable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.IStatSetSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.IStatSetSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.AttributesScalingComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.AttributesScalingComponent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.StatScalingComponentMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.StatScalingComponentMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Scaling.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.EntityStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.EntityStats.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.IStatContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.IStatContainer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.Stat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.Stat.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.StatMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.StatMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.StatSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.StatSet.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.StatSetInstance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.StatSetInstance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.StatSetMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.StatSetMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.StatToStatModifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.StatToStatModifier.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.StatToStatModifierMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.StatToStatModifierMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Stats.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.Cache-2.yml",
       "output": {
         ".html": {
@@ -1275,10 +1725,110 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.InitializationUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.InitializationUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.IntRef.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.IntRef.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.IntVar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.IntVar.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.LongRef.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.LongRef.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.LongVar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.LongVar.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.Percentage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.Percentage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.SerKeyValPair-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.SerKeyValPair-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.SerializableDictionary-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.SerializableDictionary-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.yml",
       "output": {
         ".html": {
           "relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.html"
         }
       },
       "version": ""

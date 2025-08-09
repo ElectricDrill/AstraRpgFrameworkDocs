@@ -41,14 +41,14 @@ items:
   - System.Object
   - UnityEngine.Object
   - UnityEngine.ScriptableObject
-  - ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}
+  - ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}
   implements:
-  - ElectricDrill.SoapRpgFramework.Events.IRaisable{SoapRpgFramework.Attributes.AttributeChangeInfo}
+  - ElectricDrill.SoapRpgFramework.Events.IRaisable{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}
   inheritedMembers:
-  - ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.OnEventRaised
-  - ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.Raise(SoapRpgFramework.Attributes.AttributeChangeInfo)
-  - ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.RegisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo})
-  - ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.UnregisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo})
+  - ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.OnEventRaised
+  - ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.Raise(ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo)
+  - ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.RegisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo})
+  - ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.UnregisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo})
   attributes:
   - type: UnityEngine.CreateAssetMenuAttribute
     ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
@@ -115,25 +115,25 @@ references:
   name: ScriptableObject
   nameWithType: ScriptableObject
   fullName: UnityEngine.ScriptableObject
-- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}
-  commentId: T:ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}
+  commentId: T:ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}
   parent: ElectricDrill.SoapRpgFramework.Events
   definition: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1`1
   href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html
   name: GameEventGeneric1<AttributeChangeInfo>
   nameWithType: GameEventGeneric1<AttributeChangeInfo>
-  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1<SoapRpgFramework.Attributes.AttributeChangeInfo>
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1<ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo>
   nameWithType.vb: GameEventGeneric1(Of AttributeChangeInfo)
-  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1(Of SoapRpgFramework.Attributes.AttributeChangeInfo)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1(Of ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo)
   name.vb: GameEventGeneric1(Of AttributeChangeInfo)
   spec.csharp:
   - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1`1
     name: GameEventGeneric1
     href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html
   - name: <
-  - uid: SoapRpgFramework.Attributes.AttributeChangeInfo
+  - uid: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo
     name: AttributeChangeInfo
-    href: SoapRpgFramework.Attributes.AttributeChangeInfo.html
+    href: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo.html
   - name: '>'
   spec.vb:
   - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1`1
@@ -142,29 +142,29 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: SoapRpgFramework.Attributes.AttributeChangeInfo
+  - uid: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo
     name: AttributeChangeInfo
-    href: SoapRpgFramework.Attributes.AttributeChangeInfo.html
+    href: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo.html
   - name: )
-- uid: ElectricDrill.SoapRpgFramework.Events.IRaisable{SoapRpgFramework.Attributes.AttributeChangeInfo}
-  commentId: T:ElectricDrill.SoapRpgFramework.Events.IRaisable{SoapRpgFramework.Attributes.AttributeChangeInfo}
+- uid: ElectricDrill.SoapRpgFramework.Events.IRaisable{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}
+  commentId: T:ElectricDrill.SoapRpgFramework.Events.IRaisable{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}
   parent: ElectricDrill.SoapRpgFramework.Events
   definition: ElectricDrill.SoapRpgFramework.Events.IRaisable`1
   href: ElectricDrill.SoapRpgFramework.Events.IRaisable-1.html
   name: IRaisable<AttributeChangeInfo>
   nameWithType: IRaisable<AttributeChangeInfo>
-  fullName: ElectricDrill.SoapRpgFramework.Events.IRaisable<SoapRpgFramework.Attributes.AttributeChangeInfo>
+  fullName: ElectricDrill.SoapRpgFramework.Events.IRaisable<ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo>
   nameWithType.vb: IRaisable(Of AttributeChangeInfo)
-  fullName.vb: ElectricDrill.SoapRpgFramework.Events.IRaisable(Of SoapRpgFramework.Attributes.AttributeChangeInfo)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Events.IRaisable(Of ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo)
   name.vb: IRaisable(Of AttributeChangeInfo)
   spec.csharp:
   - uid: ElectricDrill.SoapRpgFramework.Events.IRaisable`1
     name: IRaisable
     href: ElectricDrill.SoapRpgFramework.Events.IRaisable-1.html
   - name: <
-  - uid: SoapRpgFramework.Attributes.AttributeChangeInfo
+  - uid: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo
     name: AttributeChangeInfo
-    href: SoapRpgFramework.Attributes.AttributeChangeInfo.html
+    href: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo.html
   - name: '>'
   spec.vb:
   - uid: ElectricDrill.SoapRpgFramework.Events.IRaisable`1
@@ -173,61 +173,61 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: SoapRpgFramework.Attributes.AttributeChangeInfo
+  - uid: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo
     name: AttributeChangeInfo
-    href: SoapRpgFramework.Attributes.AttributeChangeInfo.html
+    href: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo.html
   - name: )
-- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.OnEventRaised
-  commentId: E:ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.OnEventRaised
-  parent: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.OnEventRaised
+  commentId: E:ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.OnEventRaised
+  parent: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}
   definition: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1`1.OnEventRaised
   href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html#ElectricDrill_SoapRpgFramework_Events_GameEventGeneric1_1_OnEventRaised
   name: OnEventRaised
   nameWithType: GameEventGeneric1<AttributeChangeInfo>.OnEventRaised
-  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1<SoapRpgFramework.Attributes.AttributeChangeInfo>.OnEventRaised
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1<ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo>.OnEventRaised
   nameWithType.vb: GameEventGeneric1(Of AttributeChangeInfo).OnEventRaised
-  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1(Of SoapRpgFramework.Attributes.AttributeChangeInfo).OnEventRaised
-- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.Raise(SoapRpgFramework.Attributes.AttributeChangeInfo)
-  commentId: M:ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.Raise(SoapRpgFramework.Attributes.AttributeChangeInfo)
-  parent: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}
+  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1(Of ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo).OnEventRaised
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.Raise(ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo)
+  commentId: M:ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.Raise(ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo)
+  parent: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}
   definition: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1`1.Raise(`0)
   href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html#ElectricDrill_SoapRpgFramework_Events_GameEventGeneric1_1_Raise__0_
   name: Raise(AttributeChangeInfo)
   nameWithType: GameEventGeneric1<AttributeChangeInfo>.Raise(AttributeChangeInfo)
-  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1<SoapRpgFramework.Attributes.AttributeChangeInfo>.Raise(SoapRpgFramework.Attributes.AttributeChangeInfo)
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1<ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo>.Raise(ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo)
   nameWithType.vb: GameEventGeneric1(Of AttributeChangeInfo).Raise(AttributeChangeInfo)
-  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1(Of SoapRpgFramework.Attributes.AttributeChangeInfo).Raise(SoapRpgFramework.Attributes.AttributeChangeInfo)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1(Of ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo).Raise(ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo)
   spec.csharp:
-  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.Raise(SoapRpgFramework.Attributes.AttributeChangeInfo)
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.Raise(ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo)
     name: Raise
     href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html#ElectricDrill_SoapRpgFramework_Events_GameEventGeneric1_1_Raise__0_
   - name: (
-  - uid: SoapRpgFramework.Attributes.AttributeChangeInfo
+  - uid: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo
     name: AttributeChangeInfo
-    href: SoapRpgFramework.Attributes.AttributeChangeInfo.html
+    href: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo.html
   - name: )
   spec.vb:
-  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.Raise(SoapRpgFramework.Attributes.AttributeChangeInfo)
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.Raise(ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo)
     name: Raise
     href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html#ElectricDrill_SoapRpgFramework_Events_GameEventGeneric1_1_Raise__0_
   - name: (
-  - uid: SoapRpgFramework.Attributes.AttributeChangeInfo
+  - uid: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo
     name: AttributeChangeInfo
-    href: SoapRpgFramework.Attributes.AttributeChangeInfo.html
+    href: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo.html
   - name: )
-- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.RegisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo})
-  commentId: M:ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.RegisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo})
-  parent: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.RegisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo})
+  commentId: M:ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.RegisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo})
+  parent: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}
   definition: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1`1.RegisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{`0})
   href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html#ElectricDrill_SoapRpgFramework_Events_GameEventGeneric1_1_RegisterListener_ElectricDrill_SoapRpgFramework_Events_GameEventListenerGeneric1__0__
   name: RegisterListener(GameEventListenerGeneric1<AttributeChangeInfo>)
   nameWithType: GameEventGeneric1<AttributeChangeInfo>.RegisterListener(GameEventListenerGeneric1<AttributeChangeInfo>)
-  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1<SoapRpgFramework.Attributes.AttributeChangeInfo>.RegisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1<SoapRpgFramework.Attributes.AttributeChangeInfo>)
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1<ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo>.RegisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1<ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo>)
   nameWithType.vb: GameEventGeneric1(Of AttributeChangeInfo).RegisterListener(GameEventListenerGeneric1(Of AttributeChangeInfo))
-  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1(Of SoapRpgFramework.Attributes.AttributeChangeInfo).RegisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1(Of SoapRpgFramework.Attributes.AttributeChangeInfo))
+  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1(Of ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo).RegisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1(Of ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo))
   name.vb: RegisterListener(GameEventListenerGeneric1(Of AttributeChangeInfo))
   spec.csharp:
-  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.RegisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo})
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.RegisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo})
     name: RegisterListener
     href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html#ElectricDrill_SoapRpgFramework_Events_GameEventGeneric1_1_RegisterListener_ElectricDrill_SoapRpgFramework_Events_GameEventListenerGeneric1__0__
   - name: (
@@ -235,13 +235,13 @@ references:
     name: GameEventListenerGeneric1
     href: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1-1.html
   - name: <
-  - uid: SoapRpgFramework.Attributes.AttributeChangeInfo
+  - uid: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo
     name: AttributeChangeInfo
-    href: SoapRpgFramework.Attributes.AttributeChangeInfo.html
+    href: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo.html
   - name: '>'
   - name: )
   spec.vb:
-  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.RegisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo})
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.RegisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo})
     name: RegisterListener
     href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html#ElectricDrill_SoapRpgFramework_Events_GameEventGeneric1_1_RegisterListener_ElectricDrill_SoapRpgFramework_Events_GameEventListenerGeneric1__0__
   - name: (
@@ -251,24 +251,24 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: SoapRpgFramework.Attributes.AttributeChangeInfo
+  - uid: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo
     name: AttributeChangeInfo
-    href: SoapRpgFramework.Attributes.AttributeChangeInfo.html
+    href: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo.html
   - name: )
   - name: )
-- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.UnregisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo})
-  commentId: M:ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.UnregisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo})
-  parent: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.UnregisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo})
+  commentId: M:ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.UnregisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo})
+  parent: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}
   definition: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1`1.UnregisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{`0})
   href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html#ElectricDrill_SoapRpgFramework_Events_GameEventGeneric1_1_UnregisterListener_ElectricDrill_SoapRpgFramework_Events_GameEventListenerGeneric1__0__
   name: UnregisterListener(GameEventListenerGeneric1<AttributeChangeInfo>)
   nameWithType: GameEventGeneric1<AttributeChangeInfo>.UnregisterListener(GameEventListenerGeneric1<AttributeChangeInfo>)
-  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1<SoapRpgFramework.Attributes.AttributeChangeInfo>.UnregisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1<SoapRpgFramework.Attributes.AttributeChangeInfo>)
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1<ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo>.UnregisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1<ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo>)
   nameWithType.vb: GameEventGeneric1(Of AttributeChangeInfo).UnregisterListener(GameEventListenerGeneric1(Of AttributeChangeInfo))
-  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1(Of SoapRpgFramework.Attributes.AttributeChangeInfo).UnregisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1(Of SoapRpgFramework.Attributes.AttributeChangeInfo))
+  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1(Of ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo).UnregisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1(Of ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo))
   name.vb: UnregisterListener(GameEventListenerGeneric1(Of AttributeChangeInfo))
   spec.csharp:
-  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.UnregisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo})
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.UnregisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo})
     name: UnregisterListener
     href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html#ElectricDrill_SoapRpgFramework_Events_GameEventGeneric1_1_UnregisterListener_ElectricDrill_SoapRpgFramework_Events_GameEventListenerGeneric1__0__
   - name: (
@@ -276,13 +276,13 @@ references:
     name: GameEventListenerGeneric1
     href: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1-1.html
   - name: <
-  - uid: SoapRpgFramework.Attributes.AttributeChangeInfo
+  - uid: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo
     name: AttributeChangeInfo
-    href: SoapRpgFramework.Attributes.AttributeChangeInfo.html
+    href: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo.html
   - name: '>'
   - name: )
   spec.vb:
-  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo}.UnregisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{SoapRpgFramework.Attributes.AttributeChangeInfo})
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo}.UnregisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo})
     name: UnregisterListener
     href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html#ElectricDrill_SoapRpgFramework_Events_GameEventGeneric1_1_UnregisterListener_ElectricDrill_SoapRpgFramework_Events_GameEventListenerGeneric1__0__
   - name: (
@@ -292,9 +292,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: SoapRpgFramework.Attributes.AttributeChangeInfo
+  - uid: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo
     name: AttributeChangeInfo
-    href: SoapRpgFramework.Attributes.AttributeChangeInfo.html
+    href: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo.html
   - name: )
   - name: )
 - uid: System

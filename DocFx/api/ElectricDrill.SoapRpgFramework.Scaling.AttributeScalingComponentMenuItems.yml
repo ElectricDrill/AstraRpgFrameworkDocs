@@ -1,0 +1,131 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems
+  commentId: T:ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems
+  id: AttributeScalingComponentMenuItems
+  parent: ElectricDrill.SoapRpgFramework.Scaling
+  children:
+  - ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.CreateAttributeScalingComponent
+  langs:
+  - csharp
+  - vb
+  name: AttributeScalingComponentMenuItems
+  nameWithType: AttributeScalingComponentMenuItems
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems
+  type: Class
+  source:
+    remote:
+      path: Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: AttributeScalingComponentMenuItems
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+    startLine: 56
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Scaling
+  summary: Provides a menu item in the Unity Editor to create an AttributesScalingComponent asset.
+  example: []
+  syntax:
+    content: public static class AttributeScalingComponentMenuItems
+    content.vb: Public Module AttributeScalingComponentMenuItems
+  inheritance:
+  - System.Object
+- uid: ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.CreateAttributeScalingComponent
+  commentId: M:ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.CreateAttributeScalingComponent
+  id: CreateAttributeScalingComponent
+  parent: ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems
+  langs:
+  - csharp
+  - vb
+  name: CreateAttributeScalingComponent()
+  nameWithType: AttributeScalingComponentMenuItems.CreateAttributeScalingComponent()
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.CreateAttributeScalingComponent()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: CreateAttributeScalingComponent
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+    startLine: 61
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Scaling
+  summary: Creates a new AttributesScalingComponent asset.
+  example: []
+  syntax:
+    content: >-
+      [MenuItem("Assets/Create/Soap RPG Framework/Scaling/Attribute Scaling Component", false, 1)]
+
+      public static void CreateAttributeScalingComponent()
+    content.vb: >-
+      <MenuItem("Assets/Create/Soap RPG Framework/Scaling/Attribute Scaling Component", False, 1)>
+
+      Public Shared Sub CreateAttributeScalingComponent()
+  overload: ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.CreateAttributeScalingComponent*
+  attributes:
+  - type: UnityEditor.MenuItem
+    ctor: UnityEditor.MenuItem.#ctor(System.String,System.Boolean,System.Int32)
+    arguments:
+    - type: System.String
+      value: Assets/Create/Soap RPG Framework/Scaling/Attribute Scaling Component
+    - type: System.Boolean
+      value: false
+    - type: System.Int32
+      value: 1
+references:
+- uid: ElectricDrill.SoapRpgFramework.Scaling
+  commentId: N:ElectricDrill.SoapRpgFramework.Scaling
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Scaling
+  nameWithType: ElectricDrill.SoapRpgFramework.Scaling
+  fullName: ElectricDrill.SoapRpgFramework.Scaling
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Scaling
+    name: Scaling
+    href: ElectricDrill.SoapRpgFramework.Scaling.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Scaling
+    name: Scaling
+    href: ElectricDrill.SoapRpgFramework.Scaling.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.CreateAttributeScalingComponent*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.CreateAttributeScalingComponent
+  href: ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.html#ElectricDrill_SoapRpgFramework_Scaling_AttributeScalingComponentMenuItems_CreateAttributeScalingComponent
+  name: CreateAttributeScalingComponent
+  nameWithType: AttributeScalingComponentMenuItems.CreateAttributeScalingComponent
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.CreateAttributeScalingComponent

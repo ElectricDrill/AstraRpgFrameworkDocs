@@ -1,0 +1,123 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.ClassMenuItems
+  commentId: T:ElectricDrill.SoapRpgFramework.ClassMenuItems
+  id: ClassMenuItems
+  parent: ElectricDrill.SoapRpgFramework
+  children:
+  - ElectricDrill.SoapRpgFramework.ClassMenuItems.CreateClass
+  langs:
+  - csharp
+  - vb
+  name: ClassMenuItems
+  nameWithType: ClassMenuItems
+  fullName: ElectricDrill.SoapRpgFramework.ClassMenuItems
+  type: Class
+  source:
+    remote:
+      path: Runtime/Class.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: ClassMenuItems
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Class.cs
+    startLine: 139
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework
+  summary: Provides a menu item in the Unity Editor to create a Class asset.
+  example: []
+  syntax:
+    content: public static class ClassMenuItems
+    content.vb: Public Module ClassMenuItems
+  inheritance:
+  - System.Object
+- uid: ElectricDrill.SoapRpgFramework.ClassMenuItems.CreateClass
+  commentId: M:ElectricDrill.SoapRpgFramework.ClassMenuItems.CreateClass
+  id: CreateClass
+  parent: ElectricDrill.SoapRpgFramework.ClassMenuItems
+  langs:
+  - csharp
+  - vb
+  name: CreateClass()
+  nameWithType: ClassMenuItems.CreateClass()
+  fullName: ElectricDrill.SoapRpgFramework.ClassMenuItems.CreateClass()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Class.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: CreateClass
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Class.cs
+    startLine: 144
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework
+  summary: Creates a new Class asset.
+  example: []
+  syntax:
+    content: >-
+      [MenuItem("Assets/Create/Soap RPG Framework/Class", false, 5)]
+
+      public static void CreateClass()
+    content.vb: >-
+      <MenuItem("Assets/Create/Soap RPG Framework/Class", False, 5)>
+
+      Public Shared Sub CreateClass()
+  overload: ElectricDrill.SoapRpgFramework.ClassMenuItems.CreateClass*
+  attributes:
+  - type: UnityEditor.MenuItem
+    ctor: UnityEditor.MenuItem.#ctor(System.String,System.Boolean,System.Int32)
+    arguments:
+    - type: System.String
+      value: Assets/Create/Soap RPG Framework/Class
+    - type: System.Boolean
+      value: false
+    - type: System.Int32
+      value: 5
+references:
+- uid: ElectricDrill.SoapRpgFramework
+  commentId: N:ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework
+  nameWithType: ElectricDrill.SoapRpgFramework
+  fullName: ElectricDrill.SoapRpgFramework
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ElectricDrill.SoapRpgFramework.ClassMenuItems.CreateClass*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.ClassMenuItems.CreateClass
+  href: ElectricDrill.SoapRpgFramework.ClassMenuItems.html#ElectricDrill_SoapRpgFramework_ClassMenuItems_CreateClass
+  name: CreateClass
+  nameWithType: ClassMenuItems.CreateClass
+  fullName: ElectricDrill.SoapRpgFramework.ClassMenuItems.CreateClass

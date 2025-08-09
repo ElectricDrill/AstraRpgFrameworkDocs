@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class EntityAttributes | Soap RPG Framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class EntityAttributes | Soap RPG Framework ">
+      
+      <meta name="description" content="Manages the attributes of an entity. This component calculates attribute values by combining base values, flat modifiers, percentage modifiers, and spent attribute points. It requires an  component on the same GameObject.">
+      <link rel="icon" href="../images/favico.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Cis8/SoapRpgFramework/new/main/apiSpec/new?filename=ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes.md&amp;value=---%0Auid%3A%20ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/soap-rpg-framework-logo.png" alt="Soap RPG Framework">
+            Soap RPG Framework
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes">
+
+
+
+  <h1 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes" class="text-break">
+Class EntityAttributes  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ElectricDrill.html">ElectricDrill</a>.<a class="xref" href="ElectricDrill.SoapRpgFramework.html">SoapRpgFramework</a>.<a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.html">Attributes</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>com.electricdrill.soap-rpg-framework.Runtime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Manages the attributes of an entity.
+This component calculates attribute values by combining base values, flat modifiers, percentage modifiers, and spent attribute points.
+It requires an <span class="xref">ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.EntityCore</span> component on the same GameObject.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DisallowMultipleComponent]
+[RequireComponent(typeof(EntityCore))]
+public class EntityAttributes : MonoBehaviour</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Component.html">Component</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Behaviour.html">Behaviour</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a></div>
+      <div><span class="xref">EntityAttributes</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AttributeSet_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributeSet*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AttributeSet" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributeSet">
+  AttributeSet
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AttributeSet">AttributeSet</a> used by this entity.
+The source of the attribute set depends on whether <span class="xref">ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.useClassBaseAttributes</span> is true.
+If true, it returns the attribute set from the <a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_EntityClass">EntityClass</a>.
+Otherwise, it returns the <span class="xref">ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.fixedBaseAttributeSet</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AttributeSet AttributeSet { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.AttributeSet.html">AttributeSet</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AttributesCache_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AttributesCache" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache">
+  AttributesCache
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides access to the cache for calculated attribute values.
+Caching can be enabled or disabled with the <span class="xref">ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.useCache</span> flag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Cache&lt;Attribute, long&gt; AttributesCache { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Utils.Cache-2.html">Cache</a>&lt;<a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.Attribute.html">Attribute</a>, <span class="xref">long</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_EntityClass_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.EntityClass*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_EntityClass" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.EntityClass">
+  EntityClass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the class for this entity.
+The class is used to determine base attributes when <span class="xref">ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.useClassBaseAttributes</span> is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IClassSource EntityClass { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.IClassSource.html">IClassSource</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_FlatModifiers_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.FlatModifiers*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_FlatModifiers" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.FlatModifiers">
+  FlatModifiers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the instance of flat modifiers for the attributes.
+Flat modifiers are added directly to the base attribute values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual AttributeSetInstance FlatModifiers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.AttributeSetInstance.html">AttributeSetInstance</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_OnAttributeChanged_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.OnAttributeChanged*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_OnAttributeChanged" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.OnAttributeChanged">
+  OnAttributeChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AttributeChangedGameEvent OnAttributeChanged { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Events.AttributeChangedGameEvent.html">AttributeChangedGameEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_PercentageModifiers_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.PercentageModifiers*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_PercentageModifiers" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.PercentageModifiers">
+  PercentageModifiers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the instance of percentage modifiers for the attributes.
+Percentage modifiers are applied after flat modifiers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual AttributeSetInstance PercentageModifiers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.AttributeSetInstance.html">AttributeSetInstance</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AddFlatModifier_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AddFlatModifier*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AddFlatModifier_ElectricDrill_SoapRpgFramework_Attributes_Attribute_System_Int64_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AddFlatModifier(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int64)">
+  AddFlatModifier(Attribute, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a flat modifier to an attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddFlatModifier(Attribute attribute, long value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attribute</code> <a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.Attribute.html">Attribute</a></dt>
+    <dd><p>The attribute to modify.</p>
+</dd>
+    <dt><code>value</code> <span class="xref">long</span></dt>
+    <dd><p>The flat value to add.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AddPercentageModifier_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AddPercentageModifier*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AddPercentageModifier_ElectricDrill_SoapRpgFramework_Attributes_Attribute_ElectricDrill_SoapRpgFramework_Utils_Percentage_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AddPercentageModifier(ElectricDrill.SoapRpgFramework.Attributes.Attribute,ElectricDrill.SoapRpgFramework.Utils.Percentage)">
+  AddPercentageModifier(Attribute, Percentage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a percentage modifier to an attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddPercentageModifier(Attribute attribute, Percentage value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attribute</code> <a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.Attribute.html">Attribute</a></dt>
+    <dd><p>The attribute to modify.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="ElectricDrill.SoapRpgFramework.Utils.Percentage.html">Percentage</a></dt>
+    <dd><p>The percentage value to add.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_Get_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.Get*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_Get_ElectricDrill_SoapRpgFramework_Attributes_Attribute_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.Get(ElectricDrill.SoapRpgFramework.Attributes.Attribute)">
+  Get(Attribute)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the final calculated value of a specific attribute.
+The final value includes base value, flat and percentage modifiers, and spent attribute points.
+The result is clamped to the attribute's min/max values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long Get(Attribute attribute)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attribute</code> <a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.Attribute.html">Attribute</a></dt>
+    <dd><p>The attribute to retrieve.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">long</span></dt>
+    <dd><p>The final value of the attribute.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_GetBase_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetBase*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_GetBase_ElectricDrill_SoapRpgFramework_Attributes_Attribute_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetBase(ElectricDrill.SoapRpgFramework.Attributes.Attribute)">
+  GetBase(Attribute)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the base value of an attribute at the entity's current level.
+Base attributes don't consider flat or percentage modifiers, nor spent attribute points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long GetBase(Attribute attribute)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attribute</code> <a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.Attribute.html">Attribute</a></dt>
+    <dd><p>The attribute to retrieve the base value for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">long</span></dt>
+    <dd><p>The base value of the attribute, clamped to its min/max values if necessary.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_SpendOn_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_SpendOn_ElectricDrill_SoapRpgFramework_Attributes_Attribute_System_Int32_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int32)">
+  SpendOn(Attribute, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Spends a certain amount of attribute points on a specific attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SpendOn(Attribute attribute, int amount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attribute</code> <a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.Attribute.html">Attribute</a></dt>
+    <dd><p>The attribute to increase.</p>
+</dd>
+    <dt><code>amount</code> <span class="xref">int</span></dt>
+    <dd><p>The number of points to spend.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

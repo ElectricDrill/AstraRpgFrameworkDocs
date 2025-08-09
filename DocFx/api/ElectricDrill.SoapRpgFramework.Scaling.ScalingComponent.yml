@@ -1,0 +1,188 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent
+  commentId: T:ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent
+  id: ScalingComponent
+  parent: ElectricDrill.SoapRpgFramework.Scaling
+  children:
+  - ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent.CalculateValue(ElectricDrill.SoapRpgFramework.EntityCore)
+  langs:
+  - csharp
+  - vb
+  name: ScalingComponent
+  nameWithType: ScalingComponent
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent
+  type: Class
+  source:
+    remote:
+      path: Runtime/Scaling/ScalingComponent.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: ScalingComponent
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponent.cs
+    startLine: 7
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Scaling
+  summary: >-
+    Abstract base class for all scaling components.
+
+    A scaling component calculates a value based on an entity's properties.
+  example: []
+  syntax:
+    content: 'public abstract class ScalingComponent : ScriptableObject'
+    content.vb: Public MustInherit Class ScalingComponent Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  derivedClasses:
+  - ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2
+- uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent.CalculateValue(ElectricDrill.SoapRpgFramework.EntityCore)
+  commentId: M:ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent.CalculateValue(ElectricDrill.SoapRpgFramework.EntityCore)
+  id: CalculateValue(ElectricDrill.SoapRpgFramework.EntityCore)
+  parent: ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent
+  langs:
+  - csharp
+  - vb
+  name: CalculateValue(EntityCore)
+  nameWithType: ScalingComponent.CalculateValue(EntityCore)
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent.CalculateValue(ElectricDrill.SoapRpgFramework.EntityCore)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Scaling/ScalingComponent.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: CalculateValue
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponent.cs
+    startLine: 14
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Scaling
+  summary: Calculates the value of this component based on the provided entity.
+  example: []
+  syntax:
+    content: public abstract long CalculateValue(EntityCore entity)
+    parameters:
+    - id: entity
+      type: ElectricDrill.SoapRpgFramework.EntityCore
+      description: The entity whose properties are used for calculation.
+    return:
+      type: System.Int64
+      description: The calculated value from this component.
+    content.vb: Public MustOverride Function CalculateValue(entity As EntityCore) As Long
+  overload: ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent.CalculateValue*
+references:
+- uid: ElectricDrill.SoapRpgFramework.Scaling
+  commentId: N:ElectricDrill.SoapRpgFramework.Scaling
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Scaling
+  nameWithType: ElectricDrill.SoapRpgFramework.Scaling
+  fullName: ElectricDrill.SoapRpgFramework.Scaling
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Scaling
+    name: Scaling
+    href: ElectricDrill.SoapRpgFramework.Scaling.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Scaling
+    name: Scaling
+    href: ElectricDrill.SoapRpgFramework.Scaling.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent.CalculateValue*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent.CalculateValue
+  href: ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent.html#ElectricDrill_SoapRpgFramework_Scaling_ScalingComponent_CalculateValue_ElectricDrill_SoapRpgFramework_EntityCore_
+  name: CalculateValue
+  nameWithType: ScalingComponent.CalculateValue
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent.CalculateValue
+- uid: ElectricDrill.SoapRpgFramework.EntityCore
+  commentId: T:ElectricDrill.SoapRpgFramework.EntityCore
+  parent: ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.SoapRpgFramework.EntityCore.html
+  name: EntityCore
+  nameWithType: EntityCore
+  fullName: ElectricDrill.SoapRpgFramework.EntityCore
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: ElectricDrill.SoapRpgFramework
+  commentId: N:ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework
+  nameWithType: ElectricDrill.SoapRpgFramework
+  fullName: ElectricDrill.SoapRpgFramework
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html

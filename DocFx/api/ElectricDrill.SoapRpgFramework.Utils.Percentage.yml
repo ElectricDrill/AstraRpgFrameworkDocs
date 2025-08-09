@@ -1,0 +1,600 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage
+  commentId: T:ElectricDrill.SoapRpgFramework.Utils.Percentage
+  id: Percentage
+  parent: ElectricDrill.SoapRpgFramework.Utils
+  children:
+  - ElectricDrill.SoapRpgFramework.Utils.Percentage.#ctor(System.Int64)
+  - ElectricDrill.SoapRpgFramework.Utils.Percentage.CompareTo(ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  - ElectricDrill.SoapRpgFramework.Utils.Percentage.ToString
+  - ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Addition(ElectricDrill.SoapRpgFramework.Utils.Percentage,ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  - ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Explicit(ElectricDrill.SoapRpgFramework.Utils.Percentage)~System.Int64
+  - ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Implicit(ElectricDrill.SoapRpgFramework.Utils.Percentage)~System.Double
+  - ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Implicit(System.Int64)~ElectricDrill.SoapRpgFramework.Utils.Percentage
+  - ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Subtraction(ElectricDrill.SoapRpgFramework.Utils.Percentage,ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  - ElectricDrill.SoapRpgFramework.Utils.Percentage.op_UnaryNegation(ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  langs:
+  - csharp
+  - vb
+  name: Percentage
+  nameWithType: Percentage
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage
+  type: Class
+  source:
+    remote:
+      path: Runtime/Utils/Percentage.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Percentage
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    startLine: 10
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: >-
+    The Percentage class represents a percentage value and provides various operators and conversions.<br />
+
+    Implicit long to Percentage value conversion is available. To express a 100% value, use 100L.<br />
+
+    Implicit Percentage to double conversion is available. When doing so, the percentage is automatically
+
+    divided by 100.<br />
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class Percentage
+    content.vb: >-
+      <Serializable>
+
+      Public Class Percentage
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.#ctor(System.Int64)
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.Percentage.#ctor(System.Int64)
+  id: '#ctor(System.Int64)'
+  parent: ElectricDrill.SoapRpgFramework.Utils.Percentage
+  langs:
+  - csharp
+  - vb
+  name: Percentage(long)
+  nameWithType: Percentage.Percentage(long)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage.Percentage(long)
+  type: Constructor
+  source:
+    remote:
+      path: Runtime/Utils/Percentage.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: .ctor
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    startLine: 23
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: >-
+    Initializes a new instance of the Percentage class with the specified value.
+
+    To express a 100% value, use 100L.
+  example: []
+  syntax:
+    content: public Percentage(long value)
+    parameters:
+    - id: value
+      type: System.Int64
+      description: The value of the percentage.
+    content.vb: Public Sub New(value As Long)
+  overload: ElectricDrill.SoapRpgFramework.Utils.Percentage.#ctor*
+  nameWithType.vb: Percentage.New(Long)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Percentage.New(Long)
+  name.vb: New(Long)
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Implicit(ElectricDrill.SoapRpgFramework.Utils.Percentage)~System.Double
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Implicit(ElectricDrill.SoapRpgFramework.Utils.Percentage)~System.Double
+  id: op_Implicit(ElectricDrill.SoapRpgFramework.Utils.Percentage)~System.Double
+  parent: ElectricDrill.SoapRpgFramework.Utils.Percentage
+  langs:
+  - csharp
+  - vb
+  name: implicit operator double(Percentage)
+  nameWithType: Percentage.implicit operator double(Percentage)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage.implicit operator double(ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  type: Operator
+  source:
+    remote:
+      path: Runtime/Utils/Percentage.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: op_Implicit
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    startLine: 31
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: Implicit conversion from Percentage to double. The conversion automatically divides the value by 100.
+  example: []
+  syntax:
+    content: public static implicit operator double(Percentage percentage)
+    parameters:
+    - id: percentage
+      type: ElectricDrill.SoapRpgFramework.Utils.Percentage
+      description: The percentage to convert.
+    return:
+      type: System.Double
+    content.vb: Public Shared Widening Operator CType(percentage As Percentage) As Double
+  overload: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Implicit*
+  nameWithType.vb: Percentage.CType(Percentage)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Percentage.CType(ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  name.vb: CType(Percentage)
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Implicit(System.Int64)~ElectricDrill.SoapRpgFramework.Utils.Percentage
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Implicit(System.Int64)~ElectricDrill.SoapRpgFramework.Utils.Percentage
+  id: op_Implicit(System.Int64)~ElectricDrill.SoapRpgFramework.Utils.Percentage
+  parent: ElectricDrill.SoapRpgFramework.Utils.Percentage
+  langs:
+  - csharp
+  - vb
+  name: implicit operator Percentage(long)
+  nameWithType: Percentage.implicit operator Percentage(long)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage.implicit operator ElectricDrill.SoapRpgFramework.Utils.Percentage(long)
+  type: Operator
+  source:
+    remote:
+      path: Runtime/Utils/Percentage.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: op_Implicit
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    startLine: 39
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: Implicit conversion from long to Percentage. To express a 100% value, use 100L.
+  example: []
+  syntax:
+    content: public static implicit operator Percentage(long value)
+    parameters:
+    - id: value
+      type: System.Int64
+      description: The value to convert.
+    return:
+      type: ElectricDrill.SoapRpgFramework.Utils.Percentage
+    content.vb: Public Shared Widening Operator CType(value As Long) As Percentage
+  overload: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Implicit*
+  nameWithType.vb: Percentage.CType(Long)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Percentage.CType(Long)
+  name.vb: CType(Long)
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Explicit(ElectricDrill.SoapRpgFramework.Utils.Percentage)~System.Int64
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Explicit(ElectricDrill.SoapRpgFramework.Utils.Percentage)~System.Int64
+  id: op_Explicit(ElectricDrill.SoapRpgFramework.Utils.Percentage)~System.Int64
+  parent: ElectricDrill.SoapRpgFramework.Utils.Percentage
+  langs:
+  - csharp
+  - vb
+  name: explicit operator long(Percentage)
+  nameWithType: Percentage.explicit operator long(Percentage)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage.explicit operator long(ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  type: Operator
+  source:
+    remote:
+      path: Runtime/Utils/Percentage.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: op_Explicit
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    startLine: 47
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: Explicit conversion from Percentage to long. The conversion does not divide the value by 100.
+  example: []
+  syntax:
+    content: public static explicit operator long(Percentage percentage)
+    parameters:
+    - id: percentage
+      type: ElectricDrill.SoapRpgFramework.Utils.Percentage
+      description: The percentage to convert.
+    return:
+      type: System.Int64
+    content.vb: Public Shared Narrowing Operator CType(percentage As Percentage) As Long
+  overload: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Explicit*
+  nameWithType.vb: Percentage.CType(Percentage)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Percentage.CType(ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  name.vb: CType(Percentage)
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Addition(ElectricDrill.SoapRpgFramework.Utils.Percentage,ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Addition(ElectricDrill.SoapRpgFramework.Utils.Percentage,ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  id: op_Addition(ElectricDrill.SoapRpgFramework.Utils.Percentage,ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  parent: ElectricDrill.SoapRpgFramework.Utils.Percentage
+  langs:
+  - csharp
+  - vb
+  name: operator +(Percentage, Percentage)
+  nameWithType: Percentage.operator +(Percentage, Percentage)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage.operator +(ElectricDrill.SoapRpgFramework.Utils.Percentage, ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  type: Operator
+  source:
+    remote:
+      path: Runtime/Utils/Percentage.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: op_Addition
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    startLine: 57
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: Overrides the + operator to add two Percentage instances.
+  example: []
+  syntax:
+    content: public static Percentage operator +(Percentage a, Percentage b)
+    parameters:
+    - id: a
+      type: ElectricDrill.SoapRpgFramework.Utils.Percentage
+      description: The first percentage.
+    - id: b
+      type: ElectricDrill.SoapRpgFramework.Utils.Percentage
+      description: The second percentage.
+    return:
+      type: ElectricDrill.SoapRpgFramework.Utils.Percentage
+      description: A new Percentage instance representing the sum.
+    content.vb: Public Shared Operator +(a As Percentage, b As Percentage) As Percentage
+  overload: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Addition*
+  nameWithType.vb: Percentage.+(Percentage, Percentage)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Percentage.+(ElectricDrill.SoapRpgFramework.Utils.Percentage, ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  name.vb: +(Percentage, Percentage)
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Subtraction(ElectricDrill.SoapRpgFramework.Utils.Percentage,ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Subtraction(ElectricDrill.SoapRpgFramework.Utils.Percentage,ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  id: op_Subtraction(ElectricDrill.SoapRpgFramework.Utils.Percentage,ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  parent: ElectricDrill.SoapRpgFramework.Utils.Percentage
+  langs:
+  - csharp
+  - vb
+  name: operator -(Percentage, Percentage)
+  nameWithType: Percentage.operator -(Percentage, Percentage)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage.operator -(ElectricDrill.SoapRpgFramework.Utils.Percentage, ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  type: Operator
+  source:
+    remote:
+      path: Runtime/Utils/Percentage.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: op_Subtraction
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    startLine: 67
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: Overrides the - operator to subtract one Percentage from another.
+  example: []
+  syntax:
+    content: public static Percentage operator -(Percentage a, Percentage b)
+    parameters:
+    - id: a
+      type: ElectricDrill.SoapRpgFramework.Utils.Percentage
+      description: The first percentage.
+    - id: b
+      type: ElectricDrill.SoapRpgFramework.Utils.Percentage
+      description: The second percentage.
+    return:
+      type: ElectricDrill.SoapRpgFramework.Utils.Percentage
+      description: A new Percentage instance representing the difference.
+    content.vb: Public Shared Operator -(a As Percentage, b As Percentage) As Percentage
+  overload: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Subtraction*
+  nameWithType.vb: Percentage.-(Percentage, Percentage)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Percentage.-(ElectricDrill.SoapRpgFramework.Utils.Percentage, ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  name.vb: -(Percentage, Percentage)
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_UnaryNegation(ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.Percentage.op_UnaryNegation(ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  id: op_UnaryNegation(ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  parent: ElectricDrill.SoapRpgFramework.Utils.Percentage
+  langs:
+  - csharp
+  - vb
+  name: operator -(Percentage)
+  nameWithType: Percentage.operator -(Percentage)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage.operator -(ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  type: Operator
+  source:
+    remote:
+      path: Runtime/Utils/Percentage.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: op_UnaryNegation
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    startLine: 76
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: Overrides the unary - operator to negate a Percentage.
+  example: []
+  syntax:
+    content: public static Percentage operator -(Percentage a)
+    parameters:
+    - id: a
+      type: ElectricDrill.SoapRpgFramework.Utils.Percentage
+      description: The percentage to negate.
+    return:
+      type: ElectricDrill.SoapRpgFramework.Utils.Percentage
+      description: A new Percentage instance representing the negated value.
+    content.vb: Public Shared Operator -(a As Percentage) As Percentage
+  overload: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_UnaryNegation*
+  nameWithType.vb: Percentage.-(Percentage)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Percentage.-(ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  name.vb: -(Percentage)
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.CompareTo(ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.Percentage.CompareTo(ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  id: CompareTo(ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  parent: ElectricDrill.SoapRpgFramework.Utils.Percentage
+  langs:
+  - csharp
+  - vb
+  name: CompareTo(Percentage)
+  nameWithType: Percentage.CompareTo(Percentage)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage.CompareTo(ElectricDrill.SoapRpgFramework.Utils.Percentage)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Utils/Percentage.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: CompareTo
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    startLine: 85
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: Compares the current Percentage instance with another Percentage instance.
+  example: []
+  syntax:
+    content: public int CompareTo(Percentage other)
+    parameters:
+    - id: other
+      type: ElectricDrill.SoapRpgFramework.Utils.Percentage
+      description: The other percentage to compare to.
+    return:
+      type: System.Int32
+      description: An integer indicating the relative order of the percentages.
+    content.vb: Public Function CompareTo(other As Percentage) As Integer
+  overload: ElectricDrill.SoapRpgFramework.Utils.Percentage.CompareTo*
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.ToString
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.Percentage.ToString
+  id: ToString
+  parent: ElectricDrill.SoapRpgFramework.Utils.Percentage
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Percentage.ToString()
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage.ToString()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Utils/Percentage.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: ToString
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    startLine: 95
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: Returns a string representation of the percentage value.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string representing the percentage value.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: ElectricDrill.SoapRpgFramework.Utils.Percentage.ToString*
+references:
+- uid: ElectricDrill.SoapRpgFramework.Utils
+  commentId: N:ElectricDrill.SoapRpgFramework.Utils
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Utils
+  nameWithType: ElectricDrill.SoapRpgFramework.Utils
+  fullName: ElectricDrill.SoapRpgFramework.Utils
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Utils
+    name: Utils
+    href: ElectricDrill.SoapRpgFramework.Utils.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Utils
+    name: Utils
+    href: ElectricDrill.SoapRpgFramework.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.#ctor*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.Percentage.#ctor
+  href: ElectricDrill.SoapRpgFramework.Utils.Percentage.html#ElectricDrill_SoapRpgFramework_Utils_Percentage__ctor_System_Int64_
+  name: Percentage
+  nameWithType: Percentage.Percentage
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage.Percentage
+  nameWithType.vb: Percentage.New
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Percentage.New
+  name.vb: New
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Implicit*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Implicit
+  name: implicit operator
+  nameWithType: Percentage.implicit operator
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage.implicit operator
+  nameWithType.vb: Percentage.CType
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Percentage.CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage
+  commentId: T:ElectricDrill.SoapRpgFramework.Utils.Percentage
+  parent: ElectricDrill.SoapRpgFramework.Utils
+  href: ElectricDrill.SoapRpgFramework.Utils.Percentage.html
+  name: Percentage
+  nameWithType: Percentage
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Explicit*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Explicit
+  name: explicit operator
+  nameWithType: Percentage.explicit operator
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage.explicit operator
+  nameWithType.vb: Percentage.CType
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Percentage.CType
+  name.vb: CType
+  spec.csharp:
+  - name: explicit
+  - name: " "
+  - name: operator
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Addition*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Addition
+  href: ElectricDrill.SoapRpgFramework.Utils.Percentage.html#ElectricDrill_SoapRpgFramework_Utils_Percentage_op_Addition_ElectricDrill_SoapRpgFramework_Utils_Percentage_ElectricDrill_SoapRpgFramework_Utils_Percentage_
+  name: operator +
+  nameWithType: Percentage.operator +
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage.operator +
+  nameWithType.vb: Percentage.+
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Percentage.+
+  name.vb: +
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Addition*
+    name: +
+    href: ElectricDrill.SoapRpgFramework.Utils.Percentage.html#ElectricDrill_SoapRpgFramework_Utils_Percentage_op_Addition_ElectricDrill_SoapRpgFramework_Utils_Percentage_ElectricDrill_SoapRpgFramework_Utils_Percentage_
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Subtraction*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Subtraction
+  href: ElectricDrill.SoapRpgFramework.Utils.Percentage.html#ElectricDrill_SoapRpgFramework_Utils_Percentage_op_Subtraction_ElectricDrill_SoapRpgFramework_Utils_Percentage_ElectricDrill_SoapRpgFramework_Utils_Percentage_
+  name: operator -
+  nameWithType: Percentage.operator -
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage.operator -
+  nameWithType.vb: Percentage.-
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Percentage.-
+  name.vb: '-'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_Subtraction*
+    name: '-'
+    href: ElectricDrill.SoapRpgFramework.Utils.Percentage.html#ElectricDrill_SoapRpgFramework_Utils_Percentage_op_Subtraction_ElectricDrill_SoapRpgFramework_Utils_Percentage_ElectricDrill_SoapRpgFramework_Utils_Percentage_
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_UnaryNegation*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.Percentage.op_UnaryNegation
+  href: ElectricDrill.SoapRpgFramework.Utils.Percentage.html#ElectricDrill_SoapRpgFramework_Utils_Percentage_op_UnaryNegation_ElectricDrill_SoapRpgFramework_Utils_Percentage_
+  name: operator -
+  nameWithType: Percentage.operator -
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage.operator -
+  nameWithType.vb: Percentage.-
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Percentage.-
+  name.vb: '-'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.op_UnaryNegation*
+    name: '-'
+    href: ElectricDrill.SoapRpgFramework.Utils.Percentage.html#ElectricDrill_SoapRpgFramework_Utils_Percentage_op_UnaryNegation_ElectricDrill_SoapRpgFramework_Utils_Percentage_
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.CompareTo*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.Percentage.CompareTo
+  href: ElectricDrill.SoapRpgFramework.Utils.Percentage.html#ElectricDrill_SoapRpgFramework_Utils_Percentage_CompareTo_ElectricDrill_SoapRpgFramework_Utils_Percentage_
+  name: CompareTo
+  nameWithType: Percentage.CompareTo
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage.CompareTo
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+  - name: (
+  - name: )
+- uid: ElectricDrill.SoapRpgFramework.Utils.Percentage.ToString*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.Percentage.ToString
+  href: ElectricDrill.SoapRpgFramework.Utils.Percentage.html#ElectricDrill_SoapRpgFramework_Utils_Percentage_ToString
+  name: ToString
+  nameWithType: Percentage.ToString
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

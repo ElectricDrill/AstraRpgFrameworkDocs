@@ -26,7 +26,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Cache
     path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Cache.cs
-    startLine: 10
+    startLine: 9
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Utils
@@ -63,7 +63,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Set
     path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Cache.cs
-    startLine: 20
+    startLine: 19
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Utils
@@ -100,7 +100,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Invalidate
     path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Cache.cs
-    startLine: 28
+    startLine: 27
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Utils
@@ -134,7 +134,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: InvalidateAll
     path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Cache.cs
-    startLine: 35
+    startLine: 34
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Utils
@@ -164,7 +164,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Get
     path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Cache.cs
-    startLine: 46
+    startLine: 45
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Utils
@@ -208,7 +208,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: TryGet
     path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Cache.cs
-    startLine: 56
+    startLine: 55
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Utils
@@ -249,7 +249,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Has
     path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Cache.cs
-    startLine: 65
+    startLine: 64
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Utils
@@ -286,7 +286,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: this[]
     path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Cache.cs
-    startLine: 72
+    startLine: 71
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Utils

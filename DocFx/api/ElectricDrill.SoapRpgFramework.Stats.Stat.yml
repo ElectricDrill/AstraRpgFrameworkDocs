@@ -1,0 +1,524 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.Stats.Stat
+  commentId: T:ElectricDrill.SoapRpgFramework.Stats.Stat
+  id: Stat
+  parent: ElectricDrill.SoapRpgFramework.Stats
+  children:
+  - ElectricDrill.SoapRpgFramework.Stats.Stat.AttributesScaling
+  - ElectricDrill.SoapRpgFramework.Stats.Stat.Equals(System.Object)
+  - ElectricDrill.SoapRpgFramework.Stats.Stat.GetHashCode
+  - ElectricDrill.SoapRpgFramework.Stats.Stat.op_Equality(ElectricDrill.SoapRpgFramework.Stats.Stat,ElectricDrill.SoapRpgFramework.Stats.Stat)
+  - ElectricDrill.SoapRpgFramework.Stats.Stat.op_Inequality(ElectricDrill.SoapRpgFramework.Stats.Stat,ElectricDrill.SoapRpgFramework.Stats.Stat)
+  langs:
+  - csharp
+  - vb
+  name: Stat
+  nameWithType: Stat
+  fullName: ElectricDrill.SoapRpgFramework.Stats.Stat
+  type: Class
+  source:
+    remote:
+      path: Runtime/Stats/Stat.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Stat
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/Stat.cs
+    startLine: 12
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  summary: >-
+    Represents a stat in the RPG system that extends BoundedValue with attribute scaling capabilities.
+
+    Stats can be scaled based on entity attributes and provide equality comparison based on name.
+  example: []
+  syntax:
+    content: 'public class Stat : BoundedValue'
+    content.vb: Public Class Stat Inherits BoundedValue
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - ElectricDrill.SoapRpgFramework.BoundedValue
+  inheritedMembers:
+  - ElectricDrill.SoapRpgFramework.BoundedValue.HasMaxValue
+  - ElectricDrill.SoapRpgFramework.BoundedValue.MaxValue
+  - ElectricDrill.SoapRpgFramework.BoundedValue.HasMinValue
+  - ElectricDrill.SoapRpgFramework.BoundedValue.MinValue
+- uid: ElectricDrill.SoapRpgFramework.Stats.Stat.AttributesScaling
+  commentId: P:ElectricDrill.SoapRpgFramework.Stats.Stat.AttributesScaling
+  id: AttributesScaling
+  parent: ElectricDrill.SoapRpgFramework.Stats.Stat
+  langs:
+  - csharp
+  - vb
+  name: AttributesScaling
+  nameWithType: Stat.AttributesScaling
+  fullName: ElectricDrill.SoapRpgFramework.Stats.Stat.AttributesScaling
+  type: Property
+  source:
+    remote:
+      path: Runtime/Stats/Stat.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: AttributesScaling
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/Stat.cs
+    startLine: 20
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  summary: >-
+    Gets or sets the attributes scaling component that determines how this stat scales with entity attributes.
+
+    Can be null if the stat doesn't scale with attributes.
+  example: []
+  syntax:
+    content: >-
+      [CanBeNull]
+
+      public AttributesScalingComponent AttributesScaling { get; }
+    parameters: []
+    return:
+      type: ElectricDrill.SoapRpgFramework.Scaling.AttributesScalingComponent
+    content.vb: >-
+      <CanBeNull>
+
+      Public Property AttributesScaling As AttributesScalingComponent
+  overload: ElectricDrill.SoapRpgFramework.Stats.Stat.AttributesScaling*
+  attributes:
+  - type: JetBrains.Annotations.CanBeNullAttribute
+    ctor: JetBrains.Annotations.CanBeNullAttribute.#ctor
+    arguments: []
+- uid: ElectricDrill.SoapRpgFramework.Stats.Stat.Equals(System.Object)
+  commentId: M:ElectricDrill.SoapRpgFramework.Stats.Stat.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: ElectricDrill.SoapRpgFramework.Stats.Stat
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: Stat.Equals(object)
+  fullName: ElectricDrill.SoapRpgFramework.Stats.Stat.Equals(object)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Stats/Stat.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Equals
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/Stat.cs
+    startLine: 29
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: UnityEngine.Object.Equals(System.Object)
+  overload: ElectricDrill.SoapRpgFramework.Stats.Stat.Equals*
+  nameWithType.vb: Stat.Equals(Object)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Stats.Stat.Equals(Object)
+  name.vb: Equals(Object)
+- uid: ElectricDrill.SoapRpgFramework.Stats.Stat.GetHashCode
+  commentId: M:ElectricDrill.SoapRpgFramework.Stats.Stat.GetHashCode
+  id: GetHashCode
+  parent: ElectricDrill.SoapRpgFramework.Stats.Stat
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Stat.GetHashCode()
+  fullName: ElectricDrill.SoapRpgFramework.Stats.Stat.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Stats/Stat.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: GetHashCode
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/Stat.cs
+    startLine: 33
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: UnityEngine.Object.GetHashCode
+  overload: ElectricDrill.SoapRpgFramework.Stats.Stat.GetHashCode*
+- uid: ElectricDrill.SoapRpgFramework.Stats.Stat.op_Equality(ElectricDrill.SoapRpgFramework.Stats.Stat,ElectricDrill.SoapRpgFramework.Stats.Stat)
+  commentId: M:ElectricDrill.SoapRpgFramework.Stats.Stat.op_Equality(ElectricDrill.SoapRpgFramework.Stats.Stat,ElectricDrill.SoapRpgFramework.Stats.Stat)
+  id: op_Equality(ElectricDrill.SoapRpgFramework.Stats.Stat,ElectricDrill.SoapRpgFramework.Stats.Stat)
+  parent: ElectricDrill.SoapRpgFramework.Stats.Stat
+  langs:
+  - csharp
+  - vb
+  name: operator ==(Stat, Stat)
+  nameWithType: Stat.operator ==(Stat, Stat)
+  fullName: ElectricDrill.SoapRpgFramework.Stats.Stat.operator ==(ElectricDrill.SoapRpgFramework.Stats.Stat, ElectricDrill.SoapRpgFramework.Stats.Stat)
+  type: Operator
+  source:
+    remote:
+      path: Runtime/Stats/Stat.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: op_Equality
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/Stat.cs
+    startLine: 43
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  summary: Determines whether two Stat objects are equal based on their names.
+  example: []
+  syntax:
+    content: public static bool operator ==(Stat a, Stat b)
+    parameters:
+    - id: a
+      type: ElectricDrill.SoapRpgFramework.Stats.Stat
+      description: The first stat to compare.
+    - id: b
+      type: ElectricDrill.SoapRpgFramework.Stats.Stat
+      description: The second stat to compare.
+    return:
+      type: System.Boolean
+      description: true if the stats are equal; otherwise, false.
+    content.vb: Public Shared Operator =(a As Stat, b As Stat) As Boolean
+  overload: ElectricDrill.SoapRpgFramework.Stats.Stat.op_Equality*
+  nameWithType.vb: Stat.=(Stat, Stat)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Stats.Stat.=(ElectricDrill.SoapRpgFramework.Stats.Stat, ElectricDrill.SoapRpgFramework.Stats.Stat)
+  name.vb: =(Stat, Stat)
+- uid: ElectricDrill.SoapRpgFramework.Stats.Stat.op_Inequality(ElectricDrill.SoapRpgFramework.Stats.Stat,ElectricDrill.SoapRpgFramework.Stats.Stat)
+  commentId: M:ElectricDrill.SoapRpgFramework.Stats.Stat.op_Inequality(ElectricDrill.SoapRpgFramework.Stats.Stat,ElectricDrill.SoapRpgFramework.Stats.Stat)
+  id: op_Inequality(ElectricDrill.SoapRpgFramework.Stats.Stat,ElectricDrill.SoapRpgFramework.Stats.Stat)
+  parent: ElectricDrill.SoapRpgFramework.Stats.Stat
+  langs:
+  - csharp
+  - vb
+  name: operator !=(Stat, Stat)
+  nameWithType: Stat.operator !=(Stat, Stat)
+  fullName: ElectricDrill.SoapRpgFramework.Stats.Stat.operator !=(ElectricDrill.SoapRpgFramework.Stats.Stat, ElectricDrill.SoapRpgFramework.Stats.Stat)
+  type: Operator
+  source:
+    remote:
+      path: Runtime/Stats/Stat.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: op_Inequality
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/Stat.cs
+    startLine: 59
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  summary: Determines whether two Stat objects are not equal.
+  example: []
+  syntax:
+    content: public static bool operator !=(Stat a, Stat b)
+    parameters:
+    - id: a
+      type: ElectricDrill.SoapRpgFramework.Stats.Stat
+      description: The first stat to compare.
+    - id: b
+      type: ElectricDrill.SoapRpgFramework.Stats.Stat
+      description: The second stat to compare.
+    return:
+      type: System.Boolean
+      description: true if the stats are not equal; otherwise, false.
+    content.vb: Public Shared Operator <>(a As Stat, b As Stat) As Boolean
+  overload: ElectricDrill.SoapRpgFramework.Stats.Stat.op_Inequality*
+  nameWithType.vb: Stat.<>(Stat, Stat)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Stats.Stat.<>(ElectricDrill.SoapRpgFramework.Stats.Stat, ElectricDrill.SoapRpgFramework.Stats.Stat)
+  name.vb: <>(Stat, Stat)
+references:
+- uid: ElectricDrill.SoapRpgFramework.Stats
+  commentId: N:ElectricDrill.SoapRpgFramework.Stats
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Stats
+  nameWithType: ElectricDrill.SoapRpgFramework.Stats
+  fullName: ElectricDrill.SoapRpgFramework.Stats
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Stats
+    name: Stats
+    href: ElectricDrill.SoapRpgFramework.Stats.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Stats
+    name: Stats
+    href: ElectricDrill.SoapRpgFramework.Stats.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: ElectricDrill.SoapRpgFramework.BoundedValue
+  commentId: T:ElectricDrill.SoapRpgFramework.BoundedValue
+  parent: ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.SoapRpgFramework.BoundedValue.html
+  name: BoundedValue
+  nameWithType: BoundedValue
+  fullName: ElectricDrill.SoapRpgFramework.BoundedValue
+- uid: ElectricDrill.SoapRpgFramework.BoundedValue.HasMaxValue
+  commentId: P:ElectricDrill.SoapRpgFramework.BoundedValue.HasMaxValue
+  parent: ElectricDrill.SoapRpgFramework.BoundedValue
+  href: ElectricDrill.SoapRpgFramework.BoundedValue.html#ElectricDrill_SoapRpgFramework_BoundedValue_HasMaxValue
+  name: HasMaxValue
+  nameWithType: BoundedValue.HasMaxValue
+  fullName: ElectricDrill.SoapRpgFramework.BoundedValue.HasMaxValue
+- uid: ElectricDrill.SoapRpgFramework.BoundedValue.MaxValue
+  commentId: P:ElectricDrill.SoapRpgFramework.BoundedValue.MaxValue
+  parent: ElectricDrill.SoapRpgFramework.BoundedValue
+  href: ElectricDrill.SoapRpgFramework.BoundedValue.html#ElectricDrill_SoapRpgFramework_BoundedValue_MaxValue
+  name: MaxValue
+  nameWithType: BoundedValue.MaxValue
+  fullName: ElectricDrill.SoapRpgFramework.BoundedValue.MaxValue
+- uid: ElectricDrill.SoapRpgFramework.BoundedValue.HasMinValue
+  commentId: P:ElectricDrill.SoapRpgFramework.BoundedValue.HasMinValue
+  parent: ElectricDrill.SoapRpgFramework.BoundedValue
+  href: ElectricDrill.SoapRpgFramework.BoundedValue.html#ElectricDrill_SoapRpgFramework_BoundedValue_HasMinValue
+  name: HasMinValue
+  nameWithType: BoundedValue.HasMinValue
+  fullName: ElectricDrill.SoapRpgFramework.BoundedValue.HasMinValue
+- uid: ElectricDrill.SoapRpgFramework.BoundedValue.MinValue
+  commentId: P:ElectricDrill.SoapRpgFramework.BoundedValue.MinValue
+  parent: ElectricDrill.SoapRpgFramework.BoundedValue
+  href: ElectricDrill.SoapRpgFramework.BoundedValue.html#ElectricDrill_SoapRpgFramework_BoundedValue_MinValue
+  name: MinValue
+  nameWithType: BoundedValue.MinValue
+  fullName: ElectricDrill.SoapRpgFramework.BoundedValue.MinValue
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: ElectricDrill.SoapRpgFramework
+  commentId: N:ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework
+  nameWithType: ElectricDrill.SoapRpgFramework
+  fullName: ElectricDrill.SoapRpgFramework
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+- uid: ElectricDrill.SoapRpgFramework.Stats.Stat.AttributesScaling*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Stats.Stat.AttributesScaling
+  href: ElectricDrill.SoapRpgFramework.Stats.Stat.html#ElectricDrill_SoapRpgFramework_Stats_Stat_AttributesScaling
+  name: AttributesScaling
+  nameWithType: Stat.AttributesScaling
+  fullName: ElectricDrill.SoapRpgFramework.Stats.Stat.AttributesScaling
+- uid: ElectricDrill.SoapRpgFramework.Scaling.AttributesScalingComponent
+  commentId: T:ElectricDrill.SoapRpgFramework.Scaling.AttributesScalingComponent
+  parent: ElectricDrill.SoapRpgFramework.Scaling
+  href: ElectricDrill.SoapRpgFramework.Scaling.AttributesScalingComponent.html
+  name: AttributesScalingComponent
+  nameWithType: AttributesScalingComponent
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.AttributesScalingComponent
+- uid: ElectricDrill.SoapRpgFramework.Scaling
+  commentId: N:ElectricDrill.SoapRpgFramework.Scaling
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Scaling
+  nameWithType: ElectricDrill.SoapRpgFramework.Scaling
+  fullName: ElectricDrill.SoapRpgFramework.Scaling
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Scaling
+    name: Scaling
+    href: ElectricDrill.SoapRpgFramework.Scaling.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Scaling
+    name: Scaling
+    href: ElectricDrill.SoapRpgFramework.Scaling.html
+- uid: UnityEngine.Object.Equals(System.Object)
+  commentId: M:UnityEngine.Object.Equals(System.Object)
+  parent: UnityEngine.Object
+  isExternal: true
+  name: Equals(object)
+  nameWithType: Object.Equals(object)
+  fullName: UnityEngine.Object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: UnityEngine.Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: UnityEngine.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+  - name: )
+- uid: ElectricDrill.SoapRpgFramework.Stats.Stat.Equals*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Stats.Stat.Equals
+  href: ElectricDrill.SoapRpgFramework.Stats.Stat.html#ElectricDrill_SoapRpgFramework_Stats_Stat_Equals_System_Object_
+  name: Equals
+  nameWithType: Stat.Equals
+  fullName: ElectricDrill.SoapRpgFramework.Stats.Stat.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UnityEngine.Object.GetHashCode
+  commentId: M:UnityEngine.Object.GetHashCode
+  parent: UnityEngine.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: UnityEngine.Object.GetHashCode()
+  spec.csharp:
+  - uid: UnityEngine.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+  - name: (
+  - name: )
+- uid: ElectricDrill.SoapRpgFramework.Stats.Stat.GetHashCode*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Stats.Stat.GetHashCode
+  href: ElectricDrill.SoapRpgFramework.Stats.Stat.html#ElectricDrill_SoapRpgFramework_Stats_Stat_GetHashCode
+  name: GetHashCode
+  nameWithType: Stat.GetHashCode
+  fullName: ElectricDrill.SoapRpgFramework.Stats.Stat.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ElectricDrill.SoapRpgFramework.Stats.Stat.op_Equality*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Stats.Stat.op_Equality
+  href: ElectricDrill.SoapRpgFramework.Stats.Stat.html#ElectricDrill_SoapRpgFramework_Stats_Stat_op_Equality_ElectricDrill_SoapRpgFramework_Stats_Stat_ElectricDrill_SoapRpgFramework_Stats_Stat_
+  name: operator ==
+  nameWithType: Stat.operator ==
+  fullName: ElectricDrill.SoapRpgFramework.Stats.Stat.operator ==
+  nameWithType.vb: Stat.=
+  fullName.vb: ElectricDrill.SoapRpgFramework.Stats.Stat.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: ElectricDrill.SoapRpgFramework.Stats.Stat.op_Equality*
+    name: ==
+    href: ElectricDrill.SoapRpgFramework.Stats.Stat.html#ElectricDrill_SoapRpgFramework_Stats_Stat_op_Equality_ElectricDrill_SoapRpgFramework_Stats_Stat_ElectricDrill_SoapRpgFramework_Stats_Stat_
+- uid: ElectricDrill.SoapRpgFramework.Stats.Stat
+  commentId: T:ElectricDrill.SoapRpgFramework.Stats.Stat
+  parent: ElectricDrill.SoapRpgFramework.Stats
+  href: ElectricDrill.SoapRpgFramework.Stats.Stat.html
+  name: Stat
+  nameWithType: Stat
+  fullName: ElectricDrill.SoapRpgFramework.Stats.Stat
+- uid: ElectricDrill.SoapRpgFramework.Stats.Stat.op_Inequality*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Stats.Stat.op_Inequality
+  href: ElectricDrill.SoapRpgFramework.Stats.Stat.html#ElectricDrill_SoapRpgFramework_Stats_Stat_op_Inequality_ElectricDrill_SoapRpgFramework_Stats_Stat_ElectricDrill_SoapRpgFramework_Stats_Stat_
+  name: operator !=
+  nameWithType: Stat.operator !=
+  fullName: ElectricDrill.SoapRpgFramework.Stats.Stat.operator !=
+  nameWithType.vb: Stat.<>
+  fullName.vb: ElectricDrill.SoapRpgFramework.Stats.Stat.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: ElectricDrill.SoapRpgFramework.Stats.Stat.op_Inequality*
+    name: '!='
+    href: ElectricDrill.SoapRpgFramework.Stats.Stat.html#ElectricDrill_SoapRpgFramework_Stats_Stat_op_Inequality_ElectricDrill_SoapRpgFramework_Stats_Stat_ElectricDrill_SoapRpgFramework_Stats_Stat_

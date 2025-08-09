@@ -1,0 +1,131 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems
+  commentId: T:ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems
+  id: ScalingFormulaMenuItems
+  parent: ElectricDrill.SoapRpgFramework.Scaling
+  children:
+  - ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems.CreateScalingFormula
+  langs:
+  - csharp
+  - vb
+  name: ScalingFormulaMenuItems
+  nameWithType: ScalingFormulaMenuItems
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems
+  type: Class
+  source:
+    remote:
+      path: Runtime/Scaling/ScalingFormula.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: ScalingFormulaMenuItems
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingFormula.cs
+    startLine: 123
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Scaling
+  summary: Provides a menu item in the Unity Editor to create a ScalingFormula asset.
+  example: []
+  syntax:
+    content: public static class ScalingFormulaMenuItems
+    content.vb: Public Module ScalingFormulaMenuItems
+  inheritance:
+  - System.Object
+- uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems.CreateScalingFormula
+  commentId: M:ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems.CreateScalingFormula
+  id: CreateScalingFormula
+  parent: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems
+  langs:
+  - csharp
+  - vb
+  name: CreateScalingFormula()
+  nameWithType: ScalingFormulaMenuItems.CreateScalingFormula()
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems.CreateScalingFormula()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Scaling/ScalingFormula.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: CreateScalingFormula
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingFormula.cs
+    startLine: 128
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Scaling
+  summary: Creates a new ScalingFormula asset.
+  example: []
+  syntax:
+    content: >-
+      [MenuItem("Assets/Create/Soap RPG Framework/Scaling/Scaling Formula &#S", false, 0)]
+
+      public static void CreateScalingFormula()
+    content.vb: >-
+      <MenuItem("Assets/Create/Soap RPG Framework/Scaling/Scaling Formula &#S", False, 0)>
+
+      Public Shared Sub CreateScalingFormula()
+  overload: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems.CreateScalingFormula*
+  attributes:
+  - type: UnityEditor.MenuItem
+    ctor: UnityEditor.MenuItem.#ctor(System.String,System.Boolean,System.Int32)
+    arguments:
+    - type: System.String
+      value: Assets/Create/Soap RPG Framework/Scaling/Scaling Formula &#S
+    - type: System.Boolean
+      value: false
+    - type: System.Int32
+      value: 0
+references:
+- uid: ElectricDrill.SoapRpgFramework.Scaling
+  commentId: N:ElectricDrill.SoapRpgFramework.Scaling
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Scaling
+  nameWithType: ElectricDrill.SoapRpgFramework.Scaling
+  fullName: ElectricDrill.SoapRpgFramework.Scaling
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Scaling
+    name: Scaling
+    href: ElectricDrill.SoapRpgFramework.Scaling.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Scaling
+    name: Scaling
+    href: ElectricDrill.SoapRpgFramework.Scaling.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems.CreateScalingFormula*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems.CreateScalingFormula
+  href: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems.html#ElectricDrill_SoapRpgFramework_Scaling_ScalingFormulaMenuItems_CreateScalingFormula
+  name: CreateScalingFormula
+  nameWithType: ScalingFormulaMenuItems.CreateScalingFormula
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormulaMenuItems.CreateScalingFormula

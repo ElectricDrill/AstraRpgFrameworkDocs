@@ -1,0 +1,220 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.Utils.LongVar
+  commentId: T:ElectricDrill.SoapRpgFramework.Utils.LongVar
+  id: LongVar
+  parent: ElectricDrill.SoapRpgFramework.Utils
+  children:
+  - ElectricDrill.SoapRpgFramework.Utils.LongVar.Value
+  - ElectricDrill.SoapRpgFramework.Utils.LongVar.op_Implicit(ElectricDrill.SoapRpgFramework.Utils.LongVar)~System.Int64
+  langs:
+  - csharp
+  - vb
+  name: LongVar
+  nameWithType: LongVar
+  fullName: ElectricDrill.SoapRpgFramework.Utils.LongVar
+  type: Class
+  source:
+    remote:
+      path: Runtime/Utils/LongVar.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: LongVar
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongVar.cs
+    startLine: 7
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: >-
+    ScriptableObject that holds a long value.
+
+    Can be used to share a long value between different GameObjects and scenes.
+  example: []
+  syntax:
+    content: >-
+      [CreateAssetMenu]
+
+      public class LongVar : ScriptableObject
+    content.vb: >-
+      <CreateAssetMenu>
+
+      Public Class LongVar Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  attributes:
+  - type: UnityEngine.CreateAssetMenuAttribute
+    ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
+    arguments: []
+- uid: ElectricDrill.SoapRpgFramework.Utils.LongVar.Value
+  commentId: P:ElectricDrill.SoapRpgFramework.Utils.LongVar.Value
+  id: Value
+  parent: ElectricDrill.SoapRpgFramework.Utils.LongVar
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: LongVar.Value
+  fullName: ElectricDrill.SoapRpgFramework.Utils.LongVar.Value
+  type: Property
+  source:
+    remote:
+      path: Runtime/Utils/LongVar.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Value
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongVar.cs
+    startLine: 14
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: The long value.
+  example: []
+  syntax:
+    content: public long Value { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property Value As Long
+  overload: ElectricDrill.SoapRpgFramework.Utils.LongVar.Value*
+- uid: ElectricDrill.SoapRpgFramework.Utils.LongVar.op_Implicit(ElectricDrill.SoapRpgFramework.Utils.LongVar)~System.Int64
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.LongVar.op_Implicit(ElectricDrill.SoapRpgFramework.Utils.LongVar)~System.Int64
+  id: op_Implicit(ElectricDrill.SoapRpgFramework.Utils.LongVar)~System.Int64
+  parent: ElectricDrill.SoapRpgFramework.Utils.LongVar
+  langs:
+  - csharp
+  - vb
+  name: implicit operator long(LongVar)
+  nameWithType: LongVar.implicit operator long(LongVar)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.LongVar.implicit operator long(ElectricDrill.SoapRpgFramework.Utils.LongVar)
+  type: Operator
+  source:
+    remote:
+      path: Runtime/Utils/LongVar.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: op_Implicit
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongVar.cs
+    startLine: 23
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: Allows implicit conversion from a LongVar to a long.
+  example: []
+  syntax:
+    content: public static implicit operator long(LongVar var)
+    parameters:
+    - id: var
+      type: ElectricDrill.SoapRpgFramework.Utils.LongVar
+      description: The LongVar to convert.
+    return:
+      type: System.Int64
+    content.vb: Public Shared Widening Operator CType(var As LongVar) As Long
+  overload: ElectricDrill.SoapRpgFramework.Utils.LongVar.op_Implicit*
+  nameWithType.vb: LongVar.CType(LongVar)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.LongVar.CType(ElectricDrill.SoapRpgFramework.Utils.LongVar)
+  name.vb: CType(LongVar)
+references:
+- uid: ElectricDrill.SoapRpgFramework.Utils
+  commentId: N:ElectricDrill.SoapRpgFramework.Utils
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Utils
+  nameWithType: ElectricDrill.SoapRpgFramework.Utils
+  fullName: ElectricDrill.SoapRpgFramework.Utils
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Utils
+    name: Utils
+    href: ElectricDrill.SoapRpgFramework.Utils.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Utils
+    name: Utils
+    href: ElectricDrill.SoapRpgFramework.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: ElectricDrill.SoapRpgFramework.Utils.LongVar.Value*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.LongVar.Value
+  href: ElectricDrill.SoapRpgFramework.Utils.LongVar.html#ElectricDrill_SoapRpgFramework_Utils_LongVar_Value
+  name: Value
+  nameWithType: LongVar.Value
+  fullName: ElectricDrill.SoapRpgFramework.Utils.LongVar.Value
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: ElectricDrill.SoapRpgFramework.Utils.LongVar.op_Implicit*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.LongVar.op_Implicit
+  name: implicit operator
+  nameWithType: LongVar.implicit operator
+  fullName: ElectricDrill.SoapRpgFramework.Utils.LongVar.implicit operator
+  nameWithType.vb: LongVar.CType
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.LongVar.CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator
+- uid: ElectricDrill.SoapRpgFramework.Utils.LongVar
+  commentId: T:ElectricDrill.SoapRpgFramework.Utils.LongVar
+  parent: ElectricDrill.SoapRpgFramework.Utils
+  href: ElectricDrill.SoapRpgFramework.Utils.LongVar.html
+  name: LongVar
+  nameWithType: LongVar
+  fullName: ElectricDrill.SoapRpgFramework.Utils.LongVar

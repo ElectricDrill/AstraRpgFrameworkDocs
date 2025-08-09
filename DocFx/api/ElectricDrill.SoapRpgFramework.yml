@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework
+  commentId: N:ElectricDrill.SoapRpgFramework
+  id: ElectricDrill.SoapRpgFramework
+  children:
+  - ElectricDrill.SoapRpgFramework.BoundedValue
+  - ElectricDrill.SoapRpgFramework.Class
+  - ElectricDrill.SoapRpgFramework.ClassMenuItems
+  - ElectricDrill.SoapRpgFramework.EntityClass
+  - ElectricDrill.SoapRpgFramework.EntityCore
+  - ElectricDrill.SoapRpgFramework.EntityLevel
+  - ElectricDrill.SoapRpgFramework.ExpSource
+  - ElectricDrill.SoapRpgFramework.GrowthFormula
+  - ElectricDrill.SoapRpgFramework.GrowthFormulaMenuItems
+  - ElectricDrill.SoapRpgFramework.IAttributes
+  - ElectricDrill.SoapRpgFramework.IClassSource
+  - ElectricDrill.SoapRpgFramework.IExpSource
+  - ElectricDrill.SoapRpgFramework.ILevel
+  - ElectricDrill.SoapRpgFramework.ILevelable
+  - ElectricDrill.SoapRpgFramework.IStatSetSource
+  langs:
+  - csharp
+  - vb
+  name: ElectricDrill.SoapRpgFramework
+  nameWithType: ElectricDrill.SoapRpgFramework
+  fullName: ElectricDrill.SoapRpgFramework
+  type: Namespace
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+references:
+- uid: ElectricDrill.SoapRpgFramework.IExpSource
+  commentId: T:ElectricDrill.SoapRpgFramework.IExpSource
+  parent: ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.SoapRpgFramework.IExpSource.html
+  name: IExpSource
+  nameWithType: IExpSource
+  fullName: ElectricDrill.SoapRpgFramework.IExpSource
+- uid: ElectricDrill.SoapRpgFramework.BoundedValue
+  commentId: T:ElectricDrill.SoapRpgFramework.BoundedValue
+  parent: ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.SoapRpgFramework.BoundedValue.html
+  name: BoundedValue
+  nameWithType: BoundedValue
+  fullName: ElectricDrill.SoapRpgFramework.BoundedValue
+- uid: ElectricDrill.SoapRpgFramework.ExpSource
+  commentId: T:ElectricDrill.SoapRpgFramework.ExpSource
+  href: ElectricDrill.SoapRpgFramework.ExpSource.html
+  name: ExpSource
+  nameWithType: ExpSource
+  fullName: ElectricDrill.SoapRpgFramework.ExpSource
+- uid: ElectricDrill.SoapRpgFramework.IStatSetSource
+  commentId: T:ElectricDrill.SoapRpgFramework.IStatSetSource
+  parent: ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.SoapRpgFramework.IStatSetSource.html
+  name: IStatSetSource
+  nameWithType: IStatSetSource
+  fullName: ElectricDrill.SoapRpgFramework.IStatSetSource
+- uid: ElectricDrill.SoapRpgFramework.IClassSource
+  commentId: T:ElectricDrill.SoapRpgFramework.IClassSource
+  parent: ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.SoapRpgFramework.IClassSource.html
+  name: IClassSource
+  nameWithType: IClassSource
+  fullName: ElectricDrill.SoapRpgFramework.IClassSource
+- uid: ElectricDrill.SoapRpgFramework.ILevelable
+  commentId: T:ElectricDrill.SoapRpgFramework.ILevelable
+  parent: ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.SoapRpgFramework.ILevelable.html
+  name: ILevelable
+  nameWithType: ILevelable
+  fullName: ElectricDrill.SoapRpgFramework.ILevelable
+- uid: ElectricDrill.SoapRpgFramework.EntityLevel
+  commentId: T:ElectricDrill.SoapRpgFramework.EntityLevel
+  parent: ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.SoapRpgFramework.EntityLevel.html
+  name: EntityLevel
+  nameWithType: EntityLevel
+  fullName: ElectricDrill.SoapRpgFramework.EntityLevel
+- uid: ElectricDrill.SoapRpgFramework.ILevel
+  commentId: T:ElectricDrill.SoapRpgFramework.ILevel
+  parent: ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.SoapRpgFramework.ILevel.html
+  name: ILevel
+  nameWithType: ILevel
+  fullName: ElectricDrill.SoapRpgFramework.ILevel
+- uid: ElectricDrill.SoapRpgFramework.EntityCore
+  commentId: T:ElectricDrill.SoapRpgFramework.EntityCore
+  parent: ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.SoapRpgFramework.EntityCore.html
+  name: EntityCore
+  nameWithType: EntityCore
+  fullName: ElectricDrill.SoapRpgFramework.EntityCore
+- uid: ElectricDrill.SoapRpgFramework.Class
+  commentId: T:ElectricDrill.SoapRpgFramework.Class
+  parent: ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.SoapRpgFramework.Class.html
+  name: Class
+  nameWithType: Class
+  fullName: ElectricDrill.SoapRpgFramework.Class
+- uid: ElectricDrill.SoapRpgFramework.ClassMenuItems
+  commentId: T:ElectricDrill.SoapRpgFramework.ClassMenuItems
+  href: ElectricDrill.SoapRpgFramework.ClassMenuItems.html
+  name: ClassMenuItems
+  nameWithType: ClassMenuItems
+  fullName: ElectricDrill.SoapRpgFramework.ClassMenuItems
+- uid: ElectricDrill.SoapRpgFramework.IAttributes
+  commentId: T:ElectricDrill.SoapRpgFramework.IAttributes
+  parent: ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.SoapRpgFramework.IAttributes.html
+  name: IAttributes
+  nameWithType: IAttributes
+  fullName: ElectricDrill.SoapRpgFramework.IAttributes
+- uid: ElectricDrill.SoapRpgFramework.GrowthFormula
+  commentId: T:ElectricDrill.SoapRpgFramework.GrowthFormula
+  parent: ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.SoapRpgFramework.GrowthFormula.html
+  name: GrowthFormula
+  nameWithType: GrowthFormula
+  fullName: ElectricDrill.SoapRpgFramework.GrowthFormula
+- uid: ElectricDrill.SoapRpgFramework.GrowthFormulaMenuItems
+  commentId: T:ElectricDrill.SoapRpgFramework.GrowthFormulaMenuItems
+  href: ElectricDrill.SoapRpgFramework.GrowthFormulaMenuItems.html
+  name: GrowthFormulaMenuItems
+  nameWithType: GrowthFormulaMenuItems
+  fullName: ElectricDrill.SoapRpgFramework.GrowthFormulaMenuItems
+- uid: ElectricDrill.SoapRpgFramework.EntityClass
+  commentId: T:ElectricDrill.SoapRpgFramework.EntityClass
+  parent: ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.SoapRpgFramework.EntityClass.html
+  name: EntityClass
+  nameWithType: EntityClass
+  fullName: ElectricDrill.SoapRpgFramework.EntityClass
+- uid: ElectricDrill.SoapRpgFramework
+  commentId: N:ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework
+  nameWithType: ElectricDrill.SoapRpgFramework
+  fullName: ElectricDrill.SoapRpgFramework
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html

@@ -1,0 +1,101 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.ILevel
+  commentId: T:ElectricDrill.SoapRpgFramework.ILevel
+  id: ILevel
+  parent: ElectricDrill.SoapRpgFramework
+  children:
+  - ElectricDrill.SoapRpgFramework.ILevel.Level
+  langs:
+  - csharp
+  - vb
+  name: ILevel
+  nameWithType: ILevel
+  fullName: ElectricDrill.SoapRpgFramework.ILevel
+  type: Interface
+  source:
+    remote:
+      path: Runtime/ILevel.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: ILevel
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/ILevel.cs
+    startLine: 6
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework
+  summary: >-
+    Interface for entities that have a level system.
+
+    Provides access to the entity's level management component.
+  example: []
+  syntax:
+    content: public interface ILevel
+    content.vb: Public Interface ILevel
+- uid: ElectricDrill.SoapRpgFramework.ILevel.Level
+  commentId: P:ElectricDrill.SoapRpgFramework.ILevel.Level
+  id: Level
+  parent: ElectricDrill.SoapRpgFramework.ILevel
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: ILevel.Level
+  fullName: ElectricDrill.SoapRpgFramework.ILevel.Level
+  type: Property
+  source:
+    remote:
+      path: Runtime/ILevel.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Level
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/ILevel.cs
+    startLine: 11
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework
+  summary: Gets the entity's level management component.
+  example: []
+  syntax:
+    content: EntityLevel Level { get; }
+    parameters: []
+    return:
+      type: ElectricDrill.SoapRpgFramework.EntityLevel
+    content.vb: ReadOnly Property Level As EntityLevel
+  overload: ElectricDrill.SoapRpgFramework.ILevel.Level*
+references:
+- uid: ElectricDrill.SoapRpgFramework
+  commentId: N:ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework
+  nameWithType: ElectricDrill.SoapRpgFramework
+  fullName: ElectricDrill.SoapRpgFramework
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+- uid: ElectricDrill.SoapRpgFramework.ILevel.Level*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.ILevel.Level
+  href: ElectricDrill.SoapRpgFramework.ILevel.html#ElectricDrill_SoapRpgFramework_ILevel_Level
+  name: Level
+  nameWithType: ILevel.Level
+  fullName: ElectricDrill.SoapRpgFramework.ILevel.Level
+- uid: ElectricDrill.SoapRpgFramework.EntityLevel
+  commentId: T:ElectricDrill.SoapRpgFramework.EntityLevel
+  parent: ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.SoapRpgFramework.EntityLevel.html
+  name: EntityLevel
+  nameWithType: EntityLevel
+  fullName: ElectricDrill.SoapRpgFramework.EntityLevel

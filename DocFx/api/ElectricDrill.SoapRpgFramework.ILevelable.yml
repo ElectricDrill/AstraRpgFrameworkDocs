@@ -1,0 +1,369 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.ILevelable
+  commentId: T:ElectricDrill.SoapRpgFramework.ILevelable
+  id: ILevelable
+  parent: ElectricDrill.SoapRpgFramework
+  children:
+  - ElectricDrill.SoapRpgFramework.ILevelable.AddExp(System.Int64)
+  - ElectricDrill.SoapRpgFramework.ILevelable.CurrentLevelTotalExperience
+  - ElectricDrill.SoapRpgFramework.ILevelable.CurrentTotalExperience
+  - ElectricDrill.SoapRpgFramework.ILevelable.Level
+  - ElectricDrill.SoapRpgFramework.ILevelable.NextLevelTotalExperience
+  - ElectricDrill.SoapRpgFramework.ILevelable.SetTotalCurrentExp(System.Int64)
+  - ElectricDrill.SoapRpgFramework.ILevelable.ValidateExperience
+  langs:
+  - csharp
+  - vb
+  name: ILevelable
+  nameWithType: ILevelable
+  fullName: ElectricDrill.SoapRpgFramework.ILevelable
+  type: Interface
+  source:
+    remote:
+      path: Runtime/Experience/ILevelable.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: ILevelable
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/ILevelable.cs
+    startLine: 6
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework
+  summary: >-
+    Interface for entities that have a leveling system based on experience points.
+
+    Provides the core functionality for level progression and experience management.
+  example: []
+  syntax:
+    content: public interface ILevelable
+    content.vb: Public Interface ILevelable
+- uid: ElectricDrill.SoapRpgFramework.ILevelable.Level
+  commentId: P:ElectricDrill.SoapRpgFramework.ILevelable.Level
+  id: Level
+  parent: ElectricDrill.SoapRpgFramework.ILevelable
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: ILevelable.Level
+  fullName: ElectricDrill.SoapRpgFramework.ILevelable.Level
+  type: Property
+  source:
+    remote:
+      path: Runtime/Experience/ILevelable.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Level
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/ILevelable.cs
+    startLine: 12
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework
+  summary: >-
+    Gets or sets the current level of the entity.
+
+    Setting the level may trigger level-up events and related effects.
+  example: []
+  syntax:
+    content: int Level { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Property Level As Integer
+  overload: ElectricDrill.SoapRpgFramework.ILevelable.Level*
+- uid: ElectricDrill.SoapRpgFramework.ILevelable.AddExp(System.Int64)
+  commentId: M:ElectricDrill.SoapRpgFramework.ILevelable.AddExp(System.Int64)
+  id: AddExp(System.Int64)
+  parent: ElectricDrill.SoapRpgFramework.ILevelable
+  langs:
+  - csharp
+  - vb
+  name: AddExp(long)
+  nameWithType: ILevelable.AddExp(long)
+  fullName: ElectricDrill.SoapRpgFramework.ILevelable.AddExp(long)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Experience/ILevelable.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: AddExp
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/ILevelable.cs
+    startLine: 19
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework
+  summary: >-
+    Adds experience points to the entity.
+
+    May cause the entity to level up if enough experience is gained.
+  example: []
+  syntax:
+    content: void AddExp(long amount)
+    parameters:
+    - id: amount
+      type: System.Int64
+      description: The amount of experience to add.
+    content.vb: Sub AddExp(amount As Long)
+  overload: ElectricDrill.SoapRpgFramework.ILevelable.AddExp*
+  nameWithType.vb: ILevelable.AddExp(Long)
+  fullName.vb: ElectricDrill.SoapRpgFramework.ILevelable.AddExp(Long)
+  name.vb: AddExp(Long)
+- uid: ElectricDrill.SoapRpgFramework.ILevelable.SetTotalCurrentExp(System.Int64)
+  commentId: M:ElectricDrill.SoapRpgFramework.ILevelable.SetTotalCurrentExp(System.Int64)
+  id: SetTotalCurrentExp(System.Int64)
+  parent: ElectricDrill.SoapRpgFramework.ILevelable
+  langs:
+  - csharp
+  - vb
+  name: SetTotalCurrentExp(long)
+  nameWithType: ILevelable.SetTotalCurrentExp(long)
+  fullName: ElectricDrill.SoapRpgFramework.ILevelable.SetTotalCurrentExp(long)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Experience/ILevelable.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: SetTotalCurrentExp
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/ILevelable.cs
+    startLine: 26
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework
+  summary: >-
+    Sets the total current experience and updates the level accordingly.
+
+    The level will be recalculated based on the new experience total.
+  example: []
+  syntax:
+    content: void SetTotalCurrentExp(long totalCurrentExperience)
+    parameters:
+    - id: totalCurrentExperience
+      type: System.Int64
+      description: The total experience to set.
+    content.vb: Sub SetTotalCurrentExp(totalCurrentExperience As Long)
+  overload: ElectricDrill.SoapRpgFramework.ILevelable.SetTotalCurrentExp*
+  nameWithType.vb: ILevelable.SetTotalCurrentExp(Long)
+  fullName.vb: ElectricDrill.SoapRpgFramework.ILevelable.SetTotalCurrentExp(Long)
+  name.vb: SetTotalCurrentExp(Long)
+- uid: ElectricDrill.SoapRpgFramework.ILevelable.CurrentTotalExperience
+  commentId: P:ElectricDrill.SoapRpgFramework.ILevelable.CurrentTotalExperience
+  id: CurrentTotalExperience
+  parent: ElectricDrill.SoapRpgFramework.ILevelable
+  langs:
+  - csharp
+  - vb
+  name: CurrentTotalExperience
+  nameWithType: ILevelable.CurrentTotalExperience
+  fullName: ElectricDrill.SoapRpgFramework.ILevelable.CurrentTotalExperience
+  type: Property
+  source:
+    remote:
+      path: Runtime/Experience/ILevelable.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: CurrentTotalExperience
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/ILevelable.cs
+    startLine: 32
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework
+  summary: >-
+    Gets the current total experience of the entity.
+
+    This represents all experience gained since creation.
+  example: []
+  syntax:
+    content: long CurrentTotalExperience { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: ReadOnly Property CurrentTotalExperience As Long
+  overload: ElectricDrill.SoapRpgFramework.ILevelable.CurrentTotalExperience*
+- uid: ElectricDrill.SoapRpgFramework.ILevelable.CurrentLevelTotalExperience
+  commentId: M:ElectricDrill.SoapRpgFramework.ILevelable.CurrentLevelTotalExperience
+  id: CurrentLevelTotalExperience
+  parent: ElectricDrill.SoapRpgFramework.ILevelable
+  langs:
+  - csharp
+  - vb
+  name: CurrentLevelTotalExperience()
+  nameWithType: ILevelable.CurrentLevelTotalExperience()
+  fullName: ElectricDrill.SoapRpgFramework.ILevelable.CurrentLevelTotalExperience()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Experience/ILevelable.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: CurrentLevelTotalExperience
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/ILevelable.cs
+    startLine: 38
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework
+  summary: Gets the total experience required to reach the current level.
+  example: []
+  syntax:
+    content: long CurrentLevelTotalExperience()
+    return:
+      type: System.Int64
+      description: The experience threshold for the current level.
+    content.vb: Function CurrentLevelTotalExperience() As Long
+  overload: ElectricDrill.SoapRpgFramework.ILevelable.CurrentLevelTotalExperience*
+- uid: ElectricDrill.SoapRpgFramework.ILevelable.NextLevelTotalExperience
+  commentId: M:ElectricDrill.SoapRpgFramework.ILevelable.NextLevelTotalExperience
+  id: NextLevelTotalExperience
+  parent: ElectricDrill.SoapRpgFramework.ILevelable
+  langs:
+  - csharp
+  - vb
+  name: NextLevelTotalExperience()
+  nameWithType: ILevelable.NextLevelTotalExperience()
+  fullName: ElectricDrill.SoapRpgFramework.ILevelable.NextLevelTotalExperience()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Experience/ILevelable.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: NextLevelTotalExperience
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/ILevelable.cs
+    startLine: 44
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework
+  summary: Gets the total experience required to reach the next level.
+  example: []
+  syntax:
+    content: long NextLevelTotalExperience()
+    return:
+      type: System.Int64
+      description: The experience threshold for the next level.
+    content.vb: Function NextLevelTotalExperience() As Long
+  overload: ElectricDrill.SoapRpgFramework.ILevelable.NextLevelTotalExperience*
+- uid: ElectricDrill.SoapRpgFramework.ILevelable.ValidateExperience
+  commentId: M:ElectricDrill.SoapRpgFramework.ILevelable.ValidateExperience
+  id: ValidateExperience
+  parent: ElectricDrill.SoapRpgFramework.ILevelable
+  langs:
+  - csharp
+  - vb
+  name: ValidateExperience()
+  nameWithType: ILevelable.ValidateExperience()
+  fullName: ElectricDrill.SoapRpgFramework.ILevelable.ValidateExperience()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Experience/ILevelable.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: ValidateExperience
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/ILevelable.cs
+    startLine: 50
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework
+  summary: >-
+    Validates that the current experience matches the current level.
+
+    Used for debugging and ensuring data consistency.
+  example: []
+  syntax:
+    content: void ValidateExperience()
+    content.vb: Sub ValidateExperience()
+  overload: ElectricDrill.SoapRpgFramework.ILevelable.ValidateExperience*
+references:
+- uid: ElectricDrill.SoapRpgFramework
+  commentId: N:ElectricDrill.SoapRpgFramework
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework
+  nameWithType: ElectricDrill.SoapRpgFramework
+  fullName: ElectricDrill.SoapRpgFramework
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+- uid: ElectricDrill.SoapRpgFramework.ILevelable.Level*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.ILevelable.Level
+  href: ElectricDrill.SoapRpgFramework.ILevelable.html#ElectricDrill_SoapRpgFramework_ILevelable_Level
+  name: Level
+  nameWithType: ILevelable.Level
+  fullName: ElectricDrill.SoapRpgFramework.ILevelable.Level
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ElectricDrill.SoapRpgFramework.ILevelable.AddExp*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.ILevelable.AddExp
+  href: ElectricDrill.SoapRpgFramework.ILevelable.html#ElectricDrill_SoapRpgFramework_ILevelable_AddExp_System_Int64_
+  name: AddExp
+  nameWithType: ILevelable.AddExp
+  fullName: ElectricDrill.SoapRpgFramework.ILevelable.AddExp
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: ElectricDrill.SoapRpgFramework.ILevelable.SetTotalCurrentExp*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.ILevelable.SetTotalCurrentExp
+  href: ElectricDrill.SoapRpgFramework.ILevelable.html#ElectricDrill_SoapRpgFramework_ILevelable_SetTotalCurrentExp_System_Int64_
+  name: SetTotalCurrentExp
+  nameWithType: ILevelable.SetTotalCurrentExp
+  fullName: ElectricDrill.SoapRpgFramework.ILevelable.SetTotalCurrentExp
+- uid: ElectricDrill.SoapRpgFramework.ILevelable.CurrentTotalExperience*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.ILevelable.CurrentTotalExperience
+  href: ElectricDrill.SoapRpgFramework.ILevelable.html#ElectricDrill_SoapRpgFramework_ILevelable_CurrentTotalExperience
+  name: CurrentTotalExperience
+  nameWithType: ILevelable.CurrentTotalExperience
+  fullName: ElectricDrill.SoapRpgFramework.ILevelable.CurrentTotalExperience
+- uid: ElectricDrill.SoapRpgFramework.ILevelable.CurrentLevelTotalExperience*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.ILevelable.CurrentLevelTotalExperience
+  href: ElectricDrill.SoapRpgFramework.ILevelable.html#ElectricDrill_SoapRpgFramework_ILevelable_CurrentLevelTotalExperience
+  name: CurrentLevelTotalExperience
+  nameWithType: ILevelable.CurrentLevelTotalExperience
+  fullName: ElectricDrill.SoapRpgFramework.ILevelable.CurrentLevelTotalExperience
+- uid: ElectricDrill.SoapRpgFramework.ILevelable.NextLevelTotalExperience*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.ILevelable.NextLevelTotalExperience
+  href: ElectricDrill.SoapRpgFramework.ILevelable.html#ElectricDrill_SoapRpgFramework_ILevelable_NextLevelTotalExperience
+  name: NextLevelTotalExperience
+  nameWithType: ILevelable.NextLevelTotalExperience
+  fullName: ElectricDrill.SoapRpgFramework.ILevelable.NextLevelTotalExperience
+- uid: ElectricDrill.SoapRpgFramework.ILevelable.ValidateExperience*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.ILevelable.ValidateExperience
+  href: ElectricDrill.SoapRpgFramework.ILevelable.html#ElectricDrill_SoapRpgFramework_ILevelable_ValidateExperience
+  name: ValidateExperience
+  nameWithType: ILevelable.ValidateExperience
+  fullName: ElectricDrill.SoapRpgFramework.ILevelable.ValidateExperience

@@ -5,7 +5,7 @@ items:
   id: StatChangeInfo
   parent: ElectricDrill
   children:
-  - ElectricDrill.StatChangeInfo.#ctor(SoapRpgFramework.Stats.EntityStats,SoapRpgFramework.Stats.Stat,System.Int64,System.Int64)
+  - ElectricDrill.StatChangeInfo.#ctor(ElectricDrill.SoapRpgFramework.Stats.EntityStats,ElectricDrill.SoapRpgFramework.Stats.Stat,System.Int64,System.Int64)
   - ElectricDrill.StatChangeInfo.EntityStats
   - ElectricDrill.StatChangeInfo.NewValue
   - ElectricDrill.StatChangeInfo.OldValue
@@ -63,7 +63,7 @@ items:
   syntax:
     content: public EntityStats EntityStats
     return:
-      type: SoapRpgFramework.Stats.EntityStats
+      type: ElectricDrill.SoapRpgFramework.Stats.EntityStats
     content.vb: Public EntityStats As EntityStats
 - uid: ElectricDrill.StatChangeInfo.Stat
   commentId: F:ElectricDrill.StatChangeInfo.Stat
@@ -92,7 +92,7 @@ items:
   syntax:
     content: public Stat Stat
     return:
-      type: SoapRpgFramework.Stats.Stat
+      type: ElectricDrill.SoapRpgFramework.Stats.Stat
     content.vb: Public Stat As Stat
 - uid: ElectricDrill.StatChangeInfo.OldValue
   commentId: F:ElectricDrill.StatChangeInfo.OldValue
@@ -152,16 +152,16 @@ items:
     return:
       type: System.Int64
     content.vb: Public NewValue As Long
-- uid: ElectricDrill.StatChangeInfo.#ctor(SoapRpgFramework.Stats.EntityStats,SoapRpgFramework.Stats.Stat,System.Int64,System.Int64)
-  commentId: M:ElectricDrill.StatChangeInfo.#ctor(SoapRpgFramework.Stats.EntityStats,SoapRpgFramework.Stats.Stat,System.Int64,System.Int64)
-  id: '#ctor(SoapRpgFramework.Stats.EntityStats,SoapRpgFramework.Stats.Stat,System.Int64,System.Int64)'
+- uid: ElectricDrill.StatChangeInfo.#ctor(ElectricDrill.SoapRpgFramework.Stats.EntityStats,ElectricDrill.SoapRpgFramework.Stats.Stat,System.Int64,System.Int64)
+  commentId: M:ElectricDrill.StatChangeInfo.#ctor(ElectricDrill.SoapRpgFramework.Stats.EntityStats,ElectricDrill.SoapRpgFramework.Stats.Stat,System.Int64,System.Int64)
+  id: '#ctor(ElectricDrill.SoapRpgFramework.Stats.EntityStats,ElectricDrill.SoapRpgFramework.Stats.Stat,System.Int64,System.Int64)'
   parent: ElectricDrill.StatChangeInfo
   langs:
   - csharp
   - vb
   name: StatChangeInfo(EntityStats, Stat, long, long)
   nameWithType: StatChangeInfo.StatChangeInfo(EntityStats, Stat, long, long)
-  fullName: ElectricDrill.StatChangeInfo.StatChangeInfo(SoapRpgFramework.Stats.EntityStats, SoapRpgFramework.Stats.Stat, long, long)
+  fullName: ElectricDrill.StatChangeInfo.StatChangeInfo(ElectricDrill.SoapRpgFramework.Stats.EntityStats, ElectricDrill.SoapRpgFramework.Stats.Stat, long, long)
   type: Constructor
   source:
     remote:
@@ -180,10 +180,10 @@ items:
     content: public StatChangeInfo(EntityStats entity, Stat stat, long oldValue, long newValue)
     parameters:
     - id: entity
-      type: SoapRpgFramework.Stats.EntityStats
+      type: ElectricDrill.SoapRpgFramework.Stats.EntityStats
       description: The EntityStats component that owns the stat.
     - id: stat
-      type: SoapRpgFramework.Stats.Stat
+      type: ElectricDrill.SoapRpgFramework.Stats.Stat
       description: The stat that was changed.
     - id: oldValue
       type: System.Int64
@@ -194,7 +194,7 @@ items:
     content.vb: Public Sub New(entity As EntityStats, stat As Stat, oldValue As Long, newValue As Long)
   overload: ElectricDrill.StatChangeInfo.#ctor*
   nameWithType.vb: StatChangeInfo.New(EntityStats, Stat, Long, Long)
-  fullName.vb: ElectricDrill.StatChangeInfo.New(SoapRpgFramework.Stats.EntityStats, SoapRpgFramework.Stats.Stat, Long, Long)
+  fullName.vb: ElectricDrill.StatChangeInfo.New(ElectricDrill.SoapRpgFramework.Stats.EntityStats, ElectricDrill.SoapRpgFramework.Stats.Stat, Long, Long)
   name.vb: New(EntityStats, Stat, Long, Long)
 references:
 - uid: ElectricDrill
@@ -203,42 +203,50 @@ references:
   name: ElectricDrill
   nameWithType: ElectricDrill
   fullName: ElectricDrill
-- uid: SoapRpgFramework.Stats.EntityStats
-  commentId: T:SoapRpgFramework.Stats.EntityStats
-  parent: SoapRpgFramework.Stats
-  href: SoapRpgFramework.Stats.EntityStats.html
+- uid: ElectricDrill.SoapRpgFramework.Stats.EntityStats
+  commentId: T:ElectricDrill.SoapRpgFramework.Stats.EntityStats
+  parent: ElectricDrill.SoapRpgFramework.Stats
+  href: ElectricDrill.SoapRpgFramework.Stats.EntityStats.html
   name: EntityStats
   nameWithType: EntityStats
-  fullName: SoapRpgFramework.Stats.EntityStats
-- uid: SoapRpgFramework.Stats
-  commentId: N:SoapRpgFramework.Stats
-  href: SoapRpgFramework.html
-  name: SoapRpgFramework.Stats
-  nameWithType: SoapRpgFramework.Stats
-  fullName: SoapRpgFramework.Stats
+  fullName: ElectricDrill.SoapRpgFramework.Stats.EntityStats
+- uid: ElectricDrill.SoapRpgFramework.Stats
+  commentId: N:ElectricDrill.SoapRpgFramework.Stats
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Stats
+  nameWithType: ElectricDrill.SoapRpgFramework.Stats
+  fullName: ElectricDrill.SoapRpgFramework.Stats
   spec.csharp:
-  - uid: SoapRpgFramework
-    name: SoapRpgFramework
-    href: SoapRpgFramework.html
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
   - name: .
-  - uid: SoapRpgFramework.Stats
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Stats
     name: Stats
-    href: SoapRpgFramework.Stats.html
+    href: ElectricDrill.SoapRpgFramework.Stats.html
   spec.vb:
-  - uid: SoapRpgFramework
-    name: SoapRpgFramework
-    href: SoapRpgFramework.html
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
   - name: .
-  - uid: SoapRpgFramework.Stats
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Stats
     name: Stats
-    href: SoapRpgFramework.Stats.html
-- uid: SoapRpgFramework.Stats.Stat
-  commentId: T:SoapRpgFramework.Stats.Stat
-  parent: SoapRpgFramework.Stats
-  href: SoapRpgFramework.Stats.Stat.html
+    href: ElectricDrill.SoapRpgFramework.Stats.html
+- uid: ElectricDrill.SoapRpgFramework.Stats.Stat
+  commentId: T:ElectricDrill.SoapRpgFramework.Stats.Stat
+  parent: ElectricDrill.SoapRpgFramework.Stats
+  href: ElectricDrill.SoapRpgFramework.Stats.Stat.html
   name: Stat
   nameWithType: Stat
-  fullName: SoapRpgFramework.Stats.Stat
+  fullName: ElectricDrill.SoapRpgFramework.Stats.Stat
 - uid: System.Int64
   commentId: T:System.Int64
   parent: System
@@ -258,7 +266,7 @@ references:
   fullName: System
 - uid: ElectricDrill.StatChangeInfo.#ctor*
   commentId: Overload:ElectricDrill.StatChangeInfo.#ctor
-  href: ElectricDrill.StatChangeInfo.html#ElectricDrill_StatChangeInfo__ctor_SoapRpgFramework_Stats_EntityStats_SoapRpgFramework_Stats_Stat_System_Int64_System_Int64_
+  href: ElectricDrill.StatChangeInfo.html#ElectricDrill_StatChangeInfo__ctor_ElectricDrill_SoapRpgFramework_Stats_EntityStats_ElectricDrill_SoapRpgFramework_Stats_Stat_System_Int64_System_Int64_
   name: StatChangeInfo
   nameWithType: StatChangeInfo.StatChangeInfo
   fullName: ElectricDrill.StatChangeInfo.StatChangeInfo
