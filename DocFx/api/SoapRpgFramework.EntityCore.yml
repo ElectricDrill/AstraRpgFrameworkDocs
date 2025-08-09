@@ -1,0 +1,470 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoapRpgFramework.EntityCore
+  commentId: T:SoapRpgFramework.EntityCore
+  id: EntityCore
+  parent: SoapRpgFramework
+  children:
+  - SoapRpgFramework.EntityCore.Attributes
+  - SoapRpgFramework.EntityCore.Awake
+  - SoapRpgFramework.EntityCore.Level
+  - SoapRpgFramework.EntityCore.Name
+  - SoapRpgFramework.EntityCore.Start
+  - SoapRpgFramework.EntityCore.Stats
+  - SoapRpgFramework.EntityCore.Update
+  langs:
+  - csharp
+  - vb
+  name: EntityCore
+  nameWithType: EntityCore
+  fullName: SoapRpgFramework.EntityCore
+  type: Class
+  source:
+    remote:
+      path: Runtime/EntityCore.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: EntityCore
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityCore.cs
+    startLine: 13
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  summary: >-
+    The core component for any entity in the game.
+
+    It is the mandatory base class for all entities, providing essential functionality.
+
+    Provides easy access to the entity's level, stats, and attributes.
+  example: []
+  syntax:
+    content: >-
+      [DisallowMultipleComponent]
+
+      public class EntityCore : MonoBehaviour, ILevel, IAttributes
+    content.vb: >-
+      <DisallowMultipleComponent>
+
+      Public Class EntityCore Inherits MonoBehaviour Implements ILevel, IAttributes
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  implements:
+  - SoapRpgFramework.ILevel
+  - SoapRpgFramework.IAttributes
+  attributes:
+  - type: UnityEngine.DisallowMultipleComponent
+    ctor: UnityEngine.DisallowMultipleComponent.#ctor
+    arguments: []
+- uid: SoapRpgFramework.EntityCore.Level
+  commentId: P:SoapRpgFramework.EntityCore.Level
+  id: Level
+  parent: SoapRpgFramework.EntityCore
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: EntityCore.Level
+  fullName: SoapRpgFramework.EntityCore.Level
+  type: Property
+  source:
+    remote:
+      path: Runtime/EntityCore.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Level
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityCore.cs
+    startLine: 28
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  summary: Gets the <xref href="SoapRpgFramework.EntityLevel" data-throw-if-not-resolved="false"></xref> class which manages the entity's level and experience.
+  example: []
+  syntax:
+    content: public virtual EntityLevel Level { get; }
+    parameters: []
+    return:
+      type: SoapRpgFramework.EntityLevel
+    content.vb: Public Overridable Property Level As EntityLevel
+  overload: SoapRpgFramework.EntityCore.Level*
+  implements:
+  - SoapRpgFramework.ILevel.Level
+- uid: SoapRpgFramework.EntityCore.Stats
+  commentId: P:SoapRpgFramework.EntityCore.Stats
+  id: Stats
+  parent: SoapRpgFramework.EntityCore
+  langs:
+  - csharp
+  - vb
+  name: Stats
+  nameWithType: EntityCore.Stats
+  fullName: SoapRpgFramework.EntityCore.Stats
+  type: Property
+  source:
+    remote:
+      path: Runtime/EntityCore.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Stats
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityCore.cs
+    startLine: 33
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  summary: Gets the <xref href="SoapRpgFramework.Stats.EntityStats" data-throw-if-not-resolved="false"></xref> component which manages the entity's stats.
+  example: []
+  syntax:
+    content: public virtual EntityStats Stats { get; }
+    parameters: []
+    return:
+      type: SoapRpgFramework.Stats.EntityStats
+    content.vb: Public Overridable ReadOnly Property Stats As EntityStats
+  overload: SoapRpgFramework.EntityCore.Stats*
+- uid: SoapRpgFramework.EntityCore.Attributes
+  commentId: P:SoapRpgFramework.EntityCore.Attributes
+  id: Attributes
+  parent: SoapRpgFramework.EntityCore
+  langs:
+  - csharp
+  - vb
+  name: Attributes
+  nameWithType: EntityCore.Attributes
+  fullName: SoapRpgFramework.EntityCore.Attributes
+  type: Property
+  source:
+    remote:
+      path: Runtime/EntityCore.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Attributes
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityCore.cs
+    startLine: 38
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  summary: Gets the <xref href="SoapRpgFramework.Attributes.EntityAttributes" data-throw-if-not-resolved="false"></xref> component which manages the entity's attributes.
+  example: []
+  syntax:
+    content: public virtual EntityAttributes Attributes { get; }
+    parameters: []
+    return:
+      type: SoapRpgFramework.Attributes.EntityAttributes
+    content.vb: Public Overridable ReadOnly Property Attributes As EntityAttributes
+  overload: SoapRpgFramework.EntityCore.Attributes*
+  implements:
+  - SoapRpgFramework.IAttributes.Attributes
+- uid: SoapRpgFramework.EntityCore.Name
+  commentId: P:SoapRpgFramework.EntityCore.Name
+  id: Name
+  parent: SoapRpgFramework.EntityCore
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: EntityCore.Name
+  fullName: SoapRpgFramework.EntityCore.Name
+  type: Property
+  source:
+    remote:
+      path: Runtime/EntityCore.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Name
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityCore.cs
+    startLine: 43
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  summary: Gets the name of the entity's GameObject.
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: SoapRpgFramework.EntityCore.Name*
+- uid: SoapRpgFramework.EntityCore.Awake
+  commentId: M:SoapRpgFramework.EntityCore.Awake
+  id: Awake
+  parent: SoapRpgFramework.EntityCore
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: EntityCore.Awake()
+  fullName: SoapRpgFramework.EntityCore.Awake()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EntityCore.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Awake
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityCore.cs
+    startLine: 50
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  syntax:
+    content: protected virtual void Awake()
+    content.vb: Protected Overridable Sub Awake()
+  overload: SoapRpgFramework.EntityCore.Awake*
+- uid: SoapRpgFramework.EntityCore.Start
+  commentId: M:SoapRpgFramework.EntityCore.Start
+  id: Start
+  parent: SoapRpgFramework.EntityCore
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: EntityCore.Start()
+  fullName: SoapRpgFramework.EntityCore.Start()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EntityCore.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Start
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityCore.cs
+    startLine: 53
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start()
+  overload: SoapRpgFramework.EntityCore.Start*
+- uid: SoapRpgFramework.EntityCore.Update
+  commentId: M:SoapRpgFramework.EntityCore.Update
+  id: Update
+  parent: SoapRpgFramework.EntityCore
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: EntityCore.Update()
+  fullName: SoapRpgFramework.EntityCore.Update()
+  type: Method
+  source:
+    remote:
+      path: Runtime/EntityCore.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Update
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityCore.cs
+    startLine: 68
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  syntax:
+    content: protected virtual void Update()
+    content.vb: Protected Overridable Sub Update()
+  overload: SoapRpgFramework.EntityCore.Update*
+references:
+- uid: SoapRpgFramework
+  commentId: N:SoapRpgFramework
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework
+  nameWithType: SoapRpgFramework
+  fullName: SoapRpgFramework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: SoapRpgFramework.ILevel
+  commentId: T:SoapRpgFramework.ILevel
+  parent: SoapRpgFramework
+  href: SoapRpgFramework.ILevel.html
+  name: ILevel
+  nameWithType: ILevel
+  fullName: SoapRpgFramework.ILevel
+- uid: SoapRpgFramework.IAttributes
+  commentId: T:SoapRpgFramework.IAttributes
+  parent: SoapRpgFramework
+  href: SoapRpgFramework.IAttributes.html
+  name: IAttributes
+  nameWithType: IAttributes
+  fullName: SoapRpgFramework.IAttributes
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SoapRpgFramework.EntityLevel
+  commentId: T:SoapRpgFramework.EntityLevel
+  parent: SoapRpgFramework
+  href: SoapRpgFramework.EntityLevel.html
+  name: EntityLevel
+  nameWithType: EntityLevel
+  fullName: SoapRpgFramework.EntityLevel
+- uid: SoapRpgFramework.EntityCore.Level*
+  commentId: Overload:SoapRpgFramework.EntityCore.Level
+  href: SoapRpgFramework.EntityCore.html#SoapRpgFramework_EntityCore_Level
+  name: Level
+  nameWithType: EntityCore.Level
+  fullName: SoapRpgFramework.EntityCore.Level
+- uid: SoapRpgFramework.ILevel.Level
+  commentId: P:SoapRpgFramework.ILevel.Level
+  parent: SoapRpgFramework.ILevel
+  href: SoapRpgFramework.ILevel.html#SoapRpgFramework_ILevel_Level
+  name: Level
+  nameWithType: ILevel.Level
+  fullName: SoapRpgFramework.ILevel.Level
+- uid: SoapRpgFramework.Stats.EntityStats
+  commentId: T:SoapRpgFramework.Stats.EntityStats
+  parent: SoapRpgFramework.Stats
+  href: SoapRpgFramework.Stats.EntityStats.html
+  name: EntityStats
+  nameWithType: EntityStats
+  fullName: SoapRpgFramework.Stats.EntityStats
+- uid: SoapRpgFramework.EntityCore.Stats*
+  commentId: Overload:SoapRpgFramework.EntityCore.Stats
+  href: SoapRpgFramework.EntityCore.html#SoapRpgFramework_EntityCore_Stats
+  name: Stats
+  nameWithType: EntityCore.Stats
+  fullName: SoapRpgFramework.EntityCore.Stats
+- uid: SoapRpgFramework.Stats
+  commentId: N:SoapRpgFramework.Stats
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework.Stats
+  nameWithType: SoapRpgFramework.Stats
+  fullName: SoapRpgFramework.Stats
+  spec.csharp:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Stats
+    name: Stats
+    href: SoapRpgFramework.Stats.html
+  spec.vb:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Stats
+    name: Stats
+    href: SoapRpgFramework.Stats.html
+- uid: SoapRpgFramework.Attributes.EntityAttributes
+  commentId: T:SoapRpgFramework.Attributes.EntityAttributes
+  parent: SoapRpgFramework.Attributes
+  href: SoapRpgFramework.Attributes.EntityAttributes.html
+  name: EntityAttributes
+  nameWithType: EntityAttributes
+  fullName: SoapRpgFramework.Attributes.EntityAttributes
+- uid: SoapRpgFramework.EntityCore.Attributes*
+  commentId: Overload:SoapRpgFramework.EntityCore.Attributes
+  href: SoapRpgFramework.EntityCore.html#SoapRpgFramework_EntityCore_Attributes
+  name: Attributes
+  nameWithType: EntityCore.Attributes
+  fullName: SoapRpgFramework.EntityCore.Attributes
+- uid: SoapRpgFramework.IAttributes.Attributes
+  commentId: P:SoapRpgFramework.IAttributes.Attributes
+  parent: SoapRpgFramework.IAttributes
+  href: SoapRpgFramework.IAttributes.html#SoapRpgFramework_IAttributes_Attributes
+  name: Attributes
+  nameWithType: IAttributes.Attributes
+  fullName: SoapRpgFramework.IAttributes.Attributes
+- uid: SoapRpgFramework.Attributes
+  commentId: N:SoapRpgFramework.Attributes
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework.Attributes
+  nameWithType: SoapRpgFramework.Attributes
+  fullName: SoapRpgFramework.Attributes
+  spec.csharp:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Attributes
+    name: Attributes
+    href: SoapRpgFramework.Attributes.html
+  spec.vb:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Attributes
+    name: Attributes
+    href: SoapRpgFramework.Attributes.html
+- uid: SoapRpgFramework.EntityCore.Name*
+  commentId: Overload:SoapRpgFramework.EntityCore.Name
+  href: SoapRpgFramework.EntityCore.html#SoapRpgFramework_EntityCore_Name
+  name: Name
+  nameWithType: EntityCore.Name
+  fullName: SoapRpgFramework.EntityCore.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: SoapRpgFramework.EntityCore.Awake*
+  commentId: Overload:SoapRpgFramework.EntityCore.Awake
+  href: SoapRpgFramework.EntityCore.html#SoapRpgFramework_EntityCore_Awake
+  name: Awake
+  nameWithType: EntityCore.Awake
+  fullName: SoapRpgFramework.EntityCore.Awake
+- uid: SoapRpgFramework.EntityCore.Start*
+  commentId: Overload:SoapRpgFramework.EntityCore.Start
+  href: SoapRpgFramework.EntityCore.html#SoapRpgFramework_EntityCore_Start
+  name: Start
+  nameWithType: EntityCore.Start
+  fullName: SoapRpgFramework.EntityCore.Start
+- uid: SoapRpgFramework.EntityCore.Update*
+  commentId: Overload:SoapRpgFramework.EntityCore.Update
+  href: SoapRpgFramework.EntityCore.html#SoapRpgFramework_EntityCore_Update
+  name: Update
+  nameWithType: EntityCore.Update
+  fullName: SoapRpgFramework.EntityCore.Update

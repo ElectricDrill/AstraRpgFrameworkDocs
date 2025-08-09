@@ -1,0 +1,48 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.Utils
+  commentId: N:ElectricDrill.SoapRpgFramework.Utils
+  id: ElectricDrill.SoapRpgFramework.Utils
+  children:
+  - ElectricDrill.SoapRpgFramework.Utils.Cache`2
+  langs:
+  - csharp
+  - vb
+  name: ElectricDrill.SoapRpgFramework.Utils
+  nameWithType: ElectricDrill.SoapRpgFramework.Utils
+  fullName: ElectricDrill.SoapRpgFramework.Utils
+  type: Namespace
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+references:
+- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2
+  commentId: T:ElectricDrill.SoapRpgFramework.Utils.Cache`2
+  href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html
+  name: Cache<KType, VType>
+  nameWithType: Cache<KType, VType>
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>
+  nameWithType.vb: Cache(Of KType, VType)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType)
+  name.vb: Cache(Of KType, VType)
+  spec.csharp:
+  - uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2
+    name: Cache
+    href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html
+  - name: <
+  - name: KType
+  - name: ','
+  - name: " "
+  - name: VType
+  - name: '>'
+  spec.vb:
+  - uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2
+    name: Cache
+    href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: KType
+  - name: ','
+  - name: " "
+  - name: VType
+  - name: )

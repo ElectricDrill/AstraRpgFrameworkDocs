@@ -985,6 +985,306 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.AttributeChangedGameEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.AttributeChangedGameEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.AttributeChangedGameEventListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.AttributeChangedGameEventListener.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.EntityCoreGameEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.EntityCoreGameEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.EntityCoreGameEventListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.EntityCoreGameEventListener.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.NativeType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.NativeType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.GameEventDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.GameEventDefinition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGeneric2-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGeneric2-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGeneric3-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGeneric3-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGeneric4-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventGeneric4-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventListener.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric2-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric2-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric3-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric3-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric4-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric4-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.IRaisable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.IRaisable-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.IRaisable-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.IRaisable-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.IRaisable-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.IRaisable-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.IRaisable-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.IRaisable-4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.IntGameEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.IntGameEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.IntGameEventListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.IntGameEventListener.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.StatChangedGameEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.StatChangedGameEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.StatChangedGameEventListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.StatChangedGameEventListener.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.Cache-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.Cache-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.StatChangeInfo.yml",
       "output": {
         ".html": {
@@ -999,6 +1299,566 @@
       "output": {
         ".html": {
           "relative_path": "api/ElectricDrill.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Attributes.Attribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Attributes.Attribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Attributes.AttributeChangeInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Attributes.AttributeChangeInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Attributes.AttributeMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Attributes.AttributeMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Attributes.AttributePointsTracker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Attributes.AttributePointsTracker.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Attributes.AttributeSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Attributes.AttributeSet.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Attributes.AttributeSetInstance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Attributes.AttributeSetInstance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Attributes.AttributeSetInstanceExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Attributes.AttributeSetInstanceExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Attributes.AttributeSetMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Attributes.AttributeSetMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Attributes.EntityAttributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Attributes.EntityAttributes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Attributes.IAttributeContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Attributes.IAttributeContainer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Attributes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.BoundedValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.BoundedValue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Class.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Class.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.ClassMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.ClassMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.EntityClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.EntityClass.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.EntityCore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.EntityCore.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.EntityLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.EntityLevel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.ExpSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.ExpSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.GrowthFormula.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.GrowthFormula.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.GrowthFormulaMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.GrowthFormulaMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.IAttributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.IAttributes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.IClassSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.IClassSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.IExpSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.IExpSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.ILevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.ILevel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.ILevelable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.ILevelable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.IStatSetSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.IStatSetSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Scaling.AttributesScalingComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Scaling.AttributesScalingComponent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Scaling.ScalingComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Scaling.ScalingComponent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Scaling.ScalingFormula.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Scaling.ScalingFormula.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Scaling.ScalingFormulaMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Scaling.ScalingFormulaMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Scaling.StatScalingComponentMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Scaling.StatScalingComponentMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Scaling.StatsScalingComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Scaling.StatsScalingComponent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Scaling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Scaling.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Stats.EntityStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Stats.EntityStats.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Stats.IStatContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Stats.IStatContainer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Stats.Stat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Stats.Stat.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Stats.StatMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Stats.StatMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Stats.StatSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Stats.StatSet.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Stats.StatSetInstance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Stats.StatSetInstance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Stats.StatSetMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Stats.StatSetMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Stats.StatToStatModifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Stats.StatToStatModifier.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Stats.StatToStatModifierMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Stats.StatToStatModifierMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Stats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Stats.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Utils.InitializationUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Utils.InitializationUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Utils.IntRef.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Utils.IntRef.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Utils.IntVar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Utils.IntVar.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Utils.LongRef.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Utils.LongRef.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Utils.LongVar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Utils.LongVar.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Utils.Percentage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Utils.Percentage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Utils.SerKeyValPair-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Utils.SerKeyValPair-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Utils.SerializableDictionary-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Utils.SerializableDictionary-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Utils.SerializableHashSet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Utils.SerializableHashSet-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.Utils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SoapRpgFramework.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SoapRpgFramework.html"
         }
       },
       "version": ""

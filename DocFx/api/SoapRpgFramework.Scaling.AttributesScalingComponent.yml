@@ -1,0 +1,768 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoapRpgFramework.Scaling.AttributesScalingComponent
+  commentId: T:SoapRpgFramework.Scaling.AttributesScalingComponent
+  id: AttributesScalingComponent
+  parent: SoapRpgFramework.Scaling
+  children:
+  - SoapRpgFramework.Scaling.AttributesScalingComponent.GetEntitySet(SoapRpgFramework.EntityCore)
+  - SoapRpgFramework.Scaling.AttributesScalingComponent.GetEntityValue(SoapRpgFramework.EntityCore,SoapRpgFramework.Attributes.Attribute)
+  - SoapRpgFramework.Scaling.AttributesScalingComponent.GetSetItems
+  langs:
+  - csharp
+  - vb
+  name: AttributesScalingComponent
+  nameWithType: AttributesScalingComponent
+  fullName: SoapRpgFramework.Scaling.AttributesScalingComponent
+  type: Class
+  source:
+    remote:
+      path: Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: AttributesScalingComponent
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+    startLine: 11
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Scaling
+  summary: A scaling component that calculates a value based on an entity's attributes.
+  example: []
+  syntax:
+    content: 'public class AttributesScalingComponent : SoSetScalingComponentBase<AttributeSet, Attribute>'
+    content.vb: Public Class AttributesScalingComponent Inherits SoSetScalingComponentBase(Of AttributeSet, Attribute)
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - SoapRpgFramework.Scaling.ScalingComponent
+  - SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}
+  inheritedMembers:
+  - SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}._set
+  - SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.CalculateValue(SoapRpgFramework.EntityCore)
+  - SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetEntitySet(SoapRpgFramework.EntityCore)
+  - SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetEntityValue(SoapRpgFramework.EntityCore,SoapRpgFramework.Attributes.Attribute)
+  - SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.OnValidate
+  - SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetSetItems
+  - SoapRpgFramework.Scaling.ScalingComponent.CalculateValue(SoapRpgFramework.EntityCore)
+- uid: SoapRpgFramework.Scaling.AttributesScalingComponent.GetEntitySet(SoapRpgFramework.EntityCore)
+  commentId: M:SoapRpgFramework.Scaling.AttributesScalingComponent.GetEntitySet(SoapRpgFramework.EntityCore)
+  id: GetEntitySet(SoapRpgFramework.EntityCore)
+  parent: SoapRpgFramework.Scaling.AttributesScalingComponent
+  langs:
+  - csharp
+  - vb
+  name: GetEntitySet(EntityCore)
+  nameWithType: AttributesScalingComponent.GetEntitySet(EntityCore)
+  fullName: SoapRpgFramework.Scaling.AttributesScalingComponent.GetEntitySet(SoapRpgFramework.EntityCore)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: GetEntitySet
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+    startLine: 18
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Scaling
+  summary: Gets the AttributeSet from the specified entity.
+  example: []
+  syntax:
+    content: protected override AttributeSet GetEntitySet(EntityCore entity)
+    parameters:
+    - id: entity
+      type: SoapRpgFramework.EntityCore
+      description: The entity.
+    return:
+      type: SoapRpgFramework.Attributes.AttributeSet
+      description: The entity's AttributeSet.
+    content.vb: Protected Overrides Function GetEntitySet(entity As EntityCore) As AttributeSet
+  overridden: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetEntitySet(SoapRpgFramework.EntityCore)
+  overload: SoapRpgFramework.Scaling.AttributesScalingComponent.GetEntitySet*
+- uid: SoapRpgFramework.Scaling.AttributesScalingComponent.GetEntityValue(SoapRpgFramework.EntityCore,SoapRpgFramework.Attributes.Attribute)
+  commentId: M:SoapRpgFramework.Scaling.AttributesScalingComponent.GetEntityValue(SoapRpgFramework.EntityCore,SoapRpgFramework.Attributes.Attribute)
+  id: GetEntityValue(SoapRpgFramework.EntityCore,SoapRpgFramework.Attributes.Attribute)
+  parent: SoapRpgFramework.Scaling.AttributesScalingComponent
+  langs:
+  - csharp
+  - vb
+  name: GetEntityValue(EntityCore, Attribute)
+  nameWithType: AttributesScalingComponent.GetEntityValue(EntityCore, Attribute)
+  fullName: SoapRpgFramework.Scaling.AttributesScalingComponent.GetEntityValue(SoapRpgFramework.EntityCore, SoapRpgFramework.Attributes.Attribute)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: GetEntityValue
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+    startLine: 26
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Scaling
+  summary: Gets the value of a specific attribute from the entity.
+  example: []
+  syntax:
+    content: protected override long GetEntityValue(EntityCore entity, Attribute key)
+    parameters:
+    - id: entity
+      type: SoapRpgFramework.EntityCore
+      description: The entity.
+    - id: key
+      type: SoapRpgFramework.Attributes.Attribute
+      description: The attribute to get the value of.
+    return:
+      type: System.Int64
+      description: The value of the attribute.
+    content.vb: Protected Overrides Function GetEntityValue(entity As EntityCore, key As Attribute) As Long
+  overridden: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetEntityValue(SoapRpgFramework.EntityCore,SoapRpgFramework.Attributes.Attribute)
+  overload: SoapRpgFramework.Scaling.AttributesScalingComponent.GetEntityValue*
+- uid: SoapRpgFramework.Scaling.AttributesScalingComponent.GetSetItems
+  commentId: M:SoapRpgFramework.Scaling.AttributesScalingComponent.GetSetItems
+  id: GetSetItems
+  parent: SoapRpgFramework.Scaling.AttributesScalingComponent
+  langs:
+  - csharp
+  - vb
+  name: GetSetItems()
+  nameWithType: AttributesScalingComponent.GetSetItems()
+  fullName: SoapRpgFramework.Scaling.AttributesScalingComponent.GetSetItems()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: GetSetItems
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+    startLine: 32
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Scaling
+  summary: Gets the collection of attributes from the associated AttributeSet.
+  example: []
+  syntax:
+    content: protected override IEnumerable<Attribute> GetSetItems()
+    return:
+      type: System.Collections.Generic.IEnumerable{SoapRpgFramework.Attributes.Attribute}
+      description: An enumerable of attributes.
+    content.vb: Protected Overrides Function GetSetItems() As IEnumerable(Of Attribute)
+  overridden: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetSetItems
+  overload: SoapRpgFramework.Scaling.AttributesScalingComponent.GetSetItems*
+references:
+- uid: SoapRpgFramework.Scaling
+  commentId: N:SoapRpgFramework.Scaling
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework.Scaling
+  nameWithType: SoapRpgFramework.Scaling
+  fullName: SoapRpgFramework.Scaling
+  spec.csharp:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Scaling
+    name: Scaling
+    href: SoapRpgFramework.Scaling.html
+  spec.vb:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Scaling
+    name: Scaling
+    href: SoapRpgFramework.Scaling.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: SoapRpgFramework.Scaling.ScalingComponent
+  commentId: T:SoapRpgFramework.Scaling.ScalingComponent
+  parent: SoapRpgFramework.Scaling
+  href: SoapRpgFramework.Scaling.ScalingComponent.html
+  name: ScalingComponent
+  nameWithType: ScalingComponent
+  fullName: SoapRpgFramework.Scaling.ScalingComponent
+- uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}
+  commentId: T:SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}
+  parent: SoapRpgFramework.Scaling
+  definition: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2
+  href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html
+  name: SoSetScalingComponentBase<AttributeSet, Attribute>
+  nameWithType: SoSetScalingComponentBase<AttributeSet, Attribute>
+  fullName: SoapRpgFramework.Scaling.SoSetScalingComponentBase<SoapRpgFramework.Attributes.AttributeSet, SoapRpgFramework.Attributes.Attribute>
+  nameWithType.vb: SoSetScalingComponentBase(Of AttributeSet, Attribute)
+  fullName.vb: SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SoapRpgFramework.Attributes.AttributeSet, SoapRpgFramework.Attributes.Attribute)
+  name.vb: SoSetScalingComponentBase(Of AttributeSet, Attribute)
+  spec.csharp:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2
+    name: SoSetScalingComponentBase
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html
+  - name: <
+  - uid: SoapRpgFramework.Attributes.AttributeSet
+    name: AttributeSet
+    href: SoapRpgFramework.Attributes.AttributeSet.html
+  - name: ','
+  - name: " "
+  - uid: SoapRpgFramework.Attributes.Attribute
+    name: Attribute
+    href: SoapRpgFramework.Attributes.Attribute.html
+  - name: '>'
+  spec.vb:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2
+    name: SoSetScalingComponentBase
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SoapRpgFramework.Attributes.AttributeSet
+    name: AttributeSet
+    href: SoapRpgFramework.Attributes.AttributeSet.html
+  - name: ','
+  - name: " "
+  - uid: SoapRpgFramework.Attributes.Attribute
+    name: Attribute
+    href: SoapRpgFramework.Attributes.Attribute.html
+  - name: )
+- uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}._set
+  commentId: F:SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}._set
+  parent: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}
+  definition: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2._set
+  href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2__set
+  name: _set
+  nameWithType: SoSetScalingComponentBase<AttributeSet, Attribute>._set
+  fullName: SoapRpgFramework.Scaling.SoSetScalingComponentBase<SoapRpgFramework.Attributes.AttributeSet, SoapRpgFramework.Attributes.Attribute>._set
+  nameWithType.vb: SoSetScalingComponentBase(Of AttributeSet, Attribute)._set
+  fullName.vb: SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SoapRpgFramework.Attributes.AttributeSet, SoapRpgFramework.Attributes.Attribute)._set
+- uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.CalculateValue(SoapRpgFramework.EntityCore)
+  commentId: M:SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.CalculateValue(SoapRpgFramework.EntityCore)
+  parent: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}
+  definition: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.CalculateValue(SoapRpgFramework.EntityCore)
+  href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_CalculateValue_SoapRpgFramework_EntityCore_
+  name: CalculateValue(EntityCore)
+  nameWithType: SoSetScalingComponentBase<AttributeSet, Attribute>.CalculateValue(EntityCore)
+  fullName: SoapRpgFramework.Scaling.SoSetScalingComponentBase<SoapRpgFramework.Attributes.AttributeSet, SoapRpgFramework.Attributes.Attribute>.CalculateValue(SoapRpgFramework.EntityCore)
+  nameWithType.vb: SoSetScalingComponentBase(Of AttributeSet, Attribute).CalculateValue(EntityCore)
+  fullName.vb: SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SoapRpgFramework.Attributes.AttributeSet, SoapRpgFramework.Attributes.Attribute).CalculateValue(SoapRpgFramework.EntityCore)
+  spec.csharp:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.CalculateValue(SoapRpgFramework.EntityCore)
+    name: CalculateValue
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_CalculateValue_SoapRpgFramework_EntityCore_
+  - name: (
+  - uid: SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: SoapRpgFramework.EntityCore.html
+  - name: )
+  spec.vb:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.CalculateValue(SoapRpgFramework.EntityCore)
+    name: CalculateValue
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_CalculateValue_SoapRpgFramework_EntityCore_
+  - name: (
+  - uid: SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: SoapRpgFramework.EntityCore.html
+  - name: )
+- uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetEntitySet(SoapRpgFramework.EntityCore)
+  commentId: M:SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetEntitySet(SoapRpgFramework.EntityCore)
+  parent: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}
+  definition: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntitySet(SoapRpgFramework.EntityCore)
+  href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntitySet_SoapRpgFramework_EntityCore_
+  name: GetEntitySet(EntityCore)
+  nameWithType: SoSetScalingComponentBase<AttributeSet, Attribute>.GetEntitySet(EntityCore)
+  fullName: SoapRpgFramework.Scaling.SoSetScalingComponentBase<SoapRpgFramework.Attributes.AttributeSet, SoapRpgFramework.Attributes.Attribute>.GetEntitySet(SoapRpgFramework.EntityCore)
+  nameWithType.vb: SoSetScalingComponentBase(Of AttributeSet, Attribute).GetEntitySet(EntityCore)
+  fullName.vb: SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SoapRpgFramework.Attributes.AttributeSet, SoapRpgFramework.Attributes.Attribute).GetEntitySet(SoapRpgFramework.EntityCore)
+  spec.csharp:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetEntitySet(SoapRpgFramework.EntityCore)
+    name: GetEntitySet
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntitySet_SoapRpgFramework_EntityCore_
+  - name: (
+  - uid: SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: SoapRpgFramework.EntityCore.html
+  - name: )
+  spec.vb:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetEntitySet(SoapRpgFramework.EntityCore)
+    name: GetEntitySet
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntitySet_SoapRpgFramework_EntityCore_
+  - name: (
+  - uid: SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: SoapRpgFramework.EntityCore.html
+  - name: )
+- uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetEntityValue(SoapRpgFramework.EntityCore,SoapRpgFramework.Attributes.Attribute)
+  commentId: M:SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetEntityValue(SoapRpgFramework.EntityCore,SoapRpgFramework.Attributes.Attribute)
+  parent: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}
+  definition: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntityValue(SoapRpgFramework.EntityCore,`1)
+  href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntityValue_SoapRpgFramework_EntityCore__1_
+  name: GetEntityValue(EntityCore, Attribute)
+  nameWithType: SoSetScalingComponentBase<AttributeSet, Attribute>.GetEntityValue(EntityCore, Attribute)
+  fullName: SoapRpgFramework.Scaling.SoSetScalingComponentBase<SoapRpgFramework.Attributes.AttributeSet, SoapRpgFramework.Attributes.Attribute>.GetEntityValue(SoapRpgFramework.EntityCore, SoapRpgFramework.Attributes.Attribute)
+  nameWithType.vb: SoSetScalingComponentBase(Of AttributeSet, Attribute).GetEntityValue(EntityCore, Attribute)
+  fullName.vb: SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SoapRpgFramework.Attributes.AttributeSet, SoapRpgFramework.Attributes.Attribute).GetEntityValue(SoapRpgFramework.EntityCore, SoapRpgFramework.Attributes.Attribute)
+  spec.csharp:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetEntityValue(SoapRpgFramework.EntityCore,SoapRpgFramework.Attributes.Attribute)
+    name: GetEntityValue
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntityValue_SoapRpgFramework_EntityCore__1_
+  - name: (
+  - uid: SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: SoapRpgFramework.EntityCore.html
+  - name: ','
+  - name: " "
+  - uid: SoapRpgFramework.Attributes.Attribute
+    name: Attribute
+    href: SoapRpgFramework.Attributes.Attribute.html
+  - name: )
+  spec.vb:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetEntityValue(SoapRpgFramework.EntityCore,SoapRpgFramework.Attributes.Attribute)
+    name: GetEntityValue
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntityValue_SoapRpgFramework_EntityCore__1_
+  - name: (
+  - uid: SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: SoapRpgFramework.EntityCore.html
+  - name: ','
+  - name: " "
+  - uid: SoapRpgFramework.Attributes.Attribute
+    name: Attribute
+    href: SoapRpgFramework.Attributes.Attribute.html
+  - name: )
+- uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.OnValidate
+  commentId: M:SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.OnValidate
+  parent: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}
+  definition: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.OnValidate
+  href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_OnValidate
+  name: OnValidate()
+  nameWithType: SoSetScalingComponentBase<AttributeSet, Attribute>.OnValidate()
+  fullName: SoapRpgFramework.Scaling.SoSetScalingComponentBase<SoapRpgFramework.Attributes.AttributeSet, SoapRpgFramework.Attributes.Attribute>.OnValidate()
+  nameWithType.vb: SoSetScalingComponentBase(Of AttributeSet, Attribute).OnValidate()
+  fullName.vb: SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SoapRpgFramework.Attributes.AttributeSet, SoapRpgFramework.Attributes.Attribute).OnValidate()
+  spec.csharp:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.OnValidate
+    name: OnValidate
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_OnValidate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.OnValidate
+    name: OnValidate
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_OnValidate
+  - name: (
+  - name: )
+- uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetSetItems
+  commentId: M:SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetSetItems
+  parent: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}
+  definition: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetSetItems
+  href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetSetItems
+  name: GetSetItems()
+  nameWithType: SoSetScalingComponentBase<AttributeSet, Attribute>.GetSetItems()
+  fullName: SoapRpgFramework.Scaling.SoSetScalingComponentBase<SoapRpgFramework.Attributes.AttributeSet, SoapRpgFramework.Attributes.Attribute>.GetSetItems()
+  nameWithType.vb: SoSetScalingComponentBase(Of AttributeSet, Attribute).GetSetItems()
+  fullName.vb: SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SoapRpgFramework.Attributes.AttributeSet, SoapRpgFramework.Attributes.Attribute).GetSetItems()
+  spec.csharp:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetSetItems
+    name: GetSetItems
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetSetItems
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase{SoapRpgFramework.Attributes.AttributeSet,SoapRpgFramework.Attributes.Attribute}.GetSetItems
+    name: GetSetItems
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetSetItems
+  - name: (
+  - name: )
+- uid: SoapRpgFramework.Scaling.ScalingComponent.CalculateValue(SoapRpgFramework.EntityCore)
+  commentId: M:SoapRpgFramework.Scaling.ScalingComponent.CalculateValue(SoapRpgFramework.EntityCore)
+  parent: SoapRpgFramework.Scaling.ScalingComponent
+  href: SoapRpgFramework.Scaling.ScalingComponent.html#SoapRpgFramework_Scaling_ScalingComponent_CalculateValue_SoapRpgFramework_EntityCore_
+  name: CalculateValue(EntityCore)
+  nameWithType: ScalingComponent.CalculateValue(EntityCore)
+  fullName: SoapRpgFramework.Scaling.ScalingComponent.CalculateValue(SoapRpgFramework.EntityCore)
+  spec.csharp:
+  - uid: SoapRpgFramework.Scaling.ScalingComponent.CalculateValue(SoapRpgFramework.EntityCore)
+    name: CalculateValue
+    href: SoapRpgFramework.Scaling.ScalingComponent.html#SoapRpgFramework_Scaling_ScalingComponent_CalculateValue_SoapRpgFramework_EntityCore_
+  - name: (
+  - uid: SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: SoapRpgFramework.EntityCore.html
+  - name: )
+  spec.vb:
+  - uid: SoapRpgFramework.Scaling.ScalingComponent.CalculateValue(SoapRpgFramework.EntityCore)
+    name: CalculateValue
+    href: SoapRpgFramework.Scaling.ScalingComponent.html#SoapRpgFramework_Scaling_ScalingComponent_CalculateValue_SoapRpgFramework_EntityCore_
+  - name: (
+  - uid: SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: SoapRpgFramework.EntityCore.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2
+  commentId: T:SoapRpgFramework.Scaling.SoSetScalingComponentBase`2
+  href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html
+  name: SoSetScalingComponentBase<SetType, KeyType>
+  nameWithType: SoSetScalingComponentBase<SetType, KeyType>
+  fullName: SoapRpgFramework.Scaling.SoSetScalingComponentBase<SetType, KeyType>
+  nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType)
+  fullName.vb: SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType)
+  name.vb: SoSetScalingComponentBase(Of SetType, KeyType)
+  spec.csharp:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2
+    name: SoSetScalingComponentBase
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html
+  - name: <
+  - name: SetType
+  - name: ','
+  - name: " "
+  - name: KeyType
+  - name: '>'
+  spec.vb:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2
+    name: SoSetScalingComponentBase
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: SetType
+  - name: ','
+  - name: " "
+  - name: KeyType
+  - name: )
+- uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2._set
+  commentId: F:SoapRpgFramework.Scaling.SoSetScalingComponentBase`2._set
+  href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2__set
+  name: _set
+  nameWithType: SoSetScalingComponentBase<SetType, KeyType>._set
+  fullName: SoapRpgFramework.Scaling.SoSetScalingComponentBase<SetType, KeyType>._set
+  nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType)._set
+  fullName.vb: SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType)._set
+- uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.CalculateValue(SoapRpgFramework.EntityCore)
+  commentId: M:SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.CalculateValue(SoapRpgFramework.EntityCore)
+  href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_CalculateValue_SoapRpgFramework_EntityCore_
+  name: CalculateValue(EntityCore)
+  nameWithType: SoSetScalingComponentBase<SetType, KeyType>.CalculateValue(EntityCore)
+  fullName: SoapRpgFramework.Scaling.SoSetScalingComponentBase<SetType, KeyType>.CalculateValue(SoapRpgFramework.EntityCore)
+  nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType).CalculateValue(EntityCore)
+  fullName.vb: SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType).CalculateValue(SoapRpgFramework.EntityCore)
+  spec.csharp:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.CalculateValue(SoapRpgFramework.EntityCore)
+    name: CalculateValue
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_CalculateValue_SoapRpgFramework_EntityCore_
+  - name: (
+  - uid: SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: SoapRpgFramework.EntityCore.html
+  - name: )
+  spec.vb:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.CalculateValue(SoapRpgFramework.EntityCore)
+    name: CalculateValue
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_CalculateValue_SoapRpgFramework_EntityCore_
+  - name: (
+  - uid: SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: SoapRpgFramework.EntityCore.html
+  - name: )
+- uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntitySet(SoapRpgFramework.EntityCore)
+  commentId: M:SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntitySet(SoapRpgFramework.EntityCore)
+  href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntitySet_SoapRpgFramework_EntityCore_
+  name: GetEntitySet(EntityCore)
+  nameWithType: SoSetScalingComponentBase<SetType, KeyType>.GetEntitySet(EntityCore)
+  fullName: SoapRpgFramework.Scaling.SoSetScalingComponentBase<SetType, KeyType>.GetEntitySet(SoapRpgFramework.EntityCore)
+  nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType).GetEntitySet(EntityCore)
+  fullName.vb: SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType).GetEntitySet(SoapRpgFramework.EntityCore)
+  spec.csharp:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntitySet(SoapRpgFramework.EntityCore)
+    name: GetEntitySet
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntitySet_SoapRpgFramework_EntityCore_
+  - name: (
+  - uid: SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: SoapRpgFramework.EntityCore.html
+  - name: )
+  spec.vb:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntitySet(SoapRpgFramework.EntityCore)
+    name: GetEntitySet
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntitySet_SoapRpgFramework_EntityCore_
+  - name: (
+  - uid: SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: SoapRpgFramework.EntityCore.html
+  - name: )
+- uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntityValue(SoapRpgFramework.EntityCore,`1)
+  commentId: M:SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntityValue(SoapRpgFramework.EntityCore,`1)
+  href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntityValue_SoapRpgFramework_EntityCore__1_
+  name: GetEntityValue(EntityCore, KeyType)
+  nameWithType: SoSetScalingComponentBase<SetType, KeyType>.GetEntityValue(EntityCore, KeyType)
+  fullName: SoapRpgFramework.Scaling.SoSetScalingComponentBase<SetType, KeyType>.GetEntityValue(SoapRpgFramework.EntityCore, KeyType)
+  nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType).GetEntityValue(EntityCore, KeyType)
+  fullName.vb: SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType).GetEntityValue(SoapRpgFramework.EntityCore, KeyType)
+  spec.csharp:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntityValue(SoapRpgFramework.EntityCore,`1)
+    name: GetEntityValue
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntityValue_SoapRpgFramework_EntityCore__1_
+  - name: (
+  - uid: SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: SoapRpgFramework.EntityCore.html
+  - name: ','
+  - name: " "
+  - name: KeyType
+  - name: )
+  spec.vb:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntityValue(SoapRpgFramework.EntityCore,`1)
+    name: GetEntityValue
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntityValue_SoapRpgFramework_EntityCore__1_
+  - name: (
+  - uid: SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: SoapRpgFramework.EntityCore.html
+  - name: ','
+  - name: " "
+  - name: KeyType
+  - name: )
+- uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.OnValidate
+  commentId: M:SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.OnValidate
+  href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_OnValidate
+  name: OnValidate()
+  nameWithType: SoSetScalingComponentBase<SetType, KeyType>.OnValidate()
+  fullName: SoapRpgFramework.Scaling.SoSetScalingComponentBase<SetType, KeyType>.OnValidate()
+  nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType).OnValidate()
+  fullName.vb: SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType).OnValidate()
+  spec.csharp:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.OnValidate
+    name: OnValidate
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_OnValidate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.OnValidate
+    name: OnValidate
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_OnValidate
+  - name: (
+  - name: )
+- uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetSetItems
+  commentId: M:SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetSetItems
+  href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetSetItems
+  name: GetSetItems()
+  nameWithType: SoSetScalingComponentBase<SetType, KeyType>.GetSetItems()
+  fullName: SoapRpgFramework.Scaling.SoSetScalingComponentBase<SetType, KeyType>.GetSetItems()
+  nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType).GetSetItems()
+  fullName.vb: SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType).GetSetItems()
+  spec.csharp:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetSetItems
+    name: GetSetItems
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetSetItems
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetSetItems
+    name: GetSetItems
+    href: SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetSetItems
+  - name: (
+  - name: )
+- uid: SoapRpgFramework.Scaling.AttributesScalingComponent.GetEntitySet*
+  commentId: Overload:SoapRpgFramework.Scaling.AttributesScalingComponent.GetEntitySet
+  href: SoapRpgFramework.Scaling.AttributesScalingComponent.html#SoapRpgFramework_Scaling_AttributesScalingComponent_GetEntitySet_SoapRpgFramework_EntityCore_
+  name: GetEntitySet
+  nameWithType: AttributesScalingComponent.GetEntitySet
+  fullName: SoapRpgFramework.Scaling.AttributesScalingComponent.GetEntitySet
+- uid: SoapRpgFramework.EntityCore
+  commentId: T:SoapRpgFramework.EntityCore
+  parent: SoapRpgFramework
+  href: SoapRpgFramework.EntityCore.html
+  name: EntityCore
+  nameWithType: EntityCore
+  fullName: SoapRpgFramework.EntityCore
+- uid: SoapRpgFramework.Attributes.AttributeSet
+  commentId: T:SoapRpgFramework.Attributes.AttributeSet
+  parent: SoapRpgFramework.Attributes
+  href: SoapRpgFramework.Attributes.AttributeSet.html
+  name: AttributeSet
+  nameWithType: AttributeSet
+  fullName: SoapRpgFramework.Attributes.AttributeSet
+- uid: SoapRpgFramework
+  commentId: N:SoapRpgFramework
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework
+  nameWithType: SoapRpgFramework
+  fullName: SoapRpgFramework
+- uid: SoapRpgFramework.Attributes
+  commentId: N:SoapRpgFramework.Attributes
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework.Attributes
+  nameWithType: SoapRpgFramework.Attributes
+  fullName: SoapRpgFramework.Attributes
+  spec.csharp:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Attributes
+    name: Attributes
+    href: SoapRpgFramework.Attributes.html
+  spec.vb:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Attributes
+    name: Attributes
+    href: SoapRpgFramework.Attributes.html
+- uid: SoapRpgFramework.Scaling.AttributesScalingComponent.GetEntityValue*
+  commentId: Overload:SoapRpgFramework.Scaling.AttributesScalingComponent.GetEntityValue
+  href: SoapRpgFramework.Scaling.AttributesScalingComponent.html#SoapRpgFramework_Scaling_AttributesScalingComponent_GetEntityValue_SoapRpgFramework_EntityCore_SoapRpgFramework_Attributes_Attribute_
+  name: GetEntityValue
+  nameWithType: AttributesScalingComponent.GetEntityValue
+  fullName: SoapRpgFramework.Scaling.AttributesScalingComponent.GetEntityValue
+- uid: SoapRpgFramework.Attributes.Attribute
+  commentId: T:SoapRpgFramework.Attributes.Attribute
+  parent: SoapRpgFramework.Attributes
+  href: SoapRpgFramework.Attributes.Attribute.html
+  name: Attribute
+  nameWithType: Attribute
+  fullName: SoapRpgFramework.Attributes.Attribute
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: SoapRpgFramework.Scaling.AttributesScalingComponent.GetSetItems*
+  commentId: Overload:SoapRpgFramework.Scaling.AttributesScalingComponent.GetSetItems
+  href: SoapRpgFramework.Scaling.AttributesScalingComponent.html#SoapRpgFramework_Scaling_AttributesScalingComponent_GetSetItems
+  name: GetSetItems
+  nameWithType: AttributesScalingComponent.GetSetItems
+  fullName: SoapRpgFramework.Scaling.AttributesScalingComponent.GetSetItems
+- uid: System.Collections.Generic.IEnumerable{SoapRpgFramework.Attributes.Attribute}
+  commentId: T:System.Collections.Generic.IEnumerable{SoapRpgFramework.Attributes.Attribute}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: SoapRpgFramework.Attributes.Attribute.html
+  name: IEnumerable<Attribute>
+  nameWithType: IEnumerable<Attribute>
+  fullName: System.Collections.Generic.IEnumerable<SoapRpgFramework.Attributes.Attribute>
+  nameWithType.vb: IEnumerable(Of Attribute)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of SoapRpgFramework.Attributes.Attribute)
+  name.vb: IEnumerable(Of Attribute)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+  - name: <
+  - uid: SoapRpgFramework.Attributes.Attribute
+    name: Attribute
+    href: SoapRpgFramework.Attributes.Attribute.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SoapRpgFramework.Attributes.Attribute
+    name: Attribute
+    href: SoapRpgFramework.Attributes.Attribute.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

@@ -1,0 +1,297 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoapRpgFramework.Utils.LongRef
+  commentId: T:SoapRpgFramework.Utils.LongRef
+  id: LongRef
+  parent: SoapRpgFramework.Utils
+  children:
+  - SoapRpgFramework.Utils.LongRef.ConstantValue
+  - SoapRpgFramework.Utils.LongRef.UseConstant
+  - SoapRpgFramework.Utils.LongRef.Value
+  - SoapRpgFramework.Utils.LongRef.Variable
+  - SoapRpgFramework.Utils.LongRef.op_Implicit(SoapRpgFramework.Utils.LongRef)~System.Int64
+  langs:
+  - csharp
+  - vb
+  name: LongRef
+  nameWithType: LongRef
+  fullName: SoapRpgFramework.Utils.LongRef
+  type: Class
+  source:
+    remote:
+      path: Runtime/Utils/LongRef.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: LongRef
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongRef.cs
+    startLine: 10
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Utils
+  summary: >-
+    A reference to a long value.
+
+    Can either be a constant value or a reference to a <xref href="SoapRpgFramework.Utils.LongVar" data-throw-if-not-resolved="false"></xref> ScriptableObject.
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class LongRef
+    content.vb: >-
+      <Serializable>
+
+      Public Class LongRef
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: SoapRpgFramework.Utils.LongRef.UseConstant
+  commentId: F:SoapRpgFramework.Utils.LongRef.UseConstant
+  id: UseConstant
+  parent: SoapRpgFramework.Utils.LongRef
+  langs:
+  - csharp
+  - vb
+  name: UseConstant
+  nameWithType: LongRef.UseConstant
+  fullName: SoapRpgFramework.Utils.LongRef.UseConstant
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utils/LongRef.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: UseConstant
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongRef.cs
+    startLine: 23
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Utils
+  summary: If true, uses the constant value. Otherwise, uses the <xref href="SoapRpgFramework.Utils.LongVar" data-throw-if-not-resolved="false"></xref> variable.
+  example: []
+  syntax:
+    content: public bool UseConstant
+    return:
+      type: System.Boolean
+    content.vb: Public UseConstant As Boolean
+- uid: SoapRpgFramework.Utils.LongRef.ConstantValue
+  commentId: F:SoapRpgFramework.Utils.LongRef.ConstantValue
+  id: ConstantValue
+  parent: SoapRpgFramework.Utils.LongRef
+  langs:
+  - csharp
+  - vb
+  name: ConstantValue
+  nameWithType: LongRef.ConstantValue
+  fullName: SoapRpgFramework.Utils.LongRef.ConstantValue
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utils/LongRef.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: ConstantValue
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongRef.cs
+    startLine: 27
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Utils
+  summary: The constant long value.
+  example: []
+  syntax:
+    content: public long ConstantValue
+    return:
+      type: System.Int64
+    content.vb: Public ConstantValue As Long
+- uid: SoapRpgFramework.Utils.LongRef.Variable
+  commentId: F:SoapRpgFramework.Utils.LongRef.Variable
+  id: Variable
+  parent: SoapRpgFramework.Utils.LongRef
+  langs:
+  - csharp
+  - vb
+  name: Variable
+  nameWithType: LongRef.Variable
+  fullName: SoapRpgFramework.Utils.LongRef.Variable
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utils/LongRef.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Variable
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongRef.cs
+    startLine: 31
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Utils
+  summary: The <xref href="SoapRpgFramework.Utils.LongVar" data-throw-if-not-resolved="false"></xref> variable.
+  example: []
+  syntax:
+    content: public LongVar Variable
+    return:
+      type: SoapRpgFramework.Utils.LongVar
+    content.vb: Public Variable As LongVar
+- uid: SoapRpgFramework.Utils.LongRef.Value
+  commentId: P:SoapRpgFramework.Utils.LongRef.Value
+  id: Value
+  parent: SoapRpgFramework.Utils.LongRef
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: LongRef.Value
+  fullName: SoapRpgFramework.Utils.LongRef.Value
+  type: Property
+  source:
+    remote:
+      path: Runtime/Utils/LongRef.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Value
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongRef.cs
+    startLine: 36
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Utils
+  summary: Gets or sets the value of the reference.
+  example: []
+  syntax:
+    content: public long Value { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property Value As Long
+  overload: SoapRpgFramework.Utils.LongRef.Value*
+- uid: SoapRpgFramework.Utils.LongRef.op_Implicit(SoapRpgFramework.Utils.LongRef)~System.Int64
+  commentId: M:SoapRpgFramework.Utils.LongRef.op_Implicit(SoapRpgFramework.Utils.LongRef)~System.Int64
+  id: op_Implicit(SoapRpgFramework.Utils.LongRef)~System.Int64
+  parent: SoapRpgFramework.Utils.LongRef
+  langs:
+  - csharp
+  - vb
+  name: implicit operator long(LongRef)
+  nameWithType: LongRef.implicit operator long(LongRef)
+  fullName: SoapRpgFramework.Utils.LongRef.implicit operator long(SoapRpgFramework.Utils.LongRef)
+  type: Operator
+  source:
+    remote:
+      path: Runtime/Utils/LongRef.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: op_Implicit
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongRef.cs
+    startLine: 51
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Utils
+  summary: Allows implicit conversion from a LongRef to a long.
+  example: []
+  syntax:
+    content: public static implicit operator long(LongRef reference)
+    parameters:
+    - id: reference
+      type: SoapRpgFramework.Utils.LongRef
+      description: The LongRef to convert.
+    return:
+      type: System.Int64
+    content.vb: Public Shared Widening Operator CType(reference As LongRef) As Long
+  overload: SoapRpgFramework.Utils.LongRef.op_Implicit*
+  nameWithType.vb: LongRef.CType(LongRef)
+  fullName.vb: SoapRpgFramework.Utils.LongRef.CType(SoapRpgFramework.Utils.LongRef)
+  name.vb: CType(LongRef)
+references:
+- uid: SoapRpgFramework.Utils.LongVar
+  commentId: T:SoapRpgFramework.Utils.LongVar
+  parent: SoapRpgFramework.Utils
+  href: SoapRpgFramework.Utils.LongVar.html
+  name: LongVar
+  nameWithType: LongVar
+  fullName: SoapRpgFramework.Utils.LongVar
+- uid: SoapRpgFramework.Utils
+  commentId: N:SoapRpgFramework.Utils
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework.Utils
+  nameWithType: SoapRpgFramework.Utils
+  fullName: SoapRpgFramework.Utils
+  spec.csharp:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Utils
+    name: Utils
+    href: SoapRpgFramework.Utils.html
+  spec.vb:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Utils
+    name: Utils
+    href: SoapRpgFramework.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: SoapRpgFramework.Utils.LongRef.Value*
+  commentId: Overload:SoapRpgFramework.Utils.LongRef.Value
+  href: SoapRpgFramework.Utils.LongRef.html#SoapRpgFramework_Utils_LongRef_Value
+  name: Value
+  nameWithType: LongRef.Value
+  fullName: SoapRpgFramework.Utils.LongRef.Value
+- uid: SoapRpgFramework.Utils.LongRef.op_Implicit*
+  commentId: Overload:SoapRpgFramework.Utils.LongRef.op_Implicit
+  name: implicit operator
+  nameWithType: LongRef.implicit operator
+  fullName: SoapRpgFramework.Utils.LongRef.implicit operator
+  nameWithType.vb: LongRef.CType
+  fullName.vb: SoapRpgFramework.Utils.LongRef.CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator
+- uid: SoapRpgFramework.Utils.LongRef
+  commentId: T:SoapRpgFramework.Utils.LongRef
+  parent: SoapRpgFramework.Utils
+  href: SoapRpgFramework.Utils.LongRef.html
+  name: LongRef
+  nameWithType: LongRef
+  fullName: SoapRpgFramework.Utils.LongRef

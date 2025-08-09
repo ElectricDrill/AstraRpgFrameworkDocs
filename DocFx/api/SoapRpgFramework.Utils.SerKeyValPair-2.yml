@@ -1,0 +1,428 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoapRpgFramework.Utils.SerKeyValPair`2
+  commentId: T:SoapRpgFramework.Utils.SerKeyValPair`2
+  id: SerKeyValPair`2
+  parent: SoapRpgFramework.Utils
+  children:
+  - SoapRpgFramework.Utils.SerKeyValPair`2.#ctor(`0,`1)
+  - SoapRpgFramework.Utils.SerKeyValPair`2.Key
+  - SoapRpgFramework.Utils.SerKeyValPair`2.Value
+  - SoapRpgFramework.Utils.SerKeyValPair`2.op_Implicit(SoapRpgFramework.Utils.SerKeyValPair{`0,`1})~System.Collections.Generic.KeyValuePair{`0,`1}
+  - SoapRpgFramework.Utils.SerKeyValPair`2.op_Implicit(System.Collections.Generic.KeyValuePair{`0,`1})~SoapRpgFramework.Utils.SerKeyValPair{`0,`1}
+  langs:
+  - csharp
+  - vb
+  name: SerKeyValPair<T, U>
+  nameWithType: SerKeyValPair<T, U>
+  fullName: SoapRpgFramework.Utils.SerKeyValPair<T, U>
+  type: Struct
+  source:
+    remote:
+      path: Runtime/Stats/SerKeyValPair.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: SerKeyValPair
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/SerKeyValPair.cs
+    startLine: 10
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Utils
+  summary: >-
+    A serializable key-value pair structure that can be used in Unity's inspector.
+
+    Provides implicit conversion to and from the standard KeyValuePair.
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public struct SerKeyValPair<T, U>
+    typeParameters:
+    - id: T
+      description: The type of the key.
+    - id: U
+      description: The type of the value.
+    content.vb: >-
+      <Serializable>
+
+      Public Structure SerKeyValPair(Of T, U)
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  nameWithType.vb: SerKeyValPair(Of T, U)
+  fullName.vb: SoapRpgFramework.Utils.SerKeyValPair(Of T, U)
+  name.vb: SerKeyValPair(Of T, U)
+- uid: SoapRpgFramework.Utils.SerKeyValPair`2.Key
+  commentId: F:SoapRpgFramework.Utils.SerKeyValPair`2.Key
+  id: Key
+  parent: SoapRpgFramework.Utils.SerKeyValPair`2
+  langs:
+  - csharp
+  - vb
+  name: Key
+  nameWithType: SerKeyValPair<T, U>.Key
+  fullName: SoapRpgFramework.Utils.SerKeyValPair<T, U>.Key
+  type: Field
+  source:
+    remote:
+      path: Runtime/Stats/SerKeyValPair.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Key
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/SerKeyValPair.cs
+    startLine: 16
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Utils
+  summary: The key of the key-value pair.
+  example: []
+  syntax:
+    content: public T Key
+    return:
+      type: '{T}'
+    content.vb: Public Key As T
+  nameWithType.vb: SerKeyValPair(Of T, U).Key
+  fullName.vb: SoapRpgFramework.Utils.SerKeyValPair(Of T, U).Key
+- uid: SoapRpgFramework.Utils.SerKeyValPair`2.Value
+  commentId: F:SoapRpgFramework.Utils.SerKeyValPair`2.Value
+  id: Value
+  parent: SoapRpgFramework.Utils.SerKeyValPair`2
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: SerKeyValPair<T, U>.Value
+  fullName: SoapRpgFramework.Utils.SerKeyValPair<T, U>.Value
+  type: Field
+  source:
+    remote:
+      path: Runtime/Stats/SerKeyValPair.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Value
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/SerKeyValPair.cs
+    startLine: 21
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Utils
+  summary: The value of the key-value pair.
+  example: []
+  syntax:
+    content: public U Value
+    return:
+      type: '{U}'
+    content.vb: Public Value As U
+  nameWithType.vb: SerKeyValPair(Of T, U).Value
+  fullName.vb: SoapRpgFramework.Utils.SerKeyValPair(Of T, U).Value
+- uid: SoapRpgFramework.Utils.SerKeyValPair`2.#ctor(`0,`1)
+  commentId: M:SoapRpgFramework.Utils.SerKeyValPair`2.#ctor(`0,`1)
+  id: '#ctor(`0,`1)'
+  parent: SoapRpgFramework.Utils.SerKeyValPair`2
+  langs:
+  - csharp
+  - vb
+  name: SerKeyValPair(T, U)
+  nameWithType: SerKeyValPair<T, U>.SerKeyValPair(T, U)
+  fullName: SoapRpgFramework.Utils.SerKeyValPair<T, U>.SerKeyValPair(T, U)
+  type: Constructor
+  source:
+    remote:
+      path: Runtime/Stats/SerKeyValPair.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: .ctor
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/SerKeyValPair.cs
+    startLine: 28
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Utils
+  summary: Initializes a new instance of the SerKeyValPair structure with the specified key and value.
+  example: []
+  syntax:
+    content: public SerKeyValPair(T key, U value)
+    parameters:
+    - id: key
+      type: '{T}'
+      description: The key of the key-value pair.
+    - id: value
+      type: '{U}'
+      description: The value of the key-value pair.
+    content.vb: Public Sub New(key As T, value As U)
+  overload: SoapRpgFramework.Utils.SerKeyValPair`2.#ctor*
+  nameWithType.vb: SerKeyValPair(Of T, U).New(T, U)
+  fullName.vb: SoapRpgFramework.Utils.SerKeyValPair(Of T, U).New(T, U)
+  name.vb: New(T, U)
+- uid: SoapRpgFramework.Utils.SerKeyValPair`2.op_Implicit(SoapRpgFramework.Utils.SerKeyValPair{`0,`1})~System.Collections.Generic.KeyValuePair{`0,`1}
+  commentId: M:SoapRpgFramework.Utils.SerKeyValPair`2.op_Implicit(SoapRpgFramework.Utils.SerKeyValPair{`0,`1})~System.Collections.Generic.KeyValuePair{`0,`1}
+  id: op_Implicit(SoapRpgFramework.Utils.SerKeyValPair{`0,`1})~System.Collections.Generic.KeyValuePair{`0,`1}
+  parent: SoapRpgFramework.Utils.SerKeyValPair`2
+  langs:
+  - csharp
+  - vb
+  name: implicit operator KeyValuePair<T, U>(SerKeyValPair<T, U>)
+  nameWithType: SerKeyValPair<T, U>.implicit operator KeyValuePair<T, U>(SerKeyValPair<T, U>)
+  fullName: SoapRpgFramework.Utils.SerKeyValPair<T, U>.implicit operator System.Collections.Generic.KeyValuePair<T, U>(SoapRpgFramework.Utils.SerKeyValPair<T, U>)
+  type: Operator
+  source:
+    remote:
+      path: Runtime/Stats/SerKeyValPair.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: op_Implicit
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/SerKeyValPair.cs
+    startLine: 38
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Utils
+  summary: Implicitly converts a SerKeyValPair to a KeyValuePair.
+  example: []
+  syntax:
+    content: public static implicit operator KeyValuePair<T, U>(SerKeyValPair<T, U> serKeyValPair)
+    parameters:
+    - id: serKeyValPair
+      type: SoapRpgFramework.Utils.SerKeyValPair`2
+      description: The SerKeyValPair to convert.
+    return:
+      type: System.Collections.Generic.KeyValuePair{{T},{U}}
+      description: A KeyValuePair with the same key and value.
+    content.vb: Public Shared Widening Operator CType(serKeyValPair As SerKeyValPair(Of T, U)) As KeyValuePair(Of T, U)
+  overload: SoapRpgFramework.Utils.SerKeyValPair`2.op_Implicit*
+  nameWithType.vb: SerKeyValPair(Of T, U).CType(SerKeyValPair(Of T, U))
+  fullName.vb: SoapRpgFramework.Utils.SerKeyValPair(Of T, U).CType(SoapRpgFramework.Utils.SerKeyValPair(Of T, U))
+  name.vb: CType(SerKeyValPair(Of T, U))
+- uid: SoapRpgFramework.Utils.SerKeyValPair`2.op_Implicit(System.Collections.Generic.KeyValuePair{`0,`1})~SoapRpgFramework.Utils.SerKeyValPair{`0,`1}
+  commentId: M:SoapRpgFramework.Utils.SerKeyValPair`2.op_Implicit(System.Collections.Generic.KeyValuePair{`0,`1})~SoapRpgFramework.Utils.SerKeyValPair{`0,`1}
+  id: op_Implicit(System.Collections.Generic.KeyValuePair{`0,`1})~SoapRpgFramework.Utils.SerKeyValPair{`0,`1}
+  parent: SoapRpgFramework.Utils.SerKeyValPair`2
+  langs:
+  - csharp
+  - vb
+  name: implicit operator SerKeyValPair<T, U>(KeyValuePair<T, U>)
+  nameWithType: SerKeyValPair<T, U>.implicit operator SerKeyValPair<T, U>(KeyValuePair<T, U>)
+  fullName: SoapRpgFramework.Utils.SerKeyValPair<T, U>.implicit operator SoapRpgFramework.Utils.SerKeyValPair<T, U>(System.Collections.Generic.KeyValuePair<T, U>)
+  type: Operator
+  source:
+    remote:
+      path: Runtime/Stats/SerKeyValPair.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: op_Implicit
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/SerKeyValPair.cs
+    startLine: 47
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Utils
+  summary: Implicitly converts a KeyValuePair to a SerKeyValPair.
+  example: []
+  syntax:
+    content: public static implicit operator SerKeyValPair<T, U>(KeyValuePair<T, U> keyValuePair)
+    parameters:
+    - id: keyValuePair
+      type: System.Collections.Generic.KeyValuePair{{T},{U}}
+      description: The KeyValuePair to convert.
+    return:
+      type: SoapRpgFramework.Utils.SerKeyValPair`2
+      description: A SerKeyValPair with the same key and value.
+    content.vb: Public Shared Widening Operator CType(keyValuePair As KeyValuePair(Of T, U)) As SerKeyValPair(Of T, U)
+  overload: SoapRpgFramework.Utils.SerKeyValPair`2.op_Implicit*
+  nameWithType.vb: SerKeyValPair(Of T, U).CType(KeyValuePair(Of T, U))
+  fullName.vb: SoapRpgFramework.Utils.SerKeyValPair(Of T, U).CType(System.Collections.Generic.KeyValuePair(Of T, U))
+  name.vb: CType(KeyValuePair(Of T, U))
+references:
+- uid: SoapRpgFramework.Utils
+  commentId: N:SoapRpgFramework.Utils
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework.Utils
+  nameWithType: SoapRpgFramework.Utils
+  fullName: SoapRpgFramework.Utils
+  spec.csharp:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Utils
+    name: Utils
+    href: SoapRpgFramework.Utils.html
+  spec.vb:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Utils
+    name: Utils
+    href: SoapRpgFramework.Utils.html
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: '{U}'
+  commentId: '!:U'
+  definition: U
+  name: U
+  nameWithType: U
+  fullName: U
+- uid: U
+  name: U
+  nameWithType: U
+  fullName: U
+- uid: SoapRpgFramework.Utils.SerKeyValPair`2.#ctor*
+  commentId: Overload:SoapRpgFramework.Utils.SerKeyValPair`2.#ctor
+  href: SoapRpgFramework.Utils.SerKeyValPair-2.html#SoapRpgFramework_Utils_SerKeyValPair_2__ctor__0__1_
+  name: SerKeyValPair
+  nameWithType: SerKeyValPair<T, U>.SerKeyValPair
+  fullName: SoapRpgFramework.Utils.SerKeyValPair<T, U>.SerKeyValPair
+  nameWithType.vb: SerKeyValPair(Of T, U).New
+  fullName.vb: SoapRpgFramework.Utils.SerKeyValPair(Of T, U).New
+  name.vb: New
+- uid: SoapRpgFramework.Utils.SerKeyValPair`2.op_Implicit*
+  commentId: Overload:SoapRpgFramework.Utils.SerKeyValPair`2.op_Implicit
+  name: implicit operator
+  nameWithType: SerKeyValPair<T, U>.implicit operator
+  fullName: SoapRpgFramework.Utils.SerKeyValPair<T, U>.implicit operator
+  nameWithType.vb: SerKeyValPair(Of T, U).CType
+  fullName.vb: SoapRpgFramework.Utils.SerKeyValPair(Of T, U).CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator
+- uid: SoapRpgFramework.Utils.SerKeyValPair`2
+  commentId: T:SoapRpgFramework.Utils.SerKeyValPair`2
+  parent: SoapRpgFramework.Utils
+  href: SoapRpgFramework.Utils.SerKeyValPair-2.html
+  name: SerKeyValPair<T, U>
+  nameWithType: SerKeyValPair<T, U>
+  fullName: SoapRpgFramework.Utils.SerKeyValPair<T, U>
+  nameWithType.vb: SerKeyValPair(Of T, U)
+  fullName.vb: SoapRpgFramework.Utils.SerKeyValPair(Of T, U)
+  name.vb: SerKeyValPair(Of T, U)
+  spec.csharp:
+  - uid: SoapRpgFramework.Utils.SerKeyValPair`2
+    name: SerKeyValPair
+    href: SoapRpgFramework.Utils.SerKeyValPair-2.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: U
+  - name: '>'
+  spec.vb:
+  - uid: SoapRpgFramework.Utils.SerKeyValPair`2
+    name: SerKeyValPair
+    href: SoapRpgFramework.Utils.SerKeyValPair-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: U
+  - name: )
+- uid: System.Collections.Generic.KeyValuePair{{T},{U}}
+  commentId: T:System.Collections.Generic.KeyValuePair{`0,`1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.KeyValuePair`2
+  name: KeyValuePair<T, U>
+  nameWithType: KeyValuePair<T, U>
+  fullName: System.Collections.Generic.KeyValuePair<T, U>
+  nameWithType.vb: KeyValuePair(Of T, U)
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of T, U)
+  name.vb: KeyValuePair(Of T, U)
+  spec.csharp:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: U
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: U
+  - name: )
+- uid: System.Collections.Generic.KeyValuePair`2
+  commentId: T:System.Collections.Generic.KeyValuePair`2
+  isExternal: true
+  name: KeyValuePair<TKey, TValue>
+  nameWithType: KeyValuePair<TKey, TValue>
+  fullName: System.Collections.Generic.KeyValuePair<TKey, TValue>
+  nameWithType.vb: KeyValuePair(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue)
+  name.vb: KeyValuePair(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

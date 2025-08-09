@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoapRpgFramework.Utils.InitializationUtils
+  commentId: T:SoapRpgFramework.Utils.InitializationUtils
+  id: InitializationUtils
+  parent: SoapRpgFramework.Utils
+  children:
+  - SoapRpgFramework.Utils.InitializationUtils.RefreshInspectorReservedValues``2(System.Collections.Generic.List{SoapRpgFramework.Utils.SerKeyValPair{``0,``1}}@,System.Collections.Generic.IEnumerable{``0})
+  langs:
+  - csharp
+  - vb
+  name: InitializationUtils
+  nameWithType: InitializationUtils
+  fullName: SoapRpgFramework.Utils.InitializationUtils
+  type: Class
+  source:
+    remote:
+      path: Runtime/Utils/InitializationUtils.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: InitializationUtils
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/InitializationUtils.cs
+    startLine: 9
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Utils
+  summary: >-
+    Provides utility methods for initializing and refreshing collections during object setup.
+
+    Contains helper methods commonly used during component initialization and validation.
+  example: []
+  syntax:
+    content: public static class InitializationUtils
+    content.vb: Public Module InitializationUtils
+  inheritance:
+  - System.Object
+- uid: SoapRpgFramework.Utils.InitializationUtils.RefreshInspectorReservedValues``2(System.Collections.Generic.List{SoapRpgFramework.Utils.SerKeyValPair{``0,``1}}@,System.Collections.Generic.IEnumerable{``0})
+  commentId: M:SoapRpgFramework.Utils.InitializationUtils.RefreshInspectorReservedValues``2(System.Collections.Generic.List{SoapRpgFramework.Utils.SerKeyValPair{``0,``1}}@,System.Collections.Generic.IEnumerable{``0})
+  id: RefreshInspectorReservedValues``2(System.Collections.Generic.List{SoapRpgFramework.Utils.SerKeyValPair{``0,``1}}@,System.Collections.Generic.IEnumerable{``0})
+  parent: SoapRpgFramework.Utils.InitializationUtils
+  langs:
+  - csharp
+  - vb
+  name: RefreshInspectorReservedValues<TKey, TValue>(ref List<SerKeyValPair<TKey, TValue>>, IEnumerable<TKey>)
+  nameWithType: InitializationUtils.RefreshInspectorReservedValues<TKey, TValue>(ref List<SerKeyValPair<TKey, TValue>>, IEnumerable<TKey>)
+  fullName: SoapRpgFramework.Utils.InitializationUtils.RefreshInspectorReservedValues<TKey, TValue>(ref System.Collections.Generic.List<SoapRpgFramework.Utils.SerKeyValPair<TKey, TValue>>, System.Collections.Generic.IEnumerable<TKey>)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Utils/InitializationUtils.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: RefreshInspectorReservedValues
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/InitializationUtils.cs
+    startLine: 20
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Utils
+  summary: >-
+    Refreshes a list of key-value pairs to match a provided set of keys, preserving existing values where possible.
+
+    This method ensures that the inspector-reserved values list contains exactly the keys specified,
+
+    maintaining any previously assigned values and setting defaults for new keys.
+  example: []
+  syntax:
+    content: public static void RefreshInspectorReservedValues<TKey, TValue>(ref List<SerKeyValPair<TKey, TValue>> inspectorReservedValues, IEnumerable<TKey> keys)
+    parameters:
+    - id: inspectorReservedValues
+      type: System.Collections.Generic.List{SoapRpgFramework.Utils.SerKeyValPair{{TKey},{TValue}}}
+      description: The list to refresh (passed by reference)
+    - id: keys
+      type: System.Collections.Generic.IEnumerable{{TKey}}
+      description: The collection of keys that should be present in the list
+    typeParameters:
+    - id: TKey
+      description: The type of the keys
+    - id: TValue
+      description: The type of the values
+    content.vb: Public Shared Sub RefreshInspectorReservedValues(Of TKey, TValue)(inspectorReservedValues As List(Of SerKeyValPair(Of TKey, TValue)), keys As IEnumerable(Of TKey))
+  overload: SoapRpgFramework.Utils.InitializationUtils.RefreshInspectorReservedValues*
+  nameWithType.vb: InitializationUtils.RefreshInspectorReservedValues(Of TKey, TValue)(List(Of SerKeyValPair(Of TKey, TValue)), IEnumerable(Of TKey))
+  fullName.vb: SoapRpgFramework.Utils.InitializationUtils.RefreshInspectorReservedValues(Of TKey, TValue)(System.Collections.Generic.List(Of SoapRpgFramework.Utils.SerKeyValPair(Of TKey, TValue)), System.Collections.Generic.IEnumerable(Of TKey))
+  name.vb: RefreshInspectorReservedValues(Of TKey, TValue)(List(Of SerKeyValPair(Of TKey, TValue)), IEnumerable(Of TKey))
+references:
+- uid: SoapRpgFramework.Utils
+  commentId: N:SoapRpgFramework.Utils
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework.Utils
+  nameWithType: SoapRpgFramework.Utils
+  fullName: SoapRpgFramework.Utils
+  spec.csharp:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Utils
+    name: Utils
+    href: SoapRpgFramework.Utils.html
+  spec.vb:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Utils
+    name: Utils
+    href: SoapRpgFramework.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SoapRpgFramework.Utils.InitializationUtils.RefreshInspectorReservedValues*
+  commentId: Overload:SoapRpgFramework.Utils.InitializationUtils.RefreshInspectorReservedValues
+  href: SoapRpgFramework.Utils.InitializationUtils.html#SoapRpgFramework_Utils_InitializationUtils_RefreshInspectorReservedValues__2_System_Collections_Generic_List_SoapRpgFramework_Utils_SerKeyValPair___0___1____System_Collections_Generic_IEnumerable___0__
+  name: RefreshInspectorReservedValues
+  nameWithType: InitializationUtils.RefreshInspectorReservedValues
+  fullName: SoapRpgFramework.Utils.InitializationUtils.RefreshInspectorReservedValues
+- uid: System.Collections.Generic.List{SoapRpgFramework.Utils.SerKeyValPair{{TKey},{TValue}}}
+  commentId: T:System.Collections.Generic.List{SoapRpgFramework.Utils.SerKeyValPair{``0,``1}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: SoapRpgFramework.Utils.SerKeyValPair-2.html
+  name: List<SerKeyValPair<TKey, TValue>>
+  nameWithType: List<SerKeyValPair<TKey, TValue>>
+  fullName: System.Collections.Generic.List<SoapRpgFramework.Utils.SerKeyValPair<TKey, TValue>>
+  nameWithType.vb: List(Of SerKeyValPair(Of TKey, TValue))
+  fullName.vb: System.Collections.Generic.List(Of SoapRpgFramework.Utils.SerKeyValPair(Of TKey, TValue))
+  name.vb: List(Of SerKeyValPair(Of TKey, TValue))
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: SoapRpgFramework.Utils.SerKeyValPair`2
+    name: SerKeyValPair
+    href: SoapRpgFramework.Utils.SerKeyValPair-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SoapRpgFramework.Utils.SerKeyValPair`2
+    name: SerKeyValPair
+    href: SoapRpgFramework.Utils.SerKeyValPair-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{{TKey}}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<TKey>
+  nameWithType: IEnumerable<TKey>
+  fullName: System.Collections.Generic.IEnumerable<TKey>
+  nameWithType.vb: IEnumerable(Of TKey)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TKey)
+  name.vb: IEnumerable(Of TKey)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+  - name: <
+  - name: TKey
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

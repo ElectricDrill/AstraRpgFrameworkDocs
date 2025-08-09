@@ -1,0 +1,206 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoapRpgFramework.GrowthFormula
+  commentId: T:SoapRpgFramework.GrowthFormula
+  id: GrowthFormula
+  parent: SoapRpgFramework
+  children:
+  - SoapRpgFramework.GrowthFormula.GetGrowthValue(System.Int32)
+  - SoapRpgFramework.GrowthFormula.GrowthFoValues
+  langs:
+  - csharp
+  - vb
+  name: GrowthFormula
+  nameWithType: GrowthFormula
+  fullName: SoapRpgFramework.GrowthFormula
+  type: Class
+  source:
+    remote:
+      path: Runtime/GrowthFormula.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: GrowthFormula
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/GrowthFormula.cs
+    startLine: 12
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  summary: Represents a formula to calculate growth values for different levels, up to a maximum level.
+  example: []
+  syntax:
+    content: 'public class GrowthFormula : ScriptableObject'
+    content.vb: Public Class GrowthFormula Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+- uid: SoapRpgFramework.GrowthFormula.GrowthFoValues
+  commentId: P:SoapRpgFramework.GrowthFormula.GrowthFoValues
+  id: GrowthFoValues
+  parent: SoapRpgFramework.GrowthFormula
+  langs:
+  - csharp
+  - vb
+  name: GrowthFoValues
+  nameWithType: GrowthFormula.GrowthFoValues
+  fullName: SoapRpgFramework.GrowthFormula.GrowthFoValues
+  type: Property
+  source:
+    remote:
+      path: Runtime/GrowthFormula.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: GrowthFoValues
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/GrowthFormula.cs
+    startLine: 25
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  summary: >-
+    Gets the pre-calculated growth formula values for each level.
+
+    Values are refreshed on validation.
+
+    The array is indexed from 0 to maxLevel - 1, where index 0 corresponds to level 1.
+  example: []
+  syntax:
+    content: public double[] GrowthFoValues { get; }
+    parameters: []
+    return:
+      type: System.Double[]
+    content.vb: Public ReadOnly Property GrowthFoValues As Double()
+  overload: SoapRpgFramework.GrowthFormula.GrowthFoValues*
+- uid: SoapRpgFramework.GrowthFormula.GetGrowthValue(System.Int32)
+  commentId: M:SoapRpgFramework.GrowthFormula.GetGrowthValue(System.Int32)
+  id: GetGrowthValue(System.Int32)
+  parent: SoapRpgFramework.GrowthFormula
+  langs:
+  - csharp
+  - vb
+  name: GetGrowthValue(int)
+  nameWithType: GrowthFormula.GetGrowthValue(int)
+  fullName: SoapRpgFramework.GrowthFormula.GetGrowthValue(int)
+  type: Method
+  source:
+    remote:
+      path: Runtime/GrowthFormula.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: GetGrowthValue
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/GrowthFormula.cs
+    startLine: 32
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  summary: Gets the growth value for a specific level.
+  example: []
+  syntax:
+    content: public long GetGrowthValue(int level)
+    parameters:
+    - id: level
+      type: System.Int32
+      description: The level for which to get the growth value.
+    return:
+      type: System.Int64
+      description: The growth value for the specified level.
+    content.vb: Public Function GetGrowthValue(level As Integer) As Long
+  overload: SoapRpgFramework.GrowthFormula.GetGrowthValue*
+  nameWithType.vb: GrowthFormula.GetGrowthValue(Integer)
+  fullName.vb: SoapRpgFramework.GrowthFormula.GetGrowthValue(Integer)
+  name.vb: GetGrowthValue(Integer)
+references:
+- uid: SoapRpgFramework
+  commentId: N:SoapRpgFramework
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework
+  nameWithType: SoapRpgFramework
+  fullName: SoapRpgFramework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SoapRpgFramework.GrowthFormula.GrowthFoValues*
+  commentId: Overload:SoapRpgFramework.GrowthFormula.GrowthFoValues
+  href: SoapRpgFramework.GrowthFormula.html#SoapRpgFramework_GrowthFormula_GrowthFoValues
+  name: GrowthFoValues
+  nameWithType: GrowthFormula.GrowthFoValues
+  fullName: SoapRpgFramework.GrowthFormula.GrowthFoValues
+- uid: System.Double[]
+  isExternal: true
+  name: double[]
+  nameWithType: double[]
+  fullName: double[]
+  nameWithType.vb: Double()
+  fullName.vb: Double()
+  name.vb: Double()
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+  - name: (
+  - name: )
+- uid: SoapRpgFramework.GrowthFormula.GetGrowthValue*
+  commentId: Overload:SoapRpgFramework.GrowthFormula.GetGrowthValue
+  href: SoapRpgFramework.GrowthFormula.html#SoapRpgFramework_GrowthFormula_GetGrowthValue_System_Int32_
+  name: GetGrowthValue
+  nameWithType: GrowthFormula.GetGrowthValue
+  fullName: SoapRpgFramework.GrowthFormula.GetGrowthValue
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long

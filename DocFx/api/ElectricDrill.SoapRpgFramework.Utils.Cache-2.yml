@@ -1,0 +1,449 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2
+  commentId: T:ElectricDrill.SoapRpgFramework.Utils.Cache`2
+  id: Cache`2
+  parent: ElectricDrill.SoapRpgFramework.Utils
+  children:
+  - ElectricDrill.SoapRpgFramework.Utils.Cache`2.Get(`0)
+  - ElectricDrill.SoapRpgFramework.Utils.Cache`2.Has(`0)
+  - ElectricDrill.SoapRpgFramework.Utils.Cache`2.Invalidate(`0)
+  - ElectricDrill.SoapRpgFramework.Utils.Cache`2.InvalidateAll
+  - ElectricDrill.SoapRpgFramework.Utils.Cache`2.Item(`0)
+  - ElectricDrill.SoapRpgFramework.Utils.Cache`2.Set(`0,`1)
+  - ElectricDrill.SoapRpgFramework.Utils.Cache`2.TryGet(`0,`1@)
+  langs:
+  - csharp
+  - vb
+  name: Cache<KType, VType>
+  nameWithType: Cache<KType, VType>
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>
+  type: Class
+  source:
+    remote:
+      path: Runtime/Utils/Cache.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Cache
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Cache.cs
+    startLine: 10
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: A generic cache class that provides basic caching functionality.
+  example: []
+  syntax:
+    content: public class Cache<KType, VType>
+    typeParameters:
+    - id: KType
+      description: The type of the keys in the cache.
+    - id: VType
+      description: The type of the values in the cache.
+    content.vb: Public Class Cache(Of KType, VType)
+  inheritance:
+  - System.Object
+  nameWithType.vb: Cache(Of KType, VType)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType)
+  name.vb: Cache(Of KType, VType)
+- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2.Set(`0,`1)
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.Cache`2.Set(`0,`1)
+  id: Set(`0,`1)
+  parent: ElectricDrill.SoapRpgFramework.Utils.Cache`2
+  langs:
+  - csharp
+  - vb
+  name: Set(KType, VType)
+  nameWithType: Cache<KType, VType>.Set(KType, VType)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>.Set(KType, VType)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Utils/Cache.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Set
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Cache.cs
+    startLine: 20
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: Sets the value for the specified key in the cache. UPSERT operation.
+  example: []
+  syntax:
+    content: public void Set(KType key, VType value)
+    parameters:
+    - id: key
+      type: '{KType}'
+      description: The key of the item to set.
+    - id: value
+      type: '{VType}'
+      description: The value to set for the specified key.
+    content.vb: Public Sub [Set](key As KType, value As VType)
+  overload: ElectricDrill.SoapRpgFramework.Utils.Cache`2.Set*
+  nameWithType.vb: Cache(Of KType, VType).Set(KType, VType)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType).Set(KType, VType)
+- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2.Invalidate(`0)
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.Cache`2.Invalidate(`0)
+  id: Invalidate(`0)
+  parent: ElectricDrill.SoapRpgFramework.Utils.Cache`2
+  langs:
+  - csharp
+  - vb
+  name: Invalidate(KType)
+  nameWithType: Cache<KType, VType>.Invalidate(KType)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>.Invalidate(KType)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Utils/Cache.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Invalidate
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Cache.cs
+    startLine: 28
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: Invalidates the cache item for the specified key. If key is not found, nothing happens.
+  example: []
+  syntax:
+    content: public void Invalidate(KType key)
+    parameters:
+    - id: key
+      type: '{KType}'
+      description: The key of the item to invalidate.
+    content.vb: Public Sub Invalidate(key As KType)
+  overload: ElectricDrill.SoapRpgFramework.Utils.Cache`2.Invalidate*
+  nameWithType.vb: Cache(Of KType, VType).Invalidate(KType)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType).Invalidate(KType)
+- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2.InvalidateAll
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.Cache`2.InvalidateAll
+  id: InvalidateAll
+  parent: ElectricDrill.SoapRpgFramework.Utils.Cache`2
+  langs:
+  - csharp
+  - vb
+  name: InvalidateAll()
+  nameWithType: Cache<KType, VType>.InvalidateAll()
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>.InvalidateAll()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Utils/Cache.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: InvalidateAll
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Cache.cs
+    startLine: 35
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: Invalidates all items in the cache.
+  example: []
+  syntax:
+    content: public void InvalidateAll()
+    content.vb: Public Sub InvalidateAll()
+  overload: ElectricDrill.SoapRpgFramework.Utils.Cache`2.InvalidateAll*
+  nameWithType.vb: Cache(Of KType, VType).InvalidateAll()
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType).InvalidateAll()
+- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2.Get(`0)
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.Cache`2.Get(`0)
+  id: Get(`0)
+  parent: ElectricDrill.SoapRpgFramework.Utils.Cache`2
+  langs:
+  - csharp
+  - vb
+  name: Get(KType)
+  nameWithType: Cache<KType, VType>.Get(KType)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>.Get(KType)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Utils/Cache.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Get
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Cache.cs
+    startLine: 46
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: >-
+    Gets the value for the specified key from the cache.
+
+    If the key is not found, a KeyNotFoundException is thrown.
+  example: []
+  syntax:
+    content: public VType Get(KType key)
+    parameters:
+    - id: key
+      type: '{KType}'
+      description: The key of the item to get.
+    return:
+      type: '{VType}'
+      description: The value associated with the specified key.
+    content.vb: Public Function [Get](key As KType) As VType
+  overload: ElectricDrill.SoapRpgFramework.Utils.Cache`2.Get*
+  exceptions:
+  - type: System.Collections.Generic.KeyNotFoundException
+    commentId: T:System.Collections.Generic.KeyNotFoundException
+    description: Thrown when the key is not found in the cache.
+  nameWithType.vb: Cache(Of KType, VType).Get(KType)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType).Get(KType)
+- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2.TryGet(`0,`1@)
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.Cache`2.TryGet(`0,`1@)
+  id: TryGet(`0,`1@)
+  parent: ElectricDrill.SoapRpgFramework.Utils.Cache`2
+  langs:
+  - csharp
+  - vb
+  name: TryGet(KType, out VType)
+  nameWithType: Cache<KType, VType>.TryGet(KType, out VType)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>.TryGet(KType, out VType)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Utils/Cache.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: TryGet
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Cache.cs
+    startLine: 56
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: Tries to get the value for the specified key from the cache.
+  example: []
+  syntax:
+    content: public bool TryGet(KType key, out VType value)
+    parameters:
+    - id: key
+      type: '{KType}'
+      description: The key of the item to get.
+    - id: value
+      type: '{VType}'
+      description: When this method returns, contains the value associated with the specified key, if the key is found; otherwise, the default value for the type of the value parameter.
+    return:
+      type: System.Boolean
+      description: true if the cache contains an item with the specified key; otherwise, false.
+    content.vb: Public Function TryGet(key As KType, value As VType) As Boolean
+  overload: ElectricDrill.SoapRpgFramework.Utils.Cache`2.TryGet*
+  nameWithType.vb: Cache(Of KType, VType).TryGet(KType, VType)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType).TryGet(KType, VType)
+  name.vb: TryGet(KType, VType)
+- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2.Has(`0)
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.Cache`2.Has(`0)
+  id: Has(`0)
+  parent: ElectricDrill.SoapRpgFramework.Utils.Cache`2
+  langs:
+  - csharp
+  - vb
+  name: Has(KType)
+  nameWithType: Cache<KType, VType>.Has(KType)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>.Has(KType)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Utils/Cache.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Has
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Cache.cs
+    startLine: 65
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: Determines whether the cache contains an item with the specified key.
+  example: []
+  syntax:
+    content: public bool Has(KType key)
+    parameters:
+    - id: key
+      type: '{KType}'
+      description: The key to locate in the cache.
+    return:
+      type: System.Boolean
+      description: true if the cache contains an item with the key; otherwise, false.
+    content.vb: Public Function Has(key As KType) As Boolean
+  overload: ElectricDrill.SoapRpgFramework.Utils.Cache`2.Has*
+  nameWithType.vb: Cache(Of KType, VType).Has(KType)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType).Has(KType)
+- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2.Item(`0)
+  commentId: P:ElectricDrill.SoapRpgFramework.Utils.Cache`2.Item(`0)
+  id: Item(`0)
+  parent: ElectricDrill.SoapRpgFramework.Utils.Cache`2
+  langs:
+  - csharp
+  - vb
+  name: this[KType]
+  nameWithType: Cache<KType, VType>.this[KType]
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>.this[KType]
+  type: Property
+  source:
+    remote:
+      path: Runtime/Utils/Cache.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: this[]
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Cache.cs
+    startLine: 72
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Utils
+  summary: Gets or sets the value for the specified key in the cache.
+  example: []
+  syntax:
+    content: public VType this[KType key] { get; set; }
+    parameters:
+    - id: key
+      type: '{KType}'
+      description: The key of the item to get or set.
+    return:
+      type: '{VType}'
+      description: The value associated with the specified key.
+    content.vb: Public Default Property this[](key As KType) As VType
+  overload: ElectricDrill.SoapRpgFramework.Utils.Cache`2.Item*
+  nameWithType.vb: Cache(Of KType, VType).this[](KType)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType).this[](KType)
+  name.vb: this[](KType)
+references:
+- uid: ElectricDrill.SoapRpgFramework.Utils
+  commentId: N:ElectricDrill.SoapRpgFramework.Utils
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Utils
+  nameWithType: ElectricDrill.SoapRpgFramework.Utils
+  fullName: ElectricDrill.SoapRpgFramework.Utils
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Utils
+    name: Utils
+    href: ElectricDrill.SoapRpgFramework.Utils.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Utils
+    name: Utils
+    href: ElectricDrill.SoapRpgFramework.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2.Set*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.Cache`2.Set
+  href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html#ElectricDrill_SoapRpgFramework_Utils_Cache_2_Set__0__1_
+  name: Set
+  nameWithType: Cache<KType, VType>.Set
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>.Set
+  nameWithType.vb: Cache(Of KType, VType).Set
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType).Set
+- uid: '{KType}'
+  commentId: '!:KType'
+  definition: KType
+  name: KType
+  nameWithType: KType
+  fullName: KType
+- uid: '{VType}'
+  commentId: '!:VType'
+  definition: VType
+  name: VType
+  nameWithType: VType
+  fullName: VType
+- uid: KType
+  name: KType
+  nameWithType: KType
+  fullName: KType
+- uid: VType
+  name: VType
+  nameWithType: VType
+  fullName: VType
+- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2.Invalidate*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.Cache`2.Invalidate
+  href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html#ElectricDrill_SoapRpgFramework_Utils_Cache_2_Invalidate__0_
+  name: Invalidate
+  nameWithType: Cache<KType, VType>.Invalidate
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>.Invalidate
+  nameWithType.vb: Cache(Of KType, VType).Invalidate
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType).Invalidate
+- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2.InvalidateAll*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.Cache`2.InvalidateAll
+  href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html#ElectricDrill_SoapRpgFramework_Utils_Cache_2_InvalidateAll
+  name: InvalidateAll
+  nameWithType: Cache<KType, VType>.InvalidateAll
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>.InvalidateAll
+  nameWithType.vb: Cache(Of KType, VType).InvalidateAll
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType).InvalidateAll
+- uid: System.Collections.Generic.KeyNotFoundException
+  commentId: T:System.Collections.Generic.KeyNotFoundException
+  isExternal: true
+  name: KeyNotFoundException
+  nameWithType: KeyNotFoundException
+  fullName: System.Collections.Generic.KeyNotFoundException
+- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2.Get*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.Cache`2.Get
+  href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html#ElectricDrill_SoapRpgFramework_Utils_Cache_2_Get__0_
+  name: Get
+  nameWithType: Cache<KType, VType>.Get
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>.Get
+  nameWithType.vb: Cache(Of KType, VType).Get
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType).Get
+- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2.TryGet*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.Cache`2.TryGet
+  href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html#ElectricDrill_SoapRpgFramework_Utils_Cache_2_TryGet__0__1__
+  name: TryGet
+  nameWithType: Cache<KType, VType>.TryGet
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>.TryGet
+  nameWithType.vb: Cache(Of KType, VType).TryGet
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType).TryGet
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2.Has*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.Cache`2.Has
+  href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html#ElectricDrill_SoapRpgFramework_Utils_Cache_2_Has__0_
+  name: Has
+  nameWithType: Cache<KType, VType>.Has
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>.Has
+  nameWithType.vb: Cache(Of KType, VType).Has
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType).Has
+- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2.Item*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.Cache`2.Item
+  href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html#ElectricDrill_SoapRpgFramework_Utils_Cache_2_Item__0_
+  name: this
+  nameWithType: Cache<KType, VType>.this
+  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>.this
+  nameWithType.vb: Cache(Of KType, VType).this[]
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType).this[]
+  name.vb: this[]

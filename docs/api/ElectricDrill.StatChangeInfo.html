@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct StatChangeInfo | Soap RPG Framework ">
       
-      
+      <meta name="description" content="Contains information about a stat change event, including the entity, stat, and old/new values. Used for tracking and responding to stat modifications.">
       <link rel="icon" href="../images/favico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,15 +89,17 @@
 
 
   <h1 id="ElectricDrill_StatChangeInfo" data-uid="ElectricDrill.StatChangeInfo" class="text-break">
-Struct StatChangeInfo  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Stats/StatChangeInfo.cs/#L7"><i class="bi bi-code-slash"></i></a>
+Struct StatChangeInfo  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/StatChangeInfo.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="ElectricDrill.html">ElectricDrill</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>ElectricDrill.SimpleRPGCore.Runtime.dll</dd></dl>
+  <dl><dt>Assembly</dt><dd>com.electricdrill.soap-rpg-framework.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Contains information about a stat change event, including the entity, stat, and old/new values.
+Used for tracking and responding to stat modifications.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -122,12 +124,13 @@ Struct StatChangeInfo  <a class="header-action link-secondary" title="View sourc
 
   <a id="ElectricDrill_StatChangeInfo__ctor_" data-uid="ElectricDrill.StatChangeInfo.#ctor*"></a>
 
-  <h3 id="ElectricDrill_StatChangeInfo__ctor_ElectricDrill_SimpleRpgCore_Stats_EntityStats_ElectricDrill_SimpleRpgCore_Stats_Stat_System_Int64_System_Int64_" data-uid="ElectricDrill.StatChangeInfo.#ctor(ElectricDrill.SimpleRpgCore.Stats.EntityStats,ElectricDrill.SimpleRpgCore.Stats.Stat,System.Int64,System.Int64)">
+  <h3 id="ElectricDrill_StatChangeInfo__ctor_SoapRpgFramework_Stats_EntityStats_SoapRpgFramework_Stats_Stat_System_Int64_System_Int64_" data-uid="ElectricDrill.StatChangeInfo.#ctor(SoapRpgFramework.Stats.EntityStats,SoapRpgFramework.Stats.Stat,System.Int64,System.Int64)">
   StatChangeInfo(EntityStats, Stat, long, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Stats/StatChangeInfo.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/StatChangeInfo.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the StatChangeInfo structure.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -136,14 +139,18 @@ Struct StatChangeInfo  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>entity</code> <a class="xref" href="ElectricDrill.SimpleRpgCore.Stats.EntityStats.html">EntityStats</a></dt>
-    <dd></dd>
-    <dt><code>stat</code> <a class="xref" href="ElectricDrill.SimpleRpgCore.Stats.Stat.html">Stat</a></dt>
-    <dd></dd>
+    <dt><code>entity</code> <a class="xref" href="SoapRpgFramework.Stats.EntityStats.html">EntityStats</a></dt>
+    <dd><p>The EntityStats component that owns the stat.</p>
+</dd>
+    <dt><code>stat</code> <a class="xref" href="SoapRpgFramework.Stats.Stat.html">Stat</a></dt>
+    <dd><p>The stat that was changed.</p>
+</dd>
     <dt><code>oldValue</code> <span class="xref">long</span></dt>
-    <dd></dd>
+    <dd><p>The previous value of the stat.</p>
+</dd>
     <dt><code>newValue</code> <span class="xref">long</span></dt>
-    <dd></dd>
+    <dd><p>The new value of the stat.</p>
+</dd>
   </dl>
 
 
@@ -164,10 +171,11 @@ Struct StatChangeInfo  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="ElectricDrill_StatChangeInfo_EntityStats" data-uid="ElectricDrill.StatChangeInfo.EntityStats">
   EntityStats
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Stats/StatChangeInfo.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/StatChangeInfo.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The EntityStats component that owns the changed stat.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -179,7 +187,7 @@ Struct StatChangeInfo  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ElectricDrill.SimpleRpgCore.Stats.EntityStats.html">EntityStats</a></dt>
+    <dt><a class="xref" href="SoapRpgFramework.Stats.EntityStats.html">EntityStats</a></dt>
     <dd></dd>
   </dl>
 
@@ -194,10 +202,11 @@ Struct StatChangeInfo  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="ElectricDrill_StatChangeInfo_NewValue" data-uid="ElectricDrill.StatChangeInfo.NewValue">
   NewValue
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Stats/StatChangeInfo.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/StatChangeInfo.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The value of the stat after the change.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -224,10 +233,11 @@ Struct StatChangeInfo  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="ElectricDrill_StatChangeInfo_OldValue" data-uid="ElectricDrill.StatChangeInfo.OldValue">
   OldValue
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Stats/StatChangeInfo.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/StatChangeInfo.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The value of the stat before the change.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -254,10 +264,11 @@ Struct StatChangeInfo  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="ElectricDrill_StatChangeInfo_Stat" data-uid="ElectricDrill.StatChangeInfo.Stat">
   Stat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Stats/StatChangeInfo.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/StatChangeInfo.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The stat that was changed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -269,7 +280,7 @@ Struct StatChangeInfo  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ElectricDrill.SimpleRpgCore.Stats.Stat.html">Stat</a></dt>
+    <dt><a class="xref" href="SoapRpgFramework.Stats.Stat.html">Stat</a></dt>
     <dd></dd>
   </dl>
 
@@ -285,7 +296,7 @@ Struct StatChangeInfo  <a class="header-action link-secondary" title="View sourc
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/SimpleRpgCore/Stats/StatChangeInfo.cs/#L7" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/StatChangeInfo.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

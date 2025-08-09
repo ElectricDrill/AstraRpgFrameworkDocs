@@ -1,0 +1,107 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoapRpgFramework.IStatSetSource
+  commentId: T:SoapRpgFramework.IStatSetSource
+  id: IStatSetSource
+  parent: SoapRpgFramework
+  children:
+  - SoapRpgFramework.IStatSetSource.StatSet
+  langs:
+  - csharp
+  - vb
+  name: IStatSetSource
+  nameWithType: IStatSetSource
+  fullName: SoapRpgFramework.IStatSetSource
+  type: Interface
+  source:
+    remote:
+      path: Runtime/IStatSetSource.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: IStatSetSource
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/IStatSetSource.cs
+    startLine: 8
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  summary: >-
+    Interface for objects that provide a source of stat sets.
+
+    Defines the contract for accessing a StatSet that contains stat definitions.
+  example: []
+  syntax:
+    content: public interface IStatSetSource
+    content.vb: Public Interface IStatSetSource
+- uid: SoapRpgFramework.IStatSetSource.StatSet
+  commentId: P:SoapRpgFramework.IStatSetSource.StatSet
+  id: StatSet
+  parent: SoapRpgFramework.IStatSetSource
+  langs:
+  - csharp
+  - vb
+  name: StatSet
+  nameWithType: IStatSetSource.StatSet
+  fullName: SoapRpgFramework.IStatSetSource.StatSet
+  type: Property
+  source:
+    remote:
+      path: Runtime/IStatSetSource.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: StatSet
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/IStatSetSource.cs
+    startLine: 13
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  summary: Gets the stat set that defines the available stats.
+  example: []
+  syntax:
+    content: StatSet StatSet { get; }
+    parameters: []
+    return:
+      type: SoapRpgFramework.Stats.StatSet
+    content.vb: ReadOnly Property StatSet As StatSet
+  overload: SoapRpgFramework.IStatSetSource.StatSet*
+references:
+- uid: SoapRpgFramework
+  commentId: N:SoapRpgFramework
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework
+  nameWithType: SoapRpgFramework
+  fullName: SoapRpgFramework
+- uid: SoapRpgFramework.IStatSetSource.StatSet*
+  commentId: Overload:SoapRpgFramework.IStatSetSource.StatSet
+  href: SoapRpgFramework.IStatSetSource.html#SoapRpgFramework_IStatSetSource_StatSet
+  name: StatSet
+  nameWithType: IStatSetSource.StatSet
+  fullName: SoapRpgFramework.IStatSetSource.StatSet
+- uid: SoapRpgFramework.Stats.StatSet
+  commentId: T:SoapRpgFramework.Stats.StatSet
+  parent: SoapRpgFramework.Stats
+  href: SoapRpgFramework.Stats.StatSet.html
+  name: StatSet
+  nameWithType: StatSet
+  fullName: SoapRpgFramework.Stats.StatSet
+- uid: SoapRpgFramework.Stats
+  commentId: N:SoapRpgFramework.Stats
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework.Stats
+  nameWithType: SoapRpgFramework.Stats
+  fullName: SoapRpgFramework.Stats
+  spec.csharp:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Stats
+    name: Stats
+    href: SoapRpgFramework.Stats.html
+  spec.vb:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Stats
+    name: Stats
+    href: SoapRpgFramework.Stats.html

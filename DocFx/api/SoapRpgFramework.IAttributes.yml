@@ -1,0 +1,107 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoapRpgFramework.IAttributes
+  commentId: T:SoapRpgFramework.IAttributes
+  id: IAttributes
+  parent: SoapRpgFramework
+  children:
+  - SoapRpgFramework.IAttributes.Attributes
+  langs:
+  - csharp
+  - vb
+  name: IAttributes
+  nameWithType: IAttributes
+  fullName: SoapRpgFramework.IAttributes
+  type: Interface
+  source:
+    remote:
+      path: Runtime/IAttributes.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: IAttributes
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/IAttributes.cs
+    startLine: 8
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  summary: >-
+    Interface for entities that have an attributes system.
+
+    Provides access to the entity's attributes component.
+  example: []
+  syntax:
+    content: public interface IAttributes
+    content.vb: Public Interface IAttributes
+- uid: SoapRpgFramework.IAttributes.Attributes
+  commentId: P:SoapRpgFramework.IAttributes.Attributes
+  id: Attributes
+  parent: SoapRpgFramework.IAttributes
+  langs:
+  - csharp
+  - vb
+  name: Attributes
+  nameWithType: IAttributes.Attributes
+  fullName: SoapRpgFramework.IAttributes.Attributes
+  type: Property
+  source:
+    remote:
+      path: Runtime/IAttributes.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Attributes
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/IAttributes.cs
+    startLine: 13
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  summary: Gets the entity's attributes component.
+  example: []
+  syntax:
+    content: EntityAttributes Attributes { get; }
+    parameters: []
+    return:
+      type: SoapRpgFramework.Attributes.EntityAttributes
+    content.vb: ReadOnly Property Attributes As EntityAttributes
+  overload: SoapRpgFramework.IAttributes.Attributes*
+references:
+- uid: SoapRpgFramework
+  commentId: N:SoapRpgFramework
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework
+  nameWithType: SoapRpgFramework
+  fullName: SoapRpgFramework
+- uid: SoapRpgFramework.IAttributes.Attributes*
+  commentId: Overload:SoapRpgFramework.IAttributes.Attributes
+  href: SoapRpgFramework.IAttributes.html#SoapRpgFramework_IAttributes_Attributes
+  name: Attributes
+  nameWithType: IAttributes.Attributes
+  fullName: SoapRpgFramework.IAttributes.Attributes
+- uid: SoapRpgFramework.Attributes.EntityAttributes
+  commentId: T:SoapRpgFramework.Attributes.EntityAttributes
+  parent: SoapRpgFramework.Attributes
+  href: SoapRpgFramework.Attributes.EntityAttributes.html
+  name: EntityAttributes
+  nameWithType: EntityAttributes
+  fullName: SoapRpgFramework.Attributes.EntityAttributes
+- uid: SoapRpgFramework.Attributes
+  commentId: N:SoapRpgFramework.Attributes
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework.Attributes
+  nameWithType: SoapRpgFramework.Attributes
+  fullName: SoapRpgFramework.Attributes
+  spec.csharp:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Attributes
+    name: Attributes
+    href: SoapRpgFramework.Attributes.html
+  spec.vb:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Attributes
+    name: Attributes
+    href: SoapRpgFramework.Attributes.html

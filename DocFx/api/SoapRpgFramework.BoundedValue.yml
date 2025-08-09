@@ -1,0 +1,266 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoapRpgFramework.BoundedValue
+  commentId: T:SoapRpgFramework.BoundedValue
+  id: BoundedValue
+  parent: SoapRpgFramework
+  children:
+  - SoapRpgFramework.BoundedValue.HasMaxValue
+  - SoapRpgFramework.BoundedValue.HasMinValue
+  - SoapRpgFramework.BoundedValue.MaxValue
+  - SoapRpgFramework.BoundedValue.MinValue
+  langs:
+  - csharp
+  - vb
+  name: BoundedValue
+  nameWithType: BoundedValue
+  fullName: SoapRpgFramework.BoundedValue
+  type: Class
+  source:
+    remote:
+      path: Runtime/Utils/BoundedValue.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: BoundedValue
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/BoundedValue.cs
+    startLine: 9
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  summary: >-
+    Abstract base class for values that can be bounded by minimum and maximum limits.
+
+    Provides functionality to define optional min/max constraints and clamp values within those bounds.
+  example: []
+  syntax:
+    content: 'public abstract class BoundedValue : ScriptableObject'
+    content.vb: Public MustInherit Class BoundedValue Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  derivedClasses:
+  - SoapRpgFramework.Attributes.Attribute
+  - SoapRpgFramework.Stats.Stat
+- uid: SoapRpgFramework.BoundedValue.HasMaxValue
+  commentId: P:SoapRpgFramework.BoundedValue.HasMaxValue
+  id: HasMaxValue
+  parent: SoapRpgFramework.BoundedValue
+  langs:
+  - csharp
+  - vb
+  name: HasMaxValue
+  nameWithType: BoundedValue.HasMaxValue
+  fullName: SoapRpgFramework.BoundedValue.HasMaxValue
+  type: Property
+  source:
+    remote:
+      path: Runtime/Utils/BoundedValue.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: HasMaxValue
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/BoundedValue.cs
+    startLine: 19
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  summary: Gets or sets whether this value has a maximum limit.
+  example: []
+  syntax:
+    content: public bool HasMaxValue { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasMaxValue As Boolean
+  overload: SoapRpgFramework.BoundedValue.HasMaxValue*
+- uid: SoapRpgFramework.BoundedValue.MaxValue
+  commentId: P:SoapRpgFramework.BoundedValue.MaxValue
+  id: MaxValue
+  parent: SoapRpgFramework.BoundedValue
+  langs:
+  - csharp
+  - vb
+  name: MaxValue
+  nameWithType: BoundedValue.MaxValue
+  fullName: SoapRpgFramework.BoundedValue.MaxValue
+  type: Property
+  source:
+    remote:
+      path: Runtime/Utils/BoundedValue.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: MaxValue
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/BoundedValue.cs
+    startLine: 24
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  summary: Gets or sets the maximum allowed value when HasMaxValue is true.
+  example: []
+  syntax:
+    content: public long MaxValue { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property MaxValue As Long
+  overload: SoapRpgFramework.BoundedValue.MaxValue*
+- uid: SoapRpgFramework.BoundedValue.HasMinValue
+  commentId: P:SoapRpgFramework.BoundedValue.HasMinValue
+  id: HasMinValue
+  parent: SoapRpgFramework.BoundedValue
+  langs:
+  - csharp
+  - vb
+  name: HasMinValue
+  nameWithType: BoundedValue.HasMinValue
+  fullName: SoapRpgFramework.BoundedValue.HasMinValue
+  type: Property
+  source:
+    remote:
+      path: Runtime/Utils/BoundedValue.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: HasMinValue
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/BoundedValue.cs
+    startLine: 29
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  summary: Gets or sets whether this value has a minimum limit.
+  example: []
+  syntax:
+    content: public bool HasMinValue { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasMinValue As Boolean
+  overload: SoapRpgFramework.BoundedValue.HasMinValue*
+- uid: SoapRpgFramework.BoundedValue.MinValue
+  commentId: P:SoapRpgFramework.BoundedValue.MinValue
+  id: MinValue
+  parent: SoapRpgFramework.BoundedValue
+  langs:
+  - csharp
+  - vb
+  name: MinValue
+  nameWithType: BoundedValue.MinValue
+  fullName: SoapRpgFramework.BoundedValue.MinValue
+  type: Property
+  source:
+    remote:
+      path: Runtime/Utils/BoundedValue.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: MinValue
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/BoundedValue.cs
+    startLine: 34
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework
+  summary: Gets or sets the minimum allowed value when HasMinValue is true.
+  example: []
+  syntax:
+    content: public int MinValue { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MinValue As Integer
+  overload: SoapRpgFramework.BoundedValue.MinValue*
+references:
+- uid: SoapRpgFramework
+  commentId: N:SoapRpgFramework
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework
+  nameWithType: SoapRpgFramework
+  fullName: SoapRpgFramework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SoapRpgFramework.BoundedValue.HasMaxValue*
+  commentId: Overload:SoapRpgFramework.BoundedValue.HasMaxValue
+  href: SoapRpgFramework.BoundedValue.html#SoapRpgFramework_BoundedValue_HasMaxValue
+  name: HasMaxValue
+  nameWithType: BoundedValue.HasMaxValue
+  fullName: SoapRpgFramework.BoundedValue.HasMaxValue
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: SoapRpgFramework.BoundedValue.MaxValue*
+  commentId: Overload:SoapRpgFramework.BoundedValue.MaxValue
+  href: SoapRpgFramework.BoundedValue.html#SoapRpgFramework_BoundedValue_MaxValue
+  name: MaxValue
+  nameWithType: BoundedValue.MaxValue
+  fullName: SoapRpgFramework.BoundedValue.MaxValue
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: SoapRpgFramework.BoundedValue.HasMinValue*
+  commentId: Overload:SoapRpgFramework.BoundedValue.HasMinValue
+  href: SoapRpgFramework.BoundedValue.html#SoapRpgFramework_BoundedValue_HasMinValue
+  name: HasMinValue
+  nameWithType: BoundedValue.HasMinValue
+  fullName: SoapRpgFramework.BoundedValue.HasMinValue
+- uid: SoapRpgFramework.BoundedValue.MinValue*
+  commentId: Overload:SoapRpgFramework.BoundedValue.MinValue
+  href: SoapRpgFramework.BoundedValue.html#SoapRpgFramework_BoundedValue_MinValue
+  name: MinValue
+  nameWithType: BoundedValue.MinValue
+  fullName: SoapRpgFramework.BoundedValue.MinValue
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

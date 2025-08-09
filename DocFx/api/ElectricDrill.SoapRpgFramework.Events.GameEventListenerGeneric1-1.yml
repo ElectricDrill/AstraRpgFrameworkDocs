@@ -1,0 +1,390 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1
+  commentId: T:ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1
+  id: GameEventListenerGeneric1`1
+  parent: ElectricDrill.SoapRpgFramework.Events
+  children:
+  - ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1.OnEventRaised(`0)
+  - ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1._event
+  - ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1._response
+  langs:
+  - csharp
+  - vb
+  name: GameEventListenerGeneric1<T>
+  nameWithType: GameEventListenerGeneric1<T>
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1<T>
+  type: Class
+  source:
+    remote:
+      path: Runtime/Events/GameEventListenerGeneric1.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: GameEventListenerGeneric1
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/GameEventListenerGeneric1.cs
+    startLine: 9
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Events
+  summary: >-
+    MonoBehaviour component that listens to GameEventGeneric1 objects and responds with UnityEvents.
+
+    Automatically registers and unregisters itself when enabled/disabled.
+  example: []
+  syntax:
+    content: 'public class GameEventListenerGeneric1<T> : MonoBehaviour'
+    typeParameters:
+    - id: T
+      description: The type of parameter the listened event carries.
+    content.vb: Public Class GameEventListenerGeneric1(Of T) Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  derivedClasses:
+  - ElectricDrill.SoapRpgFramework.Events.AttributeChangedGameEventListener
+  - ElectricDrill.SoapRpgFramework.Events.EntityCoreGameEventListener
+  - ElectricDrill.SoapRpgFramework.Events.IntGameEventListener
+  - ElectricDrill.SoapRpgFramework.Events.StatChangedGameEventListener
+  nameWithType.vb: GameEventListenerGeneric1(Of T)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1(Of T)
+  name.vb: GameEventListenerGeneric1(Of T)
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1._event
+  commentId: F:ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1._event
+  id: _event
+  parent: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1
+  langs:
+  - csharp
+  - vb
+  name: _event
+  nameWithType: GameEventListenerGeneric1<T>._event
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1<T>._event
+  type: Field
+  source:
+    remote:
+      path: Runtime/Events/GameEventListenerGeneric1.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: _event
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/GameEventListenerGeneric1.cs
+    startLine: 11
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Events
+  syntax:
+    content: >-
+      [SerializeField]
+
+      protected GameEventGeneric1<T> _event
+    return:
+      type: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{{T}}
+    content.vb: >-
+      <SerializeField>
+
+      Protected _event As GameEventGeneric1(Of T)
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+  nameWithType.vb: GameEventListenerGeneric1(Of T)._event
+  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1(Of T)._event
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1._response
+  commentId: F:ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1._response
+  id: _response
+  parent: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1
+  langs:
+  - csharp
+  - vb
+  name: _response
+  nameWithType: GameEventListenerGeneric1<T>._response
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1<T>._response
+  type: Field
+  source:
+    remote:
+      path: Runtime/Events/GameEventListenerGeneric1.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: _response
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/GameEventListenerGeneric1.cs
+    startLine: 12
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Events
+  syntax:
+    content: >-
+      [SerializeField]
+
+      protected UnityEvent<T> _response
+    return:
+      type: UnityEngine.Events.UnityEvent{{T}}
+    content.vb: >-
+      <SerializeField>
+
+      Protected _response As UnityEvent(Of T)
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+  nameWithType.vb: GameEventListenerGeneric1(Of T)._response
+  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1(Of T)._response
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1.OnEventRaised(`0)
+  commentId: M:ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1.OnEventRaised(`0)
+  id: OnEventRaised(`0)
+  parent: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1
+  langs:
+  - csharp
+  - vb
+  name: OnEventRaised(T)
+  nameWithType: GameEventListenerGeneric1<T>.OnEventRaised(T)
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1<T>.OnEventRaised(T)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Events/GameEventListenerGeneric1.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: OnEventRaised
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/GameEventListenerGeneric1.cs
+    startLine: 32
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Events
+  summary: Called by the GameEvent when it is raised. Invokes the configured UnityEvent response with the provided context.
+  example: []
+  syntax:
+    content: public void OnEventRaised(T context)
+    parameters:
+    - id: context
+      type: '{T}'
+      description: The data passed from the event.
+    content.vb: Public Sub OnEventRaised(context As T)
+  overload: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1.OnEventRaised*
+  nameWithType.vb: GameEventListenerGeneric1(Of T).OnEventRaised(T)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1(Of T).OnEventRaised(T)
+references:
+- uid: ElectricDrill.SoapRpgFramework.Events
+  commentId: N:ElectricDrill.SoapRpgFramework.Events
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Events
+  nameWithType: ElectricDrill.SoapRpgFramework.Events
+  fullName: ElectricDrill.SoapRpgFramework.Events
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Events
+    name: Events
+    href: ElectricDrill.SoapRpgFramework.Events.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Events
+    name: Events
+    href: ElectricDrill.SoapRpgFramework.Events.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{{T}}
+  commentId: T:ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1{`0}
+  parent: ElectricDrill.SoapRpgFramework.Events
+  definition: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1`1
+  href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html
+  name: GameEventGeneric1<T>
+  nameWithType: GameEventGeneric1<T>
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1<T>
+  nameWithType.vb: GameEventGeneric1(Of T)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1(Of T)
+  name.vb: GameEventGeneric1(Of T)
+  spec.csharp:
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1`1
+    name: GameEventGeneric1
+    href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1`1
+    name: GameEventGeneric1
+    href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1`1
+  commentId: T:ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1`1
+  href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html
+  name: GameEventGeneric1<T>
+  nameWithType: GameEventGeneric1<T>
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1<T>
+  nameWithType.vb: GameEventGeneric1(Of T)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1(Of T)
+  name.vb: GameEventGeneric1(Of T)
+  spec.csharp:
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1`1
+    name: GameEventGeneric1
+    href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1`1
+    name: GameEventGeneric1
+    href: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric1-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UnityEngine.Events.UnityEvent{{T}}
+  commentId: T:UnityEngine.Events.UnityEvent{`0}
+  parent: UnityEngine.Events
+  definition: UnityEngine.Events.UnityEvent`1
+  name: UnityEvent<T>
+  nameWithType: UnityEvent<T>
+  fullName: UnityEngine.Events.UnityEvent<T>
+  nameWithType.vb: UnityEvent(Of T)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of T)
+  name.vb: UnityEvent(Of T)
+  spec.csharp:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UnityEngine.Events.UnityEvent`1
+  commentId: T:UnityEngine.Events.UnityEvent`1
+  isExternal: true
+  name: UnityEvent<T0>
+  nameWithType: UnityEvent<T0>
+  fullName: UnityEngine.Events.UnityEvent<T0>
+  nameWithType.vb: UnityEvent(Of T0)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of T0)
+  name.vb: UnityEvent(Of T0)
+  spec.csharp:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: <
+  - name: T0
+  - name: '>'
+  spec.vb:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T0
+  - name: )
+- uid: UnityEngine.Events
+  commentId: N:UnityEngine.Events
+  isExternal: true
+  name: UnityEngine.Events
+  nameWithType: UnityEngine.Events
+  fullName: UnityEngine.Events
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Events
+    name: Events
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Events
+    name: Events
+    isExternal: true
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1.OnEventRaised*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1.OnEventRaised
+  href: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1-1.html#ElectricDrill_SoapRpgFramework_Events_GameEventListenerGeneric1_1_OnEventRaised__0_
+  name: OnEventRaised
+  nameWithType: GameEventListenerGeneric1<T>.OnEventRaised
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1<T>.OnEventRaised
+  nameWithType.vb: GameEventListenerGeneric1(Of T).OnEventRaised
+  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1(Of T).OnEventRaised
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

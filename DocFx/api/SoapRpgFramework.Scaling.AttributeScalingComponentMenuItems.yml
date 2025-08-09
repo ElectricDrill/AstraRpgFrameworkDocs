@@ -1,0 +1,123 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems
+  commentId: T:SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems
+  id: AttributeScalingComponentMenuItems
+  parent: SoapRpgFramework.Scaling
+  children:
+  - SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.CreateAttributeScalingComponent
+  langs:
+  - csharp
+  - vb
+  name: AttributeScalingComponentMenuItems
+  nameWithType: AttributeScalingComponentMenuItems
+  fullName: SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems
+  type: Class
+  source:
+    remote:
+      path: Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: AttributeScalingComponentMenuItems
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+    startLine: 56
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Scaling
+  summary: Provides a menu item in the Unity Editor to create an AttributesScalingComponent asset.
+  example: []
+  syntax:
+    content: public static class AttributeScalingComponentMenuItems
+    content.vb: Public Module AttributeScalingComponentMenuItems
+  inheritance:
+  - System.Object
+- uid: SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.CreateAttributeScalingComponent
+  commentId: M:SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.CreateAttributeScalingComponent
+  id: CreateAttributeScalingComponent
+  parent: SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems
+  langs:
+  - csharp
+  - vb
+  name: CreateAttributeScalingComponent()
+  nameWithType: AttributeScalingComponentMenuItems.CreateAttributeScalingComponent()
+  fullName: SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.CreateAttributeScalingComponent()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: CreateAttributeScalingComponent
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+    startLine: 61
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Scaling
+  summary: Creates a new AttributesScalingComponent asset.
+  example: []
+  syntax:
+    content: >-
+      [MenuItem("Assets/Create/Soap RPG Framework/Scaling/Attribute Scaling Component", false, 1)]
+
+      public static void CreateAttributeScalingComponent()
+    content.vb: >-
+      <MenuItem("Assets/Create/Soap RPG Framework/Scaling/Attribute Scaling Component", False, 1)>
+
+      Public Shared Sub CreateAttributeScalingComponent()
+  overload: SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.CreateAttributeScalingComponent*
+  attributes:
+  - type: UnityEditor.MenuItem
+    ctor: UnityEditor.MenuItem.#ctor(System.String,System.Boolean,System.Int32)
+    arguments:
+    - type: System.String
+      value: Assets/Create/Soap RPG Framework/Scaling/Attribute Scaling Component
+    - type: System.Boolean
+      value: false
+    - type: System.Int32
+      value: 1
+references:
+- uid: SoapRpgFramework.Scaling
+  commentId: N:SoapRpgFramework.Scaling
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework.Scaling
+  nameWithType: SoapRpgFramework.Scaling
+  fullName: SoapRpgFramework.Scaling
+  spec.csharp:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Scaling
+    name: Scaling
+    href: SoapRpgFramework.Scaling.html
+  spec.vb:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Scaling
+    name: Scaling
+    href: SoapRpgFramework.Scaling.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.CreateAttributeScalingComponent*
+  commentId: Overload:SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.CreateAttributeScalingComponent
+  href: SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.html#SoapRpgFramework_Scaling_AttributeScalingComponentMenuItems_CreateAttributeScalingComponent
+  name: CreateAttributeScalingComponent
+  nameWithType: AttributeScalingComponentMenuItems.CreateAttributeScalingComponent
+  fullName: SoapRpgFramework.Scaling.AttributeScalingComponentMenuItems.CreateAttributeScalingComponent

@@ -1,0 +1,106 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoapRpgFramework.Stats
+  commentId: N:SoapRpgFramework.Stats
+  id: SoapRpgFramework.Stats
+  children:
+  - SoapRpgFramework.Stats.EntityStats
+  - SoapRpgFramework.Stats.IStatContainer
+  - SoapRpgFramework.Stats.Stat
+  - SoapRpgFramework.Stats.StatMenuItems
+  - SoapRpgFramework.Stats.StatSet
+  - SoapRpgFramework.Stats.StatSetInstance
+  - SoapRpgFramework.Stats.StatSetMenuItems
+  - SoapRpgFramework.Stats.StatToStatModifier
+  - SoapRpgFramework.Stats.StatToStatModifierMenuItems
+  langs:
+  - csharp
+  - vb
+  name: SoapRpgFramework.Stats
+  nameWithType: SoapRpgFramework.Stats
+  fullName: SoapRpgFramework.Stats
+  type: Namespace
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+references:
+- uid: SoapRpgFramework.Stats.StatToStatModifier
+  commentId: T:SoapRpgFramework.Stats.StatToStatModifier
+  href: SoapRpgFramework.Stats.StatToStatModifier.html
+  name: StatToStatModifier
+  nameWithType: StatToStatModifier
+  fullName: SoapRpgFramework.Stats.StatToStatModifier
+- uid: SoapRpgFramework.Stats.StatToStatModifierMenuItems
+  commentId: T:SoapRpgFramework.Stats.StatToStatModifierMenuItems
+  href: SoapRpgFramework.Stats.StatToStatModifierMenuItems.html
+  name: StatToStatModifierMenuItems
+  nameWithType: StatToStatModifierMenuItems
+  fullName: SoapRpgFramework.Stats.StatToStatModifierMenuItems
+- uid: SoapRpgFramework.Stats.StatSet
+  commentId: T:SoapRpgFramework.Stats.StatSet
+  parent: SoapRpgFramework.Stats
+  href: SoapRpgFramework.Stats.StatSet.html
+  name: StatSet
+  nameWithType: StatSet
+  fullName: SoapRpgFramework.Stats.StatSet
+- uid: SoapRpgFramework.Stats.StatSetMenuItems
+  commentId: T:SoapRpgFramework.Stats.StatSetMenuItems
+  href: SoapRpgFramework.Stats.StatSetMenuItems.html
+  name: StatSetMenuItems
+  nameWithType: StatSetMenuItems
+  fullName: SoapRpgFramework.Stats.StatSetMenuItems
+- uid: SoapRpgFramework.Stats.EntityStats
+  commentId: T:SoapRpgFramework.Stats.EntityStats
+  parent: SoapRpgFramework.Stats
+  href: SoapRpgFramework.Stats.EntityStats.html
+  name: EntityStats
+  nameWithType: EntityStats
+  fullName: SoapRpgFramework.Stats.EntityStats
+- uid: SoapRpgFramework.Stats.IStatContainer
+  commentId: T:SoapRpgFramework.Stats.IStatContainer
+  parent: SoapRpgFramework.Stats
+  href: SoapRpgFramework.Stats.IStatContainer.html
+  name: IStatContainer
+  nameWithType: IStatContainer
+  fullName: SoapRpgFramework.Stats.IStatContainer
+- uid: SoapRpgFramework.Stats.StatSetInstance
+  commentId: T:SoapRpgFramework.Stats.StatSetInstance
+  parent: SoapRpgFramework.Stats
+  href: SoapRpgFramework.Stats.StatSetInstance.html
+  name: StatSetInstance
+  nameWithType: StatSetInstance
+  fullName: SoapRpgFramework.Stats.StatSetInstance
+- uid: SoapRpgFramework.Stats.Stat
+  commentId: T:SoapRpgFramework.Stats.Stat
+  parent: SoapRpgFramework.Stats
+  href: SoapRpgFramework.Stats.Stat.html
+  name: Stat
+  nameWithType: Stat
+  fullName: SoapRpgFramework.Stats.Stat
+- uid: SoapRpgFramework.Stats.StatMenuItems
+  commentId: T:SoapRpgFramework.Stats.StatMenuItems
+  href: SoapRpgFramework.Stats.StatMenuItems.html
+  name: StatMenuItems
+  nameWithType: StatMenuItems
+  fullName: SoapRpgFramework.Stats.StatMenuItems
+- uid: SoapRpgFramework.Stats
+  commentId: N:SoapRpgFramework.Stats
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework.Stats
+  nameWithType: SoapRpgFramework.Stats
+  fullName: SoapRpgFramework.Stats
+  spec.csharp:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Stats
+    name: Stats
+    href: SoapRpgFramework.Stats.html
+  spec.vb:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Stats
+    name: Stats
+    href: SoapRpgFramework.Stats.html

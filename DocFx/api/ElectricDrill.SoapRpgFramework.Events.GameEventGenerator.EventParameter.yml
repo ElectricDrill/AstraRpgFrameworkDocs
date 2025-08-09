@@ -1,0 +1,252 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter
+  commentId: T:ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter
+  id: GameEventGenerator.EventParameter
+  parent: ElectricDrill.SoapRpgFramework.Events
+  children:
+  - ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.monoScript
+  - ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.nativeType
+  - ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.parameterType
+  langs:
+  - csharp
+  - vb
+  name: GameEventGenerator.EventParameter
+  nameWithType: GameEventGenerator.EventParameter
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter
+  type: Class
+  source:
+    remote:
+      path: Runtime/Utils/GameEventsGenerator.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: EventParameter
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/GameEventsGenerator.cs
+    startLine: 20
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Events
+  summary: >-
+    Represents a parameter that can be passed to a generated game event.
+
+    Supports both native C# types and custom MonoScript-based types.
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class GameEventGenerator.EventParameter
+    content.vb: >-
+      <Serializable>
+
+      Public Class GameEventGenerator.EventParameter
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.parameterType
+  commentId: F:ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.parameterType
+  id: parameterType
+  parent: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter
+  langs:
+  - csharp
+  - vb
+  name: parameterType
+  nameWithType: GameEventGenerator.EventParameter.parameterType
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.parameterType
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utils/GameEventsGenerator.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: parameterType
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/GameEventsGenerator.cs
+    startLine: 38
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Events
+  syntax:
+    content: public GameEventGenerator.EventParameter.ParameterType parameterType
+    return:
+      type: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType
+    content.vb: Public parameterType As GameEventGenerator.EventParameter.ParameterType
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.nativeType
+  commentId: F:ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.nativeType
+  id: nativeType
+  parent: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter
+  langs:
+  - csharp
+  - vb
+  name: nativeType
+  nameWithType: GameEventGenerator.EventParameter.nativeType
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.nativeType
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utils/GameEventsGenerator.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: nativeType
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/GameEventsGenerator.cs
+    startLine: 39
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Events
+  syntax:
+    content: public GameEventGenerator.EventParameter.NativeType nativeType
+    return:
+      type: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.NativeType
+    content.vb: Public nativeType As GameEventGenerator.EventParameter.NativeType
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.monoScript
+  commentId: F:ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.monoScript
+  id: monoScript
+  parent: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter
+  langs:
+  - csharp
+  - vb
+  name: monoScript
+  nameWithType: GameEventGenerator.EventParameter.monoScript
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.monoScript
+  type: Field
+  source:
+    remote:
+      path: Runtime/Utils/GameEventsGenerator.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: monoScript
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/GameEventsGenerator.cs
+    startLine: 40
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Events
+  syntax:
+    content: public MonoScript monoScript
+    return:
+      type: UnityEditor.MonoScript
+    content.vb: Public monoScript As MonoScript
+references:
+- uid: ElectricDrill.SoapRpgFramework.Events
+  commentId: N:ElectricDrill.SoapRpgFramework.Events
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Events
+  nameWithType: ElectricDrill.SoapRpgFramework.Events
+  fullName: ElectricDrill.SoapRpgFramework.Events
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Events
+    name: Events
+    href: ElectricDrill.SoapRpgFramework.Events.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Events
+    name: Events
+    href: ElectricDrill.SoapRpgFramework.Events.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType
+  commentId: T:ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType
+  parent: ElectricDrill.SoapRpgFramework.Events
+  href: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.html
+  name: GameEventGenerator.EventParameter.ParameterType
+  nameWithType: GameEventGenerator.EventParameter.ParameterType
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType
+  spec.csharp:
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator
+    name: GameEventGenerator
+    href: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter
+    name: EventParameter
+    href: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType
+    name: ParameterType
+    href: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType.html
+  spec.vb:
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator
+    name: GameEventGenerator
+    href: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter
+    name: EventParameter
+    href: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType
+    name: ParameterType
+    href: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType.html
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.NativeType
+  commentId: T:ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.NativeType
+  parent: ElectricDrill.SoapRpgFramework.Events
+  href: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.html
+  name: GameEventGenerator.EventParameter.NativeType
+  nameWithType: GameEventGenerator.EventParameter.NativeType
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.NativeType
+  spec.csharp:
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator
+    name: GameEventGenerator
+    href: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter
+    name: EventParameter
+    href: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.NativeType
+    name: NativeType
+    href: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.NativeType.html
+  spec.vb:
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator
+    name: GameEventGenerator
+    href: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter
+    name: EventParameter
+    href: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.NativeType
+    name: NativeType
+    href: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.NativeType.html
+- uid: UnityEditor.MonoScript
+  commentId: T:UnityEditor.MonoScript
+  parent: UnityEditor
+  isExternal: true
+  name: MonoScript
+  nameWithType: MonoScript
+  fullName: UnityEditor.MonoScript
+- uid: UnityEditor
+  commentId: N:UnityEditor
+  isExternal: true
+  name: UnityEditor
+  nameWithType: UnityEditor
+  fullName: UnityEditor

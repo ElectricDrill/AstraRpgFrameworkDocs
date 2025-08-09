@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class EntityStats | Soap RPG Framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class EntityStats | Soap RPG Framework ">
+      
+      <meta name="description" content="Component that manages the statistics of an entity in the game. It handles base stats, flat stat modifiers, stat to stat modifiers, and percentage stat modifiers. Base stats can either be fixed or come from the entity&#39;s class (if one is available on the Game Object). When stats change because of a modifier of any kind, the assigned  is raised.">
+      <link rel="icon" href="../images/favico.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Cis8/SoapRpgFramework/new/main/apiSpec/new?filename=SoapRpgFramework_Stats_EntityStats.md&amp;value=---%0Auid%3A%20SoapRpgFramework.Stats.EntityStats%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/soap-rpg-framework-logo.png" alt="Soap RPG Framework">
+            Soap RPG Framework
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="SoapRpgFramework.Stats.EntityStats">
+
+
+
+  <h1 id="SoapRpgFramework_Stats_EntityStats" data-uid="SoapRpgFramework.Stats.EntityStats" class="text-break">
+Class EntityStats  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SoapRpgFramework.html">SoapRpgFramework</a>.<a class="xref" href="SoapRpgFramework.Stats.html">Stats</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>com.electricdrill.soap-rpg-framework.Runtime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Component that manages the statistics of an entity in the game.
+It handles base stats, flat stat modifiers, stat to stat modifiers, and percentage stat modifiers.<br>
+Base stats can either be fixed or come from the entity's class (if one is available on the Game Object).
+When stats change because of a modifier of any kind, the assigned <a class="xref" href="ElectricDrill.SoapRpgFramework.Events.StatChangedGameEvent.html">StatChangedGameEvent</a> is raised.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DisallowMultipleComponent]
+[RequireComponent(typeof(EntityCore))]
+public class EntityStats : MonoBehaviour, IStatSetSource</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Component.html">Component</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Behaviour.html">Behaviour</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a></div>
+      <div><span class="xref">EntityStats</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="SoapRpgFramework.IStatSetSource.html">IStatSetSource</a></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="SoapRpgFramework_Stats_EntityStats__entityClass" data-uid="SoapRpgFramework.Stats.EntityStats._entityClass">
+  _entityClass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IClassSource _entityClass</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SoapRpgFramework.IClassSource.html">IClassSource</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SoapRpgFramework_Stats_EntityStats__flatModifiers" data-uid="SoapRpgFramework.Stats.EntityStats._flatModifiers">
+  _flatModifiers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected StatSetInstance _flatModifiers</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SoapRpgFramework.Stats.StatSetInstance.html">StatSetInstance</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="SoapRpgFramework_Stats_EntityStats__percentageModifiers" data-uid="SoapRpgFramework.Stats.EntityStats._percentageModifiers">
+  _percentageModifiers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected StatSetInstance _percentageModifiers</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SoapRpgFramework.Stats.StatSetInstance.html">StatSetInstance</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="SoapRpgFramework_Stats_EntityStats_EntityClass_" data-uid="SoapRpgFramework.Stats.EntityStats.EntityClass*"></a>
+
+  <h3 id="SoapRpgFramework_Stats_EntityStats_EntityClass" data-uid="SoapRpgFramework.Stats.EntityStats.EntityClass">
+  EntityClass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The class source of the entity. In most cases, this is the <a class="xref" href="SoapRpgFramework.Stats.EntityStats.html#SoapRpgFramework_Stats_EntityStats_EntityClass">EntityClass</a> component attached to the entity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IClassSource EntityClass { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SoapRpgFramework.IClassSource.html">IClassSource</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SoapRpgFramework_Stats_EntityStats_EntityCore_" data-uid="SoapRpgFramework.Stats.EntityStats.EntityCore*"></a>
+
+  <h3 id="SoapRpgFramework_Stats_EntityStats_EntityCore" data-uid="SoapRpgFramework.Stats.EntityStats.EntityCore">
+  EntityCore
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The entity core associated with this stats component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityCore EntityCore { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SoapRpgFramework.EntityCore.html">EntityCore</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SoapRpgFramework_Stats_EntityStats_OnStatChanged_" data-uid="SoapRpgFramework.Stats.EntityStats.OnStatChanged*"></a>
+
+  <h3 id="SoapRpgFramework_Stats_EntityStats_OnStatChanged" data-uid="SoapRpgFramework.Stats.EntityStats.OnStatChanged">
+  OnStatChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event raised when a stat changes due to a modifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StatChangedGameEvent OnStatChanged { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Events.StatChangedGameEvent.html">StatChangedGameEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SoapRpgFramework_Stats_EntityStats_StatSet_" data-uid="SoapRpgFramework.Stats.EntityStats.StatSet*"></a>
+
+  <h3 id="SoapRpgFramework_Stats_EntityStats_StatSet" data-uid="SoapRpgFramework.Stats.EntityStats.StatSet">
+  StatSet
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The stat set used to calculate the entity's stats.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual StatSet StatSet { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SoapRpgFramework.Stats.StatSet.html">StatSet</a></dt>
+    <dd><p>If useBaseStatsFromClass is true, it returns the stat set of the entity's class.
+Otherwise, it returns the fixed base stats stat set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SoapRpgFramework_Stats_EntityStats_StatsCache_" data-uid="SoapRpgFramework.Stats.EntityStats.StatsCache*"></a>
+
+  <h3 id="SoapRpgFramework_Stats_EntityStats_StatsCache" data-uid="SoapRpgFramework.Stats.EntityStats.StatsCache">
+  StatsCache
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Cache&lt;Stat, long&gt; StatsCache { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Utils.Cache-2.html">Cache</a>&lt;<a class="xref" href="SoapRpgFramework.Stats.Stat.html">Stat</a>, <span class="xref">long</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="SoapRpgFramework_Stats_EntityStats_UseClassBaseStats_" data-uid="SoapRpgFramework.Stats.EntityStats.UseClassBaseStats*"></a>
+
+  <h3 id="SoapRpgFramework_Stats_EntityStats_UseClassBaseStats" data-uid="SoapRpgFramework.Stats.EntityStats.UseClassBaseStats">
+  UseClassBaseStats
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether to use base stats from the entity's class or the fixed base stats.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseClassBaseStats { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="SoapRpgFramework_Stats_EntityStats_AddFlatModifier_" data-uid="SoapRpgFramework.Stats.EntityStats.AddFlatModifier*"></a>
+
+  <h3 id="SoapRpgFramework_Stats_EntityStats_AddFlatModifier_SoapRpgFramework_Stats_Stat_System_Int64_" data-uid="SoapRpgFramework.Stats.EntityStats.AddFlatModifier(SoapRpgFramework.Stats.Stat,System.Int64)">
+  AddFlatModifier(Stat, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a flat modifier to a stat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddFlatModifier(Stat stat, long value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stat</code> <a class="xref" href="SoapRpgFramework.Stats.Stat.html">Stat</a></dt>
+    <dd><p>The stat to add the flat modifier to.</p>
+</dd>
+    <dt><code>value</code> <span class="xref">long</span></dt>
+    <dd><p>The value of the flat modifier.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SoapRpgFramework_Stats_EntityStats_AddPercentageModifier_" data-uid="SoapRpgFramework.Stats.EntityStats.AddPercentageModifier*"></a>
+
+  <h3 id="SoapRpgFramework_Stats_EntityStats_AddPercentageModifier_SoapRpgFramework_Stats_Stat_SoapRpgFramework_Utils_Percentage_" data-uid="SoapRpgFramework.Stats.EntityStats.AddPercentageModifier(SoapRpgFramework.Stats.Stat,SoapRpgFramework.Utils.Percentage)">
+  AddPercentageModifier(Stat, Percentage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="SoapRpgFramework.Utils.Percentage.html">Percentage</a> modifier to a stat. Such modifiers consider the base value of the stat,
+the flat modifiers, and the stat-to-stat modifiers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddPercentageModifier(Stat stat, Percentage value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stat</code> <a class="xref" href="SoapRpgFramework.Stats.Stat.html">Stat</a></dt>
+    <dd><p>The stat to add the percentage modifier to.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="SoapRpgFramework.Utils.Percentage.html">Percentage</a></dt>
+    <dd><p>The value of the percentage modifier.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SoapRpgFramework_Stats_EntityStats_AddStatToStatModifer_" data-uid="SoapRpgFramework.Stats.EntityStats.AddStatToStatModifer*"></a>
+
+  <h3 id="SoapRpgFramework_Stats_EntityStats_AddStatToStatModifer_SoapRpgFramework_Stats_Stat_SoapRpgFramework_Stats_Stat_SoapRpgFramework_Utils_Percentage_" data-uid="SoapRpgFramework.Stats.EntityStats.AddStatToStatModifer(SoapRpgFramework.Stats.Stat,SoapRpgFramework.Stats.Stat,SoapRpgFramework.Utils.Percentage)">
+  AddStatToStatModifer(Stat, Stat, Percentage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a stat-to-stat modifier. Such modifiers add a percentage of the source stat to the target stat.
+Such modifiers consider the base value and the flat modifiers of the source stat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddStatToStatModifer(Stat target, Stat source, Percentage percentage)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <a class="xref" href="SoapRpgFramework.Stats.Stat.html">Stat</a></dt>
+    <dd><p>The target stat.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="SoapRpgFramework.Stats.Stat.html">Stat</a></dt>
+    <dd><p>The source stat.</p>
+</dd>
+    <dt><code>percentage</code> <a class="xref" href="SoapRpgFramework.Utils.Percentage.html">Percentage</a></dt>
+    <dd><p>The <a class="xref" href="SoapRpgFramework.Utils.Percentage.html">Percentage</a> of the source stat to add to the target stat.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SoapRpgFramework_Stats_EntityStats_Get_" data-uid="SoapRpgFramework.Stats.EntityStats.Get*"></a>
+
+  <h3 id="SoapRpgFramework_Stats_EntityStats_Get_SoapRpgFramework_Stats_Stat_" data-uid="SoapRpgFramework.Stats.EntityStats.Get(SoapRpgFramework.Stats.Stat)">
+  Get(Stat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The final value of a stat, considering all the modifiers.
+Calculation is done in the following order:<br></p>
+<ol>
+<li>Base value<br></li>
+<li>Flat modifiers<br></li>
+<li>Stat to stat modifiers<br></li>
+<li>Percentage modifiers<br></li>
+</ol>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual long Get(Stat stat)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stat</code> <a class="xref" href="SoapRpgFramework.Stats.Stat.html">Stat</a></dt>
+    <dd><p>The stat to get the final value of.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">long</span></dt>
+    <dd><p>The final value of the stat. The value is clamped to the stat's min and max values.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SoapRpgFramework_Stats_EntityStats_GetBase_" data-uid="SoapRpgFramework.Stats.EntityStats.GetBase*"></a>
+
+  <h3 id="SoapRpgFramework_Stats_EntityStats_GetBase_SoapRpgFramework_Stats_Stat_" data-uid="SoapRpgFramework.Stats.EntityStats.GetBase(SoapRpgFramework.Stats.Stat)">
+  GetBase(Stat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The base value is the value of the stat without any modifiers.
+If UseClassBaseStats is true, it returns the value from the entity's class.
+Otherwise, it returns the value from the fixed base stats.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long GetBase(Stat stat)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stat</code> <a class="xref" href="SoapRpgFramework.Stats.Stat.html">Stat</a></dt>
+    <dd><p>The stat to get the base value of.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">long</span></dt>
+    <dd><p>The base value of the stat. The value is clamped to the stat's min and max values.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SoapRpgFramework_Stats_EntityStats_OnLevelUp_" data-uid="SoapRpgFramework.Stats.EntityStats.OnLevelUp*"></a>
+
+  <h3 id="SoapRpgFramework_Stats_EntityStats_OnLevelUp_System_Int32_" data-uid="SoapRpgFramework.Stats.EntityStats.OnLevelUp(System.Int32)">
+  OnLevelUp(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L283"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Callback method called when the entity levels up.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnLevelUp(int level)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>level</code> <span class="xref">int</span></dt>
+    <dd><p>The new level of the entity.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SoapRpgFramework_Stats_EntityStats_SetFixed_" data-uid="SoapRpgFramework.Stats.EntityStats.SetFixed*"></a>
+
+  <h3 id="SoapRpgFramework_Stats_EntityStats_SetFixed_SoapRpgFramework_Stats_Stat_System_Int64_" data-uid="SoapRpgFramework.Stats.EntityStats.SetFixed(SoapRpgFramework.Stats.Stat,System.Int64)">
+  SetFixed(Stat, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the value of a fixed base stat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFixed(Stat s, long v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>s</code> <a class="xref" href="SoapRpgFramework.Stats.Stat.html">Stat</a></dt>
+    <dd><p>The stat to set.</p>
+</dd>
+    <dt><code>v</code> <span class="xref">long</span></dt>
+    <dd><p>The value to set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L19" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoapRpgFramework.Attributes.AttributeSetMenuItems
+  commentId: T:SoapRpgFramework.Attributes.AttributeSetMenuItems
+  id: AttributeSetMenuItems
+  parent: SoapRpgFramework.Attributes
+  children:
+  - SoapRpgFramework.Attributes.AttributeSetMenuItems.CreateAttributeSet
+  langs:
+  - csharp
+  - vb
+  name: AttributeSetMenuItems
+  nameWithType: AttributeSetMenuItems
+  fullName: SoapRpgFramework.Attributes.AttributeSetMenuItems
+  type: Class
+  source:
+    remote:
+      path: Runtime/Attributes/AttributeSet.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: AttributeSetMenuItems
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeSet.cs
+    startLine: 57
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Attributes
+  summary: Provides Unity Editor menu items for creating attribute sets.
+  example: []
+  syntax:
+    content: public static class AttributeSetMenuItems
+    content.vb: Public Module AttributeSetMenuItems
+  inheritance:
+  - System.Object
+- uid: SoapRpgFramework.Attributes.AttributeSetMenuItems.CreateAttributeSet
+  commentId: M:SoapRpgFramework.Attributes.AttributeSetMenuItems.CreateAttributeSet
+  id: CreateAttributeSet
+  parent: SoapRpgFramework.Attributes.AttributeSetMenuItems
+  langs:
+  - csharp
+  - vb
+  name: CreateAttributeSet()
+  nameWithType: AttributeSetMenuItems.CreateAttributeSet()
+  fullName: SoapRpgFramework.Attributes.AttributeSetMenuItems.CreateAttributeSet()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Attributes/AttributeSet.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: CreateAttributeSet
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeSet.cs
+    startLine: 63
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: SoapRpgFramework.Attributes
+  summary: >-
+    Creates a new AttributeSet asset in the project window.
+
+    Can be accessed via Assets/Create/Soap RPG Framework/Attribute Set menu.
+  example: []
+  syntax:
+    content: >-
+      [MenuItem("Assets/Create/Soap RPG Framework/Attribute Set", false, 1)]
+
+      public static void CreateAttributeSet()
+    content.vb: >-
+      <MenuItem("Assets/Create/Soap RPG Framework/Attribute Set", False, 1)>
+
+      Public Shared Sub CreateAttributeSet()
+  overload: SoapRpgFramework.Attributes.AttributeSetMenuItems.CreateAttributeSet*
+  attributes:
+  - type: UnityEditor.MenuItem
+    ctor: UnityEditor.MenuItem.#ctor(System.String,System.Boolean,System.Int32)
+    arguments:
+    - type: System.String
+      value: Assets/Create/Soap RPG Framework/Attribute Set
+    - type: System.Boolean
+      value: false
+    - type: System.Int32
+      value: 1
+references:
+- uid: SoapRpgFramework.Attributes
+  commentId: N:SoapRpgFramework.Attributes
+  href: SoapRpgFramework.html
+  name: SoapRpgFramework.Attributes
+  nameWithType: SoapRpgFramework.Attributes
+  fullName: SoapRpgFramework.Attributes
+  spec.csharp:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Attributes
+    name: Attributes
+    href: SoapRpgFramework.Attributes.html
+  spec.vb:
+  - uid: SoapRpgFramework
+    name: SoapRpgFramework
+    href: SoapRpgFramework.html
+  - name: .
+  - uid: SoapRpgFramework.Attributes
+    name: Attributes
+    href: SoapRpgFramework.Attributes.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SoapRpgFramework.Attributes.AttributeSetMenuItems.CreateAttributeSet*
+  commentId: Overload:SoapRpgFramework.Attributes.AttributeSetMenuItems.CreateAttributeSet
+  href: SoapRpgFramework.Attributes.AttributeSetMenuItems.html#SoapRpgFramework_Attributes_AttributeSetMenuItems_CreateAttributeSet
+  name: CreateAttributeSet
+  nameWithType: AttributeSetMenuItems.CreateAttributeSet
+  fullName: SoapRpgFramework.Attributes.AttributeSetMenuItems.CreateAttributeSet

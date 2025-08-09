@@ -13,7 +13,7 @@ items:
   fullName: ElectricDrill
   type: Namespace
   assemblies:
-  - ElectricDrill.SimpleRPGCore.Runtime
+  - com.electricdrill.soap-rpg-framework.Runtime
 references:
 - uid: ElectricDrill.StatChangeInfo
   commentId: T:ElectricDrill.StatChangeInfo
