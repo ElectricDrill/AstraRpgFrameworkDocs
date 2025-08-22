@@ -7,7 +7,7 @@
       <meta name="title" content="Limitations | Soap RPG Framework ">
       
       
-      <link rel="icon" href="../images/favico.ico">
+      <link rel="icon" href="../images/soap-rpg-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
       <meta name="docfx:navrel" content="../toc.html">
@@ -44,7 +44,7 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../images/soap-rpg-framework-logo.png" alt="Soap RPG Framework">
+            <img id="logo" class="svg" src="../images/soap-rpg-framework-logo-borders.png" alt="Soap RPG Framework">
             Soap RPG Framework
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -98,6 +98,7 @@
 <li><code>OnAttributeChangedEvent</code> is risen only when modifiers are applied and spendable points are assigned, not on level-ups/base attribute changes</li>
 <li>Currently, multi-classing is not supported. Each entity can only have one class at a time</li>
 <li>Only one event for stats changed, attributes changed, and entity spawned can be assigned to entities. However, multiple event listeners can be assigned for the same event type, allowing for multiple responses</li>
+<li>Custom game event generators support up to four context parameters. To work around this limitation, users can combine multiple pieces of data into a single user-defined class—a technique known as &quot;parameter packing.&quot; This approach is extensible through inheritance and helps maintain a simple, user-friendly API by avoiding telescoping parameters.</li>
 </ul>
 
 </article>

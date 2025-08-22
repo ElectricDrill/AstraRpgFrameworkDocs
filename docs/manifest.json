@@ -2598,10 +2598,20 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/soap-rpg-framework-logo.png",
+      "source_relative_path": "images/soap-rpg-framework-logo-borders.png",
       "output": {
         "resource": {
-          "relative_path": "images/soap-rpg-framework-logo.png"
+          "relative_path": "images/soap-rpg-framework-logo-borders.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/soap-rpg-ico.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/soap-rpg-ico.ico"
         }
       },
       "version": ""
