@@ -321,7 +321,7 @@ entityAttributes.SpendOn(strengthAttribute, 2);
 ```
 This will spend 2 points on the `Strength` attribute, increasing its value by 2. If there are not enough available points, a Debug.LogError will be raised.
 
-> [!WARNING]
+> [!INFO]
 > Debug.LogError messages are shown only in development builds. If you run a production build, you won't see them.
 > This is useful to avoid cluttering the console with error messages that are not relevant in production.
 
