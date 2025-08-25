@@ -49,7 +49,7 @@ A `StatSet` is a class that derives from SO and defines a set of `Stat`s.
 - the flat modifiers
 - the _StatToStat_ modifiers
 - the percentage modifiers
-We will see what these modifiers are in the section (TODO).
+We will see what these modifiers are in the section [Understanding Stat Modifier Types](workflows.md#understanding-stat-modifier-types).
 
 The base statistics can be _fixed_, or instead derive from a class if the entity has one assigned. If we use the fixed ones, we must also provide a `StatSet`, while if we use those of a class, the class's `StatSet` will be used. If the entity levels up and we want its statistics to grow with levels, we are forced to use a class, as the _fixed_ statistics are immutable.
 
@@ -73,7 +73,7 @@ Optionally, we can add the Mono `EntityAttributes` to our entity if we want to g
 Similarly to `EntityStats`, we can decide whether the base attributes are _fixed_ or if they instead derive from the class associated with `EntityClass`.
 
 ### <img src="../images/SoapRPG/growth-fo.png" alt="growth formula" width="30" class="icon-background"/> Growth Formula
-To express how `Stats`, `Attributes`, Max HP, and the experience required to level up vary at each level, we can use instances of `GrowthFormula`. This is a class that derives from SO and allows us to define a mathematical function, or a system of functions, that describe how a value changes as levels increase. We will see in more detail how to define a `GrowthFormula` in (TODO).
+To express how `Stats`, `Attributes`, Max HP, and the experience required to level up vary at each level, we can use instances of `GrowthFormula`. This is a class that derives from SO and allows us to define a mathematical function, or a system of functions, that describe how a value changes as levels increase. We will see in more detail how to define a `GrowthFormula` in the [Growth Formulas](workflows.md#growth-formulas) section.
 
 ## How is Soap RPG Framework implemented?
 The package is developed following the principles of SOAP (Scriptable Object Architecture Pattern), and has been inspired by the [GDC talk of Ryan Hipple](https://www.youtube.com/watch?v=raQ3iHhE_Kk&ab_channel=Unity). In a nutshell, the main benefits provided by this architecture are:
