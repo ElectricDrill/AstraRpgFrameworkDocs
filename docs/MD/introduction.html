@@ -128,7 +128,7 @@ Let's clarify what we mean by each mentioned term.</p>
 <li>the flat modifiers</li>
 <li>the <em>StatToStat</em> modifiers</li>
 <li>the percentage modifiers
-We will see what these modifiers are in the section (TODO).</li>
+We will see what these modifiers are in the section <a href="workflows.html#understanding-stat-modifier-types">Understanding Stat Modifier Types</a>.</li>
 </ul>
 <p>The base statistics can be <em>fixed</em>, or instead derive from a class if the entity has one assigned. If we use the fixed ones, we must also provide a <code>StatSet</code>, while if we use those of a class, the class's <code>StatSet</code> will be used. If the entity levels up and we want its statistics to grow with levels, we are forced to use a class, as the <em>fixed</em> statistics are immutable.</p>
 <h3 id="-class"><img src="../images/SoapRPG/class.png" alt="class" width="30" class="icon-background"> Class</h3>
@@ -148,7 +148,7 @@ We will see what these modifiers are in the section (TODO).</li>
 Similarly to <code>EntityStats</code>, we can decide whether the base attributes are <em>fixed</em> or if they instead derive from the class associated with <code>EntityClass</code>.</li>
 </ul>
 <h3 id="-growth-formula"><img src="../images/SoapRPG/growth-fo.png" alt="growth formula" width="30" class="icon-background"> Growth Formula</h3>
-<p>To express how <code>Stats</code>, <code>Attributes</code>, Max HP, and the experience required to level up vary at each level, we can use instances of <code>GrowthFormula</code>. This is a class that derives from SO and allows us to define a mathematical function, or a system of functions, that describe how a value changes as levels increase. We will see in more detail how to define a <code>GrowthFormula</code> in (TODO).</p>
+<p>To express how <code>Stats</code>, <code>Attributes</code>, Max HP, and the experience required to level up vary at each level, we can use instances of <code>GrowthFormula</code>. This is a class that derives from SO and allows us to define a mathematical function, or a system of functions, that describe how a value changes as levels increase. We will see in more detail how to define a <code>GrowthFormula</code> in the <a href="workflows.html#growth-formulas">Growth Formulas</a> section.</p>
 <h2 id="how-is-soap-rpg-framework-implemented">How is Soap RPG Framework implemented?</h2>
 <p>The package is developed following the principles of SOAP (Scriptable Object Architecture Pattern), and has been inspired by the <a href="https://www.youtube.com/watch?v=raQ3iHhE_Kk&amp;ab_channel=Unity">GDC talk of Ryan Hipple</a>. In a nutshell, the main benefits provided by this architecture are:</p>
 <ul>

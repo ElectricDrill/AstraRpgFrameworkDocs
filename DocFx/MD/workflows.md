@@ -268,7 +268,7 @@ We can assign values to the attributes of `Fixed Base Attributes` as we see fit.
 
 The framework provides two distinct types of attribute modifiers that work together with spent attribute points to determine final attribute values. Understanding how each type works is essential for creating predictable character progression and balanced gameplay mechanics.
 
-> [!INFO]
+> [!NOTE]
 > General considerations for attribute modifiers
 > - When adding modifiers through code, the `OnAttributeChanged` event will automatically be raised if the final value changes
 > - If cache is being used: when adding modifiers through code, the attribute cache will automatically be invalidated to ensure the correct value is returned on the next access
@@ -413,7 +413,7 @@ entityAttributes.SpendOn(strengthAttribute, 2);
 ```
 This will spend 2 points on the `Strength` attribute, increasing its value by 2. If there are not enough available points, a Debug.LogError will be raised.
 
-> [!INFO]
+> [!NOTE]
 > Debug.LogError messages are shown only in development builds. If you run a production build, you won't see them.
 > This is useful to avoid cluttering the console with error messages that are not relevant in production.
 
@@ -480,7 +480,7 @@ With `Use Class Base Stats` unchecked, we need to manually assign a stat set. Se
 
 The framework provides three distinct types of stat modifiers, each serving different purposes and applied in a specific order during final value calculation. Understanding how each type works is crucial for creating balanced and predictable stat systems.
 
-> [!INFO]
+> [!NOTE]
 > **General considerations for stat modifiers**
 >
 > - If cache is being used: when adding modifiers through code, the attribute cache will automatically be invalidated to ensure the correct value is returned on the next access
@@ -593,7 +593,7 @@ Let's see a complete example with all three modifier types:
 
 **Final Physical Attack value: 214**
 
-> [!INFO]
+> [!NOTE]
 > The framework does not provide a built-in tool for removing applied modifiers. It is up to you to define your own abstraction for buffs, debuffs, or other temporary effects that add and remove modifiers as needed.
 > In the future, the SOAP RPG Modifiers extension for this framework will be released, which will include such abstractions thought to integrate seamlessly with the existing systems. Check the status of the extension for more details at https://electricdrill.github.io/
 

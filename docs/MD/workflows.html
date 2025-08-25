@@ -161,11 +161,11 @@ intRef.Value = intVar;
 </code></pre>
 <h3 id="game-events">Game events</h3>
 <p>The package also supports game events with up to 4 context parameters. They are generics, but in Unity, it is not possible to instantiate classes that derive from <code>ScriptableObject</code> if they are generics with unspecified type parameters. To use them, we must explicitly declare classes that derive from the generic GameEvent and fix the type parameters with concrete types. To simplify the definition of new event types, with specific types as context parameters, the package provides <code>GameEventGenerator</code>. These generators, which derive from SO, allow generating the concrete classes of <code>GameEvent</code>.
-We will see these generators in more detail in the section (TODO).
+We will see these generators in more detail in the <a href="#game-event-generators">Game Event Generators</a> section.
 Some game events are already defined and made available by the package (see the <a href="samples.html">Samples</a> page).</p>
 <h3 id="growth-formulas">Growth Formulas</h3>
-<p><em>Relative path:</em> <code>Growth Formula</code>
-As already mentioned in <a href="introduction.html">Introduction</a>, <code>GrowthFormula</code> allows defining how a certain value varies as levels increase. A <code>GrowthFormula</code> can be instantiated through the hierarchy context menu by going to <code>Soap RPG Framework -&gt; Growth Formula</code>.
+<p><em>Relative path:</em> <code>Growth Formula</code></p>
+<p>As already mentioned in <a href="introduction.html">Introduction</a>, <code>GrowthFormula</code> allows defining how a certain value varies as levels increase. A <code>GrowthFormula</code> can be instantiated through the hierarchy context menu by going to <code>Soap RPG Framework -&gt; Growth Formula</code>.
 The package provides a custom property drawer for <code>GrowthFormula</code>.</p>
 <h4 id="max-level-for-the-values">Max level for the values</h4>
 <p>In the inspector of a <code>GrowthFormula</code>, we can pass an <code>IntVar</code> to define up to which level to grow the values.</p>
@@ -286,35 +286,121 @@ If you change the level of the entity you'll see that available points change ac
 <p>Moreover, there is a checkbox labeled <code>Use Class Base Attributes</code>. For now, let's leave it unchecked since we haven't added a class yet. However, in this case, we need to manually assign an attribute set. Therefore, let's set the <code>Attribute Set</code> field found under <code>Fixed Base Attributes</code> with the <code>Hero Attribute Set</code>. By doing this, we now have access to additional fields in the inspector:</p>
 <p><img src="../images/workflows/entity-attributes-with-attr-set-editor.png" alt="Entity Attributes with fixed base attributes AttributeSet"></p>
 <p>We can assign values to the attributes of <code>Fixed Base Attributes</code> as we see fit.</p>
-<h3 id="adding-modifiers">Adding Modifiers</h3>
-<p>While base attributes are set in the inspector, modifiers can be added through code using these methods:</p>
-<pre><code class="lang-csharp">// Add flat bonus
-entityAttributes.AddFlatModifier(attribute, value); // Adds fixed amount
+<h3 id="understanding-attribute-modifier-types">Understanding Attribute Modifier Types</h3>
+<p>The framework provides two distinct types of attribute modifiers that work together with spent attribute points to determine final attribute values. Understanding how each type works is essential for creating predictable character progression and balanced gameplay mechanics.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>General considerations for attribute modifiers</p>
+<ul>
+<li>When adding modifiers through code, the <code>OnAttributeChanged</code> event will automatically be raised if the final value changes</li>
+<li>If cache is being used: when adding modifiers through code, the attribute cache will automatically be invalidated to ensure the correct value is returned on the next access</li>
+</ul>
+</div>
+<h4 id="spent-attribute-points">Spent Attribute Points</h4>
+<p>Before diving into modifiers, it's important to understand that spent attribute points form the foundation of the attribute calculation system. These points are allocated by players during character progression and are applied immediately after the base value.</p>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>Player-controlled allocation of points earned through leveling</li>
+<li>Applied directly after base values in the calculation order</li>
+<li>Permanent increases (until points are redistributed)</li>
+<li>Each point provides a 1:1 increase to the attribute</li>
+</ul>
+<p><strong>Code example:</strong></p>
+<pre><code class="lang-csharp">// Spend 3 points on Strength
+entityAttributes.SpendOn(strengthAttribute, 3);
 
-// Add percentage bonus
-entityAttributes.AddPercentageModifier(attribute, percentage);
+// Check available points before spending
+int availablePoints = entityAttributes.AvailableAvailableAttributePoints;
+if (availablePoints &gt;= 2) {
+    entityAttributes.SpendOn(constitutionAttribute, 2);
+}
 </code></pre>
-<p>The modifiers are applied in this order:</p>
+<h4 id="flat-modifiers">Flat Modifiers</h4>
+<p>Flat modifiers add or subtract a fixed amount to an attribute's value. They are applied after base values and spent points but before percentage modifiers.</p>
+<p><strong>Use cases:</strong></p>
+<ul>
+<li>Equipment bonuses (e.g., +3 Strength from gauntlets)</li>
+<li>Temporary buffs (e.g., +5 Constitution from a fortitude potion)</li>
+<li>Race or class bonuses (e.g., Dwarves get +2 Constitution)</li>
+<li>Status effects that provide fixed bonuses or penalties</li>
+<li>Environmental effects (e.g., library affecting Intelligence)</li>
+</ul>
+<p><strong>Code example:</strong></p>
+<pre><code class="lang-csharp">// Add a flat +4 bonus to Strength
+entityAttributes.AddFlatModifier(strengthAttribute, 4);
+
+// Add a flat -2 penalty to Dexterity (negative values work too)
+entityAttributes.AddFlatModifier(dexterityAttribute, -2);
+</code></pre>
+<p><strong>Calculation example:</strong></p>
+<ul>
+<li>Base Strength: 12</li>
+<li>Spent points: +3</li>
+<li>Flat modifier: +4</li>
+<li>Result after flat modifiers: 12 + 3 + 4 = 19</li>
+</ul>
+<h4 id="percentage-modifiers">Percentage Modifiers</h4>
+<p>Percentage modifiers apply a multiplicative increase or decrease to the current attribute value. They are the most powerful type of modifier and are applied last in the calculation chain, after all other values have been calculated.</p>
+<p><strong>Use cases:</strong></p>
+<ul>
+<li>Powerful equipment bonuses (e.g., +20% to all attributes)</li>
+<li>Character traits or talents (e.g., &quot;Natural Athlete: +15% Strength and Dexterity&quot;)</li>
+<li>Temporary powerful buffs or curses</li>
+<li>Class features</li>
+<li>Magical enchantments or artifacts</li>
+</ul>
+<p><strong>Code example:</strong></p>
+<pre><code class="lang-csharp">// Add a 20% increase to Strength
+entityAttributes.AddPercentageModifier(strengthAttribute, 20);
+
+// Add a 10% decrease to Intelligence (negative percentage)
+entityAttributes.AddPercentageModifier(intelligenceAttribute, -10)
+</code></pre>
+<p><strong>Calculation example:</strong></p>
+<ul>
+<li>Previous value: 19 (from previous steps)</li>
+<li>Percentage modifier: +20% = 19 × 0.20 = 3.8</li>
+<li>Final result: 19 + 3.8 = 22.8 (rounded to 23 for integer attributes)</li>
+</ul>
+<p><strong>Important notes:</strong></p>
+<ul>
+<li>Multiple percentage modifiers are additive before being applied (e.g., +20% and +10% = +30% total)</li>
+<li>The percentage is calculated based on the value after base, spent points, and flat modifiers</li>
+<li>Percentage modifiers can be negative to create penalties</li>
+</ul>
+<h4 id="complete-calculation-example">Complete Calculation Example</h4>
+<p>Let's see a complete example showing the full attribute calculation process:</p>
+<p><strong>Initial setup:</strong></p>
+<ul>
+<li>Base Intelligence: 14</li>
+<li>Points spent on Intelligence: 4</li>
+<li>Equipment flat bonus: +2 (from a circlet)</li>
+<li>Trait percentage bonus: +25% (from &quot;Scholar&quot; trait)</li>
+</ul>
+<p><strong>Step-by-step calculation:</strong></p>
 <ol>
-<li>Base value</li>
-<li>Spent attribute points</li>
+<li>Start with base: 14</li>
+<li>Add spent points: 14 + 4 = 18</li>
+<li>Apply flat modifiers: 18 + 2 = 20</li>
+<li>Apply percentage modifiers: 20 + (20 × 0.25) = 20 + 5 = 25</li>
+</ol>
+<p><strong>Final Intelligence value: 25</strong></p>
+<h4 id="comparison-with-stat-modifiers">Comparison with Stat Modifiers</h4>
+<p>Unlike stats, attributes have a simpler modifier system:</p>
+<p><strong>Attributes have:</strong></p>
+<ul>
+<li>Base values</li>
+<li>Spent attribute points (player-controlled)</li>
 <li>Flat modifiers</li>
 <li>Percentage modifiers</li>
-</ol>
-<p>For example, with:</p>
-<ul>
-<li>Base Strength: 10</li>
-<li>2 spent points</li>
-<li>Flat modifier: +3</li>
-<li>40% Strength increase</li>
 </ul>
-<p>The final calculation would be:</p>
-<ol>
-<li>Base (10) + Spent (+2) = 12</li>
-<li>12 + (Flat) + 3 = 15</li>
-<li>15 + (15 * 0.4) = 21</li>
-</ol>
-<p>When adding modifiers through code, the attribute cache will automatically be invalidated to ensure the correct value is returned on the next access.</p>
+<p><strong>Stats additionally have:</strong></p>
+<ul>
+<li>Stat-to-stat modifiers (attributes don't have attribute-to-attribute modifiers)</li>
+<li>More complex scaling relationships</li>
+<li>Stats can scale upon attributes</li>
+</ul>
+<p>This simplicity makes attributes more predictable and easier for players to understand, while stats can have more complex interactions. Keeping them simple helps maintain clarity in gameplay</p>
 <h3 id="retrieving-attribute-values-from-code">Retrieving Attribute Values from code</h3>
 <p>Due to the relevance of retrieving attribute values from code, the methods to do so are worth mentioning here.</p>
 <p>To retrieve the final value of an attribute, you can use the <code>Get</code> method:</p>
@@ -331,11 +417,11 @@ int baseStrength = entityAttributes.GetBase(strengthAttribute);
 entityAttributes.SpendOn(strengthAttribute, 2);
 </code></pre>
 <p>This will spend 2 points on the <code>Strength</code> attribute, increasing its value by 2. If there are not enough available points, a Debug.LogError will be raised.</p>
-<blockquote>
-<p>[!INFO]
-Debug.LogError messages are shown only in development builds. If you run a production build, you won't see them.
+<div class="NOTE">
+<h5>Note</h5>
+<p>Debug.LogError messages are shown only in development builds. If you run a production build, you won't see them.
 This is useful to avoid cluttering the console with error messages that are not relevant in production.</p>
-</blockquote>
+</div>
 <h2 id="create-stats">Create stats</h2>
 <p><em>Keyboard shortcut:</em> <code>Ctrl + Alt + S</code><br>
 <em>Relative path:</em> <code>Stat</code></p>
@@ -370,38 +456,124 @@ Repeat the process of adding a stat to the set for <code>Magical Power</code>, <
 <p><img src="../images/workflows/entity-stats-fixed-base-stats.png" alt="Entity Stats"></p>
 <p><code>On Stat Changed</code> event gets raised whenever any stat value changes due to modifiers. You can use this to update UI elements or trigger other game logic.</p>
 <p><code>Use Cache</code> enables caching of final stat values. This is useful for performance when you have many entities or complex stat calculations.</p>
-<h3 id="adding-modifiers-1">Adding Modifiers</h3>
-<p>While base stats are set in the inspector, modifiers can be added through code using these methods:</p>
-<pre><code class="lang-csharp">// Add flat bonus
-entityStats.AddFlatModifier(stat, value); // Adds fixed amount
+<h3 id="understanding-stat-modifier-types">Understanding Stat Modifier Types</h3>
+<p>The framework provides three distinct types of stat modifiers, each serving different purposes and applied in a specific order during final value calculation. Understanding how each type works is crucial for creating balanced and predictable stat systems.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p><strong>General considerations for stat modifiers</strong></p>
+<ul>
+<li>If cache is being used: when adding modifiers through code, the attribute cache will automatically be invalidated to ensure the correct value is returned on the next access</li>
+<li>When adding modifiers through code, the <code>OnStatChanged</code> event will automatically be raised if the final value changes.</li>
+</ul>
+</div>
+<h4 id="flat-modifiers-1">Flat Modifiers</h4>
+<p>Flat modifiers add or subtract a fixed amount to a stat's value. They are the simplest type of modifier and are applied directly after the base value.</p>
+<p><strong>Use cases:</strong></p>
+<ul>
+<li>Equipment bonuses (e.g., +5 Physical Attack from a sword)</li>
+<li>Temporary buffs (e.g., +10 Defense from a shield spell)</li>
+<li>Status effects that provide fixed bonuses or penalties</li>
+</ul>
+<p><strong>Code example:</strong></p>
+<pre><code class="lang-csharp">// Add a flat +15 bonus to Physical Attack
+entityStats.AddFlatModifier(physicalAttackStat, 15);
 
-// Add stat-to-stat scaling
-entityStats.AddStatToStatModifer(targetStat, sourceStat, percentage); 
-
-// Add percentage bonus
-entityStats.AddPercentageModifier(stat, percentage);
+// Add a flat -5 penalty to Defense (negative values work too)
+entityStats.AddFlatModifier(defenseStat, -5);
 </code></pre>
-<p>The modifiers are applied in this order:</p>
-<ol>
-<li>Base value</li>
-<li>Flat modifiers</li>
-<li>Stat-to-stat modifiers</li>
-<li>Percentage modifiers</li>
-</ol>
-<p>For example, with:</p>
+<p><strong>Calculation example:</strong></p>
+<ul>
+<li>Base Physical Attack: 50</li>
+<li>Flat modifier: +15</li>
+<li>Result after flat modifiers: 50 + 15 = 65</li>
+</ul>
+<h4 id="stat-to-stat-modifiers">Stat-to-Stat Modifiers</h4>
+<p>Stat-to-stat modifiers allow one stat to contribute a percentage of its value to another stat. This creates interesting dependencies between different stats and allows for more complex character builds.</p>
+<p>These modifiers are applied right after the flat modifiers.</p>
+<p><strong>Use cases:</strong></p>
+<ul>
+<li>Cross-stat synergies (e.g., 25% of Armor is added to Physical Attack).</li>
+</ul>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>When using stat-to-stat modifiers, <strong>only the base value and flat modifiers of the source stat are used</strong> in the calculation. Stat-to-stat modifiers and percentage modifiers applied to the source stat are ignored. This ensures predictable and non-circular calculations.</p>
+</div>
+<p><strong>Code example:</strong></p>
+<pre><code class="lang-csharp">// 25% of armor is added to physical attack
+entityStats.AddStatToStatModifer(physicalAttackStat, armorAttribute, 25);
+
+// Negative modifier: -10% of armor is subtracted from physical attack
+entityStats.AddStatToStatModifer(physicalAttackStat, armorAttribute, -10);
+</code></pre>
+<p><strong>Calculation example:</strong></p>
+<ul>
+<li>Base Physical Attack: 50</li>
+<li>Flat modifier: +15 (from previous step)</li>
+<li>Current value: 65</li>
+<li>Armor value: 40</li>
+<li>Stat-to-stat modifier: 50% of Armor = 40 × 0.5 = 20</li>
+<li>Result after stat-to-stat modifiers: 65 + 20 = 85</li>
+</ul>
+<p><strong>Important notes:</strong></p>
+<ul>
+<li>The source stat's base value + its flat modifiers is used for calculation</li>
+<li>Multiple stat-to-stat modifiers from different sources are additive, and order of calculation is commutative</li>
+<li>You can have the same source stat contribute to multiple target stats</li>
+<li>Circular dependencies can be defined, as the base values + flat modifiers are used for calculations</li>
+</ul>
+<h4 id="percentage-modifiers-1">Percentage Modifiers</h4>
+<p>Percentage modifiers apply a multiplicative increase or decrease to the current stat value. They are applied last in the calculation chain. Because of this, they can have a significant impact on the final value.</p>
+<p><strong>Use cases:</strong></p>
+<ul>
+<li>Powerful equipment bonuses (e.g., +25% damage increase)</li>
+<li>Character traits or talents (e.g., &quot;Warrior's Might: +20% Physical Attack&quot;)</li>
+<li>Temporary powerful buffs or debuffs</li>
+</ul>
+<p><strong>Code example:</strong></p>
+<pre><code class="lang-csharp">// Add a 25% increase to Physical Attack
+entityStats.AddPercentageModifier(physicalAttack, 25);
+
+// Add a 15% decrease to movement speed (negative percentage)
+entityStats.AddPercentageModifier(movementSpeed, -15);
+</code></pre>
+<p><strong>Calculation example:</strong></p>
+<ul>
+<li>Previous value: 85 (from previous steps)</li>
+<li>Percentage modifier: +25% = 85 × 0.25 = 21.25</li>
+<li>Final result: 85 + 21.25 = 106.25 (rounded to 106 for integer stats)</li>
+</ul>
+<p><strong>Important notes:</strong></p>
+<ul>
+<li>Multiple percentage modifiers are additive before being applied (e.g., +25% and +15% = +40% total)</li>
+<li>The percentage is calculated based on the value after flat and stat-to-stat modifiers</li>
+<li>Percentage modifiers can be negative to create penalties</li>
+</ul>
+<h4 id="complete-calculation-example-1">Complete Calculation Example</h4>
+<p>Let's see a complete example with all three modifier types:</p>
+<p><strong>Initial setup:</strong></p>
 <ul>
 <li>Base Physical Attack: 100</li>
-<li>Flat modifier: +20</li>
-<li>50% of Strength (value 40) as Physical Attack</li>
-<li>25% Physical Attack increase</li>
+<li>Armor value: 60 (base + flat modifiers)</li>
 </ul>
-<p>The final calculation would be:</p>
+<p><strong>Applied modifiers:</strong></p>
 <ol>
-<li>Base (100) + Flat (+20) = 120</li>
-<li>120 + (40 * 0.5) = 140</li>
-<li>140 + (140 * 0.25) = 175</li>
+<li>Flat modifier: +20 (from weapon)</li>
+<li>Stat-to-stat modifier: 75% of Armor = 60 × 0.75 = 45</li>
+<li>Percentage modifier: +30% (from various sources)</li>
 </ol>
-<p>When adding modifiers through code, the <code>OnStatChanged</code> event will automatically be raised if the final value changes.</p>
+<p><strong>Step-by-step calculation:</strong></p>
+<ol>
+<li>Start with base: 100</li>
+<li>Apply flat modifiers: 100 + 20 = 120</li>
+<li>Apply stat-to-stat modifiers: 120 + 45 = 165</li>
+<li>Apply percentage modifiers: 165 + (165 × 0.30) = 165 + 49.5 = 214.5 → 214</li>
+</ol>
+<p><strong>Final Physical Attack value: 214</strong></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The framework does not provide a built-in tool for removing applied modifiers. It is up to you to define your own abstraction for buffs, debuffs, or other temporary effects that add and remove modifiers as needed.
+In the future, the SOAP RPG Modifiers extension for this framework will be released, which will include such abstractions thought to integrate seamlessly with the existing systems. Check the status of the extension for more details at <a href="https://electricdrill.github.io/">https://electricdrill.github.io/</a></p>
+</div>
 <h3 id="retrieving-stat-values-from-code">Retrieving Stat Values from code</h3>
 <p>Due to the relevance of retrieving stat values from code, the methods to do so are worth mentioning here.</p>
 <p>To retrieve the final value of a stat, you can use the <code>Get</code> method:</p>
