@@ -32,11 +32,11 @@ items:
   example: []
   syntax:
     content: >-
-      [CreateAssetMenu]
+      [CreateAssetMenu(fileName = "Long Var", menuName = "Soap RPG Framework/Utils/Long Var")]
 
       public class LongVar : ScriptableObject
     content.vb: >-
-      <CreateAssetMenu>
+      <CreateAssetMenu(fileName:="Long Var", menuName:="Soap RPG Framework/Utils/Long Var")>
 
       Public Class LongVar Inherits ScriptableObject
   inheritance:
@@ -47,6 +47,13 @@ items:
   - type: UnityEngine.CreateAssetMenuAttribute
     ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
     arguments: []
+    namedArguments:
+    - name: fileName
+      type: System.String
+      value: Long Var
+    - name: menuName
+      type: System.String
+      value: Soap RPG Framework/Utils/Long Var
 - uid: ElectricDrill.SoapRpgFramework.Utils.LongVar.Value
   commentId: P:ElectricDrill.SoapRpgFramework.Utils.LongVar.Value
   id: Value

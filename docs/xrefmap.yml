@@ -4825,6 +4825,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache
   nameWithType: EntityAttributes.AttributesCache
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints
+  name: AvailableAttributePoints
+  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AvailableAttributePoints
+  commentId: P:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints
+  nameWithType: EntityAttributes.AvailableAttributePoints
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints*
+  name: AvailableAttributePoints
+  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AvailableAttributePoints_
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints
+  isSpec: "True"
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints
+  nameWithType: EntityAttributes.AvailableAttributePoints
 - uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.EntityClass
   name: EntityClass
   href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_EntityClass

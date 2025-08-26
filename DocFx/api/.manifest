@@ -44,6 +44,7 @@
   "ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AddPercentageModifier(ElectricDrill.SoapRpgFramework.Attributes.Attribute,ElectricDrill.SoapRpgFramework.Utils.Percentage)": "ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.yml",
   "ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributeSet": "ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.yml",
   "ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache": "ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.yml",
+  "ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints": "ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.yml",
   "ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.EntityClass": "ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.yml",
   "ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.FlatModifiers": "ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.yml",
   "ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.Get(ElectricDrill.SoapRpgFramework.Attributes.Attribute)": "ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.yml",

@@ -9,6 +9,7 @@ items:
   - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AddPercentageModifier(ElectricDrill.SoapRpgFramework.Attributes.Attribute,ElectricDrill.SoapRpgFramework.Utils.Percentage)
   - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributeSet
   - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache
+  - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints
   - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.EntityClass
   - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.FlatModifiers
   - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.Get(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
@@ -166,6 +167,37 @@ items:
       type: ElectricDrill.SoapRpgFramework.IClassSource
     content.vb: Public Property EntityClass As IClassSource
   overload: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.EntityClass*
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints
+  commentId: P:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints
+  id: AvailableAttributePoints
+  parent: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes
+  langs:
+  - csharp
+  - vb
+  name: AvailableAttributePoints
+  nameWithType: EntityAttributes.AvailableAttributePoints
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints
+  type: Property
+  source:
+    remote:
+      path: Runtime/Attributes/EntityAttributes.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: AvailableAttributePoints
+    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 76
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Attributes
+  summary: Gets the number of attribute points currently available to spend.
+  example: []
+  syntax:
+    content: public int AvailableAttributePoints { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property AvailableAttributePoints As Integer
+  overload: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints*
 - uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int32)
   commentId: M:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int32)
   id: SpendOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int32)
@@ -184,7 +216,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: SpendOn
     path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 78
+    startLine: 83
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -222,7 +254,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AttributeSet
     path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 92
+    startLine: 97
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -260,7 +292,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: FlatModifiers
     path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 119
+    startLine: 124
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -294,7 +326,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: PercentageModifiers
     path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 125
+    startLine: 130
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -328,7 +360,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Get
     path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 147
+    startLine: 152
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -368,7 +400,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AddFlatModifier
     path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 178
+    startLine: 183
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -406,7 +438,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AddPercentageModifier
     path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 191
+    startLine: 196
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -441,7 +473,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetBase
     path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 205
+    startLine: 210
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -744,6 +776,22 @@ references:
   - uid: ElectricDrill.SoapRpgFramework
     name: SoapRpgFramework
     href: ElectricDrill.SoapRpgFramework.html
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints
+  href: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AvailableAttributePoints
+  name: AvailableAttributePoints
+  nameWithType: EntityAttributes.AvailableAttributePoints
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
 - uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn*
   commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn
   href: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_SpendOn_ElectricDrill_SoapRpgFramework_Attributes_Attribute_System_Int32_
@@ -757,16 +805,6 @@ references:
   name: Attribute
   nameWithType: Attribute
   fullName: ElectricDrill.SoapRpgFramework.Attributes.Attribute
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
 - uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributeSet
   commentId: P:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributeSet
   href: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AttributeSet
