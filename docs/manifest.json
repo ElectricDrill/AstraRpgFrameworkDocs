@@ -2598,6 +2598,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/logo-soap.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo-soap.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/soap-rpg-framework-logo-borders.png",
       "output": {
         "resource": {
