@@ -459,6 +459,25 @@ Repeat the process of adding a stat to the set for `Magical Power`, `Defense`, a
 
 If you want to remove a stat from the set, you can click on the small `-` button on the right of the stat you want to remove.
 
+### Modular stat sets
+Stat sets can include other stat sets, allowing for modular and reusable configurations. This is particularly useful if we have various kind of entities that share some stats but not all of them. For example, let's consider three entities: a deer, a ballista turret, and our hero character. The deer can take damage, move around, and cannot attack. The turret instead can take damage, deal damage, but cannot move. The hero can do all three things.
+
+A first approach could be to create three distinct stat sets for each entity, but this would lead to a lot of redundancy since many stats would be repeated across the three sets. What if we decide to add a new stat that all three entities should have? We would have to remember to add it to all three sets, which is error-prone and inefficient.
+Alternatively, we could use a single all-embracing stat set that includes all the stats needed by all entities. However, this would lead to unnecessary complexity for entities that don't need all those stats, making it harder to manage and understand.
+
+A better approach is to create modular stat sets that can be combined as needed.
+We can create three stat sets:
+- `Damageable Stat Set`: includes stats like `Armor`, `Magical Defense`, `Dmg Reduction`, and so on
+- `Damage Dealer Stat Set`: includes stats like `Physical Attack`, `Magical Power`, `Critical Chance`, and so on
+- `Movable Stat Set`: includes stats like `Movement Speed`, `Jump Height`, etc.
+
+Then, we can create three additional stat sets for our entities:
+- `Pray Stat Set` for the deer, which includes only the `Damageable Stat Set` and the `Movable Stat Set`
+- `Turret Stat Set` for the ballista turret, which includes only the `Damageable Stat Set` and the `Damage Dealer Stat Set`
+- `Hero Stat Set` for our hero character, which includes all three stat sets: `Damageable Stat Set`, `Damage Dealer Stat Set`, and `Movable Stat Set`
+
+This modular approach allows us to reuse stat configurations across different entities, reducing redundancy and making it easier to manage and update stats.
+
 ## Add `EntityStats` to an Entity
 The next step is to assign the stat set we created to an entity. To do this, let's add the `EntityStats` component to our game object. The inspector will look like this:
 
