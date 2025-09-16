@@ -92,7 +92,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: OnAttributeChanged
     path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 44
+    startLine: 47
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -121,7 +121,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: EntityClass
     path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 59
+    startLine: 62
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -155,7 +155,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AvailableAttributePoints
     path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 78
+    startLine: 81
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -186,7 +186,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: TotalAttributePoints
     path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 83
+    startLine: 86
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -217,7 +217,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetSpentOn
     path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 90
+    startLine: 93
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -252,7 +252,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetAllSpentPoints
     path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 99
+    startLine: 102
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -283,7 +283,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: SpendOn
     path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 109
+    startLine: 112
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -321,7 +321,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: RefundAllSpentPoints
     path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 121
+    startLine: 124
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -349,7 +349,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: RefundPointsForAttribute
     path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 143
+    startLine: 146
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -381,7 +381,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AttributeSet
     path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 157
+    startLine: 160
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -419,7 +419,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: FlatModifiers
     path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 189
+    startLine: 220
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -453,7 +453,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: PercentageModifiers
     path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 195
+    startLine: 226
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -487,7 +487,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Get
     path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 213
+    startLine: 244
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -527,7 +527,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AddFlatModifier
     path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 248
+    startLine: 279
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -565,7 +565,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AddPercentageModifier
     path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 261
+    startLine: 292
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -600,7 +600,7 @@ items:
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetBase
     path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 275
+    startLine: 306
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
