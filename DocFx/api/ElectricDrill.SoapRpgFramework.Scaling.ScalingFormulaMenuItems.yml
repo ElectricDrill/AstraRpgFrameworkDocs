@@ -19,8 +19,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ScalingFormulaMenuItems
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingFormula.cs
-    startLine: 123
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingFormula.cs
+    startLine: 160
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -48,8 +48,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CreateScalingFormula
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingFormula.cs
-    startLine: 128
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingFormula.cs
+    startLine: 165
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling

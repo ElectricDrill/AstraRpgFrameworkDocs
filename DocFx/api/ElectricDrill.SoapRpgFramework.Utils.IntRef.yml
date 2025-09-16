@@ -24,7 +24,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: IntRef
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/IntRef.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/IntRef.cs
     startLine: 7
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -66,7 +66,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: UseConstant
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/IntRef.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/IntRef.cs
     startLine: 13
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -95,7 +95,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ConstantValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/IntRef.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/IntRef.cs
     startLine: 17
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -124,7 +124,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Variable
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/IntRef.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/IntRef.cs
     startLine: 21
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -153,7 +153,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Value
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/IntRef.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/IntRef.cs
     startLine: 26
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -184,7 +184,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/IntRef.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/IntRef.cs
     startLine: 41
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -221,7 +221,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/IntRef.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/IntRef.cs
     startLine: 47
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

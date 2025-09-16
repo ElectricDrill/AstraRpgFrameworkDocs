@@ -20,7 +20,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ParameterType
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/GameEventsGenerator.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/GameEventsGenerator.cs
     startLine: 37
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -47,7 +47,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Native
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/GameEventsGenerator.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/GameEventsGenerator.cs
     startLine: 37
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -73,7 +73,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: MonoScript
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/GameEventsGenerator.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/GameEventsGenerator.cs
     startLine: 37
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

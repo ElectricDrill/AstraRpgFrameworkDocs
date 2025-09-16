@@ -19,7 +19,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: InitializationUtils
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/InitializationUtils.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/InitializationUtils.cs
     startLine: 9
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -51,7 +51,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: RefreshInspectorReservedValues
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/InitializationUtils.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/InitializationUtils.cs
     startLine: 20
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

@@ -19,7 +19,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ILevel
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/ILevel.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/ILevel.cs
     startLine: 6
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -49,7 +49,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Level
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/ILevel.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/ILevel.cs
     startLine: 11
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

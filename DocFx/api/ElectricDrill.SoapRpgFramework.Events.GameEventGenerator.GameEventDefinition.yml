@@ -22,7 +22,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GameEventDefinition
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/GameEventsGenerator.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/GameEventsGenerator.cs
     startLine: 47
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -64,7 +64,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: eventName
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/GameEventsGenerator.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/GameEventsGenerator.cs
     startLine: 50
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -91,7 +91,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: documentation
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/GameEventsGenerator.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/GameEventsGenerator.cs
     startLine: 51
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -128,7 +128,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: parameters
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/GameEventsGenerator.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/GameEventsGenerator.cs
     startLine: 52
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -155,7 +155,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: isGenerated
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/GameEventsGenerator.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/GameEventsGenerator.cs
     startLine: 53
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

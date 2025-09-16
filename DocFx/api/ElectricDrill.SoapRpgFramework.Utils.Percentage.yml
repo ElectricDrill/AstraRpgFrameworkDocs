@@ -27,7 +27,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Percentage
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/Percentage.cs
     startLine: 10
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -73,7 +73,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: .ctor
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/Percentage.cs
     startLine: 23
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -111,7 +111,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/Percentage.cs
     startLine: 31
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -148,7 +148,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/Percentage.cs
     startLine: 39
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -185,7 +185,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Explicit
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/Percentage.cs
     startLine: 47
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -222,7 +222,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Addition
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/Percentage.cs
     startLine: 57
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -263,7 +263,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Subtraction
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/Percentage.cs
     startLine: 67
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -304,7 +304,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_UnaryNegation
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/Percentage.cs
     startLine: 76
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -342,7 +342,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CompareTo
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/Percentage.cs
     startLine: 85
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -377,7 +377,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ToString
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/Percentage.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/Percentage.cs
     startLine: 95
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

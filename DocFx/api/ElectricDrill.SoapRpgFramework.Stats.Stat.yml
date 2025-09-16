@@ -23,7 +23,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Stat
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/Stat.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/Stat.cs
     startLine: 12
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -63,7 +63,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AttributesScaling
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/Stat.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/Stat.cs
     startLine: 20
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -107,7 +107,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Equals
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/Stat.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/Stat.cs
     startLine: 29
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -143,7 +143,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetHashCode
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/Stat.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/Stat.cs
     startLine: 33
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -173,7 +173,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Equality
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/Stat.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/Stat.cs
     startLine: 43
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -214,7 +214,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Inequality
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/Stat.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/Stat.cs
     startLine: 59
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

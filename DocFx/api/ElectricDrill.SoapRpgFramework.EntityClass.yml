@@ -20,7 +20,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: EntityClass
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityClass.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/EntityClass.cs
     startLine: 8
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -68,7 +68,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Class
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityClass.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/EntityClass.cs
     startLine: 16
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -101,7 +101,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityClass.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/EntityClass.cs
     startLine: 37
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

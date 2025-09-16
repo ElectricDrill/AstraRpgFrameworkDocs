@@ -27,7 +27,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: EntityLevel
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/EntityLevel.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/EntityLevel.cs
     startLine: 14
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -57,7 +57,7 @@ items:
     ctor: System.SerializableAttribute.#ctor
     arguments: []
 - uid: ElectricDrill.SoapRpgFramework.EntityLevel.OnLevelUp
-  commentId: P:ElectricDrill.SoapRpgFramework.EntityLevel.OnLevelUp
+  commentId: E:ElectricDrill.SoapRpgFramework.EntityLevel.OnLevelUp
   id: OnLevelUp
   parent: ElectricDrill.SoapRpgFramework.EntityLevel
   langs:
@@ -66,27 +66,25 @@ items:
   name: OnLevelUp
   nameWithType: EntityLevel.OnLevelUp
   fullName: ElectricDrill.SoapRpgFramework.EntityLevel.OnLevelUp
-  type: Property
+  type: Event
   source:
     remote:
       path: Runtime/Experience/EntityLevel.cs
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: OnLevelUp
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/EntityLevel.cs
-    startLine: 43
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/EntityLevel.cs
+    startLine: 41
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework
   summary: Event raised when the entity levels up. The parameter is the new level.
   example: []
   syntax:
-    content: public virtual Action<int> OnLevelUp { get; set; }
-    parameters: []
+    content: public virtual event Action<int> OnLevelUp
     return:
       type: System.Action{System.Int32}
-    content.vb: Public Overridable Property OnLevelUp As Action(Of Integer)
-  overload: ElectricDrill.SoapRpgFramework.EntityLevel.OnLevelUp*
+    content.vb: Public Overridable Event OnLevelUp As Action(Of Integer)
 - uid: ElectricDrill.SoapRpgFramework.EntityLevel.Level
   commentId: P:ElectricDrill.SoapRpgFramework.EntityLevel.Level
   id: Level
@@ -104,8 +102,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Level
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/EntityLevel.cs
-    startLine: 50
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/EntityLevel.cs
+    startLine: 57
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework
@@ -142,8 +140,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AddExp
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/EntityLevel.cs
-    startLine: 95
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/EntityLevel.cs
+    startLine: 100
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework
@@ -184,8 +182,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: SetTotalCurrentExp
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/EntityLevel.cs
-    startLine: 124
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/EntityLevel.cs
+    startLine: 129
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework
@@ -224,8 +222,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CurrentTotalExperience
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/EntityLevel.cs
-    startLine: 143
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/EntityLevel.cs
+    startLine: 148
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework
@@ -260,8 +258,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CurrentLevelTotalExperience
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/EntityLevel.cs
-    startLine: 150
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/EntityLevel.cs
+    startLine: 155
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework
@@ -296,8 +294,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: NextLevelTotalExperience
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/EntityLevel.cs
-    startLine: 159
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/EntityLevel.cs
+    startLine: 164
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework
@@ -332,8 +330,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/EntityLevel.cs
-    startLine: 172
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/EntityLevel.cs
+    startLine: 177
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework
@@ -373,8 +371,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ValidateExperience
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/EntityLevel.cs
-    startLine: 179
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/EntityLevel.cs
+    startLine: 184
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework
@@ -438,12 +436,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: ElectricDrill.SoapRpgFramework.EntityLevel.OnLevelUp*
-  commentId: Overload:ElectricDrill.SoapRpgFramework.EntityLevel.OnLevelUp
-  href: ElectricDrill.SoapRpgFramework.EntityLevel.html#ElectricDrill_SoapRpgFramework_EntityLevel_OnLevelUp
-  name: OnLevelUp
-  nameWithType: EntityLevel.OnLevelUp
-  fullName: ElectricDrill.SoapRpgFramework.EntityLevel.OnLevelUp
 - uid: System.Action{System.Int32}
   commentId: T:System.Action{System.Int32}
   parent: System

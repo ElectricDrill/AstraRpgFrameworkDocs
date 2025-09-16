@@ -1,12 +1,5 @@
 ### YamlMime:TableOfContent
 items:
-- uid: ElectricDrill
-  name: ElectricDrill
-  type: Namespace
-  items:
-  - uid: ElectricDrill.StatChangeInfo
-    name: StatChangeInfo
-    type: Struct
 - uid: ElectricDrill.SoapRpgFramework
   name: ElectricDrill.SoapRpgFramework
   type: Namespace
@@ -68,9 +61,6 @@ items:
     type: Struct
   - uid: ElectricDrill.SoapRpgFramework.Attributes.AttributeMenuItems
     name: AttributeMenuItems
-    type: Class
-  - uid: ElectricDrill.SoapRpgFramework.Attributes.AttributePointsTracker
-    name: AttributePointsTracker
     type: Class
   - uid: ElectricDrill.SoapRpgFramework.Attributes.AttributeSet
     name: AttributeSet
@@ -216,6 +206,9 @@ items:
   - uid: ElectricDrill.SoapRpgFramework.Stats.Stat
     name: Stat
     type: Class
+  - uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
+    name: StatChangeInfo
+    type: Struct
   - uid: ElectricDrill.SoapRpgFramework.Stats.StatMenuItems
     name: StatMenuItems
     type: Class

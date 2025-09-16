@@ -19,7 +19,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: StatToStatModifierMenuItems
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatToStatModifier.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatToStatModifier.cs
     startLine: 34
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -48,7 +48,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CreateStatToStatModifier
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatToStatModifier.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatToStatModifier.cs
     startLine: 39
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

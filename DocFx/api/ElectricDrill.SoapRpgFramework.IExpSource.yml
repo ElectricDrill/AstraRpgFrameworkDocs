@@ -20,7 +20,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: IExpSource
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/IExpSource.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/IExpSource.cs
     startLine: 6
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -50,7 +50,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Harvested
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/IExpSource.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/IExpSource.cs
     startLine: 11
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -84,7 +84,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Exp
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/IExpSource.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/IExpSource.cs
     startLine: 17
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

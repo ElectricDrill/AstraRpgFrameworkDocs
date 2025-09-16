@@ -19,7 +19,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AttributeMenuItems
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/Attribute.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/Attribute.cs
     startLine: 34
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -48,7 +48,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CreateAttribute
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/Attribute.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/Attribute.cs
     startLine: 40
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

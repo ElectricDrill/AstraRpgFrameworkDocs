@@ -22,7 +22,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GameEventGeneric3
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/GameEventGeneric3.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Events/GameEventGeneric3.cs
     startLine: 12
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -68,7 +68,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: OnEventRaised
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/GameEventGeneric3.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Events/GameEventGeneric3.cs
     startLine: 25
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -79,10 +79,10 @@ items:
     Automatically handles registration and unregistration of Action listeners.
   example: []
   syntax:
-    content: public event Action<T, U, W> OnEventRaised
+    content: public virtual event Action<T, U, W> OnEventRaised
     return:
       type: System.Action{{T},{U},{W}}
-    content.vb: Public Event OnEventRaised As Action(Of T, U, W)
+    content.vb: Public Overridable Event OnEventRaised As Action(Of T, U, W)
   nameWithType.vb: GameEventGeneric3(Of T, U, W).OnEventRaised
   fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric3(Of T, U, W).OnEventRaised
 - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric3`3.Raise(`0,`1,`2)
@@ -102,7 +102,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Raise
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/GameEventGeneric3.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Events/GameEventGeneric3.cs
     startLine: 37
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -113,7 +113,7 @@ items:
     Both MonoBehaviour listeners and Action listeners are notified.
   example: []
   syntax:
-    content: public void Raise(T contextT, U contextU, W contextW)
+    content: public virtual void Raise(T contextT, U contextU, W contextW)
     parameters:
     - id: contextT
       type: '{T}'
@@ -124,7 +124,7 @@ items:
     - id: contextW
       type: '{W}'
       description: The third parameter to pass to all listeners.
-    content.vb: Public Sub Raise(contextT As T, contextU As U, contextW As W)
+    content.vb: Public Overridable Sub Raise(contextT As T, contextU As U, contextW As W)
   overload: ElectricDrill.SoapRpgFramework.Events.GameEventGeneric3`3.Raise*
   implements:
   - ElectricDrill.SoapRpgFramework.Events.IRaisable{{T},{U},{W}}.Raise({T},{U},{W})
@@ -147,7 +147,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: RegisterListener
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/GameEventGeneric3.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Events/GameEventGeneric3.cs
     startLine: 52
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -185,8 +185,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: UnregisterListener
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/GameEventGeneric3.cs
-    startLine: 62
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Events/GameEventGeneric3.cs
+    startLine: 61
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Events

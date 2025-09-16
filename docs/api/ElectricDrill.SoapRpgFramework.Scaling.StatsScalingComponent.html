@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_SoapRpgFramework_Scaling_StatsScalingComponent" data-uid="ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent" class="text-break">
-Class StatsScalingComponent  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class StatsScalingComponent  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -132,6 +132,9 @@ Class StatsScalingComponent  <a class="header-action link-secondary" title="View
       <a class="xref" href="ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_CalculateValue_ElectricDrill_SoapRpgFramework_EntityCore_">SoSetScalingComponentBase&lt;StatSet, Stat&gt;.CalculateValue(EntityCore)</a>
     </div>
     <div>
+      <a class="xref" href="ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_ValidateEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_">SoSetScalingComponentBase&lt;StatSet, Stat&gt;.ValidateEntitySet(EntityCore)</a>
+    </div>
+    <div>
       <a class="xref" href="ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_">SoSetScalingComponentBase&lt;StatSet, Stat&gt;.GetEntitySet(EntityCore)</a>
     </div>
     <div>
@@ -161,7 +164,7 @@ Class StatsScalingComponent  <a class="header-action link-secondary" title="View
 
   <h3 id="ElectricDrill_SoapRpgFramework_Scaling_StatsScalingComponent_GetEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_" data-uid="ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.GetEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)">
   GetEntitySet(EntityCore)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the StatSet from the specified entity.</p>
@@ -200,7 +203,7 @@ Class StatsScalingComponent  <a class="header-action link-secondary" title="View
 
   <h3 id="ElectricDrill_SoapRpgFramework_Scaling_StatsScalingComponent_GetEntityValue_ElectricDrill_SoapRpgFramework_EntityCore_ElectricDrill_SoapRpgFramework_Stats_Stat_" data-uid="ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.GetEntityValue(ElectricDrill.SoapRpgFramework.EntityCore,ElectricDrill.SoapRpgFramework.Stats.Stat)">
   GetEntityValue(EntityCore, Stat)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the value of a specific stat from the entity.</p>
@@ -242,7 +245,7 @@ Class StatsScalingComponent  <a class="header-action link-secondary" title="View
 
   <h3 id="ElectricDrill_SoapRpgFramework_Scaling_StatsScalingComponent_GetSetItems" data-uid="ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.GetSetItems">
   GetSetItems()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the collection of stats from the associated StatSet.</p>
@@ -271,11 +274,45 @@ Class StatsScalingComponent  <a class="header-action link-secondary" title="View
 
 
 
+  <a id="ElectricDrill_SoapRpgFramework_Scaling_StatsScalingComponent_ValidateEntitySet_" data-uid="ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.ValidateEntitySet*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Scaling_StatsScalingComponent_ValidateEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_" data-uid="ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)">
+  ValidateEntitySet(EntityCore)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validates that the entity's StatSet is equal to or contains the scaling component's StatSet.
+This allows entities with StatSets that include the component's StatSet to be compatible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void ValidateEntitySet(EntityCore entity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <a class="xref" href="ElectricDrill.SoapRpgFramework.EntityCore.html">EntityCore</a></dt>
+    <dd><p>The entity to validate</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs/#L13" class="edit-link">Edit this page</a>
         </div>
 
 

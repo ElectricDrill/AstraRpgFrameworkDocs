@@ -19,7 +19,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: IStatContainer
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/IStatContainer.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/IStatContainer.cs
     startLine: 6
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -49,7 +49,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Contains
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/IStatContainer.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/IStatContainer.cs
     startLine: 13
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

@@ -16,7 +16,6 @@ items:
   - ElectricDrill.SoapRpgFramework.Stats.EntityStats.OnStatChanged
   - ElectricDrill.SoapRpgFramework.Stats.EntityStats.SetFixed(ElectricDrill.SoapRpgFramework.Stats.Stat,System.Int64)
   - ElectricDrill.SoapRpgFramework.Stats.EntityStats.StatSet
-  - ElectricDrill.SoapRpgFramework.Stats.EntityStats.StatsCache
   - ElectricDrill.SoapRpgFramework.Stats.EntityStats.UseClassBaseStats
   - ElectricDrill.SoapRpgFramework.Stats.EntityStats._entityClass
   - ElectricDrill.SoapRpgFramework.Stats.EntityStats._flatModifiers
@@ -34,8 +33,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: EntityStats
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/EntityStats.cs
-    startLine: 16
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/EntityStats.cs
+    startLine: 17
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
@@ -95,8 +94,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: UseClassBaseStats
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/EntityStats.cs
-    startLine: 26
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/EntityStats.cs
+    startLine: 27
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
@@ -126,8 +125,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: _entityClass
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/EntityStats.cs
-    startLine: 32
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/EntityStats.cs
+    startLine: 33
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
@@ -153,8 +152,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: _flatModifiers
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/EntityStats.cs
-    startLine: 34
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/EntityStats.cs
+    startLine: 35
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
@@ -180,8 +179,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: _percentageModifiers
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/EntityStats.cs
-    startLine: 39
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/EntityStats.cs
+    startLine: 40
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
@@ -190,35 +189,6 @@ items:
     return:
       type: ElectricDrill.SoapRpgFramework.Stats.StatSetInstance
     content.vb: Protected _percentageModifiers As StatSetInstance
-- uid: ElectricDrill.SoapRpgFramework.Stats.EntityStats.StatsCache
-  commentId: P:ElectricDrill.SoapRpgFramework.Stats.EntityStats.StatsCache
-  id: StatsCache
-  parent: ElectricDrill.SoapRpgFramework.Stats.EntityStats
-  langs:
-  - csharp
-  - vb
-  name: StatsCache
-  nameWithType: EntityStats.StatsCache
-  fullName: ElectricDrill.SoapRpgFramework.Stats.EntityStats.StatsCache
-  type: Property
-  source:
-    remote:
-      path: Runtime/Stats/EntityStats.cs
-      branch: main
-      repo: https://github.com/Cis8/SoapRpgFramework
-    id: StatsCache
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/EntityStats.cs
-    startLine: 51
-  assemblies:
-  - com.electricdrill.soap-rpg-framework.Runtime
-  namespace: ElectricDrill.SoapRpgFramework.Stats
-  syntax:
-    content: public Cache<Stat, long> StatsCache { get; }
-    parameters: []
-    return:
-      type: ElectricDrill.SoapRpgFramework.Utils.Cache{ElectricDrill.SoapRpgFramework.Stats.Stat,System.Int64}
-    content.vb: Public ReadOnly Property StatsCache As Cache(Of Stat, Long)
-  overload: ElectricDrill.SoapRpgFramework.Stats.EntityStats.StatsCache*
 - uid: ElectricDrill.SoapRpgFramework.Stats.EntityStats.EntityCore
   commentId: P:ElectricDrill.SoapRpgFramework.Stats.EntityStats.EntityCore
   id: EntityCore
@@ -236,8 +206,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: EntityCore
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/EntityStats.cs
-    startLine: 56
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/EntityStats.cs
+    startLine: 57
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
@@ -267,8 +237,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: EntityClass
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/EntityStats.cs
-    startLine: 72
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/EntityStats.cs
+    startLine: 73
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
@@ -298,8 +268,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: OnStatChanged
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/EntityStats.cs
-    startLine: 80
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/EntityStats.cs
+    startLine: 81
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
@@ -329,8 +299,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: SetFixed
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/EntityStats.cs
-    startLine: 103
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/EntityStats.cs
+    startLine: 104
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
@@ -367,8 +337,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: StatSet
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/EntityStats.cs
-    startLine: 114
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/EntityStats.cs
+    startLine: 115
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
@@ -404,8 +374,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetBase
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/EntityStats.cs
-    startLine: 144
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/EntityStats.cs
+    startLine: 145
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
@@ -424,7 +394,7 @@ items:
       description: The stat to get the base value of.
     return:
       type: System.Int64
-      description: The base value of the stat. The value is clamped to the stat's min and max values.
+      description: The base value of the stat (clamped to the stat's min and max values) if enabled; otherwise, 0
     content.vb: Public Function GetBase(stat As Stat) As Long
   overload: ElectricDrill.SoapRpgFramework.Stats.EntityStats.GetBase*
 - uid: ElectricDrill.SoapRpgFramework.Stats.EntityStats.Get(ElectricDrill.SoapRpgFramework.Stats.Stat)
@@ -444,8 +414,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Get
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/EntityStats.cs
-    startLine: 180
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/EntityStats.cs
+    startLine: 181
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
@@ -470,7 +440,7 @@ items:
       description: The stat to get the final value of.
     return:
       type: System.Int64
-      description: The final value of the stat. The value is clamped to the stat's min and max values.
+      description: The final value of the stat if the component is enabled (clamped to min/max values); otherwise, 0
     content.vb: Public Overridable Function [Get](stat As Stat) As Long
   overload: ElectricDrill.SoapRpgFramework.Stats.EntityStats.Get*
 - uid: ElectricDrill.SoapRpgFramework.Stats.EntityStats.AddFlatModifier(ElectricDrill.SoapRpgFramework.Stats.Stat,System.Int64)
@@ -490,8 +460,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AddFlatModifier
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/EntityStats.cs
-    startLine: 220
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/EntityStats.cs
+    startLine: 225
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
@@ -528,8 +498,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AddStatToStatModifer
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/EntityStats.cs
-    startLine: 249
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/EntityStats.cs
+    startLine: 254
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
@@ -569,8 +539,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AddPercentageModifier
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/EntityStats.cs
-    startLine: 266
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/EntityStats.cs
+    startLine: 271
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
@@ -607,8 +577,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: OnLevelUp
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/EntityStats.cs
-    startLine: 280
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/EntityStats.cs
+    startLine: 285
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
@@ -803,114 +773,6 @@ references:
   name: StatSetInstance
   nameWithType: StatSetInstance
   fullName: ElectricDrill.SoapRpgFramework.Stats.StatSetInstance
-- uid: ElectricDrill.SoapRpgFramework.Stats.EntityStats.StatsCache*
-  commentId: Overload:ElectricDrill.SoapRpgFramework.Stats.EntityStats.StatsCache
-  href: ElectricDrill.SoapRpgFramework.Stats.EntityStats.html#ElectricDrill_SoapRpgFramework_Stats_EntityStats_StatsCache
-  name: StatsCache
-  nameWithType: EntityStats.StatsCache
-  fullName: ElectricDrill.SoapRpgFramework.Stats.EntityStats.StatsCache
-- uid: ElectricDrill.SoapRpgFramework.Utils.Cache{ElectricDrill.SoapRpgFramework.Stats.Stat,System.Int64}
-  commentId: T:ElectricDrill.SoapRpgFramework.Utils.Cache{ElectricDrill.SoapRpgFramework.Stats.Stat,System.Int64}
-  parent: ElectricDrill.SoapRpgFramework.Utils
-  definition: ElectricDrill.SoapRpgFramework.Utils.Cache`2
-  href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html
-  name: Cache<Stat, long>
-  nameWithType: Cache<Stat, long>
-  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<ElectricDrill.SoapRpgFramework.Stats.Stat, long>
-  nameWithType.vb: Cache(Of Stat, Long)
-  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of ElectricDrill.SoapRpgFramework.Stats.Stat, Long)
-  name.vb: Cache(Of Stat, Long)
-  spec.csharp:
-  - uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2
-    name: Cache
-    href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html
-  - name: <
-  - uid: ElectricDrill.SoapRpgFramework.Stats.Stat
-    name: Stat
-    href: ElectricDrill.SoapRpgFramework.Stats.Stat.html
-  - name: ','
-  - name: " "
-  - uid: System.Int64
-    name: long
-    isExternal: true
-  - name: '>'
-  spec.vb:
-  - uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2
-    name: Cache
-    href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: ElectricDrill.SoapRpgFramework.Stats.Stat
-    name: Stat
-    href: ElectricDrill.SoapRpgFramework.Stats.Stat.html
-  - name: ','
-  - name: " "
-  - uid: System.Int64
-    name: Long
-    isExternal: true
-  - name: )
-- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2
-  commentId: T:ElectricDrill.SoapRpgFramework.Utils.Cache`2
-  href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html
-  name: Cache<KType, VType>
-  nameWithType: Cache<KType, VType>
-  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>
-  nameWithType.vb: Cache(Of KType, VType)
-  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType)
-  name.vb: Cache(Of KType, VType)
-  spec.csharp:
-  - uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2
-    name: Cache
-    href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html
-  - name: <
-  - name: KType
-  - name: ','
-  - name: " "
-  - name: VType
-  - name: '>'
-  spec.vb:
-  - uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2
-    name: Cache
-    href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: KType
-  - name: ','
-  - name: " "
-  - name: VType
-  - name: )
-- uid: ElectricDrill.SoapRpgFramework.Utils
-  commentId: N:ElectricDrill.SoapRpgFramework.Utils
-  href: ElectricDrill.html
-  name: ElectricDrill.SoapRpgFramework.Utils
-  nameWithType: ElectricDrill.SoapRpgFramework.Utils
-  fullName: ElectricDrill.SoapRpgFramework.Utils
-  spec.csharp:
-  - uid: ElectricDrill
-    name: ElectricDrill
-    href: ElectricDrill.html
-  - name: .
-  - uid: ElectricDrill.SoapRpgFramework
-    name: SoapRpgFramework
-    href: ElectricDrill.SoapRpgFramework.html
-  - name: .
-  - uid: ElectricDrill.SoapRpgFramework.Utils
-    name: Utils
-    href: ElectricDrill.SoapRpgFramework.Utils.html
-  spec.vb:
-  - uid: ElectricDrill
-    name: ElectricDrill
-    href: ElectricDrill.html
-  - name: .
-  - uid: ElectricDrill.SoapRpgFramework
-    name: SoapRpgFramework
-    href: ElectricDrill.SoapRpgFramework.html
-  - name: .
-  - uid: ElectricDrill.SoapRpgFramework.Utils
-    name: Utils
-    href: ElectricDrill.SoapRpgFramework.Utils.html
 - uid: ElectricDrill.SoapRpgFramework.Stats.EntityStats.EntityCore*
   commentId: Overload:ElectricDrill.SoapRpgFramework.Stats.EntityStats.EntityCore
   href: ElectricDrill.SoapRpgFramework.Stats.EntityStats.html#ElectricDrill_SoapRpgFramework_Stats_EntityStats_EntityCore
@@ -1016,6 +878,36 @@ references:
   name: AddStatToStatModifer
   nameWithType: EntityStats.AddStatToStatModifer
   fullName: ElectricDrill.SoapRpgFramework.Stats.EntityStats.AddStatToStatModifer
+- uid: ElectricDrill.SoapRpgFramework.Utils
+  commentId: N:ElectricDrill.SoapRpgFramework.Utils
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Utils
+  nameWithType: ElectricDrill.SoapRpgFramework.Utils
+  fullName: ElectricDrill.SoapRpgFramework.Utils
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Utils
+    name: Utils
+    href: ElectricDrill.SoapRpgFramework.Utils.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Utils
+    name: Utils
+    href: ElectricDrill.SoapRpgFramework.Utils.html
 - uid: ElectricDrill.SoapRpgFramework.Stats.EntityStats.AddPercentageModifier*
   commentId: Overload:ElectricDrill.SoapRpgFramework.Stats.EntityStats.AddPercentageModifier
   href: ElectricDrill.SoapRpgFramework.Stats.EntityStats.html#ElectricDrill_SoapRpgFramework_Stats_EntityStats_AddPercentageModifier_ElectricDrill_SoapRpgFramework_Stats_Stat_ElectricDrill_SoapRpgFramework_Utils_Percentage_

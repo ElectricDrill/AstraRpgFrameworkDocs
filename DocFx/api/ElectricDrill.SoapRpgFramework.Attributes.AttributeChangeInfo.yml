@@ -23,7 +23,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AttributeChangeInfo
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeChangeInfo.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeChangeInfo.cs
     startLine: 6
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -53,7 +53,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Source
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeChangeInfo.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeChangeInfo.cs
     startLine: 11
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -84,7 +84,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Attribute
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeChangeInfo.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeChangeInfo.cs
     startLine: 16
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -115,7 +115,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: OldValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeChangeInfo.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeChangeInfo.cs
     startLine: 21
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -146,7 +146,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: NewValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeChangeInfo.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeChangeInfo.cs
     startLine: 26
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -177,7 +177,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: .ctor
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeChangeInfo.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeChangeInfo.cs
     startLine: 35
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

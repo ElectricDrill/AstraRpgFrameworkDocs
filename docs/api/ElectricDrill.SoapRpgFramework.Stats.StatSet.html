@@ -133,6 +133,41 @@ Implements IStatContainer to provide stat containment functionality.</p>
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Stats_StatSet__includedStatSets" data-uid="ElectricDrill.SoapRpgFramework.Stats.StatSet._includedStatSets">
+  _includedStatSets
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/StatSet.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+public SerializableHashSet&lt;StatSet&gt; _includedStatSets</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet-1.html">SerializableHashSet</a>&lt;<a class="xref" href="ElectricDrill.SoapRpgFramework.Stats.StatSet.html">StatSet</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -141,10 +176,11 @@ Implements IStatContainer to provide stat containment functionality.</p>
 
   <h3 id="ElectricDrill_SoapRpgFramework_Stats_StatSet_Stats" data-uid="ElectricDrill.SoapRpgFramework.Stats.StatSet.Stats">
   Stats
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/StatSet.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/StatSet.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a read-only list of all stats in this set.</p>
+  <div class="markdown level1 summary"><p>Gets a read-only list of all stats in this set, including stats from included StatSets.
+Duplicates are automatically removed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -177,10 +213,11 @@ Implements IStatContainer to provide stat containment functionality.</p>
 
   <h3 id="ElectricDrill_SoapRpgFramework_Stats_StatSet_Contains_ElectricDrill_SoapRpgFramework_Stats_Stat_" data-uid="ElectricDrill.SoapRpgFramework.Stats.StatSet.Contains(ElectricDrill.SoapRpgFramework.Stats.Stat)">
   Contains(Stat)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/StatSet.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/StatSet.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Determines whether this stat set contains the specified stat.</p>
+  <div class="markdown level1 summary"><p>Determines whether this stat set contains the specified stat.
+Also checks in included StatSets.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -212,14 +249,54 @@ Implements IStatContainer to provide stat containment functionality.</p>
 
 
 
+  <a id="ElectricDrill_SoapRpgFramework_Stats_StatSet_Contains_" data-uid="ElectricDrill.SoapRpgFramework.Stats.StatSet.Contains*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Stats_StatSet_Contains_ElectricDrill_SoapRpgFramework_Stats_StatSet_" data-uid="ElectricDrill.SoapRpgFramework.Stats.StatSet.Contains(ElectricDrill.SoapRpgFramework.Stats.StatSet)">
+  Contains(StatSet)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/StatSet.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether this stat set contains another stat set. Either directly or indirectly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Contains(StatSet statSet)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>statSet</code> <a class="xref" href="ElectricDrill.SoapRpgFramework.Stats.StatSet.html">StatSet</a></dt>
+    <dd><p>The stat set to check for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">bool</span></dt>
+    <dd><p>true if the <code class="paramref">statSet</code> is contained in this stat set; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="ElectricDrill_SoapRpgFramework_Stats_StatSet_Get_" data-uid="ElectricDrill.SoapRpgFramework.Stats.StatSet.Get*"></a>
 
   <h3 id="ElectricDrill_SoapRpgFramework_Stats_StatSet_Get_ElectricDrill_SoapRpgFramework_Stats_Stat_" data-uid="ElectricDrill.SoapRpgFramework.Stats.StatSet.Get(ElectricDrill.SoapRpgFramework.Stats.Stat)">
   Get(Stat)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/StatSet.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/StatSet.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the stat from this set that matches the specified stat.</p>
+  <div class="markdown level1 summary"><p>Gets the stat from this set that matches the specified stat.
+Also looks in included StatSets.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

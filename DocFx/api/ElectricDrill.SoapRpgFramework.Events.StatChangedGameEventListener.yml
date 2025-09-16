@@ -18,8 +18,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: StatChangedGameEventListener
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/GeneratedEvents/StatsEventsGenerator/GameEventListeners/1/StatChangedGameEventListener.cs
-    startLine: 6
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Events/GeneratedEvents/StatsEventsGenerator/GameEventListeners/1/StatChangedGameEventListener.cs
+    startLine: 8
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Events
@@ -37,11 +37,11 @@ items:
   - UnityEngine.Component
   - UnityEngine.Behaviour
   - UnityEngine.MonoBehaviour
-  - ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.StatChangeInfo}
+  - ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo}
   inheritedMembers:
-  - ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.StatChangeInfo}._event
-  - ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.StatChangeInfo}._response
-  - ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.StatChangeInfo}.OnEventRaised(ElectricDrill.StatChangeInfo)
+  - ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo}._event
+  - ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo}._response
+  - ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo}.OnEventRaised(ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo)
 references:
 - uid: ElectricDrill.SoapRpgFramework.Events
   commentId: N:ElectricDrill.SoapRpgFramework.Events
@@ -111,25 +111,25 @@ references:
   name: MonoBehaviour
   nameWithType: MonoBehaviour
   fullName: UnityEngine.MonoBehaviour
-- uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.StatChangeInfo}
-  commentId: T:ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.StatChangeInfo}
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo}
+  commentId: T:ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo}
   parent: ElectricDrill.SoapRpgFramework.Events
   definition: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1
   href: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1-1.html
   name: GameEventListenerGeneric1<StatChangeInfo>
   nameWithType: GameEventListenerGeneric1<StatChangeInfo>
-  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1<ElectricDrill.StatChangeInfo>
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1<ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo>
   nameWithType.vb: GameEventListenerGeneric1(Of StatChangeInfo)
-  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1(Of ElectricDrill.StatChangeInfo)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1(Of ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo)
   name.vb: GameEventListenerGeneric1(Of StatChangeInfo)
   spec.csharp:
   - uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1
     name: GameEventListenerGeneric1
     href: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1-1.html
   - name: <
-  - uid: ElectricDrill.StatChangeInfo
+  - uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
     name: StatChangeInfo
-    href: ElectricDrill.StatChangeInfo.html
+    href: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.html
   - name: '>'
   spec.vb:
   - uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1
@@ -138,57 +138,57 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: ElectricDrill.StatChangeInfo
+  - uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
     name: StatChangeInfo
-    href: ElectricDrill.StatChangeInfo.html
+    href: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.html
   - name: )
-- uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.StatChangeInfo}._event
-  commentId: F:ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.StatChangeInfo}._event
-  parent: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.StatChangeInfo}
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo}._event
+  commentId: F:ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo}._event
+  parent: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo}
   definition: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1._event
   href: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1-1.html#ElectricDrill_SoapRpgFramework_Events_GameEventListenerGeneric1_1__event
   name: _event
   nameWithType: GameEventListenerGeneric1<StatChangeInfo>._event
-  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1<ElectricDrill.StatChangeInfo>._event
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1<ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo>._event
   nameWithType.vb: GameEventListenerGeneric1(Of StatChangeInfo)._event
-  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1(Of ElectricDrill.StatChangeInfo)._event
-- uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.StatChangeInfo}._response
-  commentId: F:ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.StatChangeInfo}._response
-  parent: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.StatChangeInfo}
+  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1(Of ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo)._event
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo}._response
+  commentId: F:ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo}._response
+  parent: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo}
   definition: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1._response
   href: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1-1.html#ElectricDrill_SoapRpgFramework_Events_GameEventListenerGeneric1_1__response
   name: _response
   nameWithType: GameEventListenerGeneric1<StatChangeInfo>._response
-  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1<ElectricDrill.StatChangeInfo>._response
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1<ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo>._response
   nameWithType.vb: GameEventListenerGeneric1(Of StatChangeInfo)._response
-  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1(Of ElectricDrill.StatChangeInfo)._response
-- uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.StatChangeInfo}.OnEventRaised(ElectricDrill.StatChangeInfo)
-  commentId: M:ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.StatChangeInfo}.OnEventRaised(ElectricDrill.StatChangeInfo)
-  parent: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.StatChangeInfo}
+  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1(Of ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo)._response
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo}.OnEventRaised(ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo)
+  commentId: M:ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo}.OnEventRaised(ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo)
+  parent: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo}
   definition: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1`1.OnEventRaised(`0)
   href: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1-1.html#ElectricDrill_SoapRpgFramework_Events_GameEventListenerGeneric1_1_OnEventRaised__0_
   name: OnEventRaised(StatChangeInfo)
   nameWithType: GameEventListenerGeneric1<StatChangeInfo>.OnEventRaised(StatChangeInfo)
-  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1<ElectricDrill.StatChangeInfo>.OnEventRaised(ElectricDrill.StatChangeInfo)
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1<ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo>.OnEventRaised(ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo)
   nameWithType.vb: GameEventListenerGeneric1(Of StatChangeInfo).OnEventRaised(StatChangeInfo)
-  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1(Of ElectricDrill.StatChangeInfo).OnEventRaised(ElectricDrill.StatChangeInfo)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1(Of ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo).OnEventRaised(ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo)
   spec.csharp:
-  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.StatChangeInfo}.OnEventRaised(ElectricDrill.StatChangeInfo)
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo}.OnEventRaised(ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo)
     name: OnEventRaised
     href: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1-1.html#ElectricDrill_SoapRpgFramework_Events_GameEventListenerGeneric1_1_OnEventRaised__0_
   - name: (
-  - uid: ElectricDrill.StatChangeInfo
+  - uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
     name: StatChangeInfo
-    href: ElectricDrill.StatChangeInfo.html
+    href: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.html
   - name: )
   spec.vb:
-  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.StatChangeInfo}.OnEventRaised(ElectricDrill.StatChangeInfo)
+  - uid: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1{ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo}.OnEventRaised(ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo)
     name: OnEventRaised
     href: ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric1-1.html#ElectricDrill_SoapRpgFramework_Events_GameEventListenerGeneric1_1_OnEventRaised__0_
   - name: (
-  - uid: ElectricDrill.StatChangeInfo
+  - uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
     name: StatChangeInfo
-    href: ElectricDrill.StatChangeInfo.html
+    href: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.html
   - name: )
 - uid: System
   commentId: N:System

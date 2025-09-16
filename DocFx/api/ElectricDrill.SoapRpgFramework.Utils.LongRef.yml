@@ -23,7 +23,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: LongRef
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongRef.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/LongRef.cs
     startLine: 7
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -65,7 +65,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: UseConstant
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongRef.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/LongRef.cs
     startLine: 20
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -94,7 +94,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ConstantValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongRef.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/LongRef.cs
     startLine: 24
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -123,7 +123,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Variable
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongRef.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/LongRef.cs
     startLine: 28
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -152,7 +152,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Value
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongRef.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/LongRef.cs
     startLine: 33
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -183,7 +183,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongRef.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/LongRef.cs
     startLine: 48
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

@@ -7,7 +7,6 @@ items:
   - ElectricDrill.SoapRpgFramework.Attributes.Attribute
   - ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo
   - ElectricDrill.SoapRpgFramework.Attributes.AttributeMenuItems
-  - ElectricDrill.SoapRpgFramework.Attributes.AttributePointsTracker
   - ElectricDrill.SoapRpgFramework.Attributes.AttributeSet
   - ElectricDrill.SoapRpgFramework.Attributes.AttributeSetInstance
   - ElectricDrill.SoapRpgFramework.Attributes.AttributeSetInstanceExtensions
@@ -63,12 +62,6 @@ references:
   name: AttributeChangeInfo
   nameWithType: AttributeChangeInfo
   fullName: ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo
-- uid: ElectricDrill.SoapRpgFramework.Attributes.AttributePointsTracker
-  commentId: T:ElectricDrill.SoapRpgFramework.Attributes.AttributePointsTracker
-  href: ElectricDrill.SoapRpgFramework.Attributes.AttributePointsTracker.html
-  name: AttributePointsTracker
-  nameWithType: AttributePointsTracker
-  fullName: ElectricDrill.SoapRpgFramework.Attributes.AttributePointsTracker
 - uid: ElectricDrill.SoapRpgFramework.Attributes.AttributeSetInstance
   commentId: T:ElectricDrill.SoapRpgFramework.Attributes.AttributeSetInstance
   parent: ElectricDrill.SoapRpgFramework.Attributes

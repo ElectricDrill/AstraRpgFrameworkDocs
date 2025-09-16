@@ -20,7 +20,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: LongVar
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongVar.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/LongVar.cs
     startLine: 7
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -71,7 +71,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Value
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongVar.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/LongVar.cs
     startLine: 14
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -102,7 +102,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/LongVar.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/LongVar.cs
     startLine: 23
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

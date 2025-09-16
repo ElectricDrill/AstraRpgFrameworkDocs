@@ -447,6 +447,24 @@ Let's add <code>Physical Attack</code> using whichever method you prefer.<br>
 Repeat the process of adding a stat to the set for <code>Magical Power</code>, <code>Defense</code>, and <code>Critical Chance</code> as well. The stat set should look like:</p>
 <p><img src="../images/workflows/stat-set.png" alt="Hero Stat Set"></p>
 <p>If you want to remove a stat from the set, you can click on the small <code>-</code> button on the right of the stat you want to remove.</p>
+<h3 id="modular-stat-sets">Modular stat sets</h3>
+<p>Stat sets can include other stat sets, allowing for modular and reusable configurations. This is particularly useful if we have various kind of entities that share some stats but not all of them. For example, let's consider three entities: a deer, a ballista turret, and our hero character. The deer can take damage, move around, and cannot attack. The turret instead can take damage, deal damage, but cannot move. The hero can do all three things.</p>
+<p>A first approach could be to create three distinct stat sets for each entity, but this would lead to a lot of redundancy since many stats would be repeated across the three sets. What if we decide to add a new stat that all three entities should have? We would have to remember to add it to all three sets, which is error-prone and inefficient.
+Alternatively, we could use a single all-embracing stat set that includes all the stats needed by all entities. However, this would lead to unnecessary complexity for entities that don't need all those stats, making it harder to manage and understand.</p>
+<p>A better approach is to create modular stat sets that can be combined as needed.
+We can create three stat sets:</p>
+<ul>
+<li><code>Damageable Stat Set</code>: includes stats like <code>Armor</code>, <code>Magical Defense</code>, <code>Dmg Reduction</code>, and so on</li>
+<li><code>Damage Dealer Stat Set</code>: includes stats like <code>Physical Attack</code>, <code>Magical Power</code>, <code>Critical Chance</code>, and so on</li>
+<li><code>Movable Stat Set</code>: includes stats like <code>Movement Speed</code>, <code>Jump Height</code>, etc.</li>
+</ul>
+<p>Then, we can create three additional stat sets for our entities:</p>
+<ul>
+<li><code>Pray Stat Set</code> for the deer, which includes only the <code>Damageable Stat Set</code> and the <code>Movable Stat Set</code></li>
+<li><code>Turret Stat Set</code> for the ballista turret, which includes only the <code>Damageable Stat Set</code> and the <code>Damage Dealer Stat Set</code></li>
+<li><code>Hero Stat Set</code> for our hero character, which includes all three stat sets: <code>Damageable Stat Set</code>, <code>Damage Dealer Stat Set</code>, and <code>Movable Stat Set</code></li>
+</ul>
+<p>This modular approach allows us to reuse stat configurations across different entities, reducing redundancy and making it easier to manage and update stats.</p>
 <h2 id="add-entitystats-to-an-entity">Add <code>EntityStats</code> to an Entity</h2>
 <p>The next step is to assign the stat set we created to an entity. To do this, let's add the <code>EntityStats</code> component to our game object. The inspector will look like this:</p>
 <p><img src="../images/workflows/entity-stats.png" alt="Entity Stats"></p>

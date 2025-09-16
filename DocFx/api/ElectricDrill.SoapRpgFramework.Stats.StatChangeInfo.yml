@@ -1,0 +1,269 @@
+### YamlMime:ManagedReference
+items:
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
+  commentId: T:ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
+  id: StatChangeInfo
+  parent: ElectricDrill.SoapRpgFramework.Stats
+  children:
+  - ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.#ctor(ElectricDrill.SoapRpgFramework.Stats.EntityStats,ElectricDrill.SoapRpgFramework.Stats.Stat,System.Int64,System.Int64)
+  - ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.EntityStats
+  - ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.NewValue
+  - ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.OldValue
+  - ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.Stat
+  langs:
+  - csharp
+  - vb
+  name: StatChangeInfo
+  nameWithType: StatChangeInfo
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
+  type: Struct
+  source:
+    remote:
+      path: Runtime/Stats/StatChangeInfo.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: StatChangeInfo
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatChangeInfo.cs
+    startLine: 5
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  summary: >-
+    Contains information about a stat change event, including the entity, stat, and old/new values.
+
+    Used for tracking and responding to stat modifications.
+  example: []
+  syntax:
+    content: public struct StatChangeInfo
+    content.vb: Public Structure StatChangeInfo
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.EntityStats
+  commentId: F:ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.EntityStats
+  id: EntityStats
+  parent: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
+  langs:
+  - csharp
+  - vb
+  name: EntityStats
+  nameWithType: StatChangeInfo.EntityStats
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.EntityStats
+  type: Field
+  source:
+    remote:
+      path: Runtime/Stats/StatChangeInfo.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: EntityStats
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatChangeInfo.cs
+    startLine: 10
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  summary: The EntityStats component that owns the changed stat.
+  example: []
+  syntax:
+    content: public EntityStats EntityStats
+    return:
+      type: ElectricDrill.SoapRpgFramework.Stats.EntityStats
+    content.vb: Public EntityStats As EntityStats
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.Stat
+  commentId: F:ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.Stat
+  id: Stat
+  parent: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
+  langs:
+  - csharp
+  - vb
+  name: Stat
+  nameWithType: StatChangeInfo.Stat
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.Stat
+  type: Field
+  source:
+    remote:
+      path: Runtime/Stats/StatChangeInfo.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Stat
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatChangeInfo.cs
+    startLine: 15
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  summary: The stat that was changed.
+  example: []
+  syntax:
+    content: public Stat Stat
+    return:
+      type: ElectricDrill.SoapRpgFramework.Stats.Stat
+    content.vb: Public Stat As Stat
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.OldValue
+  commentId: F:ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.OldValue
+  id: OldValue
+  parent: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
+  langs:
+  - csharp
+  - vb
+  name: OldValue
+  nameWithType: StatChangeInfo.OldValue
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.OldValue
+  type: Field
+  source:
+    remote:
+      path: Runtime/Stats/StatChangeInfo.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: OldValue
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatChangeInfo.cs
+    startLine: 20
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  summary: The value of the stat before the change.
+  example: []
+  syntax:
+    content: public long OldValue
+    return:
+      type: System.Int64
+    content.vb: Public OldValue As Long
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.NewValue
+  commentId: F:ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.NewValue
+  id: NewValue
+  parent: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: StatChangeInfo.NewValue
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.NewValue
+  type: Field
+  source:
+    remote:
+      path: Runtime/Stats/StatChangeInfo.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: NewValue
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatChangeInfo.cs
+    startLine: 25
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  summary: The value of the stat after the change.
+  example: []
+  syntax:
+    content: public long NewValue
+    return:
+      type: System.Int64
+    content.vb: Public NewValue As Long
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.#ctor(ElectricDrill.SoapRpgFramework.Stats.EntityStats,ElectricDrill.SoapRpgFramework.Stats.Stat,System.Int64,System.Int64)
+  commentId: M:ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.#ctor(ElectricDrill.SoapRpgFramework.Stats.EntityStats,ElectricDrill.SoapRpgFramework.Stats.Stat,System.Int64,System.Int64)
+  id: '#ctor(ElectricDrill.SoapRpgFramework.Stats.EntityStats,ElectricDrill.SoapRpgFramework.Stats.Stat,System.Int64,System.Int64)'
+  parent: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
+  langs:
+  - csharp
+  - vb
+  name: StatChangeInfo(EntityStats, Stat, long, long)
+  nameWithType: StatChangeInfo.StatChangeInfo(EntityStats, Stat, long, long)
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.StatChangeInfo(ElectricDrill.SoapRpgFramework.Stats.EntityStats, ElectricDrill.SoapRpgFramework.Stats.Stat, long, long)
+  type: Constructor
+  source:
+    remote:
+      path: Runtime/Stats/StatChangeInfo.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: .ctor
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatChangeInfo.cs
+    startLine: 34
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  summary: Initializes a new instance of the StatChangeInfo structure.
+  example: []
+  syntax:
+    content: public StatChangeInfo(EntityStats entity, Stat stat, long oldValue, long newValue)
+    parameters:
+    - id: entity
+      type: ElectricDrill.SoapRpgFramework.Stats.EntityStats
+      description: The EntityStats component that owns the stat.
+    - id: stat
+      type: ElectricDrill.SoapRpgFramework.Stats.Stat
+      description: The stat that was changed.
+    - id: oldValue
+      type: System.Int64
+      description: The previous value of the stat.
+    - id: newValue
+      type: System.Int64
+      description: The new value of the stat.
+    content.vb: Public Sub New(entity As EntityStats, stat As Stat, oldValue As Long, newValue As Long)
+  overload: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.#ctor*
+  nameWithType.vb: StatChangeInfo.New(EntityStats, Stat, Long, Long)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.New(ElectricDrill.SoapRpgFramework.Stats.EntityStats, ElectricDrill.SoapRpgFramework.Stats.Stat, Long, Long)
+  name.vb: New(EntityStats, Stat, Long, Long)
+references:
+- uid: ElectricDrill.SoapRpgFramework.Stats
+  commentId: N:ElectricDrill.SoapRpgFramework.Stats
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Stats
+  nameWithType: ElectricDrill.SoapRpgFramework.Stats
+  fullName: ElectricDrill.SoapRpgFramework.Stats
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Stats
+    name: Stats
+    href: ElectricDrill.SoapRpgFramework.Stats.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Stats
+    name: Stats
+    href: ElectricDrill.SoapRpgFramework.Stats.html
+- uid: ElectricDrill.SoapRpgFramework.Stats.EntityStats
+  commentId: T:ElectricDrill.SoapRpgFramework.Stats.EntityStats
+  parent: ElectricDrill.SoapRpgFramework.Stats
+  href: ElectricDrill.SoapRpgFramework.Stats.EntityStats.html
+  name: EntityStats
+  nameWithType: EntityStats
+  fullName: ElectricDrill.SoapRpgFramework.Stats.EntityStats
+- uid: ElectricDrill.SoapRpgFramework.Stats.Stat
+  commentId: T:ElectricDrill.SoapRpgFramework.Stats.Stat
+  parent: ElectricDrill.SoapRpgFramework.Stats
+  href: ElectricDrill.SoapRpgFramework.Stats.Stat.html
+  name: Stat
+  nameWithType: Stat
+  fullName: ElectricDrill.SoapRpgFramework.Stats.Stat
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.#ctor*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.#ctor
+  href: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.html#ElectricDrill_SoapRpgFramework_Stats_StatChangeInfo__ctor_ElectricDrill_SoapRpgFramework_Stats_EntityStats_ElectricDrill_SoapRpgFramework_Stats_Stat_System_Int64_System_Int64_
+  name: StatChangeInfo
+  nameWithType: StatChangeInfo.StatChangeInfo
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.StatChangeInfo
+  nameWithType.vb: StatChangeInfo.New
+  fullName.vb: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.New
+  name.vb: New

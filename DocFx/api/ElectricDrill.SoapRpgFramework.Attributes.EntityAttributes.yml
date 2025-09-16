@@ -8,15 +8,19 @@ items:
   - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AddFlatModifier(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int64)
   - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AddPercentageModifier(ElectricDrill.SoapRpgFramework.Attributes.Attribute,ElectricDrill.SoapRpgFramework.Utils.Percentage)
   - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributeSet
-  - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache
   - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints
   - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.EntityClass
   - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.FlatModifiers
   - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.Get(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
+  - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetAllSpentPoints
   - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetBase(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
+  - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetSpentOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
   - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.OnAttributeChanged
   - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.PercentageModifiers
+  - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundAllSpentPoints
+  - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundPointsForAttribute(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
   - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int32)
+  - ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.TotalAttributePoints
   langs:
   - csharp
   - vb
@@ -30,8 +34,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: EntityAttributes
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 13
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 15
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -87,8 +91,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: OnAttributeChanged
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 42
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 44
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -99,40 +103,6 @@ items:
       type: ElectricDrill.SoapRpgFramework.Events.AttributeChangedGameEvent
     content.vb: Public Property OnAttributeChanged As AttributeChangedGameEvent
   overload: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.OnAttributeChanged*
-- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache
-  commentId: P:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache
-  id: AttributesCache
-  parent: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes
-  langs:
-  - csharp
-  - vb
-  name: AttributesCache
-  nameWithType: EntityAttributes.AttributesCache
-  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache
-  type: Property
-  source:
-    remote:
-      path: Runtime/Attributes/EntityAttributes.cs
-      branch: main
-      repo: https://github.com/Cis8/SoapRpgFramework
-    id: AttributesCache
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 51
-  assemblies:
-  - com.electricdrill.soap-rpg-framework.Runtime
-  namespace: ElectricDrill.SoapRpgFramework.Attributes
-  summary: >-
-    Provides access to the cache for calculated attribute values.
-
-    Caching can be enabled or disabled with the <xref href="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.useCache" data-throw-if-not-resolved="false"></xref> flag.
-  example: []
-  syntax:
-    content: public Cache<Attribute, long> AttributesCache { get; }
-    parameters: []
-    return:
-      type: ElectricDrill.SoapRpgFramework.Utils.Cache{ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int64}
-    content.vb: Public ReadOnly Property AttributesCache As Cache(Of Attribute, Long)
-  overload: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache*
 - uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.EntityClass
   commentId: P:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.EntityClass
   id: EntityClass
@@ -150,8 +120,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: EntityClass
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 57
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 59
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -184,8 +154,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AvailableAttributePoints
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 76
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 78
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -198,6 +168,103 @@ items:
       type: System.Int32
     content.vb: Public ReadOnly Property AvailableAttributePoints As Integer
   overload: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints*
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.TotalAttributePoints
+  commentId: P:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.TotalAttributePoints
+  id: TotalAttributePoints
+  parent: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes
+  langs:
+  - csharp
+  - vb
+  name: TotalAttributePoints
+  nameWithType: EntityAttributes.TotalAttributePoints
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.TotalAttributePoints
+  type: Property
+  source:
+    remote:
+      path: Runtime/Attributes/EntityAttributes.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: TotalAttributePoints
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 83
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Attributes
+  summary: Gets the total number of attribute points, including both available and spent points.
+  example: []
+  syntax:
+    content: public int TotalAttributePoints { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalAttributePoints As Integer
+  overload: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.TotalAttributePoints*
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetSpentOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
+  commentId: M:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetSpentOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
+  id: GetSpentOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
+  parent: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes
+  langs:
+  - csharp
+  - vb
+  name: GetSpentOn(Attribute)
+  nameWithType: EntityAttributes.GetSpentOn(Attribute)
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetSpentOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Attributes/EntityAttributes.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: GetSpentOn
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 90
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Attributes
+  summary: Gets the number of attribute points spent on a specific attribute.
+  example: []
+  syntax:
+    content: public int GetSpentOn(Attribute attribute)
+    parameters:
+    - id: attribute
+      type: ElectricDrill.SoapRpgFramework.Attributes.Attribute
+      description: The attribute to check.
+    return:
+      type: System.Int32
+      description: The number of points spent on the attribute.
+    content.vb: Public Function GetSpentOn(attribute As Attribute) As Integer
+  overload: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetSpentOn*
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetAllSpentPoints
+  commentId: M:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetAllSpentPoints
+  id: GetAllSpentPoints
+  parent: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes
+  langs:
+  - csharp
+  - vb
+  name: GetAllSpentPoints()
+  nameWithType: EntityAttributes.GetAllSpentPoints()
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetAllSpentPoints()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Attributes/EntityAttributes.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: GetAllSpentPoints
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 99
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Attributes
+  summary: Gets a dictionary containing the number of attribute points spent on each attribute.
+  example: []
+  syntax:
+    content: public Dictionary<Attribute, int> GetAllSpentPoints()
+    return:
+      type: System.Collections.Generic.Dictionary{ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int32}
+      description: A dictionary where keys are attributes and values are the points spent on each attribute.
+    content.vb: Public Function GetAllSpentPoints() As Dictionary(Of Attribute, Integer)
+  overload: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetAllSpentPoints*
 - uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int32)
   commentId: M:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int32)
   id: SpendOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int32)
@@ -215,8 +282,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: SpendOn
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 83
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 109
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -236,6 +303,66 @@ items:
   nameWithType.vb: EntityAttributes.SpendOn(Attribute, Integer)
   fullName.vb: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute, Integer)
   name.vb: SpendOn(Attribute, Integer)
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundAllSpentPoints
+  commentId: M:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundAllSpentPoints
+  id: RefundAllSpentPoints
+  parent: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes
+  langs:
+  - csharp
+  - vb
+  name: RefundAllSpentPoints()
+  nameWithType: EntityAttributes.RefundAllSpentPoints()
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundAllSpentPoints()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Attributes/EntityAttributes.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: RefundAllSpentPoints
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 121
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Attributes
+  summary: Refunds all spent attribute points, making them available to spend again.
+  example: []
+  syntax:
+    content: public void RefundAllSpentPoints()
+    content.vb: Public Sub RefundAllSpentPoints()
+  overload: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundAllSpentPoints*
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundPointsForAttribute(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
+  commentId: M:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundPointsForAttribute(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
+  id: RefundPointsForAttribute(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
+  parent: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes
+  langs:
+  - csharp
+  - vb
+  name: RefundPointsForAttribute(Attribute)
+  nameWithType: EntityAttributes.RefundPointsForAttribute(Attribute)
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundPointsForAttribute(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Attributes/EntityAttributes.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: RefundPointsForAttribute
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 143
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Attributes
+  summary: Refunds all spent attribute points for a specific attribute, making them available to spend again.
+  example: []
+  syntax:
+    content: public void RefundPointsForAttribute(Attribute attribute)
+    parameters:
+    - id: attribute
+      type: ElectricDrill.SoapRpgFramework.Attributes.Attribute
+      description: The attribute to refund points for.
+    content.vb: Public Sub RefundPointsForAttribute(attribute As Attribute)
+  overload: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundPointsForAttribute*
 - uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributeSet
   commentId: P:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributeSet
   id: AttributeSet
@@ -253,8 +380,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AttributeSet
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 97
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 157
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -291,8 +418,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: FlatModifiers
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 124
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 189
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -325,8 +452,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: PercentageModifiers
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 130
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 195
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -359,8 +486,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Get
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 152
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 213
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -379,7 +506,7 @@ items:
       description: The attribute to retrieve.
     return:
       type: System.Int64
-      description: The final value of the attribute.
+      description: The final value of the attribute if the component is enabled (clamped to min/max values); otherwise, 0
     content.vb: Public Function [Get](attribute As Attribute) As Long
   overload: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.Get*
 - uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AddFlatModifier(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int64)
@@ -399,8 +526,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AddFlatModifier
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 183
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 248
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -437,8 +564,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AddPercentageModifier
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 196
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 261
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -472,8 +599,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetBase
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/EntityAttributes.cs
-    startLine: 210
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/EntityAttributes.cs
+    startLine: 275
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Attributes
@@ -490,7 +617,7 @@ items:
       description: The attribute to retrieve the base value for.
     return:
       type: System.Int64
-      description: The base value of the attribute, clamped to its min/max values if necessary.
+      description: The base value of the attribute (clamped to its min/max values) if enabled; otherwise, 0
     content.vb: Public Function GetBase(attribute As Attribute) As Long
   overload: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetBase*
 references:
@@ -623,119 +750,6 @@ references:
   - uid: ElectricDrill.SoapRpgFramework.Events
     name: Events
     href: ElectricDrill.SoapRpgFramework.Events.html
-- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.useCache
-  commentId: F:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.useCache
-  name: useCache
-  nameWithType: EntityAttributes.useCache
-  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.useCache
-- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache*
-  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache
-  href: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AttributesCache
-  name: AttributesCache
-  nameWithType: EntityAttributes.AttributesCache
-  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache
-- uid: ElectricDrill.SoapRpgFramework.Utils.Cache{ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int64}
-  commentId: T:ElectricDrill.SoapRpgFramework.Utils.Cache{ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int64}
-  parent: ElectricDrill.SoapRpgFramework.Utils
-  definition: ElectricDrill.SoapRpgFramework.Utils.Cache`2
-  href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html
-  name: Cache<Attribute, long>
-  nameWithType: Cache<Attribute, long>
-  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<ElectricDrill.SoapRpgFramework.Attributes.Attribute, long>
-  nameWithType.vb: Cache(Of Attribute, Long)
-  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of ElectricDrill.SoapRpgFramework.Attributes.Attribute, Long)
-  name.vb: Cache(Of Attribute, Long)
-  spec.csharp:
-  - uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2
-    name: Cache
-    href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html
-  - name: <
-  - uid: ElectricDrill.SoapRpgFramework.Attributes.Attribute
-    name: Attribute
-    href: ElectricDrill.SoapRpgFramework.Attributes.Attribute.html
-  - name: ','
-  - name: " "
-  - uid: System.Int64
-    name: long
-    isExternal: true
-  - name: '>'
-  spec.vb:
-  - uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2
-    name: Cache
-    href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: ElectricDrill.SoapRpgFramework.Attributes.Attribute
-    name: Attribute
-    href: ElectricDrill.SoapRpgFramework.Attributes.Attribute.html
-  - name: ','
-  - name: " "
-  - uid: System.Int64
-    name: Long
-    isExternal: true
-  - name: )
-- uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2
-  commentId: T:ElectricDrill.SoapRpgFramework.Utils.Cache`2
-  href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html
-  name: Cache<KType, VType>
-  nameWithType: Cache<KType, VType>
-  fullName: ElectricDrill.SoapRpgFramework.Utils.Cache<KType, VType>
-  nameWithType.vb: Cache(Of KType, VType)
-  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.Cache(Of KType, VType)
-  name.vb: Cache(Of KType, VType)
-  spec.csharp:
-  - uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2
-    name: Cache
-    href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html
-  - name: <
-  - name: KType
-  - name: ','
-  - name: " "
-  - name: VType
-  - name: '>'
-  spec.vb:
-  - uid: ElectricDrill.SoapRpgFramework.Utils.Cache`2
-    name: Cache
-    href: ElectricDrill.SoapRpgFramework.Utils.Cache-2.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: KType
-  - name: ','
-  - name: " "
-  - name: VType
-  - name: )
-- uid: ElectricDrill.SoapRpgFramework.Utils
-  commentId: N:ElectricDrill.SoapRpgFramework.Utils
-  href: ElectricDrill.html
-  name: ElectricDrill.SoapRpgFramework.Utils
-  nameWithType: ElectricDrill.SoapRpgFramework.Utils
-  fullName: ElectricDrill.SoapRpgFramework.Utils
-  spec.csharp:
-  - uid: ElectricDrill
-    name: ElectricDrill
-    href: ElectricDrill.html
-  - name: .
-  - uid: ElectricDrill.SoapRpgFramework
-    name: SoapRpgFramework
-    href: ElectricDrill.SoapRpgFramework.html
-  - name: .
-  - uid: ElectricDrill.SoapRpgFramework.Utils
-    name: Utils
-    href: ElectricDrill.SoapRpgFramework.Utils.html
-  spec.vb:
-  - uid: ElectricDrill
-    name: ElectricDrill
-    href: ElectricDrill.html
-  - name: .
-  - uid: ElectricDrill.SoapRpgFramework
-    name: SoapRpgFramework
-    href: ElectricDrill.SoapRpgFramework.html
-  - name: .
-  - uid: ElectricDrill.SoapRpgFramework.Utils
-    name: Utils
-    href: ElectricDrill.SoapRpgFramework.Utils.html
 - uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.useClassBaseAttributes
   commentId: F:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.useClassBaseAttributes
   name: useClassBaseAttributes
@@ -792,12 +806,18 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn*
-  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn
-  href: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_SpendOn_ElectricDrill_SoapRpgFramework_Attributes_Attribute_System_Int32_
-  name: SpendOn
-  nameWithType: EntityAttributes.SpendOn
-  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.TotalAttributePoints*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.TotalAttributePoints
+  href: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_TotalAttributePoints
+  name: TotalAttributePoints
+  nameWithType: EntityAttributes.TotalAttributePoints
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.TotalAttributePoints
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetSpentOn*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetSpentOn
+  href: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_GetSpentOn_ElectricDrill_SoapRpgFramework_Attributes_Attribute_
+  name: GetSpentOn
+  nameWithType: EntityAttributes.GetSpentOn
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetSpentOn
 - uid: ElectricDrill.SoapRpgFramework.Attributes.Attribute
   commentId: T:ElectricDrill.SoapRpgFramework.Attributes.Attribute
   parent: ElectricDrill.SoapRpgFramework.Attributes
@@ -805,6 +825,139 @@ references:
   name: Attribute
   nameWithType: Attribute
   fullName: ElectricDrill.SoapRpgFramework.Attributes.Attribute
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetAllSpentPoints*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetAllSpentPoints
+  href: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_GetAllSpentPoints
+  name: GetAllSpentPoints
+  nameWithType: EntityAttributes.GetAllSpentPoints
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetAllSpentPoints
+- uid: System.Collections.Generic.Dictionary{ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int32}
+  commentId: T:System.Collections.Generic.Dictionary{ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: ElectricDrill.SoapRpgFramework.Attributes.Attribute.html
+  name: Dictionary<Attribute, int>
+  nameWithType: Dictionary<Attribute, int>
+  fullName: System.Collections.Generic.Dictionary<ElectricDrill.SoapRpgFramework.Attributes.Attribute, int>
+  nameWithType.vb: Dictionary(Of Attribute, Integer)
+  fullName.vb: System.Collections.Generic.Dictionary(Of ElectricDrill.SoapRpgFramework.Attributes.Attribute, Integer)
+  name.vb: Dictionary(Of Attribute, Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+  - name: <
+  - uid: ElectricDrill.SoapRpgFramework.Attributes.Attribute
+    name: Attribute
+    href: ElectricDrill.SoapRpgFramework.Attributes.Attribute.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ElectricDrill.SoapRpgFramework.Attributes.Attribute
+    name: Attribute
+    href: ElectricDrill.SoapRpgFramework.Attributes.Attribute.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn
+  href: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_SpendOn_ElectricDrill_SoapRpgFramework_Attributes_Attribute_System_Int32_
+  name: SpendOn
+  nameWithType: EntityAttributes.SpendOn
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundAllSpentPoints*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundAllSpentPoints
+  href: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_RefundAllSpentPoints
+  name: RefundAllSpentPoints
+  nameWithType: EntityAttributes.RefundAllSpentPoints
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundAllSpentPoints
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundPointsForAttribute*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundPointsForAttribute
+  href: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_RefundPointsForAttribute_ElectricDrill_SoapRpgFramework_Attributes_Attribute_
+  name: RefundPointsForAttribute
+  nameWithType: EntityAttributes.RefundPointsForAttribute
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundPointsForAttribute
 - uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributeSet
   commentId: P:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributeSet
   href: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AttributeSet
@@ -889,6 +1042,36 @@ references:
   name: Percentage
   nameWithType: Percentage
   fullName: ElectricDrill.SoapRpgFramework.Utils.Percentage
+- uid: ElectricDrill.SoapRpgFramework.Utils
+  commentId: N:ElectricDrill.SoapRpgFramework.Utils
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Utils
+  nameWithType: ElectricDrill.SoapRpgFramework.Utils
+  fullName: ElectricDrill.SoapRpgFramework.Utils
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Utils
+    name: Utils
+    href: ElectricDrill.SoapRpgFramework.Utils.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Utils
+    name: Utils
+    href: ElectricDrill.SoapRpgFramework.Utils.html
 - uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetBase*
   commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetBase
   href: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_GetBase_ElectricDrill_SoapRpgFramework_Attributes_Attribute_

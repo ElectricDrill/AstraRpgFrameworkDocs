@@ -20,7 +20,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GrowthFormula
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/GrowthFormula.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/GrowthFormula.cs
     startLine: 11
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -51,7 +51,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GrowthFoValues
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/GrowthFormula.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/GrowthFormula.cs
     startLine: 24
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -87,12 +87,12 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetGrowthValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/GrowthFormula.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/GrowthFormula.cs
     startLine: 31
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework
-  summary: Gets the growth value for a specific level.
+  summary: Gets the growth value for a specific level. Levels start from 1.
   example: []
   syntax:
     content: public long GetGrowthValue(int level)

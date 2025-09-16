@@ -21,7 +21,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: StatToStatModifier
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatToStatModifier.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatToStatModifier.cs
     startLine: 9
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -55,7 +55,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: SourceStat
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatToStatModifier.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatToStatModifier.cs
     startLine: 18
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -86,7 +86,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: TargetStat
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatToStatModifier.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatToStatModifier.cs
     startLine: 23
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -117,7 +117,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Percentage
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatToStatModifier.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatToStatModifier.cs
     startLine: 28
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

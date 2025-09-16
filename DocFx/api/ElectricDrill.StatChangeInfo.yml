@@ -23,7 +23,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: StatChangeInfo
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatChangeInfo.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatChangeInfo.cs
     startLine: 7
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -53,7 +53,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: EntityStats
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatChangeInfo.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatChangeInfo.cs
     startLine: 12
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -82,7 +82,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Stat
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatChangeInfo.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatChangeInfo.cs
     startLine: 17
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -111,7 +111,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: OldValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatChangeInfo.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatChangeInfo.cs
     startLine: 22
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -140,7 +140,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: NewValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatChangeInfo.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatChangeInfo.cs
     startLine: 27
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -169,7 +169,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: .ctor
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatChangeInfo.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatChangeInfo.cs
     startLine: 36
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

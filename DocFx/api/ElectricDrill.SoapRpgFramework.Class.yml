@@ -26,7 +26,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Class
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Class.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Class.cs
     startLine: 18
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -62,7 +62,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: _maxHpGrowthFormula
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Class.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Class.cs
     startLine: 24
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -104,7 +104,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: _attributeSet
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Class.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Class.cs
     startLine: 28
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -143,7 +143,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: _statSet
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Class.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Class.cs
     startLine: 32
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -182,7 +182,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AttributeSet
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Class.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Class.cs
     startLine: 43
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -213,7 +213,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: StatSet
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Class.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Class.cs
     startLine: 47
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -246,7 +246,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetMaxHpAt
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Class.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Class.cs
     startLine: 54
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -284,7 +284,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetAttributeAt
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Class.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Class.cs
     startLine: 65
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -325,7 +325,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetStatAt
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Class.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Class.cs
     startLine: 77
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

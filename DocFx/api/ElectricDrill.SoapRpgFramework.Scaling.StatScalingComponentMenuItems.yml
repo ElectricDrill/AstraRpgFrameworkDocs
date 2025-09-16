@@ -19,8 +19,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: StatScalingComponentMenuItems
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs
-    startLine: 55
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs
+    startLine: 67
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -48,8 +48,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CreateStatScalingComponent
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs
-    startLine: 60
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs
+    startLine: 72
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling

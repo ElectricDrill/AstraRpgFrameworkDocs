@@ -18,7 +18,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: IntGameEvent
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/GeneratedEvents/GeneralPurposeEventsGenerator/GameEvents/1/IntGameEvent.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Events/GeneratedEvents/GeneralPurposeEventsGenerator/GameEvents/1/IntGameEvent.cs
     startLine: 8
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

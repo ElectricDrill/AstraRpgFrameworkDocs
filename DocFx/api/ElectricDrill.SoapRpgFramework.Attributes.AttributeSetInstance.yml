@@ -29,7 +29,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AttributeSetInstance
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeSetInstance.cs
     startLine: 10
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -63,7 +63,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: .ctor
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeSetInstance.cs
     startLine: 21
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -101,7 +101,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Attributes
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeSetInstance.cs
     startLine: 30
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -132,7 +132,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AddValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeSetInstance.cs
     startLine: 37
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -170,7 +170,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Get
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeSetInstance.cs
     startLine: 47
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -205,7 +205,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: this[]
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeSetInstance.cs
     startLine: 56
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -243,7 +243,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Clone
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeSetInstance.cs
     startLine: 65
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -274,7 +274,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Contains
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeSetInstance.cs
     startLine: 78
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -311,7 +311,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetAsPercentage
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeSetInstance.cs
     startLine: 87
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -346,7 +346,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetEnumerator
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeSetInstance.cs
     startLine: 95
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -377,7 +377,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Addition
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeSetInstance.cs
     startLine: 109
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -418,7 +418,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Explicit
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/AttributeSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/AttributeSetInstance.cs
     startLine: 123
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

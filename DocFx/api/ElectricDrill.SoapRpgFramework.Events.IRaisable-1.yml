@@ -19,7 +19,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: IRaisable
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/IRaisable.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Events/IRaisable.cs
     startLine: 7
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -55,7 +55,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Raise
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/IRaisable.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Events/IRaisable.cs
     startLine: 13
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

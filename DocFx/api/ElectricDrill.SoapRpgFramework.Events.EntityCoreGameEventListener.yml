@@ -18,7 +18,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: EntityCoreGameEventListener
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/GeneratedEvents/GeneralPurposeEventsGenerator/GameEventListeners/1/EntityCoreGameEventListener.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Events/GeneratedEvents/GeneralPurposeEventsGenerator/GameEventListeners/1/EntityCoreGameEventListener.cs
     startLine: 6
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

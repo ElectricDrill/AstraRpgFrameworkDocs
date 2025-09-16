@@ -25,7 +25,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: EntityCore
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityCore.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/EntityCore.cs
     startLine: 13
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -76,7 +76,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Level
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityCore.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/EntityCore.cs
     startLine: 28
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -109,7 +109,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Stats
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityCore.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/EntityCore.cs
     startLine: 33
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -140,7 +140,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Attributes
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityCore.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/EntityCore.cs
     startLine: 38
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -173,7 +173,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Name
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityCore.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/EntityCore.cs
     startLine: 43
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -204,7 +204,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Awake
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityCore.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/EntityCore.cs
     startLine: 50
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -230,7 +230,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Start
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityCore.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/EntityCore.cs
     startLine: 53
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -256,7 +256,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Update
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/EntityCore.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/EntityCore.cs
     startLine: 68
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

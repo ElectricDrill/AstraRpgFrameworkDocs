@@ -23,7 +23,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: SerKeyValPair
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/SerKeyValPair.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/SerKeyValPair.cs
     startLine: 10
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -71,7 +71,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Key
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/SerKeyValPair.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/SerKeyValPair.cs
     startLine: 16
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -102,7 +102,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Value
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/SerKeyValPair.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/SerKeyValPair.cs
     startLine: 21
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -133,7 +133,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: .ctor
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/SerKeyValPair.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/SerKeyValPair.cs
     startLine: 28
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -171,7 +171,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/SerKeyValPair.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/SerKeyValPair.cs
     startLine: 38
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -209,7 +209,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/SerKeyValPair.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/SerKeyValPair.cs
     startLine: 47
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

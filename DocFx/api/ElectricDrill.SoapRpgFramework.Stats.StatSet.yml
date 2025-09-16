@@ -6,8 +6,10 @@ items:
   parent: ElectricDrill.SoapRpgFramework.Stats
   children:
   - ElectricDrill.SoapRpgFramework.Stats.StatSet.Contains(ElectricDrill.SoapRpgFramework.Stats.Stat)
+  - ElectricDrill.SoapRpgFramework.Stats.StatSet.Contains(ElectricDrill.SoapRpgFramework.Stats.StatSet)
   - ElectricDrill.SoapRpgFramework.Stats.StatSet.Get(ElectricDrill.SoapRpgFramework.Stats.Stat)
   - ElectricDrill.SoapRpgFramework.Stats.StatSet.Stats
+  - ElectricDrill.SoapRpgFramework.Stats.StatSet._includedStatSets
   langs:
   - csharp
   - vb
@@ -21,7 +23,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: StatSet
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatSet.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatSet.cs
     startLine: 12
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -40,6 +42,43 @@ items:
   - UnityEngine.ScriptableObject
   implements:
   - ElectricDrill.SoapRpgFramework.Stats.IStatContainer
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatSet._includedStatSets
+  commentId: F:ElectricDrill.SoapRpgFramework.Stats.StatSet._includedStatSets
+  id: _includedStatSets
+  parent: ElectricDrill.SoapRpgFramework.Stats.StatSet
+  langs:
+  - csharp
+  - vb
+  name: _includedStatSets
+  nameWithType: StatSet._includedStatSets
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatSet._includedStatSets
+  type: Field
+  source:
+    remote:
+      path: Runtime/Stats/StatSet.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: _includedStatSets
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatSet.cs
+    startLine: 16
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  syntax:
+    content: >-
+      [SerializeField]
+
+      public SerializableHashSet<StatSet> _includedStatSets
+    return:
+      type: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet{ElectricDrill.SoapRpgFramework.Stats.StatSet}
+    content.vb: >-
+      <SerializeField>
+
+      Public _includedStatSets As SerializableHashSet(Of StatSet)
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
 - uid: ElectricDrill.SoapRpgFramework.Stats.StatSet.Stats
   commentId: P:ElectricDrill.SoapRpgFramework.Stats.StatSet.Stats
   id: Stats
@@ -57,12 +96,15 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Stats
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatSet.cs
-    startLine: 19
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatSet.cs
+    startLine: 22
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
-  summary: Gets a read-only list of all stats in this set.
+  summary: >-
+    Gets a read-only list of all stats in this set, including stats from included StatSets.
+
+    Duplicates are automatically removed.
   example: []
   syntax:
     content: public IReadOnlyList<Stat> Stats { get; }
@@ -88,12 +130,15 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Get
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatSet.cs
-    startLine: 26
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatSet.cs
+    startLine: 53
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
-  summary: Gets the stat from this set that matches the specified stat.
+  summary: >-
+    Gets the stat from this set that matches the specified stat.
+
+    Also looks in included StatSets.
   example: []
   syntax:
     content: public Stat Get(Stat stat)
@@ -123,12 +168,15 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Contains
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatSet.cs
-    startLine: 35
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatSet.cs
+    startLine: 63
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Stats
-  summary: Determines whether this stat set contains the specified stat.
+  summary: >-
+    Determines whether this stat set contains the specified stat.
+
+    Also checks in included StatSets.
   example: []
   syntax:
     content: public virtual bool Contains(Stat stat)
@@ -143,6 +191,41 @@ items:
   overload: ElectricDrill.SoapRpgFramework.Stats.StatSet.Contains*
   implements:
   - ElectricDrill.SoapRpgFramework.Stats.IStatContainer.Contains(ElectricDrill.SoapRpgFramework.Stats.Stat)
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatSet.Contains(ElectricDrill.SoapRpgFramework.Stats.StatSet)
+  commentId: M:ElectricDrill.SoapRpgFramework.Stats.StatSet.Contains(ElectricDrill.SoapRpgFramework.Stats.StatSet)
+  id: Contains(ElectricDrill.SoapRpgFramework.Stats.StatSet)
+  parent: ElectricDrill.SoapRpgFramework.Stats.StatSet
+  langs:
+  - csharp
+  - vb
+  name: Contains(StatSet)
+  nameWithType: StatSet.Contains(StatSet)
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatSet.Contains(ElectricDrill.SoapRpgFramework.Stats.StatSet)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Stats/StatSet.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: Contains
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatSet.cs
+    startLine: 72
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Stats
+  summary: Determines whether this stat set contains another stat set. Either directly or indirectly.
+  example: []
+  syntax:
+    content: public virtual bool Contains(StatSet statSet)
+    parameters:
+    - id: statSet
+      type: ElectricDrill.SoapRpgFramework.Stats.StatSet
+      description: The stat set to check for.
+    return:
+      type: System.Boolean
+      description: true if the <code class="paramref">statSet</code> is contained in this stat set; otherwise, false.
+    content.vb: Public Overridable Function Contains(statSet As StatSet) As Boolean
+  overload: ElectricDrill.SoapRpgFramework.Stats.StatSet.Contains*
 references:
 - uid: ElectricDrill.SoapRpgFramework.Stats
   commentId: N:ElectricDrill.SoapRpgFramework.Stats
@@ -218,6 +301,92 @@ references:
   name: UnityEngine
   nameWithType: UnityEngine
   fullName: UnityEngine
+- uid: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet{ElectricDrill.SoapRpgFramework.Stats.StatSet}
+  commentId: T:ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet{ElectricDrill.SoapRpgFramework.Stats.StatSet}
+  parent: ElectricDrill.SoapRpgFramework.Utils
+  definition: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet`1
+  href: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet-1.html
+  name: SerializableHashSet<StatSet>
+  nameWithType: SerializableHashSet<StatSet>
+  fullName: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet<ElectricDrill.SoapRpgFramework.Stats.StatSet>
+  nameWithType.vb: SerializableHashSet(Of StatSet)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet(Of ElectricDrill.SoapRpgFramework.Stats.StatSet)
+  name.vb: SerializableHashSet(Of StatSet)
+  spec.csharp:
+  - uid: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet`1
+    name: SerializableHashSet
+    href: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet-1.html
+  - name: <
+  - uid: ElectricDrill.SoapRpgFramework.Stats.StatSet
+    name: StatSet
+    href: ElectricDrill.SoapRpgFramework.Stats.StatSet.html
+  - name: '>'
+  spec.vb:
+  - uid: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet`1
+    name: SerializableHashSet
+    href: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ElectricDrill.SoapRpgFramework.Stats.StatSet
+    name: StatSet
+    href: ElectricDrill.SoapRpgFramework.Stats.StatSet.html
+  - name: )
+- uid: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet`1
+  commentId: T:ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet`1
+  href: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet-1.html
+  name: SerializableHashSet<T>
+  nameWithType: SerializableHashSet<T>
+  fullName: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet<T>
+  nameWithType.vb: SerializableHashSet(Of T)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet(Of T)
+  name.vb: SerializableHashSet(Of T)
+  spec.csharp:
+  - uid: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet`1
+    name: SerializableHashSet
+    href: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet`1
+    name: SerializableHashSet
+    href: ElectricDrill.SoapRpgFramework.Utils.SerializableHashSet-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ElectricDrill.SoapRpgFramework.Utils
+  commentId: N:ElectricDrill.SoapRpgFramework.Utils
+  href: ElectricDrill.html
+  name: ElectricDrill.SoapRpgFramework.Utils
+  nameWithType: ElectricDrill.SoapRpgFramework.Utils
+  fullName: ElectricDrill.SoapRpgFramework.Utils
+  spec.csharp:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Utils
+    name: Utils
+    href: ElectricDrill.SoapRpgFramework.Utils.html
+  spec.vb:
+  - uid: ElectricDrill
+    name: ElectricDrill
+    href: ElectricDrill.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework
+    name: SoapRpgFramework
+    href: ElectricDrill.SoapRpgFramework.html
+  - name: .
+  - uid: ElectricDrill.SoapRpgFramework.Utils
+    name: Utils
+    href: ElectricDrill.SoapRpgFramework.Utils.html
 - uid: ElectricDrill.SoapRpgFramework.Stats.StatSet.Stats*
   commentId: Overload:ElectricDrill.SoapRpgFramework.Stats.StatSet.Stats
   href: ElectricDrill.SoapRpgFramework.Stats.StatSet.html#ElectricDrill_SoapRpgFramework_Stats_StatSet_Stats
@@ -371,3 +540,10 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatSet
+  commentId: T:ElectricDrill.SoapRpgFramework.Stats.StatSet
+  parent: ElectricDrill.SoapRpgFramework.Stats
+  href: ElectricDrill.SoapRpgFramework.Stats.StatSet.html
+  name: StatSet
+  nameWithType: StatSet
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatSet

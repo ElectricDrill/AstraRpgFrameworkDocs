@@ -10,6 +10,7 @@ items:
   - ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntityValue(ElectricDrill.SoapRpgFramework.EntityCore,`1)
   - ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetSetItems
   - ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.OnValidate
+  - ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
   - ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2._set
   langs:
   - csharp
@@ -20,11 +21,11 @@ items:
   type: Class
   source:
     remote:
-      path: Runtime/Utils/SoSetScalingComponentBase.cs
+      path: Runtime/Scaling/SoSetScalingComponentBase.cs
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: SoSetScalingComponentBase
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SoSetScalingComponentBase.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/SoSetScalingComponentBase.cs
     startLine: 15
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -63,11 +64,11 @@ items:
   type: Field
   source:
     remote:
-      path: Runtime/Utils/SoSetScalingComponentBase.cs
+      path: Runtime/Scaling/SoSetScalingComponentBase.cs
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: _set
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SoSetScalingComponentBase.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/SoSetScalingComponentBase.cs
     startLine: 17
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -102,11 +103,11 @@ items:
   type: Method
   source:
     remote:
-      path: Runtime/Utils/SoSetScalingComponentBase.cs
+      path: Runtime/Scaling/SoSetScalingComponentBase.cs
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CalculateValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SoSetScalingComponentBase.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/SoSetScalingComponentBase.cs
     startLine: 26
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -127,6 +128,43 @@ items:
   overload: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.CalculateValue*
   nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType).CalculateValue(EntityCore)
   fullName.vb: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType).CalculateValue(ElectricDrill.SoapRpgFramework.EntityCore)
+- uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  commentId: M:ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  id: ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  parent: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2
+  langs:
+  - csharp
+  - vb
+  name: ValidateEntitySet(EntityCore)
+  nameWithType: SoSetScalingComponentBase<SetType, KeyType>.ValidateEntitySet(EntityCore)
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase<SetType, KeyType>.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Scaling/SoSetScalingComponentBase.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: ValidateEntitySet
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/SoSetScalingComponentBase.cs
+    startLine: 40
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Scaling
+  summary: >-
+    Validates that the entity's set is compatible with this scaling component's set.
+
+    By default, requires exact equality. Derived classes can override for different validation logic.
+  example: []
+  syntax:
+    content: protected virtual void ValidateEntitySet(EntityCore entity)
+    parameters:
+    - id: entity
+      type: ElectricDrill.SoapRpgFramework.EntityCore
+      description: The entity to validate
+    content.vb: Protected Overridable Sub ValidateEntitySet(entity As EntityCore)
+  overload: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.ValidateEntitySet*
+  nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType).ValidateEntitySet(EntityCore)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType).ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
 - uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
   commentId: M:ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
   id: GetEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
@@ -140,12 +178,12 @@ items:
   type: Method
   source:
     remote:
-      path: Runtime/Utils/SoSetScalingComponentBase.cs
+      path: Runtime/Scaling/SoSetScalingComponentBase.cs
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetEntitySet
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SoSetScalingComponentBase.cs
-    startLine: 41
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/SoSetScalingComponentBase.cs
+    startLine: 50
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -180,12 +218,12 @@ items:
   type: Method
   source:
     remote:
-      path: Runtime/Utils/SoSetScalingComponentBase.cs
+      path: Runtime/Scaling/SoSetScalingComponentBase.cs
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetEntityValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SoSetScalingComponentBase.cs
-    startLine: 50
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/SoSetScalingComponentBase.cs
+    startLine: 59
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -223,12 +261,12 @@ items:
   type: Method
   source:
     remote:
-      path: Runtime/Utils/SoSetScalingComponentBase.cs
+      path: Runtime/Scaling/SoSetScalingComponentBase.cs
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: OnValidate
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SoSetScalingComponentBase.cs
-    startLine: 56
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/SoSetScalingComponentBase.cs
+    startLine: 65
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -256,12 +294,12 @@ items:
   type: Method
   source:
     remote:
-      path: Runtime/Utils/SoSetScalingComponentBase.cs
+      path: Runtime/Scaling/SoSetScalingComponentBase.cs
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetSetItems
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SoSetScalingComponentBase.cs
-    startLine: 81
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/SoSetScalingComponentBase.cs
+    startLine: 90
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -436,6 +474,14 @@ references:
   - uid: ElectricDrill.SoapRpgFramework
     name: SoapRpgFramework
     href: ElectricDrill.SoapRpgFramework.html
+- uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.ValidateEntitySet*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.ValidateEntitySet
+  href: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_ValidateEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_
+  name: ValidateEntitySet
+  nameWithType: SoSetScalingComponentBase<SetType, KeyType>.ValidateEntitySet
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase<SetType, KeyType>.ValidateEntitySet
+  nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType).ValidateEntitySet
+  fullName.vb: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType).ValidateEntitySet
 - uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntitySet*
   commentId: Overload:ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntitySet
   href: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_

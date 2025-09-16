@@ -22,7 +22,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: BoundedValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/BoundedValue.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/BoundedValue.cs
     startLine: 9
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -59,7 +59,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: HasMaxValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/BoundedValue.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/BoundedValue.cs
     startLine: 19
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -90,7 +90,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: MaxValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/BoundedValue.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/BoundedValue.cs
     startLine: 24
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -121,7 +121,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: HasMinValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/BoundedValue.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/BoundedValue.cs
     startLine: 29
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -152,7 +152,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: MinValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/BoundedValue.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/BoundedValue.cs
     startLine: 34
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

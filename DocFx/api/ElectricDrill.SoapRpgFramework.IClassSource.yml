@@ -19,7 +19,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: IClassSource
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/IClassSource.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/IClassSource.cs
     startLine: 7
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -51,7 +51,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Class
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/IClassSource.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/IClassSource.cs
     startLine: 12
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

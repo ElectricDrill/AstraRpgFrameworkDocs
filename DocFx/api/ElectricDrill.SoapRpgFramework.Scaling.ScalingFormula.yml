@@ -9,6 +9,8 @@ items:
   - ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.CalculateValue(ElectricDrill.SoapRpgFramework.EntityCore,ElectricDrill.SoapRpgFramework.EntityCore)
   - ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.CalculateValue(ElectricDrill.SoapRpgFramework.EntityCore,ElectricDrill.SoapRpgFramework.EntityCore,System.Int32)
   - ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.CalculateValue(ElectricDrill.SoapRpgFramework.EntityCore,System.Int32)
+  - ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue
+  - ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue(System.Int32)
   - ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.ResetTmpScalings
   - ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.TmpSelfScalingComponents
   - ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.TmpTargetScalingComponents
@@ -25,8 +27,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ScalingFormula
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingFormula.cs
-    startLine: 16
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingFormula.cs
+    startLine: 17
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -69,8 +71,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: TmpSelfScalingComponents
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingFormula.cs
-    startLine: 33
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingFormula.cs
+    startLine: 34
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -103,8 +105,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: TmpTargetScalingComponents
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingFormula.cs
-    startLine: 38
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingFormula.cs
+    startLine: 39
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -120,6 +122,96 @@ items:
       type: System.Collections.Generic.List{ElectricDrill.SoapRpgFramework.Scaling.ScalingComponent}
     content.vb: Public ReadOnly Property TmpTargetScalingComponents As List(Of ScalingComponent)
   overload: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.TmpTargetScalingComponents*
+- uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue(System.Int32)
+  commentId: M:ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue(System.Int32)
+  id: GetBaseValue(System.Int32)
+  parent: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula
+  langs:
+  - csharp
+  - vb
+  name: GetBaseValue(int)
+  nameWithType: ScalingFormula.GetBaseValue(int)
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue(int)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Scaling/ScalingFormula.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: GetBaseValue
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingFormula.cs
+    startLine: 53
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Scaling
+  summary: >-
+    Returns the base value of the formula for the specified level.
+
+    If <code>useScalingBaseValue</code> is true, the value is calculated using the associated growth formula.
+
+    If <code>useScalingBaseValue</code> is false and a level is provided, an exception is thrown.
+  example: []
+  syntax:
+    content: public long GetBaseValue(int level)
+    parameters:
+    - id: level
+      type: System.Int32
+      description: The level to use for calculating the base value.
+    return:
+      type: System.Int64
+      description: The calculated base value.
+    content.vb: Public Function GetBaseValue(level As Integer) As Long
+  overload: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue*
+  exceptions:
+  - type: UnityEngine.Assertions.AssertionException
+    commentId: T:UnityEngine.Assertions.AssertionException
+    description: >-
+      Thrown if the growth formula is not set, if the level is less than or equal to zero,
+
+      if the level exceeds the maximum allowed by the growth formula,
+
+      or if <code>useScalingBaseValue</code> is false and a level is provided.
+  nameWithType.vb: ScalingFormula.GetBaseValue(Integer)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue(Integer)
+  name.vb: GetBaseValue(Integer)
+- uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue
+  commentId: M:ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue
+  id: GetBaseValue
+  parent: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula
+  langs:
+  - csharp
+  - vb
+  name: GetBaseValue()
+  nameWithType: ScalingFormula.GetBaseValue()
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue()
+  type: Method
+  source:
+    remote:
+      path: Runtime/Scaling/ScalingFormula.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: GetBaseValue
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingFormula.cs
+    startLine: 75
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Scaling
+  summary: >-
+    Returns the fixed base value of the formula.
+
+    If <code>useScalingBaseValue</code> is true, an exception is thrown because a level is required.
+  example: []
+  syntax:
+    content: public long GetBaseValue()
+    return:
+      type: System.Int64
+      description: The fixed base value.
+    content.vb: Public Function GetBaseValue() As Long
+  overload: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue*
+  exceptions:
+  - type: UnityEngine.Assertions.AssertionException
+    commentId: T:UnityEngine.Assertions.AssertionException
+    description: Thrown if <code>useScalingBaseValue</code> is true, since a level must be specified in that case.
 - uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.CalculateValue(ElectricDrill.SoapRpgFramework.EntityCore)
   commentId: M:ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.CalculateValue(ElectricDrill.SoapRpgFramework.EntityCore)
   id: CalculateValue(ElectricDrill.SoapRpgFramework.EntityCore)
@@ -137,8 +229,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CalculateValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingFormula.cs
-    startLine: 46
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingFormula.cs
+    startLine: 91
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -175,8 +267,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CalculateValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingFormula.cs
-    startLine: 59
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingFormula.cs
+    startLine: 104
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -219,8 +311,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CalculateValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingFormula.cs
-    startLine: 72
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingFormula.cs
+    startLine: 117
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -257,8 +349,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CalculateValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingFormula.cs
-    startLine: 86
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingFormula.cs
+    startLine: 131
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -304,8 +396,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ResetTmpScalings
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingFormula.cs
-    startLine: 96
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingFormula.cs
+    startLine: 141
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -488,6 +580,38 @@ references:
   name: TmpTargetScalingComponents
   nameWithType: ScalingFormula.TmpTargetScalingComponents
   fullName: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.TmpTargetScalingComponents
+- uid: UnityEngine.Assertions.AssertionException
+  commentId: T:UnityEngine.Assertions.AssertionException
+  isExternal: true
+  name: AssertionException
+  nameWithType: AssertionException
+  fullName: UnityEngine.Assertions.AssertionException
+- uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue
+  href: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.html#ElectricDrill_SoapRpgFramework_Scaling_ScalingFormula_GetBaseValue_System_Int32_
+  name: GetBaseValue
+  nameWithType: ScalingFormula.GetBaseValue
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
 - uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.CalculateValue*
   commentId: Overload:ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.CalculateValue
   href: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.html#ElectricDrill_SoapRpgFramework_Scaling_ScalingFormula_CalculateValue_ElectricDrill_SoapRpgFramework_EntityCore_
@@ -501,16 +625,6 @@ references:
   name: EntityCore
   nameWithType: EntityCore
   fullName: ElectricDrill.SoapRpgFramework.EntityCore
-- uid: System.Int64
-  commentId: T:System.Int64
-  parent: System
-  isExternal: true
-  name: long
-  nameWithType: long
-  fullName: long
-  nameWithType.vb: Long
-  fullName.vb: Long
-  name.vb: Long
 - uid: ElectricDrill.SoapRpgFramework
   commentId: N:ElectricDrill.SoapRpgFramework
   href: ElectricDrill.html
@@ -533,16 +647,6 @@ references:
   - uid: ElectricDrill.SoapRpgFramework
     name: SoapRpgFramework
     href: ElectricDrill.SoapRpgFramework.html
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
 - uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.ResetTmpScalings*
   commentId: Overload:ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.ResetTmpScalings
   href: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.html#ElectricDrill_SoapRpgFramework_Scaling_ScalingFormula_ResetTmpScalings

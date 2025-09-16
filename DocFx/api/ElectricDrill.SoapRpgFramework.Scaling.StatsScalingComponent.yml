@@ -8,6 +8,7 @@ items:
   - ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.GetEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
   - ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.GetEntityValue(ElectricDrill.SoapRpgFramework.EntityCore,ElectricDrill.SoapRpgFramework.Stats.Stat)
   - ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.GetSetItems
+  - ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
   langs:
   - csharp
   - vb
@@ -21,8 +22,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: StatsScalingComponent
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs
-    startLine: 11
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs
+    startLine: 12
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -40,6 +41,7 @@ items:
   inheritedMembers:
   - ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase{ElectricDrill.SoapRpgFramework.Stats.StatSet,ElectricDrill.SoapRpgFramework.Stats.Stat}._set
   - ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase{ElectricDrill.SoapRpgFramework.Stats.StatSet,ElectricDrill.SoapRpgFramework.Stats.Stat}.CalculateValue(ElectricDrill.SoapRpgFramework.EntityCore)
+  - ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase{ElectricDrill.SoapRpgFramework.Stats.StatSet,ElectricDrill.SoapRpgFramework.Stats.Stat}.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
   - ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase{ElectricDrill.SoapRpgFramework.Stats.StatSet,ElectricDrill.SoapRpgFramework.Stats.Stat}.GetEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
   - ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase{ElectricDrill.SoapRpgFramework.Stats.StatSet,ElectricDrill.SoapRpgFramework.Stats.Stat}.GetEntityValue(ElectricDrill.SoapRpgFramework.EntityCore,ElectricDrill.SoapRpgFramework.Stats.Stat)
   - ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase{ElectricDrill.SoapRpgFramework.Stats.StatSet,ElectricDrill.SoapRpgFramework.Stats.Stat}.OnValidate
@@ -62,8 +64,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetEntitySet
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs
-    startLine: 18
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs
+    startLine: 19
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -98,8 +100,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetEntityValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs
-    startLine: 26
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs
+    startLine: 27
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -137,8 +139,8 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetSetItems
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs
-    startLine: 31
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs
+    startLine: 32
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
   namespace: ElectricDrill.SoapRpgFramework.Scaling
@@ -152,6 +154,42 @@ items:
     content.vb: Protected Overrides Function GetSetItems() As IEnumerable(Of Stat)
   overridden: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase{ElectricDrill.SoapRpgFramework.Stats.StatSet,ElectricDrill.SoapRpgFramework.Stats.Stat}.GetSetItems
   overload: ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.GetSetItems*
+- uid: ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  commentId: M:ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  id: ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  parent: ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent
+  langs:
+  - csharp
+  - vb
+  name: ValidateEntitySet(EntityCore)
+  nameWithType: StatsScalingComponent.ValidateEntitySet(EntityCore)
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  type: Method
+  source:
+    remote:
+      path: Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs
+      branch: main
+      repo: https://github.com/Cis8/SoapRpgFramework
+    id: ValidateEntitySet
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingComponents/StatsScalingComponent.cs
+    startLine: 39
+  assemblies:
+  - com.electricdrill.soap-rpg-framework.Runtime
+  namespace: ElectricDrill.SoapRpgFramework.Scaling
+  summary: >-
+    Validates that the entity's StatSet is equal to or contains the scaling component's StatSet.
+
+    This allows entities with StatSets that include the component's StatSet to be compatible.
+  example: []
+  syntax:
+    content: protected override void ValidateEntitySet(EntityCore entity)
+    parameters:
+    - id: entity
+      type: ElectricDrill.SoapRpgFramework.EntityCore
+      description: The entity to validate
+    content.vb: Protected Overrides Sub ValidateEntitySet(entity As EntityCore)
+  overridden: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase{ElectricDrill.SoapRpgFramework.Stats.StatSet,ElectricDrill.SoapRpgFramework.Stats.Stat}.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  overload: ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.ValidateEntitySet*
 references:
 - uid: ElectricDrill.SoapRpgFramework.Scaling
   commentId: N:ElectricDrill.SoapRpgFramework.Scaling
@@ -288,6 +326,34 @@ references:
   - uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase{ElectricDrill.SoapRpgFramework.Stats.StatSet,ElectricDrill.SoapRpgFramework.Stats.Stat}.CalculateValue(ElectricDrill.SoapRpgFramework.EntityCore)
     name: CalculateValue
     href: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_CalculateValue_ElectricDrill_SoapRpgFramework_EntityCore_
+  - name: (
+  - uid: ElectricDrill.SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: ElectricDrill.SoapRpgFramework.EntityCore.html
+  - name: )
+- uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase{ElectricDrill.SoapRpgFramework.Stats.StatSet,ElectricDrill.SoapRpgFramework.Stats.Stat}.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  commentId: M:ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase{ElectricDrill.SoapRpgFramework.Stats.StatSet,ElectricDrill.SoapRpgFramework.Stats.Stat}.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  parent: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase{ElectricDrill.SoapRpgFramework.Stats.StatSet,ElectricDrill.SoapRpgFramework.Stats.Stat}
+  definition: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  href: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_ValidateEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_
+  name: ValidateEntitySet(EntityCore)
+  nameWithType: SoSetScalingComponentBase<StatSet, Stat>.ValidateEntitySet(EntityCore)
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase<ElectricDrill.SoapRpgFramework.Stats.StatSet, ElectricDrill.SoapRpgFramework.Stats.Stat>.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  nameWithType.vb: SoSetScalingComponentBase(Of StatSet, Stat).ValidateEntitySet(EntityCore)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of ElectricDrill.SoapRpgFramework.Stats.StatSet, ElectricDrill.SoapRpgFramework.Stats.Stat).ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  spec.csharp:
+  - uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase{ElectricDrill.SoapRpgFramework.Stats.StatSet,ElectricDrill.SoapRpgFramework.Stats.Stat}.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+    name: ValidateEntitySet
+    href: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_ValidateEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_
+  - name: (
+  - uid: ElectricDrill.SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: ElectricDrill.SoapRpgFramework.EntityCore.html
+  - name: )
+  spec.vb:
+  - uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase{ElectricDrill.SoapRpgFramework.Stats.StatSet,ElectricDrill.SoapRpgFramework.Stats.Stat}.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+    name: ValidateEntitySet
+    href: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_ValidateEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_
   - name: (
   - uid: ElectricDrill.SoapRpgFramework.EntityCore
     name: EntityCore
@@ -501,6 +567,32 @@ references:
   - uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.CalculateValue(ElectricDrill.SoapRpgFramework.EntityCore)
     name: CalculateValue
     href: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_CalculateValue_ElectricDrill_SoapRpgFramework_EntityCore_
+  - name: (
+  - uid: ElectricDrill.SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: ElectricDrill.SoapRpgFramework.EntityCore.html
+  - name: )
+- uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  commentId: M:ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  href: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_ValidateEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_
+  name: ValidateEntitySet(EntityCore)
+  nameWithType: SoSetScalingComponentBase<SetType, KeyType>.ValidateEntitySet(EntityCore)
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase<SetType, KeyType>.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType).ValidateEntitySet(EntityCore)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType).ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  spec.csharp:
+  - uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+    name: ValidateEntitySet
+    href: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_ValidateEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_
+  - name: (
+  - uid: ElectricDrill.SoapRpgFramework.EntityCore
+    name: EntityCore
+    href: ElectricDrill.SoapRpgFramework.EntityCore.html
+  - name: )
+  spec.vb:
+  - uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+    name: ValidateEntitySet
+    href: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_ValidateEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_
   - name: (
   - uid: ElectricDrill.SoapRpgFramework.EntityCore
     name: EntityCore
@@ -798,3 +890,9 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.ValidateEntitySet*
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.ValidateEntitySet
+  href: ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.html#ElectricDrill_SoapRpgFramework_Scaling_StatsScalingComponent_ValidateEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_
+  name: ValidateEntitySet
+  nameWithType: StatsScalingComponent.ValidateEntitySet
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.ValidateEntitySet

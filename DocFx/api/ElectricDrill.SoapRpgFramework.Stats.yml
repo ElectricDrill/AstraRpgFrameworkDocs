@@ -7,6 +7,7 @@ items:
   - ElectricDrill.SoapRpgFramework.Stats.EntityStats
   - ElectricDrill.SoapRpgFramework.Stats.IStatContainer
   - ElectricDrill.SoapRpgFramework.Stats.Stat
+  - ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
   - ElectricDrill.SoapRpgFramework.Stats.StatMenuItems
   - ElectricDrill.SoapRpgFramework.Stats.StatSet
   - ElectricDrill.SoapRpgFramework.Stats.StatSetInstance
@@ -82,6 +83,12 @@ references:
   name: StatMenuItems
   nameWithType: StatMenuItems
   fullName: ElectricDrill.SoapRpgFramework.Stats.StatMenuItems
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
+  commentId: T:ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
+  href: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.html
+  name: StatChangeInfo
+  nameWithType: StatChangeInfo
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
 - uid: ElectricDrill.SoapRpgFramework.Stats
   commentId: N:ElectricDrill.SoapRpgFramework.Stats
   href: ElectricDrill.html

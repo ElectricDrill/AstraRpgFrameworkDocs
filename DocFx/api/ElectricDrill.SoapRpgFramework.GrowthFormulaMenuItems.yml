@@ -19,7 +19,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GrowthFormulaMenuItems
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/GrowthFormula.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/GrowthFormula.cs
     startLine: 166
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -48,7 +48,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CreateGrowthFormula
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/GrowthFormula.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/GrowthFormula.cs
     startLine: 171
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

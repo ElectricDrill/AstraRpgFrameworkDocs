@@ -19,7 +19,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: IAttributeContainer
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/IAttributeContainer.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/IAttributeContainer.cs
     startLine: 6
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -49,7 +49,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Contains
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Attributes/IAttributeContainer.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Attributes/IAttributeContainer.cs
     startLine: 13
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

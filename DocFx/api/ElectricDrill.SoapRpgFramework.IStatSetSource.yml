@@ -19,7 +19,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: IStatSetSource
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/IStatSetSource.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/IStatSetSource.cs
     startLine: 8
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -49,7 +49,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: StatSet
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/IStatSetSource.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/IStatSetSource.cs
     startLine: 13
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

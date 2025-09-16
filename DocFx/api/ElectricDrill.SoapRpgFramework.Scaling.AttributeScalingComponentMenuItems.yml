@@ -19,7 +19,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AttributeScalingComponentMenuItems
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
     startLine: 56
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -48,7 +48,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CreateAttributeScalingComponent
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Scaling/ScalingComponents/AttributesScalingComponent.cs
     startLine: 61
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

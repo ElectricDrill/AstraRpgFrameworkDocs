@@ -30,7 +30,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: SerializableHashSet
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableHashSet.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableHashSet.cs
     startLine: 13
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -78,7 +78,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: OnBeforeSerialize
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableHashSet.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableHashSet.cs
     startLine: 26
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -111,7 +111,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: OnAfterDeserialize
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableHashSet.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableHashSet.cs
     startLine: 50
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -144,7 +144,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetEnumerator
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableHashSet.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableHashSet.cs
     startLine: 84
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -177,7 +177,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Count
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableHashSet.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableHashSet.cs
     startLine: 95
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -210,7 +210,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Add
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableHashSet.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableHashSet.cs
     startLine: 101
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -244,7 +244,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Clear
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableHashSet.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableHashSet.cs
     startLine: 108
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -274,7 +274,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Contains
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableHashSet.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableHashSet.cs
     startLine: 117
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -311,7 +311,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CopyTo
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableHashSet.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableHashSet.cs
     startLine: 126
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -349,7 +349,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Remove
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableHashSet.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableHashSet.cs
     startLine: 135
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -386,7 +386,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: RemoveWhere
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableHashSet.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableHashSet.cs
     startLine: 144
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -424,7 +424,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: IsReadOnly
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableHashSet.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableHashSet.cs
     startLine: 153
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -457,7 +457,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetObjectData
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableHashSet.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableHashSet.cs
     startLine: 160
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

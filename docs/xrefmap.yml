@@ -4812,19 +4812,6 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributeSet
   nameWithType: EntityAttributes.AttributeSet
-- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache
-  name: AttributesCache
-  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AttributesCache
-  commentId: P:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache
-  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache
-  nameWithType: EntityAttributes.AttributesCache
-- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache*
-  name: AttributesCache
-  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AttributesCache_
-  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache
-  isSpec: "True"
-  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributesCache
-  nameWithType: EntityAttributes.AttributesCache
 - uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints
   name: AvailableAttributePoints
   href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AvailableAttributePoints
@@ -4877,6 +4864,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.Get
   nameWithType: EntityAttributes.Get
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetAllSpentPoints
+  name: GetAllSpentPoints()
+  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_GetAllSpentPoints
+  commentId: M:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetAllSpentPoints
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetAllSpentPoints()
+  nameWithType: EntityAttributes.GetAllSpentPoints()
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetAllSpentPoints*
+  name: GetAllSpentPoints
+  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_GetAllSpentPoints_
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetAllSpentPoints
+  isSpec: "True"
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetAllSpentPoints
+  nameWithType: EntityAttributes.GetAllSpentPoints
 - uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetBase(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
   name: GetBase(Attribute)
   href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_GetBase_ElectricDrill_SoapRpgFramework_Attributes_Attribute_
@@ -4890,6 +4890,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetBase
   nameWithType: EntityAttributes.GetBase
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetSpentOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
+  name: GetSpentOn(Attribute)
+  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_GetSpentOn_ElectricDrill_SoapRpgFramework_Attributes_Attribute_
+  commentId: M:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetSpentOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetSpentOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
+  nameWithType: EntityAttributes.GetSpentOn(Attribute)
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetSpentOn*
+  name: GetSpentOn
+  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_GetSpentOn_
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetSpentOn
+  isSpec: "True"
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetSpentOn
+  nameWithType: EntityAttributes.GetSpentOn
 - uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.OnAttributeChanged
   name: OnAttributeChanged
   href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_OnAttributeChanged
@@ -4916,6 +4929,32 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.PercentageModifiers
   nameWithType: EntityAttributes.PercentageModifiers
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundAllSpentPoints
+  name: RefundAllSpentPoints()
+  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_RefundAllSpentPoints
+  commentId: M:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundAllSpentPoints
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundAllSpentPoints()
+  nameWithType: EntityAttributes.RefundAllSpentPoints()
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundAllSpentPoints*
+  name: RefundAllSpentPoints
+  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_RefundAllSpentPoints_
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundAllSpentPoints
+  isSpec: "True"
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundAllSpentPoints
+  nameWithType: EntityAttributes.RefundAllSpentPoints
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundPointsForAttribute(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
+  name: RefundPointsForAttribute(Attribute)
+  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_RefundPointsForAttribute_ElectricDrill_SoapRpgFramework_Attributes_Attribute_
+  commentId: M:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundPointsForAttribute(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundPointsForAttribute(ElectricDrill.SoapRpgFramework.Attributes.Attribute)
+  nameWithType: EntityAttributes.RefundPointsForAttribute(Attribute)
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundPointsForAttribute*
+  name: RefundPointsForAttribute
+  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_RefundPointsForAttribute_
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundPointsForAttribute
+  isSpec: "True"
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundPointsForAttribute
+  nameWithType: EntityAttributes.RefundPointsForAttribute
 - uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int32)
   name: SpendOn(Attribute, int)
   href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_SpendOn_ElectricDrill_SoapRpgFramework_Attributes_Attribute_System_Int32_
@@ -4932,6 +4971,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn
   nameWithType: EntityAttributes.SpendOn
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.TotalAttributePoints
+  name: TotalAttributePoints
+  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_TotalAttributePoints
+  commentId: P:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.TotalAttributePoints
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.TotalAttributePoints
+  nameWithType: EntityAttributes.TotalAttributePoints
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.TotalAttributePoints*
+  name: TotalAttributePoints
+  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_TotalAttributePoints_
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.TotalAttributePoints
+  isSpec: "True"
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.TotalAttributePoints
+  nameWithType: EntityAttributes.TotalAttributePoints
 - uid: ElectricDrill.SoapRpgFramework.Attributes.IAttributeContainer
   name: IAttributeContainer
   href: api/ElectricDrill.SoapRpgFramework.Attributes.IAttributeContainer.html
@@ -5338,14 +5390,7 @@ references:
 - uid: ElectricDrill.SoapRpgFramework.EntityLevel.OnLevelUp
   name: OnLevelUp
   href: api/ElectricDrill.SoapRpgFramework.EntityLevel.html#ElectricDrill_SoapRpgFramework_EntityLevel_OnLevelUp
-  commentId: P:ElectricDrill.SoapRpgFramework.EntityLevel.OnLevelUp
-  fullName: ElectricDrill.SoapRpgFramework.EntityLevel.OnLevelUp
-  nameWithType: EntityLevel.OnLevelUp
-- uid: ElectricDrill.SoapRpgFramework.EntityLevel.OnLevelUp*
-  name: OnLevelUp
-  href: api/ElectricDrill.SoapRpgFramework.EntityLevel.html#ElectricDrill_SoapRpgFramework_EntityLevel_OnLevelUp_
-  commentId: Overload:ElectricDrill.SoapRpgFramework.EntityLevel.OnLevelUp
-  isSpec: "True"
+  commentId: E:ElectricDrill.SoapRpgFramework.EntityLevel.OnLevelUp
   fullName: ElectricDrill.SoapRpgFramework.EntityLevel.OnLevelUp
   nameWithType: EntityLevel.OnLevelUp
 - uid: ElectricDrill.SoapRpgFramework.EntityLevel.SetTotalCurrentExp(System.Int64)
@@ -6656,6 +6701,28 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.CalculateValue
   nameWithType: ScalingFormula.CalculateValue
+- uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue
+  name: GetBaseValue()
+  href: api/ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.html#ElectricDrill_SoapRpgFramework_Scaling_ScalingFormula_GetBaseValue
+  commentId: M:ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue()
+  nameWithType: ScalingFormula.GetBaseValue()
+- uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue(System.Int32)
+  name: GetBaseValue(int)
+  href: api/ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.html#ElectricDrill_SoapRpgFramework_Scaling_ScalingFormula_GetBaseValue_System_Int32_
+  commentId: M:ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue(System.Int32)
+  name.vb: GetBaseValue(Integer)
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue(int)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue(Integer)
+  nameWithType: ScalingFormula.GetBaseValue(int)
+  nameWithType.vb: ScalingFormula.GetBaseValue(Integer)
+- uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue*
+  name: GetBaseValue
+  href: api/ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.html#ElectricDrill_SoapRpgFramework_Scaling_ScalingFormula_GetBaseValue_
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue
+  isSpec: "True"
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.GetBaseValue
+  nameWithType: ScalingFormula.GetBaseValue
 - uid: ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.ResetTmpScalings
   name: ResetTmpScalings()
   href: api/ElectricDrill.SoapRpgFramework.Scaling.ScalingFormula.html#ElectricDrill_SoapRpgFramework_Scaling_ScalingFormula_ResetTmpScalings
@@ -6808,6 +6875,23 @@ references:
   fullName.vb: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType).OnValidate
   nameWithType: SoSetScalingComponentBase<SetType, KeyType>.OnValidate
   nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType).OnValidate
+- uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  name: ValidateEntitySet(EntityCore)
+  href: api/ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_ValidateEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_
+  commentId: M:ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase<SetType, KeyType>.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType).ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  nameWithType: SoSetScalingComponentBase<SetType, KeyType>.ValidateEntitySet(EntityCore)
+  nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType).ValidateEntitySet(EntityCore)
+- uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.ValidateEntitySet*
+  name: ValidateEntitySet
+  href: api/ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_ValidateEntitySet_
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.ValidateEntitySet
+  isSpec: "True"
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase<SetType, KeyType>.ValidateEntitySet
+  fullName.vb: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType).ValidateEntitySet
+  nameWithType: SoSetScalingComponentBase<SetType, KeyType>.ValidateEntitySet
+  nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType).ValidateEntitySet
 - uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2._set
   name: _set
   href: api/ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2__set
@@ -6880,6 +6964,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.GetSetItems
   nameWithType: StatsScalingComponent.GetSetItems
+- uid: ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  name: ValidateEntitySet(EntityCore)
+  href: api/ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.html#ElectricDrill_SoapRpgFramework_Scaling_StatsScalingComponent_ValidateEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_
+  commentId: M:ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
+  nameWithType: StatsScalingComponent.ValidateEntitySet(EntityCore)
+- uid: ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.ValidateEntitySet*
+  name: ValidateEntitySet
+  href: api/ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.html#ElectricDrill_SoapRpgFramework_Scaling_StatsScalingComponent_ValidateEntitySet_
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.ValidateEntitySet
+  isSpec: "True"
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.StatsScalingComponent.ValidateEntitySet
+  nameWithType: StatsScalingComponent.ValidateEntitySet
 - uid: ElectricDrill.SoapRpgFramework.Stats
   name: ElectricDrill.SoapRpgFramework.Stats
   href: api/ElectricDrill.SoapRpgFramework.Stats.html
@@ -7044,19 +7141,6 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.SoapRpgFramework.Stats.EntityStats.StatSet
   nameWithType: EntityStats.StatSet
-- uid: ElectricDrill.SoapRpgFramework.Stats.EntityStats.StatsCache
-  name: StatsCache
-  href: api/ElectricDrill.SoapRpgFramework.Stats.EntityStats.html#ElectricDrill_SoapRpgFramework_Stats_EntityStats_StatsCache
-  commentId: P:ElectricDrill.SoapRpgFramework.Stats.EntityStats.StatsCache
-  fullName: ElectricDrill.SoapRpgFramework.Stats.EntityStats.StatsCache
-  nameWithType: EntityStats.StatsCache
-- uid: ElectricDrill.SoapRpgFramework.Stats.EntityStats.StatsCache*
-  name: StatsCache
-  href: api/ElectricDrill.SoapRpgFramework.Stats.EntityStats.html#ElectricDrill_SoapRpgFramework_Stats_EntityStats_StatsCache_
-  commentId: Overload:ElectricDrill.SoapRpgFramework.Stats.EntityStats.StatsCache
-  isSpec: "True"
-  fullName: ElectricDrill.SoapRpgFramework.Stats.EntityStats.StatsCache
-  nameWithType: EntityStats.StatsCache
 - uid: ElectricDrill.SoapRpgFramework.Stats.EntityStats.UseClassBaseStats
   name: UseClassBaseStats
   href: api/ElectricDrill.SoapRpgFramework.Stats.EntityStats.html#ElectricDrill_SoapRpgFramework_Stats_EntityStats_UseClassBaseStats
@@ -7193,6 +7277,55 @@ references:
   fullName.vb: ElectricDrill.SoapRpgFramework.Stats.Stat.<>
   nameWithType: Stat.operator !=
   nameWithType.vb: Stat.<>
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
+  name: StatChangeInfo
+  href: api/ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.html
+  commentId: T:ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo
+  nameWithType: StatChangeInfo
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.#ctor(ElectricDrill.SoapRpgFramework.Stats.EntityStats,ElectricDrill.SoapRpgFramework.Stats.Stat,System.Int64,System.Int64)
+  name: StatChangeInfo(EntityStats, Stat, long, long)
+  href: api/ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.html#ElectricDrill_SoapRpgFramework_Stats_StatChangeInfo__ctor_ElectricDrill_SoapRpgFramework_Stats_EntityStats_ElectricDrill_SoapRpgFramework_Stats_Stat_System_Int64_System_Int64_
+  commentId: M:ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.#ctor(ElectricDrill.SoapRpgFramework.Stats.EntityStats,ElectricDrill.SoapRpgFramework.Stats.Stat,System.Int64,System.Int64)
+  name.vb: New(EntityStats, Stat, Long, Long)
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.StatChangeInfo(ElectricDrill.SoapRpgFramework.Stats.EntityStats, ElectricDrill.SoapRpgFramework.Stats.Stat, long, long)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.New(ElectricDrill.SoapRpgFramework.Stats.EntityStats, ElectricDrill.SoapRpgFramework.Stats.Stat, Long, Long)
+  nameWithType: StatChangeInfo.StatChangeInfo(EntityStats, Stat, long, long)
+  nameWithType.vb: StatChangeInfo.New(EntityStats, Stat, Long, Long)
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.#ctor*
+  name: StatChangeInfo
+  href: api/ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.html#ElectricDrill_SoapRpgFramework_Stats_StatChangeInfo__ctor_
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.StatChangeInfo
+  fullName.vb: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.New
+  nameWithType: StatChangeInfo.StatChangeInfo
+  nameWithType.vb: StatChangeInfo.New
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.EntityStats
+  name: EntityStats
+  href: api/ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.html#ElectricDrill_SoapRpgFramework_Stats_StatChangeInfo_EntityStats
+  commentId: F:ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.EntityStats
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.EntityStats
+  nameWithType: StatChangeInfo.EntityStats
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.NewValue
+  name: NewValue
+  href: api/ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.html#ElectricDrill_SoapRpgFramework_Stats_StatChangeInfo_NewValue
+  commentId: F:ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.NewValue
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.NewValue
+  nameWithType: StatChangeInfo.NewValue
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.OldValue
+  name: OldValue
+  href: api/ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.html#ElectricDrill_SoapRpgFramework_Stats_StatChangeInfo_OldValue
+  commentId: F:ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.OldValue
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.OldValue
+  nameWithType: StatChangeInfo.OldValue
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.Stat
+  name: Stat
+  href: api/ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.html#ElectricDrill_SoapRpgFramework_Stats_StatChangeInfo_Stat
+  commentId: F:ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.Stat
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.Stat
+  nameWithType: StatChangeInfo.Stat
 - uid: ElectricDrill.SoapRpgFramework.Stats.StatMenuItems
   name: StatMenuItems
   href: api/ElectricDrill.SoapRpgFramework.Stats.StatMenuItems.html
@@ -7224,6 +7357,12 @@ references:
   commentId: M:ElectricDrill.SoapRpgFramework.Stats.StatSet.Contains(ElectricDrill.SoapRpgFramework.Stats.Stat)
   fullName: ElectricDrill.SoapRpgFramework.Stats.StatSet.Contains(ElectricDrill.SoapRpgFramework.Stats.Stat)
   nameWithType: StatSet.Contains(Stat)
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatSet.Contains(ElectricDrill.SoapRpgFramework.Stats.StatSet)
+  name: Contains(StatSet)
+  href: api/ElectricDrill.SoapRpgFramework.Stats.StatSet.html#ElectricDrill_SoapRpgFramework_Stats_StatSet_Contains_ElectricDrill_SoapRpgFramework_Stats_StatSet_
+  commentId: M:ElectricDrill.SoapRpgFramework.Stats.StatSet.Contains(ElectricDrill.SoapRpgFramework.Stats.StatSet)
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatSet.Contains(ElectricDrill.SoapRpgFramework.Stats.StatSet)
+  nameWithType: StatSet.Contains(StatSet)
 - uid: ElectricDrill.SoapRpgFramework.Stats.StatSet.Contains*
   name: Contains
   href: api/ElectricDrill.SoapRpgFramework.Stats.StatSet.html#ElectricDrill_SoapRpgFramework_Stats_StatSet_Contains_
@@ -7257,6 +7396,12 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.SoapRpgFramework.Stats.StatSet.Stats
   nameWithType: StatSet.Stats
+- uid: ElectricDrill.SoapRpgFramework.Stats.StatSet._includedStatSets
+  name: _includedStatSets
+  href: api/ElectricDrill.SoapRpgFramework.Stats.StatSet.html#ElectricDrill_SoapRpgFramework_Stats_StatSet__includedStatSets
+  commentId: F:ElectricDrill.SoapRpgFramework.Stats.StatSet._includedStatSets
+  fullName: ElectricDrill.SoapRpgFramework.Stats.StatSet._includedStatSets
+  nameWithType: StatSet._includedStatSets
 - uid: ElectricDrill.SoapRpgFramework.Stats.StatSetInstance
   name: StatSetInstance
   href: api/ElectricDrill.SoapRpgFramework.Stats.StatSetInstance.html

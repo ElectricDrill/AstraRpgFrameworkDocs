@@ -25,7 +25,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ILevelable
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/ILevelable.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/ILevelable.cs
     startLine: 6
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -55,7 +55,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Level
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/ILevelable.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/ILevelable.cs
     startLine: 12
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -89,7 +89,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AddExp
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/ILevelable.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/ILevelable.cs
     startLine: 19
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -127,7 +127,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: SetTotalCurrentExp
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/ILevelable.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/ILevelable.cs
     startLine: 26
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -165,7 +165,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CurrentTotalExperience
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/ILevelable.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/ILevelable.cs
     startLine: 32
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -199,7 +199,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: CurrentLevelTotalExperience
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/ILevelable.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/ILevelable.cs
     startLine: 38
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -230,7 +230,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: NextLevelTotalExperience
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/ILevelable.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/ILevelable.cs
     startLine: 44
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -261,7 +261,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ValidateExperience
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Experience/ILevelable.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Experience/ILevelable.cs
     startLine: 50
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

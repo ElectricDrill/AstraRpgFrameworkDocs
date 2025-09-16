@@ -27,7 +27,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: StatSetInstance
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatSetInstance.cs
     startLine: 9
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -61,7 +61,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: .ctor
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatSetInstance.cs
     startLine: 20
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -99,7 +99,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: AddValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatSetInstance.cs
     startLine: 32
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -140,7 +140,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Get
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatSetInstance.cs
     startLine: 42
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -175,7 +175,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: this[]
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatSetInstance.cs
     startLine: 51
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -213,7 +213,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Clone
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatSetInstance.cs
     startLine: 60
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -244,7 +244,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Contains
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatSetInstance.cs
     startLine: 73
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -281,7 +281,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetAsPercentage
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatSetInstance.cs
     startLine: 82
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -316,7 +316,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetEnumerator
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatSetInstance.cs
     startLine: 86
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -345,7 +345,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Addition
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Stats/StatSetInstance.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Stats/StatSetInstance.cs
     startLine: 102
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

@@ -159,7 +159,7 @@ Both MonoBehaviour listeners and Action listeners are notified.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Raise(T context1, U context2)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Raise(T context1, U context2)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -221,7 +221,7 @@ Duplicate listeners are automatically prevented.</p>
 
   <h3 id="ElectricDrill_SoapRpgFramework_Events_GameEventGeneric2_2_UnregisterListener_ElectricDrill_SoapRpgFramework_Events_GameEventListenerGeneric2__0__1__" data-uid="ElectricDrill.SoapRpgFramework.Events.GameEventGeneric2`2.UnregisterListener(ElectricDrill.SoapRpgFramework.Events.GameEventListenerGeneric2{`0,`1})">
   UnregisterListener(GameEventListenerGeneric2&lt;T, U&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Events/GameEventGeneric2.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Events/GameEventGeneric2.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unregisters a MonoBehaviour-based listener so it will no longer be notified when this event is raised.</p>
@@ -266,7 +266,7 @@ Automatically handles registration and unregistration of Action listeners.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;T, U&gt; OnEventRaised</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual event Action&lt;T, U&gt; OnEventRaised</code></pre>
   </div>
 
 

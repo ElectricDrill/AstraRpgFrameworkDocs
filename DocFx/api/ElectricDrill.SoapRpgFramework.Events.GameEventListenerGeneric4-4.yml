@@ -21,7 +21,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GameEventListenerGeneric4
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/GameEventListenerGeneric4.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Events/GameEventListenerGeneric4.cs
     startLine: 12
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -69,7 +69,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: _event
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/GameEventListenerGeneric4.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Events/GameEventListenerGeneric4.cs
     startLine: 14
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -108,7 +108,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: _response
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/GameEventListenerGeneric4.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Events/GameEventListenerGeneric4.cs
     startLine: 15
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -147,7 +147,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: OnEventRaised
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Events/GameEventListenerGeneric4.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Events/GameEventListenerGeneric4.cs
     startLine: 38
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime

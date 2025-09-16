@@ -29,7 +29,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: SerializableDictionary
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableDictionary.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableDictionary.cs
     startLine: 13
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -79,7 +79,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: OnBeforeSerialize
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableDictionary.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableDictionary.cs
     startLine: 26
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -112,7 +112,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: OnAfterDeserialize
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableDictionary.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableDictionary.cs
     startLine: 49
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -145,7 +145,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: TryGetValue
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableDictionary.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableDictionary.cs
     startLine: 110
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -186,7 +186,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: this[]
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableDictionary.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableDictionary.cs
     startLine: 119
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -224,7 +224,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Keys
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableDictionary.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableDictionary.cs
     startLine: 132
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -257,7 +257,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Values
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableDictionary.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableDictionary.cs
     startLine: 137
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -290,7 +290,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableDictionary.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableDictionary.cs
     startLine: 140
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -324,7 +324,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: op_Implicit
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableDictionary.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableDictionary.cs
     startLine: 145
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -358,7 +358,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: Clear
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableDictionary.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableDictionary.cs
     startLine: 152
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -388,7 +388,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: ContainsKey
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableDictionary.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableDictionary.cs
     startLine: 163
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
@@ -425,7 +425,7 @@ items:
       branch: main
       repo: https://github.com/Cis8/SoapRpgFramework
     id: GetEnumerator
-    path: ../../GeometricalInvaders/Packages/SoapRPGFramework/Runtime/Utils/SerializableDictionary.cs
+    path: ../../GeometricalInvaders/Packages/com.electricdrill.soap-rpg-framework/Runtime/Utils/SerializableDictionary.cs
     startLine: 171
   assemblies:
   - com.electricdrill.soap-rpg-framework.Runtime
