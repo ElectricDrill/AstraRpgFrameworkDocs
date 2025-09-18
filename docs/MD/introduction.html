@@ -120,7 +120,7 @@ Let's clarify what we mean by each mentioned term.</p>
 <h3 id="-stat"><img src="../images/SoapRPG/stat.png" alt="stat" width="30" class="icon-background"> Stat</h3>
 <p>A <code>Stat</code> is a class that derives from <code>ScriptableObject</code> (SO) and represents a statistic in the game. Each statistic has a name (the name given to the SO instance of the created <code>Stat</code>), and we can choose whether to provide it with a maximum and/or minimum value. Additionally, we can define how that statistic grows or is reduced, depending on certain <code>Attributes</code>.</p>
 <h3 id="-statset"><img src="../images/SoapRPG/stat-set.png" alt="stat set" width="30" class="icon-background"> StatSet</h3>
-<p>A <code>StatSet</code> is a class that derives from SO and defines a set of <code>Stat</code>s.</p>
+<p>A <code>StatSet</code> is a class derived from ScriptableObject that defines a collection of <code>Stat</code>s. Stat sets can be composed by combining other sub-stat sets, enabling hierarchical organization and easy reuse of statistics among different entities or classes.</p>
 <h3 id="-entitystats"><img src="../images/SoapRPG/entity-stats.png" alt="entity stats" width="30" class="icon-background"> EntityStats</h3>
 <p><code>EntityStats</code> allows us to configure:</p>
 <ul>
@@ -149,6 +149,14 @@ Similarly to <code>EntityStats</code>, we can decide whether the base attributes
 </ul>
 <h3 id="-growth-formula"><img src="../images/SoapRPG/growth-fo.png" alt="growth formula" width="30" class="icon-background"> Growth Formula</h3>
 <p>To express how <code>Stats</code>, <code>Attributes</code>, Max HP, and the experience required to level up vary at each level, we can use instances of <code>GrowthFormula</code>. This is a class that derives from SO and allows us to define a mathematical function, or a system of functions, that describe how a value changes as levels increase. We will see in more detail how to define a <code>GrowthFormula</code> in the <a href="workflows.html#growth-formulas">Growth Formulas</a> section.</p>
+<h3 id="-scaling-formulas"><img src="../images/SoapRPG/scaling-fo.png" alt="scaling formula" width="30" class="icon-background"> Scaling Formulas</h3>
+<p>Scaling formulas provide a flexible way to define how values such as damage, healing, or other effects are calculated based on one or more attributes or stats. They allow you to combine base values (which can be constant or level-dependent) with contributions from various stats and attributes, each weighted by customizable scaling components.</p>
+<h3 id="-scaling-components"><img src="../images/SoapRPG/stat-scaling-component.png" alt="stats scaling component" width="30" class="icon-background"><img src="../images/SoapRPG/attribute-scaling-component.png" alt="attribute scaling component" width="30" class="icon-background"> Scaling components</h3>
+<p>Specify how much a particular stat or attribute influences the final value of the scaling formula, enabling complex and dynamic calculations for abilities, equipment, or other game mechanics. This modular approach lets you easily adjust and extend scaling logic to fit your game's needs.</p>
+<h3 id="-game-events"><img src="../images/SoapRPG/event.png" alt="game event" width="30" class="icon-background"> Game Events</h3>
+<p>Game events are ScriptableObjects that allow you to implement the Observer pattern in your game. They provide a way to decouple systems by broadcasting notifications when something happens (such as a player jumping, leveling up, or taking damage). Listeners can subscribe to these events and react accordingly, all through inspector-driven workflows. Game events can carry context parameters, making them flexible for a wide range of use cases.</p>
+<h3 id="-game-event-generators"><img src="../images/SoapRPG/event-gen.png" alt="game event generator" width="30" class="icon-background"> Game Event Generators</h3>
+<p>Game Event Generators are ScriptableObjects that let you define custom game events with up to four context parameters. They automate the creation of event and listener classes, making it easy to extend your event system for complex gameplay scenarios. You can specify parameter types and documentation, and generate code and assets directly from the inspector.</p>
 <h2 id="how-is-soap-rpg-framework-implemented">How is Soap RPG Framework implemented?</h2>
 <p>The package is developed following the principles of SOAP (Scriptable Object Architecture Pattern), and has been inspired by the <a href="https://www.youtube.com/watch?v=raQ3iHhE_Kk&amp;ab_channel=Unity">GDC talk of Ryan Hipple</a>. In a nutshell, the main benefits provided by this architecture are:</p>
 <ul>

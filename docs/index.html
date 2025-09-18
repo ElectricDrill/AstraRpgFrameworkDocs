@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>This is the HOMEPAGE. | SOAP RPG Framework </title>
+      <title> | SOAP RPG Framework </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="This is the HOMEPAGE. | SOAP RPG Framework ">
+      <meta name="title" content=" | SOAP RPG Framework ">
       
       
       <link rel="icon" href="images/soap-rpg-ico.ico">
@@ -71,13 +71,70 @@
         </div>
 
         <article data-uid="">
-<h1 id="this-is-the-homepage">This is the <strong>HOMEPAGE</strong>.</h1>
 
-<p>Refer to <a href="http://daringfireball.net/projects/markdown/">Markdown</a> for how to write markdown files.</p>
-<h2 id="quick-start-notes">Quick Start Notes:</h2>
-<ol>
-<li>Add images to the <em>images</em> folder if the file is referencing an image.</li>
-</ol>
+<h2 id="-soap-rpg-framework">🛠️ SOAP RPG Framework</h2>
+<h3 id="-introduction">👉 Introduction</h3>
+<p><strong>Say goodbye to endless recompilations. Instantly balance your RPG's stats and formulas with a powerful data-driven system.</strong></p>
+<p>SOAP RPG Framework provides a complete, data-driven backbone for your RPG, letting you define your game's foundations directly in the editor and iterate on <strong>balance during play mode</strong>.</p>
+<p>Simple, lightweight, and easy to learn. No configuration required: <strong>works out of the box with zero setup</strong>.</p>
+<hr>
+<h3 id="-key-features">✨ Key Features</h3>
+<ul>
+<li>📊 <strong>Statistics &amp; Attributes:</strong> Define the core building blocks for your game</li>
+<li>⭐ <strong>Experience &amp; Levels:</strong> Build a robust progression system</li>
+<li>🧑‍🎓 <strong>Classes &amp; Progression:</strong> Design custom classes and unique progression paths</li>
+<li>📈 <strong>Scaling Formulas:</strong> Create complex formulas for damage, healing, and other values using entities' stats and attributes</li>
+<li>⚡ <strong>Event System:</strong> Enable dynamic game-object interactions with inspector-wired events and listeners</li>
+<li>🛠️ <strong>Utilities:</strong> Helpful tools to streamline development. Ever used Int and Long variables as ScriptableObjects? Discover new possibilities!</li>
+</ul>
+<hr>
+<h3 id="-implemented-on-top-of-soap-scriptable-object-architecture-pattern">🧼 Implemented on top of SOAP: Scriptable Object Architecture Pattern</h3>
+<ul>
+<li>🎨 <strong>Designer-friendly:</strong> All features are ScriptableObjects, easily created and wired in the Unity Inspector. Custom inspectors are available for everything.</li>
+<li>🧩 <strong>Reusable and modular:</strong> Objects can be reused across game objects and scenes. They are the building blocks for your game. <strong>Instantiate, compose, reuse</strong>. Changes instantly reflect on dependent objects. No duplication, no hassle.</li>
+<li>🧪 <strong>Easy testing:</strong> Swap objects, switch from class-based stats to fixed ones, or replace complex formulas—all without leaving play mode. Debugging and testing is effortless.</li>
+</ul>
+<hr>
+<h3 id="-features-breakdown">🔍 Features Breakdown</h3>
+<h4 id="-attributes">🕸️ Attributes</h4>
+<p>Attributes are the core numerical values that define an entity's capabilities. In most RPGs these include strength, dexterity, intelligence, constitution, etc. You define your own attributes, choosing their names and min/max values as needed.</p>
+<p>Group attributes into attribute sets—shareable objects reusable across entities.</p>
+<p>Supports both flat and percentage modifiers.</p>
+<h4 id="-statistics">📊 Statistics</h4>
+<p>Statistics are derived values that directly affect gameplay, such as Physical Attack, Armor, Crit Chance, and movement speed. Define custom statistics and organize them into sets tailored for each entity. Statistic sets can be modular—for example, create separate sets for movement, offense, and defense, then assign only what's relevant to each entity.</p>
+<p>Statistics can scale with attributes. Define how each statistic scales based on one or more attributes.</p>
+<p>Like attributes, statistics can have lower and upper bounds.</p>
+<p>Statistics support flat and percentage modifiers, plus powerful stat-to-stat modifiers. Create buffs/debuffs that change a statistic based on another statistic's value.</p>
+<h4 id="-experience--levels">⭐ Experience &amp; Levels</h4>
+<p>Define custom level progression curves and experience requirements for each level.</p>
+<p>If an entity doesn't level up, set fixed base stats and attributes. Set up simple entities in seconds.</p>
+<h4 id="-classes--progression">🧑‍🎓 Classes &amp; Progression</h4>
+<p>Classes (like warrior, mage, rogue, etc.) let you define unique progression paths for attributes and statistics. Assign progression curves for each attribute and statistic to each class for distinct play styles.</p>
+<p>Balance progression curves in real-time—<strong>test and iterate instantly during play mode</strong>.</p>
+<h4 id="-scaling-formulas">📈 Scaling Formulas</h4>
+<p>Easily build complex formulas for damage, healing, and other values using stats and attributes. Drag and drop scaling components to visually assemble formulas in the custom inspector.</p>
+<p>Formulas are fully customizable. Set a fixed base value or make it scale dynamically with levels. Add scaling components to adjust values based on the caster’s or target’s stats and attributes—or both.</p>
+<p>Add and remove temporary scaling components at runtime for advanced mechanics. For example, a potion might grant &quot;Your next base attack deals extra damage equal to 50% of your Constitution.&quot; Drinking it adds a temporary scaling component to the base attack formula; after the attack, the temporary scaling component is removed.</p>
+<p>Reuse formulas across entities and scenarios for consistency and reduced redundancy.</p>
+<p><strong>See the impact of changes instantly in play mode, enabling rapid iteration and fine-tuning of game balance.</strong></p>
+<h4 id="-game-events">⚡ Game Events</h4>
+<p>Game events are ScriptableObjects. Instantiate events in your assets, then drag &amp; drop them into scripts that raise them and into Game Event Listeners that define responses. Testing your game's logic from the inspector is easier than ever.</p>
+<p>The framework provides a set of predefined game events (and MonoBehaviour listeners) to get you started quickly:</p>
+<ul>
+<li><strong>GameEvent:</strong> No context parameters. For simple events like 'Player Jumped', 'Player Slept', etc.</li>
+<li><strong>IntGameEvent:</strong> One integer context parameter. For example, 'Player Leveled Up' uses the new level as the context.</li>
+<li><strong>StatChangedGameEvent:</strong> Notifies when a stat changes for a specific entity.</li>
+<li><strong>AttributeChangedGameEvent:</strong> Notifies when an attribute changes for a specific entity.</li>
+</ul>
+<h4 id="-game-event-generators">🏭⚡ Game Event Generators</h4>
+<p>Game Event Generators are powerful tools for generating C# source code for custom game events. Use the custom inspector to create new event types with up to 4 context parameters—these can be native C# types or your own classes.</p>
+<p>Game Event Generators are also ScriptableObjects. Instantiate multiple generators to organize different sets of events for your project. Each generator can manage its own context-specific events.</p>
+<hr>
+<h3 id="-where-to-buy">🛒 Where to Buy</h3>
+<p>Unity Asset Store (planned). Link will be available upon release.</p>
+<hr>
+<h3 id="-information--contact">📬 Information &amp; Contact</h3>
+<p>Questions, feedback, or bugs? Email us at <a href="mailto:electricdrill.info@gmail.com">electricdrill.info@gmail.com</a>.</p>
 
 </article>
 

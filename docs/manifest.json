@@ -2528,6 +2528,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/SoapRPG/event.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/SoapRPG/event.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/SoapRPG/growth-fo.png",
       "output": {
         "resource": {
