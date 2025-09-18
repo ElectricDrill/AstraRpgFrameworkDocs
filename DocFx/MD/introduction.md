@@ -41,7 +41,7 @@ A `GameObject` becomes an entity once the `EntityCore` and `EntityStats` `MonoBe
 A `Stat` is a class that derives from `ScriptableObject` (SO) and represents a statistic in the game. Each statistic has a name (the name given to the SO instance of the created `Stat`), and we can choose whether to provide it with a maximum and/or minimum value. Additionally, we can define how that statistic grows or is reduced, depending on certain `Attributes`.
 
 ### <img src="../images/SoapRPG/stat-set.png" alt="stat set" width="30" class="icon-background"/> StatSet
-A `StatSet` is a class that derives from SO and defines a set of `Stat`s.
+A `StatSet` is a class derived from ScriptableObject that defines a collection of `Stat`s. Stat sets can be composed by combining other sub-stat sets, enabling hierarchical organization and easy reuse of statistics among different entities or classes.
 
 ### <img src="../images/SoapRPG/entity-stats.png" alt="entity stats" width="30" class="icon-background"/> EntityStats
 `EntityStats` allows us to configure:
@@ -74,6 +74,19 @@ Similarly to `EntityStats`, we can decide whether the base attributes are _fixed
 
 ### <img src="../images/SoapRPG/growth-fo.png" alt="growth formula" width="30" class="icon-background"/> Growth Formula
 To express how `Stats`, `Attributes`, Max HP, and the experience required to level up vary at each level, we can use instances of `GrowthFormula`. This is a class that derives from SO and allows us to define a mathematical function, or a system of functions, that describe how a value changes as levels increase. We will see in more detail how to define a `GrowthFormula` in the [Growth Formulas](workflows.md#growth-formulas) section.
+
+### <img src="../images/SoapRPG/scaling-fo.png" alt="scaling formula" width="30" class="icon-background"/> Scaling Formulas
+Scaling formulas provide a flexible way to define how values such as damage, healing, or other effects are calculated based on one or more attributes or stats. They allow you to combine base values (which can be constant or level-dependent) with contributions from various stats and attributes, each weighted by customizable scaling components.
+
+### <img src="../images/SoapRPG/stat-scaling-component.png" alt="stats scaling component" width="30" class="icon-background"/><img src="../images/SoapRPG/attribute-scaling-component.png" alt="attribute scaling component" width="30" class="icon-background"/> Scaling components
+Specify how much a particular stat or attribute influences the final value of the scaling formula, enabling complex and dynamic calculations for abilities, equipment, or other game mechanics. This modular approach lets you easily adjust and extend scaling logic to fit your game's needs.
+
+### <img src="../images/SoapRPG/event.png" alt="game event" width="30" class="icon-background"/> Game Events
+Game events are ScriptableObjects that allow you to implement the Observer pattern in your game. They provide a way to decouple systems by broadcasting notifications when something happens (such as a player jumping, leveling up, or taking damage). Listeners can subscribe to these events and react accordingly, all through inspector-driven workflows. Game events can carry context parameters, making them flexible for a wide range of use cases.
+
+
+### <img src="../images/SoapRPG/event-gen.png" alt="game event generator" width="30" class="icon-background"/> Game Event Generators
+Game Event Generators are ScriptableObjects that let you define custom game events with up to four context parameters. They automate the creation of event and listener classes, making it easy to extend your event system for complex gameplay scenarios. You can specify parameter types and documentation, and generate code and assets directly from the inspector.
 
 ## How is Soap RPG Framework implemented?
 The package is developed following the principles of SOAP (Scriptable Object Architecture Pattern), and has been inspired by the [GDC talk of Ryan Hipple](https://www.youtube.com/watch?v=raQ3iHhE_Kk&ab_channel=Unity). In a nutshell, the main benefits provided by this architecture are:
