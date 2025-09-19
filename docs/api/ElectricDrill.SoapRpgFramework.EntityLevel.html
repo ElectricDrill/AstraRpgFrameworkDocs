@@ -141,7 +141,7 @@ public class EntityLevel : ILevelable</code></pre>
 
   <h3 id="ElectricDrill_SoapRpgFramework_EntityLevel_CurrentTotalExperience" data-uid="ElectricDrill.SoapRpgFramework.EntityLevel.CurrentTotalExperience">
   CurrentTotalExperience
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the current total experience of the entity.
@@ -174,7 +174,7 @@ This represents all experience gained since the entity was created.</p>
 
   <h3 id="ElectricDrill_SoapRpgFramework_EntityLevel_Level" data-uid="ElectricDrill.SoapRpgFramework.EntityLevel.Level">
   Level
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or sets the current level of the entity.
@@ -212,7 +212,7 @@ Setting the level will trigger the OnLevelUp event.</p>
 
   <h3 id="ElectricDrill_SoapRpgFramework_EntityLevel_AddExp_System_Int64_" data-uid="ElectricDrill.SoapRpgFramework.EntityLevel.AddExp(System.Int64)">
   AddExp(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L117"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds experience to the entity. The experience will be modified by any experience gain modifiers.
@@ -247,7 +247,7 @@ Can trigger multiple level ups if enough experience is added.</p>
 
   <h3 id="ElectricDrill_SoapRpgFramework_EntityLevel_CurrentLevelTotalExperience" data-uid="ElectricDrill.SoapRpgFramework.EntityLevel.CurrentLevelTotalExperience">
   CurrentLevelTotalExperience()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L172"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the total experience required to reach the current level.
@@ -281,7 +281,7 @@ For level 1, this returns 0. For higher levels, it uses the experience growth fo
 
   <h3 id="ElectricDrill_SoapRpgFramework_EntityLevel_NextLevelTotalExperience" data-uid="ElectricDrill.SoapRpgFramework.EntityLevel.NextLevelTotalExperience">
   NextLevelTotalExperience()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L181"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the total experience required to reach the next level.
@@ -315,7 +315,7 @@ If the entity is already at the maximum level, returns the experience for the cu
 
   <h3 id="ElectricDrill_SoapRpgFramework_EntityLevel_SetTotalCurrentExp_System_Int64_" data-uid="ElectricDrill.SoapRpgFramework.EntityLevel.SetTotalCurrentExp(System.Int64)">
   SetTotalCurrentExp(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the total current experience and automatically updates the level to match.
@@ -349,7 +349,7 @@ The level will be calculated based on the experience growth formula.</p>
 
   <h3 id="ElectricDrill_SoapRpgFramework_EntityLevel_ValidateExperience" data-uid="ElectricDrill.SoapRpgFramework.EntityLevel.ValidateExperience">
   ValidateExperience()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L201"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Validates that the current total experience corresponds to the current level.
@@ -381,15 +381,15 @@ This method is useful for debugging and ensuring data consistency.</p>
 
   <h3 id="ElectricDrill_SoapRpgFramework_EntityLevel_OnLevelUp" data-uid="ElectricDrill.SoapRpgFramework.EntityLevel.OnLevelUp">
   OnLevelUp
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Event raised when the entity levels up. The parameter is the new level.</p>
+  <div class="markdown level1 summary"><p>Event raised when the entity levels up. The parameters are the EntityCore that leveled up and its new level respectively.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual event Action&lt;int&gt; OnLevelUp</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual event Action&lt;EntityCore, int&gt; OnLevelUp</code></pre>
   </div>
 
 
@@ -399,7 +399,7 @@ This method is useful for debugging and ensuring data consistency.</p>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><span class="xref">Action</span>&lt;<span class="xref">int</span>&gt;</dt>
+    <dt><span class="xref">Action</span>&lt;<a class="xref" href="ElectricDrill.SoapRpgFramework.EntityCore.html">EntityCore</a>, <span class="xref">int</span>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -417,7 +417,7 @@ This method is useful for debugging and ensuring data consistency.</p>
 
   <h3 id="ElectricDrill_SoapRpgFramework_EntityLevel_op_Implicit_ElectricDrill_SoapRpgFramework_EntityLevel__System_Int32" data-uid="ElectricDrill.SoapRpgFramework.EntityLevel.op_Implicit(ElectricDrill.SoapRpgFramework.EntityLevel)~System.Int32">
   implicit operator int(EntityLevel)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Experience/EntityLevel.cs/#L194"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implicitly converts an EntityLevel to its integer level value.

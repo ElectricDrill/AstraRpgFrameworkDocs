@@ -235,12 +235,12 @@ If <code>Use constant</code> is checked instead, the value is readonly.</p>
 </div>
 <p><code>Max Level</code>: The maximum level the entity can reach</p>
 <p><code>Experience Formula</code>: <code>GrowthFormula</code> that describes how the total experience required to reach the next level grows at each level.</p>
-<p><code>On Level Up</code>: <code>IntGameEvent</code> that should be raised when the entity levels up.</p>
+<p><code>On Level Up</code>: <code>EntityLeveledUpGameEvent</code> that should be raised when the entity levels up.</p>
 <p><code>Spawned Entity Event</code>: <code>EntityCoreGameEvent</code> that should be raised when this entity's <code>Start()</code> method is executed.</p>
 <p>You may notice that a game event is already assigned to <code>Spawned Entity Event</code>. This is because an instance of that game event has been explicitly assigned directly in the inspector of the <code>EntityCore</code> script. This choice was made since in most cases the same event instance will always be used for entity spawning. This means you don't have to reassign this event every time you create a new entity in Unity. As we'll see later, this default assignment mechanism has been used for other components as well.</p>
 <h3 id="entitylevel-code-apis">EntityLevel code APIs</h3>
 <p>It is honorable to mention some code APIs that can be used to interact with the <code>EntityLevel</code> component.</p>
-<p>EntityLevel exposes a <code>Action&lt;int&gt; OnLevelUp</code> property that can be used to subscribe to level-up events from code.</p>
+<p>EntityLevel exposes a <code>Action&lt;EntityCore, int&gt; OnLevelUp</code> property that can be used to subscribe to level-up events from code.</p>
 <p>If we want to grant experience to the entity, we can use the <code>AddExp(long amount)</code> method. This method will automatically raise the <code>OnLevelUp</code> event if the entity levels up.
 Alternatively, it is available also the <code>SetTotalCurrentExp(long totalCurrentExperience)</code> method, which allows setting the total current experience of the entity. This method will also raise the <code>OnLevelUp</code> event if the entity levels up.</p>
 <p>Finally, there are the <code>CurrentLevelTotalExperience()</code> and the <code>NextLevelTotalExperience()</code> methods. These methods return the total experience required to reach the current level and the next level, respectively. They are useful, for example, for checking how much experience is needed to level up.</p>
@@ -685,11 +685,12 @@ This method can be useful, for example, when the player completes a room and adv
 <h2 id="game-events-1">Game Events</h2>
 <p><em>Relative path:</em> <code>Events -&gt; Game Event</code>
 <em>Relative path for custom game events:</em> <code>Events -&gt; Generated -&gt; *CustomEventName*</code></p>
-<p>At the beginning of this page we briefly mentioned the concept of game events as scriptable objects, and we have introduced the generic <code>GameEvent</code>. Such event is great for notifying actions that happen in the game, but it has limited flexibility as it is not carrying along any context information. For example, if we want to notify that a character has leveled up, we might want to pass along the new level reached. In other cases it could be useful to pass along with the event a reference to the entity that triggered the event, so we would like to be able to pass a reference of type <code>EntityCore</code> as context parameter. And so on.<br>
+<p>At the beginning of this page we briefly mentioned the concept of game events as scriptable objects, and we have introduced the generic <code>GameEvent</code>. Such event is great for notifying actions that happen in the game, but it has limited flexibility as it is not carrying along any context information. For example, if we want to notify that a character has leveled up, we might want to pass along the entity that leveled up and the new level reached. In other cases it could be useful to pass along with the event a reference to the entity that triggered the event, so we would like to be able to pass a reference of type <code>EntityCore</code> as context parameter. And so on.<br>
 The framework comes along with some pre-defined game events:</p>
 <ul>
 <li><code>IntGameEvent</code>: an event that carries along an <code>int</code> as context parameter</li>
 <li><code>EntityCoreGameEvent</code>: an event that carries along an <code>EntityCore</code> as context parameter</li>
+<li><code>EntityLeveledUpGameEvent</code>: an event that carries along an <code>EntityCore</code> and an <code>int</code> as context parameters, where the <code>EntityCore</code> is the entity that leveled up and the <code>int</code> is the new level reached</li>
 <li><code>StatChangedGameEvent</code>: an event that carries along a <code>StatChangeInfo</code> context parameter, which contains:
 <ul>
 <li>A reference to the <code>EntityStats</code> component of the entity that has changed</li>
@@ -708,24 +709,23 @@ The framework comes along with some pre-defined game events:</p>
 </li>
 </ul>
 <p>Along with the game events, the frameworks provides the <code>*GameEventListener</code> counterparts, which are components that can be attached to a game object to listen for the events and execute a method when the event is raised. For example, <code>IntGameEventListener</code> listens for a specific <code>IntGameEvent</code> and executes a method that takes an <code>int</code> as parameter when the event is raised.</p>
-<p>Let's suppose we need a game event for notifying when an entity reaches level 10. In the inspector, create a new <code>EntityCoreGameEvent</code> called <code>EntityReachedLevel10</code>. It should look like this:<br>
-<img src="../images/workflows/entity-reached-level-10.png" alt="Entity Reached Level 10"><br>
-There are no fields to fill in the inspector. The entity to be passed as context parameter will be passed in the code that is responsible for raising the event.<br>
-The method to raise the event is <code>Raise(EntityCore entity)</code>, which will raise the event and pass along the entity as context parameter. Therefore in a dedicated script you can call it like this:</p>
-<pre><code class="lang-csharp">public void OnHeroLevelUp(EntityCore entity) {
-    if (entity.Level == 10) {
-        // Assuming entityReachedLevel10Event is a reference to the EntityReachedLevel10 event
-        entityReachedLevel10Event.Raise(entity);
-    }
+<p>Let's suppose we need a game event for notifying, each time the player dies, how many times the player has died so far. In the inspector, create a new <code>IntGameEvent</code> called <code>PlayerDied</code>. It should look like this:</p>
+<p><img src="../images/workflows/player-died-event.png" alt="Player Died Event"></p>
+<p>There are no fields to fill in the inspector. The integer to be passed as context parameter will be passed in the code that is responsible for raising the event.<br>
+The method to raise the event is <code>Raise(int value)</code>, which will raise the event and pass along the integer as context parameter. Therefore in a dedicated script you can call it like this:</p>
+<pre><code class="lang-csharp">public void OnPlayerDeath() {
+    playerDeathCount++;
+    // Assuming playerDiedEvent is a reference to the PlayerDied event
+    playerDiedEvent.Raise(playerDeathCount);
 }
 </code></pre>
-<p>Now let's create a listener for this event. Let's say that we want to show a message in the console when the event is raised. To do this, create a new game object in the hierarchy and add a script that defines a public method for loggin an event, that takes an <code>EntityCore</code> as input parameter. It should be like:</p>
-<pre><code class="lang-csharp">public void LogEntityReachedLevel10(EntityCore entity) {
-    Debug.Log($&quot;Entity {entity.name} reached level 10!&quot;);
+<p>Now let's create a listener for this event. Let's say that we want to show a message in the console when the event is raised. To do this, create a new game object in the hierarchy and add a script that defines a public method for logging an event, that takes an <code>int</code> as input parameter. It should be like:</p>
+<pre><code class="lang-csharp">public void LogPlayerDeath(int deathCount) {
+    Debug.Log($&quot;Player has died {deathCount} times.&quot;);
 }
 </code></pre>
-<p>Now add the <code>EntityCoreGameEventListener</code> component to the listener game object and, in the inspector, assign the <code>EntityReachedLevel10</code> event to the <code>Event</code> field. Now drag the <code>Logger</code> script created before into the <code>Response</code>'s object selector. You should be able now to select the <code>LogEntityReachedLevel10</code> method from the dropdown menu. The result should look like this:
-<img src="../images/workflows/entity-reached-lvl-10-listener.png" alt="Entity Reached Level 10 Listener"></p>
+<p>Now add the <code>IntGameEventListener</code> component to the listener game object and, in the inspector, assign the <code>PlayerDied</code> event to the <code>Event</code> field. Now drag the <code>Logger</code> script created before into the <code>Response</code>'s object selector. You should be able now to select the <code>LogPlayerDeath</code> method from the dropdown menu. The result should look like this:</p>
+<p><img src="../images/workflows/player-died-listener.png" alt="Player Died Listener"></p>
 <p>This is a powerful mechanism that decouples the event producers from the event consumers, allowing for a more modular and maintainable codebase. And most of the setup is inspector-based. You just need to define the raising and the listening methods from code.</p>
 <h3 id="game-event-generators">Game Event Generators</h3>
 <p><em>Relative path:</em> <code>Events -&gt; Game Event Generator</code></p>
@@ -736,8 +736,8 @@ To avoid potential issues, it is recommended to back up or version control your 
 </div>
 <p>Sometimes the pre-defined game events are not enough to cover all the use cases. In this case, you can create a custom game event generator. A game event generator is a scriptable object that lets you define a custom game events with up to four context parameters. You can choose the type of each parameter. Parameters can either be primitive types (like <code>int</code>, <code>float</code>, <code>string</code>, etc.) or more complex types (like <code>EntityCore</code>, <code>Stat</code>, <code>StatChangeInfo</code>, ..., or your own data types).</p>
 <h4 id="game-event-generator-setup">Game Event Generator setup</h4>
-<p>Let's create a custom game event generator to manage all the events related to the experience and leveling up of entities. Rename the newly created events generator <code>EntityLevelingEvents</code>. In the inspector, it should look like this:
-<img src="../images/workflows/entity-leveling-events.png" alt="Entity Leveling Events"></p>
+<p>Let's create a custom game event generator to manage all the events related to the experience and leveling up of entities. Rename the newly created events generator <code>EntityLevelingEvents</code>. In the inspector, it should look like this:</p>
+<p><img src="../images/workflows/entity-leveling-events.png" alt="Entity Leveling Events"></p>
 <p>With <code>Menu Base Path</code> we can change the path of the context menu where the generated events will be available for creation. By default, it is set to <code>Soap RPG Core -&gt; Events -&gt; Generated</code>, but we can change it to <code>Soap RPG Core -&gt; Events/Generated/Experience</code> for the sake of organization.</p>
 <p>With <code>Base Save Location</code> we can change the path where the source code files for the generated events will be saved. By default it is set to <code>Assets</code>, but for this example let's set it to <code>Assets/Events</code>.</p>
 <h4 id="adding-new-events">Adding new events</h4>

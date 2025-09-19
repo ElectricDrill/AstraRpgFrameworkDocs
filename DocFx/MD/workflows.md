@@ -187,7 +187,7 @@ You'll notice the `Use Constant` checkbox. If checked, you can pass an `IntVar` 
 
 `Experience Formula`: `GrowthFormula` that describes how the total experience required to reach the next level grows at each level.
 
-`On Level Up`: `IntGameEvent` that should be raised when the entity levels up.
+`On Level Up`: `EntityLeveledUpGameEvent` that should be raised when the entity levels up.
 
 `Spawned Entity Event`: `EntityCoreGameEvent` that should be raised when this entity's `Start()` method is executed.
 
@@ -196,7 +196,7 @@ You may notice that a game event is already assigned to `Spawned Entity Event`. 
 ### EntityLevel code APIs
 It is honorable to mention some code APIs that can be used to interact with the `EntityLevel` component.
 
-EntityLevel exposes a `Action<int> OnLevelUp` property that can be used to subscribe to level-up events from code.
+EntityLevel exposes a `Action<EntityCore, int> OnLevelUp` property that can be used to subscribe to level-up events from code.
 
 If we want to grant experience to the entity, we can use the `AddExp(long amount)` method. This method will automatically raise the `OnLevelUp` event if the entity levels up.
 Alternatively, it is available also the `SetTotalCurrentExp(long totalCurrentExperience)` method, which allows setting the total current experience of the entity. This method will also raise the `OnLevelUp` event if the entity levels up.
@@ -753,10 +753,11 @@ Moreover, there are four more methods that are worth mentioning:
 *Relative path:* `Events -> Game Event`
 *Relative path for custom game events:* `Events -> Generated -> *CustomEventName*`
 
-At the beginning of this page we briefly mentioned the concept of game events as scriptable objects, and we have introduced the generic `GameEvent`. Such event is great for notifying actions that happen in the game, but it has limited flexibility as it is not carrying along any context information. For example, if we want to notify that a character has leveled up, we might want to pass along the new level reached. In other cases it could be useful to pass along with the event a reference to the entity that triggered the event, so we would like to be able to pass a reference of type `EntityCore` as context parameter. And so on.  
+At the beginning of this page we briefly mentioned the concept of game events as scriptable objects, and we have introduced the generic `GameEvent`. Such event is great for notifying actions that happen in the game, but it has limited flexibility as it is not carrying along any context information. For example, if we want to notify that a character has leveled up, we might want to pass along the entity that leveled up and the new level reached. In other cases it could be useful to pass along with the event a reference to the entity that triggered the event, so we would like to be able to pass a reference of type `EntityCore` as context parameter. And so on.  
 The framework comes along with some pre-defined game events:
 - `IntGameEvent`: an event that carries along an `int` as context parameter
 - `EntityCoreGameEvent`: an event that carries along an `EntityCore` as context parameter
+- `EntityLeveledUpGameEvent`: an event that carries along an `EntityCore` and an `int` as context parameters, where the `EntityCore` is the entity that leveled up and the `int` is the new level reached
 - `StatChangedGameEvent`: an event that carries along a `StatChangeInfo` context parameter, which contains:
     - A reference to the `EntityStats` component of the entity that has changed
     - The `Stat` that has changed
@@ -770,28 +771,31 @@ The framework comes along with some pre-defined game events:
 
 Along with the game events, the frameworks provides the `*GameEventListener` counterparts, which are components that can be attached to a game object to listen for the events and execute a method when the event is raised. For example, `IntGameEventListener` listens for a specific `IntGameEvent` and executes a method that takes an `int` as parameter when the event is raised.
 
-Let's suppose we need a game event for notifying when an entity reaches level 10. In the inspector, create a new `EntityCoreGameEvent` called `EntityReachedLevel10`. It should look like this:  
-![Entity Reached Level 10](../images/workflows/entity-reached-level-10.png)  
-There are no fields to fill in the inspector. The entity to be passed as context parameter will be passed in the code that is responsible for raising the event.  
-The method to raise the event is `Raise(EntityCore entity)`, which will raise the event and pass along the entity as context parameter. Therefore in a dedicated script you can call it like this:
+Let's suppose we need a game event for notifying, each time the player dies, how many times the player has died so far. In the inspector, create a new `IntGameEvent` called `PlayerDied`. It should look like this:
+
+![Player Died Event](../images/workflows/player-died-event.png)
+
+There are no fields to fill in the inspector. The integer to be passed as context parameter will be passed in the code that is responsible for raising the event.  
+The method to raise the event is `Raise(int value)`, which will raise the event and pass along the integer as context parameter. Therefore in a dedicated script you can call it like this:
 
 ```csharp
-public void OnHeroLevelUp(EntityCore entity) {
-    if (entity.Level == 10) {
-        // Assuming entityReachedLevel10Event is a reference to the EntityReachedLevel10 event
-        entityReachedLevel10Event.Raise(entity);
-    }
-}
-```
-Now let's create a listener for this event. Let's say that we want to show a message in the console when the event is raised. To do this, create a new game object in the hierarchy and add a script that defines a public method for loggin an event, that takes an `EntityCore` as input parameter. It should be like:  
-```csharp
-public void LogEntityReachedLevel10(EntityCore entity) {
-    Debug.Log($"Entity {entity.name} reached level 10!");
+public void OnPlayerDeath() {
+    playerDeathCount++;
+    // Assuming playerDiedEvent is a reference to the PlayerDied event
+    playerDiedEvent.Raise(playerDeathCount);
 }
 ```
 
-Now add the `EntityCoreGameEventListener` component to the listener game object and, in the inspector, assign the `EntityReachedLevel10` event to the `Event` field. Now drag the `Logger` script created before into the `Response`'s object selector. You should be able now to select the `LogEntityReachedLevel10` method from the dropdown menu. The result should look like this:
-![Entity Reached Level 10 Listener](../images/workflows/entity-reached-lvl-10-listener.png)  
+Now let's create a listener for this event. Let's say that we want to show a message in the console when the event is raised. To do this, create a new game object in the hierarchy and add a script that defines a public method for logging an event, that takes an `int` as input parameter. It should be like:  
+```csharp
+public void LogPlayerDeath(int deathCount) {
+    Debug.Log($"Player has died {deathCount} times.");
+}
+```
+
+Now add the `IntGameEventListener` component to the listener game object and, in the inspector, assign the `PlayerDied` event to the `Event` field. Now drag the `Logger` script created before into the `Response`'s object selector. You should be able now to select the `LogPlayerDeath` method from the dropdown menu. The result should look like this:
+
+![Player Died Listener](../images/workflows/player-died-listener.png)
 
 This is a powerful mechanism that decouples the event producers from the event consumers, allowing for a more modular and maintainable codebase. And most of the setup is inspector-based. You just need to define the raising and the listening methods from code.
 
@@ -807,6 +811,7 @@ Sometimes the pre-defined game events are not enough to cover all the use cases.
 #### Game Event Generator setup
 
 Let's create a custom game event generator to manage all the events related to the experience and leveling up of entities. Rename the newly created events generator `EntityLevelingEvents`. In the inspector, it should look like this:
+
 ![Entity Leveling Events](../images/workflows/entity-leveling-events.png)
 
 With `Menu Base Path` we can change the path of the context menu where the generated events will be available for creation. By default, it is set to `Soap RPG Core -> Events -> Generated`, but we can change it to `Soap RPG Core -> Events/Generated/Experience` for the sake of organization.

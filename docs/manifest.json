@@ -305,6 +305,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.EntityLeveledUpGameEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.EntityLeveledUpGameEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.EntityLeveledUpGameEventListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.EntityLeveledUpGameEventListener.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Events.GameEvent.yml",
       "output": {
         ".html": {
@@ -1392,6 +1412,26 @@
       "output": {
         "resource": {
           "relative_path": "images/workflows/physical-attack-strength-scaling.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/workflows/player-died-event.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/workflows/player-died-event.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/workflows/player-died-listener.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/workflows/player-died-listener.png"
         }
       },
       "version": ""

@@ -134,12 +134,12 @@ Used to track and communicate attribute modifications across the system.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AttributeChangeInfo(EntityAttributes source, Attribute attribute, long oldValue, long newValue)</code></pre>
+    <pre><code class="lang-csharp hljs">public AttributeChangeInfo(EntityAttributes entityAttributes, Attribute attribute, long oldValue, long newValue)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>source</code> <a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html">EntityAttributes</a></dt>
+    <dt><code>entityAttributes</code> <a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html">EntityAttributes</a></dt>
     <dd><p>The EntityAttributes instance that owns the changed attribute</p>
 </dd>
     <dt><code>attribute</code> <a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.Attribute.html">Attribute</a></dt>
@@ -190,6 +190,38 @@ Used to track and communicate attribute modifications across the system.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.Attribute.html">Attribute</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_SoapRpgFramework_Attributes_AttributeChangeInfo_EntityAttributes_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo.EntityAttributes*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Attributes_AttributeChangeInfo_EntityAttributes" data-uid="ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo.EntityAttributes">
+  EntityAttributes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/AttributeChangeInfo.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the EntityAttributes instance that owns the changed attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityAttributes EntityAttributes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html">EntityAttributes</a></dt>
     <dd></dd>
   </dl>
 
@@ -254,38 +286,6 @@ Used to track and communicate attribute modifications across the system.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">long</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="ElectricDrill_SoapRpgFramework_Attributes_AttributeChangeInfo_Source_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo.Source*"></a>
-
-  <h3 id="ElectricDrill_SoapRpgFramework_Attributes_AttributeChangeInfo_Source" data-uid="ElectricDrill.SoapRpgFramework.Attributes.AttributeChangeInfo.Source">
-  Source
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/AttributeChangeInfo.cs/#L12"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the EntityAttributes instance that owns the changed attribute.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EntityAttributes Source { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html">EntityAttributes</a></dt>
     <dd></dd>
   </dl>
 

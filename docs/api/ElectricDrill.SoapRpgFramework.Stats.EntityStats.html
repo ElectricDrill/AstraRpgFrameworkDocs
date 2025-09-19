@@ -605,9 +605,9 @@ Otherwise, it returns the value from the fixed base stats.</p>
 
   <a id="ElectricDrill_SoapRpgFramework_Stats_EntityStats_OnLevelUp_" data-uid="ElectricDrill.SoapRpgFramework.Stats.EntityStats.OnLevelUp*"></a>
 
-  <h3 id="ElectricDrill_SoapRpgFramework_Stats_EntityStats_OnLevelUp_System_Int32_" data-uid="ElectricDrill.SoapRpgFramework.Stats.EntityStats.OnLevelUp(System.Int32)">
-  OnLevelUp(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ElectricDrill_SoapRpgFramework_Stats_EntityStats_OnLevelUp_ElectricDrill_SoapRpgFramework_EntityCore_System_Int32_" data-uid="ElectricDrill.SoapRpgFramework.Stats.EntityStats.OnLevelUp(ElectricDrill.SoapRpgFramework.EntityCore,System.Int32)">
+  OnLevelUp(EntityCore, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/EntityStats.cs/#L287"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Callback method called when the entity levels up.</p>
@@ -615,12 +615,15 @@ Otherwise, it returns the value from the fixed base stats.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnLevelUp(int level)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void OnLevelUp(EntityCore entity, int newLevel)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>level</code> <span class="xref">int</span></dt>
+    <dt><code>entity</code> <a class="xref" href="ElectricDrill.SoapRpgFramework.EntityCore.html">EntityCore</a></dt>
+    <dd><p>The entity that leveled up.</p>
+</dd>
+    <dt><code>newLevel</code> <span class="xref">int</span></dt>
     <dd><p>The new level of the entity.</p>
 </dd>
   </dl>
