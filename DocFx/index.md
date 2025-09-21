@@ -84,7 +84,8 @@ Game events are ScriptableObjects. Instantiate events in your assets, then drag 
 The framework provides a set of predefined game events (and MonoBehaviour listeners) to get you started quickly:
 
 - **GameEvent:** No context parameters. For simple events like 'Player Jumped', 'Player Slept', etc.
-- **IntGameEvent:** One integer context parameter. For example, 'Player Leveled Up' uses the new level as the context.
+- **IntGameEvent:** One integer context parameter.
+- **EntityLeveledUpGameEvent:** An event that carries along an EntityCore and an int as context parameters, where the EntityCore is the entity that leveled up and the int is the new level reached.
 - **StatChangedGameEvent:** Notifies when a stat changes for a specific entity.
 - **AttributeChangedGameEvent:** Notifies when an attribute changes for a specific entity.
 
