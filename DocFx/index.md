@@ -27,7 +27,7 @@ Simple, lightweight, and easy to learn. No configuration required: **works out o
 
 ### 🧼 Implemented on top of SOAP: Scriptable Object Architecture Pattern
 
-- 🎨 **Designer-friendly:** All features are ScriptableObjects, easily created and wired in the Unity Inspector. Custom inspectors are available for everything.
+- 🎨 **Designer-friendly:** Most of the features are ScriptableObjects, easily created and wired in the Unity Inspector. Custom inspectors are available for everything.
 - 🧩 **Reusable and modular:** Objects can be reused across game objects and scenes. They are the building blocks for your game. **Instantiate, compose, reuse**. Changes instantly reflect on dependent objects. No duplication, no hassle.
 - 🧪 **Easy testing:** Swap objects, switch from class-based stats to fixed ones, or replace complex formulas—all without leaving play mode. Debugging and testing is effortless.
 

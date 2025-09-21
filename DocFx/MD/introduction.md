@@ -92,7 +92,7 @@ Game Event Generators are ScriptableObjects that let you define custom game even
 The package is developed following the principles of SOAP (Scriptable Object Architecture Pattern), and has been inspired by the [GDC talk of Ryan Hipple](https://www.youtube.com/watch?v=raQ3iHhE_Kk&ab_channel=Unity). In a nutshell, the main benefits provided by this architecture are:
 - **encapsulation**: separation of game logic from data. Game logic code shouldn't mix with data. All data is nicely wrapped withing SO instances
 - **game designers friendly**: game designers can make changes and balancements from the inspector without touching the code
-- **greater reusability**: Each object is a `ScriptableObject` that can be reused by many components
+- **greater reusability**: most features are `ScriptableObject`s that can be reused by many components
 - **greater testability**: being data separated from code, is easier to isolate and fix bugs. Moreover, SO events can be raised with ease at the press of a button from the inspector interface, easing and speeding up debugging even further.
 
 ## Flexibility of Soap RPG Framework
