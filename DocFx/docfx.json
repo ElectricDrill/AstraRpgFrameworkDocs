@@ -3,7 +3,7 @@
       {
           "src": [
               {
-                  "src": "../../GeometricalInvaders",
+                  "src": "../../SoapRpgFrameworkPublishing",
                   "files": [
                       "com.electricdrill.soap-rpg-framework.Runtime.csproj"
                   ],
