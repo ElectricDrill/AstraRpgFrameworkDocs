@@ -1176,6 +1176,12 @@ references:
   commentId: T:ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType
   fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType
   nameWithType: GameEventGenerator.EventParameter.ParameterType
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType.Enum
+  name: Enum
+  href: api/ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType.html#ElectricDrill_SoapRpgFramework_Events_GameEventGenerator_EventParameter_ParameterType_Enum
+  commentId: F:ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType.Enum
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType.Enum
+  nameWithType: GameEventGenerator.EventParameter.ParameterType.Enum
 - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType.MonoScript
   name: MonoScript
   href: api/ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType.html#ElectricDrill_SoapRpgFramework_Events_GameEventGenerator_EventParameter_ParameterType_MonoScript
@@ -1188,6 +1194,12 @@ references:
   commentId: F:ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType.Native
   fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType.Native
   nameWithType: GameEventGenerator.EventParameter.ParameterType.Native
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.enumScript
+  name: enumScript
+  href: api/ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.html#ElectricDrill_SoapRpgFramework_Events_GameEventGenerator_EventParameter_enumScript
+  commentId: F:ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.enumScript
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.enumScript
+  nameWithType: GameEventGenerator.EventParameter.enumScript
 - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.monoScript
   name: monoScript
   href: api/ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.EventParameter.html#ElectricDrill_SoapRpgFramework_Events_GameEventGenerator_EventParameter_monoScript
@@ -1271,6 +1283,12 @@ references:
   commentId: F:ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.baseSaveLocation
   fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.baseSaveLocation
   nameWithType: GameEventGenerator.baseSaveLocation
+- uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.customNamespace
+  name: customNamespace
+  href: api/ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.html#ElectricDrill_SoapRpgFramework_Events_GameEventGenerator_customNamespace
+  commentId: F:ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.customNamespace
+  fullName: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.customNamespace
+  nameWithType: GameEventGenerator.customNamespace
 - uid: ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.eventsToGenerate
   name: eventsToGenerate
   href: api/ElectricDrill.SoapRpgFramework.Events.GameEventGenerator.html#ElectricDrill_SoapRpgFramework_Events_GameEventGenerator_eventsToGenerate
@@ -1884,6 +1902,12 @@ references:
   commentId: T:ElectricDrill.SoapRpgFramework.Events.StatChangedGameEventListener
   fullName: ElectricDrill.SoapRpgFramework.Events.StatChangedGameEventListener
   nameWithType: StatChangedGameEventListener
+- uid: ElectricDrill.SoapRpgFramework.ExcludeFromDerivedTypePickerAttribute
+  name: ExcludeFromDerivedTypePickerAttribute
+  href: api/ElectricDrill.SoapRpgFramework.ExcludeFromDerivedTypePickerAttribute.html
+  commentId: T:ElectricDrill.SoapRpgFramework.ExcludeFromDerivedTypePickerAttribute
+  fullName: ElectricDrill.SoapRpgFramework.ExcludeFromDerivedTypePickerAttribute
+  nameWithType: ExcludeFromDerivedTypePickerAttribute
 - uid: ElectricDrill.SoapRpgFramework.ExpSource
   name: ExpSource
   href: api/ElectricDrill.SoapRpgFramework.ExpSource.html

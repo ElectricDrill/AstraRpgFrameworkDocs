@@ -22,6 +22,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "MD/changelog.md",
+      "output": {
+        ".html": {
+          "relative_path": "MD/changelog.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "MD/installation-instructions.md",
       "output": {
         ".html": {
@@ -559,6 +569,16 @@
       "output": {
         ".html": {
           "relative_path": "api/ElectricDrill.SoapRpgFramework.Events.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.ExcludeFromDerivedTypePickerAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.ExcludeFromDerivedTypePickerAttribute.html"
         }
       },
       "version": ""
