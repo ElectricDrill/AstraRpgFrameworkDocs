@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_SoapRpgFramework_EntityCore" data-uid="ElectricDrill.SoapRpgFramework.EntityCore" class="text-break">
-Class EntityCore  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L14"><i class="bi bi-code-slash"></i></a>
+Class EntityCore  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -105,7 +105,7 @@ Provides easy access to the entity's level, stats, and attributes.</p>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[DisallowMultipleComponent]
-public class EntityCore : MonoBehaviour, ILevel, IAttributes</code></pre>
+public class EntityCore : MonoBehaviour</code></pre>
   </div>
 
 
@@ -123,13 +123,6 @@ public class EntityCore : MonoBehaviour, ILevel, IAttributes</code></pre>
     </dd>
   </dl>
 
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><a class="xref" href="ElectricDrill.SoapRpgFramework.ILevel.html">ILevel</a></div>
-      <div><a class="xref" href="ElectricDrill.SoapRpgFramework.IAttributes.html">IAttributes</a></div>
-    </dd>
-  </dl>
 
 
 
@@ -146,7 +139,7 @@ public class EntityCore : MonoBehaviour, ILevel, IAttributes</code></pre>
 
   <h3 id="ElectricDrill_SoapRpgFramework_EntityCore_Attributes" data-uid="ElectricDrill.SoapRpgFramework.EntityCore.Attributes">
   Attributes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the <a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html">EntityAttributes</a> component which manages the entity's attributes.</p>
@@ -178,10 +171,10 @@ public class EntityCore : MonoBehaviour, ILevel, IAttributes</code></pre>
 
   <h3 id="ElectricDrill_SoapRpgFramework_EntityCore_Level" data-uid="ElectricDrill.SoapRpgFramework.EntityCore.Level">
   Level
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="ElectricDrill.SoapRpgFramework.EntityLevel.html">EntityLevel</a> class which manages the entity's level and experience.</p>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="ElectricDrill.SoapRpgFramework.Experience.EntityLevel.html">EntityLevel</a> class which manages the entity's level and experience.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -195,7 +188,7 @@ public class EntityCore : MonoBehaviour, ILevel, IAttributes</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.EntityLevel.html">EntityLevel</a></dt>
+    <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Experience.EntityLevel.html">EntityLevel</a></dt>
     <dd></dd>
   </dl>
 
@@ -210,7 +203,7 @@ public class EntityCore : MonoBehaviour, ILevel, IAttributes</code></pre>
 
   <h3 id="ElectricDrill_SoapRpgFramework_EntityCore_Name" data-uid="ElectricDrill.SoapRpgFramework.EntityCore.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the name of the entity's GameObject.</p>
@@ -242,7 +235,7 @@ public class EntityCore : MonoBehaviour, ILevel, IAttributes</code></pre>
 
   <h3 id="ElectricDrill_SoapRpgFramework_EntityCore_Stats" data-uid="ElectricDrill.SoapRpgFramework.EntityCore.Stats">
   Stats
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the <a class="xref" href="ElectricDrill.SoapRpgFramework.Stats.EntityStats.html">EntityStats</a> component which manages the entity's stats.</p>
@@ -278,7 +271,7 @@ public class EntityCore : MonoBehaviour, ILevel, IAttributes</code></pre>
 
   <h3 id="ElectricDrill_SoapRpgFramework_EntityCore_Awake" data-uid="ElectricDrill.SoapRpgFramework.EntityCore.Awake">
   Awake()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -304,7 +297,7 @@ public class EntityCore : MonoBehaviour, ILevel, IAttributes</code></pre>
 
   <h3 id="ElectricDrill_SoapRpgFramework_EntityCore_Start" data-uid="ElectricDrill.SoapRpgFramework.EntityCore.Start">
   Start()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -330,7 +323,7 @@ public class EntityCore : MonoBehaviour, ILevel, IAttributes</code></pre>
 
   <h3 id="ElectricDrill_SoapRpgFramework_EntityCore_Update" data-uid="ElectricDrill.SoapRpgFramework.EntityCore.Update">
   Update()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -356,7 +349,7 @@ public class EntityCore : MonoBehaviour, ILevel, IAttributes</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L14" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/EntityCore.cs/#L16" class="edit-link">Edit this page</a>
         </div>
 
 

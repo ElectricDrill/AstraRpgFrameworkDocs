@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IStatContainer | SOAP RPG Framework ">
       
-      <meta name="description" content="Interface for objects that can contain and check for the presence of stats. Provides basic functionality for stat container validation.">
+      <meta name="description" content="Interface for objects that can contain and query stats. Provides a standardized way to check for stat containment across different stat containers.">
       <link rel="icon" href="../images/soap-rpg-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,8 +97,8 @@ Interface IStatContainer  <a class="header-action link-secondary" title="View so
   <dl><dt>Assembly</dt><dd>com.electricdrill.soap-rpg-framework.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Interface for objects that can contain and check for the presence of stats.
-Provides basic functionality for stat container validation.</p>
+  <div class="markdown summary"><p>Interface for objects that can contain and query stats.
+Provides a standardized way to check for stat containment across different stat containers.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -129,7 +129,7 @@ Provides basic functionality for stat container validation.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Stats/IStatContainer.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Determines whether the container contains the specified stat.</p>
+  <div class="markdown level1 summary"><p>Determines whether the container includes the specified stat.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -140,14 +140,14 @@ Provides basic functionality for stat container validation.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>stat</code> <a class="xref" href="ElectricDrill.SoapRpgFramework.Stats.Stat.html">Stat</a></dt>
-    <dd><p>The stat to check for.</p>
+    <dd><p>The stat to locate in the container.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">bool</span></dt>
-    <dd><p>true if the container contains the stat; otherwise, false.</p>
+    <dd><p>True if the stat is found in the container; otherwise, false.</p>
 </dd>
   </dl>
 

@@ -95,101 +95,10 @@
 Classes
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.BoundedValue.html">BoundedValue</a></dt>
-      <dd><p>Abstract base class for values that can be bounded by minimum and maximum limits.
-Provides functionality to define optional min/max constraints and clamp values within those bounds.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Class.html">Class</a></dt>
-      <dd><p>Represents a character class in the RPG system.
-It can be used to define how attributes and stats grow over levels.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.ClassMenuItems.html">ClassMenuItems</a></dt>
-      <dd><p>Provides a menu item in the Unity Editor to create a Class asset.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.EntityClass.html">EntityClass</a></dt>
-      <dd><p>Component that represents the class of an entity in the game.
-Implements <a class="xref" href="ElectricDrill.SoapRpgFramework.IClassSource.html">IClassSource</a> to provide access to the entity's class definition.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.EntityCore.html">EntityCore</a></dt>
       <dd><p>The core component for any entity in the game.
 It is the mandatory base class for all entities, providing essential functionality.
 Provides easy access to the entity's level, stats, and attributes.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.EntityLevel.html">EntityLevel</a></dt>
-      <dd><p>Represents the level and experience system of an entity in the RPG framework.
-Handles experience gain, level progression, and experience-based calculations.
-Implements <a class="xref" href="ElectricDrill.SoapRpgFramework.ILevelable.html">ILevelable</a> to provide standard leveling functionality.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.ExcludeFromDerivedTypePickerAttribute.html">ExcludeFromDerivedTypePickerAttribute</a></dt>
-      <dd></dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.ExpSource.html">ExpSource</a></dt>
-      <dd><p>A MonoBehaviour component that provides a source of experience points.
-Implements <a class="xref" href="ElectricDrill.SoapRpgFramework.IExpSource.html">IExpSource</a> and can only be harvested once.
-Once harvested, subsequent calls to Exp will return 0.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.GrowthFormula.html">GrowthFormula</a></dt>
-      <dd><p>Represents a formula to calculate growth values for different levels, up to a maximum level.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.GrowthFormulaMenuItems.html">GrowthFormulaMenuItems</a></dt>
-      <dd><p>Provides a menu item in the Unity Editor to create a GrowthFormula asset.</p>
-</dd>
-    </dl>
-    <h3 id="interfaces">
-Interfaces
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.IAttributes.html">IAttributes</a></dt>
-      <dd><p>Interface for entities that have an attributes system.
-Provides access to the entity's attributes component.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.IClassSource.html">IClassSource</a></dt>
-      <dd><p>Interface for objects that provide a source of a class.
-In RPG games, a class typically defines the role or profession of an entity,
-such as a warrior, mage, or rogue.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.IExpSource.html">IExpSource</a></dt>
-      <dd><p>Interface for objects that can provide experience points.
-Defines the contract for experience sources that can be harvested.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.ILevel.html">ILevel</a></dt>
-      <dd><p>Interface for entities that have a level system.
-Provides access to the entity's level management component.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.ILevelable.html">ILevelable</a></dt>
-      <dd><p>Interface for entities that have a leveling system based on experience points.
-Provides the core functionality for level progression and experience management.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.IStatSetSource.html">IStatSetSource</a></dt>
-      <dd><p>Interface for objects that provide a source of stat sets.
-Defines the contract for accessing a StatSet that contains stat definitions.</p>
 </dd>
     </dl>
 
