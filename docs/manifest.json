@@ -1095,6 +1095,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.IValueContainer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.IValueContainer-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.IValueProvider-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.IValueProvider-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.SoapRpgFramework.Utils.InitializationUtils.yml",
       "output": {
         ".html": {

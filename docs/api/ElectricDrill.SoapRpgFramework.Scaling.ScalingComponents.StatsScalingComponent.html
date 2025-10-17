@@ -102,7 +102,7 @@ Class StatsScalingComponent  <a class="header-action link-secondary" title="View
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StatsScalingComponent : SoSetScalingComponentBase&lt;StatSet, Stat&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class StatsScalingComponent : SoSetScalingComponentBase&lt;StatSet, Stat&gt;, IValueProvider&lt;Stat, double&gt;</code></pre>
   </div>
 
 
@@ -120,6 +120,12 @@ Class StatsScalingComponent  <a class="header-action link-secondary" title="View
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="ElectricDrill.SoapRpgFramework.Utils.IValueProvider-2.html">IValueProvider</a>&lt;<a class="xref" href="ElectricDrill.SoapRpgFramework.Stats.Stat.html">Stat</a>, <span class="xref">double</span>&gt;</div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -133,6 +139,9 @@ Class StatsScalingComponent  <a class="header-action link-secondary" title="View
     </div>
     <div>
       <a class="xref" href="ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_CalculateValue_ElectricDrill_SoapRpgFramework_EntityCore_">SoSetScalingComponentBase&lt;StatSet, Stat&gt;.CalculateValue(EntityCore)</a>
+    </div>
+    <div>
+      <a class="xref" href="ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_Get__1_">SoSetScalingComponentBase&lt;StatSet, Stat&gt;.Get(Stat)</a>
     </div>
     <div>
       <a class="xref" href="ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_ValidateEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_">SoSetScalingComponentBase&lt;StatSet, Stat&gt;.ValidateEntitySet(EntityCore)</a>

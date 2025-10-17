@@ -106,7 +106,7 @@ It requires an <span class="xref">ElectricDrill.SoapRpgFramework.Attributes.Enti
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[DisallowMultipleComponent]
 [RequireComponent(typeof(EntityCore))]
-public class EntityAttributes : MonoBehaviour, IHasAttributeSet</code></pre>
+public class EntityAttributes : MonoBehaviour, IHasAttributeSet, IValueProvider&lt;Attribute, long&gt;</code></pre>
   </div>
 
 
@@ -128,6 +128,7 @@ public class EntityAttributes : MonoBehaviour, IHasAttributeSet</code></pre>
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.IHasAttributeSet.html">IHasAttributeSet</a></div>
+      <div><a class="xref" href="ElectricDrill.SoapRpgFramework.Utils.IValueProvider-2.html">IValueProvider</a>&lt;<a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.Attribute.html">Attribute</a>, <span class="xref">long</span>&gt;</div>
     </dd>
   </dl>
 
@@ -146,11 +147,11 @@ public class EntityAttributes : MonoBehaviour, IHasAttributeSet</code></pre>
 
   <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AttributeSet" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AttributeSet">
   AttributeSet
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L190"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the <a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AttributeSet">AttributeSet</a> used by this entity.
-The source of the attribute set depends on whether <span class="xref">ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes._useBaseAttributesFromClass</span> is true.
+The source of the attribute set depends on whether <a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_UseBaseAttributesFromClass">UseBaseAttributesFromClass</a> is true.
 If true, it returns the attribute set from the <a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_EntityClass">EntityClass</a>.
 Otherwise, it returns the <span class="xref">ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes._fixedBaseAttributeSet</span>.</p>
 </div>
@@ -181,7 +182,7 @@ Otherwise, it returns the <span class="xref">ElectricDrill.SoapRpgFramework.Attr
 
   <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AvailableAttributePoints" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AvailableAttributePoints">
   AvailableAttributePoints
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the number of attribute points currently available to spend.</p>
@@ -213,7 +214,7 @@ Otherwise, it returns the <span class="xref">ElectricDrill.SoapRpgFramework.Attr
 
   <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_EntityClass" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.EntityClass">
   EntityClass
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the class for this entity.
@@ -246,7 +247,7 @@ The class is used to determine base attributes when <span class="xref">ElectricD
 
   <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_FlatModifiers" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.FlatModifiers">
   FlatModifiers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L250"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the instance of flat modifiers for the attributes.
@@ -310,7 +311,7 @@ Flat modifiers are added directly to the base attribute values.</p>
 
   <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_PercentageModifiers" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.PercentageModifiers">
   PercentageModifiers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L256"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the instance of percentage modifiers for the attributes.
@@ -343,7 +344,7 @@ Percentage modifiers are applied after flat modifiers.</p>
 
   <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_TotalAttributePoints" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.TotalAttributePoints">
   TotalAttributePoints
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the total number of attribute points, including both available and spent points.</p>
@@ -371,6 +372,40 @@ Percentage modifiers are applied after flat modifiers.</p>
 
 
 
+  <a id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_UseBaseAttributesFromClass_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.UseBaseAttributesFromClass*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_UseBaseAttributesFromClass" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.UseBaseAttributesFromClass">
+  UseBaseAttributesFromClass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether to use base attributes from the entity's class.
+If true, base attributes are derived from the <a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_EntityClass">EntityClass</a>.
+If false, fixed base attributes defined in this component are used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseBaseAttributesFromClass { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -379,7 +414,7 @@ Percentage modifiers are applied after flat modifiers.</p>
 
   <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AddFlatModifier_ElectricDrill_SoapRpgFramework_Attributes_Attribute_System_Int64_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AddFlatModifier(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int64)">
   AddFlatModifier(Attribute, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L309"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a flat modifier to an attribute.</p>
@@ -415,7 +450,7 @@ Percentage modifiers are applied after flat modifiers.</p>
 
   <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_AddPercentageModifier_ElectricDrill_SoapRpgFramework_Attributes_Attribute_ElectricDrill_SoapRpgFramework_Utils_Percentage_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.AddPercentageModifier(ElectricDrill.SoapRpgFramework.Attributes.Attribute,ElectricDrill.SoapRpgFramework.Utils.Percentage)">
   AddPercentageModifier(Attribute, Percentage)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L322"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a percentage modifier to an attribute.</p>
@@ -451,7 +486,7 @@ Percentage modifiers are applied after flat modifiers.</p>
 
   <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_Get_ElectricDrill_SoapRpgFramework_Attributes_Attribute_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.Get(ElectricDrill.SoapRpgFramework.Attributes.Attribute)">
   Get(Attribute)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L274"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the final calculated value of a specific attribute.
@@ -492,7 +527,7 @@ The result is clamped to the attribute's min/max values.</p>
 
   <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_GetAllSpentPoints" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetAllSpentPoints">
   GetAllSpentPoints()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L114"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a dictionary containing the number of attribute points spent on each attribute.</p>
@@ -525,7 +560,7 @@ The result is clamped to the attribute's min/max values.</p>
 
   <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_GetBase_ElectricDrill_SoapRpgFramework_Attributes_Attribute_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetBase(ElectricDrill.SoapRpgFramework.Attributes.Attribute)">
   GetBase(Attribute)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L336"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the base value of an attribute at the entity's current level.
@@ -565,7 +600,7 @@ Base attributes don't consider flat or percentage modifiers, nor spent attribute
 
   <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_GetSpentOn_ElectricDrill_SoapRpgFramework_Attributes_Attribute_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.GetSpentOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute)">
   GetSpentOn(Attribute)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the number of attribute points spent on a specific attribute.</p>
@@ -604,7 +639,7 @@ Base attributes don't consider flat or percentage modifiers, nor spent attribute
 
   <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_RefundAllSpentPoints" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundAllSpentPoints">
   RefundAllSpentPoints()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Refunds all spent attribute points, making them available to spend again.</p>
@@ -631,7 +666,7 @@ Base attributes don't consider flat or percentage modifiers, nor spent attribute
 
   <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_RefundPointsForAttribute_ElectricDrill_SoapRpgFramework_Attributes_Attribute_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundPointsForAttribute(ElectricDrill.SoapRpgFramework.Attributes.Attribute)">
   RefundPointsForAttribute(Attribute)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L176"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Refunds all spent attribute points for a specific attribute, making them available to spend again.</p>
@@ -660,11 +695,48 @@ Base attributes don't consider flat or percentage modifiers, nor spent attribute
 
 
 
+  <a id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_SetFixed_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SetFixed*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_SetFixed_ElectricDrill_SoapRpgFramework_Attributes_Attribute_System_Int64_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SetFixed(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int64)">
+  SetFixed(Attribute, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a fixed base value for a specific attribute.
+This is only applicable when <a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_UseBaseAttributesFromClass">UseBaseAttributesFromClass</a> is false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFixed(Attribute attribute, long value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attribute</code> <a class="xref" href="ElectricDrill.SoapRpgFramework.Attributes.Attribute.html">Attribute</a></dt>
+    <dd><p>The attribute to set.</p>
+</dd>
+    <dt><code>value</code> <span class="xref">long</span></dt>
+    <dd><p>The fixed base value to assign.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_SpendOn_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn*"></a>
 
   <h3 id="ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_SpendOn_ElectricDrill_SoapRpgFramework_Attributes_Attribute_System_Int32_" data-uid="ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int32)">
   SpendOn(Attribute, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Attributes/EntityAttributes.cs/#L142"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Spends a certain amount of attribute points on a specific attribute.</p>

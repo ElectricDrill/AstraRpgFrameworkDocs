@@ -102,7 +102,7 @@ Class SoSetScalingComponentBase&lt;SetType, KeyType&gt;  <a class="header-action
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SoSetScalingComponentBase&lt;SetType, KeyType&gt; : ScalingComponent where SetType : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SoSetScalingComponentBase&lt;SetType, KeyType&gt; : ScalingComponent, IValueProvider&lt;KeyType, double&gt; where SetType : ScriptableObject</code></pre>
   </div>
 
 
@@ -128,6 +128,12 @@ Class SoSetScalingComponentBase&lt;SetType, KeyType&gt;  <a class="header-action
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="ElectricDrill.SoapRpgFramework.Utils.IValueProvider-2.html">IValueProvider</a>&lt;KeyType, <span class="xref">double</span>&gt;</div>
+    </dd>
+  </dl>
 
   <dl class="typelist derived">
     <dt>Derived</dt>
@@ -257,11 +263,50 @@ protected SetType _set</code></pre>
 
 
 
+  <a id="ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_Get_" data-uid="ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.Get*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_Get__1_" data-uid="ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.Get(`1)">
+  Get(KeyType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/SoSetScalingComponentBase.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the value associated with the specified key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual double Get(KeyType key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <span class="xref">KeyType</span></dt>
+    <dd><p>The key used to retrieve the value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">double</span></dt>
+    <dd><p>The value associated with the specified key.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntitySet_" data-uid="ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntitySet*"></a>
 
   <h3 id="ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_" data-uid="ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)">
   GetEntitySet(EntityCore)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/SoSetScalingComponentBase.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/SoSetScalingComponentBase.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the set associated with the specified entity.
@@ -301,7 +346,7 @@ This method must be implemented by derived classes to define how to retrieve the
 
   <h3 id="ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntityValue_ElectricDrill_SoapRpgFramework_EntityCore__1_" data-uid="ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntityValue(ElectricDrill.SoapRpgFramework.EntityCore,`1)">
   GetEntityValue(EntityCore, KeyType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/SoSetScalingComponentBase.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/SoSetScalingComponentBase.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the current value of a specific key for the given entity.
@@ -344,7 +389,7 @@ This method must be implemented by derived classes to define how to retrieve ent
 
   <h3 id="ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetSetItems" data-uid="ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetSetItems">
   GetSetItems()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/SoSetScalingComponentBase.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/SoSetScalingComponentBase.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets all items from the current set that can be used for scaling.
@@ -378,7 +423,7 @@ This method must be implemented by derived classes to define which items are ava
 
   <h3 id="ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_OnValidate" data-uid="ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.OnValidate">
   OnValidate()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/SoSetScalingComponentBase.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/SoSetScalingComponentBase.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Validates and refreshes the scaling attribute values based on the current set.
@@ -406,7 +451,7 @@ Called automatically when the component is validated in the editor.</p>
 
   <h3 id="ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_ValidateEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_" data-uid="ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.ValidateEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)">
   ValidateEntitySet(EntityCore)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/SoSetScalingComponentBase.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Scaling/SoSetScalingComponentBase.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Validates that the entity's set is compatible with this scaling component's set.

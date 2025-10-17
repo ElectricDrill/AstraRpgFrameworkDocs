@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Namespace ElectricDrill.SoapRpgFramework.Stats | SOAP RPG Framework </title>
+      <title>Interface IValueProvider&lt;KeyType, ReturnType&gt; | SOAP RPG Framework </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Namespace ElectricDrill.SoapRpgFramework.Stats | SOAP RPG Framework ">
+      <meta name="title" content="Interface IValueProvider&lt;KeyType, ReturnType&gt; | SOAP RPG Framework ">
       
-      
+      <meta name="description" content="Provides a method to retrieve a value based on a key.">
       <link rel="icon" href="../images/soap-rpg-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      
+      <meta name="docfx:docurl" content="https://github.com/Cis8/SoapRpgFramework/new/main/apiSpec/new?filename=ElectricDrill_SoapRpgFramework_Utils_IValueProvider_2.md&amp;value=---%0Auid%3A%20ElectricDrill.SoapRpgFramework.Utils.IValueProvider%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,86 +84,96 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ElectricDrill.SoapRpgFramework.Stats">
+        <article data-uid="ElectricDrill.SoapRpgFramework.Utils.IValueProvider`2">
 
-  <h1 id="ElectricDrill_SoapRpgFramework_Stats" data-uid="ElectricDrill.SoapRpgFramework.Stats" class="text-break">Namespace ElectricDrill.SoapRpgFramework.Stats</h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
 
-    <h3 id="classes">
-Classes
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Stats.EntityStats.html">EntityStats</a></dt>
-      <dd><p>Component that manages the statistics of an entity in the game.
-It handles base stats, flat stat modifiers, stat to stat modifiers, and percentage stat modifiers.<br>
-Base stats can either be fixed or come from the entity's class (if one is available on the Game Object).
-When stats change because of a modifier of any kind, the assigned <a class="xref" href="ElectricDrill.SoapRpgFramework.Events.StatChangedGameEvent.html">StatChangedGameEvent</a> is raised.</p>
+
+  <h1 id="ElectricDrill_SoapRpgFramework_Utils_IValueProvider_2" data-uid="ElectricDrill.SoapRpgFramework.Utils.IValueProvider`2" class="text-break">
+Interface IValueProvider&lt;KeyType, ReturnType&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Utils/IValueProvider.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ElectricDrill.html">ElectricDrill</a>.<a class="xref" href="ElectricDrill.SoapRpgFramework.html">SoapRpgFramework</a>.<a class="xref" href="ElectricDrill.SoapRpgFramework.Utils.html">Utils</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>com.electricdrill.soap-rpg-framework.Runtime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides a method to retrieve a value based on a key.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IValueProvider&lt;in KeyType, out ReturnType&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>KeyType</code></dt>
+    <dd><p>The type of key used to retrieve the value.</p>
 </dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Stats.Stat.html">Stat</a></dt>
-      <dd><p>Represents a stat in the RPG system that extends BoundedValue with attribute scaling capabilities.
-Stats can be scaled based on entity attributes and provide equality comparison based on name.</p>
+    <dt><code>ReturnType</code></dt>
+    <dd><p>The type of value returned by the provider.</p>
 </dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Stats.StatMenuItems.html">StatMenuItems</a></dt>
-      <dd><p>Provides Unity Editor menu items for creating Stat assets.</p>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="ElectricDrill_SoapRpgFramework_Utils_IValueProvider_2_Get_" data-uid="ElectricDrill.SoapRpgFramework.Utils.IValueProvider`2.Get*"></a>
+
+  <h3 id="ElectricDrill_SoapRpgFramework_Utils_IValueProvider_2_Get__0_" data-uid="ElectricDrill.SoapRpgFramework.Utils.IValueProvider`2.Get(`0)">
+  Get(KeyType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Utils/IValueProvider.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the value associated with the specified key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ReturnType Get(KeyType key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <span class="xref">KeyType</span></dt>
+    <dd><p>The key used to retrieve the value.</p>
 </dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Stats.StatSet.html">StatSet</a></dt>
-      <dd><p>A ScriptableObject that defines a collection of stats that can be used by entities.
-Implements IStatContainer to provide stat containment functionality.</p>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ReturnType</span></dt>
+    <dd><p>The value associated with the specified key.</p>
 </dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Stats.StatSetInstance.html">StatSetInstance</a></dt>
-      <dd><p>Represents an instance of a StatSet with actual values for each stat.
-Implements IEnumerable and IStatContainer to provide collection functionality.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Stats.StatSetMenuItems.html">StatSetMenuItems</a></dt>
-      <dd><p>Provides Unity Editor menu items for creating StatSet assets.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Stats.StatToStatModifier.html">StatToStatModifier</a></dt>
-      <dd><p>A ScriptableObject that defines how one stat can scale upon another stat basing on a percentage.
-Used to create relationships between different stats in the RPG system.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Stats.StatToStatModifierMenuItems.html">StatToStatModifierMenuItems</a></dt>
-      <dd><p>Provides Unity Editor menu items for creating StatToStatModifier assets.</p>
-</dd>
-    </dl>
-    <h3 id="structs">
-Structs
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Stats.StatChangeInfo.html">StatChangeInfo</a></dt>
-      <dd><p>Contains information about a stat change event, including the entity, stat, and old/new values.
-Used for tracking and responding to stat modifications.</p>
-</dd>
-    </dl>
-    <h3 id="interfaces">
-Interfaces
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ElectricDrill.SoapRpgFramework.Stats.IHasStatSet.html">IHasStatSet</a></dt>
-      <dd><p>Interface for objects that provide a source of stat sets.
-Defines the contract for accessing a StatSet that contains stat definitions.</p>
-</dd>
-    </dl>
+  </dl>
+
+
+
+
+
+
+
+
+
+
 
 
 </article>
 
         <div class="contribution d-print-none">
+          <a href="https://github.com/Cis8/SoapRpgFramework/blob/main/Runtime/Utils/IValueProvider.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

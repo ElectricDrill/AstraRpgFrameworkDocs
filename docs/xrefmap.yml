@@ -555,6 +555,22 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.RefundPointsForAttribute
   nameWithType: EntityAttributes.RefundPointsForAttribute
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SetFixed(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int64)
+  name: SetFixed(Attribute, long)
+  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_SetFixed_ElectricDrill_SoapRpgFramework_Attributes_Attribute_System_Int64_
+  commentId: M:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SetFixed(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int64)
+  name.vb: SetFixed(Attribute, Long)
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SetFixed(ElectricDrill.SoapRpgFramework.Attributes.Attribute, long)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SetFixed(ElectricDrill.SoapRpgFramework.Attributes.Attribute, Long)
+  nameWithType: EntityAttributes.SetFixed(Attribute, long)
+  nameWithType.vb: EntityAttributes.SetFixed(Attribute, Long)
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SetFixed*
+  name: SetFixed
+  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_SetFixed_
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SetFixed
+  isSpec: "True"
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SetFixed
+  nameWithType: EntityAttributes.SetFixed
 - uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.SpendOn(ElectricDrill.SoapRpgFramework.Attributes.Attribute,System.Int32)
   name: SpendOn(Attribute, int)
   href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_SpendOn_ElectricDrill_SoapRpgFramework_Attributes_Attribute_System_Int32_
@@ -584,6 +600,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.TotalAttributePoints
   nameWithType: EntityAttributes.TotalAttributePoints
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.UseBaseAttributesFromClass
+  name: UseBaseAttributesFromClass
+  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_UseBaseAttributesFromClass
+  commentId: P:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.UseBaseAttributesFromClass
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.UseBaseAttributesFromClass
+  nameWithType: EntityAttributes.UseBaseAttributesFromClass
+- uid: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.UseBaseAttributesFromClass*
+  name: UseBaseAttributesFromClass
+  href: api/ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_SoapRpgFramework_Attributes_EntityAttributes_UseBaseAttributesFromClass_
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.UseBaseAttributesFromClass
+  isSpec: "True"
+  fullName: ElectricDrill.SoapRpgFramework.Attributes.EntityAttributes.UseBaseAttributesFromClass
+  nameWithType: EntityAttributes.UseBaseAttributesFromClass
 - uid: ElectricDrill.SoapRpgFramework.Attributes.IAttributeContainer
   name: IAttributeContainer
   href: api/ElectricDrill.SoapRpgFramework.Attributes.IAttributeContainer.html
@@ -3090,6 +3119,23 @@ references:
   fullName.vb: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType).CalculateValue
   nameWithType: SoSetScalingComponentBase<SetType, KeyType>.CalculateValue
   nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType).CalculateValue
+- uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.Get(`1)
+  name: Get(KeyType)
+  href: api/ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_Get__1_
+  commentId: M:ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.Get(`1)
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase<SetType, KeyType>.Get(KeyType)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType).Get(KeyType)
+  nameWithType: SoSetScalingComponentBase<SetType, KeyType>.Get(KeyType)
+  nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType).Get(KeyType)
+- uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.Get*
+  name: Get
+  href: api/ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_Get_
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.Get
+  isSpec: "True"
+  fullName: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase<SetType, KeyType>.Get
+  fullName.vb: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase(Of SetType, KeyType).Get
+  nameWithType: SoSetScalingComponentBase<SetType, KeyType>.Get
+  nameWithType.vb: SoSetScalingComponentBase(Of SetType, KeyType).Get
 - uid: ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase`2.GetEntitySet(ElectricDrill.SoapRpgFramework.EntityCore)
   name: GetEntitySet(EntityCore)
   href: api/ElectricDrill.SoapRpgFramework.Scaling.SoSetScalingComponentBase-2.html#ElectricDrill_SoapRpgFramework_Scaling_SoSetScalingComponentBase_2_GetEntitySet_ElectricDrill_SoapRpgFramework_EntityCore_
@@ -4203,6 +4249,58 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.SoapRpgFramework.Utils.GrowthFormulaMenuItems.CreateGrowthFormula
   nameWithType: GrowthFormulaMenuItems.CreateGrowthFormula
+- uid: ElectricDrill.SoapRpgFramework.Utils.IValueContainer`1
+  name: IValueContainer<T>
+  href: api/ElectricDrill.SoapRpgFramework.Utils.IValueContainer-1.html
+  commentId: T:ElectricDrill.SoapRpgFramework.Utils.IValueContainer`1
+  name.vb: IValueContainer(Of T)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.IValueContainer<T>
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.IValueContainer(Of T)
+  nameWithType: IValueContainer<T>
+  nameWithType.vb: IValueContainer(Of T)
+- uid: ElectricDrill.SoapRpgFramework.Utils.IValueContainer`1.Contains(`0)
+  name: Contains(T)
+  href: api/ElectricDrill.SoapRpgFramework.Utils.IValueContainer-1.html#ElectricDrill_SoapRpgFramework_Utils_IValueContainer_1_Contains__0_
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.IValueContainer`1.Contains(`0)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.IValueContainer<T>.Contains(T)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.IValueContainer(Of T).Contains(T)
+  nameWithType: IValueContainer<T>.Contains(T)
+  nameWithType.vb: IValueContainer(Of T).Contains(T)
+- uid: ElectricDrill.SoapRpgFramework.Utils.IValueContainer`1.Contains*
+  name: Contains
+  href: api/ElectricDrill.SoapRpgFramework.Utils.IValueContainer-1.html#ElectricDrill_SoapRpgFramework_Utils_IValueContainer_1_Contains_
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.IValueContainer`1.Contains
+  isSpec: "True"
+  fullName: ElectricDrill.SoapRpgFramework.Utils.IValueContainer<T>.Contains
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.IValueContainer(Of T).Contains
+  nameWithType: IValueContainer<T>.Contains
+  nameWithType.vb: IValueContainer(Of T).Contains
+- uid: ElectricDrill.SoapRpgFramework.Utils.IValueProvider`2
+  name: IValueProvider<KeyType, ReturnType>
+  href: api/ElectricDrill.SoapRpgFramework.Utils.IValueProvider-2.html
+  commentId: T:ElectricDrill.SoapRpgFramework.Utils.IValueProvider`2
+  name.vb: IValueProvider(Of KeyType, ReturnType)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.IValueProvider<KeyType, ReturnType>
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.IValueProvider(Of KeyType, ReturnType)
+  nameWithType: IValueProvider<KeyType, ReturnType>
+  nameWithType.vb: IValueProvider(Of KeyType, ReturnType)
+- uid: ElectricDrill.SoapRpgFramework.Utils.IValueProvider`2.Get(`0)
+  name: Get(KeyType)
+  href: api/ElectricDrill.SoapRpgFramework.Utils.IValueProvider-2.html#ElectricDrill_SoapRpgFramework_Utils_IValueProvider_2_Get__0_
+  commentId: M:ElectricDrill.SoapRpgFramework.Utils.IValueProvider`2.Get(`0)
+  fullName: ElectricDrill.SoapRpgFramework.Utils.IValueProvider<KeyType, ReturnType>.Get(KeyType)
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.IValueProvider(Of KeyType, ReturnType).Get(KeyType)
+  nameWithType: IValueProvider<KeyType, ReturnType>.Get(KeyType)
+  nameWithType.vb: IValueProvider(Of KeyType, ReturnType).Get(KeyType)
+- uid: ElectricDrill.SoapRpgFramework.Utils.IValueProvider`2.Get*
+  name: Get
+  href: api/ElectricDrill.SoapRpgFramework.Utils.IValueProvider-2.html#ElectricDrill_SoapRpgFramework_Utils_IValueProvider_2_Get_
+  commentId: Overload:ElectricDrill.SoapRpgFramework.Utils.IValueProvider`2.Get
+  isSpec: "True"
+  fullName: ElectricDrill.SoapRpgFramework.Utils.IValueProvider<KeyType, ReturnType>.Get
+  fullName.vb: ElectricDrill.SoapRpgFramework.Utils.IValueProvider(Of KeyType, ReturnType).Get
+  nameWithType: IValueProvider<KeyType, ReturnType>.Get
+  nameWithType.vb: IValueProvider(Of KeyType, ReturnType).Get
 - uid: ElectricDrill.SoapRpgFramework.Utils.InitializationUtils
   name: InitializationUtils
   href: api/ElectricDrill.SoapRpgFramework.Utils.InitializationUtils.html
