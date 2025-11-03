@@ -51,10 +51,10 @@
         "modern"
       ],
       "globalMetadata": {
-          "_appName": "SOAP RPG Framework",
-          "_appTitle": "SOAP RPG Framework",
-          "_appLogoPath": "images/logo-soap.svg",
-          "_appFaviconPath": "images/soap-rpg-ico.ico",
+          "_appName": "Astra RPG Framework",
+          "_appTitle": "Astra RPG Framework",
+          "_appLogoPath": "images/logo-astra.svg",
+          "_appFaviconPath": "images/astra-rpg-ico.ico",
           "_enableSearch": true,
           "pdf": true
       },

@@ -2,12 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Introduction | SOAP RPG Framework </title>
+      <title>Introduction | Astra RPG Framework </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Introduction | SOAP RPG Framework ">
+      <meta name="title" content="Introduction | Astra RPG Framework ">
       
       
-      <link rel="icon" href="../images/soap-rpg-ico.ico">
+      <link rel="icon" href="../images/astra-rpg-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
       <meta name="docfx:navrel" content="../toc.html">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../images/logo-soap.svg" alt="SOAP RPG Framework">
-            SOAP RPG Framework
+            <img id="logo" class="svg" src="../images/logo-astra.svg" alt="Astra RPG Framework">
+            Astra RPG Framework
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -87,18 +87,27 @@
         <article data-uid="">
 <h1 id="introduction">Introduction</h1>
 
-<p>Soap RPG Framework is a lightweight, modular framework that takes a different approach compared to other RPG solutions. While many existing frameworks offer comprehensive, pre-built systems, they often come with steep learning curves and rigid structures that can limit your creative freedom. Soap RPG Framework instead focuses on providing a clean, flexible foundation that you can shape to your exact needs.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The package previously known as <strong>SOAP RPG Framework</strong> has been renamed to <strong>Astra RPG Framework</strong>. This action was taken to prevent further confusion regarding whether this package was in any way related to another asset already available on the Unity Asset Store.
+All functionality remains the same—only the name has changed.<br>
+To complete the transition to the new name, in the upcoming days a new update (v1.1.0) will be released to reflect this change on the namespaces of the codebase, and on the menu from which the package is accessed.
+All changes to the code that require any action on your part will be listed in the update changelog.<br>
+Thank you for your understanding,<br>
+Electric Drill</p>
+</div>
+<p>Astra RPG Framework is a lightweight, modular framework that takes a different approach compared to other RPG solutions. While many existing frameworks offer comprehensive, pre-built systems, they often come with steep learning curves and rigid structures that can limit your creative freedom. Astra RPG Framework instead focuses on providing a clean, flexible foundation that you can shape to your exact needs.</p>
 <p>Key advantages:</p>
 <ul>
-<li><strong>Modular Architecture</strong>: Pay just for what you need. Soap RPG Framework serves as the foundation, with additional packages building upon it to extend functionality in a modular way.</li>
-<li><strong>True Flexibility</strong>: Unlike more rigid frameworks, Soap RPG Framework defines only essential concepts, letting you model any game system without being constrained by pre-made assumptions. The limitations are minimal.</li>
+<li><strong>Modular Architecture</strong>: Pay just for what you need. Astra RPG Framework serves as the foundation, with additional packages building upon it to extend functionality in a modular way.</li>
+<li><strong>True Flexibility</strong>: Unlike more rigid frameworks, Astra RPG Framework defines only essential concepts, letting you model any game system without being constrained by pre-made assumptions. The limitations are minimal.</li>
 <li><strong>Gentle Learning Curve</strong>: Start creating immediately with intuitive, inspector-driven workflows, avoiding the complexity of larger frameworks.</li>
 <li><strong>100% Inspector-Driven</strong>: Make changes and balance your game without touching code. Game designers can tweak values through ScriptableObjects in real-time, even during play mode, without needing recompilation. This also enables rapid testing and debugging by allowing instant value adjustments.</li>
 <li><strong>Minimal Lock-in</strong>: The framework's lightweight nature means you're never locked into specific game design patterns.</li>
 </ul>
-<p>Whether you're creating a traditional RPG, a roguelike/roguelite, an MMO, or even a game with unique mechanics, Soap RPG Framework adapts to your needs without forcing you into predetermined patterns. It provides essential building blocks for managing attributes, statistics, levels, and classes, along with powerful systems for controlling stat growth through customizable formulas, handling game events, and implementing scaling calculations. This lets you focus on the creative aspects of game development while having precise control over how your game elements evolve and interact.</p>
-<h2 id="vocabulary-of-soap-rpg-framework">Vocabulary of Soap RPG Framework</h2>
-<p>The package is developed around the concept of <em>entity</em>, so let's clarify what we mean by this term in the context of Soap RPG Framework. In its most minimal version, an entity is a <code>GameObject</code> that has a set of statistics. Optionally, an entity can have attributes, can level up, and can have a class.
+<p>Whether you're creating a traditional RPG, a roguelike/roguelite, an MMO, or even a game with unique mechanics, Astra RPG Framework adapts to your needs without forcing you into predetermined patterns. It provides essential building blocks for managing attributes, statistics, levels, and classes, along with powerful systems for controlling stat growth through customizable formulas, handling game events, and implementing scaling calculations. This lets you focus on the creative aspects of game development while having precise control over how your game elements evolve and interact.</p>
+<h2 id="vocabulary-of-astra-rpg-framework">Vocabulary of Astra RPG Framework</h2>
+<p>The package is developed around the concept of <em>entity</em>, so let's clarify what we mean by this term in the context of Astra RPG Framework. In its most minimal version, an entity is a <code>GameObject</code> that has a set of statistics. Optionally, an entity can have attributes, can level up, and can have a class.
 Let's clarify what we mean by each mentioned term.</p>
 <h3 id="statistics-stat">Statistics (Stat)</h3>
 <p>A statistic is a value that quantifies an aspect of the entity. The meaning of this aspect is solely due to the concept it refers to.</p>
@@ -114,7 +123,7 @@ Let's clarify what we mean by each mentioned term.</p>
 <p>The class is associated with a set of statistics and optionally a set of attributes. The class describes how statistics and attributes vary with levels.</p>
 <h4 id="examples-2">Examples</h4>
 <p>In RPGs most common classes are: <code>warrior</code>, <code>rogue</code>, <code>mage</code>, <code>paladin</code>, and so on. These classes have different attribute values. For example, a warrior will have more <code>strength</code> and <code>constitution</code> than a mage. The <code>rogue</code> might have the highest <code>dexterity</code>, etc.</p>
-<h2 id="how-is-soap-rpg-framework-organized-and-how-does-it-work">How is Soap RPG Framework organized and how does it work?</h2>
+<h2 id="how-is-astra-rpg-framework-organized-and-how-does-it-work">How is Astra RPG Framework organized and how does it work?</h2>
 <h3 id="-entity"><img src="../images/SoapRPG/entity-core.png" alt="EntityCore2" width="30" class="icon-background"> Entity</h3>
 <p>A <code>GameObject</code> becomes an entity once the <code>EntityCore</code> and <code>EntityStats</code> <code>MonoBehaviour</code>s (Mono) are added to it. <code>EntityCore</code> comes with a built-in <code>EntityLevel</code> (plain C# <code>class</code>) that manages the experience and the level of the entity.</p>
 <h3 id="-stat"><img src="../images/SoapRPG/stat.png" alt="stat" width="30" class="icon-background"> Stat</h3>
@@ -157,15 +166,15 @@ Similarly to <code>EntityStats</code>, we can decide whether the base attributes
 <p>Game events are ScriptableObjects that allow you to implement the Observer pattern in your game. They provide a way to decouple systems by broadcasting notifications when something happens (such as a player jumping, leveling up, or taking damage). Listeners can subscribe to these events and react accordingly, all through inspector-driven workflows. Game events can carry context parameters, making them flexible for a wide range of use cases.</p>
 <h3 id="-game-event-generators"><img src="../images/SoapRPG/event-gen.png" alt="game event generator" width="30" class="icon-background"> Game Event Generators</h3>
 <p>Game Event Generators are ScriptableObjects that let you define custom game events with up to four context parameters. They automate the creation of event and listener classes, making it easy to extend your event system for complex gameplay scenarios. You can specify parameter types and documentation, and generate code and assets directly from the inspector.</p>
-<h2 id="how-is-soap-rpg-framework-implemented">How is Soap RPG Framework implemented?</h2>
-<p>The package is developed following the principles of SOAP (Scriptable Object Architecture Pattern), and has been inspired by the <a href="https://www.youtube.com/watch?v=raQ3iHhE_Kk&amp;ab_channel=Unity">GDC talk of Ryan Hipple</a>. In a nutshell, the main benefits provided by this architecture are:</p>
+<h2 id="how-is-astra-rpg-framework-implemented">How is Astra RPG Framework implemented?</h2>
+<p>The package is developed around a Scriptable Objects architecture inspired by the <a href="https://www.youtube.com/watch?v=raQ3iHhE_Kk&amp;ab_channel=Unity">GDC talk of Ryan Hipple</a>. In a nutshell, the main benefits provided by this architecture are:</p>
 <ul>
 <li><strong>encapsulation</strong>: separation of game logic from data. Game logic code shouldn't mix with data. All data is nicely wrapped withing SO instances</li>
 <li><strong>game designers friendly</strong>: game designers can make changes and balancements from the inspector without touching the code</li>
 <li><strong>greater reusability</strong>: most features are <code>ScriptableObject</code>s that can be reused by many components</li>
 <li><strong>greater testability</strong>: being data separated from code, is easier to isolate and fix bugs. Moreover, SO events can be raised with ease at the press of a button from the inspector interface, easing and speeding up debugging even further.</li>
 </ul>
-<h2 id="flexibility-of-soap-rpg-framework">Flexibility of Soap RPG Framework</h2>
+<h2 id="flexibility-of-astra-rpg-framework">Flexibility of Astra RPG Framework</h2>
 <p>Although the package is specifically designed for RPG games or games with progression systems, its flexibility allows it to be used in almost any game. As it allows creating attributes like <code>strength</code>, <code>dexterity</code>, <code>agility</code>, etc., and statistics such as <code>physical attack</code>, <code>magic power</code>, <code>physical defense</code>, etc., in RPG, Roguelike, MMO games, etc., nothing prevents it from being used, for example, to implement a firearm. The attributes could be <code>weight</code>, <code>size</code>, <code>ergonomics</code>, etc., and the statistics <code>recoil</code>, <code>handling</code>, <code>stability</code>, <code>intimidation</code>, etc. Attributes can influence statistics. A heavier weapon could reduce <code>handling</code> but increase <code>stability</code>. A larger weapon could reduce <code>handling</code> but increase <code>intimidation</code>. A more ergonomic weapon could reduce <code>recoil</code> and increase <code>handling</code>. And so on... The weapon's levels, if present, influence the attributes and statistics, progressively improving them. Classes could represent weapon types (assault rifles, snipers, shotguns, etc.), and each class could have its own set of dedicated attributes and statistics. For example, shotguns could have, in addition to the aforementioned ones, the <code>barrel length</code> attribute that influences the <code>pellet spread</code> statistic.</p>
 
 </article>

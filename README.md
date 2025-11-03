@@ -1,2 +1,2 @@
-# SoapRPGFrameworkDocs
-Documentation for the SoapRPGFramework Unity Package
+# Astra RPG Framework Docs
+Documentation for the Astra RPG Framework Unity Package

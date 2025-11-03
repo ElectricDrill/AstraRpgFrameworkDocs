@@ -46,13 +46,13 @@ Fields marked with an orange <strong style="color:orange;">R</strong> are re-pla
 Almost every class provided by this package uses events or variables in the form of `ScriptableObject`. Therefore, let's quickly introduce these concepts so that we are clear about what we are talking about when we encounter them in the following paragraphs.
 
 ### Game events as `ScriptableObjects`
-The SOAP architecture allows us to implement the Observer pattern through scriptable objects. In the simplest case, with events without context, we can define various game events as `GameEvent` instances: a class that derives from `ScriptableObject`. For example, we can create an instance called `PlayerJumped` that represents the event "The player has jumped". This event will notify all listening systems when it occurs.
+The Scriptable Objects based architecture allows us to implement the Observer pattern through scriptable objects. In the simplest case, with events without context, we can define various game events as `GameEvent` instances: a class that derives from `ScriptableObject`. For example, we can create an instance called `PlayerJumped` that represents the event "The player has jumped". This event will notify all listening systems when it occurs.
 Systems subscribe to this event using the `MonoBehaviour` `GameEventListener`. We can assign a `GameEvent` to this component, and it will handle the subscription and invoke a callback when the event is triggered. The callback is a [UnityEvent](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html), so we can select a callback to invoke in response to our event directly from the inspector.
 
 For more details, see the [Game Events section](#game-events).
 
 ### Int and Long Vars
-Another common use of `ScriptableObject` in the SOAP architecture is to define variables. The main advantage of these variables in the form of SO is that they can be easily shared between various objects that may decide to share the same value. A common example is the player's game score. There could be a game manager that adds or removes points from this variable, while the UI HUD uses it to display its value on the screen. This way, we can keep the game manager and UI completely decoupled, passing shared values (like variables) through the inspector.
+Another common use of `ScriptableObject` in the SO based architecture is to define variables. The main advantage of these variables in the form of SO is that they can be easily shared between various objects that may decide to share the same value. A common example is the player's game score. There could be a game manager that adds or removes points from this variable, while the UI HUD uses it to display its value on the screen. This way, we can keep the game manager and UI completely decoupled, passing shared values (like variables) through the inspector.
 
 From the code, we can access the values held by these variables using the `Value` getter and setter:
 ```csharp
@@ -203,7 +203,7 @@ Alternatively, it is available also the `SetTotalCurrentExp(long totalCurrentExp
 
 Finally, there are the `CurrentLevelTotalExperience()` and the `NextLevelTotalExperience()` methods. These methods return the total experience required to reach the current level and the next level, respectively. They are useful, for example, for checking how much experience is needed to level up.
 
-## Creating Soap RPG Framework assets
+## Creating Astra RPG Framework assets
 All the instances of the various assets that derive from `ScriptableObject`s can be created in the following ways:
 - Context menu: `Right click on the hierarchy > Create > Soap RPG Framework`
 - Top bar: `Assets > Create > Soap RPG Framework`
@@ -614,7 +614,7 @@ Let's see a complete example with all three modifier types:
 
 > [!NOTE]
 > The framework does not provide a built-in tool for removing applied modifiers. It is up to you to define your own abstraction for buffs, debuffs, or other temporary effects that add and remove modifiers as needed.
-> In the future, the SOAP RPG Modifiers extension for this framework will be released, which will include such abstractions thought to integrate seamlessly with the existing systems. Check the status of the extension for more details at https://electricdrill.github.io/
+> In the future, the Astra RPG Modifiers extension for this framework will be released, which will include such abstractions thought to integrate seamlessly with the existing systems. Check the status of the extension for more details at https://electricdrill.github.io/
 
 ### Retrieving Stat Values from code
 Due to the relevance of retrieving stat values from code, the methods to do so are worth mentioning here.
@@ -651,7 +651,7 @@ Once all growth formulas are assigned, the `Warrior` should look like this:
 ![Warrior Class](../images/workflows/warrior-class.png)
 
 `Max HP Growth Formula` allows specifying how the Max HP value grows as levels change. In our example, we'll leave it empty.
-The presence of this field for hit points might be surprising since this module of the framework isn't focused on health management. Indeed, damage and health are managed by the *Health&Dmg | Soap RPG Framework* module, which will be released in the coming months.
+The presence of this field for hit points might be surprising since this module of the framework isn't focused on health management. Indeed, damage and health are managed by the *Astra RPG Health* module, which will be released in the coming months.
 However, this field is positioned here since the scaling of base max hp still depends on the class.
 
 ### Keeping the hierarchy clean
@@ -824,8 +824,8 @@ Now let's create an event that will be raised when an entity grants experience t
 - `Event Name`: `EntityGrantedExp`
 - `Documentation`: an entity granted experience to another entity
 - `Parameters`: press the `+` button and add the following three parameters:
-  - `Parameter Type` to `Mono Script`, `Mono Script` type to `EntityCore` (drag it from the Soap RPG Core folder)
-  - `Parameter Type` to `Mono Script`, `Mono Script` type to `EntityCore` (drag it from the Soap RPG Core folder)
+  - `Parameter Type` to `Mono Script`, `Mono Script` type to `EntityCore` (drag it from the AstraRpgFramework folder located in the Packages folder)
+  - `Parameter Type` to `Mono Script`, `Mono Script` type to `EntityCore` (drag it from the AstraRpgFramework folder located in the Packages folder)
   - `Parameter Type` to `Native`, `Native type` to `long`
 
 The first parameter represents the entity that granted the experience, the second parameter represents the entity that received the experience, and the third parameter represents the amount of experience granted.

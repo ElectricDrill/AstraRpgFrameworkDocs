@@ -2,13 +2,21 @@
 _layout: landing
 ---
 
-## 🛠️ SOAP RPG Framework
+## 🛠️ Astra RPG Framework
+
+> [!NOTE] 
+> The package previously known as <strong>SOAP RPG Framework</strong> has been renamed to <strong>Astra RPG Framework</strong>. This action was taken to prevent further confusion regarding whether this package was in any way related to another asset already available on the Unity Asset Store.
+> All functionality remains the same—only the name has changed.  
+> To complete the transition to the new name, in the upcoming days a new update (v1.1.0) will be released to reflect this change on the namespaces of the codebase, and on the menu from which the package is accessed.
+> All changes to the code that require any action on your part will be listed in the update changelog.  
+> Thank you for your understanding,  
+> Electric Drill
 
 ### 👉 Introduction
 
 **Say goodbye to endless recompilations. Instantly balance your RPG's stats and formulas with a powerful data-driven system.**
 
-SOAP RPG Framework provides a complete, data-driven backbone for your RPG, letting you define your game's foundations directly in the editor and iterate on **balance during play mode**.
+Astra RPG Framework provides a complete, data-driven backbone for your RPG, letting you define your game's foundations directly in the editor and iterate on **balance during play mode**.
 
 Simple, lightweight, and easy to learn. No configuration required: **works out of the box with zero setup**.
 
@@ -25,7 +33,7 @@ Simple, lightweight, and easy to learn. No configuration required: **works out o
 
 ---
 
-### 🧼 Implemented on top of SOAP: Scriptable Object Architecture Pattern
+### ⚙️ Implemented on top of ScriptableObjects architecture
 
 - 🎨 **Designer-friendly:** Most of the features are ScriptableObjects, easily created and wired in the Unity Inspector. Custom inspectors are available for everything.
 - 🧩 **Reusable and modular:** Objects can be reused across game objects and scenes. They are the building blocks for your game. **Instantiate, compose, reuse**. Changes instantly reflect on dependent objects. No duplication, no hassle.
@@ -99,7 +107,7 @@ Game Event Generators are also ScriptableObjects. Instantiate multiple generator
 
 ### 🛒 Where to Buy
 
-Unity Asset Store (planned). Link will be available upon release.
+Unity Asset Store: [Astra RPG](https://assetstore.unity.com/packages/tools/game-toolkits/astra-rpg-framework-334926)
 
 ---
 

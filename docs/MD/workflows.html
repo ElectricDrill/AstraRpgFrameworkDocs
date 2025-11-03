@@ -2,12 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Workflows | SOAP RPG Framework </title>
+      <title>Workflows | Astra RPG Framework </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Workflows | SOAP RPG Framework ">
+      <meta name="title" content="Workflows | Astra RPG Framework ">
       
       
-      <link rel="icon" href="../images/soap-rpg-ico.ico">
+      <link rel="icon" href="../images/astra-rpg-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
       <meta name="docfx:navrel" content="../toc.html">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../images/logo-soap.svg" alt="SOAP RPG Framework">
-            SOAP RPG Framework
+            <img id="logo" class="svg" src="../images/logo-astra.svg" alt="Astra RPG Framework">
+            Astra RPG Framework
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -129,11 +129,11 @@
 <h2 id="some-utilities">Some utilities</h2>
 <p>Almost every class provided by this package uses events or variables in the form of <code>ScriptableObject</code>. Therefore, let's quickly introduce these concepts so that we are clear about what we are talking about when we encounter them in the following paragraphs.</p>
 <h3 id="game-events-as-scriptableobjects">Game events as <code>ScriptableObjects</code></h3>
-<p>The SOAP architecture allows us to implement the Observer pattern through scriptable objects. In the simplest case, with events without context, we can define various game events as <code>GameEvent</code> instances: a class that derives from <code>ScriptableObject</code>. For example, we can create an instance called <code>PlayerJumped</code> that represents the event &quot;The player has jumped&quot;. This event will notify all listening systems when it occurs.
+<p>The Scriptable Objects based architecture allows us to implement the Observer pattern through scriptable objects. In the simplest case, with events without context, we can define various game events as <code>GameEvent</code> instances: a class that derives from <code>ScriptableObject</code>. For example, we can create an instance called <code>PlayerJumped</code> that represents the event &quot;The player has jumped&quot;. This event will notify all listening systems when it occurs.
 Systems subscribe to this event using the <code>MonoBehaviour</code> <code>GameEventListener</code>. We can assign a <code>GameEvent</code> to this component, and it will handle the subscription and invoke a callback when the event is triggered. The callback is a <a href="https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html">UnityEvent</a>, so we can select a callback to invoke in response to our event directly from the inspector.</p>
 <p>For more details, see the <a href="#game-events">Game Events section</a>.</p>
 <h3 id="int-and-long-vars">Int and Long Vars</h3>
-<p>Another common use of <code>ScriptableObject</code> in the SOAP architecture is to define variables. The main advantage of these variables in the form of SO is that they can be easily shared between various objects that may decide to share the same value. A common example is the player's game score. There could be a game manager that adds or removes points from this variable, while the UI HUD uses it to display its value on the screen. This way, we can keep the game manager and UI completely decoupled, passing shared values (like variables) through the inspector.</p>
+<p>Another common use of <code>ScriptableObject</code> in the SO based architecture is to define variables. The main advantage of these variables in the form of SO is that they can be easily shared between various objects that may decide to share the same value. A common example is the player's game score. There could be a game manager that adds or removes points from this variable, while the UI HUD uses it to display its value on the screen. This way, we can keep the game manager and UI completely decoupled, passing shared values (like variables) through the inspector.</p>
 <p>From the code, we can access the values held by these variables using the <code>Value</code> getter and setter:</p>
 <pre><code class="lang-csharp">// intVar is an instance of IntVar
 int value = intVar.Value; // Get the value
@@ -244,7 +244,7 @@ If <code>Use constant</code> is checked instead, the value is readonly.</p>
 <p>If we want to grant experience to the entity, we can use the <code>AddExp(long amount)</code> method. This method will automatically raise the <code>OnLevelUp</code> event if the entity levels up.
 Alternatively, it is available also the <code>SetTotalCurrentExp(long totalCurrentExperience)</code> method, which allows setting the total current experience of the entity. This method will also raise the <code>OnLevelUp</code> event if the entity levels up.</p>
 <p>Finally, there are the <code>CurrentLevelTotalExperience()</code> and the <code>NextLevelTotalExperience()</code> methods. These methods return the total experience required to reach the current level and the next level, respectively. They are useful, for example, for checking how much experience is needed to level up.</p>
-<h2 id="creating-soap-rpg-framework-assets">Creating Soap RPG Framework assets</h2>
+<h2 id="creating-astra-rpg-framework-assets">Creating Astra RPG Framework assets</h2>
 <p>All the instances of the various assets that derive from <code>ScriptableObject</code>s can be created in the following ways:</p>
 <ul>
 <li>Context menu: <code>Right click on the hierarchy &gt; Create &gt; Soap RPG Framework</code></li>
@@ -590,7 +590,7 @@ entityStats.AddPercentageModifier(movementSpeed, -15);
 <div class="NOTE">
 <h5>Note</h5>
 <p>The framework does not provide a built-in tool for removing applied modifiers. It is up to you to define your own abstraction for buffs, debuffs, or other temporary effects that add and remove modifiers as needed.
-In the future, the SOAP RPG Modifiers extension for this framework will be released, which will include such abstractions thought to integrate seamlessly with the existing systems. Check the status of the extension for more details at <a href="https://electricdrill.github.io/">https://electricdrill.github.io/</a></p>
+In the future, the Astra RPG Modifiers extension for this framework will be released, which will include such abstractions thought to integrate seamlessly with the existing systems. Check the status of the extension for more details at <a href="https://electricdrill.github.io/">https://electricdrill.github.io/</a></p>
 </div>
 <h3 id="retrieving-stat-values-from-code">Retrieving Stat Values from code</h3>
 <p>Due to the relevance of retrieving stat values from code, the methods to do so are worth mentioning here.</p>
@@ -614,7 +614,7 @@ Follow the steps outlined in the <a href="#growth-formulas">Growth Formulas</a> 
 Once all growth formulas are assigned, the <code>Warrior</code> should look like this:</p>
 <p><img src="../images/workflows/warrior-class.png" alt="Warrior Class"></p>
 <p><code>Max HP Growth Formula</code> allows specifying how the Max HP value grows as levels change. In our example, we'll leave it empty.
-The presence of this field for hit points might be surprising since this module of the framework isn't focused on health management. Indeed, damage and health are managed by the <em>Health&amp;Dmg | Soap RPG Framework</em> module, which will be released in the coming months.
+The presence of this field for hit points might be surprising since this module of the framework isn't focused on health management. Indeed, damage and health are managed by the <em>Astra RPG Health</em> module, which will be released in the coming months.
 However, this field is positioned here since the scaling of base max hp still depends on the class.</p>
 <h3 id="keeping-the-hierarchy-clean">Keeping the hierarchy clean</h3>
 <p>By now you should have a lot of assets in your hierarchy. To keep it clean, you can create a folder named <code>Classes</code> and move the <code>Warrior</code> class inside it. You can do the same for the <code>Attributes</code> and <code>Stats</code> growth formulas inside the <code>Warrior</code> folder. This way, you can keep the hierarchy organized and easily find the assets.<br>
@@ -747,8 +747,8 @@ To avoid potential issues, it is recommended to back up or version control your 
 <li><code>Documentation</code>: an entity granted experience to another entity</li>
 <li><code>Parameters</code>: press the <code>+</code> button and add the following three parameters:
 <ul>
-<li><code>Parameter Type</code> to <code>Mono Script</code>, <code>Mono Script</code> type to <code>EntityCore</code> (drag it from the Soap RPG Core folder)</li>
-<li><code>Parameter Type</code> to <code>Mono Script</code>, <code>Mono Script</code> type to <code>EntityCore</code> (drag it from the Soap RPG Core folder)</li>
+<li><code>Parameter Type</code> to <code>Mono Script</code>, <code>Mono Script</code> type to <code>EntityCore</code> (drag it from the AstraRpgFramework folder located in the Packages folder)</li>
+<li><code>Parameter Type</code> to <code>Mono Script</code>, <code>Mono Script</code> type to <code>EntityCore</code> (drag it from the AstraRpgFramework folder located in the Packages folder)</li>
 <li><code>Parameter Type</code> to <code>Native</code>, <code>Native type</code> to <code>long</code></li>
 </ul>
 </li>

@@ -2,12 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Package Contents | SOAP RPG Framework </title>
+      <title>Package Contents | Astra RPG Framework </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Package Contents | SOAP RPG Framework ">
+      <meta name="title" content="Package Contents | Astra RPG Framework ">
       
       
-      <link rel="icon" href="../images/soap-rpg-ico.ico">
+      <link rel="icon" href="../images/astra-rpg-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
       <meta name="docfx:navrel" content="../toc.html">
@@ -44,8 +44,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../images/logo-soap.svg" alt="SOAP RPG Framework">
-            SOAP RPG Framework
+            <img id="logo" class="svg" src="../images/logo-astra.svg" alt="Astra RPG Framework">
+            Astra RPG Framework
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -94,7 +94,7 @@
 <p>The relevant content for you consists of the package samples and the &quot;utility events&quot; contained in the package folder (located in <code>/Packages</code>).</p>
 <p>For more information about the samples, see the <a href="samples.html">Samples</a> documentation.</p>
 <p>The &quot;utility events&quot; (Game Event Generators, source code of the generated events, and instances of the Game Events) have been intentionally placed outside the samples folder because they are used directly in the package's source code. Therefore, it would not be correct to place them in the samples folder, as omitting them during package import would cause the source code to not function correctly.</p>
-<p>The Game Event Generators are located in the <code>Packages/SoapRPGFramework/Runtime/Events/EventGeneratorInstances</code> folder. Here you will find:</p>
+<p>The Game Event Generators are located in the <code>Packages/AstraRPGFramework/Runtime/Events/EventGeneratorInstances</code> folder. Here you will find:</p>
 <ul>
 <li><code>GeneralPurposeEventGenerator</code>: defines two game events: <code>EntityCoreGameEvent</code> and <code>IntGameEvent</code>.</li>
 <li><code>AttributesEventGenerator</code>: defines <code>AttributeChangedGameEvent</code></li>
@@ -105,7 +105,7 @@
 <p>Do not modify these Game Event Generators, as they are an integral part of the package's source code.<br>
 If you want to add new events, create new Game Event Generators in your Assets and use those to define your custom events.</p>
 </div>
-<p>The source code for the events defined within the aforementioned Game Event Generators is located in the <code>Packages/SoapRPGFramework/Runtime/Events/GeneratedEvents</code> folder. The organization follows the rules mentioned in the <a href="workflows.html#adding-new-events">Adding new events</a> documentation.</p>
+<p>The source code for the events defined within the aforementioned Game Event Generators is located in the <code>Packages/AstraRPGFramework/Runtime/Events/GeneratedEvents</code> folder. The organization follows the rules mentioned in the <a href="workflows.html#adding-new-events">Adding new events</a> documentation.</p>
 <p>The instances of the generated Game Events are provided with the samples of the package instead. Such objects are also used by the Sample Scene (always available in the samples folder). If you want to instantiate new Game Events of type <code>EntityCoreGameEvent</code>, <code>IntGameEvent</code>, <code>AttributeChangedGameEvent</code>, or <code>StatChangedGameEvent</code>, feel free to do so.</p>
 
 </article>

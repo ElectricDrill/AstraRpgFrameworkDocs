@@ -1408,6 +1408,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/astra-rpg-ico.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/astra-rpg-ico.ico"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/favico.ico",
       "output": {
         "resource": {
@@ -1418,30 +1428,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/logo-soap.svg",
+      "source_relative_path": "images/logo-astra.svg",
       "output": {
         "resource": {
-          "relative_path": "images/logo-soap.svg"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/soap-rpg-framework-logo-borders.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/soap-rpg-framework-logo-borders.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/soap-rpg-ico.ico",
-      "output": {
-        "resource": {
-          "relative_path": "images/soap-rpg-ico.ico"
+          "relative_path": "images/logo-astra.svg"
         }
       },
       "version": ""
