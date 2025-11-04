@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace ElectricDrill.AstraRpgFramework.Events | Astra RPG Framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace ElectricDrill.AstraRpgFramework.Events | Astra RPG Framework ">
+      
+      
+      <link rel="icon" href="../images/astra-rpg-ico.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo-astra.svg" alt="Astra RPG Framework">
+            Astra RPG Framework
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ElectricDrill.AstraRpgFramework.Events">
+
+  <h1 id="ElectricDrill_AstraRpgFramework_Events" data-uid="ElectricDrill.AstraRpgFramework.Events" class="text-break">Namespace ElectricDrill.AstraRpgFramework.Events</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.AttributeChangedGameEvent.html">AttributeChangedGameEvent</a></dt>
+      <dd><p>Game event that is raised when an attribute changes.
+Contains information about the attribute that changed, including its previous and new values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.AttributeChangedGameEventListener.html">AttributeChangedGameEventListener</a></dt>
+      <dd><p>Game event that is raised when an attribute changes.
+Contains information about the attribute that changed, including its previous and new values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.EntityCoreGameEvent.html">EntityCoreGameEvent</a></dt>
+      <dd><p>Game event that carries EntityCore data.
+Used for events that need to pass information about an entity's core component.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.EntityCoreGameEventListener.html">EntityCoreGameEventListener</a></dt>
+      <dd><p>Game event that carries EntityCore data.
+Used for events that need to pass information about an entity's core component.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.EntityLeveledUpGameEvent.html">EntityLeveledUpGameEvent</a></dt>
+      <dd><p>Event to notify the change of level of an entity.
+Parameters are:</p>
+<ul>
+<li>the entity that changed level</li>
+<li>the new level</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.EntityLeveledUpGameEventListener.html">EntityLeveledUpGameEventListener</a></dt>
+      <dd><p>Event to notify the change of level of an entity.
+Parameters are:</p>
+<ul>
+<li>the entity that changed level</li>
+<li>the new level</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.GameEvent.html">GameEvent</a></dt>
+      <dd><p>A ScriptableObject-based event system that allows decoupled communication between game systems.
+GameEvents can be raised to notify all registered listeners without requiring direct references.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.GameEventGenerator.html">GameEventGenerator</a></dt>
+      <dd><p>A ScriptableObject tool for automatically generating GameEvent and GameEventListener classes.
+Allows developers to define event schemas and generate strongly-typed event classes at design time.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.GameEventGenerator.EventParameter.html">GameEventGenerator.EventParameter</a></dt>
+      <dd><p>Represents a parameter that can be passed to a generated game event.
+Supports both native C# types and custom MonoScript-based types.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.GameEventGenerator.GameEventDefinition.html">GameEventGenerator.GameEventDefinition</a></dt>
+      <dd><p>Defines a complete game event with its name, parameters, and metadata.
+Contains all information needed to generate the corresponding C# classes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.GameEventGeneric1-1.html">GameEventGeneric1&lt;T&gt;</a></dt>
+      <dd><p>A generic ScriptableObject-based event system that can carry one parameter of type T.
+Supports both MonoBehaviour-based listeners and code-based Action listeners.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.GameEventGeneric2-2.html">GameEventGeneric2&lt;T, U&gt;</a></dt>
+      <dd><p>A generic ScriptableObject-based event system that can carry two parameters of types T and U.
+Supports both MonoBehaviour-based listeners and code-based Action listeners.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.GameEventGeneric3-3.html">GameEventGeneric3&lt;T, U, W&gt;</a></dt>
+      <dd><p>A generic ScriptableObject-based event system that can carry three parameters of types T, U, and W.
+Supports both MonoBehaviour-based listeners and code-based Action listeners.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.GameEventGeneric4-4.html">GameEventGeneric4&lt;T, U, W, K&gt;</a></dt>
+      <dd><p>A generic ScriptableObject-based event system that can carry four parameters of types T, U, W, and K.
+Supports both MonoBehaviour-based listeners and code-based Action listeners.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.GameEventListener.html">GameEventListener</a></dt>
+      <dd><p>MonoBehaviour component that listens to GameEvent objects and responds with UnityEvents.
+Automatically registers and unregisters itself when enabled/disabled.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.GameEventListenerGeneric1-1.html">GameEventListenerGeneric1&lt;T&gt;</a></dt>
+      <dd><p>MonoBehaviour component that listens to GameEventGeneric1 objects and responds with UnityEvents.
+Automatically registers and unregisters itself when enabled/disabled.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.GameEventListenerGeneric2-2.html">GameEventListenerGeneric2&lt;T, U&gt;</a></dt>
+      <dd><p>MonoBehaviour component that listens to GameEventGeneric2 objects and responds with UnityEvents.
+Automatically registers and unregisters itself when enabled/disabled.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.GameEventListenerGeneric3-3.html">GameEventListenerGeneric3&lt;T, U, W&gt;</a></dt>
+      <dd><p>MonoBehaviour component that listens to GameEventGeneric3 objects and responds with UnityEvents.
+Automatically registers and unregisters itself when enabled/disabled.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.GameEventListenerGeneric4-4.html">GameEventListenerGeneric4&lt;T, U, W, K&gt;</a></dt>
+      <dd><p>MonoBehaviour component that listens to GameEventGeneric4 objects and responds with UnityEvents.
+Automatically registers and unregisters itself when enabled/disabled.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.IntGameEvent.html">IntGameEvent</a></dt>
+      <dd><p>Game event that carries integer data.
+A general-purpose event for passing integer values between game systems.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.IntGameEventListener.html">IntGameEventListener</a></dt>
+      <dd><p>Game event that carries integer data.
+A general-purpose event for passing integer values between game systems.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.StatChangedGameEvent.html">StatChangedGameEvent</a></dt>
+      <dd><p>Game event that is raised when a stat changes.
+Contains information about the stat that changed, including its previous and new values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.StatChangedGameEventListener.html">StatChangedGameEventListener</a></dt>
+      <dd><p>Game event that is raised when a stat changes.
+Contains information about the stat that changed, including its previous and new values.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.IRaisable-1.html">IRaisable&lt;T&gt;</a></dt>
+      <dd><p>Interface for objects that can be raised with one parameter of type T.
+Defines the contract for events that carry a single piece of data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.IRaisable-2.html">IRaisable&lt;T, U&gt;</a></dt>
+      <dd><p>Interface for objects that can be raised with two parameters of types T and U.
+Defines the contract for events that carry two pieces of data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.IRaisable-3.html">IRaisable&lt;T, U, V&gt;</a></dt>
+      <dd><p>Interface for objects that can be raised with three parameters of types T, U, and V.
+Defines the contract for events that carry three pieces of data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.IRaisable-4.html">IRaisable&lt;T, U, V, W&gt;</a></dt>
+      <dd><p>Interface for objects that can be raised with four parameters of types T, U, V, and W.
+Defines the contract for events that carry four pieces of data.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.GameEventGenerator.EventParameter.NativeType.html">GameEventGenerator.EventParameter.NativeType</a></dt>
+      <dd><p>Enumeration of supported native C# types for event parameters.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.GameEventGenerator.EventParameter.ParameterType.html">GameEventGenerator.EventParameter.ParameterType</a></dt>
+      <dd><p>Enumeration defining whether the parameter is a native type, a custom MonoScript type, or an enum.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
