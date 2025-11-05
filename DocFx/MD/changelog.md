@@ -4,7 +4,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [1.0.0] - 2025-10-XX
+## [1.1.0] - 2025-11-06
+### Changed
+#### Updated branding from "SOAP RPG Framework" to "Astra RPG Framework"
+IMPORTANT: Refer to the [migration guide](./migration-guide.md) for updating existing projects that used the previous version.
+- UPM package name changed to "com.electricdrill.astra-rpg-framework".
+- UPM package display name changed to "Astra RPG Framework".
+- Namespaces updated to reflect new branding: "ElectricDrill.AstraRPGFramework".
+- Menu paths in Unity Editor updated to "Astra RPG Framework".
+
+
+### Deprecated
+- `_includedStatSets` field in `StatSet` will become an internal property in future releases.
+
+## [1.0.0] - 2025-10-30
 ### Added
 - Initial release of SOAP RPG Framework.
 - ScriptableObject-based toolkit for core RPG mechanics.
