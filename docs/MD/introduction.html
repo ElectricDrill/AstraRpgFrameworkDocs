@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ElectricDrill/SoapRpgFrameworkDocs/blob/main/DocFx/MD/introduction.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ElectricDrill/SoapRpgFrameworkDocs/blob/astra-renaming/DocFx/MD/introduction.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,12 +89,9 @@
 
 <div class="NOTE">
 <h5>Note</h5>
-<p>The package previously known as <strong>SOAP RPG Framework</strong> has been renamed to <strong>Astra RPG Framework</strong>. This action was taken to prevent further confusion regarding whether this package was in any way related to another asset already available on the Unity Asset Store.
-All functionality remains the same—only the name has changed.<br>
-To complete the transition to the new name, in the upcoming days a new update (v1.1.0) will be released to reflect this change on the namespaces of the codebase, and on the menu from which the package is accessed.
-All changes to the code that require any action on your part will be listed in the update changelog.<br>
-Thank you for your understanding,<br>
-Electric Drill</p>
+<p>The package previously known as SOAP RPG Framework (v1.0.0) has been renamed to Astra RPG Framework (v1.1.0). This action was taken to prevent further confusion regarding whether this package was in any way related to another asset already available on the Unity Asset Store. All functionality remains the same—only the name has changed.<br>
+Since the rebranding touched also the codebase (UPM package name and namespaces), if you are running your project on version 1.0.0 I would advise you to follow the <a href="migration-guide.html">migration guide</a> to ensure a smooth upgrade.<br>
+Thanks for your understanding.</p>
 </div>
 <p>Astra RPG Framework is a lightweight, modular framework that takes a different approach compared to other RPG solutions. While many existing frameworks offer comprehensive, pre-built systems, they often come with steep learning curves and rigid structures that can limit your creative freedom. Astra RPG Framework instead focuses on providing a clean, flexible foundation that you can shape to your exact needs.</p>
 <p>Key advantages:</p>
@@ -124,13 +121,13 @@ Let's clarify what we mean by each mentioned term.</p>
 <h4 id="examples-2">Examples</h4>
 <p>In RPGs most common classes are: <code>warrior</code>, <code>rogue</code>, <code>mage</code>, <code>paladin</code>, and so on. These classes have different attribute values. For example, a warrior will have more <code>strength</code> and <code>constitution</code> than a mage. The <code>rogue</code> might have the highest <code>dexterity</code>, etc.</p>
 <h2 id="how-is-astra-rpg-framework-organized-and-how-does-it-work">How is Astra RPG Framework organized and how does it work?</h2>
-<h3 id="-entity"><img src="../images/SoapRPG/entity-core.png" alt="EntityCore2" width="30" class="icon-background"> Entity</h3>
+<h3 id="-entity"><img src="../images/AstraRPG/entity-core.png" alt="EntityCore2" width="30" class="icon-background"> Entity</h3>
 <p>A <code>GameObject</code> becomes an entity once the <code>EntityCore</code> and <code>EntityStats</code> <code>MonoBehaviour</code>s (Mono) are added to it. <code>EntityCore</code> comes with a built-in <code>EntityLevel</code> (plain C# <code>class</code>) that manages the experience and the level of the entity.</p>
-<h3 id="-stat"><img src="../images/SoapRPG/stat.png" alt="stat" width="30" class="icon-background"> Stat</h3>
+<h3 id="-stat"><img src="../images/AstraRPG/stat.png" alt="stat" width="30" class="icon-background"> Stat</h3>
 <p>A <code>Stat</code> is a class that derives from <code>ScriptableObject</code> (SO) and represents a statistic in the game. Each statistic has a name (the name given to the SO instance of the created <code>Stat</code>), and we can choose whether to provide it with a maximum and/or minimum value. Additionally, we can define how that statistic grows or is reduced, depending on certain <code>Attributes</code>.</p>
-<h3 id="-statset"><img src="../images/SoapRPG/stat-set.png" alt="stat set" width="30" class="icon-background"> StatSet</h3>
+<h3 id="-statset"><img src="../images/AstraRPG/stat-set.png" alt="stat set" width="30" class="icon-background"> StatSet</h3>
 <p>A <code>StatSet</code> is a class derived from ScriptableObject that defines a collection of <code>Stat</code>s. Stat sets can be composed by combining other sub-stat sets, enabling hierarchical organization and easy reuse of statistics among different entities or classes.</p>
-<h3 id="-entitystats"><img src="../images/SoapRPG/entity-stats.png" alt="entity stats" width="30" class="icon-background"> EntityStats</h3>
+<h3 id="-entitystats"><img src="../images/AstraRPG/entity-stats.png" alt="entity stats" width="30" class="icon-background"> EntityStats</h3>
 <p><code>EntityStats</code> allows us to configure:</p>
 <ul>
 <li>the base statistics</li>
@@ -140,15 +137,15 @@ Let's clarify what we mean by each mentioned term.</p>
 We will see what these modifiers are in the section <a href="workflows.html#understanding-stat-modifier-types">Understanding Stat Modifier Types</a>.</li>
 </ul>
 <p>The base statistics can be <em>fixed</em>, or instead derive from a class if the entity has one assigned. If we use the fixed ones, we must also provide a <code>StatSet</code>, while if we use those of a class, the class's <code>StatSet</code> will be used. If the entity levels up and we want its statistics to grow with levels, we are forced to use a class, as the <em>fixed</em> statistics are immutable.</p>
-<h3 id="-class"><img src="../images/SoapRPG/class.png" alt="class" width="30" class="icon-background"> Class</h3>
+<h3 id="-class"><img src="../images/AstraRPG/class.png" alt="class" width="30" class="icon-background"> Class</h3>
 <p><code>Class</code> derives from SO and represents a game class. Each class has a name, a <code>GrowthFormula</code> that defines how the base Max HP grows with levels, a <code>StatSet</code>, optionally an <code>AttributeSet</code>, and associates each <code>Stat</code> of the provided StatSet with a <code>GrowthFormula</code> that describes how the statistic varies with levels. Similarly, if an <code>AttributeSet</code> is provided, it will be possible to associate a <code>GrowthFormula</code> for each <code>Attribute</code> present in the set, to describe how the attributes vary with levels.</p>
-<h3 id="-entityclass"><img src="../images/SoapRPG/entity-class.png" alt="entity class" width="30" class="icon-background"> EntityClass</h3>
+<h3 id="-entityclass"><img src="../images/AstraRPG/entity-class.png" alt="entity class" width="30" class="icon-background"> EntityClass</h3>
 <p><code>EntityClass</code> derives from Mono and allows us to assign a <code>Class</code> to our entity.</p>
-<h3 id="-attribute"><img src="../images/SoapRPG/attribute.png" alt="attribute" width="30" class="icon-background"> Attribute</h3>
+<h3 id="-attribute"><img src="../images/AstraRPG/attribute.png" alt="attribute" width="30" class="icon-background"> Attribute</h3>
 <p>An <code>Attribute</code> is a class that derives from SO and represents an attribute in the game. Each attribute has a name and, like statistics, can have a maximum and minimum value.</p>
-<h3 id="-attributeset"><img src="../images/SoapRPG/attribute-set.png" alt="stat set" width="30" class="icon-background"> AttributeSet</h3>
+<h3 id="-attributeset"><img src="../images/AstraRPG/attribute-set.png" alt="stat set" width="30" class="icon-background"> AttributeSet</h3>
 <p>An <code>AttributeSet</code> is a class that derives from SO and defines a set of <code>Attribute</code>s.</p>
-<h3 id="-entityattributes"><img src="../images/SoapRPG/entity-attributes.png" alt="entity attributes" width="30" class="icon-background"> EntityAttributes</h3>
+<h3 id="-entityattributes"><img src="../images/AstraRPG/entity-attributes.png" alt="entity attributes" width="30" class="icon-background"> EntityAttributes</h3>
 <p>Optionally, we can add the Mono <code>EntityAttributes</code> to our entity if we want to give it attributes. <code>EntityAttributes</code> allows us to specify how many attribute points to provide at each new level. These points can be spent on various attributes to increase their value. For <code>EntityAttributes</code> we can configure:</p>
 <ul>
 <li>the base attributes</li>
@@ -156,15 +153,15 @@ We will see what these modifiers are in the section <a href="workflows.html#unde
 <li>the percentage modifiers
 Similarly to <code>EntityStats</code>, we can decide whether the base attributes are <em>fixed</em> or if they instead derive from the class associated with <code>EntityClass</code>.</li>
 </ul>
-<h3 id="-growth-formula"><img src="../images/SoapRPG/growth-fo.png" alt="growth formula" width="30" class="icon-background"> Growth Formula</h3>
+<h3 id="-growth-formula"><img src="../images/AstraRPG/growth-fo.png" alt="growth formula" width="30" class="icon-background"> Growth Formula</h3>
 <p>To express how <code>Stats</code>, <code>Attributes</code>, Max HP, and the experience required to level up vary at each level, we can use instances of <code>GrowthFormula</code>. This is a class that derives from SO and allows us to define a mathematical function, or a system of functions, that describe how a value changes as levels increase. We will see in more detail how to define a <code>GrowthFormula</code> in the <a href="workflows.html#growth-formulas">Growth Formulas</a> section.</p>
-<h3 id="-scaling-formulas"><img src="../images/SoapRPG/scaling-fo.png" alt="scaling formula" width="30" class="icon-background"> Scaling Formulas</h3>
+<h3 id="-scaling-formulas"><img src="../images/AstraRPG/scaling-fo.png" alt="scaling formula" width="30" class="icon-background"> Scaling Formulas</h3>
 <p>Scaling formulas provide a flexible way to define how values such as damage, healing, or other effects are calculated based on one or more attributes or stats. They allow you to combine base values (which can be constant or level-dependent) with contributions from various stats and attributes, each weighted by customizable scaling components.</p>
-<h3 id="-scaling-components"><img src="../images/SoapRPG/stat-scaling-component.png" alt="stats scaling component" width="30" class="icon-background"><img src="../images/SoapRPG/attribute-scaling-component.png" alt="attribute scaling component" width="30" class="icon-background"> Scaling components</h3>
+<h3 id="-scaling-components"><img src="../images/AstraRPG/stat-scaling-component.png" alt="stats scaling component" width="30" class="icon-background"><img src="../images/AstraRPG/attribute-scaling-component.png" alt="attribute scaling component" width="30" class="icon-background"> Scaling components</h3>
 <p>Specify how much a particular stat or attribute influences the final value of the scaling formula, enabling complex and dynamic calculations for abilities, equipment, or other game mechanics. This modular approach lets you easily adjust and extend scaling logic to fit your game's needs.</p>
-<h3 id="-game-events"><img src="../images/SoapRPG/event.png" alt="game event" width="30" class="icon-background"> Game Events</h3>
+<h3 id="-game-events"><img src="../images/AstraRPG/event.png" alt="game event" width="30" class="icon-background"> Game Events</h3>
 <p>Game events are ScriptableObjects that allow you to implement the Observer pattern in your game. They provide a way to decouple systems by broadcasting notifications when something happens (such as a player jumping, leveling up, or taking damage). Listeners can subscribe to these events and react accordingly, all through inspector-driven workflows. Game events can carry context parameters, making them flexible for a wide range of use cases.</p>
-<h3 id="-game-event-generators"><img src="../images/SoapRPG/event-gen.png" alt="game event generator" width="30" class="icon-background"> Game Event Generators</h3>
+<h3 id="-game-event-generators"><img src="../images/AstraRPG/event-gen.png" alt="game event generator" width="30" class="icon-background"> Game Event Generators</h3>
 <p>Game Event Generators are ScriptableObjects that let you define custom game events with up to four context parameters. They automate the creation of event and listener classes, making it easy to extend your event system for complex gameplay scenarios. You can specify parameter types and documentation, and generate code and assets directly from the inspector.</p>
 <h2 id="how-is-astra-rpg-framework-implemented">How is Astra RPG Framework implemented?</h2>
 <p>The package is developed around a Scriptable Objects architecture inspired by the <a href="https://www.youtube.com/watch?v=raQ3iHhE_Kk&amp;ab_channel=Unity">GDC talk of Ryan Hipple</a>. In a nutshell, the main benefits provided by this architecture are:</p>
@@ -180,7 +177,7 @@ Similarly to <code>EntityStats</code>, we can decide whether the base attributes
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ElectricDrill/SoapRpgFrameworkDocs/blob/main/DocFx/MD/introduction.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ElectricDrill/SoapRpgFrameworkDocs/blob/astra-renaming/DocFx/MD/introduction.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

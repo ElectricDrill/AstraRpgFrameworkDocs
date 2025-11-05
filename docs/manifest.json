@@ -62,6 +62,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "MD/migration-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "MD/migration-guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "MD/package-contents.md",
       "output": {
         ".html": {
@@ -2138,170 +2148,170 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SoapRPG/attribute-scaling-component.png",
+      "source_relative_path": "images/AstraRPG/attribute-scaling-component.png",
       "output": {
         "resource": {
-          "relative_path": "images/SoapRPG/attribute-scaling-component.png"
+          "relative_path": "images/AstraRPG/attribute-scaling-component.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SoapRPG/attribute-set.png",
+      "source_relative_path": "images/AstraRPG/attribute-set.png",
       "output": {
         "resource": {
-          "relative_path": "images/SoapRPG/attribute-set.png"
+          "relative_path": "images/AstraRPG/attribute-set.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SoapRPG/attribute.png",
+      "source_relative_path": "images/AstraRPG/attribute.png",
       "output": {
         "resource": {
-          "relative_path": "images/SoapRPG/attribute.png"
+          "relative_path": "images/AstraRPG/attribute.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SoapRPG/class.png",
+      "source_relative_path": "images/AstraRPG/class.png",
       "output": {
         "resource": {
-          "relative_path": "images/SoapRPG/class.png"
+          "relative_path": "images/AstraRPG/class.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SoapRPG/entity-attributes.png",
+      "source_relative_path": "images/AstraRPG/entity-attributes.png",
       "output": {
         "resource": {
-          "relative_path": "images/SoapRPG/entity-attributes.png"
+          "relative_path": "images/AstraRPG/entity-attributes.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SoapRPG/entity-class.png",
+      "source_relative_path": "images/AstraRPG/entity-class.png",
       "output": {
         "resource": {
-          "relative_path": "images/SoapRPG/entity-class.png"
+          "relative_path": "images/AstraRPG/entity-class.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SoapRPG/entity-core.png",
+      "source_relative_path": "images/AstraRPG/entity-core.png",
       "output": {
         "resource": {
-          "relative_path": "images/SoapRPG/entity-core.png"
+          "relative_path": "images/AstraRPG/entity-core.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SoapRPG/entity-stats.png",
+      "source_relative_path": "images/AstraRPG/entity-stats.png",
       "output": {
         "resource": {
-          "relative_path": "images/SoapRPG/entity-stats.png"
+          "relative_path": "images/AstraRPG/entity-stats.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SoapRPG/event-gen.png",
+      "source_relative_path": "images/AstraRPG/event-gen.png",
       "output": {
         "resource": {
-          "relative_path": "images/SoapRPG/event-gen.png"
+          "relative_path": "images/AstraRPG/event-gen.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SoapRPG/event.png",
+      "source_relative_path": "images/AstraRPG/event.png",
       "output": {
         "resource": {
-          "relative_path": "images/SoapRPG/event.png"
+          "relative_path": "images/AstraRPG/event.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SoapRPG/growth-fo.png",
+      "source_relative_path": "images/AstraRPG/growth-fo.png",
       "output": {
         "resource": {
-          "relative_path": "images/SoapRPG/growth-fo.png"
+          "relative_path": "images/AstraRPG/growth-fo.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SoapRPG/int-var.png",
+      "source_relative_path": "images/AstraRPG/int-var.png",
       "output": {
         "resource": {
-          "relative_path": "images/SoapRPG/int-var.png"
+          "relative_path": "images/AstraRPG/int-var.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SoapRPG/long-var.png",
+      "source_relative_path": "images/AstraRPG/long-var.png",
       "output": {
         "resource": {
-          "relative_path": "images/SoapRPG/long-var.png"
+          "relative_path": "images/AstraRPG/long-var.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SoapRPG/scaling-fo.png",
+      "source_relative_path": "images/AstraRPG/scaling-fo.png",
       "output": {
         "resource": {
-          "relative_path": "images/SoapRPG/scaling-fo.png"
+          "relative_path": "images/AstraRPG/scaling-fo.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SoapRPG/stat-scaling-component.png",
+      "source_relative_path": "images/AstraRPG/stat-scaling-component.png",
       "output": {
         "resource": {
-          "relative_path": "images/SoapRPG/stat-scaling-component.png"
+          "relative_path": "images/AstraRPG/stat-scaling-component.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SoapRPG/stat-set.png",
+      "source_relative_path": "images/AstraRPG/stat-set.png",
       "output": {
         "resource": {
-          "relative_path": "images/SoapRPG/stat-set.png"
+          "relative_path": "images/AstraRPG/stat-set.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/SoapRPG/stat.png",
+      "source_relative_path": "images/AstraRPG/stat.png",
       "output": {
         "resource": {
-          "relative_path": "images/SoapRPG/stat.png"
+          "relative_path": "images/AstraRPG/stat.png"
         }
       },
       "version": ""

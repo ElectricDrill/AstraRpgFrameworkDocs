@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ElectricDrill/SoapRpgFrameworkDocs/blob/main/DocFx/MD/workflows.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ElectricDrill/SoapRpgFrameworkDocs/blob/astra-renaming/DocFx/MD/workflows.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -122,7 +122,7 @@
 - AttributesScalingComponent
 -->
 <h2 id="creating-instances-of-the-objects">Creating instances of the objects</h2>
-<p>All the scriptable objects provided by the framework can be created through the Unity Editor by either right-clicking in the hierarchy and selecting <code>Create &gt; Soap RPG</code> or navigating to the <code>Assets</code> menu at the top of the window and choosing <code>Create &gt; Soap RPG</code>.</p>
+<p>All the scriptable objects provided by the framework can be created through the Unity Editor by either right-clicking in the hierarchy and selecting <code>Create &gt; Astra RPG</code> or navigating to the <code>Assets</code> menu at the top of the window and choosing <code>Create &gt; Astra RPG</code>.</p>
 <h2 id="mandatory-and-re-play-fields">Mandatory and re-play fields</h2>
 <p>Fields marked with a red asterisk (<span style="color:red;">*</span>) are mandatory and must be filled out to ensure proper functionality of the framework.</p>
 <p>Fields marked with an orange <strong style="color:orange;">R</strong> are re-play fields. Any changes made to these fields during playtime will require a restart to ensure the changes take effect.</p>
@@ -165,7 +165,7 @@ We will see these generators in more detail in the <a href="#game-event-generato
 Some game events are already defined and made available by the package (see the <a href="samples.html">Samples</a> page).</p>
 <h3 id="growth-formulas">Growth Formulas</h3>
 <p><em>Relative path:</em> <code>Growth Formula</code></p>
-<p>As already mentioned in <a href="introduction.html">Introduction</a>, <code>GrowthFormula</code> allows defining how a certain value varies as levels increase. A <code>GrowthFormula</code> can be instantiated through the hierarchy context menu by going to <code>Soap RPG Framework -&gt; Growth Formula</code>.
+<p>As already mentioned in <a href="introduction.html">Introduction</a>, <code>GrowthFormula</code> allows defining how a certain value varies as levels increase. A <code>GrowthFormula</code> can be instantiated through the hierarchy context menu by going to <code>Astra RPG Framework -&gt; Growth Formula</code>.
 The package provides a custom property drawer for <code>GrowthFormula</code>.</p>
 <h4 id="max-level-for-the-values">Max level for the values</h4>
 <p>In the inspector of a <code>GrowthFormula</code>, we can pass an <code>IntVar</code> to define up to which level to grow the values.</p>
@@ -186,7 +186,7 @@ The string can be defined by using the <a href="https://docs.unity3d.com/6000.0/
 <p>The <code>Max Level</code>, a mandatory field, is set with an <code>IntVar</code> assigned by default. We can edit that variable to change the maximum level that will be computed for our growth formula.</p>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>When modifying the value of a variable referenced in growth formulas, such as Max Level, the growth formulas are not directly updated unless you select them in the inspector. To update all growth formulas simultaneously after changing the maximum level, a command is available in the menu: <code>Tools &gt; SOAP RPG Framework &gt; Validate All Growth Formulas</code>.<br>
+<p>When modifying the value of a variable referenced in growth formulas, such as Max Level, the growth formulas are not directly updated unless you select them in the inspector. To update all growth formulas simultaneously after changing the maximum level, a command is available in the menu: <code>Tools &gt; Astra RPG Framework &gt; Validate All Growth Formulas</code>.<br>
 Validation occurs automatically during script compilation, upon entering play mode, and when instantiating a prefab. This is achieved through the <code>OnValidate</code> callback, which ensures that formulas are updated accordingly.</p>
 </div>
 <p>The <code>Use constant value at level 1</code> checkbox lets us decide whether to use a constant value at level 1 or not. If checked, the <code>Constant Value</code> field will be enabled, and we can set a value for it. In this case, we set it to 10.</p>
@@ -247,8 +247,8 @@ Alternatively, it is available also the <code>SetTotalCurrentExp(long totalCurre
 <h2 id="creating-astra-rpg-framework-assets">Creating Astra RPG Framework assets</h2>
 <p>All the instances of the various assets that derive from <code>ScriptableObject</code>s can be created in the following ways:</p>
 <ul>
-<li>Context menu: <code>Right click on the hierarchy &gt; Create &gt; Soap RPG Framework</code></li>
-<li>Top bar: <code>Assets &gt; Create &gt; Soap RPG Framework</code></li>
+<li>Context menu: <code>Right click on the hierarchy &gt; Create &gt; Astra RPG Framework</code></li>
+<li>Top bar: <code>Assets &gt; Create &gt; Astra RPG Framework</code></li>
 <li>Hotkeys: By pressing the respective keyboard shortcut while a folder or an element of the hierarchy is currently selected</li>
 </ul>
 <div class="NOTE">
@@ -738,7 +738,7 @@ To avoid potential issues, it is recommended to back up or version control your 
 <h4 id="game-event-generator-setup">Game Event Generator setup</h4>
 <p>Let's create a custom game event generator to manage all the events related to the experience and leveling up of entities. Rename the newly created events generator <code>EntityLevelingEvents</code>. In the inspector, it should look like this:</p>
 <p><img src="../images/workflows/entity-leveling-events.png" alt="Entity Leveling Events"></p>
-<p>With <code>Menu Base Path</code> we can change the path of the context menu where the generated events will be available for creation. By default, it is set to <code>Soap RPG Core -&gt; Events -&gt; Generated</code>, but we can change it to <code>Soap RPG Core -&gt; Events/Generated/Experience</code> for the sake of organization.</p>
+<p>With <code>Menu Base Path</code> we can change the path of the context menu where the generated events will be available for creation. By default, it is set to <code>Astra RPG Core -&gt; Events -&gt; Generated</code>, but we can change it to <code>Astra RPG Core -&gt; Events/Generated/Experience</code> for the sake of organization.</p>
 <p>With <code>Base Save Location</code> we can change the path where the source code files for the generated events will be saved. By default it is set to <code>Assets</code>, but for this example let's set it to <code>Assets/Events</code>.</p>
 <h4 id="adding-new-events">Adding new events</h4>
 <p>Now let's create an event that will be raised when an entity grants experience to another entity. To do this, click on the <code>Add new event</code> button and fill in the fields as follows:</p>
@@ -761,7 +761,7 @@ We can now navigate to <code>Assets/Events/GeneratedEvents/EntityLevelingEvents<
 <li><code>GameEvents</code>: contains the source code for all the game events generated by our <code>EntityLevelingEvents</code> game event generator.</li>
 </ul>
 <p>Inside both folders, you'll find a subfolder named <code>3</code>. The Game Event Generators organize the generated events in subfolders based on the number of parameters they have. In this case, we have a game event with three parameters, so it is placed in the <code>3</code> subfolder.</p>
-<p>However, more interesting is the fact that if we now use the context menu and navigate to <code>Soap RPG Core -&gt; Events -&gt; Generated -&gt; Experience</code>, we can find the <code>EntityGrantedExp</code> event.<br>
+<p>However, more interesting is the fact that if we now use the context menu and navigate to <code>Astra RPG Core -&gt; Events -&gt; Generated -&gt; Experience</code>, we can find the <code>EntityGrantedExp</code> event.<br>
 From here, you can follow the same steps as for the pre-defined game events to create a listener for this event, and to wire it up to the appropriate game logic.</p>
 <p>If you need to create more experience related events, you can repeat the process of adding new events to the <code>EntityLevelingEvents</code> game event generator.</p>
 <p>After having generated the source code for the game events, you can also click on the <code>Remove Event</code> button under each Game Event to remove it from the generator and delete the generated source code files.
@@ -777,7 +777,7 @@ Same applies if you rename the generated game event type scripts. To rename them
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ElectricDrill/SoapRpgFrameworkDocs/blob/main/DocFx/MD/workflows.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ElectricDrill/SoapRpgFrameworkDocs/blob/astra-renaming/DocFx/MD/workflows.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
