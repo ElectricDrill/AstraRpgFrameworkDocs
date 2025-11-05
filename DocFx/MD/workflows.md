@@ -35,7 +35,7 @@
 -->
 
 ## Creating instances of the objects
-All the scriptable objects provided by the framework can be created through the Unity Editor by either right-clicking in the hierarchy and selecting `Create > Soap RPG` or navigating to the `Assets` menu at the top of the window and choosing `Create > Soap RPG`.
+All the scriptable objects provided by the framework can be created through the Unity Editor by either right-clicking in the hierarchy and selecting `Create > Astra RPG` or navigating to the `Assets` menu at the top of the window and choosing `Create > Astra RPG`.
 
 ## Mandatory and re-play fields
 Fields marked with a red asterisk (<span style="color:red;">*</span>) are mandatory and must be filled out to ensure proper functionality of the framework.
@@ -94,7 +94,7 @@ Some game events are already defined and made available by the package (see the 
 ### Growth Formulas
 *Relative path:* `Growth Formula`
 
-As already mentioned in [Introduction](introduction.md), `GrowthFormula` allows defining how a certain value varies as levels increase. A `GrowthFormula` can be instantiated through the hierarchy context menu by going to `Soap RPG Framework -> Growth Formula`.
+As already mentioned in [Introduction](introduction.md), `GrowthFormula` allows defining how a certain value varies as levels increase. A `GrowthFormula` can be instantiated through the hierarchy context menu by going to `Astra RPG Framework -> Growth Formula`.
 The package provides a custom property drawer for `GrowthFormula`.
 
 #### Max level for the values
@@ -118,7 +118,7 @@ Let's see an example of how to define a `GrowthFormula` for defining the Physica
 The `Max Level`, a mandatory field, is set with an `IntVar` assigned by default. We can edit that variable to change the maximum level that will be computed for our growth formula.
 
 > [!WARNING]
-> When modifying the value of a variable referenced in growth formulas, such as Max Level, the growth formulas are not directly updated unless you select them in the inspector. To update all growth formulas simultaneously after changing the maximum level, a command is available in the menu: `Tools > SOAP RPG Framework > Validate All Growth Formulas`.  
+> When modifying the value of a variable referenced in growth formulas, such as Max Level, the growth formulas are not directly updated unless you select them in the inspector. To update all growth formulas simultaneously after changing the maximum level, a command is available in the menu: `Tools > Astra RPG Framework > Validate All Growth Formulas`.  
 > Validation occurs automatically during script compilation, upon entering play mode, and when instantiating a prefab. This is achieved through the `OnValidate` callback, which ensures that formulas are updated accordingly.
 
 The `Use constant value at level 1` checkbox lets us decide whether to use a constant value at level 1 or not. If checked, the `Constant Value` field will be enabled, and we can set a value for it. In this case, we set it to 10.
@@ -205,8 +205,8 @@ Finally, there are the `CurrentLevelTotalExperience()` and the `NextLevelTotalEx
 
 ## Creating Astra RPG Framework assets
 All the instances of the various assets that derive from `ScriptableObject`s can be created in the following ways:
-- Context menu: `Right click on the hierarchy > Create > Soap RPG Framework`
-- Top bar: `Assets > Create > Soap RPG Framework`
+- Context menu: `Right click on the hierarchy > Create > Astra RPG Framework`
+- Top bar: `Assets > Create > Astra RPG Framework`
 - Hotkeys: By pressing the respective keyboard shortcut while a folder or an element of the hierarchy is currently selected
 
 > [!NOTE]  
@@ -814,7 +814,7 @@ Let's create a custom game event generator to manage all the events related to t
 
 ![Entity Leveling Events](../images/workflows/entity-leveling-events.png)
 
-With `Menu Base Path` we can change the path of the context menu where the generated events will be available for creation. By default, it is set to `Soap RPG Core -> Events -> Generated`, but we can change it to `Soap RPG Core -> Events/Generated/Experience` for the sake of organization.
+With `Menu Base Path` we can change the path of the context menu where the generated events will be available for creation. By default, it is set to `Astra RPG Core -> Events -> Generated`, but we can change it to `Astra RPG Core -> Events/Generated/Experience` for the sake of organization.
 
 With `Base Save Location` we can change the path where the source code files for the generated events will be saved. By default it is set to `Assets`, but for this example let's set it to `Assets/Events`.
 
@@ -837,7 +837,7 @@ We can now navigate to `Assets/Events/GeneratedEvents/EntityLevelingEvents` to f
 
 Inside both folders, you'll find a subfolder named `3`. The Game Event Generators organize the generated events in subfolders based on the number of parameters they have. In this case, we have a game event with three parameters, so it is placed in the `3` subfolder.
 
-However, more interesting is the fact that if we now use the context menu and navigate to `Soap RPG Core -> Events -> Generated -> Experience`, we can find the `EntityGrantedExp` event.  
+However, more interesting is the fact that if we now use the context menu and navigate to `Astra RPG Core -> Events -> Generated -> Experience`, we can find the `EntityGrantedExp` event.  
 From here, you can follow the same steps as for the pre-defined game events to create a listener for this event, and to wire it up to the appropriate game logic.
 
 If you need to create more experience related events, you can repeat the process of adding new events to the `EntityLevelingEvents` game event generator.
