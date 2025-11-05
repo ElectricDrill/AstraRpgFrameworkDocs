@@ -12,3 +12,5 @@
   href: samples.md
 - name: Changelog
   href: changelog.md
+- name: Migration Guide
+  href: migration-guide.md
