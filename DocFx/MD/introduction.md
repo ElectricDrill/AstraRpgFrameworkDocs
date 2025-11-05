@@ -1,12 +1,10 @@
 # Introduction
 
 > [!NOTE] 
-> The package previously known as <strong>SOAP RPG Framework</strong> has been renamed to <strong>Astra RPG Framework</strong>. This action was taken to prevent further confusion regarding whether this package was in any way related to another asset already available on the Unity Asset Store.
-> All functionality remains the same—only the name has changed.  
-> To complete the transition to the new name, in the upcoming days a new update (v1.1.0) will be released to reflect this change on the namespaces of the codebase, and on the menu from which the package is accessed.
-> All changes to the code that require any action on your part will be listed in the update changelog.  
-> Thank you for your understanding,  
-> Electric Drill
+> The package previously known as SOAP RPG Framework (v1.0.0) has been renamed to Astra RPG Framework (v1.1.0). This action was taken to prevent further confusion regarding whether this package was in any way related to another asset already available on the Unity Asset Store. All functionality remains the same—only the name has changed.  
+> Since the rebranding touched also the codebase (UPM package name and namespaces),  
+> if you are running your project on version 1.0.0 I would advise you to follow the [migration guide](./migration-guide.md) to ensure a smooth upgrade.  
+> Thanks for your understanding.
 
 Astra RPG Framework is a lightweight, modular framework that takes a different approach compared to other RPG solutions. While many existing frameworks offer comprehensive, pre-built systems, they often come with steep learning curves and rigid structures that can limit your creative freedom. Astra RPG Framework instead focuses on providing a clean, flexible foundation that you can shape to your exact needs.
 
