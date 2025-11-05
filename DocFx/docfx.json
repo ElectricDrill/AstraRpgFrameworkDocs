@@ -3,9 +3,9 @@
       {
           "src": [
               {
-                  "src": "../../SoapRpgFrameworkPublishing",
+                  "src": "../../AstraRpgFrameworkPublishing",
                   "files": [
-                      "com.electricdrill.soap-rpg-framework.Runtime.csproj"
+                      "com.electricdrill.astra-rpg-framework.Runtime.csproj"
                   ],
                   "exclude": [
                       "Editor/**",
