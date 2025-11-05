@@ -6,8 +6,7 @@ _layout: landing
 
 > [!NOTE] 
 > The package previously known as SOAP RPG Framework (v1.0.0) has been renamed to Astra RPG Framework (v1.1.0). This action was taken to prevent further confusion regarding whether this package was in any way related to another asset already available on the Unity Asset Store. All functionality remains the same—only the name has changed.  
-> Since the rebranding touched also the codebase (UPM package name and namespaces),  
-> if you are running your project on version 1.0.0 I would advise you to follow the [migration guide](./MD/migration-guide.md) to ensure a smooth upgrade.  
+> Since the rebranding touched also the codebase (UPM package name and namespaces), if you are running your project on version 1.0.0 I would advise you to follow the [migration guide](./MD/migration-guide.md) to ensure a smooth upgrade.  
 > Thanks for your understanding.
 
 ### 👉 Introduction
