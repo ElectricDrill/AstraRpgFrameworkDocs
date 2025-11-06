@@ -31,12 +31,26 @@ If you get errors related to duplicate `.asmdef` files, follow the next steps.
 6. Click on the `com.electricdrill.astra-rpg-framework.Editor` file to select it. In the Inspector window, in the `Assembly Definition References` section, add the reference to `com.electricdrill.astra-rpg-framework.Runtime` if it's not already present, and delete any reference to `com.electricdrill.soap-rpg-framework.Runtime` if present.
 7. Click on apply to save the changes.
 
+> [!NOTE]
+> Unity sometimes has unpredictable behaviors when updating `.asmdef` files in and their references. After applying the changes mentioned above, try also to close and reopen Unity to ensure that the changes are correctly applied. If you still encounter issues, fix the new problems and re-start Unity again. At that point, the changes should be correctly applied.
+
 ### 5. Recompile the Project
 If Unity didn't automatically recompile the project after these changes, you can force recompilation.
 
-### Migration Complete
 Your project should now be successfully migrated to Astra RPG Framework v1.1.0.  
 Happy developing!
+
+---
+
+### Troubleshooting
+
+#### I re-imported Samples that I already had from v1.0.0 and now I have errors
+If you used the ScriptableObject based samples of the `Utils` folder in your project, you can keep using them as they are fully compatible with the new version. In fact, **you should not re-import them as that would create duplicates in your project**.
+> [!WARNING]
+> Do not delete any ScriptableObject based asset that you are using in your project! Delete the duplicates from the newly imported samples instead. This will prevent data loss in your project.
+
+Moreover, it was noticed that re-importing samples in a project that was using v1.0.0 of the package, resulted in old namespaces being used in the samples scripts. This is likely a Unity bug as does not happen on a fresh project.
+If this happens, please rename the old `ElectricDrill.SoapRpgFramework` namespace in the scripts of the samples to `ElectricDrill.AstraRPGFramework` manually, analogously to what is described in step #3.
 
 ### Still Need Help?
 For any issue during the migration, feel free to reach me out by sending me an email at electricdrill.info@gmail.com

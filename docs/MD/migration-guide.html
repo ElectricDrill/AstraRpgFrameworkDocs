@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ElectricDrill/SoapRpgFrameworkDocs/blob/astra-renaming/DocFx/MD/migration-guide.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ElectricDrill/AstraRpgFrameworkDocs/blob/main/DocFx/MD/migration-guide.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -115,18 +115,31 @@ If you get errors related to duplicate <code>.asmdef</code> files, follow the ne
 <li>Click on the <code>com.electricdrill.astra-rpg-framework.Editor</code> file to select it. In the Inspector window, in the <code>Assembly Definition References</code> section, add the reference to <code>com.electricdrill.astra-rpg-framework.Runtime</code> if it's not already present, and delete any reference to <code>com.electricdrill.soap-rpg-framework.Runtime</code> if present.</li>
 <li>Click on apply to save the changes.</li>
 </ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Unity sometimes has unpredictable behaviors when updating <code>.asmdef</code> files in and their references. After applying the changes mentioned above, try also to close and reopen Unity to ensure that the changes are correctly applied. If you still encounter issues, fix the new problems and re-start Unity again. At that point, the changes should be correctly applied.</p>
+</div>
 <h3 id="5-recompile-the-project">5. Recompile the Project</h3>
 <p>If Unity didn't automatically recompile the project after these changes, you can force recompilation.</p>
-<h3 id="migration-complete">Migration Complete</h3>
 <p>Your project should now be successfully migrated to Astra RPG Framework v1.1.0.<br>
 Happy developing!</p>
+<hr>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<h4 id="i-re-imported-samples-that-i-already-had-from-v100-and-now-i-have-errors">I re-imported Samples that I already had from v1.0.0 and now I have errors</h4>
+<p>If you used the ScriptableObject based samples of the <code>Utils</code> folder in your project, you can keep using them as they are fully compatible with the new version. In fact, <strong>you should not re-import them as that would create duplicates in your project</strong>.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Do not delete any ScriptableObject based asset that you are using in your project! Delete the duplicates from the newly imported samples instead. This will prevent data loss in your project.</p>
+</div>
+<p>Moreover, it was noticed that re-importing samples in a project that was using v1.0.0 of the package, resulted in old namespaces being used in the samples scripts. This is likely a Unity bug as does not happen on a fresh project.
+If this happens, please rename the old <code>ElectricDrill.SoapRpgFramework</code> namespace in the scripts of the samples to <code>ElectricDrill.AstraRPGFramework</code> manually, analogously to what is described in step #3.</p>
 <h3 id="still-need-help">Still Need Help?</h3>
 <p>For any issue during the migration, feel free to reach me out by sending me an email at electricdrill.info@gmail.com</p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ElectricDrill/SoapRpgFrameworkDocs/blob/astra-renaming/DocFx/MD/migration-guide.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ElectricDrill/AstraRpgFrameworkDocs/blob/main/DocFx/MD/migration-guide.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
