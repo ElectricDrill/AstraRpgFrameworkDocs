@@ -472,7 +472,7 @@ We can create three stat sets:
 - `Movable Stat Set`: includes stats like `Movement Speed`, `Jump Height`, etc.
 
 Then, we can create three additional stat sets for our entities:
-- `Pray Stat Set` for the deer, which includes only the `Damageable Stat Set` and the `Movable Stat Set`
+- `Prey Stat Set` for the deer, which includes only the `Damageable Stat Set` and the `Movable Stat Set`
 - `Turret Stat Set` for the ballista turret, which includes only the `Damageable Stat Set` and the `Damage Dealer Stat Set`
 - `Hero Stat Set` for our hero character, which includes all three stat sets: `Damageable Stat Set`, `Damage Dealer Stat Set`, and `Movable Stat Set`
 
