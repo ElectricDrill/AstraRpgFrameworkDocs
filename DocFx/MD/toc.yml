@@ -10,6 +10,8 @@
   href: package-contents.md
 - name: Samples
   href: samples.md
+- name: Installation Instructions
+  href: installation-instructions.md
 - name: Changelog
   href: changelog.md
 - name: Migration Guide
