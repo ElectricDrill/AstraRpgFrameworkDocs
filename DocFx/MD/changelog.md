@@ -4,8 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [1.1.2] - 2025-11-12
+### Changed
+- Updated the "Example scene and instances" samples. Now by default the Hero prefab uses a IntVar for the attribute spendable points per level. This makes more consistent the amount of spendable attribute points acquired by each character on level up
+- Updated offline docs with Installation Guide section
+
 ## [1.1.1] - 2025-11-06
-## Changed
+### Changed
 - Updated the links in `package.json` to match the new docs URL
 
 ## [1.1.0] - 2025-11-06
