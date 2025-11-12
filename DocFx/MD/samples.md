@@ -41,7 +41,7 @@ If you now enter play mode in the Sample Scene, you'll see three heroes: the War
 
 The Sample Scene is designed to demonstrate how stats and attributes respond to changes made in the inspector.
 
-For example, select the `Warrior` in the hierarchy and change its Level from 1 to 2 using the Entity Core component. You'll observe that the Warrior's `Physical Attack` increases from 28 to 29, and `Defense` rises from 24 to 25.
+For example, select the `Warrior` in the hierarchy and change its Level from 1 to 2 using the Entity Core component. You'll observe that the Warrior's `Physical Attack` increases from 28 to 29, and `Defense` rises from 26 to 27.
 
 Increasing the level also grants the Warrior a spendable attribute point (visible in the `EntityAttributes` component). If you allocate this point to `Strength`, the `Physical Attack` will increase from 29 to 30.  
 If you revert the level back to 1, `Physical Attack` returns to 28 and the spent attribute point is removed.
