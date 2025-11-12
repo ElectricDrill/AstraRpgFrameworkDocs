@@ -129,7 +129,7 @@ All these objects are used in the Sample Scene to showcase the package's feature
 </ul>
 <p>If you now enter play mode in the Sample Scene, you'll see three heroes: the Warrior (left), Mage (center), and Rogue (right), each with their respective HUD displayed above them. You can use the arrow buttons (<code>&lt;</code> and <code>&gt;</code>) to toggle between viewing the heroes' stats and attributes.</p>
 <p>The Sample Scene is designed to demonstrate how stats and attributes respond to changes made in the inspector.</p>
-<p>For example, select the <code>Warrior</code> in the hierarchy and change its Level from 1 to 2 using the Entity Core component. You'll observe that the Warrior's <code>Physical Attack</code> increases from 28 to 29, and <code>Defense</code> rises from 24 to 25.</p>
+<p>For example, select the <code>Warrior</code> in the hierarchy and change its Level from 1 to 2 using the Entity Core component. You'll observe that the Warrior's <code>Physical Attack</code> increases from 28 to 29, and <code>Defense</code> rises from 26 to 27.</p>
 <p>Increasing the level also grants the Warrior a spendable attribute point (visible in the <code>EntityAttributes</code> component). If you allocate this point to <code>Strength</code>, the <code>Physical Attack</code> will increase from 29 to 30.<br>
 If you revert the level back to 1, <code>Physical Attack</code> returns to 28 and the spent attribute point is removed.</p>
 <p>Next, let's adjust how <code>Physical Attack</code> scales with the <code>Strength</code> attribute. By default, each point of <code>Strength</code> adds 1 point to <code>Physical Attack</code>. Suppose you want each point of <code>Strength</code> to contribute 3 points instead.<br>
