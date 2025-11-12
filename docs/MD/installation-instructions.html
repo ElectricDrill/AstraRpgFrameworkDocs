@@ -87,7 +87,23 @@
         <article data-uid="">
 <h1 id="installation-instructions">Installation instructions</h1>
 
-<h2 id="requirements">Requirements</h2>
+<ol>
+<li>From the package manager, import Astra RPG Framework. You can find the package in the &quot;My Assets&quot; section.</li>
+<li>After importing, head to the &quot;In Project&quot; section, always in the Package Manager, and click on &quot;AstraRPGFramework&quot;.</li>
+<li>Click on the &quot;Samples&quot; tab and import the samples you desire. Find out more about the samples in the <a href="samples.html">Samples documentation</a>.</li>
+<li>If you imported the &quot;Example scene and instances&quot; samples you need to import also TextMeshPro Essentials. Click on &quot;Window &gt; TextMeshPro &gt; Import TMP Essential Resources&quot;.</li>
+</ol>
+<h2 id="unity-62-and-above-extra-steps-for-having-the-sample-scene-working">Unity 6.2 and above extra steps for having the sample scene working</h2>
+<p>If you are using Unity 6.2 or above, and you imported the &quot;Example scene and instances&quot; samples, you need to do the following extra steps to have the sample scene working:</p>
+<ol>
+<li>Open the &quot;SampleScene&quot; scene located in &quot;Assets/Samples/AstraRPGFramework/[version of the package]/Example scene and instances/SampleScene&quot;.</li>
+<li>Select the &quot;EventSystem&quot; GameObject in the Hierarchy.</li>
+<li>In the Inspector, find the &quot;Standalone Input Module&quot; component. You should see an error like:
+<img src="../images/installation-instructions/input-system-ui-input-module.png" alt="Input System error"></li>
+<li>Click on &quot;Replace with InputSystemUIInputModule&quot;.</li>
+</ol>
+<p>The sample scene should now work correctly.</p>
+<p>I am working on a fix to avoid having to do these extra steps in future versions of the package, while preserving compatibility with Unity versions below 6.2.</p>
 
 </article>
 

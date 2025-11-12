@@ -2338,6 +2338,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/installation-instructions/input-system-ui-input-module.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/installation-instructions/input-system-ui-input-module.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/logo-astra.svg",
       "output": {
         "resource": {
