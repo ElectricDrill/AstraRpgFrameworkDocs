@@ -1,9 +1,10 @@
-# Introduction
+> [!NOTE]
+> Join the Astra RPG Discord server!  
+> There is now a dedicated **Discord server** for Astra RPG Framework and its extensions.
+> Join to **receive notifications** about new extension releases and important updates, to **ask for new features**, **report bugs**, **share ideas**, and **showcase your Astra creations** with other developers.  
+> <span style="font-size:1.18em; font-weight:600;">💬 Join the Discord Server: https://discord.gg/nJVRMkGrZg</span>
 
-> [!NOTE] 
-> The package previously known as SOAP RPG Framework (v1.0.0) has been renamed to Astra RPG Framework (v1.1.0). This action was taken to prevent further confusion regarding whether this package was in any way related to another asset already available on the Unity Asset Store. All functionality remains the same—only the name has changed.  
-> Since the rebranding touched also the codebase (UPM package name and namespaces), if you are running your project on version 1.0.0 I would advise you to follow the [migration guide](./migration-guide.md) to ensure a smooth upgrade.  
-> Thanks for your understanding.
+# Introduction
 
 Astra RPG Framework is a lightweight, modular framework that takes a different approach compared to other RPG solutions. While many existing frameworks offer comprehensive, pre-built systems, they often come with steep learning curves and rigid structures that can limit your creative freedom. Astra RPG Framework instead focuses on providing a clean, flexible foundation that you can shape to your exact needs.
 
