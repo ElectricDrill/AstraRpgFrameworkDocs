@@ -200,15 +200,15 @@ Built-in framework events such as `Spawned`, `Level Up`, `Level Down`, `Stat Cha
 ### EntityLevel code APIs
 It is honorable to mention some code APIs that can be used to interact with the `EntityLevel` component.
 
-EntityLevel exposes a `Action<EntityCore, int> OnLevelUp` property that can be used to subscribe to level-up events from code.
+EntityLevel exposes the `OnEntityLevelUp` and `OnEntityLevelDown` events, both of type `Action<EntityLevelChangedContext>`, that can be used to subscribe to level-change events from code. The `EntityLevelChangedContext` payload carries the entity, the previous and new level, and `AbsAmount` (see [Global Entity Level Up Event](package-configuration.md#global-entity-level-up-event-) for the full field list). Adding a handler wires it to the active configuration's global level event, so it fires for every entity.
 
-If we want to grant experience to the entity, we can use the `AddExp(long amount)` method. This method will automatically raise the `OnLevelUp` event if the entity levels up.
-Alternatively, it is available also the `SetTotalCurrentExp(long totalCurrentExperience)` method, which allows setting the total current experience of the entity. This method will also raise the `OnLevelUp` event if the entity levels up, and the `OnLevelDown` event if the entity levels down.
+If we want to grant experience to the entity, we can use the `AddExp(long amount)` method. This method will automatically raise the `OnEntityLevelUp` event if the entity levels up.
+Alternatively, it is available also the `SetTotalCurrentExp(long totalCurrentExperience)` method, which allows setting the total current experience of the entity. This method will also raise the `OnEntityLevelUp` event if the entity levels up, and the `OnEntityLevelDown` event if the entity levels down.
 
-(🏷️*v1.2.0+*) Similarly, the `RemoveExp(long amount)` method allows deducting experience from the entity. This method will raise the `OnLevelDown` event if the entity levels down. If you want to _respec_ an entity, the `ResetToLevelOne()` method resets the entity's level and experience to level 1. This method will raise the `OnLevelDown` event if the entity levels down. Clearly, all spent attribute points will be reset as well.
+(🏷️*v1.2.0+*) Similarly, the `RemoveExp(long amount)` method allows deducting experience from the entity. This method will raise the `OnEntityLevelDown` event if the entity levels down. If you want to _respec_ an entity, the `ResetToLevelOne()` method resets the entity's level and experience to level 1. This method will raise the `OnEntityLevelDown` event if the entity levels down. Clearly, all spent attribute points will be reset as well.
 
 > [!NOTE]
-> (🏷️*v2.2.0+*) A change that spans several levels at once raises a single `OnLevelUp` or `OnLevelDown` event covering the whole transition, not one event per level. The number of levels crossed is carried in the event payload as `AbsAmount`; iterate over it when you need a per-level reaction (one reward or fanfare each).
+> (🏷️*v2.2.0+*) A change that spans several levels at once raises a single `OnEntityLevelUp` or `OnEntityLevelDown` event covering the whole transition, not one event per level. The number of levels crossed is carried in the event payload as `AbsAmount`; iterate over it when you need a per-level reaction (one reward or fanfare each).
 
 Finally, there are the `CurrentLevelTotalExperience()` and the `NextLevelTotalExperience()` methods. These methods return the total experience required to reach the current level and the next level, respectively. They are useful, for example, for checking how much experience is needed to level up.
 
