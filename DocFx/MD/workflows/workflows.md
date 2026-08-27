@@ -207,6 +207,9 @@ Alternatively, it is available also the `SetTotalCurrentExp(long totalCurrentExp
 
 (🏷️*v1.2.0+*) Similarly, the `RemoveExp(long amount)` method allows deducting experience from the entity. This method will raise the `OnLevelDown` event if the entity levels down. If you want to _respec_ an entity, the `ResetToLevelOne()` method resets the entity's level and experience to level 1. This method will raise the `OnLevelDown` event if the entity levels down. Clearly, all spent attribute points will be reset as well.
 
+> [!NOTE]
+> (🏷️*v2.2.0+*) A change that spans several levels at once raises a single `OnLevelUp` or `OnLevelDown` event covering the whole transition, not one event per level. The number of levels crossed is carried in the event payload as `AbsAmount`; iterate over it when you need a per-level reaction (one reward or fanfare each).
+
 Finally, there are the `CurrentLevelTotalExperience()` and the `NextLevelTotalExperience()` methods. These methods return the total experience required to reach the current level and the next level, respectively. They are useful, for example, for checking how much experience is needed to level up.
 
 ## Entity Ownership
