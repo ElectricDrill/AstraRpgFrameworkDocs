@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ElectricDrill/AstraRpgFrameworkDocs/blob/main/DocFx/MD/workflows/package-configuration.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ElectricDrill/AstraRpgFrameworkDocs/blob/v2.2.0/DocFx/MD/workflows/package-configuration.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -295,7 +295,7 @@ entityCore.Unsubscribe&lt;EntityCoreGameEvent&gt;(myEntitySpecificEvent);
 <p><strong>Type:</strong> <code>EntityLevelUpGameEvent</code><br>
 <strong>Required:</strong> Yes<br>
 <strong>Raised by:</strong> <code>EntityLevel</code><br>
-<strong>Description:</strong> Raised when any entity's level increases. Carries an <code>EntityLevelChangedContext</code> payload.</p>
+<strong>Description:</strong> Raised when any entity's level increases. Carries an <code>EntityLevelChangedContext</code> payload. Raised once per transition, even when several levels are crossed at once (<code>AbsAmount</code> holds the number of levels gained).</p>
 <p><strong>Payload — <code>EntityLevelChangedContext</code>:</strong></p>
 <table>
 <thead>
@@ -337,7 +337,7 @@ entityCore.Level.Unsubscribe&lt;EntityLevelUpGameEvent&gt;(myLevelUpEvent);
 <p><strong>Type:</strong> <code>EntityLevelDownGameEvent</code><br>
 <strong>Required:</strong> Yes<br>
 <strong>Raised by:</strong> <code>EntityLevel</code><br>
-<strong>Description:</strong> Raised when any entity's level decreases. Carries an <code>EntityLevelChangedContext</code> payload with the same fields as the level-up event.</p>
+<strong>Description:</strong> Raised when any entity's level decreases. Carries an <code>EntityLevelChangedContext</code> payload with the same fields as the level-up event. Raised once per transition, even when several levels are crossed at once (<code>AbsAmount</code> holds the number of levels lost).</p>
 <p><strong>Per-entity extra events API:</strong></p>
 <pre><code class="lang-csharp">entityCore.Level.Subscribe&lt;EntityLevelDownGameEvent&gt;(myLevelDownEvent);
 entityCore.Level.Unsubscribe&lt;EntityLevelDownGameEvent&gt;(myLevelDownEvent);

@@ -935,6 +935,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.GetBase
   nameWithType: EntityAttributes.GetBase
+- uid: ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.GetFixedBaseAttributeValues
+  name: GetFixedBaseAttributeValues()
+  href: api/ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_AstraRpgFramework_Attributes_EntityAttributes_GetFixedBaseAttributeValues
+  commentId: M:ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.GetFixedBaseAttributeValues
+  fullName: ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.GetFixedBaseAttributeValues()
+  nameWithType: EntityAttributes.GetFixedBaseAttributeValues()
+- uid: ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.GetFixedBaseAttributeValues*
+  name: GetFixedBaseAttributeValues
+  href: api/ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_AstraRpgFramework_Attributes_EntityAttributes_GetFixedBaseAttributeValues_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.GetFixedBaseAttributeValues
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.GetFixedBaseAttributeValues
+  nameWithType: EntityAttributes.GetFixedBaseAttributeValues
 - uid: ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.GetPermanentBonus(ElectricDrill.AstraRpgFramework.Attributes.AttributeSO)
   name: GetPermanentBonus(AttributeSO)
   href: api/ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_AstraRpgFramework_Attributes_EntityAttributes_GetPermanentBonus_ElectricDrill_AstraRpgFramework_Attributes_AttributeSO_
@@ -1102,6 +1115,22 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.RevokeBonusAttributePoints
   nameWithType: EntityAttributes.RevokeBonusAttributePoints
+- uid: ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.SetAllSpentPoints(System.Collections.Generic.IReadOnlyDictionary{ElectricDrill.AstraRpgFramework.Attributes.AttributeSO,System.Int32})
+  name: SetAllSpentPoints(IReadOnlyDictionary<AttributeSO, int>)
+  href: api/ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_AstraRpgFramework_Attributes_EntityAttributes_SetAllSpentPoints_System_Collections_Generic_IReadOnlyDictionary_ElectricDrill_AstraRpgFramework_Attributes_AttributeSO_System_Int32__
+  commentId: M:ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.SetAllSpentPoints(System.Collections.Generic.IReadOnlyDictionary{ElectricDrill.AstraRpgFramework.Attributes.AttributeSO,System.Int32})
+  name.vb: SetAllSpentPoints(IReadOnlyDictionary(Of AttributeSO, Integer))
+  fullName: ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.SetAllSpentPoints(System.Collections.Generic.IReadOnlyDictionary<ElectricDrill.AstraRpgFramework.Attributes.AttributeSO, int>)
+  fullName.vb: ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.SetAllSpentPoints(System.Collections.Generic.IReadOnlyDictionary(Of ElectricDrill.AstraRpgFramework.Attributes.AttributeSO, Integer))
+  nameWithType: EntityAttributes.SetAllSpentPoints(IReadOnlyDictionary<AttributeSO, int>)
+  nameWithType.vb: EntityAttributes.SetAllSpentPoints(IReadOnlyDictionary(Of AttributeSO, Integer))
+- uid: ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.SetAllSpentPoints*
+  name: SetAllSpentPoints
+  href: api/ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_AstraRpgFramework_Attributes_EntityAttributes_SetAllSpentPoints_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.SetAllSpentPoints
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.SetAllSpentPoints
+  nameWithType: EntityAttributes.SetAllSpentPoints
 - uid: ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.SetBonusAttributePoints(System.Int32)
   name: SetBonusAttributePoints(int)
   href: api/ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.html#ElectricDrill_AstraRpgFramework_Attributes_EntityAttributes_SetBonusAttributePoints_System_Int32_
@@ -1777,6 +1806,44 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgFramework.Classes.EntityClass.Class
   nameWithType: EntityClass.Class
+- uid: ElectricDrill.AstraRpgFramework.Classes.EntityClass.OnClassChanged
+  name: OnClassChanged
+  href: api/ElectricDrill.AstraRpgFramework.Classes.EntityClass.html#ElectricDrill_AstraRpgFramework_Classes_EntityClass_OnClassChanged
+  commentId: E:ElectricDrill.AstraRpgFramework.Classes.EntityClass.OnClassChanged
+  fullName: ElectricDrill.AstraRpgFramework.Classes.EntityClass.OnClassChanged
+  nameWithType: EntityClass.OnClassChanged
+- uid: ElectricDrill.AstraRpgFramework.Classes.EntityClass.Subscribe*
+  name: Subscribe
+  href: api/ElectricDrill.AstraRpgFramework.Classes.EntityClass.html#ElectricDrill_AstraRpgFramework_Classes_EntityClass_Subscribe_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.Classes.EntityClass.Subscribe
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.Classes.EntityClass.Subscribe
+  nameWithType: EntityClass.Subscribe
+- uid: ElectricDrill.AstraRpgFramework.Classes.EntityClass.Subscribe``1(``0)
+  name: Subscribe<TEvent>(TEvent)
+  href: api/ElectricDrill.AstraRpgFramework.Classes.EntityClass.html#ElectricDrill_AstraRpgFramework_Classes_EntityClass_Subscribe__1___0_
+  commentId: M:ElectricDrill.AstraRpgFramework.Classes.EntityClass.Subscribe``1(``0)
+  name.vb: Subscribe(Of TEvent)(TEvent)
+  fullName: ElectricDrill.AstraRpgFramework.Classes.EntityClass.Subscribe<TEvent>(TEvent)
+  fullName.vb: ElectricDrill.AstraRpgFramework.Classes.EntityClass.Subscribe(Of TEvent)(TEvent)
+  nameWithType: EntityClass.Subscribe<TEvent>(TEvent)
+  nameWithType.vb: EntityClass.Subscribe(Of TEvent)(TEvent)
+- uid: ElectricDrill.AstraRpgFramework.Classes.EntityClass.Unsubscribe*
+  name: Unsubscribe
+  href: api/ElectricDrill.AstraRpgFramework.Classes.EntityClass.html#ElectricDrill_AstraRpgFramework_Classes_EntityClass_Unsubscribe_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.Classes.EntityClass.Unsubscribe
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.Classes.EntityClass.Unsubscribe
+  nameWithType: EntityClass.Unsubscribe
+- uid: ElectricDrill.AstraRpgFramework.Classes.EntityClass.Unsubscribe``1(``0)
+  name: Unsubscribe<TEvent>(TEvent)
+  href: api/ElectricDrill.AstraRpgFramework.Classes.EntityClass.html#ElectricDrill_AstraRpgFramework_Classes_EntityClass_Unsubscribe__1___0_
+  commentId: M:ElectricDrill.AstraRpgFramework.Classes.EntityClass.Unsubscribe``1(``0)
+  name.vb: Unsubscribe(Of TEvent)(TEvent)
+  fullName: ElectricDrill.AstraRpgFramework.Classes.EntityClass.Unsubscribe<TEvent>(TEvent)
+  fullName.vb: ElectricDrill.AstraRpgFramework.Classes.EntityClass.Unsubscribe(Of TEvent)(TEvent)
+  nameWithType: EntityClass.Unsubscribe<TEvent>(TEvent)
+  nameWithType.vb: EntityClass.Unsubscribe(Of TEvent)(TEvent)
 - uid: ElectricDrill.AstraRpgFramework.Classes.EntityClass.op_Implicit(ElectricDrill.AstraRpgFramework.Classes.EntityClass)~ElectricDrill.AstraRpgFramework.Classes.ClassSO
   name: implicit operator ClassSO(EntityClass)
   href: api/ElectricDrill.AstraRpgFramework.Classes.EntityClass.html#ElectricDrill_AstraRpgFramework_Classes_EntityClass_op_Implicit_ElectricDrill_AstraRpgFramework_Classes_EntityClass__ElectricDrill_AstraRpgFramework_Classes_ClassSO
@@ -2396,6 +2463,12 @@ references:
   commentId: F:ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.Holder
   fullName: ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.Holder
   nameWithType: ConditionTarget.Holder
+- uid: ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.HolderOwner
+  name: HolderOwner
+  href: api/ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.html#ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_HolderOwner
+  commentId: F:ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.HolderOwner
+  fullName: ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.HolderOwner
+  nameWithType: ConditionTarget.HolderOwner
 - uid: ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.PayloadEntity
   name: PayloadEntity
   href: api/ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.html#ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_PayloadEntity
@@ -2408,6 +2481,12 @@ references:
   commentId: F:ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.PayloadPerformer
   fullName: ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.PayloadPerformer
   nameWithType: ConditionTarget.PayloadPerformer
+- uid: ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.PayloadPerformerOwner
+  name: PayloadPerformerOwner
+  href: api/ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.html#ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_PayloadPerformerOwner
+  commentId: F:ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.PayloadPerformerOwner
+  fullName: ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.PayloadPerformerOwner
+  nameWithType: ConditionTarget.PayloadPerformerOwner
 - uid: ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.PayloadTarget
   name: PayloadTarget
   href: api/ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.html#ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_PayloadTarget
@@ -2426,6 +2505,12 @@ references:
   commentId: F:ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.Performer
   fullName: ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.Performer
   nameWithType: ConditionTarget.Performer
+- uid: ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.PerformerOwner
+  name: PerformerOwner
+  href: api/ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.html#ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_PerformerOwner
+  commentId: F:ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.PerformerOwner
+  fullName: ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.PerformerOwner
+  nameWithType: ConditionTarget.PerformerOwner
 - uid: ElectricDrill.AstraRpgFramework.Conditions.ConditionTargetAvailability
   name: ConditionTargetAvailability
   href: api/ElectricDrill.AstraRpgFramework.Conditions.ConditionTargetAvailability.html
@@ -2842,6 +2927,64 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgFramework.Conditions.IntValueChangeThresholdTransitionCondition.Evaluate
   nameWithType: IntValueChangeThresholdTransitionCondition.Evaluate
+- uid: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition
+  name: IsOwnedByCondition
+  href: api/ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.html
+  commentId: T:ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition
+  fullName: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition
+  nameWithType: IsOwnedByCondition
+- uid: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Create(ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget,ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget)
+  name: Create(ConditionTarget, ConditionTarget)
+  href: api/ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.html#ElectricDrill_AstraRpgFramework_Conditions_IsOwnedByCondition_Create_ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_
+  commentId: M:ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Create(ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget,ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget)
+  fullName: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Create(ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget, ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget)
+  nameWithType: IsOwnedByCondition.Create(ConditionTarget, ConditionTarget)
+- uid: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Create*
+  name: Create
+  href: api/ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.html#ElectricDrill_AstraRpgFramework_Conditions_IsOwnedByCondition_Create_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Create
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Create
+  nameWithType: IsOwnedByCondition.Create
+- uid: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Evaluate(ElectricDrill.AstraRpgFramework.Conditions.EvaluationContext)
+  name: Evaluate(EvaluationContext)
+  href: api/ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.html#ElectricDrill_AstraRpgFramework_Conditions_IsOwnedByCondition_Evaluate_ElectricDrill_AstraRpgFramework_Conditions_EvaluationContext_
+  commentId: M:ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Evaluate(ElectricDrill.AstraRpgFramework.Conditions.EvaluationContext)
+  fullName: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Evaluate(ElectricDrill.AstraRpgFramework.Conditions.EvaluationContext)
+  nameWithType: IsOwnedByCondition.Evaluate(EvaluationContext)
+- uid: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Evaluate*
+  name: Evaluate
+  href: api/ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.html#ElectricDrill_AstraRpgFramework_Conditions_IsOwnedByCondition_Evaluate_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Evaluate
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Evaluate
+  nameWithType: IsOwnedByCondition.Evaluate
+- uid: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Owned
+  name: Owned
+  href: api/ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.html#ElectricDrill_AstraRpgFramework_Conditions_IsOwnedByCondition_Owned
+  commentId: P:ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Owned
+  fullName: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Owned
+  nameWithType: IsOwnedByCondition.Owned
+- uid: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Owned*
+  name: Owned
+  href: api/ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.html#ElectricDrill_AstraRpgFramework_Conditions_IsOwnedByCondition_Owned_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Owned
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Owned
+  nameWithType: IsOwnedByCondition.Owned
+- uid: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Owner
+  name: Owner
+  href: api/ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.html#ElectricDrill_AstraRpgFramework_Conditions_IsOwnedByCondition_Owner
+  commentId: P:ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Owner
+  fullName: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Owner
+  nameWithType: IsOwnedByCondition.Owner
+- uid: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Owner*
+  name: Owner
+  href: api/ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.html#ElectricDrill_AstraRpgFramework_Conditions_IsOwnedByCondition_Owner_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Owner
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.Owner
+  nameWithType: IsOwnedByCondition.Owner
 - uid: ElectricDrill.AstraRpgFramework.Conditions.IsPerformerCondition
   name: IsPerformerCondition
   href: api/ElectricDrill.AstraRpgFramework.Conditions.IsPerformerCondition.html
@@ -3210,6 +3353,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgFramework.Config.AstraFrameworkConfigSO.GlobalAttributeChangedEvent
   nameWithType: AstraFrameworkConfigSO.GlobalAttributeChangedEvent
+- uid: ElectricDrill.AstraRpgFramework.Config.AstraFrameworkConfigSO.GlobalEntityClassChangedEvent
+  name: GlobalEntityClassChangedEvent
+  href: api/ElectricDrill.AstraRpgFramework.Config.AstraFrameworkConfigSO.html#ElectricDrill_AstraRpgFramework_Config_AstraFrameworkConfigSO_GlobalEntityClassChangedEvent
+  commentId: P:ElectricDrill.AstraRpgFramework.Config.AstraFrameworkConfigSO.GlobalEntityClassChangedEvent
+  fullName: ElectricDrill.AstraRpgFramework.Config.AstraFrameworkConfigSO.GlobalEntityClassChangedEvent
+  nameWithType: AstraFrameworkConfigSO.GlobalEntityClassChangedEvent
+- uid: ElectricDrill.AstraRpgFramework.Config.AstraFrameworkConfigSO.GlobalEntityClassChangedEvent*
+  name: GlobalEntityClassChangedEvent
+  href: api/ElectricDrill.AstraRpgFramework.Config.AstraFrameworkConfigSO.html#ElectricDrill_AstraRpgFramework_Config_AstraFrameworkConfigSO_GlobalEntityClassChangedEvent_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.Config.AstraFrameworkConfigSO.GlobalEntityClassChangedEvent
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.Config.AstraFrameworkConfigSO.GlobalEntityClassChangedEvent
+  nameWithType: AstraFrameworkConfigSO.GlobalEntityClassChangedEvent
 - uid: ElectricDrill.AstraRpgFramework.Config.AstraFrameworkConfigSO.GlobalEntityLevelDownEvent
   name: GlobalEntityLevelDownEvent
   href: api/ElectricDrill.AstraRpgFramework.Config.AstraFrameworkConfigSO.html#ElectricDrill_AstraRpgFramework_Config_AstraFrameworkConfigSO_GlobalEntityLevelDownEvent
@@ -3850,6 +4006,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgFramework.EntityCore.Awake
   nameWithType: EntityCore.Awake
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.EnsureSaveId
+  name: EnsureSaveId()
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_EnsureSaveId
+  commentId: M:ElectricDrill.AstraRpgFramework.EntityCore.EnsureSaveId
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.EnsureSaveId()
+  nameWithType: EntityCore.EnsureSaveId()
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.EnsureSaveId*
+  name: EnsureSaveId
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_EnsureSaveId_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntityCore.EnsureSaveId
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.EnsureSaveId
+  nameWithType: EntityCore.EnsureSaveId
 - uid: ElectricDrill.AstraRpgFramework.EntityCore.Entity
   name: Entity
   href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_Entity
@@ -3876,6 +4045,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgFramework.EntityCore.Invalidate
   nameWithType: EntityCore.Invalidate
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.IsOwnedBy(ElectricDrill.AstraRpgFramework.EntityCore)
+  name: IsOwnedBy(EntityCore)
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_IsOwnedBy_ElectricDrill_AstraRpgFramework_EntityCore_
+  commentId: M:ElectricDrill.AstraRpgFramework.EntityCore.IsOwnedBy(ElectricDrill.AstraRpgFramework.EntityCore)
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.IsOwnedBy(ElectricDrill.AstraRpgFramework.EntityCore)
+  nameWithType: EntityCore.IsOwnedBy(EntityCore)
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.IsOwnedBy*
+  name: IsOwnedBy
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_IsOwnedBy_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntityCore.IsOwnedBy
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.IsOwnedBy
+  nameWithType: EntityCore.IsOwnedBy
 - uid: ElectricDrill.AstraRpgFramework.EntityCore.Level
   name: Level
   href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_Level
@@ -3914,6 +4096,90 @@ references:
   commentId: E:ElectricDrill.AstraRpgFramework.EntityCore.OnInvalidated
   fullName: ElectricDrill.AstraRpgFramework.EntityCore.OnInvalidated
   nameWithType: EntityCore.OnInvalidated
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.OnOwnerChanged
+  name: OnOwnerChanged
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_OnOwnerChanged
+  commentId: E:ElectricDrill.AstraRpgFramework.EntityCore.OnOwnerChanged
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.OnOwnerChanged
+  nameWithType: EntityCore.OnOwnerChanged
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.Owner
+  name: Owner
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_Owner
+  commentId: P:ElectricDrill.AstraRpgFramework.EntityCore.Owner
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.Owner
+  nameWithType: EntityCore.Owner
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.Owner*
+  name: Owner
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_Owner_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntityCore.Owner
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.Owner
+  nameWithType: EntityCore.Owner
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.OwnerResolution
+  name: OwnerResolution
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_OwnerResolution
+  commentId: P:ElectricDrill.AstraRpgFramework.EntityCore.OwnerResolution
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.OwnerResolution
+  nameWithType: EntityCore.OwnerResolution
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.OwnerResolution*
+  name: OwnerResolution
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_OwnerResolution_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntityCore.OwnerResolution
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.OwnerResolution
+  nameWithType: EntityCore.OwnerResolution
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.RegenerateSaveId
+  name: RegenerateSaveId()
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_RegenerateSaveId
+  commentId: M:ElectricDrill.AstraRpgFramework.EntityCore.RegenerateSaveId
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.RegenerateSaveId()
+  nameWithType: EntityCore.RegenerateSaveId()
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.RegenerateSaveId*
+  name: RegenerateSaveId
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_RegenerateSaveId_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntityCore.RegenerateSaveId
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.RegenerateSaveId
+  nameWithType: EntityCore.RegenerateSaveId
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.Root
+  name: Root
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_Root
+  commentId: P:ElectricDrill.AstraRpgFramework.EntityCore.Root
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.Root
+  nameWithType: EntityCore.Root
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.Root*
+  name: Root
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_Root_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntityCore.Root
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.Root
+  nameWithType: EntityCore.Root
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.SaveId
+  name: SaveId
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_SaveId
+  commentId: P:ElectricDrill.AstraRpgFramework.EntityCore.SaveId
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.SaveId
+  nameWithType: EntityCore.SaveId
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.SaveId*
+  name: SaveId
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_SaveId_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntityCore.SaveId
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.SaveId
+  nameWithType: EntityCore.SaveId
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.SetSaveId(ElectricDrill.AstraRpgFramework.EntitySaveId)
+  name: SetSaveId(EntitySaveId)
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_SetSaveId_ElectricDrill_AstraRpgFramework_EntitySaveId_
+  commentId: M:ElectricDrill.AstraRpgFramework.EntityCore.SetSaveId(ElectricDrill.AstraRpgFramework.EntitySaveId)
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.SetSaveId(ElectricDrill.AstraRpgFramework.EntitySaveId)
+  nameWithType: EntityCore.SetSaveId(EntitySaveId)
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.SetSaveId*
+  name: SetSaveId
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_SetSaveId_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntityCore.SetSaveId
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.SetSaveId
+  nameWithType: EntityCore.SetSaveId
 - uid: ElectricDrill.AstraRpgFramework.EntityCore.Start
   name: Start()
   href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_Start
@@ -3998,6 +4264,162 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgFramework.EntityCore.Update
   nameWithType: EntityCore.Update
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId
+  name: EntitySaveId
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html
+  commentId: T:ElectricDrill.AstraRpgFramework.EntitySaveId
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId
+  nameWithType: EntitySaveId
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.#ctor(System.String)
+  name: EntitySaveId(string)
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId__ctor_System_String_
+  commentId: M:ElectricDrill.AstraRpgFramework.EntitySaveId.#ctor(System.String)
+  name.vb: New(String)
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.EntitySaveId(string)
+  fullName.vb: ElectricDrill.AstraRpgFramework.EntitySaveId.New(String)
+  nameWithType: EntitySaveId.EntitySaveId(string)
+  nameWithType.vb: EntitySaveId.New(String)
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.#ctor*
+  name: EntitySaveId
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId__ctor_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntitySaveId.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.EntitySaveId
+  fullName.vb: ElectricDrill.AstraRpgFramework.EntitySaveId.New
+  nameWithType: EntitySaveId.EntitySaveId
+  nameWithType.vb: EntitySaveId.New
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.Empty
+  name: Empty
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_Empty
+  commentId: F:ElectricDrill.AstraRpgFramework.EntitySaveId.Empty
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.Empty
+  nameWithType: EntitySaveId.Empty
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.Equals(ElectricDrill.AstraRpgFramework.EntitySaveId)
+  name: Equals(EntitySaveId)
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_Equals_ElectricDrill_AstraRpgFramework_EntitySaveId_
+  commentId: M:ElectricDrill.AstraRpgFramework.EntitySaveId.Equals(ElectricDrill.AstraRpgFramework.EntitySaveId)
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.Equals(ElectricDrill.AstraRpgFramework.EntitySaveId)
+  nameWithType: EntitySaveId.Equals(EntitySaveId)
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.Equals(System.Object)
+  name: Equals(object)
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_Equals_System_Object_
+  commentId: M:ElectricDrill.AstraRpgFramework.EntitySaveId.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.Equals(object)
+  fullName.vb: ElectricDrill.AstraRpgFramework.EntitySaveId.Equals(Object)
+  nameWithType: EntitySaveId.Equals(object)
+  nameWithType.vb: EntitySaveId.Equals(Object)
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.Equals*
+  name: Equals
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_Equals_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntitySaveId.Equals
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.Equals
+  nameWithType: EntitySaveId.Equals
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.GetHashCode
+  name: GetHashCode()
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_GetHashCode
+  commentId: M:ElectricDrill.AstraRpgFramework.EntitySaveId.GetHashCode
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.GetHashCode()
+  nameWithType: EntitySaveId.GetHashCode()
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.GetHashCode*
+  name: GetHashCode
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_GetHashCode_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntitySaveId.GetHashCode
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.GetHashCode
+  nameWithType: EntitySaveId.GetHashCode
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.IsEmpty
+  name: IsEmpty
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_IsEmpty
+  commentId: P:ElectricDrill.AstraRpgFramework.EntitySaveId.IsEmpty
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.IsEmpty
+  nameWithType: EntitySaveId.IsEmpty
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.IsEmpty*
+  name: IsEmpty
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_IsEmpty_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntitySaveId.IsEmpty
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.IsEmpty
+  nameWithType: EntitySaveId.IsEmpty
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.New
+  name: New()
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_New
+  commentId: M:ElectricDrill.AstraRpgFramework.EntitySaveId.New
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.New()
+  nameWithType: EntitySaveId.New()
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.New*
+  name: New
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_New_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntitySaveId.New
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.New
+  nameWithType: EntitySaveId.New
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.ToString
+  name: ToString()
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_ToString
+  commentId: M:ElectricDrill.AstraRpgFramework.EntitySaveId.ToString
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.ToString()
+  nameWithType: EntitySaveId.ToString()
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.ToString*
+  name: ToString
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_ToString_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntitySaveId.ToString
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.ToString
+  nameWithType: EntitySaveId.ToString
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.Value
+  name: Value
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_Value
+  commentId: P:ElectricDrill.AstraRpgFramework.EntitySaveId.Value
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.Value
+  nameWithType: EntitySaveId.Value
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.Value*
+  name: Value
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_Value_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntitySaveId.Value
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.Value
+  nameWithType: EntitySaveId.Value
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.op_Equality(ElectricDrill.AstraRpgFramework.EntitySaveId,ElectricDrill.AstraRpgFramework.EntitySaveId)
+  name: operator ==(EntitySaveId, EntitySaveId)
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_op_Equality_ElectricDrill_AstraRpgFramework_EntitySaveId_ElectricDrill_AstraRpgFramework_EntitySaveId_
+  commentId: M:ElectricDrill.AstraRpgFramework.EntitySaveId.op_Equality(ElectricDrill.AstraRpgFramework.EntitySaveId,ElectricDrill.AstraRpgFramework.EntitySaveId)
+  name.vb: =(EntitySaveId, EntitySaveId)
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.operator ==(ElectricDrill.AstraRpgFramework.EntitySaveId, ElectricDrill.AstraRpgFramework.EntitySaveId)
+  fullName.vb: ElectricDrill.AstraRpgFramework.EntitySaveId.=(ElectricDrill.AstraRpgFramework.EntitySaveId, ElectricDrill.AstraRpgFramework.EntitySaveId)
+  nameWithType: EntitySaveId.operator ==(EntitySaveId, EntitySaveId)
+  nameWithType.vb: EntitySaveId.=(EntitySaveId, EntitySaveId)
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.op_Equality*
+  name: operator ==
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_op_Equality_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntitySaveId.op_Equality
+  isSpec: "True"
+  name.vb: =
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.operator ==
+  fullName.vb: ElectricDrill.AstraRpgFramework.EntitySaveId.=
+  nameWithType: EntitySaveId.operator ==
+  nameWithType.vb: EntitySaveId.=
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.op_Inequality(ElectricDrill.AstraRpgFramework.EntitySaveId,ElectricDrill.AstraRpgFramework.EntitySaveId)
+  name: operator !=(EntitySaveId, EntitySaveId)
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_op_Inequality_ElectricDrill_AstraRpgFramework_EntitySaveId_ElectricDrill_AstraRpgFramework_EntitySaveId_
+  commentId: M:ElectricDrill.AstraRpgFramework.EntitySaveId.op_Inequality(ElectricDrill.AstraRpgFramework.EntitySaveId,ElectricDrill.AstraRpgFramework.EntitySaveId)
+  name.vb: <>(EntitySaveId, EntitySaveId)
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.operator !=(ElectricDrill.AstraRpgFramework.EntitySaveId, ElectricDrill.AstraRpgFramework.EntitySaveId)
+  fullName.vb: ElectricDrill.AstraRpgFramework.EntitySaveId.<>(ElectricDrill.AstraRpgFramework.EntitySaveId, ElectricDrill.AstraRpgFramework.EntitySaveId)
+  nameWithType: EntitySaveId.operator !=(EntitySaveId, EntitySaveId)
+  nameWithType.vb: EntitySaveId.<>(EntitySaveId, EntitySaveId)
+- uid: ElectricDrill.AstraRpgFramework.EntitySaveId.op_Inequality*
+  name: operator !=
+  href: api/ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_op_Inequality_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntitySaveId.op_Inequality
+  isSpec: "True"
+  name.vb: <>
+  fullName: ElectricDrill.AstraRpgFramework.EntitySaveId.operator !=
+  fullName.vb: ElectricDrill.AstraRpgFramework.EntitySaveId.<>
+  nameWithType: EntitySaveId.operator !=
+  nameWithType.vb: EntitySaveId.<>
 - uid: ElectricDrill.AstraRpgFramework.Events
   name: ElectricDrill.AstraRpgFramework.Events
   href: api/ElectricDrill.AstraRpgFramework.Events.html
@@ -4022,6 +4444,83 @@ references:
   commentId: N:ElectricDrill.AstraRpgFramework.Events.Contexts
   fullName: ElectricDrill.AstraRpgFramework.Events.Contexts
   nameWithType: ElectricDrill.AstraRpgFramework.Events.Contexts
+- uid: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext
+  name: EntityClassChangedContext
+  href: api/ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.html
+  commentId: T:ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext
+  fullName: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext
+  nameWithType: EntityClassChangedContext
+- uid: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.#ctor(ElectricDrill.AstraRpgFramework.EntityCore,ElectricDrill.AstraRpgFramework.Classes.ClassSO,ElectricDrill.AstraRpgFramework.Classes.ClassSO)
+  name: EntityClassChangedContext(EntityCore, ClassSO, ClassSO)
+  href: api/ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.html#ElectricDrill_AstraRpgFramework_Events_Contexts_EntityClassChangedContext__ctor_ElectricDrill_AstraRpgFramework_EntityCore_ElectricDrill_AstraRpgFramework_Classes_ClassSO_ElectricDrill_AstraRpgFramework_Classes_ClassSO_
+  commentId: M:ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.#ctor(ElectricDrill.AstraRpgFramework.EntityCore,ElectricDrill.AstraRpgFramework.Classes.ClassSO,ElectricDrill.AstraRpgFramework.Classes.ClassSO)
+  name.vb: New(EntityCore, ClassSO, ClassSO)
+  fullName: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.EntityClassChangedContext(ElectricDrill.AstraRpgFramework.EntityCore, ElectricDrill.AstraRpgFramework.Classes.ClassSO, ElectricDrill.AstraRpgFramework.Classes.ClassSO)
+  fullName.vb: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.New(ElectricDrill.AstraRpgFramework.EntityCore, ElectricDrill.AstraRpgFramework.Classes.ClassSO, ElectricDrill.AstraRpgFramework.Classes.ClassSO)
+  nameWithType: EntityClassChangedContext.EntityClassChangedContext(EntityCore, ClassSO, ClassSO)
+  nameWithType.vb: EntityClassChangedContext.New(EntityCore, ClassSO, ClassSO)
+- uid: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.#ctor*
+  name: EntityClassChangedContext
+  href: api/ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.html#ElectricDrill_AstraRpgFramework_Events_Contexts_EntityClassChangedContext__ctor_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.EntityClassChangedContext
+  fullName.vb: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.New
+  nameWithType: EntityClassChangedContext.EntityClassChangedContext
+  nameWithType.vb: EntityClassChangedContext.New
+- uid: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.Entity
+  name: Entity
+  href: api/ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.html#ElectricDrill_AstraRpgFramework_Events_Contexts_EntityClassChangedContext_Entity
+  commentId: P:ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.Entity
+  fullName: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.Entity
+  nameWithType: EntityClassChangedContext.Entity
+- uid: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.Entity*
+  name: Entity
+  href: api/ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.html#ElectricDrill_AstraRpgFramework_Events_Contexts_EntityClassChangedContext_Entity_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.Entity
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.Entity
+  nameWithType: EntityClassChangedContext.Entity
+- uid: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.NewClass
+  name: NewClass
+  href: api/ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.html#ElectricDrill_AstraRpgFramework_Events_Contexts_EntityClassChangedContext_NewClass
+  commentId: P:ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.NewClass
+  fullName: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.NewClass
+  nameWithType: EntityClassChangedContext.NewClass
+- uid: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.NewClass*
+  name: NewClass
+  href: api/ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.html#ElectricDrill_AstraRpgFramework_Events_Contexts_EntityClassChangedContext_NewClass_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.NewClass
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.NewClass
+  nameWithType: EntityClassChangedContext.NewClass
+- uid: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.PreviousClass
+  name: PreviousClass
+  href: api/ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.html#ElectricDrill_AstraRpgFramework_Events_Contexts_EntityClassChangedContext_PreviousClass
+  commentId: P:ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.PreviousClass
+  fullName: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.PreviousClass
+  nameWithType: EntityClassChangedContext.PreviousClass
+- uid: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.PreviousClass*
+  name: PreviousClass
+  href: api/ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.html#ElectricDrill_AstraRpgFramework_Events_Contexts_EntityClassChangedContext_PreviousClass_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.PreviousClass
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.PreviousClass
+  nameWithType: EntityClassChangedContext.PreviousClass
+- uid: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.Target
+  name: Target
+  href: api/ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.html#ElectricDrill_AstraRpgFramework_Events_Contexts_EntityClassChangedContext_Target
+  commentId: P:ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.Target
+  fullName: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.Target
+  nameWithType: EntityClassChangedContext.Target
+- uid: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.Target*
+  name: Target
+  href: api/ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.html#ElectricDrill_AstraRpgFramework_Events_Contexts_EntityClassChangedContext_Target_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.Target
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.Target
+  nameWithType: EntityClassChangedContext.Target
 - uid: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityLevelChangedContext
   name: EntityLevelChangedContext
   href: api/ElectricDrill.AstraRpgFramework.Events.Contexts.EntityLevelChangedContext.html
@@ -4112,6 +4611,18 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgFramework.Events.Contexts.EntityLevelChangedContext.Target
   nameWithType: EntityLevelChangedContext.Target
+- uid: ElectricDrill.AstraRpgFramework.Events.EntityClassChangedGameEvent
+  name: EntityClassChangedGameEvent
+  href: api/ElectricDrill.AstraRpgFramework.Events.EntityClassChangedGameEvent.html
+  commentId: T:ElectricDrill.AstraRpgFramework.Events.EntityClassChangedGameEvent
+  fullName: ElectricDrill.AstraRpgFramework.Events.EntityClassChangedGameEvent
+  nameWithType: EntityClassChangedGameEvent
+- uid: ElectricDrill.AstraRpgFramework.Events.EntityClassChangedGameEventListener
+  name: EntityClassChangedGameEventListener
+  href: api/ElectricDrill.AstraRpgFramework.Events.EntityClassChangedGameEventListener.html
+  commentId: T:ElectricDrill.AstraRpgFramework.Events.EntityClassChangedGameEventListener
+  fullName: ElectricDrill.AstraRpgFramework.Events.EntityClassChangedGameEventListener
+  nameWithType: EntityClassChangedGameEventListener
 - uid: ElectricDrill.AstraRpgFramework.Events.EntityCoreGameEvent
   name: EntityCoreGameEvent
   href: api/ElectricDrill.AstraRpgFramework.Events.EntityCoreGameEvent.html
@@ -6758,6 +7269,73 @@ references:
   commentId: T:ElectricDrill.AstraRpgFramework.IValidatable
   fullName: ElectricDrill.AstraRpgFramework.IValidatable
   nameWithType: IValidatable
+- uid: ElectricDrill.AstraRpgFramework.Ownership
+  name: ElectricDrill.AstraRpgFramework.Ownership
+  href: api/ElectricDrill.AstraRpgFramework.Ownership.html
+  commentId: N:ElectricDrill.AstraRpgFramework.Ownership
+  fullName: ElectricDrill.AstraRpgFramework.Ownership
+  nameWithType: ElectricDrill.AstraRpgFramework.Ownership
+- uid: ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution
+  name: EntityAttribution
+  href: api/ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.html
+  commentId: T:ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution
+  fullName: ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution
+  nameWithType: EntityAttribution
+- uid: ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.Direct
+  name: Direct
+  href: api/ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.html#ElectricDrill_AstraRpgFramework_Ownership_EntityAttribution_Direct
+  commentId: F:ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.Direct
+  fullName: ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.Direct
+  nameWithType: EntityAttribution.Direct
+- uid: ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.Owner
+  name: Owner
+  href: api/ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.html#ElectricDrill_AstraRpgFramework_Ownership_EntityAttribution_Owner
+  commentId: F:ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.Owner
+  fullName: ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.Owner
+  nameWithType: EntityAttribution.Owner
+- uid: ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.Root
+  name: Root
+  href: api/ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.html#ElectricDrill_AstraRpgFramework_Ownership_EntityAttribution_Root
+  commentId: F:ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.Root
+  fullName: ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.Root
+  nameWithType: EntityAttribution.Root
+- uid: ElectricDrill.AstraRpgFramework.Ownership.EntityOwnership
+  name: EntityOwnership
+  href: api/ElectricDrill.AstraRpgFramework.Ownership.EntityOwnership.html
+  commentId: T:ElectricDrill.AstraRpgFramework.Ownership.EntityOwnership
+  fullName: ElectricDrill.AstraRpgFramework.Ownership.EntityOwnership
+  nameWithType: EntityOwnership
+- uid: ElectricDrill.AstraRpgFramework.Ownership.EntityOwnership.Resolve(ElectricDrill.AstraRpgFramework.EntityCore,ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution)
+  name: Resolve(EntityCore, EntityAttribution)
+  href: api/ElectricDrill.AstraRpgFramework.Ownership.EntityOwnership.html#ElectricDrill_AstraRpgFramework_Ownership_EntityOwnership_Resolve_ElectricDrill_AstraRpgFramework_EntityCore_ElectricDrill_AstraRpgFramework_Ownership_EntityAttribution_
+  commentId: M:ElectricDrill.AstraRpgFramework.Ownership.EntityOwnership.Resolve(ElectricDrill.AstraRpgFramework.EntityCore,ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution)
+  fullName: ElectricDrill.AstraRpgFramework.Ownership.EntityOwnership.Resolve(ElectricDrill.AstraRpgFramework.EntityCore, ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution)
+  nameWithType: EntityOwnership.Resolve(EntityCore, EntityAttribution)
+- uid: ElectricDrill.AstraRpgFramework.Ownership.EntityOwnership.Resolve*
+  name: Resolve
+  href: api/ElectricDrill.AstraRpgFramework.Ownership.EntityOwnership.html#ElectricDrill_AstraRpgFramework_Ownership_EntityOwnership_Resolve_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.Ownership.EntityOwnership.Resolve
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.Ownership.EntityOwnership.Resolve
+  nameWithType: EntityOwnership.Resolve
+- uid: ElectricDrill.AstraRpgFramework.Ownership.OwnerResolution
+  name: OwnerResolution
+  href: api/ElectricDrill.AstraRpgFramework.Ownership.OwnerResolution.html
+  commentId: T:ElectricDrill.AstraRpgFramework.Ownership.OwnerResolution
+  fullName: ElectricDrill.AstraRpgFramework.Ownership.OwnerResolution
+  nameWithType: OwnerResolution
+- uid: ElectricDrill.AstraRpgFramework.Ownership.OwnerResolution.Explicit
+  name: Explicit
+  href: api/ElectricDrill.AstraRpgFramework.Ownership.OwnerResolution.html#ElectricDrill_AstraRpgFramework_Ownership_OwnerResolution_Explicit
+  commentId: F:ElectricDrill.AstraRpgFramework.Ownership.OwnerResolution.Explicit
+  fullName: ElectricDrill.AstraRpgFramework.Ownership.OwnerResolution.Explicit
+  nameWithType: OwnerResolution.Explicit
+- uid: ElectricDrill.AstraRpgFramework.Ownership.OwnerResolution.NearestAncestor
+  name: NearestAncestor
+  href: api/ElectricDrill.AstraRpgFramework.Ownership.OwnerResolution.html#ElectricDrill_AstraRpgFramework_Ownership_OwnerResolution_NearestAncestor
+  commentId: F:ElectricDrill.AstraRpgFramework.Ownership.OwnerResolution.NearestAncestor
+  fullName: ElectricDrill.AstraRpgFramework.Ownership.OwnerResolution.NearestAncestor
+  nameWithType: OwnerResolution.NearestAncestor
 - uid: ElectricDrill.AstraRpgFramework.Scaling
   name: ElectricDrill.AstraRpgFramework.Scaling
   href: api/ElectricDrill.AstraRpgFramework.Scaling.html
@@ -8124,6 +8702,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgFramework.Stats.EntityStats.GetBase
   nameWithType: EntityStats.GetBase
+- uid: ElectricDrill.AstraRpgFramework.Stats.EntityStats.GetFixedBaseStatValues
+  name: GetFixedBaseStatValues()
+  href: api/ElectricDrill.AstraRpgFramework.Stats.EntityStats.html#ElectricDrill_AstraRpgFramework_Stats_EntityStats_GetFixedBaseStatValues
+  commentId: M:ElectricDrill.AstraRpgFramework.Stats.EntityStats.GetFixedBaseStatValues
+  fullName: ElectricDrill.AstraRpgFramework.Stats.EntityStats.GetFixedBaseStatValues()
+  nameWithType: EntityStats.GetFixedBaseStatValues()
+- uid: ElectricDrill.AstraRpgFramework.Stats.EntityStats.GetFixedBaseStatValues*
+  name: GetFixedBaseStatValues
+  href: api/ElectricDrill.AstraRpgFramework.Stats.EntityStats.html#ElectricDrill_AstraRpgFramework_Stats_EntityStats_GetFixedBaseStatValues_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.Stats.EntityStats.GetFixedBaseStatValues
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.Stats.EntityStats.GetFixedBaseStatValues
+  nameWithType: EntityStats.GetFixedBaseStatValues
 - uid: ElectricDrill.AstraRpgFramework.Stats.EntityStats.OnLevelDown(ElectricDrill.AstraRpgFramework.Events.Contexts.EntityLevelChangedContext)
   name: OnLevelDown(EntityLevelChangedContext)
   href: api/ElectricDrill.AstraRpgFramework.Stats.EntityStats.html#ElectricDrill_AstraRpgFramework_Stats_EntityStats_OnLevelDown_ElectricDrill_AstraRpgFramework_Events_Contexts_EntityLevelChangedContext_
@@ -10950,6 +11541,15 @@ references:
   fullName: ElectricDrill.AstraRpgFramework.Utils.Percentage.implicit operator double(ElectricDrill.AstraRpgFramework.Utils.Percentage)
   fullName.vb: ElectricDrill.AstraRpgFramework.Utils.Percentage.CType(ElectricDrill.AstraRpgFramework.Utils.Percentage)
   nameWithType: Percentage.implicit operator double(Percentage)
+  nameWithType.vb: Percentage.CType(Percentage)
+- uid: ElectricDrill.AstraRpgFramework.Utils.Percentage.op_Implicit(ElectricDrill.AstraRpgFramework.Utils.Percentage)~System.Single
+  name: implicit operator float(Percentage)
+  href: api/ElectricDrill.AstraRpgFramework.Utils.Percentage.html#ElectricDrill_AstraRpgFramework_Utils_Percentage_op_Implicit_ElectricDrill_AstraRpgFramework_Utils_Percentage__System_Single
+  commentId: M:ElectricDrill.AstraRpgFramework.Utils.Percentage.op_Implicit(ElectricDrill.AstraRpgFramework.Utils.Percentage)~System.Single
+  name.vb: CType(Percentage)
+  fullName: ElectricDrill.AstraRpgFramework.Utils.Percentage.implicit operator float(ElectricDrill.AstraRpgFramework.Utils.Percentage)
+  fullName.vb: ElectricDrill.AstraRpgFramework.Utils.Percentage.CType(ElectricDrill.AstraRpgFramework.Utils.Percentage)
+  nameWithType: Percentage.implicit operator float(Percentage)
   nameWithType.vb: Percentage.CType(Percentage)
 - uid: ElectricDrill.AstraRpgFramework.Utils.Percentage.op_Implicit(System.Int64)~ElectricDrill.AstraRpgFramework.Utils.Percentage
   name: implicit operator Percentage(long)

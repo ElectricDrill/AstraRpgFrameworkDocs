@@ -113,7 +113,8 @@ the callback or an associated <a class="xref" href="ElectricDrill.AstraRpgFramew
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class GameEventTrigger&lt;TContext&gt; : IReactiveTrigger</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public abstract class GameEventTrigger&lt;TContext&gt; : IReactiveTrigger</code></pre>
   </div>
 
 
@@ -166,7 +167,7 @@ the callback or an associated <a class="xref" href="ElectricDrill.AstraRpgFramew
 
   <h3 id="ElectricDrill_AstraRpgFramework_Triggers_GameEventTrigger_1_Event" data-uid="ElectricDrill.AstraRpgFramework.Triggers.GameEventTrigger`1.Event">
   Event
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Triggers/GameEventTrigger.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Triggers/GameEventTrigger.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The typed event SO that this trigger listens to. Provided by the concrete subclass.</p>
@@ -198,7 +199,7 @@ the callback or an associated <a class="xref" href="ElectricDrill.AstraRpgFramew
 
   <h3 id="ElectricDrill_AstraRpgFramework_Triggers_GameEventTrigger_1_EventSource" data-uid="ElectricDrill.AstraRpgFramework.Triggers.GameEventTrigger`1.EventSource">
   EventSource
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Triggers/GameEventTrigger.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Triggers/GameEventTrigger.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the underlying shared event object this trigger wraps, or <code>null</code>.
@@ -233,7 +234,7 @@ duration bookkeeping within the same event raise.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_Triggers_GameEventTrigger_1_PayloadType" data-uid="ElectricDrill.AstraRpgFramework.Triggers.GameEventTrigger`1.PayloadType">
   PayloadType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Triggers/GameEventTrigger.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Triggers/GameEventTrigger.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <span class="xref">System.Type</span> of the payload delivered by this trigger when it fires.</p>
@@ -276,7 +277,7 @@ payload at design time.
 
   <h3 id="ElectricDrill_AstraRpgFramework_Triggers_GameEventTrigger_1_Subscribe_ElectricDrill_AstraRpgFramework_EntityCore_System_Action_System_Object__" data-uid="ElectricDrill.AstraRpgFramework.Triggers.GameEventTrigger`1.Subscribe(ElectricDrill.AstraRpgFramework.EntityCore,System.Action{System.Object})">
   Subscribe(EntityCore, Action&lt;object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Triggers/GameEventTrigger.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Triggers/GameEventTrigger.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Registers <code class="paramref">callback</code> to be invoked when the trigger fires.
@@ -317,7 +318,7 @@ parameterless triggers). The caller is responsible for casting to the expected t
 
   <h3 id="ElectricDrill_AstraRpgFramework_Triggers_GameEventTrigger_1_Unsubscribe_ElectricDrill_AstraRpgFramework_EntityCore_System_Action_System_Object__" data-uid="ElectricDrill.AstraRpgFramework.Triggers.GameEventTrigger`1.Unsubscribe(ElectricDrill.AstraRpgFramework.EntityCore,System.Action{System.Object})">
   Unsubscribe(EntityCore, Action&lt;object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Triggers/GameEventTrigger.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Triggers/GameEventTrigger.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes the subscription for the specific <code class="paramref">holder</code>/<code class="paramref">callback</code>

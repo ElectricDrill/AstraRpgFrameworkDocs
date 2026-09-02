@@ -141,7 +141,7 @@ Exposes the leveled entity both as a generic payload entity and as the payload t
 
   <h3 id="ElectricDrill_AstraRpgFramework_Events_Contexts_EntityLevelChangedContext__ctor_ElectricDrill_AstraRpgFramework_EntityCore_System_Int32_System_Int32_" data-uid="ElectricDrill.AstraRpgFramework.Events.Contexts.EntityLevelChangedContext.#ctor(ElectricDrill.AstraRpgFramework.EntityCore,System.Int32,System.Int32)">
   EntityLevelChangedContext(EntityCore, int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Events/Contexts/EntityLevelChangedContext.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Events/Contexts/EntityLevelChangedContext.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="ElectricDrill.AstraRpgFramework.Events.Contexts.EntityLevelChangedContext.html">EntityLevelChangedContext</a>.</p>
@@ -184,7 +184,7 @@ Exposes the leveled entity both as a generic payload entity and as the payload t
 
   <h3 id="ElectricDrill_AstraRpgFramework_Events_Contexts_EntityLevelChangedContext_AbsAmount" data-uid="ElectricDrill.AstraRpgFramework.Events.Contexts.EntityLevelChangedContext.AbsAmount">
   AbsAmount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Events/Contexts/EntityLevelChangedContext.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Events/Contexts/EntityLevelChangedContext.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The absolute amount of change between PreviousValue and NewValue.</p>
@@ -208,6 +208,11 @@ Exposes the leveled entity both as a generic payload entity and as the payload t
 
 
 
+  <h4 class="section" id="ElectricDrill_AstraRpgFramework_Events_Contexts_EntityLevelChangedContext_AbsAmount_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Here: the number of levels crossed. A level change is raised once per transition, not once
+per level, so a jump from 1 to 50 arrives as a single event with an AbsAmount of 49 —
+listeners that need per-level granularity (one reward, one fanfare per level) iterate over this.</p>
+</div>
 
 
 

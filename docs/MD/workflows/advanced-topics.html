@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ElectricDrill/AstraRpgFrameworkDocs/blob/main/DocFx/MD/workflows/advanced-topics.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ElectricDrill/AstraRpgFrameworkDocs/blob/v2.2.0/DocFx/MD/workflows/advanced-topics.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -140,6 +140,33 @@ if (attributeReader.TryGet(strengthAttribute, out long strength) &amp;&amp;
 }
 </code></pre>
 <p><code>Get</code> and <code>GetBase</code> can still be convenient on concrete containers when you already know the asset exists, but <code>TryGet</code> and <code>TryGetBase</code> are the safer default for reusable code paths. This is especially relevant in v2.0.0 because <code>StatSetInstance</code> is no longer an <code>IStatReader</code>; code that needs a generic stat reader should depend on <code>EntityCore</code>, <code>EntityStats</code>, or another explicit <code>IStatReader</code> provider instead.</p>
+<h2 id="resolving-ownership-in-custom-systems">Resolving ownership in custom systems</h2>
+<p><em>🏷️ Version 2.2.0+</em></p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>This builds on <a href="workflows.html#entity-ownership">Entity Ownership</a>, which is currently experimental and may change at any time. Treat <code>EntityAttribution</code> and <code>EntityOwnership.Resolve</code> as provisional until the underlying ownership edge stabilizes.</p>
+</div>
+<p><code>Owner</code> (see <a href="workflows.html#entity-ownership">Entity Ownership</a>) tells you which entity ultimately owns another, but different systems often need to resolve &quot;the responsible entity&quot; differently. Take the spaceship example from that section: a lifesteal system built on top of the framework needs to know that the <em>ship</em> should be healed when its weapon lands a killing blow, even though the weapon is the one recorded as <code>Performer</code>.</p>
+<p><code>EntityAttribution</code> and <code>EntityOwnership.Resolve</code> exist for exactly this kind of decision:</p>
+<pre><code class="lang-csharp">public enum EntityAttribution { Direct, Owner, Root }
+
+public static class EntityOwnership
+{
+    public static EntityCore Resolve(EntityCore entity, EntityAttribution attribution);
+}
+</code></pre>
+<ul>
+<li><code>Direct</code>: returns <code>entity</code> unchanged. This preserves the framework's behavior from before ownership existed, and should stay the default for any new field or setting that exposes <code>EntityAttribution</code>.</li>
+<li><code>Owner</code>: returns <code>entity.Owner</code>, or <code>entity</code> itself if it has no owner.</li>
+<li><code>Root</code>: returns <code>entity.Root</code>, walking the full ownership chain.</li>
+</ul>
+<pre><code class="lang-csharp">EntityCore beneficiary = EntityOwnership.Resolve(damagePerformer, EntityAttribution.Root);
+if (beneficiary == thisEntity)
+{
+    // Apply lifesteal to thisEntity, credited through the weapon's owner chain.
+}
+</code></pre>
+<p>Expose <code>EntityAttribution</code> as a serialized field on your own config or component when you want project code (or another package built on top of the framework, such as Astra RPG Health's lifesteal and kill-credit resolution) to choose how attribution should behave, rather than hardcoding one resolution strategy.</p>
 <h2 id="pluggable-fixed-base-value-sources">Pluggable fixed base value sources</h2>
 <p><em>🏷️ Version 2.1.0+</em></p>
 <p>Fixed base attributes and stats no longer have to come from the Inspector alone. <code>EntityAttributes</code> and <code>EntityStats</code> source their fixed base values through <code>IFixedAttributeSource</code> and <code>IFixedStatSource</code>, two minimal, point-queried contracts:</p>

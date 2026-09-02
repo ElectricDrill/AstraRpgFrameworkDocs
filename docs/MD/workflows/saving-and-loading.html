@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Saving and Loading | Astra Framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Saving and Loading | Astra Framework ">
+      
+      
+      <link rel="icon" href="../../images/astra-rpg-ico.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ElectricDrill/AstraRpgFrameworkDocs/blob/v2.2.0/DocFx/MD/workflows/saving-and-loading.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo-astra.svg" alt="Astra Framework">
+            Astra Framework
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="saving-and-loading">Saving and Loading</h1>
+
+<p><em>🏷️ Version 2.2.0+</em></p>
+<p>Astra is not a save system, and is not trying to become one. It defines no save format, ships no serializer, keeps no registry of live entities, and never touches the disk. What it does provide is everything a save system needs on the other side of that line: a stable per-entity identity, matching getters and setters for every piece of runtime state, and bulk restore paths that hold up when a whole snapshot is reapplied at once.</p>
+<p>This page walks through that surface: what Unity already persists for you, what you capture and restore through the API, the order to restore it in, and what is deliberately left out.</p>
+<h2 id="what-stays-your-responsibility">What stays your responsibility</h2>
+<p>Astra draws the line in a specific place, and a few jobs sit firmly on your side of it:</p>
+<ul>
+<li><strong>The save format and the I/O.</strong> JSON, binary, <code>PlayerPrefs</code>, an asset-store package (all fine). Astra never expresses an opinion here, it follows the framework philosophy: <strong>maximum flexibility and no limitations</strong>.</li>
+<li><strong>Mapping a saved id back to a live entity.</strong> There is no <code>FindEntityById</code>. Astra never keeps a runtime map of live entities, because charging every project a registration on every <code>Instantiate()</code> (projectiles, VFX, pooled objects) to serve a feature most entities never use is the wrong trade. Your save system owns that lookup.</li>
+<li><strong>Resolving asset references.</strong> <code>StatSO</code>, <code>AttributeSO</code>, <code>ClassSO</code>, <code>GrowthFormulaSO</code> and friends are <code>ScriptableObject</code> references. Turning them into something a save file can hold (an addressable address, a GUID, a name) and back again is your job.</li>
+<li><strong>Deciding when to capture and restore.</strong> Nothing on this page happens on its own. Astra exposes the state; you choose what to read, when, and where to put it.</li>
+</ul>
+<h2 id="what-unity-already-round-trips">What Unity already round-trips</h2>
+<p>If your strategy is to serialize the whole GameObject or prefab instance (a scene save, or a prefab-instance diff), the framework's <code>[SerializeField]</code> state comes back on its own. You do not need to touch any of the following through the API:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Serialized state</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EntityCore</code></td>
+<td>the entity level, owner and owner resolution, tags, save id</td>
+</tr>
+<tr>
+<td><code>EntityStats</code></td>
+<td>class-vs-fixed base toggle, fixed stat set, inline fixed values, fixed-values-asset toggle and reference, cache toggle</td>
+</tr>
+<tr>
+<td><code>EntityAttributes</code></td>
+<td>attribute points per level, the points tracker (level points, bonus points, per-attribute investments), point-removal strategy, class-vs-fixed toggle, fixed attribute set, inline fixed values, permanent bonuses, fixed-values-asset toggle and reference, cache toggle</td>
+</tr>
+<tr>
+<td><code>EntityClass</code></td>
+<td>the assigned class</td>
+</tr>
+</tbody>
+</table>
+<p>For a custom save format, none of that is automatic, and the rest of this page is for you.</p>
+<h2 id="give-every-entity-a-stable-id">Give every entity a stable id</h2>
+<p><code>EntityCore</code> has no identity that survives a save/load cycle on its own: the only handle on an entity is the Unity object reference, and that reference does not come back. <code>EntitySaveId</code> fills exactly that gap, and nothing more. Its whole API is four members:</p>
+<pre><code class="lang-csharp">public EntitySaveId SaveId { get; }        // IsEmpty is true until an id is baked or set
+public EntitySaveId EnsureSaveId();        // get-or-create, idempotent
+public EntitySaveId RegenerateSaveId();    // always mint a fresh one
+public void SetSaveId(EntitySaveId id);    // re-apply a saved id
+</code></pre>
+<p><code>EntitySaveId</code> is a string-backed serializable struct. Rebuild one from save data with <code>new EntitySaveId(savedString)</code>, and write it back out through its <code>Value</code> property.</p>
+<p><strong>Astra never reads this value.</strong> No registry, no lookups, no behavior keyed off it. An entity with an empty id behaves identically to one with an id, and <code>SetSaveId</code> accepts anything you give it (including an id another live entity already carries). Uniqueness is your concern.</p>
+<h3 id="the-instantiate-caveat">The <code>Instantiate()</code> caveat</h3>
+<p>This is the one that bites in practice. <code>Instantiate()</code> copies every serialized field, including the save id, so <strong>every runtime copy of a prefab that carries a baked id shares that id</strong>. For entities spawned at runtime that each need their own save record (enemies, dropped loot, pooled objects), the spawner has to break the tie:</p>
+<pre><code class="lang-csharp">var enemy = Instantiate(enemyPrefab);
+enemy.GetComponent&lt;EntityCore&gt;().RegenerateSaveId();
+</code></pre>
+<p>On restore, <code>SetSaveId(new EntitySaveId(idFromSave))</code> does the same job with the id your save system already holds.</p>
+<h3 id="showing-the-save-identity-section-in-the-inspector">Showing the Save Identity section in the inspector</h3>
+<p>The <code>EntityCore</code> inspector can render a <strong>Save Identity</strong> section, but it is hidden by default. To reveal it, open <code>Edit &gt; Preferences &gt; Astra Framework &gt; Save Identity</code> and enable <strong>Show Save Identity section</strong>. That page holds two per-user preferences, both off by default:</p>
+<ul>
+<li><strong>Show Save Identity section</strong> renders the section in the <code>EntityCore</code> inspector: a read-only <strong>Save Id</strong> field (showing <code>(none)</code> until an id is assigned), a <strong>Generate</strong> button that becomes <strong>Regenerate</strong> once the entity has an id, and <strong>Copy</strong> to put the id on the clipboard. It is multi-object aware.</li>
+<li><strong>Auto-bake save id on create</strong> gives every entity placed in a scene an id automatically, instead of requiring a click. Prefab assets and Prefab Mode are never touched, and nothing is baked during Play Mode.</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>These preferences are per-user and affect authoring only. <code>SaveId</code>, <code>EnsureSaveId</code>, <code>RegenerateSaveId</code>, and <code>SetSaveId</code> work exactly the same from code whether the section is shown or not.</p>
+</div>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p><strong>Regenerate</strong> discards the current id, and any save records already written against it stop resolving to this entity. That is why it asks for confirmation, while the first <strong>Generate</strong> on an entity with no id does not.</p>
+</div>
+<h3 id="keeping-ids-unique-while-authoring">Keeping ids unique while authoring</h3>
+<p>An editor-only guard keeps ids unique while you work: duplicating a placed entity, or dropping a second instance of a prefab that already carries a baked id, re-mints the id on the newcomer and leaves the original alone. It never touches prefab assets or Prefab Mode, and never runs in Play Mode. It cannot help with runtime <code>Instantiate()</code> (nothing editor-only can), which is why the spawner rule above exists.</p>
+<h2 id="capturing-state">Capturing state</h2>
+<p>For a custom format, this is the read side. Everything here is public, and every getter has a matching setter covered in <a href="#restoring">Restoring</a>.</p>
+<h3 id="entitycore"><code>EntityCore</code></h3>
+<ul>
+<li><code>SaveId</code> for identity</li>
+<li><code>Owner</code> for the ownership edge (see <a href="workflows.html#entity-ownership">Entity Ownership</a>)</li>
+</ul>
+<h3 id="entitycorelevel"><code>EntityCore.Level</code></h3>
+<p>Save <code>CurrentTotalExperience</code>, not the level. The growth formula is authoritative: if it changed since the save was written, the same experience should resolve to the new level, and it will only do that if you saved the experience.</p>
+<h3 id="entitystats"><code>EntityStats</code></h3>
+<ul>
+<li><code>UseClassBaseStats</code>, <code>StatSet</code></li>
+<li><code>GetFixedBaseStatValues()</code> for the fixed base values, already in the exact shape the setter expects</li>
+<li><code>UseFixedStatValuesAsset</code>, <code>FixedStatValuesAsset</code></li>
+</ul>
+<h3 id="entityattributes"><code>EntityAttributes</code></h3>
+<ul>
+<li><code>UseBaseAttributesFromClass</code>, <code>AttributeSet</code></li>
+<li><code>GetFixedBaseAttributeValues()</code> for fixed base values</li>
+<li><code>GetAllSpentPoints()</code> for the invested-points portfolio</li>
+<li><code>BonusAttributePoints</code> for the bonus pool (see <a href="workflows.html#bonus-attribute-points">Bonus attribute points</a>)</li>
+<li><code>GetAllPermanentBonuses()</code> for permanent per-attribute bonuses (see <a href="workflows.html#permanent-attribute-bonuses">Permanent attribute bonuses</a>)</li>
+<li><code>UseFixedAttributeValuesAsset</code>, <code>FixedAttributeValuesAsset</code></li>
+</ul>
+<p>Do not save <code>AvailableAttributePoints</code>, <code>TotalAttributePoints</code>, or <code>LevelAttributePoints</code>. They are derived from the level and the bonus pool, and are rebuilt during restore.</p>
+<h3 id="entityclass"><code>EntityClass</code></h3>
+<ul>
+<li><code>Class</code></li>
+</ul>
+<p>A capture pass might look like this, with asset references already turned into your own string keys:</p>
+<pre><code class="lang-csharp">EntitySaveData Capture(EntityCore core)
+{
+    var stats = core.GetComponent&lt;EntityStats&gt;();
+    var attributes = core.GetComponent&lt;EntityAttributes&gt;();
+
+    return new EntitySaveData {
+        saveId = core.SaveId.Value,
+        classKey = AssetKey.For(core.GetComponent&lt;EntityClass&gt;().Class),
+        totalExperience = core.Level.CurrentTotalExperience,
+        bonusAttributePoints = attributes.BonusAttributePoints,
+        baseStats = ToKeyed(stats.GetFixedBaseStatValues()),
+        baseAttributes = ToKeyed(attributes.GetFixedBaseAttributeValues()),
+        spentPoints = ToKeyed(attributes.GetAllSpentPoints()),
+        permanentBonuses = ToKeyed(attributes.GetAllPermanentBonuses()),
+    };
+}
+</code></pre>
+<h2 id="what-not-to-try-to-save">What not to try to save</h2>
+<p>Some state is derived, transient, or design-time, and snapshotting it is a mistake rather than a gap:</p>
+<ul>
+<li><strong>Transient modifiers.</strong> Flat, percentage, and stat-to-stat modifiers are add-only by design: there is no bulk read and no removal API, because their lifetime (duration, stacking, refresh, source) belongs to the companion package <code>com.electricdrill.astra-rpg-modifiers</code>. Save the <em>sources</em> (which buff is active, and for how long) and let modifiers reapply them; do not try to snapshot the computed modifier state.</li>
+<li><strong>Caches.</strong> The cache toggle is configuration; the cached values are derived and rebuilt on demand. There is nothing to save.</li>
+<li><strong>Design-time configuration.</strong> Max level, the experience growth formula, attribute points per level, the point-removal strategy, stat and attribute set composition, and everything inside a <code>ClassSO</code> are authored data, not session state. They belong in your project, not in your save file.</li>
+<li><strong>Tag contents.</strong> <code>EntityCore.Tags</code> is read-only today: authored tags round-trip through Unity serialization, but there is no API to mutate (and therefore to restore) them. If your game needs runtime tag changes, that is a feature to design with its own change events, not something to bolt onto a save path.</li>
+</ul>
+<h2 id="restoring">Restoring</h2>
+<p>This is where a save system actually breaks, so it is worth being precise about both <em>when</em> and <em>in what order</em>.</p>
+<h3 id="when">When</h3>
+<p><strong>Restore at or after <code>EntityCore.OnBeforeSpawned</code>.</strong> That event fires from <code>EntityCore</code>'s <code>Start</code>, after the level has been wired to its owning entity and before the spawned event goes out. Subscribing from your own component's <code>Awake</code> is the intended pattern:</p>
+<pre><code class="lang-csharp">private void Awake() =&gt; _core.OnBeforeSpawned += Restore;
+</code></pre>
+<p>Restoring earlier is not safe. Before <code>Start</code>, <code>EntityLevel</code> has no reference to its entity, so the level-changed events it raises carry a null target, and <code>EntityStats</code> / <code>EntityAttributes</code> filter on that target and skip. The attribute point budget then never grows to match the level you just restored.</p>
+<p><code>OnBeforeSpawned</code> is safe regardless of script execution order. <code>EntityAttributes</code> initializes its point budget from the level both in <code>OnEnable</code> and in <code>Start</code>, and that step is idempotent: whether it runs before or after your restore, you land on the same budget.</p>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>Do not restore onto a deactivated instance. Instantiating inactive, restoring, then activating does not work for anything level- or points-related: with the GameObject inactive, <code>Start</code> has not run and <code>EntityAttributes</code> has not subscribed to level events, so the restore writes into state that activation then re-initializes over. Identity (<code>SetSaveId</code>) and plain configuration (<code>Class</code>, <code>OwnerResolution</code>) are fine to set before activation; everything else waits until the entity has spawned.</p>
+</div>
+<h3 id="in-what-order">In what order</h3>
+<p>Each step builds on the ones above it.</p>
+<ol>
+<li><strong>Identity.</strong> <code>SetSaveId</code>, or use the saved id to locate the entity you are restoring into.</li>
+<li><strong>Structure</strong>, before anything that depends on which stats and attributes exist: <code>EntityClass.Class</code>, <code>EntityStats.UseClassBaseStats</code> / <code>SetFixedStatSet</code>, <code>EntityAttributes.UseBaseAttributesFromClass</code> / <code>SetFixedAttributeSet</code>, and <code>EntityCore.Owner</code> / <code>OwnerResolution</code>. Changing the attribute set refunds every spent point (with a warning), so do it here, before you restore investments.</li>
+<li><strong>Level and experience.</strong> <code>EntityCore.Level.SetTotalCurrentExp(savedExperience)</code>. This is the restore entry point for the level: it clamps the experience, derives the target level from the growth formula, and drives the level there through the normal setter, so every dependent component reacts exactly as it does in play. It also grows the level-derived attribute point budget. The whole transition raises a single level-up / level-down event, not one per level crossed: restoring level 1 → 50 raises one event with <code>AbsAmount = 49</code> and runs one bulk stat and attribute pass. If you need to react per level (one reward or fanfare each), loop over <code>AbsAmount</code> yourself.</li>
+<li><strong>Bonus points.</strong> <code>EntityAttributes.SetBonusAttributePoints(saved)</code>. Together with step 3 this fixes the total budget.</li>
+<li><strong>Base values.</strong> <code>EntityStats.SetFixedStatSource(...)</code> and <code>EntityAttributes.SetFixedAttributeSource(...)</code>, each with the full set of values (see <a href="advanced-topics.html#pluggable-fixed-base-value-sources">Pluggable fixed base value sources</a>).</li>
+<li><strong>Spent points.</strong> <code>EntityAttributes.SetAllSpentPoints(...)</code>. This needs the budget from steps 3 and 4: a snapshot the budget cannot cover is rejected in full, with an error, and nothing is written.</li>
+<li><strong>Permanent bonuses.</strong> <code>EntityAttributes.SetPermanentBonuses(...)</code>.</li>
+</ol>
+<p>Steps 5 to 7 are independent of each other and can be reordered freely.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>SetFixedStatSource</code> / <code>SetFixedAttributeSource</code> always write into the entity's inline values, never into an assigned fixed-values asset (which may be shared by other entities). If the entity was using an asset for its base values, restore <code>UseFixedStatValuesAsset</code> / <code>UseFixedAttributeValuesAsset</code> and the asset reference in step 2 and skip step 5 for that component; injected inline values are ignored while the asset toggle is on.</p>
+</div>
+<p>Restoring the owner builds on <a href="workflows.html#entity-ownership">Entity Ownership</a>, which is currently experimental; treat that part of the restore as provisional until the ownership edge stabilizes.</p>
+<h3 id="why-the-bulk-setters-exist">Why the bulk setters exist</h3>
+<p><code>SetAllSpentPoints</code>, <code>SetFixedStatSource</code>, <code>SetFixedAttributeSource</code>, and <code>SetPermanentBonuses</code> apply a whole snapshot as a single state assignment. This matters because the incremental in-game APIs (<code>SpendOn</code> / <code>RefundFrom</code> and similar) each validate against the state at that instant, so replaying a saved snapshot through them makes the result depend on the order attributes happen to be replayed in, and logs an error for every intermediate step that momentarily overshoots the budget.</p>
+<p>Two behaviors are worth knowing:</p>
+<ul>
+<li><code>SetAllSpentPoints</code> <strong>replaces</strong>: attributes absent from the dictionary end at zero. Attributes no longer in the set (removed from the game since the save was written) are skipped with a warning, and everything else still applies (that is a migration, not a corruption).</li>
+<li><code>SetPermanentBonuses</code> <strong>merges</strong>: attributes it does not mention keep the bonus they already have. Permanent bonuses accumulate from many independent sources, whereas the invested-points portfolio is one coherent allocation of one budget.</li>
+</ul>
+<h3 id="events-during-a-restore">Events during a restore</h3>
+<p>A restore raises the same events as ordinary gameplay: stat-changed, attribute-changed, attribute-points-changed, level-up / down, class-changed. That is deliberate: UI and derived systems converge on the restored state through the same code path they already use. If a listener must not react to a restore, gate that listener rather than asking the framework to restore silently.</p>
+<p>The bulk restore paths already coalesce (one event per value that genuinely changed, not one per write). To coalesce further, across steps, wrap the whole restore in a bulk scope:</p>
+<pre><code class="lang-csharp">void Restore()
+{
+    using (_stats.BeginBulk())
+    using (_attributes.BeginBulk())
+    {
+        // steps 2 to 7
+    }
+}
+</code></pre>
+<h2 id="where-the-line-is">Where the line is</h2>
+<p>Astra's side of the contract is: stable ids, symmetric getters and setters, and bulk restore paths that survive being called with a whole snapshot at once.</p>
+<p>Resolving asset references into keys your save file can hold, deciding what a save file contains, and finding a live entity from a saved <code>EntitySaveId</code> stay with your save system. That boundary is intentional.</p>
+<p>For the related runtime APIs, see <a href="advanced-topics.html#pluggable-fixed-base-value-sources">Pluggable fixed base value sources</a> and <a href="advanced-topics.html#reader-apis-and-safe-value-access">Reader APIs and safe value access</a>.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

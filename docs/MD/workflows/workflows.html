@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ElectricDrill/AstraRpgFrameworkDocs/blob/main/DocFx/MD/workflows/workflows.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ElectricDrill/AstraRpgFrameworkDocs/blob/v2.2.0/DocFx/MD/workflows/workflows.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -243,11 +243,64 @@ If <code>Use constant</code> is checked instead, the value is readonly.</p>
 <p>Built-in framework events such as <code>Spawned</code>, <code>Level Up</code>, <code>Level Down</code>, <code>Stat Changed</code>, and <code>Attribute Changed</code>, together with the shared experience gain modifier stat binding, are resolved through the active Astra Framework configuration. Use <code>Edit -&gt; Project Settings -&gt; Astra Framework</code> to choose which configuration asset is active, then open that configuration asset and assign the shared fields inside it. If no active Project Settings configuration is assigned, the runtime falls back to a <code>Resources/Astra Framework Config</code> asset.</p>
 <h3 id="entitylevel-code-apis">EntityLevel code APIs</h3>
 <p>It is honorable to mention some code APIs that can be used to interact with the <code>EntityLevel</code> component.</p>
-<p>EntityLevel exposes a <code>Action&lt;EntityCore, int&gt; OnLevelUp</code> property that can be used to subscribe to level-up events from code.</p>
-<p>If we want to grant experience to the entity, we can use the <code>AddExp(long amount)</code> method. This method will automatically raise the <code>OnLevelUp</code> event if the entity levels up.
-Alternatively, it is available also the <code>SetTotalCurrentExp(long totalCurrentExperience)</code> method, which allows setting the total current experience of the entity. This method will also raise the <code>OnLevelUp</code> event if the entity levels up, and the <code>OnLevelDown</code> event if the entity levels down.</p>
-<p>(🏷️<em>v1.2.0+</em>) Similarly, the <code>RemoveExp(long amount)</code> method allows deducting experience from the entity. This method will raise the <code>OnLevelDown</code> event if the entity levels down. If you want to <em>respec</em> an entity, the <code>ResetToLevelOne()</code> method resets the entity's level and experience to level 1. This method will raise the <code>OnLevelDown</code> event if the entity levels down. Clearly, all spent attribute points will be reset as well.</p>
+<p>EntityLevel exposes the <code>OnEntityLevelUp</code> and <code>OnEntityLevelDown</code> events, both of type <code>Action&lt;EntityLevelChangedContext&gt;</code>, that can be used to subscribe to level-change events from code. The <code>EntityLevelChangedContext</code> payload carries the entity, the previous and new level, and <code>AbsAmount</code> (see <a href="package-configuration.html#global-entity-level-up-event-">Global Entity Level Up Event</a> for the full field list). Adding a handler wires it to the active configuration's global level event, so it fires for every entity.</p>
+<p>If we want to grant experience to the entity, we can use the <code>AddExp(long amount)</code> method. This method will automatically raise the <code>OnEntityLevelUp</code> event if the entity levels up.
+Alternatively, it is available also the <code>SetTotalCurrentExp(long totalCurrentExperience)</code> method, which allows setting the total current experience of the entity. This method will also raise the <code>OnEntityLevelUp</code> event if the entity levels up, and the <code>OnEntityLevelDown</code> event if the entity levels down.</p>
+<p>(🏷️<em>v1.2.0+</em>) Similarly, the <code>RemoveExp(long amount)</code> method allows deducting experience from the entity. This method will raise the <code>OnEntityLevelDown</code> event if the entity levels down. If you want to <em>respec</em> an entity, the <code>ResetToLevelOne()</code> method resets the entity's level and experience to level 1. This method will raise the <code>OnEntityLevelDown</code> event if the entity levels down. Clearly, all spent attribute points will be reset as well.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>(🏷️<em>v2.2.0+</em>) A change that spans several levels at once raises a single <code>OnEntityLevelUp</code> or <code>OnEntityLevelDown</code> event covering the whole transition, not one event per level. The number of levels crossed is carried in the event payload as <code>AbsAmount</code>; iterate over it when you need a per-level reaction (one reward or fanfare each).</p>
+</div>
 <p>Finally, there are the <code>CurrentLevelTotalExperience()</code> and the <code>NextLevelTotalExperience()</code> methods. These methods return the total experience required to reach the current level and the next level, respectively. They are useful, for example, for checking how much experience is needed to level up.</p>
+<h2 id="entity-ownership">Entity Ownership</h2>
+<p>🏷️<em>v2.2.0+</em></p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Entity ownership is currently experimental and may change at any time.</p>
+<p>Be careful when adopting it for production-critical features. Future package updates may require refactoring how ownership is authored or resolved, or adjusting integration code that depends on the current <code>Owner</code>/<code>Root</code>/<code>IsOwnedBy</code> behavior.</p>
+<p>Because of this, the <strong>Ownership</strong> section is hidden from the <code>EntityCore</code> inspector by default — see <a href="#showing-the-ownership-section-in-the-inspector">Showing the Ownership section in the inspector</a> below to opt in.</p>
+</div>
+<p>Astra's entity model is intentionally flat: each entity is a single <code>EntityCore</code>, and satellite components find each other through <code>GetComponent</code>. Most games never need more than that, but composition still comes up naturally. Let's say you're building a spaceship as an entity (<code>EntityCore</code> + <code>EntityStats</code> for armor and speed), with a <code>Primary Weapon</code> child <code>GameObject</code> that is <em>also</em> a full entity, carrying its own <code>EntityStats</code> for bullet damage and fire rate.</p>
+<p>In that setup, the weapon is the one firing, so anything that identifies &quot;who performed this action&quot; (such as <code>Performer</code> in <a href="conditions.html#the-condition-model">Conditions</a>, or the performer resolved by systems like Astra Health's lifesteal) naturally resolves to the weapon, not the ship. Without a way to relate the two entities, a lifesteal effect configured on the ship would never trigger, because the entity dealing the damage is the weapon, not the ship carrying it.</p>
+<p><code>Owner</code> is an explicit, opt-in edge on <code>EntityCore</code> that expresses exactly this relationship, so systems built on top of the framework can look past the weapon and credit the ship instead.</p>
+<h3 id="showing-the-ownership-section-in-the-inspector">Showing the Ownership section in the inspector</h3>
+<p>Because the feature is experimental, the <strong>Ownership (Experimental)</strong> section is hidden from the <code>EntityCore</code> inspector by default. To reveal it, open <code>Edit &gt; Preferences &gt; Astra Framework &gt; Ownership</code> and enable <strong>Show Ownership section (Experimental)</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This preference only controls whether the section is rendered in the <code>EntityCore</code> inspector. <code>Owner</code>, <code>Root</code>, <code>IsOwnedBy</code>, and <code>EntityOwnership.Resolve</code> keep working from code regardless of this setting — it does not gate the ownership-aware <code>ConditionTarget</code> values or <code>IsOwnedByCondition</code> either, which stay available in condition pickers.</p>
+</div>
+<h3 id="configuring-ownership">Configuring ownership</h3>
+<p><img src="../../images/workflows/entity-core-ownership.png" alt="EntityCore inspector Ownership section"></p>
+<p>With the preference enabled, the <code>EntityCore</code> inspector exposes an <strong>Ownership (Experimental)</strong> section with two fields:</p>
+<ul>
+<li><strong>Owner</strong>: the <code>EntityCore</code> this entity is owned by. Left empty, the entity has no owner, and every ownership-aware API behaves exactly as it did before v2.2.0.</li>
+<li><strong>Owner Resolution</strong>: how <strong>Owner</strong> should be assigned. <code>Explicit</code> (the default) leaves <strong>Owner</strong> exactly as set in the inspector or from code. <code>NearestAncestor</code> resolves <strong>Owner</strong> automatically in <code>Awake</code>, from the closest <code>EntityCore</code> found by walking up the transform hierarchy, but only if <strong>Owner</strong> is not already set.</li>
+</ul>
+<p>For the spaceship example, setting the weapon's <strong>Owner Resolution</strong> to <code>NearestAncestor</code> is enough: as long as the <code>Primary Weapon</code> <code>GameObject</code> is nested under the ship, the weapon picks up the ship as its owner automatically, without any explicit inspector wiring.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>Owner</code> is also settable at runtime, which matters for pooled objects such as deployable turrets that need to be assigned an owner on spawn rather than at authoring time.</p>
+</div>
+<h3 id="reading-ownership-from-code">Reading ownership from code</h3>
+<pre><code class="lang-csharp">public EntityCore Owner { get; set; }
+public EntityCore Root { get; }
+public bool IsOwnedBy(EntityCore other);
+public event Action&lt;EntityCore, EntityCore&gt; OnOwnerChanged; // (previous, current)
+</code></pre>
+<ul>
+<li><code>Root</code> walks the ownership chain upward and returns the top-most entity, or the entity itself if it has no owner. In the spaceship example, <code>weapon.Root</code> returns the ship.</li>
+<li><code>IsOwnedBy</code> walks the same chain to check whether an entity is (transitively) owned by another.</li>
+<li><code>OnOwnerChanged</code> fires whenever <code>Owner</code> changes, passing both the previous and the current owner.</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The <code>Owner</code> setter refuses assignments that would create a cycle (owning yourself, directly or through the chain), logging an error and leaving <code>Owner</code> unchanged instead. <code>Root</code> and <code>IsOwnedBy</code> also stop after 16 levels as an additional safeguard, so a corrupted chain cannot cause an infinite walk.</p>
+</div>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p><code>EntityCore</code> does not automatically clear <code>Owner</code> when the owner entity is invalidated or destroyed. In Astra Health, invalidation also happens on death, not only on destruction. So, auto-clearing would silently break ownership across a resurrection. If you pool and respawn owned entities, reassign <code>Owner</code> explicitly on spawn, the same way you already reinitialize other pooled state.</p>
+</div>
+<p>See <a href="advanced-topics.html#resolving-ownership-in-custom-systems">Resolving ownership in custom systems</a> for how to consume this edge from your own gameplay code, and <a href="conditions.html#how-conditiontarget-resolves-entities">How <code>ConditionTarget</code> resolves entities</a> for the ownership-aware condition targets.</p>
 <h2 id="exp-source">Exp Source</h2>
 <p>The <code>ExpSource</code> <code>MonoBehaviour</code> component marks a <code>GameObject</code> as a source of experience points. When such an entity dies, collection systems (such as those provided by Astra Health) can harvest its experience and award it to eligible recipients.</p>
 <p>To add an <code>ExpSource</code> to an entity, select the entity's <code>GameObject</code> in the hierarchy and use &quot;Add Component&quot; from the inspector. Search for and select <code>ExpSource</code>.</p>

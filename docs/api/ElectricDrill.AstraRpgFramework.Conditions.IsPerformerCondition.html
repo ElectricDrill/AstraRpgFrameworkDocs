@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgFramework_Conditions_IsPerformerCondition" data-uid="ElectricDrill.AstraRpgFramework.Conditions.IsPerformerCondition" class="text-break">
-Class IsPerformerCondition  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Conditions/Leaf/IsPerformerCondition.cs/#L11"><i class="bi bi-code-slash"></i></a>
+Class IsPerformerCondition  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Conditions/Leaf/IsPerformerCondition.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -127,6 +127,14 @@ public class IsPerformerCondition : Condition</code></pre>
 
 
 
+  <h2 id="ElectricDrill_AstraRpgFramework_Conditions_IsPerformerCondition_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This is a strict reference-identity check and does not walk <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_Owner">Owner</a>.
+Under composition (e.g. a weapon entity applying an effect on behalf of its owning ship) a
+self-applied effect where Performer is the weapon and Holder is the ship evaluates to
+<code>false</code> here even though the ship is, in a broader sense, affecting itself. Use
+<a class="xref" href="ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.html">IsOwnedByCondition</a> (e.g. Owned = Holder, Owner = PerformerOwner) for
+ownership-aware &quot;is this self-inflicted&quot; checks.</p>
+</div>
 
 
   <h2 class="section" id="methods">Methods
@@ -137,7 +145,7 @@ public class IsPerformerCondition : Condition</code></pre>
 
   <h3 id="ElectricDrill_AstraRpgFramework_Conditions_IsPerformerCondition_Evaluate_ElectricDrill_AstraRpgFramework_Conditions_EvaluationContext_" data-uid="ElectricDrill.AstraRpgFramework.Conditions.IsPerformerCondition.Evaluate(ElectricDrill.AstraRpgFramework.Conditions.EvaluationContext)">
   Evaluate(EvaluationContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Conditions/Leaf/IsPerformerCondition.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Conditions/Leaf/IsPerformerCondition.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evaluates this condition against the provided context.</p>

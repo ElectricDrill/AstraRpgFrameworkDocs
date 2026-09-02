@@ -101,6 +101,17 @@ It is the mandatory base class for all entities, providing essential functionali
 Provides easy access to the entity's level, stats, and attributes.</p>
 </dd>
     </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.EntitySaveId.html">EntitySaveId</a></dt>
+      <dd><p>Opt-in, stable identity for an <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html">EntityCore</a>. It exists purely as a hook for an
+external save system: it lets a save record be correlated back to a specific entity instance
+across a save/load cycle, which a Unity object reference — the only identity an entity has
+today — cannot survive.</p>
+</dd>
+    </dl>
 
 
 </article>
