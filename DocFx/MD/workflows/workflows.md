@@ -238,7 +238,6 @@ Because the feature is experimental, the **Ownership (Experimental)** section is
 ### Configuring ownership
 
 ![EntityCore inspector Ownership section](../../images/workflows/entity-core-ownership.png)
-<!-- IMAGE MISSING: entity-core-ownership.png — screenshot of the EntityCore inspector's Ownership section (with the preference above enabled), showing the Owner field and Owner Resolution dropdown -->
 
 With the preference enabled, the `EntityCore` inspector exposes an **Ownership (Experimental)** section with two fields:
 
