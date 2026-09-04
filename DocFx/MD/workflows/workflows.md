@@ -200,14 +200,75 @@ Built-in framework events such as `Spawned`, `Level Up`, `Level Down`, `Stat Cha
 ### EntityLevel code APIs
 It is honorable to mention some code APIs that can be used to interact with the `EntityLevel` component.
 
-EntityLevel exposes a `Action<EntityCore, int> OnLevelUp` property that can be used to subscribe to level-up events from code.
+EntityLevel exposes the `OnEntityLevelUp` and `OnEntityLevelDown` events, both of type `Action<EntityLevelChangedContext>`, that can be used to subscribe to level-change events from code. The `EntityLevelChangedContext` payload carries the entity, the previous and new level, and `AbsAmount` (see [Global Entity Level Up Event](package-configuration.md#global-entity-level-up-event-) for the full field list). Adding a handler wires it to the active configuration's global level event, so it fires for every entity.
 
-If we want to grant experience to the entity, we can use the `AddExp(long amount)` method. This method will automatically raise the `OnLevelUp` event if the entity levels up.
-Alternatively, it is available also the `SetTotalCurrentExp(long totalCurrentExperience)` method, which allows setting the total current experience of the entity. This method will also raise the `OnLevelUp` event if the entity levels up, and the `OnLevelDown` event if the entity levels down.
+If we want to grant experience to the entity, we can use the `AddExp(long amount)` method. This method will automatically raise the `OnEntityLevelUp` event if the entity levels up.
+Alternatively, it is available also the `SetTotalCurrentExp(long totalCurrentExperience)` method, which allows setting the total current experience of the entity. This method will also raise the `OnEntityLevelUp` event if the entity levels up, and the `OnEntityLevelDown` event if the entity levels down.
 
-(🏷️*v1.2.0+*) Similarly, the `RemoveExp(long amount)` method allows deducting experience from the entity. This method will raise the `OnLevelDown` event if the entity levels down. If you want to _respec_ an entity, the `ResetToLevelOne()` method resets the entity's level and experience to level 1. This method will raise the `OnLevelDown` event if the entity levels down. Clearly, all spent attribute points will be reset as well.
+(🏷️*v1.2.0+*) Similarly, the `RemoveExp(long amount)` method allows deducting experience from the entity. This method will raise the `OnEntityLevelDown` event if the entity levels down. If you want to _respec_ an entity, the `ResetToLevelOne()` method resets the entity's level and experience to level 1. This method will raise the `OnEntityLevelDown` event if the entity levels down. Clearly, all spent attribute points will be reset as well.
+
+> [!NOTE]
+> (🏷️*v2.2.0+*) A change that spans several levels at once raises a single `OnEntityLevelUp` or `OnEntityLevelDown` event covering the whole transition, not one event per level. The number of levels crossed is carried in the event payload as `AbsAmount`; iterate over it when you need a per-level reaction (one reward or fanfare each).
 
 Finally, there are the `CurrentLevelTotalExperience()` and the `NextLevelTotalExperience()` methods. These methods return the total experience required to reach the current level and the next level, respectively. They are useful, for example, for checking how much experience is needed to level up.
+
+## Entity Ownership
+🏷️*v2.2.0+*
+
+> [!WARNING]
+> Entity ownership is currently experimental and may change at any time.
+>
+> Be careful when adopting it for production-critical features. Future package updates may require refactoring how ownership is authored or resolved, or adjusting integration code that depends on the current `Owner`/`Root`/`IsOwnedBy` behavior.
+>
+> Because of this, the **Ownership** section is hidden from the `EntityCore` inspector by default — see [Showing the Ownership section in the inspector](#showing-the-ownership-section-in-the-inspector) below to opt in.
+
+Astra's entity model is intentionally flat: each entity is a single `EntityCore`, and satellite components find each other through `GetComponent`. Most games never need more than that, but composition still comes up naturally. Let's say you're building a spaceship as an entity (`EntityCore` + `EntityStats` for armor and speed), with a `Primary Weapon` child `GameObject` that is *also* a full entity, carrying its own `EntityStats` for bullet damage and fire rate.
+
+In that setup, the weapon is the one firing, so anything that identifies "who performed this action" (such as `Performer` in [Conditions](conditions.md#the-condition-model), or the performer resolved by systems like Astra Health's lifesteal) naturally resolves to the weapon, not the ship. Without a way to relate the two entities, a lifesteal effect configured on the ship would never trigger, because the entity dealing the damage is the weapon, not the ship carrying it.
+
+`Owner` is an explicit, opt-in edge on `EntityCore` that expresses exactly this relationship, so systems built on top of the framework can look past the weapon and credit the ship instead.
+
+### Showing the Ownership section in the inspector
+
+Because the feature is experimental, the **Ownership (Experimental)** section is hidden from the `EntityCore` inspector by default. To reveal it, open `Edit > Preferences > Astra Framework > Ownership` and enable **Show Ownership section (Experimental)**.
+
+> [!NOTE]
+> This preference only controls whether the section is rendered in the `EntityCore` inspector. `Owner`, `Root`, `IsOwnedBy`, and `EntityOwnership.Resolve` keep working from code regardless of this setting — it does not gate the ownership-aware `ConditionTarget` values or `IsOwnedByCondition` either, which stay available in condition pickers.
+
+### Configuring ownership
+
+![EntityCore inspector Ownership section](../../images/workflows/entity-core-ownership.png)
+
+With the preference enabled, the `EntityCore` inspector exposes an **Ownership (Experimental)** section with two fields:
+
+- **Owner**: the `EntityCore` this entity is owned by. Left empty, the entity has no owner, and every ownership-aware API behaves exactly as it did before v2.2.0.
+- **Owner Resolution**: how **Owner** should be assigned. `Explicit` (the default) leaves **Owner** exactly as set in the inspector or from code. `NearestAncestor` resolves **Owner** automatically in `Awake`, from the closest `EntityCore` found by walking up the transform hierarchy, but only if **Owner** is not already set.
+
+For the spaceship example, setting the weapon's **Owner Resolution** to `NearestAncestor` is enough: as long as the `Primary Weapon` `GameObject` is nested under the ship, the weapon picks up the ship as its owner automatically, without any explicit inspector wiring.
+
+> [!NOTE]
+> `Owner` is also settable at runtime, which matters for pooled objects such as deployable turrets that need to be assigned an owner on spawn rather than at authoring time.
+
+### Reading ownership from code
+
+```csharp
+public EntityCore Owner { get; set; }
+public EntityCore Root { get; }
+public bool IsOwnedBy(EntityCore other);
+public event Action<EntityCore, EntityCore> OnOwnerChanged; // (previous, current)
+```
+
+- `Root` walks the ownership chain upward and returns the top-most entity, or the entity itself if it has no owner. In the spaceship example, `weapon.Root` returns the ship.
+- `IsOwnedBy` walks the same chain to check whether an entity is (transitively) owned by another.
+- `OnOwnerChanged` fires whenever `Owner` changes, passing both the previous and the current owner.
+
+> [!NOTE]
+> The `Owner` setter refuses assignments that would create a cycle (owning yourself, directly or through the chain), logging an error and leaving `Owner` unchanged instead. `Root` and `IsOwnedBy` also stop after 16 levels as an additional safeguard, so a corrupted chain cannot cause an infinite walk.
+
+> [!IMPORTANT]
+> `EntityCore` does not automatically clear `Owner` when the owner entity is invalidated or destroyed. In Astra Health, invalidation also happens on death, not only on destruction. So, auto-clearing would silently break ownership across a resurrection. If you pool and respawn owned entities, reassign `Owner` explicitly on spawn, the same way you already reinitialize other pooled state.
+
+See [Resolving ownership in custom systems](advanced-topics.md#resolving-ownership-in-custom-systems) for how to consume this edge from your own gameplay code, and [How `ConditionTarget` resolves entities](conditions.md#how-conditiontarget-resolves-entities) for the ownership-aware condition targets.
 
 ## Exp Source
 The `ExpSource` `MonoBehaviour` component marks a `GameObject` as a source of experience points. When such an entity dies, collection systems (such as those provided by Astra Health) can harvest its experience and award it to eligible recipients.
@@ -302,15 +363,17 @@ The next step is to assign the attribute set we created to an entity. To do this
 
 ![Entity Attributes](../../images/workflows/entity-attributes-editor.png)
 
-An entity has base points for attributes, which can be either fixed or derived from a class, a configurable amount of attribute points that can be arbitrarily assigned, and these points are granted at each level-up, along with flat and percentage modifiers for the attributes.
-Except for the modifiers, which can only be assigned via code, all other values can be configured from the inspector.
+An entity has base points for attributes, which can be either fixed or derived from a class, a configurable amount of attribute points that can be arbitrarily assigned, permanent per-attribute bonuses, and flat and percentage modifiers for the attributes. Attribute points are granted at each level-up, and can also be granted independently of leveling through bonus points (see [Bonus attribute points](#bonus-attribute-points)).
+Except for permanent attribute bonuses and the flat and percentage modifiers, which can only be assigned via code, all other values can be configured from the inspector.
 
 (🏷️*v2.0.0+*) `EntityAttributes` supports multi-object editing; shared fields can be edited in bulk, and attribute-specific rows are shown only for attributes common to the current selection.
 
 `Attr Points Per Level` defines how many arbitrarily spendable attribute points are provided at each level-up. They are assigned starting from level 2 on.
 
-`Attribute Points Tracker` allows monitoring and assigning spendable points. `Available Points` defines how many unspent points are still available.  
-If you change the level of the entity you'll see that available points change accordingly. And as you spend them, `Available Points` will decrease.
+`Attribute Points Tracker` allows monitoring and assigning spendable points. `Available` shows how many unspent points are still available against the total budget, broken down into `Level` (granted by leveling up) and `Bonus` (granted independently of leveling — see [Bonus attribute points](#bonus-attribute-points)).  
+If you change the level of the entity you'll see the `Level` portion (and therefore `Available`) change accordingly. And as you spend points on an attribute, `Available` will decrease.
+
+(🏷️*v2.2.0+*) The `Bonus Points` field, right below the summary, lets you edit the bonus pool directly from the inspector. Lowering it below what is currently spent forces a refund of invested points, so a confirmation dialog is shown first.
   
 Moreover, there is a checkbox labeled `Use Class Base Attributes`. For now, let's leave it unchecked since we haven't added a class yet. However, in this case, we need to manually assign an attribute set. Therefore, let's set the `Attribute Set` field found under `Fixed Base Attributes` with the `Hero Attribute Set`. By doing this, we now have access to additional fields in the inspector:
 
@@ -340,7 +403,7 @@ For swapping fixed base sources or the attribute set itself from code, see [Plug
 
 ### Understanding Attribute Modifier Types
 
-The framework provides two distinct types of attribute modifiers that work together with spent attribute points to determine final attribute values. Understanding how each type works is essential for creating predictable character progression and balanced gameplay mechanics.
+The framework provides three distinct types of attribute modifiers that work together with spent attribute points to determine final attribute values. Understanding how each type works is essential for creating predictable character progression and balanced gameplay mechanics.
 
 > [!NOTE]
 > General considerations for attribute modifiers
@@ -395,6 +458,24 @@ entityAttributes.AddFlatModifier(dexterityAttribute, -2);
 - Flat modifier: +4
 - Result after flat modifiers: 12 + 3 + 4 = 19
 
+#### Permanent Bonuses
+🏷️*Version 2.2.0+*
+
+Permanent bonuses add a fixed amount to an attribute, similar to flat modifiers, but they aren't drawn from any point pool and are meant to be granted once and stay for good, rather than being toggled on and off like a temporary flat modifier. They are applied alongside spent points, before percentage modifiers.
+
+**Use cases:**
+- A consumable item that permanently raises an attribute (e.g. a tome granting +2 Intelligence for good)
+- A one-time quest reward that permanently boosts an attribute
+- A permanent curse or affliction lowering an attribute
+
+**Code example:**
+```csharp
+// Reading a tome permanently grants +2 Intelligence
+entityAttributes.AddPermanentBonus(intelligenceAttribute, 2);
+```
+
+See [Permanent attribute bonuses](#permanent-attribute-bonuses) for the full API, including removal and inspector support.
+
 #### Percentage Modifiers
 
 Percentage modifiers apply a multiplicative increase or decrease to the current attribute value. They are the most powerful type of modifier and are applied last in the calculation chain, after all other values have been calculated.
@@ -422,7 +503,7 @@ entityAttributes.AddPercentageModifier(intelligenceAttribute, -10)
 
 **Important notes:**
 - Multiple percentage modifiers are additive before being applied (e.g., +20% and +10% = +30% total)
-- The percentage is calculated based on the value after base, spent points, and flat modifiers
+- The percentage is calculated based on the value after base, spent points, permanent bonuses, and flat modifiers
 - Percentage modifiers can be negative to create penalties
 
 #### Complete Calculation Example
@@ -432,16 +513,18 @@ Let's see a complete example showing the full attribute calculation process:
 **Initial setup:**
 - Base Intelligence: 14
 - Points spent on Intelligence: 4
+- Permanent bonus: +2 (from a previously read tome)
 - Equipment flat bonus: +2 (from a circlet)
 - Trait percentage bonus: +25% (from "Scholar" trait)
 
 **Step-by-step calculation:**
 1. Start with base: 14
 2. Add spent points: 14 + 4 = 18
-3. Apply flat modifiers: 18 + 2 = 20
-4. Apply percentage modifiers: 20 + (20 × 0.25) = 20 + 5 = 25
+3. Add permanent bonus: 18 + 2 = 20
+4. Apply flat modifiers: 20 + 2 = 22
+5. Apply percentage modifiers: 22 + (22 × 0.25) = 22 + 5.5 = 27.5 (rounded to 28 for integer attributes)
 
-**Final Intelligence value: 25**
+**Final Intelligence value: 28**
 
 #### Comparison with Stat Modifiers
 
@@ -449,7 +532,8 @@ Unlike stats, attributes have a simpler modifier system:
 
 **Attributes have:**
 - Base values
-- Spent attribute points (player-controlled)
+- Spent attribute points (player-controlled, from leveling and from [bonus grants](#bonus-attribute-points))
+- Permanent per-attribute bonuses
 - Flat modifiers
 - Percentage modifiers
 
@@ -483,12 +567,79 @@ If the entity's `Attr Points Per Level` is greater than zero and the level is gr
 // strengthAttribute is a reference to the Strength Attribute
 entityAttributes.SpendOn(strengthAttribute, 2);
 ```
-This will spend 2 points on the `Strength` attribute, increasing its value by 2. If there are not enough available points, a Debug.LogError will be raised.
+This will spend 2 points on the `Strength` attribute, increasing its value by 2. If there are not enough available points, a `Debug.LogError will` be raised.
 
 > [!NOTE]
 > Debug.LogError messages are shown only in development builds. If you run a production build, you won't see them.
 > This is useful to avoid cluttering the console with error messages that are not relevant in production.
 
+### Bonus attribute points
+🏷️*Version 2.2.0+*
+
+Besides the points granted by leveling up, an entity can also receive bonus attribute points: extra spendable points granted independently of leveling, for example by finding an item or completing a quest. Unlike level points, bonus points survive level-down and re-spec.
+
+```csharp
+// Grant 3 bonus attribute points, e.g. after completing a quest
+entityAttributes.GrantBonusAttributePoints(3);
+
+// Revoke previously granted bonus points, e.g. if the quest reward is undone
+entityAttributes.RevokeBonusAttributePoints(3);
+
+// Set the bonus pool to an absolute value, e.g. when restoring save data
+entityAttributes.SetBonusAttributePoints(5);
+```
+
+`BonusAttributePoints` and `LevelAttributePoints` expose the two pools individually, while `AvailableAttributePoints` and `TotalAttributePoints` keep reporting the combined budget:
+
+```csharp
+int bonus = entityAttributes.BonusAttributePoints;
+int fromLevels = entityAttributes.LevelAttributePoints;
+int available = entityAttributes.AvailableAttributePoints; // unspent, from either pool
+```
+
+> [!NOTE]
+> Points spent on an attribute aren't tagged with the pool (level or bonus) they were drawn from. This means:
+> - `RefundAllSpentPoints`, `RefundFrom`, and `RefundPointsForAttribute` refund invested points regardless of whether they came from level or bonus points.
+> - Lowering the bonus pool below what is currently spent (via `RevokeBonusAttributePoints` or `SetBonusAttributePoints`) forces a refund of invested points, following the same point removal strategy used for level-down.
+
+### Permanent attribute bonuses
+🏷️*Version 2.2.0+*
+
+A permanent attribute bonus is a fixed amount added to a single attribute that isn't drawn from any point pool. Unlike attribute points, it doesn't need to be granted before it can be spent, it's simply applied — a typical use case is a consumable item or a quest reward that permanently raises an attribute, such as an Archmage's tome that grants +2 `Intelligence` for the rest of the game.
+
+```csharp
+// Reading the Archmage's tome permanently grants +2 Intelligence
+entityAttributes.AddPermanentBonus(intelligenceAttribute, 2);
+
+// Amounts can be negative too, e.g. a permanent curse
+entityAttributes.AddPermanentBonus(strengthAttribute, -1);
+
+// Reads
+long intBonus = entityAttributes.GetPermanentBonus(intelligenceAttribute);
+IReadOnlyDictionary<AttributeSO, long> allBonuses = entityAttributes.GetAllPermanentBonuses();
+```
+
+`RemovePermanentBonus` subtracts from the existing bonus, while `SetPermanentBonus` (and the bulk `SetPermanentBonuses`, useful when restoring save data) assigns an absolute value instead:
+
+```csharp
+// Remove 1 point of the earlier Intelligence bonus (e.g. the tome's effect partially fades)
+entityAttributes.RemovePermanentBonus(intelligenceAttribute, 1);
+
+// Restore permanent bonuses from save data in a single bulk update
+entityAttributes.SetPermanentBonuses(savedPermanentBonuses);
+```
+
+To clear permanent bonuses entirely, use `ClearPermanentBonus` for a single attribute or `ClearAllPermanentBonuses` for every attribute:
+
+```csharp
+entityAttributes.ClearPermanentBonus(intelligenceAttribute);
+entityAttributes.ClearAllPermanentBonuses();
+```
+
+(🏷️*v2.2.0+*) The inspector exposes the same values through a `Permanent Bonuses` box below the `Attribute Points Tracker`, with one editable field per attribute and a `Clear All` button.
+
+> [!CAUTION]
+> Permanent bonuses are never touched by level-down, re-spec, or `RefundAllSpentPoints` — only the explicit `ClearPermanentBonus`/`ClearAllPermanentBonuses` APIs remove them. Since they were never drawn from a point budget, clearing them never increases `AvailableAttributePoints` or `BonusAttributePoints` either. To let a player re-spend points they already invested, use `RefundAllSpentPoints` instead.
 
 ## Create stats
 *Keyboard shortcut:* `Ctrl + Alt + S`  

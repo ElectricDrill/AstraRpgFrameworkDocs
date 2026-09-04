@@ -75,6 +75,39 @@ if (statReader.TryGetBase(physicalAttackStat, out long basePhysicalAttack))
 
 `Get` and `GetBase` can still be convenient on concrete containers when you already know the asset exists, but `TryGet` and `TryGetBase` are the safer default for reusable code paths. This is especially relevant in v2.0.0 because `StatSetInstance` is no longer an `IStatReader`; code that needs a generic stat reader should depend on `EntityCore`, `EntityStats`, or another explicit `IStatReader` provider instead.
 
+## Resolving ownership in custom systems
+*🏷️ Version 2.2.0+*
+
+> [!WARNING]
+> This builds on [Entity Ownership](workflows.md#entity-ownership), which is currently experimental and may change at any time. Treat `EntityAttribution` and `EntityOwnership.Resolve` as provisional until the underlying ownership edge stabilizes.
+
+`Owner` (see [Entity Ownership](workflows.md#entity-ownership)) tells you which entity ultimately owns another, but different systems often need to resolve "the responsible entity" differently. Take the spaceship example from that section: a lifesteal system built on top of the framework needs to know that the *ship* should be healed when its weapon lands a killing blow, even though the weapon is the one recorded as `Performer`.
+
+`EntityAttribution` and `EntityOwnership.Resolve` exist for exactly this kind of decision:
+
+```csharp
+public enum EntityAttribution { Direct, Owner, Root }
+
+public static class EntityOwnership
+{
+    public static EntityCore Resolve(EntityCore entity, EntityAttribution attribution);
+}
+```
+
+- `Direct`: returns `entity` unchanged. This preserves the framework's behavior from before ownership existed, and should stay the default for any new field or setting that exposes `EntityAttribution`.
+- `Owner`: returns `entity.Owner`, or `entity` itself if it has no owner.
+- `Root`: returns `entity.Root`, walking the full ownership chain.
+
+```csharp
+EntityCore beneficiary = EntityOwnership.Resolve(damagePerformer, EntityAttribution.Root);
+if (beneficiary == thisEntity)
+{
+    // Apply lifesteal to thisEntity, credited through the weapon's owner chain.
+}
+```
+
+Expose `EntityAttribution` as a serialized field on your own config or component when you want project code (or another package built on top of the framework, such as Astra RPG Health's lifesteal and kill-credit resolution) to choose how attribution should behave, rather than hardcoding one resolution strategy.
+
 ## Pluggable fixed base value sources
 *🏷️ Version 2.1.0+*
 

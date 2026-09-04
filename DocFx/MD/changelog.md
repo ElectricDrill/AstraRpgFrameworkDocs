@@ -4,6 +4,32 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2.2.0] - 2026-09-02
+
+### Added
+#### Runtime Features
+- Added bonus attribute points: `EntityAttributes.GrantBonusAttributePoints`, `RevokeBonusAttributePoints`, and `SetBonusAttributePoints` manage a spendable point pool separate from level-derived points (e.g. granted by items or completed quests). Unlike level points, bonus points survive level-down and re-spec. `BonusAttributePoints` and `LevelAttributePoints` expose the two pools individually, alongside the existing `AvailableAttributePoints` and `TotalAttributePoints`.
+- Added permanent per-attribute bonuses: `EntityAttributes.AddPermanentBonus`, `RemovePermanentBonus`, `SetPermanentBonus`, and `SetPermanentBonuses` apply a fixed bonus to an attribute that isn't drawn from any point pool (e.g. a consumed item or book permanently raising an attribute). Permanent bonuses are applied alongside spent points, before percentage modifiers, and are read back with `GetPermanentBonus`/`GetAllPermanentBonuses`. `ClearPermanentBonus` and `ClearAllPermanentBonuses` remove them explicitly.
+- Added `AttributePointsChangeInfo` and `EntityAttributes.OnAttributePointsChangedCallback`, raised whenever the attribute-points budget (available and/or total) changes from spending, refunding, granting/revoking bonus points, or level changes.
+- Added `EntitySaveId`, an opt-in stable per-entity identity for save systems: a string-backed serializable struct exposed through `EntityCore.SaveId`, `EnsureSaveId` (get-or-create), `RegenerateSaveId`, and `SetSaveId`. The framework never reads the value (no registry, no lookups, no behavior keyed off it), so an entity without an id behaves identically to one with an id; resolving a saved id back to a live entity, and keeping ids unique at runtime, stay the save system's responsibility. `Instantiate` copies a baked id, so runtime-spawned entities that each need their own save record must be given a fresh id by the spawner. See [Saving and Loading](./workflows/saving-and-loading.md).
+- Added `EntityAttributes.SetAllSpentPoints`, the bulk setter that pairs with `GetAllSpentPoints` for restoring the invested-points portfolio from a snapshot in a single state assignment, instead of replaying `SpendOn`/`RefundFrom` (whose outcome would depend on the order attributes are replayed in). It replaces rather than merges (attributes absent from the snapshot end at zero), rejects in full any snapshot the current point budget cannot cover, and skips attributes no longer in the `AttributeSet` with a warning rather than failing.
+- Added `EntityStats.GetFixedBaseStatValues` and `EntityAttributes.GetFixedBaseAttributeValues`, the bulk getters that pair with the existing `SetFixedStatSource`/`SetFixedAttributeSource` setters, so restoring fixed base values no longer requires walking `StatSet`/`AttributeSet` and calling `GetBase` per entry. Both read through the currently active source, so an entity backed by a `FixedStatValuesAsset` reports the asset's values.
+
+#### Editor Features
+- The `EntityAttributesEditor` inspector's `Attribute Points Tracker` now breaks the points summary down into `Level` and `Bonus`, and exposes an editable `Bonus Points` field (prompts for confirmation before a lowering that would force a refund of invested points).
+- Added a `Permanent Bonuses` box to the `EntityAttributesEditor` inspector, listing every attribute in the current selection with an editable bonus value and a `Clear All` button.
+- Added an optional **Save Identity** section to the `EntityCore` inspector: a read-only **Save Id** field with **Generate** / **Regenerate** / **Copy** actions (regenerating an existing id prompts for confirmation, since it orphans any save records that reference it), multi-object aware. Hidden by default behind the **Show Save Identity section** preference.
+- Added `EntitySaveIdRegistry`, an authoring-time guard that keeps save ids unique: duplicating a placed entity, or dropping a second instance of a prefab that already carries a baked id, re-mints the id on the newcomer while the original keeps its id. It never runs in Play Mode and never touches prefab assets or Prefab Mode.
+- Added a **Save Identity** page under `Edit > Preferences > Astra Framework`, holding the per-user **Show Save Identity section** and **Auto-bake save id on create** toggles (both off by default, so a project not using save ids gains no new authoring behavior). **Auto-bake save id on create** assigns an id to entities placed in a scene automatically, without a click; prefab assets, Prefab Mode, and Play Mode are left untouched.
+
+### Changed
+#### Runtime Features
+- `EntityAttributes.RefundAllSpentPoints` now also refunds points invested from the bonus pool, not just level-derived points, since invested points are fungible and not tagged by the pool they were drawn from. Permanent per-attribute bonuses are never touched by `RefundAllSpentPoints`, level-down, or re-spec; only the explicit `ClearPermanentBonus`/`ClearAllPermanentBonuses` APIs remove them.
+- `EntityStats.UseClassBaseStats` now has a public setter (previously `internal`), matching its twin `EntityAttributes.UseBaseAttributesFromClass`, so a save system can restore which base-stat source an entity was using.
+- `EntityCore.OwnerResolution` is now a public settable property; it was previously reachable only through the inspector. It is still read once in `Awake`, so restore it before the entity awakes.
+- `EntityLevel` now raises a single `OnEntityLevelUp`/`OnEntityLevelDown` event per level transition, regardless of how many levels are crossed (previously one event per level). A jump from level 1 to 50 arrives as one event with `PreviousValue = 1`, `NewValue = 50`, and `AbsAmount = 49`, and runs one bulk stat and attribute pass. This applies to every level change path: `AddExp`, `RemoveExp`, `SetTotalCurrentExp`, direct `Level` assignment, and `ResetToLevelOne`. Listeners that need per-level granularity (one reward or fanfare per level) should iterate over `AbsAmount`.
+
+
 ## [2.1.1] - 2026-07-29
 - Improved support for Unity 6.4+ editors
 
@@ -17,6 +43,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Added `EntityAttributes.SetFixedAttributeSet`/`EntityStats.SetFixedStatSet` to swap the `AttributeSetSO`/`StatSetSO` used for fixed base values at runtime.
 - Added `Assets > Create > Astra Framework > Fixed Attribute Values` and `Fixed Stat Values` asset creation menu items, with dedicated custom editors for authoring their values.
 - Added the `Use Fixed Attribute Values Asset`/`Use Fixed Stat Values Asset` toggle to the `EntityAttributesEditor`/`EntityStatsEditor` inspectors.
+- Added `EntityCore.Owner`, `EntityCore.Root`, `EntityCore.IsOwnedBy`, and the `OnOwnerChanged` event, an opt-in ownership edge between entities that lets one entity be recognized as owned by another (for example, a weapon entity owned by the ship entity carrying it).
+- Added `OwnerResolution` (`Explicit`/`NearestAncestor`) so `EntityCore.Owner` can be assigned explicitly or resolved automatically from the nearest `EntityCore` up the transform hierarchy.
+- Added `EntityAttribution` and `EntityOwnership.Resolve`, letting custom systems resolve "the responsible entity" for an entity as itself (`Direct`), its `Owner`, or its `Root`.
+- Added the `HolderOwner`, `PerformerOwner`, and `PayloadPerformerOwner` `ConditionTarget` values, and the `IsOwnedByCondition` condition, so condition trees can reason about entity ownership.
+
+#### Editor Features
+- Added an **Ownership** section to the `EntityCoreEditor` inspector, exposing the **Owner** and **Owner Resolution** fields, plus a read-only **Root** display and a cycle warning in Play Mode.
 
 #### Editor Features
 - Added Class Dashboard Window: Allows to inspect all defined classes in a single place. You can visualize all the GrowthFormula used in a certain class in the same graph.
@@ -26,6 +59,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 #### Runtime Features
 - `EntityAttributes` and `EntityStats` now store fixed base values internally through the new `FixedAttributeValues`/`FixedStatValues` wrapper types instead of a raw dictionary field. Existing serialized data migrates automatically the first time each object loads; see [Migrating to v2.1.0](./migration-guide.md#migrating-to-v210) in the Migration Guide.
+
+## [2.0.1] - 2026-06-21
+
+### Added
+- Added support for Unity v6.5
+
+### Changed
+- Rebranded the framework to "Astra Framework" ("RPG" was dropped)
+## [2.1.0] - Unreleased
+
+### Added
+#### Editor Features
+- Added Class Dashboard Window: Allows to inspect all defined classes in a single place. You can visualize all the GrowthFormula used in a certain class in the same graph.
+- Added Growth Curves Comparison Window: Lets you to compare multiple classes (up to 4), easing balancing and tuning. Also allows to compare multiple GrowthFormulas of any kind.
+- Added Game Tag Browser Window: Enables browsing of assets basing of assigned Game Tags. If you used Game Tags along your project, will greatly ease the navigation of your assets.
 
 ## [2.0.1] - 2026-06-21
 

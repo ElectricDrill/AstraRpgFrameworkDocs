@@ -175,6 +175,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "MD/workflows/saving-and-loading.md",
+      "output": {
+        ".html": {
+          "relative_path": "MD/workflows/saving-and-loading.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "MD/workflows/workflows.md",
       "output": {
         ".html": {
@@ -209,6 +219,16 @@
       "output": {
         ".html": {
           "relative_path": "api/ElectricDrill.AstraRpgFramework.Attributes.AttributeMenuItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.html"
         }
       },
       "version": ""
@@ -725,6 +745,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.Conditions.IsOwnedByCondition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.AstraRpgFramework.Conditions.IsPerformerCondition.yml",
       "output": {
         ".html": {
@@ -1075,6 +1105,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.EntitySaveId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.EntitySaveId.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.AstraRpgFramework.Events.AttributeChangedGameEvent.yml",
       "output": {
         ".html": {
@@ -1095,6 +1135,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.AstraRpgFramework.Events.Contexts.EntityLevelChangedContext.yml",
       "output": {
         ".html": {
@@ -1109,6 +1159,26 @@
       "output": {
         ".html": {
           "relative_path": "api/ElectricDrill.AstraRpgFramework.Events.Contexts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.Events.EntityClassChangedGameEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.Events.EntityClassChangedGameEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.Events.EntityClassChangedGameEventListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.Events.EntityClassChangedGameEventListener.html"
         }
       },
       "version": ""
@@ -2079,6 +2149,46 @@
       "output": {
         ".html": {
           "relative_path": "api/ElectricDrill.AstraRpgFramework.IValidatable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.Ownership.EntityAttribution.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.Ownership.EntityOwnership.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.Ownership.EntityOwnership.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.Ownership.OwnerResolution.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.Ownership.OwnerResolution.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.Ownership.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.Ownership.html"
         }
       },
       "version": ""
@@ -4632,6 +4742,16 @@
       "output": {
         "resource": {
           "relative_path": "images/workflows/entity-core-editor.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/workflows/entity-core-ownership.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/workflows/entity-core-ownership.png"
         }
       },
       "version": ""

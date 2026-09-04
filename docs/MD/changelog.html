@@ -89,9 +89,40 @@
 
 <p>All notable changes to this project will be documented in this file.</p>
 <p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>.</p>
-<h2 id="210---2026-07-13">[2.1.0] - 2026-07-13</h2>
+<h2 id="220---2026-09-02">[2.2.0] - 2026-09-02</h2>
 <h3 id="added">Added</h3>
 <h4 id="runtime-features">Runtime Features</h4>
+<ul>
+<li>Added bonus attribute points: <code>EntityAttributes.GrantBonusAttributePoints</code>, <code>RevokeBonusAttributePoints</code>, and <code>SetBonusAttributePoints</code> manage a spendable point pool separate from level-derived points (e.g. granted by items or completed quests). Unlike level points, bonus points survive level-down and re-spec. <code>BonusAttributePoints</code> and <code>LevelAttributePoints</code> expose the two pools individually, alongside the existing <code>AvailableAttributePoints</code> and <code>TotalAttributePoints</code>.</li>
+<li>Added permanent per-attribute bonuses: <code>EntityAttributes.AddPermanentBonus</code>, <code>RemovePermanentBonus</code>, <code>SetPermanentBonus</code>, and <code>SetPermanentBonuses</code> apply a fixed bonus to an attribute that isn't drawn from any point pool (e.g. a consumed item or book permanently raising an attribute). Permanent bonuses are applied alongside spent points, before percentage modifiers, and are read back with <code>GetPermanentBonus</code>/<code>GetAllPermanentBonuses</code>. <code>ClearPermanentBonus</code> and <code>ClearAllPermanentBonuses</code> remove them explicitly.</li>
+<li>Added <code>AttributePointsChangeInfo</code> and <code>EntityAttributes.OnAttributePointsChangedCallback</code>, raised whenever the attribute-points budget (available and/or total) changes from spending, refunding, granting/revoking bonus points, or level changes.</li>
+<li>Added <code>EntitySaveId</code>, an opt-in stable per-entity identity for save systems: a string-backed serializable struct exposed through <code>EntityCore.SaveId</code>, <code>EnsureSaveId</code> (get-or-create), <code>RegenerateSaveId</code>, and <code>SetSaveId</code>. The framework never reads the value (no registry, no lookups, no behavior keyed off it), so an entity without an id behaves identically to one with an id; resolving a saved id back to a live entity, and keeping ids unique at runtime, stay the save system's responsibility. <code>Instantiate</code> copies a baked id, so runtime-spawned entities that each need their own save record must be given a fresh id by the spawner. See <a href="workflows/saving-and-loading.html">Saving and Loading</a>.</li>
+<li>Added <code>EntityAttributes.SetAllSpentPoints</code>, the bulk setter that pairs with <code>GetAllSpentPoints</code> for restoring the invested-points portfolio from a snapshot in a single state assignment, instead of replaying <code>SpendOn</code>/<code>RefundFrom</code> (whose outcome would depend on the order attributes are replayed in). It replaces rather than merges (attributes absent from the snapshot end at zero), rejects in full any snapshot the current point budget cannot cover, and skips attributes no longer in the <code>AttributeSet</code> with a warning rather than failing.</li>
+<li>Added <code>EntityStats.GetFixedBaseStatValues</code> and <code>EntityAttributes.GetFixedBaseAttributeValues</code>, the bulk getters that pair with the existing <code>SetFixedStatSource</code>/<code>SetFixedAttributeSource</code> setters, so restoring fixed base values no longer requires walking <code>StatSet</code>/<code>AttributeSet</code> and calling <code>GetBase</code> per entry. Both read through the currently active source, so an entity backed by a <code>FixedStatValuesAsset</code> reports the asset's values.</li>
+</ul>
+<h4 id="editor-features">Editor Features</h4>
+<ul>
+<li>The <code>EntityAttributesEditor</code> inspector's <code>Attribute Points Tracker</code> now breaks the points summary down into <code>Level</code> and <code>Bonus</code>, and exposes an editable <code>Bonus Points</code> field (prompts for confirmation before a lowering that would force a refund of invested points).</li>
+<li>Added a <code>Permanent Bonuses</code> box to the <code>EntityAttributesEditor</code> inspector, listing every attribute in the current selection with an editable bonus value and a <code>Clear All</code> button.</li>
+<li>Added an optional <strong>Save Identity</strong> section to the <code>EntityCore</code> inspector: a read-only <strong>Save Id</strong> field with <strong>Generate</strong> / <strong>Regenerate</strong> / <strong>Copy</strong> actions (regenerating an existing id prompts for confirmation, since it orphans any save records that reference it), multi-object aware. Hidden by default behind the <strong>Show Save Identity section</strong> preference.</li>
+<li>Added <code>EntitySaveIdRegistry</code>, an authoring-time guard that keeps save ids unique: duplicating a placed entity, or dropping a second instance of a prefab that already carries a baked id, re-mints the id on the newcomer while the original keeps its id. It never runs in Play Mode and never touches prefab assets or Prefab Mode.</li>
+<li>Added a <strong>Save Identity</strong> page under <code>Edit &gt; Preferences &gt; Astra Framework</code>, holding the per-user <strong>Show Save Identity section</strong> and <strong>Auto-bake save id on create</strong> toggles (both off by default, so a project not using save ids gains no new authoring behavior). <strong>Auto-bake save id on create</strong> assigns an id to entities placed in a scene automatically, without a click; prefab assets, Prefab Mode, and Play Mode are left untouched.</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<h4 id="runtime-features-1">Runtime Features</h4>
+<ul>
+<li><code>EntityAttributes.RefundAllSpentPoints</code> now also refunds points invested from the bonus pool, not just level-derived points, since invested points are fungible and not tagged by the pool they were drawn from. Permanent per-attribute bonuses are never touched by <code>RefundAllSpentPoints</code>, level-down, or re-spec; only the explicit <code>ClearPermanentBonus</code>/<code>ClearAllPermanentBonuses</code> APIs remove them.</li>
+<li><code>EntityStats.UseClassBaseStats</code> now has a public setter (previously <code>internal</code>), matching its twin <code>EntityAttributes.UseBaseAttributesFromClass</code>, so a save system can restore which base-stat source an entity was using.</li>
+<li><code>EntityCore.OwnerResolution</code> is now a public settable property; it was previously reachable only through the inspector. It is still read once in <code>Awake</code>, so restore it before the entity awakes.</li>
+<li><code>EntityLevel</code> now raises a single <code>OnEntityLevelUp</code>/<code>OnEntityLevelDown</code> event per level transition, regardless of how many levels are crossed (previously one event per level). A jump from level 1 to 50 arrives as one event with <code>PreviousValue = 1</code>, <code>NewValue = 50</code>, and <code>AbsAmount = 49</code>, and runs one bulk stat and attribute pass. This applies to every level change path: <code>AddExp</code>, <code>RemoveExp</code>, <code>SetTotalCurrentExp</code>, direct <code>Level</code> assignment, and <code>ResetToLevelOne</code>. Listeners that need per-level granularity (one reward or fanfare per level) should iterate over <code>AbsAmount</code>.</li>
+</ul>
+<h2 id="211---2026-07-29">[2.1.1] - 2026-07-29</h2>
+<ul>
+<li>Improved support for Unity 6.4+ editors</li>
+</ul>
+<h2 id="210---2026-07-13">[2.1.0] - 2026-07-13</h2>
+<h3 id="added-1">Added</h3>
+<h4 id="runtime-features-2">Runtime Features</h4>
 <ul>
 <li>Added <code>IFixedAttributeSource</code> and <code>IFixedStatSource</code>, minimal point-queried interfaces that supply fixed (non-class-derived) base attribute/stat values to <code>EntityAttributes</code>/<code>EntityStats</code>, plus the <code>FixedAttributeValues</code>/<code>FixedStatValues</code> serializable wrapper types that back the framework's own inline and asset-backed sources.</li>
 <li>Added <code>FixedAttributeValuesSO</code>/<code>FixedStatValuesSO</code>, standalone assets holding fixed base values that can be shared across multiple entities, together with the <code>EntityAttributes.FixedAttributeValuesAsset</code>/<code>EntityStats.FixedStatValuesAsset</code> fields and the <code>Use Fixed Attribute Values Asset</code>/<code>Use Fixed Stat Values Asset</code> toggle.</li>
@@ -99,24 +130,49 @@
 <li>Added <code>EntityAttributes.SetFixedAttributeSet</code>/<code>EntityStats.SetFixedStatSet</code> to swap the <code>AttributeSetSO</code>/<code>StatSetSO</code> used for fixed base values at runtime.</li>
 <li>Added <code>Assets &gt; Create &gt; Astra Framework &gt; Fixed Attribute Values</code> and <code>Fixed Stat Values</code> asset creation menu items, with dedicated custom editors for authoring their values.</li>
 <li>Added the <code>Use Fixed Attribute Values Asset</code>/<code>Use Fixed Stat Values Asset</code> toggle to the <code>EntityAttributesEditor</code>/<code>EntityStatsEditor</code> inspectors.</li>
+<li>Added <code>EntityCore.Owner</code>, <code>EntityCore.Root</code>, <code>EntityCore.IsOwnedBy</code>, and the <code>OnOwnerChanged</code> event, an opt-in ownership edge between entities that lets one entity be recognized as owned by another (for example, a weapon entity owned by the ship entity carrying it).</li>
+<li>Added <code>OwnerResolution</code> (<code>Explicit</code>/<code>NearestAncestor</code>) so <code>EntityCore.Owner</code> can be assigned explicitly or resolved automatically from the nearest <code>EntityCore</code> up the transform hierarchy.</li>
+<li>Added <code>EntityAttribution</code> and <code>EntityOwnership.Resolve</code>, letting custom systems resolve &quot;the responsible entity&quot; for an entity as itself (<code>Direct</code>), its <code>Owner</code>, or its <code>Root</code>.</li>
+<li>Added the <code>HolderOwner</code>, <code>PerformerOwner</code>, and <code>PayloadPerformerOwner</code> <code>ConditionTarget</code> values, and the <code>IsOwnedByCondition</code> condition, so condition trees can reason about entity ownership.</li>
 </ul>
-<h4 id="editor-features">Editor Features</h4>
+<h4 id="editor-features-1">Editor Features</h4>
+<ul>
+<li>Added an <strong>Ownership</strong> section to the <code>EntityCoreEditor</code> inspector, exposing the <strong>Owner</strong> and <strong>Owner Resolution</strong> fields, plus a read-only <strong>Root</strong> display and a cycle warning in Play Mode.</li>
+</ul>
+<h4 id="editor-features-2">Editor Features</h4>
 <ul>
 <li>Added Class Dashboard Window: Allows to inspect all defined classes in a single place. You can visualize all the GrowthFormula used in a certain class in the same graph.</li>
 <li>Added Growth Curves Comparison Window: Lets you to compare multiple classes (up to 4), easing balancing and tuning. Also allows to compare multiple GrowthFormulas of any kind.</li>
 <li>Added Game Tag Browser Window: Enables browsing of assets basing of assigned Game Tags. If you used Game Tags along your project, will greatly ease the navigation of your assets.</li>
 </ul>
-<h3 id="changed">Changed</h3>
-<h4 id="runtime-features-1">Runtime Features</h4>
+<h3 id="changed-1">Changed</h3>
+<h4 id="runtime-features-3">Runtime Features</h4>
 <ul>
 <li><code>EntityAttributes</code> and <code>EntityStats</code> now store fixed base values internally through the new <code>FixedAttributeValues</code>/<code>FixedStatValues</code> wrapper types instead of a raw dictionary field. Existing serialized data migrates automatically the first time each object loads; see <a href="migration-guide.html#migrating-to-v210">Migrating to v2.1.0</a> in the Migration Guide.</li>
 </ul>
 <h2 id="201---2026-06-21">[2.0.1] - 2026-06-21</h2>
-<h3 id="added-1">Added</h3>
+<h3 id="added-2">Added</h3>
 <ul>
 <li>Added support for Unity v6.5</li>
 </ul>
-<h3 id="changed-1">Changed</h3>
+<h3 id="changed-2">Changed</h3>
+<ul>
+<li>Rebranded the framework to &quot;Astra Framework&quot; (&quot;RPG&quot; was dropped)</li>
+</ul>
+<h2 id="210---unreleased">[2.1.0] - Unreleased</h2>
+<h3 id="added-3">Added</h3>
+<h4 id="editor-features-3">Editor Features</h4>
+<ul>
+<li>Added Class Dashboard Window: Allows to inspect all defined classes in a single place. You can visualize all the GrowthFormula used in a certain class in the same graph.</li>
+<li>Added Growth Curves Comparison Window: Lets you to compare multiple classes (up to 4), easing balancing and tuning. Also allows to compare multiple GrowthFormulas of any kind.</li>
+<li>Added Game Tag Browser Window: Enables browsing of assets basing of assigned Game Tags. If you used Game Tags along your project, will greatly ease the navigation of your assets.</li>
+</ul>
+<h2 id="201---2026-06-21-1">[2.0.1] - 2026-06-21</h2>
+<h3 id="added-4">Added</h3>
+<ul>
+<li>Added support for Unity v6.5</li>
+</ul>
+<h3 id="changed-3">Changed</h3>
 <ul>
 <li>Rebranded the framework to &quot;Astra Framework&quot; (&quot;RPG&quot; was dropped)</li>
 </ul>
@@ -125,8 +181,8 @@
 <h5>Warning</h5>
 <p>This update includes breaking changes and behavior changes that can affect existing projects. Refer to the <a href="migration-guide.html#migrating-to-v200">Migrating to v2.0.0</a> section of the migration guide before updating.</p>
 </div>
-<h3 id="added-2">Added</h3>
-<h4 id="runtime-features-2">Runtime Features</h4>
+<h3 id="added-5">Added</h3>
+<h4 id="runtime-features-4">Runtime Features</h4>
 <ul>
 <li>Added the <code>Conditions</code> system, including composite conditions, entity/tag/value-change/stat/attribute/random leaf conditions, and <code>ConditionalGameAction</code>.</li>
 <li>Added <code>ConditionEvaluationAvailability</code> and <code>ConditionTargetAvailability</code> so condition compatibility checks can describe both the payload contract and the entity target slots available in a given evaluation context.</li>
@@ -138,7 +194,7 @@
 <li>Added <code>IStatReader</code> and <code>IAttributeReader</code>, then extended the API with <code>TryGetBase</code>.</li>
 <li>Added <code>RoundingMode</code> and its helper extensions for explicit integer conversion from double-based calculations.</li>
 </ul>
-<h4 id="editor-features-1">Editor Features</h4>
+<h4 id="editor-features-4">Editor Features</h4>
 <ul>
 <li>Added dedicated authoring helpers for conditions, including quick setup utilities, managed-reference body drawers for condition fields, and condition tooltips.</li>
 <li>Added deeper condition authoring support through <code>ConditionEditorContext</code> and <code>ConditionTargetDrawer</code>, so payload-aware editors can also filter invalid <code>ConditionTarget</code> values instead of only filtering condition types.</li>
@@ -149,8 +205,8 @@
 <li>Added the <code>Migrate Managed References (SO Rename)</code> tool (<code>Tools → Astra Framework → v2.0.0 Migration -&gt; Migrate Managed References (SO Rename)</code>) to rewrite <code>[SerializeReference]</code> managed-reference type strings that <code>[MovedFrom]</code> alone cannot patch after the ScriptableObject type renames. The tool supports a dry-run mode, per-session reporting to <code>Library/AstraMigrationReport_&lt;timestamp&gt;.txt</code>, and optional scanning of closed scenes.</li>
 <li>Added <code>TypeSelectableClosedGenericValidator</code>, an editor startup check that emits a warning when a <code>[SerializeReference, TypeSelectable]</code> field targets a closed generic type — a pattern that breaks silently when any type inside the generic argument is renamed (Unity bug <a href="https://issuetracker.unity3d.com/issues/movedfrom-attribute-is-not-working-for-generic-types">UUM-44729</a>).</li>
 </ul>
-<h3 id="changed-2">Changed</h3>
-<h4 id="runtime-features-3">Runtime Features</h4>
+<h3 id="changed-4">Changed</h3>
+<h4 id="runtime-features-5">Runtime Features</h4>
 <ul>
 <li><p>Built-in <code>Spawned</code>, <code>Level Up</code>, <code>Level Down</code>, <code>Stat Changed</code>, and <code>Attribute Changed</code> events are dispatched through the active Astra Framework configuration asset.</p>
 </li>
@@ -240,7 +296,7 @@
 <li><p><code>IDisplaySONameProvider&lt;T&gt;</code> was replaced by the non-generic <code>IDisplaySONameProvider</code> (parameter type changed from <code>T</code> to <code>ScriptableObject</code>). The change was necessary to work around <a href="https://issuetracker.unity3d.com/issues/movedfrom-attribute-is-not-working-for-generic-types">Unity bug UUM-44729</a>, where <code>[MovedFrom]</code> does not propagate into generic arguments of serialized type strings. Custom implementations must now cast the <code>ScriptableObject</code> parameter internally. See <a href="managed-reference-migration.html#1-migrating-idisplaysonameprovidert-custom-implementations">Migrating <code>IDisplaySONameProvider&lt;T&gt;</code></a>.</p>
 </li>
 </ul>
-<h4 id="editor-features-2">Editor Features</h4>
+<h4 id="editor-features-5">Editor Features</h4>
 <ul>
 <li>Improved the fixed-base attribute handling in <code>EntityAttributesEditor</code> and <code>EntityStatsEditor</code> for Play Mode usage.</li>
 <li>Replaced sample-backed script default references with optional authoring defaults, so new objects no longer inherit hidden references from package samples and repeated authoring can be standardized explicitly at the project level.</li>
@@ -248,7 +304,7 @@
 <li>Payload-aware condition authoring now keeps nested composite conditions under the same availability filter and shows inline errors when a condition type or <code>ConditionTarget</code> is incompatible with the current context.</li>
 </ul>
 <h3 id="removed">Removed</h3>
-<h4 id="runtime-features-4">Runtime Features</h4>
+<h4 id="runtime-features-6">Runtime Features</h4>
 <ul>
 <li>Removed the deprecated legacy <code>EntityLeveledUpGameEvent</code> and <code>EntityLeveledDownGameEvent</code> types together with the remaining deprecated legacy hooks in <code>EntityLevel</code>. These had already been deprecated in <code>v1.4.0</code>; if your project still uses them, complete the migration described in <a href="migration-guide.html#migrating-to-v140">Migrating to v1.4.0</a> before upgrading.</li>
 <li>Removed the deprecated <code>AttributePointsTracker</code> compatibility layer from <code>EntityAttributes</code>. The transition to <code>EntityPointsTracker</code> and <code>AttributePortfolio</code> started in <code>v1.3.0</code>.</li>
@@ -257,30 +313,30 @@
 <ul>
 <li>Removed the separate <code>Utils</code> sample folder. Its helper assets now live under <code>Examples</code>, and the samples are documented as reference content rather than project-owned runtime data.</li>
 </ul>
-<h4 id="editor-features-3">Editor Features</h4>
+<h4 id="editor-features-6">Editor Features</h4>
 <ul>
 <li>Removed the deprecated <code>DerivedTypePicker</code> editor utility. The replacement path to <code>TypeSelectionMenu</code> was introduced in <code>v1.2.0</code>.</li>
 </ul>
 <h3 id="fixed">Fixed</h3>
-<h4 id="runtime-features-5">Runtime Features</h4>
+<h4 id="runtime-features-7">Runtime Features</h4>
 <ul>
 <li>Fixed level-down handling so fixed-base attribute snapshots are preserved correctly while raising change events.</li>
 <li>Fixed a null-reference path in <code>GameEventListener</code> validation when the UnityEvent response is missing.</li>
 </ul>
 <h2 id="151---2026-04-04">[1.5.1] - 2026-04-04</h2>
-<h3 id="changed-3">Changed</h3>
-<h4 id="editor-features-4">Editor Features</h4>
+<h3 id="changed-5">Changed</h3>
+<h4 id="editor-features-7">Editor Features</h4>
 <ul>
 <li>Reordered the EntityAttributes fields in the custom inspector to prevent the bug mentioned below</li>
 </ul>
 <h3 id="fixed-1">Fixed</h3>
-<h4 id="editor-features-5">Editor Features</h4>
+<h4 id="editor-features-8">Editor Features</h4>
 <ul>
 <li>Fixed a bug in the EntityAttributes custom inspector that was not allowing to set either the fixed base Attribute Set nor the &quot;Use Class Attributes From Class&quot;</li>
 </ul>
 <h2 id="150---2026-03-23">[1.5.0] - 2026-03-23</h2>
-<h3 id="added-3">Added</h3>
-<h4 id="runtime-features-6">Runtime Features</h4>
+<h3 id="added-6">Added</h3>
+<h4 id="runtime-features-8">Runtime Features</h4>
 <ul>
 <li>Added <code>IScalingFormula</code> interface exposing the 4 main methods for scaling formulas. <code>ScalingFormula</code> and <code>ScalingFormulaInstance</code> now implement this interface.</li>
 <li>Added <code>ScalingFormulaInstance</code>. This class shall be used in place of <code>ScalingFormula</code> when you need to have a scaling formula that may use temporary scaling components. Temporary scaling components on the SO <code>ScalingFormula</code> have been deprecated an will be removed (see below). This ensures that the temporary scaling components do not modify the original <code>ScriptableObject</code> instance of the scaling formula, which could cause unintended side effects across different entities using the same scaling formula.</li>
@@ -296,12 +352,12 @@
 <li>Added a public <code>MaxLevel</code> get property to <code>EntityLevel</code></li>
 <li>All game event listeners log now an error if play mode is entered while no game event SO instance is assigned to them</li>
 </ul>
-<h4 id="editor-features-6">Editor Features</h4>
+<h4 id="editor-features-9">Editor Features</h4>
 <ul>
 <li>Added <code>Percentage</code> custom property drawer</li>
 </ul>
-<h3 id="changed-4">Changed</h3>
-<h4 id="editor-features-7">Editor Features</h4>
+<h3 id="changed-6">Changed</h3>
+<h4 id="editor-features-10">Editor Features</h4>
 <ul>
 <li>Improved the <code>GrowthFormula</code>'s custom inspector in several ways:
 <ul>
@@ -323,17 +379,17 @@
 <li>Reviewed the style of the sample scene</li>
 </ul>
 <h3 id="deprecated">Deprecated</h3>
-<h4 id="runtime-features-7">Runtime Features</h4>
+<h4 id="runtime-features-9">Runtime Features</h4>
 <ul>
 <li>Deprecated <code>TmpSelfScalingComponents</code> and <code>TmpTargetScalingComponents</code> in <code>ScalingFormula</code></li>
 </ul>
 <h3 id="removed-1">Removed</h3>
-<h4 id="runtime-features-8">Runtime Features</h4>
+<h4 id="runtime-features-10">Runtime Features</h4>
 <ul>
 <li><code>ToggleHarvestedExpSourceGameAction</code> no longer prints a warning when no <code>ExpSource</code> component is attached to the entity on which is being executed</li>
 </ul>
 <h2 id="142---2026-02-13">[1.4.2] - 2026-02-13</h2>
-<h3 id="changed-5">Changed</h3>
+<h3 id="changed-7">Changed</h3>
 <h4 id="samples-2">Samples</h4>
 <ul>
 <li>The sample scene is now using custom materials and a custom shader graph to support multiple render pipelines.</li>
@@ -352,8 +408,8 @@
 <h5>Warning</h5>
 <p>This update involves breaking changes. Refer to the <a href="migration-guide.html#migrating-to-v140">Migrating to v1.4.0</a> section of the migration guide for detailed steps to update your project.</p>
 </div>
-<h3 id="added-4">Added</h3>
-<h4 id="runtime-features-9">Runtime Features</h4>
+<h3 id="added-7">Added</h3>
+<h4 id="runtime-features-11">Runtime Features</h4>
 <ul>
 <li>Added <code>GameAction</code> to encapsulate game logic as <code>ScriptableObject</code>s. Has a generic context type parameter to specify the type of object the action operates on.</li>
 <li>Added <code>IExecutable</code> interface. Implemented by <code>GameAction</code>.</li>
@@ -384,7 +440,7 @@
 </li>
 <li>Added custom icon for <code>ExpSource</code> MonoBehaviour.</li>
 </ul>
-<h4 id="editor-features-8">Editor Features</h4>
+<h4 id="editor-features-11">Editor Features</h4>
 <ul>
 <li>Added a <code>BrokenEventFinder</code> utility to help identify broken responses in Unity Events (and therefore in Game Events). Can be accessed from the menu: <code>Tools/Astra Framework/Find Broken UnityEvents</code>.</li>
 </ul>
@@ -392,8 +448,8 @@
 <ul>
 <li>Added custom font for the Sample Scene.</li>
 </ul>
-<h3 id="changed-6">Changed</h3>
-<h4 id="runtime-features-10">Runtime Features</h4>
+<h3 id="changed-8">Changed</h3>
+<h4 id="runtime-features-12">Runtime Features</h4>
 <ul>
 <li>Simplified <code>ExpSource</code> implementation. Now <code>Harvested</code> property is no longer set to true upon getting <code>Exp</code> property. Now the external code is responsible for setting the <code>Harvested</code> property to true when appropriate. This change allows for more flexible usage of the <code>ExpSource</code> component, as it can now be used in scenarios where the experience points are not immediately harvested upon retrieval. This change was made to better accommodate future features in Astra Health.</li>
 </ul>
@@ -422,8 +478,8 @@
 <li>Fixed an editor-scripts related issue that was causing build problems.</li>
 </ul>
 <h2 id="130---2025-12-16">[1.3.0] - 2025-12-16</h2>
-<h3 id="added-5">Added</h3>
-<h4 id="runtime-features-11">Runtime Features</h4>
+<h3 id="added-8">Added</h3>
+<h4 id="runtime-features-13">Runtime Features</h4>
 <ul>
 <li>Added <code>PRV[N]</code> and <code>AT[N]</code> keywords for growth formulas' expressions.
 <ul>
@@ -433,24 +489,24 @@
 </li>
 <li><code>BoundedValue.Clamp</code> now supports also clamping of double values. For now is used internally by the framework and is reserved for future use is Astra Health.</li>
 </ul>
-<h4 id="editor-features-9">Editor Features</h4>
+<h4 id="editor-features-12">Editor Features</h4>
 <ul>
 <li>Added support for <code>enum</code> formatting in <code>InspectorTypography</code>.</li>
 <li>Added utility to provide compact representation of large numbers in the editor (e.g., 1.5K, 4M). Reserved for future use in Astra Health.</li>
 </ul>
-<h3 id="changed-7">Changed</h3>
-<h4 id="runtime-features-12">Runtime Features</h4>
+<h3 id="changed-9">Changed</h3>
+<h4 id="runtime-features-14">Runtime Features</h4>
 <ul>
 <li>Changed the internal <code>AttributePointsTracker</code> used by <code>EntityAttributes</code> to track spendable attribute points. <code>EntityPointsTracker</code> replaces the legacy tracker, and relies on a new <code>AttributePortfolio</code> to manage the allocation of attribute points to attributes. This new system is more readable, more robust, and more maintainable. The old system is left for backward compatibility. By updating the framework to this version, existing projects will automatically migrate to the new system.</li>
 </ul>
 <h3 id="fixed-6">Fixed</h3>
-<h4 id="runtime-features-13">Runtime Features</h4>
+<h4 id="runtime-features-15">Runtime Features</h4>
 <ul>
 <li>Fixed Round Robin Strategy for attribute points removal on level down or reset to level 1.</li>
 </ul>
 <h2 id="120---2025-11-25">[1.2.0] - 2025-11-25</h2>
-<h3 id="added-6">Added</h3>
-<h4 id="runtime-features-14">Runtime Features</h4>
+<h3 id="added-9">Added</h3>
+<h4 id="runtime-features-16">Runtime Features</h4>
 <ul>
 <li>Added <code>OnLevelDownEvent</code> Game Event. This event is triggered whenever an entity levels down, allowing you to respond to level down events in your game.</li>
 <li>Added XP deduction feature. Now you can deduct XP from an entity using the <code>EntityCore.Level.RemoveExp(long amount)</code> method. This will also handle level downs if the deducted XP causes the entity to drop below the current level's XP threshold. Triggers the <code>OnLevelDownEvent</code> once for each level the entity drops.</li>
@@ -464,7 +520,7 @@ You can implement your own display name providers by implementing the <code>IDis
 </ul>
 </li>
 </ul>
-<h4 id="editor-features-10">Editor Features</h4>
+<h4 id="editor-features-13">Editor Features</h4>
 <ul>
 <li>Added <em>Read Only</em> (<code>RO</code>) property in InspectorTypography. Marks a field in the inspector as read only, in the sense that the component automatically manages it, and the user should not manually edit any associate LongVar/IntVar associated values. Currently reserved for future use.</li>
 <li>Added <code>IValidatable</code> interface. Used by the framework to propagate validation events to depending objects. Used to ensure that when a MonoBehaviour/ScriptableObject is validated in the inspector, all depending objects are also validated to ensure data consistency.</li>
@@ -481,7 +537,7 @@ Automatically instantiates and assigns default instances where fields are null, 
 <ul>
 <li>Added <code>ExpUtils</code> MonoBehaviour. Adds utility methods that can be invoked from the Unity Editor (in play mode) to add or remove XP from an entity for testing purposes.</li>
 </ul>
-<h3 id="changed-8">Changed</h3>
+<h3 id="changed-10">Changed</h3>
 <h4 id="runtime">Runtime</h4>
 <ul>
 <li><code>SoSetScalingComponentBase</code> now logs a warning if no entity set is assigned during the lookup of values to use for scaling calculations.</li>
@@ -511,18 +567,18 @@ Entities that are missing these events will raise an error during their <code>St
 <li>Fixed the assignment of total available attribute points. Previously, this was handled only in OnValidate, which caused issues in builds (where editor-only code is stripped). Initialization is now also performed in <code>EntityCore.Start()</code>. Additionally, total available attribute points are now updated within <code>AddPoints()</code>, ensuring they are correctly recalculated whenever points are added—not only during <code>Init()</code>.</li>
 </ul>
 <h2 id="112---2025-11-12">[1.1.2] - 2025-11-12</h2>
-<h3 id="changed-9">Changed</h3>
+<h3 id="changed-11">Changed</h3>
 <ul>
 <li>Updated the &quot;Example scene and instances&quot; samples. Now by default the Hero prefab uses a IntVar for the attribute spendable points per level. This makes more consistent the amount of spendable attribute points acquired by each character on level up</li>
 <li>Updated offline docs with Installation Guide section</li>
 </ul>
 <h2 id="111---2025-11-06">[1.1.1] - 2025-11-06</h2>
-<h3 id="changed-10">Changed</h3>
+<h3 id="changed-12">Changed</h3>
 <ul>
 <li>Updated the links in <code>package.json</code> to match the new docs URL</li>
 </ul>
 <h2 id="110---2025-11-06">[1.1.0] - 2025-11-06</h2>
-<h3 id="changed-11">Changed</h3>
+<h3 id="changed-13">Changed</h3>
 <h4 id="updated-branding-from-soap-rpg-framework-to-astra-rpg-framework">Updated branding from &quot;SOAP RPG Framework&quot; to &quot;Astra RPG Framework&quot;</h4>
 <p>IMPORTANT: Refer to the <a href="migration-guide.html">migration guide</a> for updating existing projects that used the previous version.</p>
 <ul>
@@ -536,7 +592,7 @@ Entities that are missing these events will raise an error during their <code>St
 <li><code>_includedStatSets</code> field in <code>StatSet</code> will become an internal property in future releases.</li>
 </ul>
 <h2 id="100---2025-10-30">[1.0.0] - 2025-10-30</h2>
-<h3 id="added-7">Added</h3>
+<h3 id="added-10">Added</h3>
 <ul>
 <li>Initial release of SOAP RPG Framework.</li>
 <li>ScriptableObject-based toolkit for core RPG mechanics.</li>

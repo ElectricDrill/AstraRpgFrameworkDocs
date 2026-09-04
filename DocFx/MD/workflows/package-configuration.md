@@ -244,7 +244,7 @@ entityCore.Unsubscribe<EntityCoreGameEvent>(myEntitySpecificEvent);
 **Type:** `EntityLevelUpGameEvent`  
 **Required:** Yes  
 **Raised by:** `EntityLevel`  
-**Description:** Raised when any entity's level increases. Carries an `EntityLevelChangedContext` payload.
+**Description:** Raised when any entity's level increases. Carries an `EntityLevelChangedContext` payload. Raised once per transition, even when several levels are crossed at once (`AbsAmount` holds the number of levels gained).
 
 **Payload — `EntityLevelChangedContext`:**
 
@@ -267,7 +267,7 @@ entityCore.Level.Unsubscribe<EntityLevelUpGameEvent>(myLevelUpEvent);
 **Type:** `EntityLevelDownGameEvent`  
 **Required:** Yes  
 **Raised by:** `EntityLevel`  
-**Description:** Raised when any entity's level decreases. Carries an `EntityLevelChangedContext` payload with the same fields as the level-up event.
+**Description:** Raised when any entity's level decreases. Carries an `EntityLevelChangedContext` payload with the same fields as the level-up event. Raised once per transition, even when several levels are crossed at once (`AbsAmount` holds the number of levels lost).
 
 **Per-entity extra events API:**
 ```csharp

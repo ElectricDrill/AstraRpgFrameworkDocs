@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgFramework_Classes_EntityClass" data-uid="ElectricDrill.AstraRpgFramework.Classes.EntityClass" class="text-break">
-Class EntityClass  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Classes/EntityClass.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class EntityClass  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Classes/EntityClass.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -104,7 +104,7 @@ Implements <a class="xref" href="ElectricDrill.AstraRpgFramework.Classes.IClassS
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[DisallowMultipleComponent]
-public class EntityClass : MonoBehaviour, IClassSource</code></pre>
+public class EntityClass : MonoBehaviour, IClassSource, IEventRegistrar</code></pre>
   </div>
 
 
@@ -126,6 +126,7 @@ public class EntityClass : MonoBehaviour, IClassSource</code></pre>
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="ElectricDrill.AstraRpgFramework.Classes.IClassSource.html">IClassSource</a></div>
+      <div><a class="xref" href="ElectricDrill.AstraRpgFramework.Events.IEventRegistrar.html">IEventRegistrar</a></div>
     </dd>
   </dl>
 
@@ -151,15 +152,18 @@ public class EntityClass : MonoBehaviour, IClassSource</code></pre>
 
   <h3 id="ElectricDrill_AstraRpgFramework_Classes_EntityClass_Class" data-uid="ElectricDrill.AstraRpgFramework.Classes.EntityClass.Class">
   Class
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Classes/EntityClass.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Classes/EntityClass.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the class definition for this entity.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the class definition for this entity.
+Setting a different value raises <a class="xref" href="ElectricDrill.AstraRpgFramework.Classes.EntityClass.html#ElectricDrill_AstraRpgFramework_Classes_EntityClass_OnClassChanged">OnClassChanged</a> and then the per-entity
+class-changed game event channel; reassigning the same class is a no-op and raises nothing.
+Safe to call before <code>Awake</code> (e.g. during spawn setup on a deactivated GameObject).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ClassSO Class { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ClassSO Class { get; set; }</code></pre>
   </div>
 
 
@@ -179,6 +183,133 @@ public class EntityClass : MonoBehaviour, IClassSource</code></pre>
 
 
 
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="ElectricDrill_AstraRpgFramework_Classes_EntityClass_Subscribe_" data-uid="ElectricDrill.AstraRpgFramework.Classes.EntityClass.Subscribe*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgFramework_Classes_EntityClass_Subscribe__1___0_" data-uid="ElectricDrill.AstraRpgFramework.Classes.EntityClass.Subscribe``1(``0)">
+  Subscribe&lt;TEvent&gt;(TEvent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Classes/EntityClass.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers <code class="paramref">gameEvent</code> on the channel matching <code class="typeparamref">TEvent</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Subscribe&lt;TEvent&gt;(TEvent gameEvent) where TEvent : ScriptableObject</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameEvent</code> <span class="xref">TEvent</span></dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TEvent</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ArgumentException</span></dt>
+    <dd><p>Thrown when no channel is registered for <code class="typeparamref">TEvent</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="ElectricDrill_AstraRpgFramework_Classes_EntityClass_Unsubscribe_" data-uid="ElectricDrill.AstraRpgFramework.Classes.EntityClass.Unsubscribe*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgFramework_Classes_EntityClass_Unsubscribe__1___0_" data-uid="ElectricDrill.AstraRpgFramework.Classes.EntityClass.Unsubscribe``1(``0)">
+  Unsubscribe&lt;TEvent&gt;(TEvent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Classes/EntityClass.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes <code class="paramref">gameEvent</code> from the channel matching <code class="typeparamref">TEvent</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Unsubscribe&lt;TEvent&gt;(TEvent gameEvent) where TEvent : ScriptableObject</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameEvent</code> <span class="xref">TEvent</span></dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TEvent</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ArgumentException</span></dt>
+    <dd><p>Thrown when no channel is registered for <code class="typeparamref">TEvent</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="ElectricDrill_AstraRpgFramework_Classes_EntityClass_OnClassChanged" data-uid="ElectricDrill.AstraRpgFramework.Classes.EntityClass.OnClassChanged">
+  OnClassChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Classes/EntityClass.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Raised when this entity's class is reassigned, before the game event channel.
+Sibling components that need to react to a class change should subscribe to this
+event instead of relying on script execution order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;EntityClassChangedContext&gt; OnClassChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Action</span>&lt;<a class="xref" href="ElectricDrill.AstraRpgFramework.Events.Contexts.EntityClassChangedContext.html">EntityClassChangedContext</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
   <h2 class="section" id="operators">Operators
 </h2>
 
@@ -187,7 +318,7 @@ public class EntityClass : MonoBehaviour, IClassSource</code></pre>
 
   <h3 id="ElectricDrill_AstraRpgFramework_Classes_EntityClass_op_Implicit_ElectricDrill_AstraRpgFramework_Classes_EntityClass__ElectricDrill_AstraRpgFramework_Classes_ClassSO" data-uid="ElectricDrill.AstraRpgFramework.Classes.EntityClass.op_Implicit(ElectricDrill.AstraRpgFramework.Classes.EntityClass)~ElectricDrill.AstraRpgFramework.Classes.ClassSO">
   implicit operator ClassSO(EntityClass)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Classes/EntityClass.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Classes/EntityClass.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implicit conversion operator that allows an EntityClass to be used directly as a Class.</p>

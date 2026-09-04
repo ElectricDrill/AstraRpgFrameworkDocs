@@ -86,7 +86,6 @@ When a screenshot should exist but is not yet available, still add the reference
 
 ```markdown
 ![EntityCore inspector with new event fields](../images/migration-guide/entitycore-new-events.png)
-<!-- IMAGE MISSING: entitycore-new-events.png — screenshot of the EntityCore inspector showing the new event fields -->
 ```
 
 This makes missing screenshots searchable with `IMAGE MISSING`.

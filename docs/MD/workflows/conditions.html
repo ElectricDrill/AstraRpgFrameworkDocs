@@ -191,9 +191,29 @@
 <td><code>PayloadVictim</code></td>
 <td><code>IHasVictim</code> on the payload</td>
 </tr>
+<tr>
+<td><code>HolderOwner</code> (🏷️<em>v2.2.0+</em>)</td>
+<td><code>Owner</code> of the entity resolved from <code>Holder</code></td>
+</tr>
+<tr>
+<td><code>PerformerOwner</code> (🏷️<em>v2.2.0+</em>)</td>
+<td><code>Owner</code> of the entity resolved from <code>Performer</code></td>
+</tr>
+<tr>
+<td><code>PayloadPerformerOwner</code> (🏷️<em>v2.2.0+</em>)</td>
+<td><code>Owner</code> of the entity resolved from <code>PayloadPerformer</code></td>
+</tr>
 </tbody>
 </table>
 <p>This is why some conditions appear to &quot;just work&quot; with certain event payloads and not with others: the payload must actually expose the requested role.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p><code>HolderOwner</code>, <code>PerformerOwner</code>, and <code>PayloadPerformerOwner</code> build on <a href="workflows.html#entity-ownership">Entity Ownership</a>, which is currently experimental and may change at any time. Be careful when adopting these slots for production-critical condition trees.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>HolderOwner</code>, <code>PerformerOwner</code>, and <code>PayloadPerformerOwner</code> resolve a single <a href="workflows.html#entity-ownership"><code>Owner</code></a> hop, not the full ownership chain. For the spaceship example from <a href="workflows.html#entity-ownership">Entity Ownership</a>, <code>PerformerOwner</code> resolves to the ship when the weapon is <code>Performer</code> and its <code>Owner</code> is set directly. If the weapon is owned by an intermediate entity instead of the ship itself, resolve <code>Root</code> in your own code (see <a href="advanced-topics.html#resolving-ownership-in-custom-systems">Resolving ownership in custom systems</a>) and expose it through a custom <code>ConditionTarget</code> or payload field.</p>
+</div>
 <h3 id="common-payloads-used-by-built-in-conditions">Common payloads used by built-in conditions</h3>
 <p>Several built-in event payloads already expose the contracts that the condition system expects:</p>
 <table>
@@ -262,6 +282,7 @@
 <li><code>EntityLevelThresholdTransitionCondition</code>: reads an <code>int</code> value-change payload and checks whether a level comparison became satisfied or became unsatisfied across the change</li>
 <li><code>HolderLevelCondition</code>: a shorter holder-only version of a level comparison</li>
 <li><code>IsPerformerCondition</code>: passes when <code>Performer</code> and <code>Holder</code> are the same entity</li>
+<li><code>IsOwnedByCondition</code> (🏷️<em>v2.2.0+</em>): compares two selected entity slots and passes when the entity resolved from the first slot is (transitively) owned by the entity resolved from the second, through <code>IsOwnedBy</code></li>
 </ul>
 <p>This family is especially useful when you need to distinguish self-targeting, compare holder and payload entity, or react only at specific level boundaries.</p>
 <p>Some practical reading tips:</p>
@@ -271,10 +292,19 @@
 <li><code>EntityLevelThresholdTransitionCondition</code> is for level-change payloads and asks whether a rule changed state across the event (for example, whether <code>level &gt;= 10</code> just became true)</li>
 <li><code>HolderLevelCondition</code> is simpler than <code>EntityLevelCondition</code>, but also less flexible because it cannot look at payload roles</li>
 <li><code>IsPerformerCondition</code> is mainly useful in self-applied or self-triggered workflows</li>
+<li><code>IsOwnedByCondition</code> walks the full <a href="workflows.html#entity-ownership">ownership chain</a>, unlike the <code>*Owner</code> <code>ConditionTarget</code> slots, which resolve only a direct <code>Owner</code></li>
 </ul>
+<div class="WARNING">
+<h5>Warning</h5>
+<p><code>IsOwnedByCondition</code> builds on <a href="workflows.html#entity-ownership">Entity Ownership</a>, which is currently experimental and may change at any time. Be careful when adopting it for production-critical condition trees.</p>
+</div>
 <div class="NOTE">
 <h5>Note</h5>
 <p><code>PayloadEntity</code> is often the most useful slot when working with built-in event payloads, because types such as <code>StatChangeInfo</code>, <code>AttributeChangeInfo</code>, and <code>EntityLevelChangedContext</code> already implement <code>IHasEntity</code>.</p>
+</div>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p><code>IsPerformerCondition</code> compares <code>Performer</code> and <code>Holder</code> by strict reference equality. If your project uses <a href="workflows.html#entity-ownership">Entity Ownership</a> and the performing entity can be owned by a different entity (a weapon owned by a ship, for example), <code>IsPerformerCondition</code> does not account for that relationship on its own. Combine it with <code>IsOwnedByCondition</code>, or with a <code>PerformerOwner</code>-based <code>EntityReferenceCondition</code>, when the rule should also match owned entities.</p>
 </div>
 <h3 id="leaftag"><code>Leaf/Tag</code></h3>
 <p>The tag-focused family lets conditions inspect tags on resolved entities or on active modifier data:</p>

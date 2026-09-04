@@ -122,6 +122,11 @@ and evaluate as <code>null</code> when the payload cannot supply the requested r
     <dt id="ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_Holder"><code>Holder = 0</code></dt>
     <dd><p>The entity that owns the effect, modifier, or action currently being evaluated.</p>
 </dd>
+    <dt id="ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_HolderOwner"><code>HolderOwner = 6</code></dt>
+    <dd><p>Experimental — this API may still change.
+The <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_Owner">Owner</a> of <a class="xref" href="ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.html#ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_Holder">Holder</a>. <code>null</code> when
+<a class="xref" href="ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.html#ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_Holder">Holder</a> is unowned or unresolved.</p>
+</dd>
     <dt id="ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_PayloadEntity"><code>PayloadEntity = 2</code></dt>
     <dd><p>The payload's primary entity, resolved from
 <a class="xref" href="ElectricDrill.AstraRpgFramework.Contexts.IHasEntity.html">IHasEntity</a> when available,
@@ -130,6 +135,11 @@ or from the <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.htm
     <dt id="ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_PayloadPerformer"><code>PayloadPerformer = 3</code></dt>
     <dd><p>The payload's performer entity, resolved from
 <a class="xref" href="ElectricDrill.AstraRpgFramework.Contexts.IHasPerformer.html">IHasPerformer</a>.</p>
+</dd>
+    <dt id="ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_PayloadPerformerOwner"><code>PayloadPerformerOwner = 8</code></dt>
+    <dd><p>Experimental — this API may still change.
+The <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_Owner">Owner</a> of <a class="xref" href="ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.html#ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_PayloadPerformer">PayloadPerformer</a>. <code>null</code> when
+the payload performer is unowned or unresolved.</p>
 </dd>
     <dt id="ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_PayloadTarget"><code>PayloadTarget = 4</code></dt>
     <dd><p>The payload's target entity, resolved from
@@ -141,6 +151,11 @@ or from the <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.htm
 </dd>
     <dt id="ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_Performer"><code>Performer = 1</code></dt>
     <dd><p>The entity that applied or cast the effect, modifier, or action currently being evaluated.</p>
+</dd>
+    <dt id="ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_PerformerOwner"><code>PerformerOwner = 7</code></dt>
+    <dd><p>Experimental — this API may still change.
+The <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_Owner">Owner</a> of <a class="xref" href="ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.html#ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_Performer">Performer</a>. <code>null</code> when
+<a class="xref" href="ElectricDrill.AstraRpgFramework.Conditions.ConditionTarget.html#ElectricDrill_AstraRpgFramework_Conditions_ConditionTarget_Performer">Performer</a> is unowned or unresolved.</p>
 </dd>
   </dl>
 

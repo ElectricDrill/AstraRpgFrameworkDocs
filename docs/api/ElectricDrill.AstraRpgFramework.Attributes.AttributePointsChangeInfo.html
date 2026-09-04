@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct AttributePointsChangeInfo | Astra Framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct AttributePointsChangeInfo | Astra Framework ">
+      
+      <meta name="description" content="Immutable structure that contains information about an attribute-points budget change (available and/or total attribute points moving), raised whenever level points, bonus points, or per-attribute spend/refund alter the budget.">
+      <link rel="icon" href="../images/astra-rpg-ico.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Cis8/AstraRpgFramework/new/main/apiSpec/new?filename=ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo.md&amp;value=---%0Auid%3A%20ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo-astra.svg" alt="Astra Framework">
+            Astra Framework
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo">
+
+
+
+  <h1 id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo" class="text-break">
+Struct AttributePointsChangeInfo  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Attributes/AttributePointsChangeInfo.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ElectricDrill.html">ElectricDrill</a>.<a class="xref" href="ElectricDrill.AstraRpgFramework.html">AstraRpgFramework</a>.<a class="xref" href="ElectricDrill.AstraRpgFramework.Attributes.html">Attributes</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>com.electricdrill.astra-rpg-framework.Runtime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Immutable structure that contains information about an attribute-points budget change
+(available and/or total attribute points moving), raised whenever level points, bonus
+points, or per-attribute spend/refund alter the budget.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly struct AttributePointsChangeInfo : IHasEntity, IHasTarget</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="ElectricDrill.AstraRpgFramework.Contexts.IHasEntity.html">IHasEntity</a></div>
+      <div><a class="xref" href="ElectricDrill.AstraRpgFramework.Contexts.IHasTarget.html">IHasTarget</a></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo__ctor_" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.#ctor*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo__ctor_ElectricDrill_AstraRpgFramework_Attributes_EntityAttributes_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.#ctor(ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes,System.Int32,System.Int32,System.Int32,System.Int32)">
+  AttributePointsChangeInfo(EntityAttributes, int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Attributes/AttributePointsChangeInfo.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the AttributePointsChangeInfo structure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AttributePointsChangeInfo(EntityAttributes entityAttributes, int previousAvailable, int newAvailable, int previousTotal, int newTotal)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entityAttributes</code> <a class="xref" href="ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.html">EntityAttributes</a></dt>
+    <dd></dd>
+    <dt><code>previousAvailable</code> <span class="xref">int</span></dt>
+    <dd></dd>
+    <dt><code>newAvailable</code> <span class="xref">int</span></dt>
+    <dd></dd>
+    <dt><code>previousTotal</code> <span class="xref">int</span></dt>
+    <dd></dd>
+    <dt><code>newTotal</code> <span class="xref">int</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_Entity_" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.Entity*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_Entity" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.Entity">
+  Entity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Attributes/AttributePointsChangeInfo.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The primary <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html">EntityCore</a> associated with this object.
+For entity components this is the owning entity; for context payloads this is
+the primary affected subject (e.g. the event target).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityCore Entity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html">EntityCore</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_EntityAttributes_" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.EntityAttributes*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_EntityAttributes" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.EntityAttributes">
+  EntityAttributes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Attributes/AttributePointsChangeInfo.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the EntityAttributes instance whose points budget changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityAttributes EntityAttributes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.html">EntityAttributes</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_NewAvailable_" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.NewAvailable*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_NewAvailable" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.NewAvailable">
+  NewAvailable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Attributes/AttributePointsChangeInfo.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of points available to spend after the change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NewAvailable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">int</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_NewSpent_" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.NewSpent*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_NewSpent" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.NewSpent">
+  NewSpent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Attributes/AttributePointsChangeInfo.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of points spent after the change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NewSpent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">int</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_NewTotal_" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.NewTotal*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_NewTotal" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.NewTotal">
+  NewTotal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Attributes/AttributePointsChangeInfo.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the total point budget after the change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NewTotal { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">int</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_PreviousAvailable_" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.PreviousAvailable*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_PreviousAvailable" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.PreviousAvailable">
+  PreviousAvailable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Attributes/AttributePointsChangeInfo.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of points available to spend before the change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PreviousAvailable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">int</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_PreviousSpent_" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.PreviousSpent*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_PreviousSpent" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.PreviousSpent">
+  PreviousSpent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Attributes/AttributePointsChangeInfo.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of points spent before the change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PreviousSpent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">int</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_PreviousTotal_" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.PreviousTotal*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_PreviousTotal" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.PreviousTotal">
+  PreviousTotal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Attributes/AttributePointsChangeInfo.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the total point budget before the change.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PreviousTotal { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">int</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_Target_" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.Target*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgFramework_Attributes_AttributePointsChangeInfo_Target" data-uid="ElectricDrill.AstraRpgFramework.Attributes.AttributePointsChangeInfo.Target">
+  Target
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Attributes/AttributePointsChangeInfo.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityCore Target { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html">EntityCore</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -57,8 +57,17 @@ Entity-based and tag-based conditions select an entity slot through `ConditionTa
 | `PayloadPerformer` | `IHasPerformer` on the payload |
 | `PayloadTarget` | `IHasTarget` on the payload |
 | `PayloadVictim` | `IHasVictim` on the payload |
+| `HolderOwner` (🏷️*v2.2.0+*) | `Owner` of the entity resolved from `Holder` |
+| `PerformerOwner` (🏷️*v2.2.0+*) | `Owner` of the entity resolved from `Performer` |
+| `PayloadPerformerOwner` (🏷️*v2.2.0+*) | `Owner` of the entity resolved from `PayloadPerformer` |
 
 This is why some conditions appear to "just work" with certain event payloads and not with others: the payload must actually expose the requested role.
+
+> [!WARNING]
+> `HolderOwner`, `PerformerOwner`, and `PayloadPerformerOwner` build on [Entity Ownership](workflows.md#entity-ownership), which is currently experimental and may change at any time. Be careful when adopting these slots for production-critical condition trees.
+
+> [!NOTE]
+> `HolderOwner`, `PerformerOwner`, and `PayloadPerformerOwner` resolve a single [`Owner`](workflows.md#entity-ownership) hop, not the full ownership chain. For the spaceship example from [Entity Ownership](workflows.md#entity-ownership), `PerformerOwner` resolves to the ship when the weapon is `Performer` and its `Owner` is set directly. If the weapon is owned by an intermediate entity instead of the ship itself, resolve `Root` in your own code (see [Resolving ownership in custom systems](advanced-topics.md#resolving-ownership-in-custom-systems)) and expose it through a custom `ConditionTarget` or payload field.
 
 ### Common payloads used by built-in conditions
 
@@ -121,6 +130,7 @@ These conditions reason about entity roles and entity relationships in the evalu
 - `EntityLevelThresholdTransitionCondition`: reads an `int` value-change payload and checks whether a level comparison became satisfied or became unsatisfied across the change
 - `HolderLevelCondition`: a shorter holder-only version of a level comparison
 - `IsPerformerCondition`: passes when `Performer` and `Holder` are the same entity
+- `IsOwnedByCondition` (🏷️*v2.2.0+*): compares two selected entity slots and passes when the entity resolved from the first slot is (transitively) owned by the entity resolved from the second, through `IsOwnedBy`
 
 This family is especially useful when you need to distinguish self-targeting, compare holder and payload entity, or react only at specific level boundaries.
 
@@ -131,9 +141,16 @@ Some practical reading tips:
 - `EntityLevelThresholdTransitionCondition` is for level-change payloads and asks whether a rule changed state across the event (for example, whether `level >= 10` just became true)
 - `HolderLevelCondition` is simpler than `EntityLevelCondition`, but also less flexible because it cannot look at payload roles
 - `IsPerformerCondition` is mainly useful in self-applied or self-triggered workflows
+- `IsOwnedByCondition` walks the full [ownership chain](workflows.md#entity-ownership), unlike the `*Owner` `ConditionTarget` slots, which resolve only a direct `Owner`
+
+> [!WARNING]
+> `IsOwnedByCondition` builds on [Entity Ownership](workflows.md#entity-ownership), which is currently experimental and may change at any time. Be careful when adopting it for production-critical condition trees.
 
 > [!NOTE]
 > `PayloadEntity` is often the most useful slot when working with built-in event payloads, because types such as `StatChangeInfo`, `AttributeChangeInfo`, and `EntityLevelChangedContext` already implement `IHasEntity`.
+
+> [!CAUTION]
+> `IsPerformerCondition` compares `Performer` and `Holder` by strict reference equality. If your project uses [Entity Ownership](workflows.md#entity-ownership) and the performing entity can be owned by a different entity (a weapon owned by a ship, for example), `IsPerformerCondition` does not account for that relationship on its own. Combine it with `IsOwnedByCondition`, or with a `PerformerOwner`-based `EntityReferenceCondition`, when the rule should also match owned entities.
 
 ### `Leaf/Tag`
 
