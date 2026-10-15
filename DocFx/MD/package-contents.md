@@ -14,6 +14,7 @@ For a guided tour of the sample content, see [Samples](samples.md).
 | Game Actions | Reusable asynchronous actions, projections, wrappers, and owner-aware event-driven execution flows. | [Game Actions](workflows/game-actions.md), [Advanced topics](workflows/advanced-topics.md#owner-aware-gameaction-execution) |
 | Game Tags | Tag assets, tag sets, and inspector header pills used to organize Astra assets and drive tag-based logic. | [Game Tags](workflows/game-tags.md) |
 | Conditions and reactive filtering | Polymorphic condition trees, conditional actions, and the trigger/filtering model used by reactive systems. | [Conditions](workflows/conditions.md) |
+| AI agent authoring | Optional Unity Pipeline commands and an agent skill for inspecting and authoring Astra content through the Unity CLI or MCP. | [Using Astra with AI agents](workflows/ai-agents.md) |
 
 ## Editor tooling included in the package
 

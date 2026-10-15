@@ -125,6 +125,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "MD/workflows/ai-agents.md",
+      "output": {
+        ".html": {
+          "relative_path": "MD/workflows/ai-agents.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "MD/workflows/conditions.md",
       "output": {
         ".html": {
@@ -1665,10 +1675,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.FireAndForgetComponentGameAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.FireAndForgetComponentGameAction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.IncreaseCounterComponentGameAction.yml",
       "output": {
         ".html": {
           "relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.IncreaseCounterComponentGameAction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.ParallelComponentGameAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.ParallelComponentGameAction.html"
         }
       },
       "version": ""
@@ -1735,6 +1765,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.ConditionalGameAction-1.yml",
       "output": {
         ".html": {
@@ -1785,6 +1835,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.IncreaseCounterComponentGameAction.yml",
       "output": {
         ".html": {
@@ -1799,6 +1859,26 @@
       "output": {
         ".html": {
           "relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.IncreaseCounterGameAction-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelPolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelPolicy.html"
         }
       },
       "version": ""
@@ -2025,10 +2105,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.FireAndForgetEntityContextGameAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.FireAndForgetEntityContextGameAction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.IncreaseCounterEntityContextGameAction.yml",
       "output": {
         ".html": {
           "relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.IncreaseCounterEntityContextGameAction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.ParallelEntityContextGameAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.ParallelEntityContextGameAction.html"
         }
       },
       "version": ""

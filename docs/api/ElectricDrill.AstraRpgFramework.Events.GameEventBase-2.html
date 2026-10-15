@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Cis8/AstraRpgFramework/new/main/apiSpec/new?filename=ElectricDrill_AstraRpgFramework_Events_GameEventBase_2.md&amp;value=---%0Auid%3A%20ElectricDrill.AstraRpgFramework.Events.GameEventBase%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Cis8/AstraRpgFramework/new/feat/ai-integration/apiSpec/new?filename=ElectricDrill_AstraRpgFramework_Events_GameEventBase_2.md&amp;value=---%0Auid%3A%20ElectricDrill.AstraRpgFramework.Events.GameEventBase%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgFramework_Events_GameEventBase_2" data-uid="ElectricDrill.AstraRpgFramework.Events.GameEventBase`2" class="text-break">
-Class GameEventBase&lt;TListener, TCodeListener&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Events/GameEventBase.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class GameEventBase&lt;TListener, TCodeListener&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/Events/GameEventBase.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -154,7 +154,7 @@ It centralizes listener storage, snapshotting, registration-order delivery, and 
 
   <h3 id="ElectricDrill_AstraRpgFramework_Events_GameEventBase_2_Dispatch__1___0_" data-uid="ElectricDrill.AstraRpgFramework.Events.GameEventBase`2.Dispatch``1(``0)">
   Dispatch&lt;TInvoker&gt;(TInvoker)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Events/GameEventBase.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/Events/GameEventBase.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Dispatches the event to a snapshot of the current listeners in registration order.
@@ -195,7 +195,7 @@ The non-reentrant path reuses snapshot buffers after warmup; reentrant raises al
 
   <h3 id="ElectricDrill_AstraRpgFramework_Events_GameEventBase_2_RegisterCodeListener__1_" data-uid="ElectricDrill.AstraRpgFramework.Events.GameEventBase`2.RegisterCodeListener(`1)">
   RegisterCodeListener(TCodeListener)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Events/GameEventBase.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/Events/GameEventBase.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Registers a code listener to be notified when this event is raised.
@@ -229,7 +229,7 @@ Duplicate listeners are automatically prevented.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_Events_GameEventBase_2_RegisterMonoListener__0_" data-uid="ElectricDrill.AstraRpgFramework.Events.GameEventBase`2.RegisterMonoListener(`0)">
   RegisterMonoListener(TListener)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Events/GameEventBase.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/Events/GameEventBase.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Registers a MonoBehaviour-based listener to be notified when this event is raised.
@@ -263,7 +263,7 @@ Duplicate listeners are automatically prevented.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_Events_GameEventBase_2_UnregisterCodeListener__1_" data-uid="ElectricDrill.AstraRpgFramework.Events.GameEventBase`2.UnregisterCodeListener(`1)">
   UnregisterCodeListener(TCodeListener)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Events/GameEventBase.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/Events/GameEventBase.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unregisters a code listener so it will no longer be notified when this event is raised.</p>
@@ -296,7 +296,7 @@ Duplicate listeners are automatically prevented.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_Events_GameEventBase_2_UnregisterMonoListener__0_" data-uid="ElectricDrill.AstraRpgFramework.Events.GameEventBase`2.UnregisterMonoListener(`0)">
   UnregisterMonoListener(TListener)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/Events/GameEventBase.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/Events/GameEventBase.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unregisters a MonoBehaviour-based listener so it will no longer be notified when this event is raised.</p>

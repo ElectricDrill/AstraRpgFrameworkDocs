@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class CompositeGameAction&lt;TContext&gt; | Astra Framework ">
       
-      <meta name="description" content="Executes a list of actions in sequence. Useful for chaining multiple behaviors (e.g., play sound, wait, disable object). Will gracefully terminate if the context is destroyed or cancellation is requested.">
+      <meta name="description" content="Executes a list of actions. Two authoring models are supported: Steps () — each  chooses     how it composes with its neighbours (await it, run it alongside the following steps, or     fire it and forget it) and may carry a delay. This is the model new assets should use.   Legacy list () — a plain sequential list. Kept so assets     authored before steps existed keep deserializing and running unchanged.    Will gracefully terminate if the context is destroyed or cancellation is requested.">
       <link rel="icon" href="../images/astra-rpg-ico.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Cis8/AstraRpgFramework/new/main/apiSpec/new?filename=ElectricDrill_AstraRpgFramework_GameActions_Actions_CompositeGameAction_1.md&amp;value=---%0Auid%3A%20ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeGameAction%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Cis8/AstraRpgFramework/new/feat/ai-integration/apiSpec/new?filename=ElectricDrill_AstraRpgFramework_GameActions_Actions_CompositeGameAction_1.md&amp;value=---%0Auid%3A%20ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeGameAction%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgFramework_GameActions_Actions_CompositeGameAction_1" data-uid="ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeGameAction`1" class="text-break">
-Class CompositeGameAction&lt;TContext&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/GameActions/Actions/CompositeGameAction.cs/#L11"><i class="bi bi-code-slash"></i></a>
+Class CompositeGameAction&lt;TContext&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/GameActions/Actions/CompositeGameAction.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,9 +97,14 @@ Class CompositeGameAction&lt;TContext&gt;  <a class="header-action link-secondar
   <dl><dt>Assembly</dt><dd>com.electricdrill.astra-rpg-framework.Runtime.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Executes a list of actions in sequence.
-Useful for chaining multiple behaviors (e.g., play sound, wait, disable object).
-Will gracefully terminate if the context is destroyed or cancellation is requested.</p>
+  <div class="markdown summary"><p>Executes a list of actions. Two authoring models are supported:</p>
+<ul><li><b>Steps</b> (<span class="xref">ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeGameAction&lt;TContext&gt;._steps</span>) — each <a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep-1.html">CompositeStep&lt;TContext&gt;</a> chooses
+    how it composes with its neighbours (await it, run it alongside the following steps, or
+    fire it and forget it) and may carry a delay. This is the model new assets should use.
+  </li><li><b>Legacy list</b> (<span class="xref">ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeGameAction&lt;TContext&gt;._actions</span>) — a plain sequential list. Kept so assets
+    authored before steps existed keep deserializing and running unchanged.
+  </li></ul>
+Will gracefully terminate if the context is destroyed or cancellation is requested.
 </div>
   <div class="markdown conceptual"></div>
 
@@ -166,6 +171,12 @@ Will gracefully terminate if the context is destroyed or cancellation is request
 
 
 
+  <h2 id="ElectricDrill_AstraRpgFramework_GameActions_Actions_CompositeGameAction_1_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p><b>Precedence.</b> If <span class="xref">ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeGameAction&lt;TContext&gt;._actions</span> is non-empty the legacy path runs and
+<span class="xref">ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeGameAction&lt;TContext&gt;._steps</span> is ignored (with a one-shot warning if both are populated). The inspector
+prevents reaching that ambiguous state, so the warning is a safety net rather than a normal
+flow. Otherwise the step path runs.</p>
+</div>
 
 
   <h2 class="section" id="methods">Methods
@@ -176,7 +187,7 @@ Will gracefully terminate if the context is destroyed or cancellation is request
 
   <h3 id="ElectricDrill_AstraRpgFramework_GameActions_Actions_CompositeGameAction_1_ExecuteAsync__0_System_Threading_CancellationToken_" data-uid="ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeGameAction`1.ExecuteAsync(`0,System.Threading.CancellationToken)">
   ExecuteAsync(TContext, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/GameActions/Actions/CompositeGameAction.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/GameActions/Actions/CompositeGameAction.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Executes the action asynchronously with the provided context.
@@ -220,7 +231,7 @@ to automatically cancel when destroyed.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_GameActions_Actions_CompositeGameAction_1_ExecuteWithOwnerAsync__0_UnityEngine_MonoBehaviour_System_Threading_CancellationToken_" data-uid="ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeGameAction`1.ExecuteWithOwnerAsync(`0,UnityEngine.MonoBehaviour,System.Threading.CancellationToken)">
   ExecuteWithOwnerAsync(TContext, MonoBehaviour, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/GameActions/Actions/CompositeGameAction.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/GameActions/Actions/CompositeGameAction.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Owner-aware execution path. The <code class="paramref">runtimeOwner</code> identifies the

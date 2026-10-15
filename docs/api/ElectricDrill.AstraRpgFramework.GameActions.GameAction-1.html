@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Cis8/AstraRpgFramework/new/main/apiSpec/new?filename=ElectricDrill_AstraRpgFramework_GameActions_GameAction_1.md&amp;value=---%0Auid%3A%20ElectricDrill.AstraRpgFramework.GameActions.GameAction%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Cis8/AstraRpgFramework/new/feat/ai-integration/apiSpec/new?filename=ElectricDrill_AstraRpgFramework_GameActions_GameAction_1.md&amp;value=---%0Auid%3A%20ElectricDrill.AstraRpgFramework.GameActions.GameAction%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgFramework_GameActions_GameAction_1" data-uid="ElectricDrill.AstraRpgFramework.GameActions.GameAction`1" class="text-break">
-Class GameAction&lt;TContext&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/GameActions/GameAction.cs/#L14"><i class="bi bi-code-slash"></i></a>
+Class GameAction&lt;TContext&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/GameActions/GameAction.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -144,7 +144,9 @@ Uses Unity's Awaitable system for zero-allocation async execution.</p>
       <div><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.DestroyEntityGameObjectGameAction-1.html">DestroyEntityGameObjectGameAction&lt;TContext&gt;</a></div>
       <div><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.DestroyGameObjectGameAction-1.html">DestroyGameObjectGameAction&lt;TContext&gt;</a></div>
       <div><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.DoNothingGameAction-1.html">DoNothingGameAction&lt;TContext&gt;</a></div>
+      <div><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction-1.html">FireAndForgetGameAction&lt;TContext&gt;</a></div>
       <div><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.IncreaseCounterGameAction-1.html">IncreaseCounterGameAction&lt;TContext&gt;</a></div>
+      <div><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction-1.html">ParallelGameAction&lt;TContext&gt;</a></div>
       <div><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.ToggleActiveGameObjectGameAction-1.html">ToggleActiveGameObjectGameAction&lt;TContext&gt;</a></div>
       <div><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.ToggleCollidersGameAction-1.html">ToggleCollidersGameAction&lt;TContext&gt;</a></div>
       <div><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.ToggleEntityActiveGameObjectGameAction-1.html">ToggleEntityActiveGameObjectGameAction&lt;TContext&gt;</a></div>
@@ -171,7 +173,7 @@ Uses Unity's Awaitable system for zero-allocation async execution.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_GameActions_GameAction_1_DisplayName" data-uid="ElectricDrill.AstraRpgFramework.GameActions.GameAction`1.DisplayName">
   DisplayName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/GameActions/GameAction.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/GameActions/GameAction.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A human-readable name for this action, shown in editors and debugging.
@@ -204,7 +206,7 @@ Override to provide a descriptive name for your action.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_GameActions_GameAction_1_Tags" data-uid="ElectricDrill.AstraRpgFramework.GameActions.GameAction`1.Tags">
   Tags
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/GameActions/GameAction.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/GameActions/GameAction.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The tags associated with this object.</p>
@@ -240,7 +242,7 @@ Override to provide a descriptive name for your action.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_GameActions_GameAction_1_ExecuteAsync__0_System_Threading_CancellationToken_" data-uid="ElectricDrill.AstraRpgFramework.GameActions.GameAction`1.ExecuteAsync(`0,System.Threading.CancellationToken)">
   ExecuteAsync(TContext, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/GameActions/GameAction.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/GameActions/GameAction.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Executes the action asynchronously with the provided context.
@@ -284,7 +286,7 @@ to automatically cancel when destroyed.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_GameActions_GameAction_1_ExecuteAsyncForUnityEvent__0_" data-uid="ElectricDrill.AstraRpgFramework.GameActions.GameAction`1.ExecuteAsyncForUnityEvent(`0)">
   ExecuteAsyncForUnityEvent(TContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/GameActions/GameAction.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/GameActions/GameAction.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Wrapper to execute this action asynchronously for UnityEvent calls. Runs in fire-and-forget manner.
@@ -318,7 +320,7 @@ Exceptions are caught and logged to avoid unhandled exceptions in UnityEvent cal
 
   <h3 id="ElectricDrill_AstraRpgFramework_GameActions_GameAction_1_ExecuteWithOwnerAsync__0_UnityEngine_MonoBehaviour_System_Threading_CancellationToken_" data-uid="ElectricDrill.AstraRpgFramework.GameActions.GameAction`1.ExecuteWithOwnerAsync(`0,UnityEngine.MonoBehaviour,System.Threading.CancellationToken)">
   ExecuteWithOwnerAsync(TContext, MonoBehaviour, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/GameActions/GameAction.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/GameActions/GameAction.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Owner-aware execution path. The <code class="paramref">runtimeOwner</code> identifies the
@@ -371,7 +373,7 @@ Used by conditional actions to populate <code>EvaluationContext.Holder</code>.</
 
   <h3 id="ElectricDrill_AstraRpgFramework_GameActions_GameAction_1_OnOperationCanceled" data-uid="ElectricDrill.AstraRpgFramework.GameActions.GameAction`1.OnOperationCanceled">
   OnOperationCanceled()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/GameActions/GameAction.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/GameActions/GameAction.cs/#L87"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -397,7 +399,7 @@ Used by conditional actions to populate <code>EvaluationContext.Holder</code>.</
 
   <h3 id="ElectricDrill_AstraRpgFramework_GameActions_GameAction_1_RunFireAndForget__0_UnityEngine_MonoBehaviour_" data-uid="ElectricDrill.AstraRpgFramework.GameActions.GameAction`1.RunFireAndForget(`0,UnityEngine.MonoBehaviour)">
   RunFireAndForget(TContext, MonoBehaviour)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/GameActions/GameAction.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/GameActions/GameAction.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Executes this action fire-and-forget with automatic lifecycle management.

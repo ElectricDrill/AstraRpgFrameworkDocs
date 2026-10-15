@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Cis8/AstraRpgFramework/new/main/apiSpec/new?filename=ElectricDrill_AstraRpgFramework_EntityCore.md&amp;value=---%0Auid%3A%20ElectricDrill.AstraRpgFramework.EntityCore%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/Cis8/AstraRpgFramework/new/feat/ai-integration/apiSpec/new?filename=ElectricDrill_AstraRpgFramework_EntityCore.md&amp;value=---%0Auid%3A%20ElectricDrill.AstraRpgFramework.EntityCore%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ElectricDrill_AstraRpgFramework_EntityCore" data-uid="ElectricDrill.AstraRpgFramework.EntityCore" class="text-break">
-Class EntityCore  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L22"><i class="bi bi-code-slash"></i></a>
+Class EntityCore  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -160,7 +160,7 @@ public class EntityCore : MonoBehaviour, IEditorValidatable, IInvalidatable, ISt
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_Attributes" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.Attributes">
   Attributes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the <a class="xref" href="ElectricDrill.AstraRpgFramework.Attributes.EntityAttributes.html">EntityAttributes</a> component which manages the entity's attributes.</p>
@@ -192,7 +192,7 @@ public class EntityCore : MonoBehaviour, IEditorValidatable, IInvalidatable, ISt
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_Entity" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.Entity">
   Entity
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The primary <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html">EntityCore</a> associated with this object.
@@ -222,11 +222,44 @@ the primary affected subject (e.g. the event target).</p>
 
 
 
+  <a id="ElectricDrill_AstraRpgFramework_EntityCore_IsSpawned_" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.IsSpawned*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_IsSpawned" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.IsSpawned">
+  IsSpawned
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L408"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this entity is currently between a spawn and its matching despawn. Per-life state, so
+a system that recycles entities can tell a live one from a parked one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSpawned { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">bool</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="ElectricDrill_AstraRpgFramework_EntityCore_Level_" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.Level*"></a>
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_Level" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.Level">
   Level
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the <a class="xref" href="ElectricDrill.AstraRpgFramework.Experience.EntityLevel.html">EntityLevel</a> class which manages the entity's level and experience.</p>
@@ -258,7 +291,7 @@ the primary affected subject (e.g. the event target).</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_Name" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the name of the entity's GameObject.</p>
@@ -290,7 +323,7 @@ the primary affected subject (e.g. the event target).</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_Owner" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.Owner">
   Owner
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L137"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Experimental — this API may still change.
@@ -331,7 +364,7 @@ entities must reassign <a class="xref" href="ElectricDrill.AstraRpgFramework.Ent
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_OwnerResolution" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.OwnerResolution">
   OwnerResolution
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L210"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Experimental — this API may still change.
@@ -372,7 +405,7 @@ reach it.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_Root" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.Root">
   Root
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L162"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Experimental — this API may still change.
@@ -407,7 +440,7 @@ cycle forced through the serialized field cannot hang.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_SaveId" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.SaveId">
   SaveId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This entity's stable save identity, or <a class="xref" href="ElectricDrill.AstraRpgFramework.EntitySaveId.html#ElectricDrill_AstraRpgFramework_EntitySaveId_Empty">Empty</a> when none was
@@ -449,7 +482,7 @@ makes. See <code>Documentation~/SaveSystems.md</code>.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_Stats" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.Stats">
   Stats
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the <a class="xref" href="ElectricDrill.AstraRpgFramework.Stats.EntityStats.html">EntityStats</a> component which manages the entity's stats.</p>
@@ -481,7 +514,7 @@ makes. See <code>Documentation~/SaveSystems.md</code>.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_Tags" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.Tags">
   Tags
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The tags associated with this object.</p>
@@ -517,7 +550,7 @@ makes. See <code>Documentation~/SaveSystems.md</code>.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_Awake" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.Awake">
   Awake()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L310"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L328"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -543,7 +576,7 @@ makes. See <code>Documentation~/SaveSystems.md</code>.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_EnsureSaveId" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.EnsureSaveId">
   EnsureSaveId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns this entity's <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_SaveId">SaveId</a>, minting one first if it is empty. Idempotent:
@@ -577,7 +610,7 @@ an entity that already has an id keeps it.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_Invalidate" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.Invalidate">
   Invalidate()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L324"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Marks this object as invalid and raises <a class="xref" href="ElectricDrill.AstraRpgFramework.Contexts.IInvalidatable.html#ElectricDrill_AstraRpgFramework_Contexts_IInvalidatable_OnInvalidated">OnInvalidated</a>.</p>
@@ -604,7 +637,7 @@ an entity that already has an id keeps it.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_IsOwnedBy_ElectricDrill_AstraRpgFramework_EntityCore_" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.IsOwnedBy(ElectricDrill.AstraRpgFramework.EntityCore)">
   IsOwnedBy(EntityCore)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L183"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Experimental — this API may still change.
@@ -640,11 +673,89 @@ directly or transitively). Returns <code>false</code> for <code>null</code> or <
 
 
 
+  <a id="ElectricDrill_AstraRpgFramework_EntityCore_RaiseDespawned_" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.RaiseDespawned*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_RaiseDespawned" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.RaiseDespawned">
+  RaiseDespawned()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L448"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Announces that this entity is about to despawn: fires <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_OnBeforeDespawned">OnBeforeDespawned</a> while it
+is still spawned, then clears <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_IsSpawned">IsSpawned</a>. Idempotent — a call on an entity that
+was never spawned, or that already despawned, is a no-op.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RaiseDespawned()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="ElectricDrill_AstraRpgFramework_EntityCore_RaiseDespawned_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The counterpart to <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_RaiseSpawned">RaiseSpawned()</a>, and like it, called by whatever recycles the
+entity — nothing in the framework raises it. Deliberately not raised from <code>OnDestroy</code>:
+destruction is a different teardown, and the components that need one already have their own.</p>
+</div>
+
+
+
+
+  <a id="ElectricDrill_AstraRpgFramework_EntityCore_RaiseSpawned_" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.RaiseSpawned*"></a>
+
+  <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_RaiseSpawned" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.RaiseSpawned">
+  RaiseSpawned()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L429"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Announces that this entity has just spawned: fires <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_OnBeforeSpawned">OnBeforeSpawned</a> for sibling
+components, then raises the spawned event channel. Idempotent within a life — a second call
+before the matching <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_RaiseDespawned">RaiseDespawned()</a> is a no-op.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RaiseSpawned()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="ElectricDrill_AstraRpgFramework_EntityCore_RaiseSpawned_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Called from <code>Start</code>, which runs once per instance. An entity that is recycled rather than
+re-created — a pooled enemy — never gets a second <code>Start</code>, so whatever restores it for
+its new life has to call this itself. Without it, everything hanging off the spawn signal
+(innate modifiers, class modifiers) silently applies only to the entity's very first life.
+</p>
+<p>
+  <b>The contract subscribers rely on:</b>
+  <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_OnBeforeSpawned">OnBeforeSpawned</a> fires at most once per
+life, so a subscriber may assume it runs exactly once between a spawn and the matching
+despawn. The latch here is the only thing that guarantees it — handlers that apply per-life
+state (innate modifiers, most obviously) carry no idempotence guard of their own.
+</p>
+</div>
+
+
+
+
   <a id="ElectricDrill_AstraRpgFramework_EntityCore_RegenerateSaveId_" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.RegenerateSaveId*"></a>
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_RegenerateSaveId" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.RegenerateSaveId">
   RegenerateSaveId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Replaces this entity's <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_SaveId">SaveId</a> with a freshly minted one, unconditionally.
@@ -680,7 +791,7 @@ referenced it.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_SetSaveId_ElectricDrill_AstraRpgFramework_EntitySaveId_" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.SetSaveId(ElectricDrill.AstraRpgFramework.EntitySaveId)">
   SetSaveId(EntitySaveId)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Re-applies a previously saved <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_SaveId">SaveId</a>, e.g. while restoring an entity from
@@ -716,7 +827,7 @@ framework's, and refusing a write here would only leave a restore half-applied.<
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_Start" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.Start">
   Start()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L341"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -742,7 +853,7 @@ framework's, and refusing a write here would only leave a restore half-applied.<
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_Subscribe__1___0_" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.Subscribe``1(``0)">
   Subscribe&lt;TEvent&gt;(TEvent)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L255"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Registers <code class="paramref">gameEvent</code> on the channel matching <code class="typeparamref">TEvent</code>.</p>
@@ -785,7 +896,7 @@ framework's, and refusing a write here would only leave a restore half-applied.<
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_Unsubscribe__1___0_" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.Unsubscribe``1(``0)">
   Unsubscribe&lt;TEvent&gt;(TEvent)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L266"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes <code class="paramref">gameEvent</code> from the channel matching <code class="typeparamref">TEvent</code>.</p>
@@ -828,7 +939,7 @@ framework's, and refusing a write here would only leave a restore half-applied.<
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_Update" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.Update">
   Update()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L356"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L455"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -855,9 +966,48 @@ framework's, and refusing a write here would only leave a restore half-applied.<
 
 
 
+  <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_OnBeforeDespawned" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.OnBeforeDespawned">
+  OnBeforeDespawned
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L317"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Raised while the entity is still spawned, before <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_IsSpawned">IsSpawned</a> is cleared, so
+sibling components can roll back state that touches them — their own siblings are still
+active at that point, which is what makes a stat or attribute rollback safe. The symmetric
+counterpart to <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_OnBeforeSpawned">OnBeforeSpawned</a>, and the hook a component that has to survive
+pooling implements instead of pushing its cleanup onto the game's pooling glue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action OnBeforeDespawned</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Action</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="ElectricDrill_AstraRpgFramework_EntityCore_OnBeforeDespawned_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Not raised on destruction. A component that also needs destroy-time cleanup keeps its own
+<code>OnDestroy</code>, which runs against a half-torn-down entity and so cannot do the same work.</p>
+</div>
+
+
+
+
+
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_OnBeforeSpawned" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.OnBeforeSpawned">
   OnBeforeSpawned
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L304"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Raised after all EntityCore initialization is complete (level, stats, attributes) but
@@ -891,7 +1041,7 @@ in their <code>Awake()</code> instead of relying on script execution order.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_OnInvalidated" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.OnInvalidated">
   OnInvalidated
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L321"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Raised when this object is invalidated.</p>
@@ -922,7 +1072,7 @@ in their <code>Awake()</code> instead of relying on script execution order.</p>
 
   <h3 id="ElectricDrill_AstraRpgFramework_EntityCore_OnOwnerChanged" data-uid="ElectricDrill.AstraRpgFramework.EntityCore.OnOwnerChanged">
   OnOwnerChanged
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/main/Runtime/EntityCore.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cis8/AstraRpgFramework/blob/feat/ai-integration/Runtime/EntityCore.cs/#L216"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Experimental — this API may still change. Raised when <a class="xref" href="ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_Owner">Owner</a> changes, with the previous and current owner.</p>

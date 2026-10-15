@@ -4058,6 +4058,19 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgFramework.EntityCore.IsOwnedBy
   nameWithType: EntityCore.IsOwnedBy
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.IsSpawned
+  name: IsSpawned
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_IsSpawned
+  commentId: P:ElectricDrill.AstraRpgFramework.EntityCore.IsSpawned
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.IsSpawned
+  nameWithType: EntityCore.IsSpawned
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.IsSpawned*
+  name: IsSpawned
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_IsSpawned_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntityCore.IsSpawned
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.IsSpawned
+  nameWithType: EntityCore.IsSpawned
 - uid: ElectricDrill.AstraRpgFramework.EntityCore.Level
   name: Level
   href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_Level
@@ -4084,6 +4097,12 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgFramework.EntityCore.Name
   nameWithType: EntityCore.Name
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.OnBeforeDespawned
+  name: OnBeforeDespawned
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_OnBeforeDespawned
+  commentId: E:ElectricDrill.AstraRpgFramework.EntityCore.OnBeforeDespawned
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.OnBeforeDespawned
+  nameWithType: EntityCore.OnBeforeDespawned
 - uid: ElectricDrill.AstraRpgFramework.EntityCore.OnBeforeSpawned
   name: OnBeforeSpawned
   href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_OnBeforeSpawned
@@ -4128,6 +4147,32 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgFramework.EntityCore.OwnerResolution
   nameWithType: EntityCore.OwnerResolution
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.RaiseDespawned
+  name: RaiseDespawned()
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_RaiseDespawned
+  commentId: M:ElectricDrill.AstraRpgFramework.EntityCore.RaiseDespawned
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.RaiseDespawned()
+  nameWithType: EntityCore.RaiseDespawned()
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.RaiseDespawned*
+  name: RaiseDespawned
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_RaiseDespawned_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntityCore.RaiseDespawned
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.RaiseDespawned
+  nameWithType: EntityCore.RaiseDespawned
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.RaiseSpawned
+  name: RaiseSpawned()
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_RaiseSpawned
+  commentId: M:ElectricDrill.AstraRpgFramework.EntityCore.RaiseSpawned
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.RaiseSpawned()
+  nameWithType: EntityCore.RaiseSpawned()
+- uid: ElectricDrill.AstraRpgFramework.EntityCore.RaiseSpawned*
+  name: RaiseSpawned
+  href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_RaiseSpawned_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.EntityCore.RaiseSpawned
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.EntityCore.RaiseSpawned
+  nameWithType: EntityCore.RaiseSpawned
 - uid: ElectricDrill.AstraRpgFramework.EntityCore.RegenerateSaveId
   name: RegenerateSaveId()
   href: api/ElectricDrill.AstraRpgFramework.EntityCore.html#ElectricDrill_AstraRpgFramework_EntityCore_RegenerateSaveId
@@ -6303,12 +6348,24 @@ references:
   commentId: T:ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.DoNothingComponentGameAction
   fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.DoNothingComponentGameAction
   nameWithType: DoNothingComponentGameAction
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.FireAndForgetComponentGameAction
+  name: FireAndForgetComponentGameAction
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.FireAndForgetComponentGameAction.html
+  commentId: T:ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.FireAndForgetComponentGameAction
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.FireAndForgetComponentGameAction
+  nameWithType: FireAndForgetComponentGameAction
 - uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.IncreaseCounterComponentGameAction
   name: IncreaseCounterComponentGameAction
   href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.IncreaseCounterComponentGameAction.html
   commentId: T:ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.IncreaseCounterComponentGameAction
   fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.IncreaseCounterComponentGameAction
   nameWithType: IncreaseCounterComponentGameAction
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.ParallelComponentGameAction
+  name: ParallelComponentGameAction
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.ParallelComponentGameAction.html
+  commentId: T:ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.ParallelComponentGameAction
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.ParallelComponentGameAction
+  nameWithType: ParallelComponentGameAction
 - uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.ToggleActiveGameObjectComponentGameAction
   name: ToggleActiveGameObjectComponentGameAction
   href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.Component.ToggleActiveGameObjectComponentGameAction.html
@@ -6376,6 +6433,107 @@ references:
   fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeGameAction(Of TContext).ExecuteWithOwnerAsync
   nameWithType: CompositeGameAction<TContext>.ExecuteWithOwnerAsync
   nameWithType.vb: CompositeGameAction(Of TContext).ExecuteWithOwnerAsync
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode
+  name: CompositeStepMode
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode.html
+  commentId: T:ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode
+  nameWithType: CompositeStepMode
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode.Await
+  name: Await
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_CompositeStepMode_Await
+  commentId: F:ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode.Await
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode.Await
+  nameWithType: CompositeStepMode.Await
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode.FireAndForget
+  name: FireAndForget
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_CompositeStepMode_FireAndForget
+  commentId: F:ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode.FireAndForget
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode.FireAndForget
+  nameWithType: CompositeStepMode.FireAndForget
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode.InParallelWithNext
+  name: InParallelWithNext
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_CompositeStepMode_InParallelWithNext
+  commentId: F:ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode.InParallelWithNext
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode.InParallelWithNext
+  nameWithType: CompositeStepMode.InParallelWithNext
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1
+  name: CompositeStep<TContext>
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep-1.html
+  commentId: T:ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1
+  name.vb: CompositeStep(Of TContext)
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep<TContext>
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep(Of TContext)
+  nameWithType: CompositeStep<TContext>
+  nameWithType.vb: CompositeStep(Of TContext)
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1.Action
+  name: Action
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep-1.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_CompositeStep_1_Action
+  commentId: P:ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1.Action
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep<TContext>.Action
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep(Of TContext).Action
+  nameWithType: CompositeStep<TContext>.Action
+  nameWithType.vb: CompositeStep(Of TContext).Action
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1.Action*
+  name: Action
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep-1.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_CompositeStep_1_Action_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1.Action
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep<TContext>.Action
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep(Of TContext).Action
+  nameWithType: CompositeStep<TContext>.Action
+  nameWithType.vb: CompositeStep(Of TContext).Action
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1.DelayBefore
+  name: DelayBefore
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep-1.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_CompositeStep_1_DelayBefore
+  commentId: P:ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1.DelayBefore
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep<TContext>.DelayBefore
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep(Of TContext).DelayBefore
+  nameWithType: CompositeStep<TContext>.DelayBefore
+  nameWithType.vb: CompositeStep(Of TContext).DelayBefore
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1.DelayBefore*
+  name: DelayBefore
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep-1.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_CompositeStep_1_DelayBefore_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1.DelayBefore
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep<TContext>.DelayBefore
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep(Of TContext).DelayBefore
+  nameWithType: CompositeStep<TContext>.DelayBefore
+  nameWithType.vb: CompositeStep(Of TContext).DelayBefore
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1.Mode
+  name: Mode
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep-1.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_CompositeStep_1_Mode
+  commentId: P:ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1.Mode
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep<TContext>.Mode
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep(Of TContext).Mode
+  nameWithType: CompositeStep<TContext>.Mode
+  nameWithType.vb: CompositeStep(Of TContext).Mode
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1.Mode*
+  name: Mode
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep-1.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_CompositeStep_1_Mode_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1.Mode
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep<TContext>.Mode
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep(Of TContext).Mode
+  nameWithType: CompositeStep<TContext>.Mode
+  nameWithType.vb: CompositeStep(Of TContext).Mode
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1.UnscaledDelay
+  name: UnscaledDelay
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep-1.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_CompositeStep_1_UnscaledDelay
+  commentId: P:ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1.UnscaledDelay
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep<TContext>.UnscaledDelay
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep(Of TContext).UnscaledDelay
+  nameWithType: CompositeStep<TContext>.UnscaledDelay
+  nameWithType.vb: CompositeStep(Of TContext).UnscaledDelay
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1.UnscaledDelay*
+  name: UnscaledDelay
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep-1.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_CompositeStep_1_UnscaledDelay_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep`1.UnscaledDelay
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep<TContext>.UnscaledDelay
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep(Of TContext).UnscaledDelay
+  nameWithType: CompositeStep<TContext>.UnscaledDelay
+  nameWithType.vb: CompositeStep(Of TContext).UnscaledDelay
 - uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.ConditionalGameAction`1
   name: ConditionalGameAction<TContext>
   href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.ConditionalGameAction-1.html
@@ -6557,6 +6715,49 @@ references:
   fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.DoNothingGameAction(Of TContext).ExecuteAsync
   nameWithType: DoNothingGameAction<TContext>.ExecuteAsync
   nameWithType.vb: DoNothingGameAction(Of TContext).ExecuteAsync
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction`1
+  name: FireAndForgetGameAction<TContext>
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction-1.html
+  commentId: T:ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction`1
+  name.vb: FireAndForgetGameAction(Of TContext)
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction<TContext>
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction(Of TContext)
+  nameWithType: FireAndForgetGameAction<TContext>
+  nameWithType.vb: FireAndForgetGameAction(Of TContext)
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction`1.ExecuteAsync(`0,System.Threading.CancellationToken)
+  name: ExecuteAsync(TContext, CancellationToken)
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction-1.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_FireAndForgetGameAction_1_ExecuteAsync__0_System_Threading_CancellationToken_
+  commentId: M:ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction`1.ExecuteAsync(`0,System.Threading.CancellationToken)
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction<TContext>.ExecuteAsync(TContext, System.Threading.CancellationToken)
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction(Of TContext).ExecuteAsync(TContext, System.Threading.CancellationToken)
+  nameWithType: FireAndForgetGameAction<TContext>.ExecuteAsync(TContext, CancellationToken)
+  nameWithType.vb: FireAndForgetGameAction(Of TContext).ExecuteAsync(TContext, CancellationToken)
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction`1.ExecuteAsync*
+  name: ExecuteAsync
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction-1.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_FireAndForgetGameAction_1_ExecuteAsync_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction`1.ExecuteAsync
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction<TContext>.ExecuteAsync
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction(Of TContext).ExecuteAsync
+  nameWithType: FireAndForgetGameAction<TContext>.ExecuteAsync
+  nameWithType.vb: FireAndForgetGameAction(Of TContext).ExecuteAsync
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction`1.ExecuteWithOwnerAsync(`0,UnityEngine.MonoBehaviour,System.Threading.CancellationToken)
+  name: ExecuteWithOwnerAsync(TContext, MonoBehaviour, CancellationToken)
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction-1.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_FireAndForgetGameAction_1_ExecuteWithOwnerAsync__0_UnityEngine_MonoBehaviour_System_Threading_CancellationToken_
+  commentId: M:ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction`1.ExecuteWithOwnerAsync(`0,UnityEngine.MonoBehaviour,System.Threading.CancellationToken)
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction<TContext>.ExecuteWithOwnerAsync(TContext, UnityEngine.MonoBehaviour, System.Threading.CancellationToken)
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction(Of TContext).ExecuteWithOwnerAsync(TContext, UnityEngine.MonoBehaviour, System.Threading.CancellationToken)
+  nameWithType: FireAndForgetGameAction<TContext>.ExecuteWithOwnerAsync(TContext, MonoBehaviour, CancellationToken)
+  nameWithType.vb: FireAndForgetGameAction(Of TContext).ExecuteWithOwnerAsync(TContext, MonoBehaviour, CancellationToken)
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction`1.ExecuteWithOwnerAsync*
+  name: ExecuteWithOwnerAsync
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction-1.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_FireAndForgetGameAction_1_ExecuteWithOwnerAsync_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction`1.ExecuteWithOwnerAsync
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction<TContext>.ExecuteWithOwnerAsync
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction(Of TContext).ExecuteWithOwnerAsync
+  nameWithType: FireAndForgetGameAction<TContext>.ExecuteWithOwnerAsync
+  nameWithType.vb: FireAndForgetGameAction(Of TContext).ExecuteWithOwnerAsync
 - uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.IncreaseCounterComponentGameAction
   name: IncreaseCounterComponentGameAction
   href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.IncreaseCounterComponentGameAction.html
@@ -6623,6 +6824,67 @@ references:
   fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.IncreaseCounterGameAction(Of TContext).IncreaseBy
   nameWithType: IncreaseCounterGameAction<TContext>.IncreaseBy
   nameWithType.vb: IncreaseCounterGameAction(Of TContext).IncreaseBy
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction`1
+  name: ParallelGameAction<TContext>
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction-1.html
+  commentId: T:ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction`1
+  name.vb: ParallelGameAction(Of TContext)
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction<TContext>
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction(Of TContext)
+  nameWithType: ParallelGameAction<TContext>
+  nameWithType.vb: ParallelGameAction(Of TContext)
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction`1.ExecuteAsync(`0,System.Threading.CancellationToken)
+  name: ExecuteAsync(TContext, CancellationToken)
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction-1.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_ParallelGameAction_1_ExecuteAsync__0_System_Threading_CancellationToken_
+  commentId: M:ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction`1.ExecuteAsync(`0,System.Threading.CancellationToken)
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction<TContext>.ExecuteAsync(TContext, System.Threading.CancellationToken)
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction(Of TContext).ExecuteAsync(TContext, System.Threading.CancellationToken)
+  nameWithType: ParallelGameAction<TContext>.ExecuteAsync(TContext, CancellationToken)
+  nameWithType.vb: ParallelGameAction(Of TContext).ExecuteAsync(TContext, CancellationToken)
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction`1.ExecuteAsync*
+  name: ExecuteAsync
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction-1.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_ParallelGameAction_1_ExecuteAsync_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction`1.ExecuteAsync
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction<TContext>.ExecuteAsync
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction(Of TContext).ExecuteAsync
+  nameWithType: ParallelGameAction<TContext>.ExecuteAsync
+  nameWithType.vb: ParallelGameAction(Of TContext).ExecuteAsync
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction`1.ExecuteWithOwnerAsync(`0,UnityEngine.MonoBehaviour,System.Threading.CancellationToken)
+  name: ExecuteWithOwnerAsync(TContext, MonoBehaviour, CancellationToken)
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction-1.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_ParallelGameAction_1_ExecuteWithOwnerAsync__0_UnityEngine_MonoBehaviour_System_Threading_CancellationToken_
+  commentId: M:ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction`1.ExecuteWithOwnerAsync(`0,UnityEngine.MonoBehaviour,System.Threading.CancellationToken)
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction<TContext>.ExecuteWithOwnerAsync(TContext, UnityEngine.MonoBehaviour, System.Threading.CancellationToken)
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction(Of TContext).ExecuteWithOwnerAsync(TContext, UnityEngine.MonoBehaviour, System.Threading.CancellationToken)
+  nameWithType: ParallelGameAction<TContext>.ExecuteWithOwnerAsync(TContext, MonoBehaviour, CancellationToken)
+  nameWithType.vb: ParallelGameAction(Of TContext).ExecuteWithOwnerAsync(TContext, MonoBehaviour, CancellationToken)
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction`1.ExecuteWithOwnerAsync*
+  name: ExecuteWithOwnerAsync
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction-1.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_ParallelGameAction_1_ExecuteWithOwnerAsync_
+  commentId: Overload:ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction`1.ExecuteWithOwnerAsync
+  isSpec: "True"
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction<TContext>.ExecuteWithOwnerAsync
+  fullName.vb: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction(Of TContext).ExecuteWithOwnerAsync
+  nameWithType: ParallelGameAction<TContext>.ExecuteWithOwnerAsync
+  nameWithType.vb: ParallelGameAction(Of TContext).ExecuteWithOwnerAsync
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelPolicy
+  name: ParallelPolicy
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelPolicy.html
+  commentId: T:ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelPolicy
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelPolicy
+  nameWithType: ParallelPolicy
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelPolicy.WaitAll
+  name: WaitAll
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelPolicy.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_ParallelPolicy_WaitAll
+  commentId: F:ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelPolicy.WaitAll
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelPolicy.WaitAll
+  nameWithType: ParallelPolicy.WaitAll
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelPolicy.WaitAny
+  name: WaitAny
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelPolicy.html#ElectricDrill_AstraRpgFramework_GameActions_Actions_ParallelPolicy_WaitAny
+  commentId: F:ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelPolicy.WaitAny
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelPolicy.WaitAny
+  nameWithType: ParallelPolicy.WaitAny
 - uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.SO.Component
   name: ElectricDrill.AstraRpgFramework.GameActions.Actions.SO.Component
   href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.SO.Component.html
@@ -7025,12 +7287,24 @@ references:
   isSpec: "True"
   fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.EntityContextToComponentProjectionGameAction.ExecuteWithOwnerAsync
   nameWithType: EntityContextToComponentProjectionGameAction.ExecuteWithOwnerAsync
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.FireAndForgetEntityContextGameAction
+  name: FireAndForgetEntityContextGameAction
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.FireAndForgetEntityContextGameAction.html
+  commentId: T:ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.FireAndForgetEntityContextGameAction
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.FireAndForgetEntityContextGameAction
+  nameWithType: FireAndForgetEntityContextGameAction
 - uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.IncreaseCounterEntityContextGameAction
   name: IncreaseCounterEntityContextGameAction
   href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.IncreaseCounterEntityContextGameAction.html
   commentId: T:ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.IncreaseCounterEntityContextGameAction
   fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.IncreaseCounterEntityContextGameAction
   nameWithType: IncreaseCounterEntityContextGameAction
+- uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.ParallelEntityContextGameAction
+  name: ParallelEntityContextGameAction
+  href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.ParallelEntityContextGameAction.html
+  commentId: T:ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.ParallelEntityContextGameAction
+  fullName: ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.ParallelEntityContextGameAction
+  nameWithType: ParallelEntityContextGameAction
 - uid: ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.ToggleEntityActiveGameObjectIHasEntityGameAction
   name: ToggleEntityActiveGameObjectIHasEntityGameAction
   href: api/ElectricDrill.AstraRpgFramework.GameActions.Actions.WithIHasEntity.ToggleEntityActiveGameObjectIHasEntityGameAction.html

@@ -1,4 +1,4 @@
-# Copilot Instructions — Astra Framework Docs
+# Astra Framework Docs
 
 ## Bootstrap (read first)
 

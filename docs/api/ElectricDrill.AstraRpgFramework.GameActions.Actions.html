@@ -96,9 +96,14 @@ Classes
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeGameAction-1.html">CompositeGameAction&lt;TContext&gt;</a></dt>
-      <dd><p>Executes a list of actions in sequence.
-Useful for chaining multiple behaviors (e.g., play sound, wait, disable object).
-Will gracefully terminate if the context is destroyed or cancellation is requested.</p>
+      <dd><p>Executes a list of actions. Two authoring models are supported:</p>
+<ul><li><b>Steps</b> (<span class="xref">ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeGameAction&lt;TContext&gt;._steps</span>) — each <a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep-1.html">CompositeStep&lt;TContext&gt;</a> chooses
+    how it composes with its neighbours (await it, run it alongside the following steps, or
+    fire it and forget it) and may carry a delay. This is the model new assets should use.
+  </li><li><b>Legacy list</b> (<span class="xref">ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeGameAction&lt;TContext&gt;._actions</span>) — a plain sequential list. Kept so assets
+    authored before steps existed keep deserializing and running unchanged.
+  </li></ul>
+Will gracefully terminate if the context is destroyed or cancellation is requested.
 </dd>
     </dl>
     <dl class="jumplist">
@@ -129,8 +134,19 @@ A null condition is treated as always-true.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.FireAndForgetGameAction-1.html">FireAndForgetGameAction&lt;TContext&gt;</a></dt>
+      <dd><p>Starts one action detached and returns immediately: the wrapped action runs on the owner's
+<a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.GameActionRunner.html">GameActionRunner</a> and is never awaited, so the parent continues in the same frame.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.IncreaseCounterGameAction-1.html">IncreaseCounterGameAction&lt;TContext&gt;</a></dt>
       <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction-1.html">ParallelGameAction&lt;TContext&gt;</a></dt>
+      <dd><p>Starts a set of actions together and waits on them according to a <a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelPolicy.html">ParallelPolicy</a>.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.ToggleActiveGameObjectGameAction-1.html">ToggleActiveGameObjectGameAction&lt;TContext&gt;</a></dt>
@@ -169,6 +185,30 @@ the experience source can be collected.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.ToggleRenderersGameAction-1.html">ToggleRenderersGameAction&lt;TContext&gt;</a></dt>
       <dd><p>Base action to enable/disable all Renderers on a Component's GameObject.</p>
+</dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep-1.html">CompositeStep&lt;TContext&gt;</a></dt>
+      <dd><p>One entry in a <a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeGameAction-1.html">CompositeGameAction&lt;TContext&gt;</a> step list: the action to run, how
+it composes with its neighbours (<a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode.html">CompositeStepMode</a>), and an optional delay that
+runs before the step starts.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStepMode.html">CompositeStepMode</a></dt>
+      <dd><p>Describes how a single <a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeStep-1.html">CompositeStep&lt;TContext&gt;</a> relates to the steps around it
+while a <a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.CompositeGameAction-1.html">CompositeGameAction&lt;TContext&gt;</a> walks its step list.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelPolicy.html">ParallelPolicy</a></dt>
+      <dd><p>How a <a class="xref" href="ElectricDrill.AstraRpgFramework.GameActions.Actions.ParallelGameAction-1.html">ParallelGameAction&lt;TContext&gt;</a> waits on the children it starts together.</p>
 </dd>
     </dl>
 
