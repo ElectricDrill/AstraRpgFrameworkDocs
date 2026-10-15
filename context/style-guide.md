@@ -2,7 +2,7 @@
 
 > All documentation is written in **English**. Conversations with the user happen in **Italian**.
 > Follow this guide when writing or editing anything under `DocFx/`.
-> When in doubt, use `DocFx/MD/introduction.md` and `DocFx/MD/workflows.md` as the canonical style references for this repository.
+> When in doubt, use `DocFx/MD/introduction.md` and `DocFx/MD/workflows/workflows.md` as the canonical style references for this repository.
 
 ---
 

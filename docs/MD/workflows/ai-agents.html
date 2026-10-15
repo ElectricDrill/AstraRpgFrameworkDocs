@@ -90,11 +90,12 @@
 <p><em>🏷️ Version 2.3.0+</em></p>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>AI features are currently experimental and may change at any time.</p>
-<p>This is due to the fact that the Unity pipeline package dependency is experimental itself. Therefore, Astra'a AI feature are experimental so that they will change along with the underlying Unity package.</p>
+<p>Astra's AI integration is experimental because it depends on the experimental Unity Pipeline package. Its commands and requirements may change as that package evolves.</p>
 </div>
-<p>Astra Framework can expose its editor authoring workflows to an AI agent through the <a href="https://docs.unity.com/en-us/unity-production-pipeline/local-tools-cli/unity-pipeline-package">Unity Pipeline package</a>. The integration adds twenty <code>astra_*</code> commands to the <a href="https://docs.unity.com/en-us/unity-cli">Unity CLI</a>, its local HTTP server, and its MCP server. They create and configure Astra assets, wire entity components, inspect authored content, and run the same validation rules that protect the Inspector workflows.</p>
-<p>This is useful when an agent needs to work with the actual project state rather than only generate C# or suggest Inspector changes. The commands are editor-only and optional: projects that do not install Unity Pipeline keep the normal Astra Inspector workflows unchanged.</p>
+<p>Astra Framework allows AI agents to create and configure Astra assets directly in the Unity Editor. For example, an agent can create a class, configure its growth formulas, or inspect an entity's setup. Changes go through the same validation rules used by Astra's Inspector tools.</p>
+<p>The integration uses the <a href="https://docs.unity.com/en-us/unity-production-pipeline/local-tools-cli/unity-pipeline-package">Unity Pipeline package</a>, which makes twenty <code>astra_*</code> commands available through the <a href="https://docs.unity.com/en-us/unity-cli">Unity CLI</a>. The recommended workflow is to install the Astra agent skill and let the agent run these commands directly from the project directory. The skill provides Astra-specific instructions, while the CLI lets the agent inspect and change the project.</p>
+<p>Unity also <a href="https://docs.unity.com/en-us/unity-cli/replace-mcp-server-unity-cli#direct-commands-for-the-editor">recommends direct CLI commands for agents that can run shell commands</a>. MCP access remains available as an <a href="#connecting-an-mcp-client">optional alternative</a>, for example when an agent cannot run shell commands.</p>
+<p>The integration is optional and runs in the Editor. The usual Inspector workflows remain available with or without it.</p>
 <h2 id="requirements">Requirements</h2>
 <p>The integration requires:</p>
 <ul>
@@ -103,64 +104,61 @@
 <li><code>com.unity.pipeline</code> version <code>0.7.0-exp.1</code> through (but excluding) <code>0.8.0</code></li>
 <li>A running Unity Editor instance for commands that inspect or change project content</li>
 </ul>
-<p>Install Pipeline once for the project, then check that the Editor is ready:</p>
+<p>From the Unity project root, install Pipeline once for the project, then check that the Editor is ready:</p>
 <pre><code class="lang-bash">unity pipeline install
 unity status
 unity command --query astra_ --detail compact
 </code></pre>
-<p>The last command should list twenty <code>astra_*</code> commands. Astra compiles its Pipeline adapter only when Pipeline is in its tested version range. If the commands are missing after installing or updating a package, let Unity finish recompiling and inspect <code>unity command console --level warn</code>. Astra reports an out-of-range Pipeline version there, including the supported range.</p>
-<div class="WARNING">
-<h5>Warning</h5>
-<p><code>ASTRA_PIPELINE_FORCE</code> can force the adapter to compile with a Pipeline version outside the tested range. Use it only after validating the integration in the project, because Unity Pipeline is an experimental dependency and its command APIs can change between versions.</p>
-</div>
-<h2 id="connecting-an-mcp-client">Connecting an MCP client</h2>
-<p>The CLI commands are also published as MCP tools with the same names and arguments. Here, a <em>client</em> is an AI-enabled desktop application, IDE, editor extension, or command-line agent that can launch and use an MCP server. <code>unity mcp configure</code> writes the Unity MCP entry to the configuration file that the selected client reads.</p>
-<p>Use a supported client identifier in place of <code>&lt;client&gt;</code>:</p>
-<pre><code class="lang-bash">unity mcp configure &lt;client&gt;
-</code></pre>
-<p>The Unity CLI currently supports these client identifiers:</p>
-<table>
-<thead>
-<tr>
-<th>Client type</th>
-<th>Identifiers</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Anthropic clients</td>
-<td><code>claude</code> (Claude Desktop), <code>claude-code</code></td>
-</tr>
-<tr>
-<td>Code editors and IDEs</td>
-<td><code>cursor</code>, <code>vscode</code>, <code>vscode-insiders</code>, <code>windsurf</code>, <code>cline</code>, <code>kiro</code>, <code>zed</code>, <code>continue</code></td>
-</tr>
-<tr>
-<td>Command-line agents</td>
-<td><code>copilot-cli</code>, <code>codex</code>, <code>kimi</code></td>
-</tr>
-<tr>
-<td>Other clients and utilities</td>
-<td><code>trae</code>, <code>openclaw</code>, <code>antigravity</code>, <code>inspect</code></td>
-</tr>
-</tbody>
-</table>
-<p>For example, configure Claude Code with <code>unity mcp configure claude-code</code>. Use <code>unity mcp configure cursor --local</code> or <code>unity mcp configure vscode --local</code> to create project-local configuration where the selected client supports it.</p>
-<p>The supported client set and configuration paths can change as the experimental Unity CLI evolves. Run the following command to list the exact identifiers and destinations supported by the installed CLI:</p>
-<pre><code class="lang-bash">unity mcp configure --list
-</code></pre>
-<p>See the <a href="https://docs.unity.com/en-us/unity-cli/unity-cli-reference">Unity CLI reference</a> for all options, and the <a href="https://docs.unity.com/en-us/unity-cli/release-notes">Unity CLI release notes</a> for changes to supported clients. The configured client can then call <code>astra_find</code>, <code>astra_create</code>, and the other Astra tools alongside Unity's standard Pipeline tools.</p>
-<p>Use Unity Pipeline tools for generic project operations such as creating a GameObject or a Game Action asset. Use the Astra tools to author Astra-specific data and relationships. For example, Pipeline's <code>create_asset</code> creates a concrete Game Action asset, while <code>astra_condition_edit</code> safely builds the condition tree stored in it.</p>
+<p>The last command should list twenty <code>astra_*</code> commands. If they are missing, see <a href="#troubleshooting">Troubleshooting</a>.</p>
 <h2 id="installing-the-astra-agent-skill">Installing the Astra agent skill</h2>
-<p>The package ships an agent skill in <code>Documentation~/agent/</code>. It describes Astra concepts, logical field names, command arguments, worked workflows, and recovery steps.</p>
+<p>The agent skill teaches an agent how to work with Astra: which concepts and commands to use, how to configure assets, and how to resolve setup issues. The package includes these instructions in <code>Documentation~/agent/</code>.</p>
+<p>The same skill supports Claude Code, Codex, and OpenCode. Its <code>SKILL.md</code> includes the <code>name</code> and <code>description</code> metadata those clients require. Choose the installation below for the client in use. All relative paths start at the Unity project root (the folder containing <code>Assets</code>).</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For the recommended workflow, the agent needs to be able to run Unity CLI commands from the project directory. Install the skill below, then ask the agent to use it with the CLI. MCP configuration is optional.</p>
+</div>
+<h3 id="claude-code">Claude Code</h3>
 <p>For Claude Code, install a project-scoped copy at <code>.claude/skills/astra-framework/</code> from the Unity menu:</p>
 <p><code>Tools &gt; Astra Framework &gt; AI &gt; Install Agent Skill…</code></p>
-<p>You can also ask an agent to install it through the command surface:</p>
+<p>Alternatively, preview the installation and then apply it through the CLI:</p>
 <pre><code class="lang-bash">unity command astra_recipe --name install_skill --dry_run true
 unity command astra_recipe --name install_skill
 </code></pre>
-<p>The installer is idempotent. It leaves matching files in place and requires <code>--confirm true</code> before replacing a locally modified file. Run it again after updating Astra to refresh the installed skill.</p>
-<p>Claude Code is the automated installation target for the Astra skill in this version. This does not limit MCP connectivity: any client in the previous table can call the <code>astra_*</code> tools after it is configured. Other clients can consume the same Markdown files directly from <code>Packages/com.electricdrill.astra-rpg-framework/Documentation~/agent/</code> when their own configuration supports project instructions.</p>
+<h3 id="codex">Codex</h3>
+<p><a href="https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills">Codex discovers project skills</a> in <code>.agents/skills/</code>. Install the Astra skill at <code>.agents/skills/astra-framework/</code> by setting the recipe destination:</p>
+<pre><code class="lang-bash">unity command astra_recipe --name install_skill --input '{&quot;destination&quot;:&quot;.agents/skills/astra-framework&quot;}' --dry_run true
+unity command astra_recipe --name install_skill --input '{&quot;destination&quot;:&quot;.agents/skills/astra-framework&quot;}'
+</code></pre>
+<p>Open Codex in the Unity project repository. Codex detects skill changes automatically; restart it if the skill does not appear. Ask Codex to use the <code>astra-framework</code> skill for Astra authoring tasks.</p>
+<h3 id="opencode">OpenCode</h3>
+<p><a href="https://docs.opencode.ai/docs/skills/">OpenCode discovers project skills</a> in <code>.opencode/skills/</code>, and also supports <code>.claude/skills/</code> and <code>.agents/skills/</code>. If the skill is already installed for Claude Code or Codex, OpenCode can use that copy. Keep a single copy in a supported location to avoid duplicate skill names.</p>
+<p>For an OpenCode-specific installation, use <code>.opencode/skills/astra-framework/</code>:</p>
+<pre><code class="lang-bash">unity command astra_recipe --name install_skill --input '{&quot;destination&quot;:&quot;.opencode/skills/astra-framework&quot;}' --dry_run true
+unity command astra_recipe --name install_skill --input '{&quot;destination&quot;:&quot;.opencode/skills/astra-framework&quot;}'
+</code></pre>
+<p>Open OpenCode in the Unity project repository and ask it to load the <code>astra-framework</code> skill. If the skill is missing, check that the <code>skill</code> tool is enabled and that the client's skill permissions allow it.</p>
+<h2 id="creating-an-attribute-with-an-agent">Creating an attribute with an agent</h2>
+<p>Let's create a <code>Strength</code> attribute, like the one in <a href="workflows.html#create-attributes">Create attributes</a>. Keep the Unity Editor open in Edit Mode and open the agent in the Unity project repository, with the Astra skill installed and permission to run Unity CLI commands.</p>
+<p>Ask the agent:</p>
+<blockquote>
+<p>Use the <code>astra-framework</code> skill to create a <code>Elemental Affinity</code> attribute at <code>Assets/Astra/Attributes/</code>. First check whether it already exists. If it does, inspect it and leave it unchanged. Otherwise, show me a dry run and wait for my approval before creating it. I want <code>Elemental Affinity</code> to have an upper cap set at 99 as max value. After creation, inspect the asset and report any validation issues.</p>
+</blockquote>
+<p>The agent runs <code>unity command astra_find</code> to locate existing attributes and <code>unity command astra_describe</code> to inspect them. If the asset does not exist, it can preview creation with <code>unity command astra_create</code> and <code>--dry_run true</code>. The preview reports the planned changes without writing the asset.</p>
+<p>After reviewing the preview, ask the agent to proceed. In Unity's Project window, select <code>Strength</code> under <code>Assets/Astra/Attributes</code>. Its Inspector shows the same attribute settings as an asset created manually. Review <strong>Has Min Value</strong> and <strong>Has Max Value</strong> to check the limits before using it in an attribute set.</p>
+<h3 id="running-the-same-commands-directly">Running the same commands directly</h3>
+<p>These are the CLI commands the agent uses. They can also be run manually from the project directory. First, search for the attribute:</p>
+<pre><code class="lang-bash">unity command astra_find --type attribute --name Strength
+</code></pre>
+<p>If <code>Assets/Astra/Attributes/Strength.asset</code> already exists, inspect it with <code>astra_describe</code> as shown below. Otherwise, preview its creation:</p>
+<pre><code class="lang-bash">unity command astra_create --type attribute --path &quot;Assets/Astra/Attributes/Strength.asset&quot; --dry_run true
+</code></pre>
+<p>Review the returned <code>changes</code> and <code>issues</code>. If the preview matches the intended setup, create the asset:</p>
+<pre><code class="lang-bash">unity command astra_create --type attribute --path &quot;Assets/Astra/Attributes/Strength.asset&quot;
+</code></pre>
+<p>Missing folders are created automatically. Finally, inspect the saved asset:</p>
+<pre><code class="lang-bash">unity command astra_describe --handle &quot;Assets/Astra/Attributes/Strength.asset&quot;
+</code></pre>
+<p>Compare the returned <code>data.fields</code> with the Inspector settings. Writes run Astra's validation rules, so the returned values show the configuration that was actually kept. See <a href="#safe-authoring-rules">Safe authoring rules</a> for operations that need additional care.</p>
 <h2 id="astra-command-catalogue">Astra command catalogue</h2>
 <p>The commands are grouped by the kind of authoring work they perform:</p>
 <table>
@@ -184,7 +182,7 @@ unity command astra_recipe --name install_skill
 <td><code>astra_create_class</code>, <code>astra_class_formulas</code>, <code>astra_growth_formula</code>, <code>astra_ensure_config</code></td>
 </tr>
 <tr>
-<td>Write structured Astra data</td>
+<td>Configure scaling, fixed values, action steps, and entities</td>
 <td><code>astra_scaling_weights</code>, <code>astra_fixed_values</code>, <code>astra_composite_steps</code>, <code>astra_entity_setup</code>, <code>astra_entity_base_source</code></td>
 </tr>
 <tr>
@@ -197,33 +195,78 @@ unity command astra_recipe --name install_skill
 </tr>
 </tbody>
 </table>
-<p><code>astra_catalog</code> is the source of truth for the currently available asset types, component types, conditions, actions, enums, and logical fields. It also includes contributions from compatible extension packages, so use it before assuming a type name or serialized field path.</p>
+<p>Use <code>astra_catalog</code> to check which types and fields are available in the current project, including those added by compatible extension packages. It lists asset and component types, conditions, actions, enums, and the field names accepted by commands.</p>
+<p>Unity Pipeline tools handle generic project operations, such as creating a GameObject or a Game Action asset. Astra tools configure Astra-specific data and relationships. For example, Pipeline's <code>create_asset</code> creates a concrete Game Action asset, while <code>astra_condition_edit</code> builds the condition tree stored in it.</p>
 <p>The most common workflow is:</p>
 <ol>
-<li>Use <code>astra_find</code> to resolve existing assets and components to unambiguous handles</li>
+<li>Use <code>astra_find</code> to locate existing assets and components and obtain their identifiers (handles)</li>
 <li>Use <code>astra_describe</code> to inspect the current configuration and derived data</li>
-<li>Run an asset-creating, destructive, or bulk command with <code>dry_run: true</code></li>
+<li>Preview creation, deletion, or bulk changes with <code>dry_run</code> enabled (<code>--dry_run true</code> in the CLI)</li>
 <li>Repeat the command without <code>dry_run</code> after inspecting its planned changes and issues</li>
-<li>Read the returned <code>changes</code> and <code>issues</code>, which reflect the state after Astra validation ran</li>
+<li>Read the returned <code>changes</code> and <code>issues</code> to check the result after validation</li>
 <li>Use <code>astra_validate</code> on the affected object, folder, or project to find remaining setup issues</li>
 </ol>
 <p>For complete command parameters and end-to-end examples, open the installed skill's <code>references/commands.md</code> and <code>references/workflows.md</code> files.</p>
 <h2 id="safe-authoring-rules">Safe authoring rules</h2>
-<p>Astra validates authored content whenever a command writes it. A request can therefore be accepted while a set member or an invalid relationship is removed by validation. Always inspect the returned <code>changes</code> and <code>issues</code>; do not assume that the requested value survived the write.</p>
-<p>Asset creation and deletion cannot be undone through Unity's regular Undo stack. Use <code>dry_run</code> before operations that create or delete assets, and pass <code>confirm</code> when a command requires an explicit destructive-action acknowledgement. Do not use Pipeline's transactional <code>batch</code> as a safety mechanism for Astra asset writes: a batch can report a rollback even though assets written by a custom command remain on disk.</p>
+<p>Astra validates content whenever a command writes it. For example, validation may remove an invalid member from a set even though the command itself succeeds. Always inspect the returned <code>changes</code> and <code>issues</code> to check which changes were kept.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Asset creation and deletion cannot be undone through Unity's regular Undo stack. Preview these operations with <code>dry_run</code> and pass <code>confirm</code> when the command requires it.</p>
+<p>Pipeline's transactional <code>batch</code> can report a rollback even though assets written by an Astra command remain on disk. Do not rely on it to undo Astra asset writes.</p>
+</div>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Mutating <code>astra_*</code> commands refuse to run in Play Mode. <code>astra_describe</code>, <code>astra_validate</code>, and the other read-only commands remain available, which makes them useful for inspecting a live scene. The <code>astra_fixed_values</code> runtime path is the documented exception when explicitly enabled; use it for temporary runtime tuning rather than to author persistent asset data.</p>
+<p>Commands that change content refuse to run in Play Mode. Read-only commands, including <code>astra_describe</code> and <code>astra_validate</code>, remain available for inspecting a live scene. The exception is <code>astra_fixed_values</code> with <code>allow_runtime</code> explicitly enabled, which supports temporary runtime tuning.</p>
 </div>
-<p>Some structures need their dedicated command instead of a generic field write:</p>
+<p>Some data needs a dedicated command to keep related settings consistent:</p>
 <ul>
 <li>Use <code>astra_set_members</code> for stat-set and attribute-set membership</li>
 <li>Use <code>astra_class_formulas</code> or <code>astra_create_class</code> to create and assign class growth formulas</li>
-<li>Use <code>astra_scaling_weights</code> and <code>astra_fixed_values</code> for set-keyed value tables</li>
+<li>Use <code>astra_scaling_weights</code> and <code>astra_fixed_values</code> for weights and values associated with the stats or attributes in a set</li>
 <li>Use <code>astra_condition_edit</code> for <code>[SerializeReference]</code> condition trees</li>
 <li>Use <code>astra_entity_setup</code> and <code>astra_entity_base_source</code> to keep an entity's class-based and fixed-base configurations consistent</li>
 </ul>
-<p>These commands encode the same consistency rules used by Astra's editor tooling and return actionable validation results when a setup is incomplete.</p>
+<h2 id="maintaining-the-installed-skill">Maintaining the installed skill</h2>
+<h3 id="updating-the-installed-skill">Updating the installed skill</h3>
+<p>The installer leaves matching files in place. Replacing files that differ from the packaged version requires <code>--confirm true</code>. This includes both local edits and files from an older Astra version.</p>
+<p>After updating Astra:</p>
+<ol>
+<li>Repeat the installation command for the client in use with <code>--dry_run true</code>, keeping the same <code>--input</code> destination if one was specified</li>
+<li>Inspect the returned <code>conflicts</code> and preserve any local edits that are still needed</li>
+<li>Run the installation command without <code>--dry_run true</code>, adding <code>--confirm true</code> to replace differing files</li>
+</ol>
+<h3 id="uninstalling-the-skill">Uninstalling the skill</h3>
+<p>To uninstall, remove the installed <code>astra-framework</code> folder from the Unity project after preserving any local edits:</p>
+<ul>
+<li><code>.claude/skills/astra-framework/</code> for the default Claude Code installation</li>
+<li><code>.agents/skills/astra-framework/</code> for the Codex installation (also usable by OpenCode)</li>
+<li><code>.opencode/skills/astra-framework/</code> for the OpenCode-specific installation</li>
+</ul>
+<p>If a custom destination was used, remove that copy instead. OpenCode can discover the skill in several locations, so check for other installed copies as well. Restart the client after removal.</p>
+<p>There is no built-in uninstall recipe or Unity menu item in this version. Removing the installed copy leaves the package's source instructions and the Unity MCP configuration in place. Disconnect MCP separately if it is no longer needed.</p>
+<h2 id="connecting-an-mcp-client">Connecting an MCP client</h2>
+<p>MCP is an optional alternative for agents that need tools exposed through that protocol, such as agents that cannot run shell commands. An MCP <em>client</em> is the AI application or agent connecting to Unity's MCP server. The Astra tools use the same names and arguments as the CLI commands.</p>
+<p>To use this alternative, first list the clients and configuration paths supported by the installed Unity CLI:</p>
+<pre><code class="lang-bash">unity mcp configure --list
+</code></pre>
+<p>Then configure the client using its identifier. For example, for Claude Code:</p>
+<pre><code class="lang-bash">unity mcp configure claude-code
+</code></pre>
+<p>This writes the Unity MCP entry to the client's configuration file. For project-local configuration, clients that support it accept <code>--local</code> (for example, <code>unity mcp configure cursor --local</code>). The Astra skill can still provide the agent with instructions when using MCP.</p>
+<p>The supported clients and configuration paths can change between CLI versions. See the <a href="https://docs.unity.com/en-us/unity-cli/unity-cli-reference">Unity CLI reference</a> for all options and the <a href="https://docs.unity.com/en-us/unity-cli/release-notes">Unity CLI release notes</a> for changes.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If the <code>astra_*</code> commands are missing after installing or updating a package:</p>
+<ol>
+<li>Let Unity finish recompiling</li>
+<li>Check that the installed Pipeline version is within the range listed in <a href="#requirements">Requirements</a></li>
+<li>Inspect the Editor warnings with <code>unity command console --level warn</code></li>
+</ol>
+<p>Astra compiles its Pipeline adapter only for the tested version range. If Pipeline is outside that range, Astra reports the supported versions in the Editor warnings.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p><code>ASTRA_PIPELINE_FORCE</code> can force the adapter to compile outside the tested Pipeline version range. Use it only after validating the integration in the project, because experimental Pipeline APIs can change between versions.</p>
+</div>
+<p>If using the optional MCP connection, configure it separately from the skill. Installing the skill does not add client identifiers to Unity CLI. For example, before trying to configure OpenCode, check whether it appears in <code>unity mcp configure --list</code>.</p>
 
 </article>
 
