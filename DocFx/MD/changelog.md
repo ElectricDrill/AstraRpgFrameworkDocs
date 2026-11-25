@@ -4,6 +4,27 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2.3.0] - Unreleased
+
+### Added
+#### Runtime Features
+- Added step-based sequencing to `CompositeGameAction`. Each step chooses how it composes with the next one (`Await`, `InParallelWithNext`, or `FireAndForget`) and can wait a scaled or unscaled delay before starting, so a composite can now start several actions together or stagger a parallel group, instead of only running actions one after the other.
+- Added `ParallelGameAction`, which runs its child actions together and either waits for all of them (`WaitAll`) or continues as soon as the first one finishes and cancels the others (`WaitAny`). Available from `Astra Framework/Game Actions/Context: {Component,Entity}/Parallel`.
+- Added `FireAndForgetGameAction`, which starts another action on the owner's `GameActionRunner` and continues immediately. Available from `Astra Framework/Game Actions/Context: {Component,Entity}/Fire And Forget`.
+
+#### Editor Features
+- Added AI agent support. AI agents such as Claude Code, Codex, and OpenCode can now inspect and author Astra content directly in the Unity Editor, through the [Unity CLI](https://docs.unity.com/en-us/unity-cli) or an MCP server. Twenty `astra` commands cover finding and describing content, creating and editing stats, attributes, sets, classes, growth formulas, scaling components, fixed values, entities, composite action steps, and condition trees, and validating the result. Every write goes through the same validation rules as the Inspector tools. The integration is optional and requires the Unity Pipeline package (1.0 or later). See [Using Astra with AI agents](./workflows/ai-agents.md).
+- Added safety checks to agent edits: creations, deletions, and bulk changes can be previewed with a dry run before anything is written, destructive operations require an explicit confirmation, and every command reports what was actually changed and which issues remain after validation.
+- Added an Astra agent skill, a set of instructions that teaches agents the Astra concepts, commands, and recommended workflows. Install it for Claude Code, Codex, or OpenCode from `Tools > Astra Framework > AI > Install Agent Skill…`, or from the command line.
+- Added the option to preview an entity's stat and attribute values at a different level, and to see where an entity's base values come from, when inspecting it through an agent.
+- Added the ability to write `Percentage` fields through agent commands as their hundred-based value (`100` means 100%).
+- Added a warning in the Console when the installed Unity Pipeline version is outside the supported range, explaining why the Astra commands are not available.
+- Added a **Convert to steps** button to the `CompositeGameAction` inspector, which migrates the legacy action list to the new step list in one click. The step list is always shown, while the legacy list only appears when it still contains entries.
+
+### Changed
+#### Runtime Features
+- `CompositeGameAction` now runs the legacy action list unchanged when it contains entries, and ignores the step list (a one-time warning is logged if both are populated). Otherwise, it runs the step list. Composite actions authored before this release keep working exactly as before.
+
 ## [2.2.0] - 2026-09-02
 
 ### Added
